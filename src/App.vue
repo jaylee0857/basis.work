@@ -61,12 +61,12 @@ export default {
           setTimeout(() => {
             isShowLoading.value = false;
             mode.value = "enter";
-          }, 3000);
+          }, 4000);
         }
         lastPage.value = store.state.route.path;
       }
     );
-
+    // 475 768 991
     onMounted(() => {
       window.addEventListener("resize", () => {
         console.log(window.innerWidth);

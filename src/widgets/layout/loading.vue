@@ -1,5 +1,6 @@
 <template>
   <!-- {{ mode }} -->
+  <div class="mask" :class="mode"></div>
   <div class="bg" :class="mode">
     <div class="icon">
       <div class="svg_box">
