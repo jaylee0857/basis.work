@@ -13,6 +13,7 @@ import VueLazyLoad from "vue3-lazyload";
 import layouts from "@/_app/layouts";
 import components from "@/_app/components";
 import providers from "@/_app/providers";
+import "./assets/css/studio-basis.webflow.min.css";
 import "./assets/main.scss";
 import "@fortawesome/fontawesome-free/js/all";
 
