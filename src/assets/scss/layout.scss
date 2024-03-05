@@ -70,3 +70,60 @@
     }
   }
 }
+
+
+.footer {
+  color: white;
+  .footer_group{
+    grid-row-gap: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+
+    &.footer_group.cc-above {
+    margin-bottom: 2.5rem 
+    } 
+  }
+  .u-text-secondary {
+    color: #ff92b5;
+  }
+  .u-ts-6 {
+    letter-spacing: .1em;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+  @media screen and (max-width: 991px){
+      .col.col-md-first {
+      order: -1;
+    }
+  }
+
+}
+
+.marquee {
+  .marquee_content{
+    display: flex;
+    background: black;
+    .marquee_item{
+      white-space: nowrap;
+    text-transform: uppercase;
+    animation: scroll 40s linear infinite;
+    &:nth-child(2){
+      animation: scroll2 40s linear infinite;
+      animation-delay: -20s;
+    }
+    
+    }
+  }
+  
+  @keyframes scroll{
+    from{transform: translateX(100%)}
+    to{transform: translateX(-100%)}
+  }
+  
+  @keyframes scroll2{
+    from{transform: translateX(0%)}
+    to{transform: translateX(-200%)}
+  }
+}

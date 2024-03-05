@@ -1,18 +1,11 @@
 <template>
-  <!-- 外層利用is載入layout -->
-  <component :is="layout">
-    <!-- 內層利用router顯示 透過解構賦值 取得從router-view取得的component 在把Component用在:is＝"Component"身上-->
-    <router-view v-slot="{ Component }">
-      <component :is="Component" />
-    </router-view>
-  </component>
-  <the-popup />
   <Loading v-if="isError || isShowLoading" :mode="mode"></Loading>
+  <Footer></Footer>
 </template>
-
 <script>
 import { ref, watch } from "vue";
 import Loading from "@/widgets/layout/loading.vue";
+import Footer from "@/widgets/layout/footer.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { isNil, defaultTo, path } from "ramda";
@@ -20,6 +13,7 @@ import { isNil, defaultTo, path } from "ramda";
 export default {
   components: {
     Loading,
+    Footer,
   },
   setup() {
     const store = useStore(); //啟用vuex
@@ -68,18 +62,7 @@ export default {
     );
     // 475 768 991
     onMounted(() => {
-      window.addEventListener("resize", () => {
-        console.log(window.innerWidth);
-        // if (
-        //   window.innerWidth === 991 ||
-        //   window.innerWidth === 768 ||
-        //   window.innerWidth === 475
-        // ) {
-        //   mode.value = "stop";
-        // }
-      });
-      // computeSize();
-      // window.addEventListener("resize", computeSize);
+      console.log("index");
     });
 
     return {
@@ -91,14 +74,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-// .loading-wrap {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 100vh;
-//   img {
-//     width: 45%;
-//   }
-// }
-</style>
