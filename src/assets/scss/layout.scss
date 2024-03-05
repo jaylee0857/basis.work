@@ -89,6 +89,7 @@
         border-radius: 6px;
         background: #ffffff;
         transition: all 0.3s;
+        will-change: transform;
       }
       li {
         position: relative;

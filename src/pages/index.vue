@@ -1,4 +1,5 @@
 <template>
+  <View />
   <Marquee></Marquee>
   <Card></Card>
   <Loading v-if="isError || isShowLoading" :mode="mode"></Loading>
@@ -10,6 +11,7 @@ import Loading from "@/widgets/layout/loading.vue";
 import Footer from "@/widgets/layout/footer.vue";
 import Card from "@/widgets/design-trial/card.vue";
 import Marquee from "@/widgets/layout/marquee.vue";
+import View from "@/widgets/home/view.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { isNil, defaultTo, path } from "ramda";
@@ -20,6 +22,7 @@ export default {
     Footer,
     Card,
     Marquee,
+    View,
   },
   setup() {
     const store = useStore(); //啟用vuex
