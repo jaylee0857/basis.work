@@ -66,8 +66,8 @@ export default {
         lastPage.value = store.state.route.path;
       }
     );
-    watch(isShowLoading, (isLoaded) => {
-      store.commit("app/systm/Loading", isLoaded);
+    watch(isShowLoading, (isLoading) => {
+      store.commit("app/systm/Loading", isLoading);
     });
     // 475 768 991
     onMounted(() => {

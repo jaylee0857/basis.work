@@ -58,19 +58,24 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref, watch } from "vue";
+import { nextTick, onMounted, reactive, ref, watch } from "vue";
 import { useStore } from "vuex";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const store = useStore();
 
+/**
+ *  parallax
+ *  @desc 視差特效
+ *  @param { object } position 視差x,y軸
+ *  @param { array } imagesOption 視差圖檔設定檔
+ *  @param { function } moveView 視差x,y軸設定function
+ */
 const position = reactive({
   x: 0,
   y: 0,
 });
-
-const isShowComponent = ref(false);
 
 const imagesOption = ref([
   {
@@ -111,6 +116,21 @@ const imagesOption = ref([
   },
 ]);
 
+const moveView = (e) => {
+  position.x = ((window.innerWidth - e.clientX) / 100) * 2;
+  position.y = ((window.innerHeight - e.clientY) / 100) * 2;
+};
+
+/**
+ * observer
+ * @desc 元素監聽淡出淡入
+ * @param { boolean } isShowComponent parallax dom顯示與否
+ * @param { object } options IntersectionObserver 設定檔
+ * @param { function } callback IntersectionObserver 監聽到後執行的對應功能
+ */
+
+const isShowComponent = ref(false);
+
 const options = {
   //   root: document.querySelector("body"),
   rootMargin: "0px",
@@ -124,6 +144,7 @@ const callback = (entries) => {
     const { intersectionRatio, target } = entry;
     const index = target.dataset?.index;
     const itemName = target.dataset?.item;
+    console.log(itemName);
     switch (itemName) {
       case "img":
         imagesOption.value[index].isEnter =
@@ -142,28 +163,42 @@ const callback = (entries) => {
   });
 };
 
-const moveView = (e) => {
-  position.x = ((window.innerWidth - e.clientX) / 100) * 2;
-  position.y = ((window.innerHeight - e.clientY) / 100) * 2;
+const observer = new IntersectionObserver(callback, options);
+
+const domScrollObserver = (doms) => {
+  for (const target of doms) {
+    observer.observe(target);
+  }
+};
+
+const domScrollUnoberser = (doms) => {
+  for (const target of doms) {
+    observer.unobserve(target);
+  }
 };
 
 watch(
   () => store.state.app.isLoading,
-  (isLoaded) => {
-    console.log(isLoaded, "isLoed");
-    isShowComponent.value = !isLoaded ? true : false;
+  (isLoading) => {
+    isShowComponent.value = !isLoading;
+    if (isLoading) {
+      const imgsDom = document.querySelectorAll(".img-wrap");
+      const scrollBtnDom = document.querySelector(".btn-contain-scroll");
+      const doms = [...imgsDom, scrollBtnDom];
+      domScrollUnoberser(doms);
+    } else {
+      /** 這邊使用nextTick等待Component的dom掛載完成後才抓取 否則會抓到空值 */
+      nextTick(() => {
+        const imgsDom = document.querySelectorAll(".img-wrap");
+        const scrollBtnDom = document.querySelector(".btn-contain-scroll");
+        const doms = [...imgsDom, scrollBtnDom];
+        domScrollObserver(doms);
+      });
+    }
   }
 );
 
 onMounted(() => {
   AOS.init();
-  const observer = new IntersectionObserver(callback, options);
-
-  const targets = document.querySelectorAll(".img-wrap");
-  const scrollTarget = document.querySelector(".btn-contain-scroll");
-  for (const target of targets) {
-    observer.observe(target);
-  }
-  observer.observe(scrollTarget);
 });
 </script>

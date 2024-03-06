@@ -2352,19 +2352,19 @@ export default {
     const a = ref("");
     onMounted(() => {
       console.log("index");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log("進入");
-          } else {
-            console.log("目標元素離開視口");
-          }
-        });
-      });
+      // const observer = new IntersectionObserver((entries) => {
+      //   entries.forEach((entry) => {
+      //     if (entry.isIntersecting) {
+      //       console.log("進入");
+      //     } else {
+      //       console.log("目標元素離開視口");
+      //     }
+      //   });
+      // });
 
       // 設置要觀察的目標元素
-      const target = document.getElementById("line1");
-      observer.observe(target);
+      // const target = document.getElementById("line1");
+      // observer.observe(target);
     });
 
     return {
