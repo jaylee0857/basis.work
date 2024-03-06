@@ -2,6 +2,7 @@
   <View />
   <Marquee></Marquee>
   <Card></Card>
+  <MouseBall></MouseBall>
   <Loading v-if="isError || isShowLoading" :mode="mode"></Loading>
   <Footer></Footer>
 </template>
@@ -12,6 +13,7 @@ import Footer from "@/widgets/layout/footer.vue";
 import Card from "@/widgets/design-trial/card.vue";
 import Marquee from "@/widgets/layout/marquee.vue";
 import View from "@/widgets/home/view.vue";
+import MouseBall from "@/widgets/layout/mouse-ball.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { isNil, defaultTo, path } from "ramda";
@@ -23,6 +25,7 @@ export default {
     Card,
     Marquee,
     View,
+    MouseBall,
   },
   setup() {
     const store = useStore(); //啟用vuex

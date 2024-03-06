@@ -7,12 +7,21 @@
         transform: `translate(${position.x}px,${position.y}px)`,
       }"
     >
-      <img
+      <div
+        class="img-wrap"
         v-for="(item, index) in imagesOption"
         :key="item.url + index"
-        :style="item.css"
-        src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp"
-      />
+        :style="{
+          left: item.css.left,
+          top: item.css.top,
+          transform: `translate3d(${position.x}%, ${position.y}%, 0px)`,
+        }"
+      >
+        <img
+          src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp"
+          :style="{ transform: item.css.transform }"
+        />
+      </div>
     </div>
   </div>
 </template>
