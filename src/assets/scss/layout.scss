@@ -62,21 +62,94 @@
     height: 100%;
     background: #ff92b5;
     z-index: 9;
-    animation: navTopMoveBottom 0.7s;
+    animation: heightZeroToFull 0.7s;
     ul {
+      position: relative;
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       align-items: stretch;
-      height: 100%;
-      padding: 0 2em 2em;
+      height: calc(100% - 5%);
+      margin: 0 2em 0;
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 20%;
+      //   height: 100%;
+      //   background: #ffffff;
+      //   z-index: -1;
+      // }
+      .move-item {
+        position: absolute;
+        top: -4px;
+        left: 0;
+        width: 25%;
+        height: calc(100% + 8px);
+        border-radius: 6px;
+        background: #ffffff;
+        transition: all 0.3s;
+      }
       li {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-right: #000000 1px solid;
-        &:nth-child(1) {
-          border-left: #000000 1px solid;
+        color: #000000;
+        overflow: visible;
+        .line {
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 0;
+            background: #000000;
+            animation: heightZeroToFull 0.5s forwards;
+            animation-delay: calc(var(--i) * 0.2s);
+          }
         }
+        &:nth-child(1) {
+          .line {
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 1px;
+              height: 100%;
+              background: #000000;
+              // animation: heightZeroToFull 0.5s forwards;
+            }
+          }
+        }
+        // .background {
+        //   position: absolute;
+        //   top: -3px;
+        //   left: -1.5px;
+        //   width: 0;
+        //   height: calc(100% + 6px);
+        //   background: #ffffff;
+        //   border-radius: 6px;
+        //   z-index: 1;
+        //   transition: all 0.3s;
+        // }
+        .content {
+          z-index: 2;
+        }
+        // &.active {
+        //   .background {
+        //     width: calc(100% + 2px);
+        //   }
+        // }
+        // &.active-leave {
+        //   .background {
+        //     left: auto;
+        //     right: 0;
+        //     width: 0;
+        //   }
+        // }
       }
     }
   }
@@ -137,7 +210,7 @@
   }
 }
 
-@keyframes navTopMoveBottom {
+@keyframes heightZeroToFull {
   0%{
     height: 0;
   }
