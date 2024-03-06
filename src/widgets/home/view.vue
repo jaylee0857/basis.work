@@ -2,6 +2,7 @@
   <div class="view" @mousemove="moveView($event)">
     <div
       class="view-wrap"
+      v-if="isShowComponent"
       :style="{
         transform: `translate(${position.x}px,${position.y}px)`,
       }"
@@ -57,14 +58,19 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from "vue";
+import { onMounted, reactive, ref, watch } from "vue";
+import { useStore } from "vuex";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const store = useStore();
 
 const position = reactive({
   x: 0,
   y: 0,
 });
+
+const isShowComponent = ref(false);
 
 const imagesOption = ref([
   {
@@ -140,6 +146,14 @@ const moveView = (e) => {
   position.x = ((window.innerWidth - e.clientX) / 100) * 2;
   position.y = ((window.innerHeight - e.clientY) / 100) * 2;
 };
+
+watch(
+  () => store.state.app.isLoading,
+  (isLoaded) => {
+    console.log(isLoaded, "isLoed");
+    isShowComponent.value = !isLoaded ? true : false;
+  }
+);
 
 onMounted(() => {
   AOS.init();

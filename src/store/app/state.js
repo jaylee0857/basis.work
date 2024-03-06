@@ -7,6 +7,7 @@ const state = () => {
       $timestamp: -1,
     },
     tips: [],
+    isLoading: true,
   };
 };
 //主要state

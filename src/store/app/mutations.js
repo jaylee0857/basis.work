@@ -13,6 +13,10 @@ const mutations = {
       $timestamp: -1,
     };
   },
+  "systm/Loading"(state, payload) {
+    console.log(payload, "mutations");
+    state.isLoading = payload;
+  },
 };
 
 export default mutations;

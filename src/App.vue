@@ -66,6 +66,9 @@ export default {
         lastPage.value = store.state.route.path;
       }
     );
+    watch(isShowLoading, (isLoaded) => {
+      store.commit("app/systm/Loading", isLoaded);
+    });
     // 475 768 991
     onMounted(() => {
       window.addEventListener("resize", () => {
