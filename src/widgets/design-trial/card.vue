@@ -156,19 +156,28 @@
               <ul data-animation-element="list" role="list" class="u-ls-bullet">
                 <li class="u-ts-3 u-text-light">
                   <div class="bullet-item cc-1">
-                    <div class="bullet"></div>
+                    <div
+                      class="bullet"
+                      style="background-color: var(--swatch--light)"
+                    ></div>
                     <div>Innovative mobile app prototype</div>
                   </div>
                 </li>
                 <li class="u-ts-3 u-text-light">
                   <div class="bullet-item cc-2">
-                    <div class="bullet"></div>
+                    <div
+                      class="bullet"
+                      style="background-color: var(--swatch--light)"
+                    ></div>
                     <div>Core product flows</div>
                   </div>
                 </li>
                 <li class="u-ts-3 u-text-light">
                   <div class="bullet-item cc-3">
-                    <div class="bullet"></div>
+                    <div
+                      class="bullet"
+                      style="background-color: var(--swatch--light)"
+                    ></div>
                     <div>Design system direction and more</div>
                   </div>
                 </li>
