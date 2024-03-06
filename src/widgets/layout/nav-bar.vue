@@ -49,7 +49,7 @@ const activeIndex = ref(1);
 
 const isLeft = ref(true);
 
-const isMove = ref(false);
+// const isMove = ref(false);
 
 const moveLeft = computed(() => activeIndex.value * 25);
 
@@ -68,17 +68,24 @@ const moveRight = computed(() => {
 
 const mvoeWidth = ref(25);
 
+/** NOTE:絲滑操作 */
+// const enterIndex = (index) => {
+//   if (isMove.value) {
+//     return;
+//   }
+//   isMove.value = true;
+//   isLeft.value = index < activeIndex.value;
+//   mvoeWidth.value = 30;
+//   setTimeout(() => {
+//     activeIndex.value = index;
+//   }, 10);
+//   setTimeout(() => {
+//     mvoeWidth.value = 25;
+//     isMove.value = false;
+//   }, 200);
+// };
+
 const enterIndex = (index) => {
-  if (isMove.value) return;
-  isMove.value = true;
-  isLeft.value = index < activeIndex.value;
-  mvoeWidth.value = 30;
-  setTimeout(() => {
-    activeIndex.value = index;
-  }, 10);
-  setTimeout(() => {
-    mvoeWidth.value = 25;
-    isMove.value = false;
-  }, 200);
+  activeIndex.value = index;
 };
 </script>

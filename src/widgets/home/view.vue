@@ -8,16 +8,17 @@
     >
       <div
         class="img-wrap"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="6000"
-        data-aos-offset="0"
         v-for="(item, index) in imagesOption"
         :key="item.url + index"
         :style="{
           left: item.css.left,
           top: item.css.top,
+          animation: item.isEnter
+            ? item.css.enterAnimation
+            : item.css.leaveAnimation,
         }"
+        :data-index="index"
+        :data-item="'img'"
       >
         <img
           src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp"
@@ -31,7 +32,7 @@
     data-w-id="bd3a87c2-42b9-9228-51b3-47079bdaecb9"
     class="home-hero_btn"
   >
-    <div class="btn-contain">
+    <div class="btn-contain btn-contain-scroll">
       <a href="#studio" class="btn-scroll w-inline-block"
         ><div class="btn-text-wrap">
           <div class="btn-text cc-scroll">Scroll</div>
@@ -56,20 +57,16 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { onMounted, reactive, ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 const position = reactive({
   x: 0,
   y: 0,
 });
 
-const moveView = (e) => {
-  position.x = ((window.innerWidth - e.clientX) / 100) * 2;
-  position.y = ((window.innerHeight - e.clientY) / 100) * 2;
-};
-
-const imagesOption = [
+const imagesOption = ref([
   {
     url:
       "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp",
@@ -77,7 +74,10 @@ const imagesOption = [
       left: "35%",
       top: "20%",
       transform: "rotate3d(1, 2, 1, 45deg)",
+      enterAnimation: "fadeInRight 1s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
     },
+    isEnter: true,
   },
   {
     url:
@@ -86,7 +86,10 @@ const imagesOption = [
       left: "50%",
       top: "50%",
       transform: "rotate(0, 0),skew(0, 0)",
+      enterAnimation: "fadeIn 1s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
     },
+    isEnter: true,
   },
   {
     url:
@@ -95,8 +98,58 @@ const imagesOption = [
       left: "65%",
       top: "70%",
       transform: "rotate3d(-1, -2, -1, 45deg)",
+      enterAnimation: "fadeInLeft 1s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
     },
+    isEnter: true,
   },
-];
-AOS.init();
+]);
+
+const options = {
+  //   root: document.querySelector("body"),
+  rootMargin: "0px",
+  threshold: Array(100)
+    .fill()
+    .map((val, idx) => idx * 0.01),
+};
+
+const callback = (entries) => {
+  entries.forEach((entry) => {
+    const { intersectionRatio, target } = entry;
+    const index = target.dataset?.index;
+    const itemName = target.dataset?.item;
+    switch (itemName) {
+      case "img":
+        imagesOption.value[index].isEnter =
+          intersectionRatio < 0.5 ? false : true;
+        console.log(target.dataset?.index, "index");
+        console.log(intersectionRatio);
+        break;
+
+      default:
+        target.style.animation =
+          intersectionRatio < 0.5
+            ? "fadeOut 1s forwards"
+            : "fadeIn 1s forwards";
+        break;
+    }
+  });
+};
+
+const moveView = (e) => {
+  position.x = ((window.innerWidth - e.clientX) / 100) * 2;
+  position.y = ((window.innerHeight - e.clientY) / 100) * 2;
+};
+
+onMounted(() => {
+  AOS.init();
+  const observer = new IntersectionObserver(callback, options);
+
+  const targets = document.querySelectorAll(".img-wrap");
+  const scrollTarget = document.querySelector(".btn-contain-scroll");
+  for (const target of targets) {
+    observer.observe(target);
+  }
+  observer.observe(scrollTarget);
+});
 </script>
