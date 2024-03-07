@@ -3660,7 +3660,7 @@ strong {
   display: flex;
   position: absolute;
   top: auto;
-  bottom: 1rem;
+  bottom: 5rem;
   left: 0%;
   right: 0%;
 }
@@ -3786,6 +3786,7 @@ strong {
   display: flex;
 }
 .btn-scroll:hover {
+  cursor: pointer;
   background-color: var(--swatch--hover);
   color: var(--swatch--white);
 }

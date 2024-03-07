@@ -4,11 +4,15 @@
       class="view-wrap"
       v-if="isShowComponent"
       :style="{
-        transform: `translate(${position.x}px,${position.y}px)`,
+        transform: `translate3d(${position.x}px, ${position.y}px, 0) rotateX(${
+          position.x / 5
+        }deg) rotateY(${position.y / 8}deg)`,
+        transformOrigin: 'center center', // 注意驼峰命名
       }"
     >
+      <!-- translate3d(-9.9982%, -1.436%, 0px) scale3d(1, 1, 1) rotateX(-0.718deg) rotateY(9.9982deg) rotateZ(0deg) skew(0deg, 0deg) -->
       <div
-        class="img-wrap"
+        class="img-wrap home-hero_image-placer"
         v-for="(item, index) in imagesOption"
         :key="item.url + index"
         :style="{
@@ -22,20 +26,20 @@
         :data-item="'img'"
       >
         <img
-          src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp"
-          :style="{ transform: item.css.transform }"
+          :src="item.url"
+          :style="{
+            transform: `translate3d(${position.x / 2}px,${
+              position.y / 2
+            }px, 1px)`,
+          }"
         />
       </div>
     </div>
   </div>
-  <div
-    data-reveal="button"
-    data-w-id="bd3a87c2-42b9-9228-51b3-47079bdaecb9"
-    class="home-hero_btn"
-  >
-    <div class="btn-contain btn-contain-scroll">
-      <a href="#studio" class="btn-scroll w-inline-block"
-        ><div class="btn-text-wrap">
+  <div data-reveal="button" class="home-hero_btn">
+    <div class="btn-contain btn-contain-scroll op0">
+      <div class="btn-scroll w-inline-block" @click="scrollDown">
+        <div class="btn-text-wrap">
           <div class="btn-text cc-scroll">Scroll</div>
           <div class="btn-text cc-bottom cc-scroll">Scroll</div>
         </div>
@@ -51,8 +55,9 @@
               d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z"
               fill="currentColor"
             ></path>
-          </svg></div
-      ></a>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -80,24 +85,96 @@ const position = reactive({
 const imagesOption = ref([
   {
     url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp",
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552350_home-hero-08.webp",
     css: {
-      left: "35%",
+      left: "-5%",
       top: "20%",
-      transform: "rotate3d(1, 2, 1, 45deg)",
-      enterAnimation: "fadeInRight 1s forwards",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 2.5s forwards",
       leaveAnimation: "fadeOut 1s forwards",
     },
     isEnter: true,
   },
   {
     url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp",
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552341_home-hero-01.webp",
+    css: {
+      left: "10%",
+      top: "50%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 1.5s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552342_home-hero-09.webp",
+    css: {
+      left: "20%",
+      top: "15%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 3.5s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552355_home-hero-13.webp",
+    css: {
+      left: "33%",
+      top: "47%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 2s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552340_home-hero-02.webp",
+    css: {
+      left: "30%",
+      top: "80%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 1s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552352_home-hero-05.webp",
     css: {
       left: "50%",
-      top: "50%",
-      transform: "rotate(0, 0),skew(0, 0)",
-      enterAnimation: "fadeIn 1s forwards",
+      top: "5%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 2.5s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552356_home-hero-14.webp",
+    css: {
+      left: "75%",
+      top: "30%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 3s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552343_home-hero-03.webp",
+    css: {
+      left: "55%",
+      top: "60%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 3.5s forwards",
       leaveAnimation: "fadeOut 1s forwards",
     },
     isEnter: true,
@@ -108,8 +185,32 @@ const imagesOption = ref([
     css: {
       left: "65%",
       top: "70%",
-      transform: "rotate3d(-1, -2, -1, 45deg)",
-      enterAnimation: "fadeInLeft 1s forwards",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 2s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235b_home-seen.webp",
+    css: {
+      left: "85%",
+      top: "10%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 1.5s forwards",
+      leaveAnimation: "fadeOut 1s forwards",
+    },
+    isEnter: true,
+  },
+  {
+    url:
+      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233e_home-hero-07.webp",
+    css: {
+      left: "85%",
+      top: "70%",
+      transform: "translate3d(1px, 2px, 1px)",
+      enterAnimation: "zoomIn 2.5s forwards",
       leaveAnimation: "fadeOut 1s forwards",
     },
     isEnter: true,
@@ -117,8 +218,15 @@ const imagesOption = ref([
 ]);
 
 const moveView = (e) => {
-  position.x = ((window.innerWidth - e.clientX) / 100) * 2;
-  position.y = ((window.innerHeight - e.clientY) / 100) * 2;
+  const windowCenterX = window.innerWidth / 2;
+  const windowCenterY = window.innerHeight / 2;
+
+  position.x = ((windowCenterX - e.clientX) / 100) * 10;
+  position.y = ((windowCenterY - e.clientY) / 100) * 10;
+
+  console.log(position.x);
+
+  console.log(position.y);
 };
 
 /**
@@ -148,16 +256,16 @@ const callback = (entries) => {
     switch (itemName) {
       case "img":
         imagesOption.value[index].isEnter =
-          intersectionRatio < 0.5 ? false : true;
+          intersectionRatio < 0.7 ? false : true;
         console.log(target.dataset?.index, "index");
         console.log(intersectionRatio);
         break;
 
       default:
         target.style.animation =
-          intersectionRatio < 0.5
-            ? "fadeOut 1s forwards"
-            : "fadeIn 1s forwards";
+          intersectionRatio < 1
+            ? "fadeOut 2s forwards"
+            : "zoomIn 3.5s forwards";
         break;
     }
   });
@@ -175,6 +283,15 @@ const domScrollUnoberser = (doms) => {
   for (const target of doms) {
     observer.unobserve(target);
   }
+};
+
+// 滚动到 studio 元素的方法
+const scrollDown = () => {
+  const windowHeight = window.innerHeight;
+  window.scrollTo({
+    top: windowHeight + 60, // 向下滚动 100vh 的距离
+    behavior: "smooth",
+  });
 };
 
 watch(
@@ -202,3 +319,8 @@ onMounted(() => {
   AOS.init();
 });
 </script>
+<style scoped>
+.op0 {
+  opacity: 0;
+}
+</style>

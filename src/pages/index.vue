@@ -1,15 +1,8 @@
 <template>
   <View />
-  <div class="u-divider">
-    <div class="container">
-      <div class="u-border" style="width: 100%; height: 1px"></div>
-    </div>
-  </div>
   <!-- ------ -->
-  <div data-w-id="ee7c973f-5780-de0e-a595-8617df6e448b" class="u-divider">
-    <div class="container">
-      <div class="u-border" style="width: 100%; height: 1px"></div>
-    </div>
+  <div class="container">
+    <div class="target_line"></div>
   </div>
   <section id="studio" class="section">
     <div class="section-title_component">
@@ -651,6 +644,9 @@
     </div>
   </section>
   <!-- ------ -->
+  <div class="container">
+    <div class="target_line"></div>
+  </div>
   <section class="section">
     <div class="section-title_component">
       <div class="container">
@@ -931,10 +927,8 @@
     </div>
   </section>
   <!-- -- -->
-  <div data-w-id="ee7c973f-5780-de0e-a595-8617df6e448b" class="u-divider">
-    <div class="container">
-      <div class="u-border" style="width: 100%; height: 1px"></div>
-    </div>
+  <div class="container">
+    <div class="target_line"></div>
   </div>
   <section class="section">
     <div class="section-title_component">
@@ -1844,11 +1838,6 @@
     </div>
   </section>
   <!-- -- -->
-  <div data-w-id="ee7c973f-5780-de0e-a595-8617df6e448b" class="u-divider">
-    <div class="container">
-      <div class="u-border" style="width: 100%; height: 1px"></div>
-    </div>
-  </div>
   <section class="section">
     <div class="section-title_component">
       <div class="container">
@@ -2326,22 +2315,15 @@
       </div>
     </footer>
   </div>
-  <div id="target" style="height: 200px; background-color: lightblue">
-    目標元素
-  </div>
-  <div id="status"></div>
-  <!-- <Loading v-if="isError || isShowLoading" :mode="mode"></Loading> -->
   <Footer></Footer>
 </template>
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ref } from "vue";
-// import Loading from "@/widgets/layout/loading.vue";
 import Footer from "@/widgets/layout/footer.vue";
 import View from "@/widgets/home/view.vue";
 import { onMounted } from "vue";
-// import pro168 from "@/assets/images/pro168_logo.png";
 export default {
   components: {
     Footer,
@@ -2352,19 +2334,21 @@ export default {
     const a = ref("");
     onMounted(() => {
       console.log("index");
-      // const observer = new IntersectionObserver((entries) => {
-      //   entries.forEach((entry) => {
-      //     if (entry.isIntersecting) {
-      //       console.log("進入");
-      //     } else {
-      //       console.log("目標元素離開視口");
-      //     }
-      //   });
-      // });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      });
 
-      // 設置要觀察的目標元素
-      // const target = document.getElementById("line1");
-      // observer.observe(target);
+      // 獲取所有目標元素並設置觀察
+      const targets = document.querySelectorAll(".target_line");
+      targets.forEach((target) => {
+        observer.observe(target);
+      });
     });
 
     return {
@@ -2374,8 +2358,32 @@ export default {
 };
 AOS.init();
 </script>
-<style scoped>
+<style scoped lang="scss">
 .transparent {
   background-color: transparent !important;
+}
+
+.target_line {
+  width: 0%;
+  height: 0.5px;
+  background-color: var(--swatch--white);
+  &:first-child {
+    margin-top: 10rem;
+  }
+
+  &.active {
+    animation-name: line;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+}
+@keyframes line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 </style>

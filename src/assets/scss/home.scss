@@ -44,14 +44,13 @@
   }
   .img-wrap {
     position: absolute;
-    width: 100px;
     border-radius: 6px;
     overflow: hidden;
     opacity: 0;
   }
   img {
     // width: 100%;
-    max-width: none;
+    max-width: 230px;
     // object-fit: cover;
   }
 }

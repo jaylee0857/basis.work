@@ -61,7 +61,7 @@ export default {
           setTimeout(() => {
             isShowLoading.value = false;
             mode.value = "enter";
-          }, 4000);
+          }, 2800);
         }
         lastPage.value = store.state.route.path;
       }
