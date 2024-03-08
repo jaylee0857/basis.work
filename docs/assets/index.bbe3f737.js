@@ -25,8 +25,8 @@ import {
   o as g,
   c as b,
   a as y,
-  n as h,
-  F as w,
+  n as w,
+  F as h,
   u as _,
   r as x,
   b as C,
@@ -79,8 +79,8 @@ import {
   a0 as ge,
   a1 as be,
   a2 as ye,
-  a3 as he,
-  a4 as we,
+  a3 as we,
+  a4 as he,
   a5 as _e,
   a6 as xe,
   a7 as Ce,
@@ -157,11 +157,11 @@ var je = ke(
         setup: (e) => (t, a) => (
           g(),
           b(
-            w,
+            h,
             null,
             [
-              y("div", { class: h(["mask", e.mode]) }, null, 2),
-              y("div", { class: h(["bg", e.mode]) }, Ae, 2),
+              y("div", { class: w(["mask", e.mode]) }, null, 2),
+              y("div", { class: w(["bg", e.mode]) }, Ae, 2),
             ],
             64
           )
@@ -210,7 +210,7 @@ var je = ke(
         return (
           g(),
           b(
-            w,
+            h,
             null,
             [
               (g(),
@@ -687,7 +687,7 @@ const Me = () => {
           y("ul", null, [
             (g(!0),
             b(
-              w,
+              h,
               null,
               F(
                 s.value,
@@ -713,7 +713,7 @@ const Me = () => {
                         y(
                           "div",
                           {
-                            class: h([
+                            class: w([
                               "nav_link-btm",
                               { active: t.value === a },
                             ]),
@@ -787,7 +787,7 @@ var st = ke(
             return (e, a) => (
               g(),
               b(
-                w,
+                h,
                 null,
                 [
                   y("div", Xe, [
@@ -796,7 +796,7 @@ var st = ke(
                       {
                         href: "/",
                         "aria-current": "page",
-                        class: h([
+                        class: w([
                           "layout-deafult-header-logo",
                           { "layout-deafult-header-logo--open": t.value },
                         ]),
@@ -812,7 +812,7 @@ var st = ke(
                     y(
                       "div",
                       {
-                        class: h([
+                        class: w([
                           "layout-deafult-header-btn",
                           { "layout-deafult-header-btn--open": t.value },
                         ]),
@@ -841,7 +841,7 @@ var st = ke(
         function (e, t, a, s, l, o) {
           const i = j("LayoutHeader");
           return (
-            g(), b(w, null, [L(i), y("div", at, [Y(e.$slots, "default")])], 64)
+            g(), b(h, null, [L(i), y("div", at, [Y(e.$slots, "default")])], 64)
           );
         },
       ],
@@ -943,8 +943,8 @@ const bt = {
     style: { display: "grid" },
   },
   yt = { class: "swal2-title", style: { display: "block" } },
-  ht = { class: "swal2-html-container", style: { display: "block" } },
-  wt = { class: "swal2-actions", style: { display: "flex" } };
+  wt = { class: "swal2-html-container", style: { display: "block" } },
+  ht = { class: "swal2-actions", style: { display: "flex" } };
 var _t = ke({}, [
   [
     "render",
@@ -953,8 +953,8 @@ var _t = ke({}, [
         g(),
         b("div", bt, [
           y("h2", yt, [Y(e.$slots, "title")]),
-          y("div", ht, [Y(e.$slots, "content")]),
-          y("div", wt, [Y(e.$slots, "actions")]),
+          y("div", wt, [Y(e.$slots, "content")]),
+          y("div", ht, [Y(e.$slots, "actions")]),
         ])
       );
     },
@@ -1037,7 +1037,7 @@ var kt = ke(
                         S(
                           E(Z(l)),
                           {
-                            class: h([
+                            class: w([
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
@@ -1577,7 +1577,7 @@ var aa = ke(Kt, [
               y("ul", null, [
                 (g(),
                 b(
-                  w,
+                  h,
                   null,
                   F(5, (e) =>
                     y("li", { key: e }, [
@@ -1665,7 +1665,7 @@ const la = {
   ga = { class: "name" },
   ba = y("input", { type: "radio", name: "radio" }, null, -1),
   ya = { class: "name" };
-var ha = ke(la, [
+var wa = ke(la, [
     [
       "render",
       function (e, t, a, s, l, o) {
@@ -1728,9 +1728,9 @@ var ha = ke(la, [
       },
     ],
   ]),
-  wa = Object.freeze(
+  ha = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ha },
+      { __proto__: null, default: wa },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -2042,7 +2042,7 @@ const Va = ["data-index"],
   Da = ["src"],
   Qa = [
     N(
-      '<div class="btn-text-wrap" data-v-0eb24f08><div class="btn-text cc-scroll" data-v-0eb24f08>Scroll</div><div class="btn-text cc-bottom cc-scroll" data-v-0eb24f08>Scroll</div></div><div class="btn-icon cc-small w-embed" data-v-0eb24f08><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-0eb24f08><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor" data-v-0eb24f08></path></svg></div>',
+      '<div class="btn-text-wrap" data-v-13f86aa6><div class="btn-text cc-scroll" data-v-13f86aa6>Scroll</div><div class="btn-text cc-bottom cc-scroll" data-v-13f86aa6>Scroll</div></div><div class="btn-icon cc-small w-embed" data-v-13f86aa6><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-13f86aa6><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor" data-v-13f86aa6></path></svg></div>',
       2
     ),
   ];
@@ -2201,7 +2201,7 @@ const Ua = {
                 const { intersectionRatio: l, target: o } = e,
                   i = null == (t = o.dataset) ? void 0 : t.index;
                 if ("img" === (null == (a = o.dataset) ? void 0 : a.item))
-                  s.value[i].isEnter = !(l < 0.7);
+                  s.value[i].isEnter = !(l < 0.5);
                 else
                   o.style.animation =
                     l < 1 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
@@ -2239,7 +2239,7 @@ const Ua = {
             (e, t) => (
               g(),
               b(
-                w,
+                h,
                 null,
                 [
                   y(
@@ -2250,10 +2250,12 @@ const Ua = {
                         t[0] ||
                         (t[0] = (e) =>
                           ((e) => {
-                            const t = window.innerWidth / 2,
-                              s = window.innerHeight / 2;
-                            (a.x = ((t - e.clientX) / 100) * 10),
-                              (a.y = ((s - e.clientY) / 100) * 10);
+                            if (window.innerWidth > 576) {
+                              const t = window.innerWidth / 2,
+                                s = window.innerHeight / 2;
+                              (a.x = ((t - e.clientX) / 100) * 10),
+                                (a.y = ((s - e.clientY) / 100) * 10);
+                            }
                           })(e)),
                     },
                     [
@@ -2276,7 +2278,7 @@ const Ua = {
                             [
                               (g(!0),
                               b(
-                                w,
+                                h,
                                 null,
                                 F(
                                   s.value,
@@ -2352,7 +2354,7 @@ const Ua = {
           );
         },
       },
-      [["__scopeId", "data-v-0eb24f08"]]
+      [["__scopeId", "data-v-13f86aa6"]]
     ),
   },
   setup() {
@@ -2375,7 +2377,7 @@ const Ua = {
   },
 };
 fe.init();
-const Fa = (e) => (me("data-v-1447ed98"), (e = e()), ve(), e),
+const Fa = (e) => (me("data-v-6291df73"), (e = e()), ve(), e),
   Ra = Fa(() =>
     y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
@@ -5082,7 +5084,7 @@ const Fa = (e) => (me("data-v-1447ed98"), (e = e()), ve(), e),
     )
   ),
   Ja = N(
-    '<section class="section" data-v-1447ed98><div class="section-title_component" data-v-1447ed98><div class="container" data-v-1447ed98><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-1447ed98><div class="section-title_dot" style="opacity:1;" data-v-1447ed98></div><div class="u-overflow-hidden" data-v-1447ed98><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-1447ed98><h2 class="u-ts-4" data-v-1447ed98>Contact Us</h2></div></div></div></div></div><div class="container" data-v-1447ed98><div class="w-layout-grid pair-grid" data-v-1447ed98><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-1447ed98><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-1447ed98><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-1447ed98><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-1447ed98><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-1447ed98><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98><div style="position:relative;display:inline-block;" data-v-1447ed98> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    '<section class="section" data-v-6291df73><div class="section-title_component" data-v-6291df73><div class="container" data-v-6291df73><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-6291df73><div class="section-title_dot" style="opacity:1;" data-v-6291df73></div><div class="u-overflow-hidden" data-v-6291df73><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-6291df73><h2 class="u-ts-4" data-v-6291df73>Contact Us</h2></div></div></div></div></div><div class="container" data-v-6291df73><div class="w-layout-grid pair-grid" data-v-6291df73><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-6291df73><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-6291df73><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-6291df73><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-6291df73><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-6291df73><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73><div style="position:relative;display:inline-block;" data-v-6291df73> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   ),
   es = Fa(() =>
@@ -5395,7 +5397,7 @@ var ts = ke(Ua, [
         return (
           g(),
           b(
-            w,
+            h,
             null,
             [L(i), Ra, Wa, Za, Na, Ya, Ka, Xa, $a, Ga, Ja, es, L(r)],
             64
@@ -5403,7 +5405,7 @@ var ts = ke(Ua, [
         );
       },
     ],
-    ["__scopeId", "data-v-1447ed98"],
+    ["__scopeId", "data-v-6291df73"],
   ]),
   as = Object.freeze(
     Object.defineProperty(
@@ -5425,7 +5427,7 @@ const ss = {
       Nt(
         () =>
           Promise.resolve().then(function () {
-            return wa;
+            return ha;
           }),
         void 0
       ),
@@ -5448,7 +5450,7 @@ const ss = {
   },
   ls = {
     "../pages/about.vue": sa,
-    "../pages/demo.vue": wa,
+    "../pages/demo.vue": ha,
     "../pages/home.vue": Pa,
     "../pages/index.vue": as,
   },
@@ -5511,7 +5513,7 @@ var ns = Object.freeze(
   })
 );
 const cs = ye({ modules: Wt });
-he(cs, is);
+we(cs, is);
 var ds = Object.freeze(
   Object.defineProperty({ __proto__: null, default: cs }, Symbol.toStringTag, {
     value: "Module",
@@ -5696,7 +5698,7 @@ bs.prototype.install = function (e) {
   (e.config.globalProperties[t] = this), e.provide(t, this);
 };
 var ys = new bs();
-const hs = {
+const ws = {
     "../services/alert-service.js": Bt,
     "../services/http-service.js": gs,
     "../services/i18n-service.js": qe,
@@ -5711,12 +5713,12 @@ const hs = {
     "../services/storage-service.js": ze,
     "../services/store-service.js": ds,
   },
-  ws = {
+  hs = {
     install: (e) => {
-      for (let t in hs) e.use(hs[t].default);
+      for (let t in ws) e.use(ws[t].default);
     },
   };
-const _s = we(je);
+const _s = he(je);
 _s.provide("$jQuery", _e),
   _s.provide("$swal", Be),
   _s.provide("$storage", V),
@@ -5724,5 +5726,5 @@ _s.provide("$jQuery", _e),
   _s.use(ct),
   _s.use(Ot),
   _s.use(Ce, { loading: "", error: "" }),
-  _s.use(ws),
+  _s.use(hs),
   _s.mount("#app");

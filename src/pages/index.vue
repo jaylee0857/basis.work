@@ -2273,6 +2273,12 @@ AOS.init();
   }
 }
 
+.w-layout-grid.pair-grid.is-leading {
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
+}
+
 .apps_asset.cc-2.w-dyn-list,
 .apps_asset.cc-1 {
   @media (max-width: 768px) {

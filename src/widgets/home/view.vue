@@ -218,15 +218,18 @@ const imagesOption = ref([
 ]);
 
 const moveView = (e) => {
-  const windowCenterX = window.innerWidth / 2;
-  const windowCenterY = window.innerHeight / 2;
+  // 检查窗口宽度是否小于576
+  if (window.innerWidth > 576) {
+    const windowCenterX = window.innerWidth / 2;
+    const windowCenterY = window.innerHeight / 2;
 
-  position.x = ((windowCenterX - e.clientX) / 100) * 10;
-  position.y = ((windowCenterY - e.clientY) / 100) * 10;
+    position.x = ((windowCenterX - e.clientX) / 100) * 10;
+    position.y = ((windowCenterY - e.clientY) / 100) * 10;
 
-  console.log(position.x);
-
-  console.log(position.y);
+    // 在窗口宽度小于576时执行的操作
+    // console.log(position.x);
+    // console.log(position.y);
+  }
 };
 
 /**
@@ -256,7 +259,7 @@ const callback = (entries) => {
     switch (itemName) {
       case "img":
         imagesOption.value[index].isEnter =
-          intersectionRatio < 0.7 ? false : true;
+          intersectionRatio < 0.5 ? false : true;
         console.log(target.dataset?.index, "index");
         console.log(intersectionRatio);
         break;
