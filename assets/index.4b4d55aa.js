@@ -2377,7 +2377,7 @@ const Ua = {
   },
 };
 fe.init();
-const Fa = (e) => (me("data-v-6291df73"), (e = e()), ve(), e),
+const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
   Ra = Fa(() =>
     y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
@@ -5084,7 +5084,7 @@ const Fa = (e) => (me("data-v-6291df73"), (e = e()), ve(), e),
     )
   ),
   Ja = N(
-    '<section class="section" data-v-6291df73><div class="section-title_component" data-v-6291df73><div class="container" data-v-6291df73><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-6291df73><div class="section-title_dot" style="opacity:1;" data-v-6291df73></div><div class="u-overflow-hidden" data-v-6291df73><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-6291df73><h2 class="u-ts-4" data-v-6291df73>Contact Us</h2></div></div></div></div></div><div class="container" data-v-6291df73><div class="w-layout-grid pair-grid" data-v-6291df73><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-6291df73><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-6291df73><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-6291df73><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-6291df73><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-6291df73><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-6291df73><div style="position:relative;display:inline-block;" data-v-6291df73> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    '<section class="section" data-v-764ed4b3><div class="section-title_component" data-v-764ed4b3><div class="container" data-v-764ed4b3><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-764ed4b3><div class="section-title_dot" style="opacity:1;" data-v-764ed4b3></div><div class="u-overflow-hidden" data-v-764ed4b3><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-764ed4b3><h2 class="u-ts-4" data-v-764ed4b3>Contact Us</h2></div></div></div></div></div><div class="container" data-v-764ed4b3><div class="w-layout-grid pair-grid" data-v-764ed4b3><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-764ed4b3><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-764ed4b3><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-764ed4b3><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-764ed4b3><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-764ed4b3><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3><div style="position:relative;display:inline-block;" data-v-764ed4b3> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   ),
   es = Fa(() =>
@@ -5405,7 +5405,7 @@ var ts = ke(Ua, [
         );
       },
     ],
-    ["__scopeId", "data-v-6291df73"],
+    ["__scopeId", "data-v-764ed4b3"],
   ]),
   as = Object.freeze(
     Object.defineProperty(

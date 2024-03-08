@@ -1549,6 +1549,9 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   border-radius: 6px;
   overflow: hidden;
   opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 .view img {
   max-width: 230px;
@@ -2493,35 +2496,35 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 .op0[data-v-13f86aa6] {
   opacity: 0;
 }
-.transparent[data-v-6291df73] {
+.transparent[data-v-764ed4b3] {
   background-color: transparent !important;
 }
-.target_line[data-v-6291df73] {
+.target_line[data-v-764ed4b3] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-6291df73]:first-child {
-  margin-top: 10rem;
+.target_line[data-v-764ed4b3]:first-child {
+  margin-top: 30px;
 }
-.target_line.active[data-v-6291df73] {
-  -webkit-animation-name: line-6291df73;
-  animation-name: line-6291df73;
+.target_line.active[data-v-764ed4b3] {
+  -webkit-animation-name: line-764ed4b3;
+  animation-name: line-764ed4b3;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .w-layout-grid.pair-grid.is-leading[data-v-6291df73] {
+  .w-layout-grid.pair-grid.is-leading[data-v-764ed4b3] {
     overflow: hidden;
   }
-  .apps_asset.cc-2.w-dyn-list[data-v-6291df73],
-  .apps_asset.cc-1[data-v-6291df73] {
+  .apps_asset.cc-2.w-dyn-list[data-v-764ed4b3],
+  .apps_asset.cc-1[data-v-764ed4b3] {
     transform: translateZ(0) !important;
   }
 }
-@-webkit-keyframes line-6291df73 {
+@-webkit-keyframes line-764ed4b3 {
   0% {
     width: 0;
   }
@@ -2529,7 +2532,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-6291df73 {
+@keyframes line-764ed4b3 {
   0% {
     width: 0;
   }
@@ -9818,7 +9821,7 @@ strong {
   display: flex;
   position: absolute;
   top: auto;
-  bottom: 5rem;
+  bottom: 20%;
   left: 0%;
   right: 0%;
 }
@@ -11713,6 +11716,9 @@ strong {
   border-radius: 6px;
   overflow: hidden;
   opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 .view img {
   max-width: 230px;
