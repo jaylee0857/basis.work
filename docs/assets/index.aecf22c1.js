@@ -1,6 +1,6 @@
 var e,
-  t,
   a,
+  t,
   s,
   l,
   o,
@@ -11,21 +11,21 @@ var e,
   d = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   u = Object.prototype.propertyIsEnumerable,
-  f = (e, t, a) =>
-    t in e
-      ? r(e, t, { enumerable: !0, configurable: !0, writable: !0, value: a })
-      : (e[t] = a),
-  m = (e, t) => {
-    for (var a in t || (t = {})) p.call(t, a) && f(e, a, t[a]);
-    if (d) for (var a of d(t)) u.call(t, a) && f(e, a, t[a]);
+  f = (e, a, t) =>
+    a in e
+      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t })
+      : (e[a] = t),
+  m = (e, a) => {
+    for (var t in a || (a = {})) p.call(a, t) && f(e, t, a[t]);
+    if (d) for (var t of d(a)) u.call(a, t) && f(e, t, a[t]);
     return e;
   },
-  v = (e, t) => n(e, c(t));
+  v = (e, a) => n(e, c(a));
 import {
   o as g,
   c as b,
-  a as y,
-  n as h,
+  a as h,
+  n as y,
   F as w,
   u as _,
   r as x,
@@ -41,15 +41,15 @@ import {
   k as B,
   l as H,
   p as P,
-  m as T,
-  q as z,
+  m as z,
+  q as T,
   s as M,
   t as I,
   v as V,
   x as D,
-  S as Q,
+  S as F,
   y as U,
-  z as F,
+  z as Q,
   A as R,
   B as W,
   C as Z,
@@ -61,8 +61,8 @@ import {
   J as G,
   K as J,
   T as ee,
-  L as te,
-  M as ae,
+  L as ae,
+  M as te,
   N as se,
   O as le,
   P as oe,
@@ -78,8 +78,8 @@ import {
   $ as ve,
   a0 as ge,
   a1 as be,
-  a2 as ye,
-  a3 as he,
+  a2 as he,
+  a3 as ye,
   a4 as we,
   a5 as _e,
   a6 as xe,
@@ -89,40 +89,40 @@ import {
   const e = document.createElement("link").relList;
   if (!(e && e.supports && e.supports("modulepreload"))) {
     for (const e of document.querySelectorAll('link[rel="modulepreload"]'))
-      t(e);
+      a(e);
     new MutationObserver((e) => {
-      for (const a of e)
-        if ("childList" === a.type)
-          for (const e of a.addedNodes)
-            "LINK" === e.tagName && "modulepreload" === e.rel && t(e);
+      for (const t of e)
+        if ("childList" === t.type)
+          for (const e of t.addedNodes)
+            "LINK" === e.tagName && "modulepreload" === e.rel && a(e);
     }).observe(document, { childList: !0, subtree: !0 });
   }
-  function t(e) {
+  function a(e) {
     if (e.ep) return;
     e.ep = !0;
-    const t = (function (e) {
-      const t = {};
+    const a = (function (e) {
+      const a = {};
       return (
-        e.integrity && (t.integrity = e.integrity),
-        e.referrerpolicy && (t.referrerPolicy = e.referrerpolicy),
+        e.integrity && (a.integrity = e.integrity),
+        e.referrerpolicy && (a.referrerPolicy = e.referrerpolicy),
         "use-credentials" === e.crossorigin
-          ? (t.credentials = "include")
+          ? (a.credentials = "include")
           : "anonymous" === e.crossorigin
-          ? (t.credentials = "omit")
-          : (t.credentials = "same-origin"),
-        t
+          ? (a.credentials = "omit")
+          : (a.credentials = "same-origin"),
+        a
       );
     })(e);
-    fetch(e.href, t);
+    fetch(e.href, a);
   }
 })();
 const Ae = [
-  y(
+  h(
     "div",
     { class: "icon" },
     [
-      y("div", { class: "svg_box" }, [
-        y(
+      h("div", { class: "svg_box" }, [
+        h(
           "svg",
           {
             height: "100%",
@@ -132,7 +132,7 @@ const Ae = [
             xmlns: "http://www.w3.org/2000/svg",
           },
           [
-            y("path", {
+            h("path", {
               d:
                 "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
               fill: "black",
@@ -144,24 +144,24 @@ const Ae = [
     -1
   ),
 ];
-var ke = (e, t) => {
-  const a = e.__vccOpts || e;
-  for (const [s, l] of t) a[s] = l;
-  return a;
+var ke = (e, a) => {
+  const t = e.__vccOpts || e;
+  for (const [s, l] of a) t[s] = l;
+  return t;
 };
 var je = ke(
   {
     components: {
       Loading: {
         props: { mode: String },
-        setup: (e) => (t, a) => (
+        setup: (e) => (a, t) => (
           g(),
           b(
             w,
             null,
             [
-              y("div", { class: h(["mask", e.mode]) }, null, 2),
-              y("div", { class: h(["bg", e.mode]) }, Ae, 2),
+              h("div", { class: y(["mask", e.mode]) }, null, 2),
+              h("div", { class: y(["bg", e.mode]) }, Ae, 2),
             ],
             64
           )
@@ -170,8 +170,8 @@ var je = ke(
     },
     setup() {
       const e = _(),
-        t = x(!1),
-        a = x(""),
+        a = x(!1),
+        t = x(""),
         s = x("leave"),
         l = C(() => "stop" === s.value),
         o = C(() => {
@@ -182,28 +182,28 @@ var je = ke(
         A(
           () => e.state.route,
           (l) => {
-            a.value !== l &&
-              ((t.value = !0),
+            t.value !== l &&
+              ((a.value = !0),
               setTimeout(() => {
-                (t.value = !1), (s.value = "enter");
+                (a.value = !1), (s.value = "enter");
               }, 2800)),
-              (a.value = e.state.route.path);
+              (t.value = e.state.route.path);
           }
         ),
-        A(t, (t) => {
-          e.commit("app/systm/Loading", t);
+        A(a, (a) => {
+          e.commit("app/systm/Loading", a);
         }),
         k(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: o, isShowLoading: t, mode: s, isError: l }
+        { layout: o, isShowLoading: a, mode: s, isError: l }
       );
     },
   },
   [
     [
       "render",
-      function (e, t, a, s, l, o) {
+      function (e, a, t, s, l, o) {
         const i = j("router-view"),
           r = j("the-popup"),
           n = j("Loading");
@@ -446,26 +446,26 @@ const Se = {
     ),
   },
   Oe = {};
-for (let xs in Se) {
-  const e = xs.replace("../locales/", "").toLowerCase().replace(".js", ""),
-    [t, ...a] = e.split("/"),
-    s = T(".", a),
-    l = Se[xs].default;
-  Oe[t] = z((e, t) => M(e, { [`${s}.${t}`]: l[t] }), Oe[t] || {}, I(l));
+for (let Ss in Se) {
+  const e = Ss.replace("../locales/", "").toLowerCase().replace(".js", ""),
+    [a, ...t] = e.split("/"),
+    s = z(".", t),
+    l = Se[Ss].default;
+  Oe[a] = T((e, a) => M(e, { [`${s}.${a}`]: l[a] }), Oe[a] || {}, I(l));
 }
 const Ee = (() => {
-    var e, t, a, s;
+    var e, a, t, s;
     const l = V.get("locale");
     if (l) return l;
     let o =
       null !=
       (s =
         null !=
-        (a = null == (e = navigator.language) ? void 0 : e.toLowerCase())
-          ? a
-          : null == (t = navigator.userLanguage)
+        (t = null == (e = navigator.language) ? void 0 : e.toLowerCase())
+          ? t
+          : null == (a = navigator.userLanguage)
           ? void 0
-          : t.toLowerCase())
+          : a.toLowerCase())
         ? s
         : null;
     return o
@@ -488,7 +488,7 @@ var qe = Object.freeze(
     value: "Module",
   })
 );
-(Q.toast = function (e) {
+(F.toast = function (e) {
   return this.fire({
     title: e,
     toast: !0,
@@ -499,14 +499,14 @@ var qe = Object.freeze(
     timer: 2e3,
     background: "transparent",
     didOpen: (e) => {
-      e.addEventListener("click", Q.close);
+      e.addEventListener("click", F.close);
     },
   });
 }),
-  (Q.alert = function ({
+  (F.alert = function ({
     title: e,
-    text: t,
-    willClose: a = null,
+    text: a,
+    willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
     confirmButtonText: o = Le.t("button.confirm"),
@@ -514,17 +514,17 @@ var qe = Object.freeze(
   }) {
     return this.fire({
       title: e,
-      text: t,
+      text: a,
       html: l,
       customClass: `swal2-alert ${i}`,
       heightAuto: s,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
-      willClose: a,
+      willClose: t,
       confirmButtonText: o,
     });
   }),
-  (Q.showLoading = function () {
+  (F.showLoading = function () {
     return this.fire({
       title: "winner winner chicken dinner",
       showConfirmButton: !1,
@@ -534,17 +534,17 @@ var qe = Object.freeze(
       background: "transparent",
     });
   }),
-  (Q.confirm = function ({
+  (F.confirm = function ({
     title: e,
-    text: t,
-    html: a,
+    text: a,
+    html: t,
     confirmCallback: s = null,
     heightAuto: l = !1,
   }) {
     return this.fire({
       title: e,
-      text: t,
-      html: a,
+      text: a,
+      html: t,
       customClass: "swal2-confirm",
       heightAuto: l,
       showCancelButton: !0,
@@ -555,7 +555,7 @@ var qe = Object.freeze(
       },
     });
   });
-const Be = Q.mixin({
+const Be = F.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -566,8 +566,8 @@ const Be = Q.mixin({
   confirmButtonText: Le.t("button.confirm"),
   cancelButtonText: Le.t("button.cancel"),
   didOpen(e) {
-    const t = e.querySelector(".swal2-cancel");
-    e.querySelector(".swal2-confirm").blur(), t.blur();
+    const a = e.querySelector(".swal2-cancel");
+    e.querySelector(".swal2-confirm").blur(), a.blur();
   },
 });
 class He {
@@ -584,42 +584,42 @@ class Pe {
   }
 }
 Pe.prototype.install = function (e) {
-  const t = "storage-service";
-  (e.config.globalProperties[t] = this), e.provide(t, this);
+  const a = "storage-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Te = new Pe(),
-  ze = Object.freeze(
+var ze = new Pe(),
+  Te = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Pe, default: Te },
+      { __proto__: null, StorageService: Pe, default: ze },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
 const Me = () => {
     const e = D.exports.useI18n(),
-      t = x({}),
-      a = (s, l = {}) => {
+      a = x({}),
+      t = (s, l = {}) => {
         const [o, ...i] = U(".", s);
-        return o in t.value ? a(`${t.value[o]}.${T(".", i)}`, l) : e.t(s, l);
+        return o in a.value ? t(`${a.value[o]}.${z(".", i)}`, l) : e.t(s, l);
       };
     return {
       locale: e.locale,
-      change: (t) => {
-        e.setLocale(t), Te.provider.set("locale", t);
+      change: (a) => {
+        e.setLocale(a), ze.provider.set("locale", a);
       },
       setPrefix: (e) => {
-        t.value = "string" == typeof e ? { $current: e } : m(m({}, t.value), e);
+        a.value = "string" == typeof e ? { $current: e } : m(m({}, a.value), e);
       },
-      t: a,
+      t: t,
       addMessages: e.addMessages,
     };
   },
   Ie = { class: "layout-deafult-header-nav" },
   Ve = ["onMouseenter"],
-  De = y("div", { class: "line" }, null, -1),
-  Qe = { class: "list_style" },
+  De = h("div", { class: "line" }, null, -1),
+  Fe = { class: "list_style" },
   Ue = { class: "nav_link-top" },
-  Fe = y(
+  Qe = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -631,7 +631,7 @@ const Me = () => {
   Re = { class: "nav_link-title" },
   We = { class: "u-ts-3" },
   Ze = { class: "nav_link-p" },
-  Ne = y(
+  Ne = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -640,11 +640,11 @@ const Me = () => {
     null,
     -1
   ),
-  Ye = y("div", { id: "pink_mask" }, null, -1),
+  Ye = h("div", { id: "pink_mask" }, null, -1),
   Ke = {
     setup(e) {
-      const t = x(1),
-        a = x(!0),
+      const a = x(1),
+        t = x(!0),
         s = x([
           {
             title: "Overview",
@@ -667,9 +667,9 @@ const Me = () => {
               "Meet Basis. We increase the value of digital products and their brands through design",
           },
         ]),
-        l = C(() => 25 * t.value),
+        l = C(() => 25 * a.value),
         o = C(() => {
-          switch (t.value) {
+          switch (a.value) {
             case 1:
               return 50;
             case 2:
@@ -684,14 +684,14 @@ const Me = () => {
       return (e, r) => (
         g(),
         b("div", Ie, [
-          y("ul", null, [
+          h("ul", null, [
             (g(!0),
             b(
               w,
               null,
-              F(
+              Q(
                 s.value,
-                (e, a) => (
+                (e, t) => (
                   g(),
                   b(
                     "li",
@@ -700,25 +700,25 @@ const Me = () => {
                       style: R(`--i: ${e}`),
                       onMouseenter: (e) =>
                         ((e) => {
-                          t.value = e;
-                        })(a),
+                          a.value = e;
+                        })(t),
                     },
                     [
                       De,
-                      y("div", Qe, [
-                        y("div", Ue, [
-                          Fe,
-                          y("div", Re, [y("div", We, W(e.title), 1)]),
+                      h("div", Fe, [
+                        h("div", Ue, [
+                          Qe,
+                          h("div", Re, [h("div", We, W(e.title), 1)]),
                         ]),
-                        y(
+                        h(
                           "div",
                           {
-                            class: h([
+                            class: y([
                               "nav_link-btm",
-                              { active: t.value === a },
+                              { active: a.value === t },
                             ]),
                           },
-                          [y("p", Ze, W(e.content), 1), Ne],
+                          [h("p", Ze, W(e.content), 1), Ne],
                           2
                         ),
                       ]),
@@ -730,13 +730,13 @@ const Me = () => {
               ),
               128
             )),
-            y(
+            h(
               "div",
               {
                 class: "move-item",
                 style: R({
-                  left: "" + (a.value ? `calc(${Z(l)}% - 4px)` : "auto"),
-                  right: "" + (a.value ? "auto" : `calc(${Z(o)}% - 4px)`),
+                  left: "" + (t.value ? `calc(${Z(l)}% - 4px)` : "auto"),
+                  right: "" + (t.value ? "auto" : `calc(${Z(o)}% - 4px)`),
                   width: `calc(${i.value}% + 8px)`,
                 }),
               },
@@ -764,8 +764,8 @@ const Me = () => {
     fill: "#000000",
     xmlns: "http://www.w3.org/2000/svg",
   },
-  et = [
-    y(
+  ea = [
+    h(
       "path",
       {
         d:
@@ -776,53 +776,53 @@ const Me = () => {
       -1
     ),
   ],
-  tt = [y("div", null, null, -1), y("div", null, null, -1)],
-  at = { class: "layout-deafult pb-32" };
-var st = ke(
+  aa = [h("div", null, null, -1), h("div", null, null, -1)],
+  ta = { class: "layout-deafult pb-32" };
+var sa = ke(
     {
       components: {
         LayoutHeader: {
           setup(e) {
-            const t = x(!1);
-            return (e, a) => (
+            const a = x(!1);
+            return (e, t) => (
               g(),
               b(
                 w,
                 null,
                 [
-                  y("div", Xe, [
-                    y(
+                  h("div", Xe, [
+                    h(
                       "div",
                       {
                         href: "/",
                         "aria-current": "page",
-                        class: h([
+                        class: y([
                           "layout-deafult-header-logo",
-                          { "layout-deafult-header-logo--open": t.value },
+                          { "layout-deafult-header-logo--open": a.value },
                         ]),
                         "aria-label": "home",
                       },
                       [
-                        t.value
-                          ? (g(), b("svg", Je, et))
+                        a.value
+                          ? (g(), b("svg", Je, ea))
                           : (g(), b("div", $e, Ge)),
                       ],
                       2
                     ),
-                    y(
+                    h(
                       "div",
                       {
-                        class: h([
+                        class: y([
                           "layout-deafult-header-btn",
-                          { "layout-deafult-header-btn--open": t.value },
+                          { "layout-deafult-header-btn--open": a.value },
                         ]),
-                        onClick: a[0] || (a[0] = (e) => (t.value = !t.value)),
+                        onClick: t[0] || (t[0] = (e) => (a.value = !a.value)),
                       },
-                      tt,
+                      aa,
                       2
                     ),
                   ]),
-                  t.value ? (g(), S(Ke, { key: 0 })) : q("", !0),
+                  a.value ? (g(), S(Ke, { key: 0 })) : q("", !0),
                 ],
                 64
               )
@@ -838,54 +838,54 @@ var st = ke(
     [
       [
         "render",
-        function (e, t, a, s, l, o) {
+        function (e, a, t, s, l, o) {
           const i = j("LayoutHeader");
           return (
-            g(), b(w, null, [L(i), y("div", at, [Y(e.$slots, "default")])], 64)
+            g(), b(w, null, [L(i), h("div", ta, [Y(e.$slots, "default")])], 64)
           );
         },
       ],
     ]
   ),
-  lt = Object.freeze(
+  la = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: st },
+      { __proto__: null, default: sa },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ot = { class: "layout-demo" };
-var it = ke({ setup() {} }, [
+const oa = { class: "layout-demo" };
+var ia = ke({ setup() {} }, [
   [
     "render",
-    function (e, t, a, s, l, o) {
-      return g(), b("div", ot, [Y(e.$slots, "default")]);
+    function (e, a, t, s, l, o) {
+      return g(), b("div", oa, [Y(e.$slots, "default")]);
     },
   ],
 ]);
-const rt = {
-    "../layouts/layout-default.vue": lt,
+const ra = {
+    "../layouts/layout-default.vue": la,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: it },
+        { __proto__: null, default: ia },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  nt = [];
-for (let xs in rt) {
-  const e = xs.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  nt.push({ componentName: e, component: rt[xs].default });
+  na = [];
+for (let Ss in ra) {
+  const e = Ss.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  na.push({ componentName: e, component: ra[Ss].default });
 }
-const ct = {
+const ca = {
   install: (e) => {
-    nt.forEach((t) => {
-      e.component(t.componentName, t.component);
+    na.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-const dt = {
+const da = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
       const e = K();
@@ -898,131 +898,131 @@ const dt = {
       };
     },
   },
-  pt = {
+  pa = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
-  ut = { class: "font-bold" },
-  ft = { class: "absolute right-8 top-6" };
-var mt = ke(dt, [
+  ua = { class: "font-bold" },
+  fa = { class: "absolute right-8 top-6" };
+var ma = ke(da, [
     [
       "render",
-      function (e, t, a, s, l, o) {
+      function (e, a, t, s, l, o) {
         return (
           g(),
-          b("div", pt, [
-            a.goBackButton
+          b("div", pa, [
+            t.goBackButton
               ? (g(),
                 b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
-                    t[0] || (t[0] = (...e) => s.goBack && s.goBack(...e)),
+                    a[0] || (a[0] = (...e) => s.goBack && s.goBack(...e)),
                 }))
               : q("", !0),
-            y("div", ut, [
-              Y(e.$slots, "title", {}, () => [X(W(a.title), 1)], !0),
+            h("div", ua, [
+              Y(e.$slots, "title", {}, () => [X(W(t.title), 1)], !0),
             ]),
-            y("div", ft, [Y(e.$slots, "actions", {}, void 0, !0)]),
+            h("div", fa, [Y(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
     ],
     ["__scopeId", "data-v-50981458"],
   ]),
-  vt = Object.freeze(
+  va = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: mt },
+      { __proto__: null, default: ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const gt = () => $("popup-service");
-const bt = {
+const ga = () => $("popup-service");
+const ba = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  yt = { class: "swal2-title", style: { display: "block" } },
-  ht = { class: "swal2-html-container", style: { display: "block" } },
-  wt = { class: "swal2-actions", style: { display: "flex" } };
-var _t = ke({}, [
+  ha = { class: "swal2-title", style: { display: "block" } },
+  ya = { class: "swal2-html-container", style: { display: "block" } },
+  wa = { class: "swal2-actions", style: { display: "flex" } };
+var _a = ke({}, [
   [
     "render",
-    function (e, t) {
+    function (e, a) {
       return (
         g(),
-        b("div", bt, [
-          y("h2", yt, [Y(e.$slots, "title")]),
-          y("div", ht, [Y(e.$slots, "content")]),
-          y("div", wt, [Y(e.$slots, "actions")]),
+        b("div", ba, [
+          h("h2", ha, [Y(e.$slots, "title")]),
+          h("div", ya, [Y(e.$slots, "content")]),
+          h("div", wa, [Y(e.$slots, "actions")]),
         ])
       );
     },
   ],
 ]);
-const xt = {
+const xa = {
     key: 0,
     class:
       "fixed z-[1041] inset-0 w-full h-full flex justify-center items-center pointer-events-none",
   },
-  Ct = { key: 1 },
-  At = ["data-timer", "data-end"];
-var kt = ke(
+  Ca = { key: 1 },
+  Aa = ["data-timer", "data-end"];
+var ka = ke(
   {
     setup(e) {
-      const t = gt(),
-        a = C(() => t.state),
+      const a = ga(),
+        t = C(() => a.state),
         s = (e) => {
-          a.value.resolve(
+          t.value.resolve(
             m(
               { isConfirmed: !1, isDismissed: !1, dismiss: null, result: null },
               e
             )
           );
         },
-        l = C(() => (a.value.type, ae(_t))),
-        o = C(() => a.value.BackdropStyle),
+        l = C(() => (t.value.type, te(_a))),
+        o = C(() => t.value.BackdropStyle),
         i = x();
       let r = null;
       const n = () => {
         clearTimeout(r), (r = null);
       };
-      A([() => a.value.autoClose, () => a.value.timer], ([e, t]) => {
-        t &&
+      A([() => t.value.autoClose, () => t.value.timer], ([e, a]) => {
+        a &&
           (n(),
           (r = setTimeout(() => {
             n(), e && c("timer");
-          }, t)));
+          }, a)));
       });
       const c = async (e) => {
           if (r) {
-            if (!a.value.allowDismissWhenTimerRunning) return;
+            if (!t.value.allowDismissWhenTimerRunning) return;
             n();
           }
           if (i.value && "onDismissed" in i.value) {
-            const a = await i.value.onDismissed();
-            a && (s({ isDismissed: !0, dismiss: e, result: a }), t.clear());
-          } else s({ isDismissed: !0, dismiss: e }), t.clear();
+            const t = await i.value.onDismissed();
+            t && (s({ isDismissed: !0, dismiss: e, result: t }), a.clear());
+          } else s({ isDismissed: !0, dismiss: e }), a.clear();
         },
         d = async () => {
-          a.value.allowOutsideClick && c("backdrop");
+          t.value.allowOutsideClick && c("backdrop");
         },
         p = async () => {
           c("cancel");
         },
         u = async () => {
           if (r) {
-            if (!a.value.allowConfirmWhenTimerRunning) return;
+            if (!t.value.allowConfirmWhenTimerRunning) return;
             n();
           }
           if (i.value && "onConfirmed" in i.value) {
             const e = await i.value.onConfirmed();
-            e && (s({ isConfirmed: !0, result: e }), t.clear());
-          } else s({ isConfirmed: !0 }), t.clear();
+            e && (s({ isConfirmed: !0, result: e }), a.clear());
+          } else s({ isConfirmed: !0 }), a.clear();
         };
-      return (e, t) => (
+      return (e, a) => (
         g(),
-        S(te, { to: "body" }, [
+        S(ae, { to: "body" }, [
           L(
             ee,
             { name: "popup", duration: "600" },
@@ -1030,18 +1030,18 @@ var kt = ke(
               default: O(() => {
                 var e;
                 return [
-                  Z(a).$display
+                  Z(t).$display
                     ? (g(),
-                      b("div", xt, [
+                      b("div", xa, [
                         (g(),
                         S(
                           E(Z(l)),
                           {
-                            class: h([
+                            class: y([
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
-                                  null == (e = Z(a))
+                                  null == (e = Z(t))
                                     ? void 0
                                     : e.noEnterAnimation,
                               },
@@ -1049,23 +1049,23 @@ var kt = ke(
                           },
                           G(
                             {
-                              title: O(() => [X(W(Z(a).title), 1)]),
+                              title: O(() => [X(W(Z(t).title), 1)]),
                               content: O(() => [
-                                Z(a).component
+                                Z(t).component
                                   ? (g(),
                                     S(
-                                      E(Z(a).component),
+                                      E(Z(t).component),
                                       J(
                                         { key: 0, ref_key: "compRef", ref: i },
-                                        Z(a).props
+                                        Z(t).props
                                       ),
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", Ct, W(Z(a).text), 1)),
+                                  : (g(), b("div", Ca, W(Z(t).text), 1)),
                               ]),
                               actions: O(() => [
-                                Z(a).showCancelButton
+                                Z(t).showCancelButton
                                   ? (g(),
                                     b(
                                       "button",
@@ -1075,11 +1075,11 @@ var kt = ke(
                                         class: "cancel-button",
                                         onClick: p,
                                       },
-                                      W(Z(a).cancelButtonText),
+                                      W(Z(t).cancelButtonText),
                                       1
                                     ))
                                   : q("", !0),
-                                Z(a).showConfirmButton
+                                Z(t).showConfirmButton
                                   ? (g(),
                                     b(
                                       "button",
@@ -1089,7 +1089,7 @@ var kt = ke(
                                         class: "confirm-button",
                                         onClick: u,
                                       },
-                                      W(Z(a).confirmButtonText),
+                                      W(Z(t).confirmButtonText),
                                       1
                                     ))
                                   : q("", !0),
@@ -1097,20 +1097,20 @@ var kt = ke(
                               _: 2,
                             },
                             [
-                              Z(a).timer && Z(a).timerProgress
+                              Z(t).timer && Z(t).timerProgress
                                 ? {
                                     name: "timer",
                                     fn: O(() => [
-                                      y(
+                                      h(
                                         "div",
                                         {
                                           class: "timer-progress",
-                                          "data-timer": Z(a).timer,
-                                          "data-end": Date.now() + Z(a).timer,
+                                          "data-timer": Z(t).timer,
+                                          "data-end": Date.now() + Z(t).timer,
                                         },
                                         null,
                                         8,
-                                        At
+                                        Aa
                                       ),
                                     ]),
                                   }
@@ -1136,7 +1136,7 @@ var kt = ke(
             },
             {
               default: O(() => [
-                Z(a).$display
+                Z(t).$display
                   ? (g(),
                     b(
                       "div",
@@ -1160,31 +1160,31 @@ var kt = ke(
   },
   [["__scopeId", "data-v-aca526dc"]]
 );
-const jt = {
-    "../components/the-header.vue": vt,
+const ja = {
+    "../components/the-header.vue": va,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: kt },
+        { __proto__: null, default: ka },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  St = [];
-for (let xs in jt) {
-  const e = xs.replace("../components/", "").toLowerCase().replace(".vue", "");
-  St.push({ componentName: e, component: jt[xs].default });
+  Sa = [];
+for (let Ss in ja) {
+  const e = Ss.replace("../components/", "").toLowerCase().replace(".vue", "");
+  Sa.push({ componentName: e, component: ja[Ss].default });
 }
-const Ot = {
+const Oa = {
   install: (e) => {
-    St.forEach((t) => {
-      e.component(t.componentName, t.component);
+    Sa.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-class Et {
+class Ea {
   constructor() {
-    return Q.mixin({
+    return F.mixin({
       reverseButtons: !0,
       heightAuto: !1,
       focusConfirm: !1,
@@ -1195,15 +1195,15 @@ class Et {
       confirmButtonText: Le.t("button.confirm"),
       cancelButtonText: Le.t("button.cancel"),
       didOpen(e) {
-        const t = e.querySelector(".swal2-cancel");
-        e.querySelector(".swal2-confirm").blur(), t.blur();
+        const a = e.querySelector(".swal2-cancel");
+        e.querySelector(".swal2-confirm").blur(), a.blur();
       },
     });
   }
 }
-class Lt {
+class La {
   constructor() {
-    this.provider = new Et();
+    this.provider = new Ea();
   }
   toast(e) {
     return this.provider.fire({
@@ -1222,8 +1222,8 @@ class Lt {
   }
   alert({
     title: e,
-    text: t,
-    willClose: a = null,
+    text: a,
+    willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
     confirmButtonText: o = Le.t("button.confirm"),
@@ -1231,13 +1231,13 @@ class Lt {
   }) {
     return this.provider.fire({
       title: e,
-      text: t,
+      text: a,
       html: l,
       customClass: `swal2-alert ${i}`,
       heightAuto: s,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
-      willClose: a,
+      willClose: t,
       confirmButtonText: o,
     });
   }
@@ -1255,16 +1255,16 @@ class Lt {
   }
   confirm({
     title: e,
-    text: t,
-    html: a,
+    text: a,
+    html: t,
     confirmButtonText: s = Le.t("button.confirm"),
     confirmCallback: l = null,
     heightAuto: o = !1,
   }) {
     return this.provider.fire({
       title: e,
-      text: t,
-      html: a,
+      text: a,
+      html: t,
       customClass: "swal2-confirm",
       confirmButtonText: s,
       heightAuto: o,
@@ -1280,38 +1280,38 @@ class Lt {
     this.provider.close();
   }
 }
-Lt.prototype.install = function (e) {
-  const t = "alert-service";
-  (e.config.globalProperties[t] = this), e.provide(t, this);
+La.prototype.install = function (e) {
+  const a = "alert-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var qt = new Lt(),
-  Bt = Object.freeze(
+var qa = new La(),
+  Ba = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Lt, default: qt },
+      { __proto__: null, AlertService: La, default: qa },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ht {
-  constructor(e, t = {}) {
-    this.instance = se.create(m({ baseURL: e }, t));
+class Ha {
+  constructor(e, a = {}) {
+    this.instance = se.create(m({ baseURL: e }, a));
   }
   init() {
     this.instance.defaults.validateStatus = (e) => e >= 200 && e < 300;
   }
   use(...e) {
     e.forEach((e) => {
-      var t;
-      null == (t = e.use) || t.call(e, this.instance);
+      var a;
+      null == (a = e.use) || a.call(e, this.instance);
     });
   }
 }
-const Pt = {
+const Pa = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
-          const t = V.get("token");
-          return t && (e.headers.Authorization = `Bearer ${t}`), e;
+          const a = V.get("token");
+          return a && (e.headers.Authorization = `Bearer ${a}`), e;
         },
         function (e) {
           return Promise.reject(e);
@@ -1319,39 +1319,39 @@ const Pt = {
       );
     },
   },
-  Tt = (e, { rejectNil: t, rejectEmpty: a }) =>
-    z(
+  za = (e, { rejectNil: a, rejectEmpty: t }) =>
+    T(
       (s, l) => {
         const o = e[l];
-        return (t && B(o)) || (a && le(o)) ? s : oe(l, o, s);
+        return (a && B(o)) || (t && le(o)) ? s : oe(l, o, s);
       },
       {},
       I(e)
     ),
-  zt = {
+  Ta = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
           const {
-            rejectNil: t = !0,
-            rejectEmpty: a = !1,
+            rejectNil: a = !0,
+            rejectEmpty: t = !1,
             isFormData: s = !1,
           } = e;
           if (
             (e.params &&
-              (e.params = Tt(e.params, { rejectNil: t, rejectEmpty: a })),
+              (e.params = za(e.params, { rejectNil: a, rejectEmpty: t })),
             e.data &&
-              ((e.data = Tt(e.data, { rejectNil: t, rejectEmpty: a })), s))
+              ((e.data = za(e.data, { rejectNil: a, rejectEmpty: t })), s))
           ) {
-            const t = new FormData();
-            ie((a) => {
-              e.data[a] instanceof Array
+            const a = new FormData();
+            ie((t) => {
+              e.data[t] instanceof Array
                 ? ie((e) => {
-                    t.append(`${a}[]`, e);
-                  }, e.data[a])
-                : t.append(a, e.data[a]);
+                    a.append(`${t}[]`, e);
+                  }, e.data[t])
+                : a.append(t, e.data[t]);
             }, I(e.data)),
-              (e.data = t);
+              (e.data = a);
           }
           return e;
         },
@@ -1369,54 +1369,54 @@ const Pt = {
         );
     },
   },
-  Mt = se.create();
-(Mt.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Mt.defaults.validateStatus = (e) => e >= 200 && e < 300);
-const It = {
+  Ma = se.create();
+(Ma.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Ma.defaults.validateStatus = (e) => e >= 200 && e < 300);
+const Ia = {
   async "read/marquee"() {
-    const e = await Mt.get("/app/user/news", {
+    const e = await Ma.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      t = await Mt.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: e.data, withdraw: t.data };
+      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Vt = {
-  "set/popup"(e, t) {
-    e.popupState = v(m({}, t), { $display: !0, $timestamp: Date.now() });
+const Va = {
+  "set/popup"(e, a) {
+    e.popupState = v(m({}, a), { $display: !0, $timestamp: Date.now() });
   },
   "clear/popup"(e) {
     e.popupState = { $display: !1, $timestamp: -1 };
   },
-  "systm/Loading"(e, t) {
-    e.isLoading = t;
+  "systm/Loading"(e, a) {
+    e.isLoading = a;
   },
 };
-const Dt = {
+const Da = {
   async "read/marquee"() {
-    const e = await Mt.get("/app/user/news", {
+    const e = await Ma.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      t = await Mt.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: e.data, withdraw: t.data };
+      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Qt = {
-  "set/popup"(e, t) {
-    e.popupState = v(m({}, t), { $display: !0, $timestamp: Date.now() });
+const Fa = {
+  "set/popup"(e, a) {
+    e.popupState = v(m({}, a), { $display: !0, $timestamp: Date.now() });
   },
   "clear/popup"(e) {
     e.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Ut = {
+const Ua = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: It },
+      { __proto__: null, default: Ia },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1426,10 +1426,10 @@ const Ut = {
       {
         __proto__: null,
         default: {
-          isTip: (e) => (t) => -1 !== e.tips.findIndex((e) => e.type === t),
-          getTypeFirstItem: (e) => (t) => e.tips.find((e) => e.type === t),
-          getHadValueTypeFirstItem: (e) => (t) =>
-            e.tips.find((e) => e.type === t && "" !== e.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1438,7 +1438,7 @@ const Ut = {
   ),
   "../store/app/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Vt },
+      { __proto__: null, default: Va },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1460,7 +1460,7 @@ const Ut = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Dt },
+      { __proto__: null, default: Da },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1470,10 +1470,10 @@ const Ut = {
       {
         __proto__: null,
         default: {
-          isTip: (e) => (t) => -1 !== e.tips.findIndex((e) => e.type === t),
-          getTypeFirstItem: (e) => (t) => e.tips.find((e) => e.type === t),
-          getHadValueTypeFirstItem: (e) => (t) =>
-            e.tips.find((e) => e.type === t && "" !== e.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1482,7 +1482,7 @@ const Ut = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Qt },
+      { __proto__: null, default: Fa },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1502,43 +1502,42 @@ const Ut = {
     )
   ),
 };
-let Ft = {};
-const Rt = (e, t, a) => {
+let Qa = {};
+const Ra = (e, a, t) => {
   const [s, ...l] = e;
   return l.length
-    ? { [s]: { namespaced: !0, modules: Rt(l, t, a) } }
-    : { [s]: { namespaced: !0, [t]: a } };
+    ? { [s]: { namespaced: !0, modules: Ra(l, a, t) } }
+    : { [s]: { namespaced: !0, [a]: t } };
 };
-for (let xs in Ut) {
-  const e = xs
-    .replace("../store/", "")
+for (let Ss in Ua) {
+  const e = Ss.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Ft = ce(Ft, Rt(ne(e), re(e), Ut[xs].default));
+  Qa = ce(Qa, Ra(ne(e), re(e), Ua[Ss].default));
 }
-var Wt = Ft;
-const Zt = {},
-  Nt = function (e, t) {
-    return t && 0 !== t.length
+var Wa = Qa;
+const Za = {},
+  Na = function (e, a) {
+    return a && 0 !== a.length
       ? Promise.all(
-          t.map((e) => {
-            if ((e = `./${e}`) in Zt) return;
-            Zt[e] = !0;
-            const t = e.endsWith(".css"),
-              a = t ? '[rel="stylesheet"]' : "";
-            if (document.querySelector(`link[href="${e}"]${a}`)) return;
+          a.map((e) => {
+            if ((e = `./${e}`) in Za) return;
+            Za[e] = !0;
+            const a = e.endsWith(".css"),
+              t = a ? '[rel="stylesheet"]' : "";
+            if (document.querySelector(`link[href="${e}"]${t}`)) return;
             const s = document.createElement("link");
             return (
-              (s.rel = t ? "stylesheet" : "modulepreload"),
-              t || ((s.as = "script"), (s.crossOrigin = "")),
+              (s.rel = a ? "stylesheet" : "modulepreload"),
+              a || ((s.as = "script"), (s.crossOrigin = "")),
               (s.href = e),
               document.head.appendChild(s),
-              t
-                ? new Promise((t, a) => {
-                    s.addEventListener("load", t),
+              a
+                ? new Promise((a, t) => {
+                    s.addEventListener("load", a),
                       s.addEventListener("error", () =>
-                        a(new Error(`Unable to preload CSS for ${e}`))
+                        t(new Error(`Unable to preload CSS for ${e}`))
                       );
                   })
                 : void 0
@@ -1547,49 +1546,49 @@ const Zt = {},
         ).then(() => e())
       : e();
   };
-var Yt = "./assets/about-cover2.291fc507.webp";
-const Kt = {
+var Ya = "./assets/about-cover2.291fc507.webp";
+const Ka = {
     title: "pages.home.nav.about",
     setup() {
       const { t: e } = Me();
       return { t: e };
     },
   },
-  Xt = { class: "about" },
-  $t = y("img", { class: "about-cover", src: Yt, alt: "" }, null, -1),
-  Gt = { class: "about-subtitle" },
-  Jt = { class: "about-content" },
-  ea = { class: "label" },
-  ta = X(": ");
-var aa = ke(Kt, [
+  Xa = { class: "about" },
+  $a = h("img", { class: "about-cover", src: Ya, alt: "" }, null, -1),
+  Ga = { class: "about-subtitle" },
+  Ja = { class: "about-content" },
+  et = { class: "label" },
+  at = X(": ");
+var tt = ke(Ka, [
     [
       "render",
-      function (e, t, a, s, l, o) {
+      function (e, a, t, s, l, o) {
         return (
           g(),
-          b("div", Xt, [
-            $t,
-            y("h1", Gt, W(s.t("pages.about.title")), 1),
-            y("div", Jt, [
-              y("h2", null, W(s.t("pages.about.content.title.1")) + ":", 1),
-              y("p", null, W(s.t("pages.about.content.text.1")), 1),
-              y("h2", null, W(s.t("pages.about.content.title.2")) + ":", 1),
-              y("ul", null, [
+          b("div", Xa, [
+            $a,
+            h("h1", Ga, W(s.t("pages.about.title")), 1),
+            h("div", Ja, [
+              h("h2", null, W(s.t("pages.about.content.title.1")) + ":", 1),
+              h("p", null, W(s.t("pages.about.content.text.1")), 1),
+              h("h2", null, W(s.t("pages.about.content.title.2")) + ":", 1),
+              h("ul", null, [
                 (g(),
                 b(
                   w,
                   null,
-                  F(5, (e) =>
-                    y("li", { key: e }, [
+                  Q(5, (e) =>
+                    h("li", { key: e }, [
                       X(W(e) + ". ", 1),
-                      y(
+                      h(
                         "span",
-                        ea,
+                        et,
                         W(s.t(`pages.about.content.list.title.${e}`)),
                         1
                       ),
-                      ta,
-                      y(
+                      at,
+                      h(
                         "span",
                         null,
                         W(s.t(`pages.about.content.list.${e}`)),
@@ -1600,41 +1599,186 @@ var aa = ke(Kt, [
                   64
                 )),
               ]),
-              y("p", null, W(s.t("pages.about.content.text.3")), 1),
+              h("p", null, W(s.t("pages.about.content.text.3")), 1),
             ]),
           ])
         );
       },
     ],
   ]),
-  sa = Object.freeze(
+  st = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: aa },
+      { __proto__: null, default: tt },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const la = {
+const lt = {
+    title: "pages.home.nav.about",
+    setup() {
+      const { t: e } = Me();
+      return { t: e };
+    },
+  },
+  ot = { class: "about" },
+  it = [
+    h(
+      "div",
+      { role: "listitem", class: "cases-item w-dyn-item" },
+      [
+        h(
+          "a",
+          {
+            "data-mouse-class": "cc-text",
+            href: "/cases/sable-brand",
+            class: "cases-card cc-immediate w-inline-block",
+            style: {
+              transform:
+                "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
+              "transform-style": "preserve-3d",
+              opacity: "1",
+            },
+          },
+          [
+            h("div", { class: "cases-assets" }, [
+              h("img", {
+                src:
+                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
+                loading: "lazy",
+                alt: "",
+                class: "cases-portrait",
+              }),
+              h("img", {
+                src:
+                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                loading: "eager",
+                alt: "",
+                class: "cases-landscape",
+              }),
+              h("div", { class: "iframe-video_wrapper" }, [
+                h("iframe", {
+                  class: "iframe-video_iframe",
+                  width: "100%",
+                  height: "100%",
+                  style: { overflow: "hidden" },
+                  frameborder: "0",
+                  scrolling: "no",
+                  allow: "fullscreen",
+                  src:
+                    "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                  title: "Sable 12",
+                  loading: "lazy",
+                }),
+                h("div", { class: "iframe-video_blocker" }),
+              ]),
+            ]),
+            h("div", { class: "cases-text" }, [
+              h("div", { class: "u-ts-2" }, "Sable Brand"),
+            ]),
+          ]
+        ),
+        h("link", { rel: "prerender", href: "/cases/sable-brand" }),
+        h(
+          "a",
+          {
+            "data-mouse-text": "Contact Us",
+            "data-mouse-class": "cc-text",
+            href: "mailto:hello@basis.work?subject=Enquiry",
+            class:
+              "cases-card cc-immediate w-inline-block w-condition-invisible",
+            style: {
+              transform:
+                "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
+              "transform-style": "preserve-3d",
+              opacity: "1",
+            },
+          },
+          [
+            h("div", { class: "cases-assets" }, [
+              h("img", {
+                src:
+                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
+                loading: "lazy",
+                alt: "",
+                class: "cases-portrait w-condition-invisible",
+              }),
+              h("img", {
+                src:
+                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                loading: "lazy",
+                alt: "",
+                class: "cases-landscape w-condition-invisible",
+              }),
+              h("div", null, [
+                h("div", { class: "iframe-video_wrapper" }, [
+                  h("iframe", {
+                    class: "iframe-video_iframe",
+                    width: "100%",
+                    height: "100%",
+                    style: { overflow: "hidden" },
+                    frameborder: "0",
+                    scrolling: "no",
+                    allow: "fullscreen",
+                    src:
+                      "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                    title: "Sable 12",
+                    loading: "lazy",
+                  }),
+                  h("div", { class: "iframe-video_blocker" }),
+                ]),
+              ]),
+            ]),
+            h("div", { class: "cases-text" }, [
+              h("div", { class: "cases-more" }, [
+                h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                  X(" Contact us"),
+                  h("span", { class: "hide-tablet" }, " for more"),
+                ]),
+              ]),
+              h("div", { class: "u-ts-2" }, "Sable Brand"),
+            ]),
+          ]
+        ),
+      ],
+      -1
+    ),
+  ];
+var rt = ke(lt, [
+    [
+      "render",
+      function (e, a, t, s, l, o) {
+        return g(), b("div", ot, it);
+      },
+    ],
+  ]),
+  nt = Object.freeze(
+    Object.defineProperty(
+      { __proto__: null, default: rt },
+      Symbol.toStringTag,
+      { value: "Module" }
+    )
+  );
+const ct = {
     layout: "layout-demo",
     setup() {
-      const e = gt(),
-        { t: t, locale: a, setPrefix: s, change: l } = Me();
+      const e = ga(),
+        { t: a, locale: t, setPrefix: s, change: l } = Me();
       s({ $current: "pages.demo" });
       const o = K(),
         i = $("alert-service"),
-        r = de({ current: a.value || "zh-tw" });
+        r = de({ current: t.value || "zh-tw" });
       return (
         k(() => {}),
         {
-          t: t,
+          t: a,
           lang: r,
           toHome: () => {
             o.push("/home");
           },
           swalModal: () => {
             i.alert({
-              title: t("$current.modal.swal.title"),
-              text: t("$current.modal.swal"),
+              title: a("$current.modal.swal.title"),
+              text: a("$current.modal.swal"),
             });
           },
           changeLang: () => {
@@ -1648,78 +1792,78 @@ const la = {
       );
     },
   },
-  oa = { class: "demo" },
-  ia = { class: "demo-head" },
-  ra = { class: "switch" },
-  na = y("input", { type: "checkbox", class: "cb" }, null, -1),
-  ca = [
-    y("span", { class: "left" }, "CN", -1),
-    y("span", { class: "right" }, "En", -1),
+  dt = { class: "demo" },
+  pt = { class: "demo-head" },
+  ut = { class: "switch" },
+  ft = h("input", { type: "checkbox", class: "cb" }, null, -1),
+  mt = [
+    h("span", { class: "left" }, "CN", -1),
+    h("span", { class: "right" }, "En", -1),
   ],
-  da = { class: "demo-head-content" },
-  pa = { class: "demo-actions" },
-  ua = { class: "radio-inputs" },
-  fa = y("input", { type: "radio", name: "radio", checked: "" }, null, -1),
-  ma = { class: "name" },
-  va = y("input", { type: "radio", name: "radio" }, null, -1),
-  ga = { class: "name" },
-  ba = y("input", { type: "radio", name: "radio" }, null, -1),
-  ya = { class: "name" };
-var ha = ke(la, [
+  vt = { class: "demo-head-content" },
+  gt = { class: "demo-actions" },
+  bt = { class: "radio-inputs" },
+  ht = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  yt = { class: "name" },
+  wt = h("input", { type: "radio", name: "radio" }, null, -1),
+  _t = { class: "name" },
+  xt = h("input", { type: "radio", name: "radio" }, null, -1),
+  Ct = { class: "name" };
+var At = ke(ct, [
     [
       "render",
-      function (e, t, a, s, l, o) {
+      function (e, a, t, s, l, o) {
         return (
           g(),
-          b("div", oa, [
-            y("div", ia, [
-              y("div", null, [
-                y("label", ra, [
-                  na,
-                  y(
+          b("div", dt, [
+            h("div", pt, [
+              h("div", null, [
+                h("label", ut, [
+                  ft,
+                  h(
                     "span",
                     {
                       class: "toggle",
                       onClick:
-                        t[0] ||
-                        (t[0] = (...e) => s.changeLang && s.changeLang(...e)),
+                        a[0] ||
+                        (a[0] = (...e) => s.changeLang && s.changeLang(...e)),
                     },
-                    ca
+                    mt
                   ),
                 ]),
               ]),
-              y("div", da, "lang:" + W(s.lang.current), 1),
+              h("div", vt, "lang:" + W(s.lang.current), 1),
             ]),
-            y("div", pa, [
-              y("div", ua, [
-                y(
+            h("div", gt, [
+              h("div", bt, [
+                h(
                   "label",
                   {
                     class: "radio",
                     onClick:
-                      t[1] || (t[1] = (...e) => s.toHome && s.toHome(...e)),
+                      a[1] || (a[1] = (...e) => s.toHome && s.toHome(...e)),
                   },
-                  [fa, y("span", ma, W(s.t("$current.router.link")), 1)]
+                  [ht, h("span", yt, W(s.t("$current.router.link")), 1)]
                 ),
-                y(
+                h(
                   "label",
                   {
                     class: "radio",
                     onClick:
-                      t[2] ||
-                      (t[2] = (...e) => s.swalModal && s.swalModal(...e)),
+                      a[2] ||
+                      (a[2] = (...e) => s.swalModal && s.swalModal(...e)),
                   },
-                  [va, y("span", ga, W(s.t("$current.modal.swal")), 1)]
+                  [wt, h("span", _t, W(s.t("$current.modal.swal")), 1)]
                 ),
-                y(
+                h(
                   "label",
                   {
                     class: "radio",
                     onClick:
-                      t[3] ||
-                      (t[3] = (...e) => s.popupModal && s.popupModal(...e)),
+                      a[3] ||
+                      (a[3] = (...e) => s.popupModal && s.popupModal(...e)),
                   },
-                  [ba, y("span", ya, W(s.t("$current.popup.use")), 1)]
+                  [xt, h("span", Ct, W(s.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -1728,38 +1872,38 @@ var ha = ke(la, [
       },
     ],
   ]),
-  wa = Object.freeze(
+  kt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ha },
+      { __proto__: null, default: At },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  _a =
+  jt =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAACgCAYAAAAFOewUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANMSURBVHgB7VqLkSIhEG23NoANQSPQEDQCNQMz0AzUCDQDNQLNQDNQI9AMNAOOx9kcMI0w3me3bnlV1roIb5pm5nXTDK1WK0VE6ng8KsZgMDBtsc9+v7d933UDNZtN6nQ6xOh2u97/jPv9Tsvl0m+EBaPRSOXgcrlULHgDiTaZXoUhaLfbWZ0xhQpgVi7Y4bfbzbaRqgHtbKWd67V5BKfTSRyIK8LRuPp2u/V+e3enM5lMSJOYZcTSYs7X69W0AYvFouLwhjHjAXSez+dmADvs4+OD+v0+aQsMaQiP4BW80W+iEBSC70hwOBxoOBzax9tAJQAF1jqh9GNtBAV/3RhCMQWazWZKC4sdBEVy5bxCgEEQTR6ED76jzRXRKAGbiEE6+jwdJBJAbd255UK0YL1e17dA8gGiNMiyCFwgWoEMgSR7FWKAXzCYyfA3eR/EgKgUWlLiQiEoBH+DAFlabfBjCU3Esx4C8o52lrqooKBT2AEBhR46yVIHxRYJwqSb9wbT6dQjhLxlJdu4EgWZOb6jbbfb2bboKuhOJmdGqsvg796+Qbo6mx/6RNryWAK3MzyPjqFfWJ1FH9AjkPCWbzwee4NZ1nXK77VbAniY7wXX8wwQS4GlyHohKASfQQAl0rqRVqQYokWYfzYFCbaCgbmlIFZxrLY9KX1RqhQGaAdRCgi+vV6PxClI9ZEcfP4q1JZ1+AExkuNkiQuFoBD8IYJ3qfF8PleL8A50FvdLgELtR22ZqxmUoYmVKaDOjvoyrqB+5pH2I+nmF3QiKtsxB/Keyt0CWCeivMEJNXJmCpwFcLbuwotM+JEH8R4JSbZbVwsTcUsQpvF8JOBWb8I+QFHlQlAIvgqBVaRWq5U9SIuPPZO1BKhWvIKiB4XgOxLgiKxSNlWZ4JBPwfl7FgFCPjlJFkI+I2sK4fsYYoaSOpiC2UgykDO4dUbvpCt2lvQM4uYb2QjqizmvVyR371yQjpFZAveMLfbBFMNXKLxl5DO2FBmyNpHABZ/+cZYWI6hkqihzbDYbU5h238WIgplQCk+ZjqXG6rivm2TVUEAM50k3W5QAg5DWpu5Qj4BNrHM3WoK6tzCjxMZC8J8QWEEJK5U5QICxz0Kj0aC6QIngBxgHF93HsIfgAAAAAElFTkSuQmCC",
-  xa =
+  St =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAA2CAYAAADEWrcYAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAV9SURBVHgB7ZndceM2EMcXsp1Hmw8n596CVHBOBaIrOLkCyxVEruCoCiJXIKWCOBVIV4GVCqzHzNkzpp/PJm6XACQIBPVp8UAPfjMYUsASJPcPLBYUAMAXCHjNAZaxOv8KAW8RqoQZ5TECglDeIyAI5T33EITyHg5BqFrAIQhVCzgEoWoBhyBULeAQhPIOXlIXhPIIEoM76jkEobyBHB+E8hzt+CCUx5iO31SoAQQq4Ql2EypQAWewm1A7E0Uf4pOTpigpTycnp/+QDVTE8fHpF7o3HaFCoqjZwfdM6GjWN7BMsFxb9hzLCIpCTbGcq2NVRDgW2kKwUVVOY0wk5rEqhIBLfE96x0uzvqGOQyxX1jUcfoJQ+KBDxuBqXsS1vhc5rYoZxVh2I49wAx7SheKasyr07YwZ7uypLts/chn2cpsRvFPo3ZQPFt7x0LLrQx5eFtJrDnJG2bNnqur2Tpr+P0Uhv2Io+AxyDXUSISCfPyVKbPis2xKbddi0H+PZ6IIpbEDDUZdg6Vl1HMpDXyWgQCd2XRSd3ssFvjnA8pcQR09Y7ulIv+d2UaSSAd2ubQaGs2eUjWjZV7ODbXdmP/Tb1Y+0z6PEyHg2eub74+Nf/zT6y6MI/ozlu8JCZCGRXItxAusLtXeUA2I6x3ViYrdjXRtL16o7jyQcHXOnkoDIsulQGzriDNaAhEYH0t7Qtj8j5+OgaRft2Ug/uwHHda+P9x3DGpBICZQLZS+cHPYulOA0+mQ5beOxiw4wR/TfjosidPgYhTiXBW4Y+x5TGMJrB/p5pU12oWx0PxE6fqTCUSk0oufZnriVfXz/nfoDFVGEEAPdDw0OIztM8bwnr6H75/emEIkD62CskySYJUgwmdcdjPO+YflnniGsn0xsxYp9kphP/Q/J4nUy3FH4WNUvOrlfbJ+HGrNvV7ije6i6u2I/eWKj++mqe9/O6z5y1zV23TqJQ6KOdpjrqKOZu3NwJxP7IJUhTvTS9HHsMmCM/VdybTw/PSiIlKYPQ3QKrQ1nKilJXJ3grMB2OShxtjzTWma2Z9krjX6aGVGWsU/SjrXUs/1LiU/x3sW6MuzsjjlsOJaWo/4Z5JR9U2iKk/M2uSbLxFNJb1yfLXGKfocl4e7QaGMtfMYWrEZdk01gR0yRaAYlVjsH9xpEIzeGPYj0toipHne0VpSkyrkz0fHT8n4Ose1VnTNcj7KymZuve+pUz6zfYEe0SO9QoJwxqLU2y47ouPD5i9YkDGM6Uyt1PM1CDIu501F4FPsxsW0cg4BmUEyZJzb17L3RkkFTgERyCUSjq+4CAa1h6NwxSGd1cS2JGg2RZ3VZ1mjh+qLT9qlrzTKh7AzXGdp75fse+g3wgtcdcmwlsVvo93MthrKPIc8ejzB7bPbkzG6ob5HwGevQ/mFlOCSREquOBBpDzQXSMHZwJcRrPuDkvoh1ZL0wbNj1qoUcBad9DSUQlEDFUoCjBRshfiERL5T9GDO8nvpgyuX+ikKvMOwFDYwYVmB/cdACfbLqp+AWiIPnkPNRKHNfNEPum+CPNP12u15fDx1zP2M20cx5fv52sWj/mKj9zsRlz9hLGzaEBKLOKv/AWiVyk9w8W7Z5XfZZaN4P9UF9uT8HFe0JeW/Ykm0FEvBOMEWbb1xP15ph+0ZndxRLXSHOtVmlkUAjbOlnlDohv7GJDiYWFP44zAam8EIkgnbP684g11/ttYa+Jhj/VZll503oW7GYbkimsNkMcn2lqBXyO9prgqe48RSUHGEm+9Lf5f+mt2bbGURlCIFKCALVgG0E6kOgUjYVKIFA5XBHXRDIc4JAnhME8pwgkOfEEATymksoihME8owgUA0IAtWAIFANCALVgCBQDUgg4DU/AFoAB+sZHzH0AAAAAElFTkSuQmCC",
-  Ca =
+  Ot =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAKjCAYAAAA6d64BAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIFSURBVHgB7ZoxUsMwEEU/CQWl6ejwDQg3SG4AN/ANgBPgG5CSDnMC4ASBCrpQ0uGSLtBBFfQtK5YUEwcmZGTYN7MZ6xMTabWrSBt3ARwou1e2pexOGcbKpqVFG+WFYb+jXl7hMSrf9WyEWNlQWQ+togvd9QtlH8qeKJrBTfCVP2wi+5apEegH+vUYgrBGInPB0E6gU500p/rAT/Xieggv1fkJKXTehAsHdwSdiG/K0uZE9gWI0CAwxujcF+j4OkfIXEFHMZOgPvgdRFhCcHYG9GkfemXgH64RMgyFxWuhgwhLCHY45PRpjCocHiEIgiAIgcIvrVPofQw5lJ3BSgRno7ip7ATVzuAWrcFUjHiY2Fb2QLG5YmQP36kYzY7VpmKUIGRMVWFctn9aVcjQlgIiZ4tVvNgIGbyuT1ANP+7AqsGY25yjBsp/yMbQ/6QgceaEiyO7PjKCPbhi+LH17rh29lN4LiSsSwfnghi6ODxzQYYq1Qvs2e/5s19fHO5DDz1Fq2BmJ9A+yZVlUlJbvcCvxktluwj90Fxb7VmcDTLZ3xUYDjfK9qCdnEMQBEEQ2kZsNxLobcKZEf70j9NzHcvw346RQltZXwHAvjU8pDj8O0JLi8Oc/eJhEuieDiQcViLMPVTC9cc4OZiCCEvh7NRO2X7nS/Na6CDCEkJutYuHSiJUu5z8E0pVtJZRO+HCAAAAAElFTkSuQmCC",
-  Aa = "./assets/img_wing.20892ae6.svg";
-const ka = (e) =>
+  Et = "./assets/img_wing.20892ae6.svg";
+const Lt = (e) =>
     new URL(
       {
         "../assets/images/icon_back.svg": "./assets/icon_back.556b6f96.svg",
         "../assets/images/loading.gif": "./assets/loading.afec609f.gif",
-        "../assets/images/home/bg-left-bottom.png": _a,
-        "../assets/images/home/bg-left-top.png": xa,
-        "../assets/images/home/bg-line.png": Ca,
+        "../assets/images/home/bg-left-bottom.png": jt,
+        "../assets/images/home/bg-left-top.png": St,
+        "../assets/images/home/bg-line.png": Ot,
         "../assets/images/home/bg-master.png":
           "./assets/bg-master.fc851c4f.png",
         "../assets/images/home/person.png": "./assets/person.7b1a05ef.png",
         "../assets/images/profile/about-cover.webp":
           "./assets/about-cover.a0e8683c.webp",
-        "../assets/images/profile/about-cover2.webp": Yt,
+        "../assets/images/profile/about-cover2.webp": Ya,
         "../assets/images/svg/apple.svg": "./assets/apple.0fa4e673.svg",
         "../assets/images/svg/as.svg": "./assets/as.a4b9ab96.svg",
         "../assets/images/svg/home-2.svg": "./assets/home-2.0c0430d4.svg",
-        "../assets/images/svg/img_wing.svg": Aa,
+        "../assets/images/svg/img_wing.svg": Et,
         "../assets/images/svg/paypal.svg": "./assets/paypal.245a62e2.svg",
         "../assets/images/svg/story.svg": "./assets/story.a2e17494.svg",
         "../assets/images/svg/world_2.svg": "./assets/world_2.5efbb68e.svg",
@@ -1768,44 +1912,44 @@ const ka = (e) =>
       }[`../assets/images/${e}`],
       self.location
     ).href,
-  ja = {};
-async function Sa(e) {
-  const t = e.map((e) =>
+  qt = {};
+async function Bt(e) {
+  const a = e.map((e) =>
     (async function (e) {
-      if (ja[e]) return ja[e];
-      let t;
-      const a = new Promise((a) => {
-        (t = new Image()),
-          (t.onload = () => {
-            a(t), (ja[e] = t);
+      if (qt[e]) return qt[e];
+      let a;
+      const t = new Promise((t) => {
+        (a = new Image()),
+          (a.onload = () => {
+            t(a), (qt[e] = a);
           }),
-          (t.src = e);
+          (a.src = e);
       });
-      return await a, t;
+      return await t, a;
     })(e)
   );
-  return await Promise.all(t);
+  return await Promise.all(a);
 }
-const Oa = {
+const Ht = {
     setup() {
-      const { t: e, setPrefix: t } = Me(),
-        a = K(),
+      const { t: e, setPrefix: a } = Me(),
+        t = K(),
         s = pe(),
         l = x(!0);
-      t({ $current: "pages.home" });
+      a({ $current: "pages.home" });
       return (
         (async () => {
           const e = [
-            ka("home/person.png"),
-            ka("home/bg-master.png"),
-            ka("home/bg-left-top.png"),
-            ka("home/bg-left-bottom.png"),
-            ka("profile/about-cover2.webp"),
-            ka("svg/img_wing.svg"),
+            Lt("home/person.png"),
+            Lt("home/bg-master.png"),
+            Lt("home/bg-left-top.png"),
+            Lt("home/bg-left-bottom.png"),
+            Lt("profile/about-cover2.webp"),
+            Lt("svg/img_wing.svg"),
           ];
-          qt.showLoading(),
-            await Sa(e),
-            qt.close(),
+          qa.showLoading(),
+            await Bt(e),
+            qa.close(),
             (l.value = !1),
             ue(() => {
               l.value = !0;
@@ -1814,173 +1958,173 @@ const Oa = {
         {
           t: e,
           changePage: (e = "/home") => {
-            s.path === e && a.go(0), a.push(e);
+            s.path === e && t.go(0), t.push(e);
           },
-          router: a,
+          router: t,
         }
       );
     },
   },
-  Ea = { class: "home" },
-  La = N(
+  Pt = { class: "home" },
+  zt = N(
     '<div class="home-bg-middle"></div><div class="home-bg-accessory"><div><img src="' +
-      Aa +
+      Et +
       '" alt=""><img src="' +
-      Aa +
+      Et +
       '" alt=""></div><div><img src="' +
-      Aa +
+      Et +
       '" alt=""><img src="' +
-      Aa +
+      Et +
       '" alt=""></div></div><img class="home-bg-person" src="./assets/person.7b1a05ef.png" alt=""><img class="home-bg-line" src="' +
-      Ca +
+      Ot +
       '" alt=""><img class="home-bg-left-icon" src="' +
-      xa +
+      St +
       '" alt=""><img class="home-bg-left-string" src="' +
-      _a +
+      jt +
       '" alt=""><div class="home-nav"><div class="home-nav-shape"></div><svg class="home-nav-svg" width="75" height="75"><polygon points="0,0 60,0 0,75" fill="white"></polygon></svg></div>',
     7
   ),
-  qa = { class: "home-nav-link" },
-  Ba = { href: "https://github.com/chiyum/chiyum", target: "_blank" };
-var Ha = ke(Oa, [
+  Tt = { class: "home-nav-link" },
+  Mt = { href: "https://github.com/chiyum/chiyum", target: "_blank" };
+var It = ke(Ht, [
     [
       "render",
-      function (e, t, a, s, l, o) {
+      function (e, a, t, s, l, o) {
         return (
           g(),
-          b("div", Ea, [
-            La,
-            y("ul", qa, [
-              y(
+          b("div", Pt, [
+            zt,
+            h("ul", Tt, [
+              h(
                 "li",
-                { onClick: t[0] || (t[0] = (e) => s.changePage("/about")) },
+                { onClick: a[0] || (a[0] = (e) => s.changePage("/about")) },
                 W(s.t("$current.nav.about")),
                 1
               ),
-              y(
+              h(
                 "li",
-                { onClick: t[1] || (t[1] = (e) => s.changePage("/home")) },
+                { onClick: a[1] || (a[1] = (e) => s.changePage("/home")) },
                 W(s.t("$current.nav.home")),
                 1
               ),
-              y("li", null, [y("a", Ba, W(s.t("$current.nav.more")), 1)]),
+              h("li", null, [h("a", Mt, W(s.t("$current.nav.more")), 1)]),
             ]),
           ])
         );
       },
     ],
   ]),
-  Pa = Object.freeze(
+  Vt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ha },
+      { __proto__: null, default: It },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Ta = {},
-  za = { class: "footer" },
-  Ma = [
-    y(
+const Dt = {},
+  Ft = { class: "footer" },
+  Ut = [
+    h(
       "div",
       { class: "container" },
       [
-        y("div", { class: "row row-justify-center" }, [
-          y("div", { class: "col col-lg-3 col-md-12" }, [
-            y("div", { class: "footer_group cc-above" }, [
-              y("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
-              y("ul", { role: "list", class: "footer_list" }, [
-                y("li", { class: "footer_list-item" }, [
-                  y(
+        h("div", { class: "row row-justify-center" }, [
+          h("div", { class: "col col-lg-3 col-md-12" }, [
+            h("div", { class: "footer_group cc-above" }, [
+              h("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
+              h("ul", { role: "list", class: "footer_list" }, [
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     {
                       href: "mailto:hello@basis.work",
                       class: "footer_link w-inline-block",
                     },
-                    [y("div", { class: "u-ts-3" }, "hello@basis.work")]
+                    [h("div", { class: "u-ts-3" }, "hello@basis.work")]
                   ),
                 ]),
               ]),
             ]),
-            y("div", { class: "footer_group" }, [
-              y("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
-              y("ul", { role: "list", class: "footer_list" }, [
-                y("li", { class: "footer_list-item" }, [
-                  y(
+            h("div", { class: "footer_group" }, [
+              h("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
+              h("ul", { role: "list", class: "footer_list" }, [
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     {
                       href: "https://www.instagram.com/basis.work/",
                       target: "_blank",
                       class: "footer_link w-inline-block",
                     },
-                    [y("div", { class: "u-ts-3" }, "Instagram")]
+                    [h("div", { class: "u-ts-3" }, "Instagram")]
                   ),
                 ]),
-                y("li", { class: "footer_list-item" }, [
-                  y(
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     {
                       href: "https://www.linkedin.com/company/basisstudio/",
                       target: "_blank",
                       class: "footer_link w-inline-block",
                     },
-                    [y("div", { class: "u-ts-3" }, "Linkedin")]
+                    [h("div", { class: "u-ts-3" }, "Linkedin")]
                   ),
                 ]),
               ]),
             ]),
           ]),
-          y("div", { class: "col col-lg-3 col-md-12" }, [
-            y("div", { class: "footer_group" }, [
-              y("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
-              y("ul", { role: "list", class: "footer_list" }, [
-                y("li", { class: "footer_list-item" }, [
-                  y("a", { href: "/", class: "footer_link w-inline-block" }, [
-                    y("div", { class: "u-ts-3" }, "Overview"),
+          h("div", { class: "col col-lg-3 col-md-12" }, [
+            h("div", { class: "footer_group" }, [
+              h("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
+              h("ul", { role: "list", class: "footer_list" }, [
+                h("li", { class: "footer_list-item" }, [
+                  h("a", { href: "/", class: "footer_link w-inline-block" }, [
+                    h("div", { class: "u-ts-3" }, "Overview"),
                   ]),
                 ]),
-                y("li", { class: "footer_list-item" }, [
-                  y(
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     { href: "/cases", class: "footer_link w-inline-block" },
-                    [y("div", { class: "u-ts-3" }, "Cases")]
+                    [h("div", { class: "u-ts-3" }, "Cases")]
                   ),
                 ]),
-                y("li", { class: "footer_list-item" }, [
-                  y(
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     { href: "/about", class: "footer_link w-inline-block" },
-                    [y("div", { class: "u-ts-3" }, "Services")]
+                    [h("div", { class: "u-ts-3" }, "Services")]
                   ),
                 ]),
-                y("li", { class: "footer_list-item" }, [
-                  y(
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     {
                       href: "/design-trial",
                       class: "footer_link w-inline-block",
                     },
-                    [y("div", { class: "u-ts-3" }, "Design Trial")]
+                    [h("div", { class: "u-ts-3" }, "Design Trial")]
                   ),
                 ]),
-                y("li", { class: "footer_list-item" }, [
-                  y(
+                h("li", { class: "footer_list-item" }, [
+                  h(
                     "a",
                     {
                       href: "/fintech-design",
                       "aria-current": "page",
                       class: "footer_link w-inline-block w--current",
                     },
-                    [y("div", { class: "u-ts-3" }, "Fintech Design")]
+                    [h("div", { class: "u-ts-3" }, "Fintech Design")]
                   ),
                 ]),
               ]),
             ]),
           ]),
-          y("div", { class: "col col-md-hide" }),
-          y("div", { class: "col col-lg-4 col-md-12 col-md-first" }, [
-            y("a", { href: "/", class: "footer-wordmark w-inline-block" }, [
-              y("div", { class: "wordmark w-embed" }, [
-                y(
+          h("div", { class: "col col-md-hide" }),
+          h("div", { class: "col col-lg-4 col-md-12 col-md-first" }, [
+            h("a", { href: "/", class: "footer-wordmark w-inline-block" }, [
+              h("div", { class: "wordmark w-embed" }, [
+                h(
                   "svg",
                   {
                     width: "100%",
@@ -1990,26 +2134,26 @@ const Ta = {},
                     xmlns: "http://www.w3.org/2000/svg",
                   },
                   [
-                    y("path", {
+                    h("path", {
                       d:
                         "M134.299 43.7526C143.563 41.1205 148.255 33.7208 148.255 23.5684C148.255 9.02438 138.288 0 119.207 0H0V88.0232H119.2C139.424 88.0232 149.256 78.2468 149.256 63.3197C149.256 53.1601 144.131 46.0158 134.299 43.7597V43.7526ZM27.9189 22.0572H113.933C118.774 22.0572 120.343 23.9373 120.343 27.4492C120.343 30.961 118.774 32.9688 113.933 32.9688H27.9189V22.0643V22.0572ZM114.934 65.817H27.9189V54.9125H114.934C119.775 54.9125 121.479 56.9132 121.479 60.3044C121.479 63.9369 119.775 65.8241 114.934 65.8241V65.817Z",
                       fill: "currentColor",
                     }),
-                    y("path", {
+                    h("path", {
                       d:
                         "M444.552 33.4796L356.409 32.2238C351.851 32.2238 349.565 30.2161 349.565 27.0802C349.565 24.1998 351.702 22.3197 356.259 22.3197H434.863C438.284 22.3197 442.274 23.9515 442.699 28.336H473.607C472.606 12.1602 458.65 0 437.432 0H351.993C332.06 0 319.517 11.4082 319.517 27.584C319.517 43.7597 331.769 54.1676 351.418 54.5436L439.136 55.5439C443.693 55.6716 445.688 57.6723 445.688 60.5598C445.688 63.4473 443.835 65.6964 439.136 65.6964H358.68C354.691 65.6964 350.708 63.8163 349.849 59.4247H319.084C319.794 75.7282 334.751 88.0161 356.401 88.0161H443.97C464.336 88.0161 475.871 76.4802 475.871 60.5598C475.871 44.6395 464.762 33.8485 444.538 33.4725L444.552 33.4796Z",
                       fill: "currentColor",
                     }),
-                    y("path", {
+                    h("path", {
                       d: "M512.021 0H482.967V88.0232H512.021V0Z",
                       fill: "currentColor",
                     }),
-                    y("path", {
+                    h("path", {
                       d:
                         "M645.914 33.4796L557.77 32.2238C553.213 32.2238 550.927 30.2161 550.927 27.0802C550.927 24.1998 553.064 22.3197 557.621 22.3197H636.224C639.646 22.3197 643.635 23.9515 644.061 28.336H674.969C673.975 12.1602 660.012 0 638.794 0H553.355C533.422 0 520.879 11.4082 520.879 27.584C520.879 43.7597 533.131 54.1676 552.78 54.5436L640.498 55.5439C645.055 55.6716 647.05 57.6723 647.05 60.5598C647.05 63.4473 645.197 65.6964 640.498 65.6964H560.042C556.053 65.6964 552.07 63.8163 551.211 59.4247H520.446C521.156 75.7282 536.105 88.0161 557.763 88.0161H645.332C665.698 88.0161 677.233 76.4802 677.233 60.5598C677.233 44.6395 666.131 33.8485 645.9 33.4725L645.914 33.4796Z",
                       fill: "currentColor",
                     }),
-                    y("path", {
+                    h("path", {
                       d:
                         "M215.059 0L145.272 88.0232H177.607L195.005 65.7389H276.214L293.662 88.0232H326.99L257.786 0H215.059ZM211.63 44.4479L235.567 13.792L259.56 44.4479H211.63Z",
                       fill: "currentColor",
@@ -2020,47 +2164,49 @@ const Ta = {},
             ]),
           ]),
         ]),
-        y("div", { class: "footer-copyright" }, [
-          y("div", { "data-copyright": "" }, [
+        h("div", { class: "footer-copyright" }, [
+          h("div", { "data-copyright": "" }, [
             X(" Copyright © "),
-            y("span", { "data-dynamic": "year" }, "2024"),
+            h("span", { "data-dynamic": "year" }, "2024"),
           ]),
         ]),
       ],
       -1
     ),
   ];
-var Ia = ke(Ta, [
+var Qt = ke(Dt, [
   [
     "render",
-    function (e, t) {
-      return g(), b("footer", za, Ma);
+    function (e, a) {
+      return g(), b("footer", Ft, Ut);
     },
   ],
 ]);
-const Va = ["data-index"],
-  Da = ["src"],
-  Qa = [
+const Rt = ["data-index"],
+  Wt = ["src"],
+  Zt = [
     N(
-      '<div class="btn-text-wrap" data-v-57918575><div class="btn-text cc-scroll" data-v-57918575>Scroll</div><div class="btn-text cc-bottom cc-scroll" data-v-57918575>Scroll</div></div><div class="btn-icon cc-small w-embed" data-v-57918575><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-57918575><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor" data-v-57918575></path></svg></div>',
+      '<div class="btn-text-wrap" data-v-4ebeca6f><div class="btn-text cc-scroll" data-v-4ebeca6f>Scroll</div><div class="btn-text cc-bottom cc-scroll" data-v-4ebeca6f>Scroll</div></div><div class="btn-icon cc-small w-embed" data-v-4ebeca6f><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-4ebeca6f><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor" data-v-4ebeca6f></path></svg></div>',
       2
     ),
   ];
-const Ua = {
+const Nt = {
   components: {
-    Footer: Ia,
+    Footer: Qt,
     View: ke(
       {
         setup(e) {
-          const t = _(),
-            a = de({ x: 0, y: 0 }),
+          const a = _(),
+            t = de({ x: 0, y: 0 }),
             s = x([
               {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552350_home-hero-08.webp",
                 css: {
                   left: "-5%",
-                  top: "20%",
+                  top: "60%",
+                  m_right: "3000px",
+                  m_top: "0%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 2.5s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2071,8 +2217,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552341_home-hero-01.webp",
                 css: {
-                  left: "10%",
-                  top: "50%",
+                  left: "11%",
+                  top: "10%",
+                  m_right: "3000px",
+                  m_top: "0%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 1.5s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2083,8 +2231,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552342_home-hero-09.webp",
                 css: {
-                  left: "20%",
-                  top: "15%",
+                  left: "31%",
+                  top: "45%",
+                  m_right: "80%",
+                  m_top: "57%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 3.5s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2095,8 +2245,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552355_home-hero-13.webp",
                 css: {
-                  left: "33%",
-                  top: "47%",
+                  left: "31%",
+                  top: "72%",
+                  m_right: "80%",
+                  m_top: "78%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 2s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2107,8 +2259,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552340_home-hero-02.webp",
                 css: {
-                  left: "30%",
-                  top: "80%",
+                  left: "40%",
+                  top: "10%",
+                  m_right: "55%",
+                  m_top: "30%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 1s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2119,8 +2273,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552352_home-hero-05.webp",
                 css: {
-                  left: "50%",
-                  top: "5%",
+                  left: "51%",
+                  top: "27%",
+                  m_right: "30%",
+                  m_top: "46%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 2.5s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2131,8 +2287,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552356_home-hero-14.webp",
                 css: {
-                  left: "75%",
-                  top: "30%",
+                  left: "63%",
+                  top: "63%",
+                  m_right: "8%",
+                  m_top: "70%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 3s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2143,8 +2301,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552343_home-hero-03.webp",
                 css: {
-                  left: "55%",
-                  top: "60%",
+                  left: "68%",
+                  top: "12%",
+                  m_right: "0%",
+                  m_top: "13%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 3.5s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2155,8 +2315,10 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp",
                 css: {
-                  left: "65%",
-                  top: "70%",
+                  left: "83%",
+                  top: "33%",
+                  m_right: "-22%",
+                  m_top: "29%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 2s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
@@ -2167,22 +2329,12 @@ const Ua = {
                 url:
                   "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235b_home-seen.webp",
                 css: {
-                  left: "85%",
-                  top: "10%",
+                  left: "86%",
+                  top: "69%",
+                  m_right: "30000px",
+                  m_top: "0%",
                   transform: "translate3d(1px, 2px, 1px)",
                   enterAnimation: "zoomIn 1.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url:
-                  "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233e_home-hero-07.webp",
-                css: {
-                  left: "85%",
-                  top: "70%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2.5s forwards",
                   leaveAnimation: "fadeOut 1s forwards",
                 },
                 isEnter: !0,
@@ -2193,15 +2345,15 @@ const Ua = {
               rootMargin: "0px",
               threshold: Array(100)
                 .fill()
-                .map((e, t) => 0.01 * t),
+                .map((e, a) => 0.01 * a),
             },
             i = new IntersectionObserver((e) => {
               e.forEach((e) => {
-                var t, a;
+                var a, t;
                 const { intersectionRatio: l, target: o } = e,
-                  i = null == (t = o.dataset) ? void 0 : t.index;
-                if ("img" === (null == (a = o.dataset) ? void 0 : a.item))
-                  s.value[i].isEnter = !(l < 0.5);
+                  i = null == (a = o.dataset) ? void 0 : a.index;
+                if ("img" === (null == (t = o.dataset) ? void 0 : t.item))
+                  s.value[i].isEnter = !(l < 0.3);
                 else
                   o.style.animation =
                     l < 1 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
@@ -2210,54 +2362,58 @@ const Ua = {
             r = () => {
               const e = document.getElementById("studio");
               if (e) {
-                const t = e.offsetTop;
-                window.scrollTo({ top: t, behavior: "smooth" });
+                const a = e.offsetTop;
+                window.scrollTo({ top: a, behavior: "smooth" });
               }
             };
-          return (
-            A(
-              () => t.state.app.isLoading,
-              (e) => {
-                if (((l.value = !e), e)) {
+          A(
+            () => a.state.app.isLoading,
+            (e) => {
+              if (((l.value = !e), e)) {
+                ((e) => {
+                  for (const a of e) i.unobserve(a);
+                })([
+                  ...document.querySelectorAll(".img-wrap"),
+                  document.querySelector(".btn-contain-scroll"),
+                ]);
+              } else
+                ue(() => {
                   ((e) => {
-                    for (const t of e) i.unobserve(t);
+                    for (const a of e) i.observe(a);
                   })([
                     ...document.querySelectorAll(".img-wrap"),
                     document.querySelector(".btn-contain-scroll"),
                   ]);
-                } else
-                  ue(() => {
-                    ((e) => {
-                      for (const t of e) i.observe(t);
-                    })([
-                      ...document.querySelectorAll(".img-wrap"),
-                      document.querySelector(".btn-contain-scroll"),
-                    ]);
-                  });
-              }
-            ),
+                });
+            }
+          );
+          const n = x(!1),
+            c = () => {
+              n.value = window.innerWidth < 991;
+            };
+          return (
             k(() => {
-              fe.init();
+              c(), window.addEventListener("resize", c), fe.init();
             }),
-            (e, t) => (
+            (e, a) => (
               g(),
               b(
                 w,
                 null,
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "view",
                       onMousemove:
-                        t[0] ||
-                        (t[0] = (e) =>
+                        a[0] ||
+                        (a[0] = (e) =>
                           ((e) => {
                             if (window.innerWidth > 576) {
-                              const t = window.innerWidth / 2,
+                              const a = window.innerWidth / 2,
                                 s = window.innerHeight / 2;
-                              (a.x = ((t - e.clientX) / 100) * 10),
-                                (a.y = ((s - e.clientY) / 100) * 10);
+                              (t.x = ((a - e.clientX) / 100) * 10),
+                                (t.y = ((s - e.clientY) / 100) * 10);
                             }
                           })(e)),
                     },
@@ -2270,10 +2426,10 @@ const Ua = {
                               key: 0,
                               class: "view-wrap",
                               style: R({
-                                transform: `translate3d(${Z(a).x}px, ${
-                                  Z(a).y
-                                }px, 0) rotateX(${Z(a).x / 5}deg) rotateY(${
-                                  Z(a).y / 8
+                                transform: `translate3d(${Z(t).x}px, ${
+                                  Z(t).y
+                                }px, 0) rotateX(${Z(t).x / 5}deg) rotateY(${
+                                  Z(t).y / 8
                                 }deg)`,
                                 transformOrigin: "center center",
                               }),
@@ -2283,44 +2439,49 @@ const Ua = {
                               b(
                                 w,
                                 null,
-                                F(
+                                Q(
                                   s.value,
-                                  (e, t) => (
+                                  (e, a) => (
                                     g(),
                                     b(
                                       "div",
                                       {
                                         class:
                                           "img-wrap home-hero_image-placer",
-                                        key: e.url + t,
+                                        key: e.url + a,
                                         style: R({
-                                          left: e.css.left,
-                                          top: e.css.top,
+                                          left: n.value ? "unset" : e.css.left,
+                                          right: n.value
+                                            ? e.css.m_right
+                                            : "unset",
+                                          top: n.value
+                                            ? e.css.m_top
+                                            : e.css.top,
                                           animation: e.isEnter
                                             ? e.css.enterAnimation
                                             : e.css.leaveAnimation,
                                         }),
-                                        "data-index": t,
+                                        "data-index": a,
                                         "data-item": "img",
                                       },
                                       [
-                                        y(
+                                        h(
                                           "img",
                                           {
                                             src: e.url,
                                             style: R({
                                               transform: `translate3d(${
-                                                Z(a).x / 2
-                                              }px,${Z(a).y / 2}px, 1px)`,
+                                                Z(t).x / 2
+                                              }px,${Z(t).y / 2}px, 100px)`,
                                             }),
                                           },
                                           null,
                                           12,
-                                          Da
+                                          Wt
                                         ),
                                       ],
                                       12,
-                                      Va
+                                      Rt
                                     )
                                   )
                                 ),
@@ -2333,18 +2494,18 @@ const Ua = {
                     ],
                     32
                   ),
-                  y(
+                  h(
                     "div",
                     { "data-reveal": "button", class: "home-hero_btn" },
                     [
-                      y(
+                      h(
                         "div",
                         { class: "btn-contain btn-contain-scroll op0" },
                         [
-                          y(
+                          h(
                             "div",
                             { class: "btn-scroll w-inline-block", onClick: r },
-                            Qa
+                            Zt
                           ),
                         ]
                       ),
@@ -2357,7 +2518,7 @@ const Ua = {
           );
         },
       },
-      [["__scopeId", "data-v-57918575"]]
+      [["__scopeId", "data-v-4ebeca6f"]]
     ),
   },
   setup() {
@@ -2371,8 +2532,8 @@ const Ua = {
               : e.target.classList.remove("active");
           });
         });
-        document.querySelectorAll(".target_line").forEach((t) => {
-          e.observe(t);
+        document.querySelectorAll(".target_line").forEach((a) => {
+          e.observe(a);
         });
       }),
       { a: e }
@@ -2380,18 +2541,18 @@ const Ua = {
   },
 };
 fe.init();
-const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
-  Ra = Fa(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+const Yt = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
+  Kt = Yt(() =>
+    h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  Wa = Fa(() =>
-    y(
+  Xt = Yt(() =>
+    h(
       "section",
       { id: "studio", class: "section" },
       [
-        y("div", { class: "section-title_component" }, [
-          y("div", { class: "container" }, [
-            y(
+        h("div", { class: "section-title_component" }, [
+          h("div", { class: "container" }, [
+            h(
               "div",
               {
                 class: "section-title_wrapper",
@@ -2399,18 +2560,18 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                 "data-aos-duration": "700",
               },
               [
-                y(
+                h(
                   "div",
                   { class: "section-title_dot", style: { opacity: "1" } },
                   [
-                    y("div", {
+                    h("div", {
                       class: "section-title_dot-fill",
                       style: { width: "100%", height: "100%" },
                     }),
                   ]
                 ),
-                y("div", { class: "u-overflow-hidden" }, [
-                  y(
+                h("div", { class: "u-overflow-hidden" }, [
+                  h(
                     "div",
                     {
                       class: "section-title_title",
@@ -2419,24 +2580,24 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h2", { class: "u-ts-4" }, "About Basis")]
+                    [h("h2", { class: "u-ts-4" }, "About Basis")]
                   ),
                 ]),
               ]
             ),
           ]),
         ]),
-        y("div", { class: "container" }, [
-          y("div", { class: "w-layout-grid pair-grid" }, [
-            y(
+        h("div", { class: "container" }, [
+          h("div", { class: "w-layout-grid pair-grid" }, [
+            h(
               "div",
               {
                 "data-animation-element": "group",
                 id: "w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307",
               },
               [
-                y("h3", { "data-animation-element": "title", style: {} }, [
-                  y(
+                h("h3", { "data-animation-element": "title", style: {} }, [
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -2449,7 +2610,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2463,7 +2624,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                         " Basis "
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2477,7 +2638,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                         " increases "
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2493,7 +2654,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -2506,7 +2667,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2520,7 +2681,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                         " value "
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2536,7 +2697,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -2549,7 +2710,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       "data-aos-duration": "800",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2563,7 +2724,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                         " products "
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2577,7 +2738,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                         " and "
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2593,7 +2754,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -2606,7 +2767,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       "data-aos-duration": "900",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2620,7 +2781,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                         " brands "
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2636,7 +2797,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -2649,7 +2810,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       "data-aos-duration": "1000",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -2666,8 +2827,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     ]
                   ),
                 ]),
-                y("div", { class: "btn-group" }, [
-                  y(
+                h("div", { class: "btn-group" }, [
+                  h(
                     "div",
                     {
                       class: "btn-item cc-1",
@@ -2680,7 +2841,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "a",
                         {
                           href: "/cases",
@@ -2689,8 +2850,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "data-aos-duration": "1000",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y(
+                          h("div", { class: "btn-text-wrap" }, [
+                            h(
                               "div",
                               {
                                 class: "btn-text",
@@ -2702,7 +2863,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               },
                               " View cases "
                             ),
-                            y(
+                            h(
                               "div",
                               {
                                 class: "btn-text cc-bottom",
@@ -2719,7 +2880,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "btn-item cc-2",
@@ -2734,7 +2895,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "a",
                         {
                           href: "/about",
@@ -2743,8 +2904,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "data-aos-duration": "1000",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y(
+                          h("div", { class: "btn-text-wrap" }, [
+                            h(
                               "div",
                               {
                                 class: "btn-text",
@@ -2756,7 +2917,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               },
                               " About us "
                             ),
-                            y(
+                            h(
                               "div",
                               {
                                 class: "btn-text cc-bottom",
@@ -2778,10 +2939,10 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
             ),
           ]),
         ]),
-        y("div", { class: "u-mt-8-75" }, [
-          y("div", { class: "marquee" }, [
-            y("div", { class: "marquee_row w-dyn-list" }, [
-              y(
+        h("div", { class: "u-mt-8-75" }, [
+          h("div", { class: "marquee" }, [
+            h("div", { class: "marquee_row w-dyn-list" }, [
+              h(
                 "div",
                 {
                   role: "list",
@@ -2793,11 +2954,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   },
                 },
                 [
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-1",
@@ -2808,7 +2969,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "300",
@@ -2821,11 +2982,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-2",
@@ -2836,7 +2997,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "400",
@@ -2849,11 +3010,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-3",
@@ -2864,7 +3025,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "500",
@@ -2877,11 +3038,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-4",
@@ -2892,7 +3053,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "600",
@@ -2905,11 +3066,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-5",
@@ -2920,7 +3081,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "700",
@@ -2933,11 +3094,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-6",
@@ -2948,7 +3109,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "800",
@@ -2961,11 +3122,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-7",
@@ -2976,7 +3137,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "900",
@@ -2989,11 +3150,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-8",
@@ -3004,7 +3165,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "1000",
@@ -3017,11 +3178,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "marquee_item cc-9",
@@ -3032,7 +3193,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           },
                         },
                         [
-                          y("img", {
+                          h("img", {
                             loading: "eager",
                             "data-aos": "fade-up",
                             "data-aos-delay": "1100",
@@ -3048,8 +3209,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                 ]
               ),
             ]),
-            y("div", { class: "marquee_row w-dyn-list" }, [
-              y(
+            h("div", { class: "marquee_row w-dyn-list" }, [
+              h(
                 "div",
                 {
                   role: "list",
@@ -3061,11 +3222,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   },
                 },
                 [
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -3074,11 +3235,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -3087,11 +3248,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -3100,11 +3261,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -3113,11 +3274,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -3126,11 +3287,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -3139,11 +3300,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -3152,11 +3313,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3165,11 +3326,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3181,8 +3342,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                 ]
               ),
             ]),
-            y("div", { class: "marquee_row w-dyn-list" }, [
-              y(
+            h("div", { class: "marquee_row w-dyn-list" }, [
+              h(
                 "div",
                 {
                   role: "list",
@@ -3194,11 +3355,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   },
                 },
                 [
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -3207,11 +3368,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -3220,11 +3381,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -3233,11 +3394,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -3246,11 +3407,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -3259,11 +3420,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -3272,11 +3433,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -3285,11 +3446,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3298,11 +3459,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       }),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     { role: "listitem", class: "marquee_logo w-dyn-item" },
                     [
-                      y("img", {
+                      h("img", {
                         loading: "eager",
                         src:
                           "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3320,17 +3481,17 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   ),
-  Za = Fa(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+  $t = Yt(() =>
+    h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  Na = Fa(() =>
-    y(
+  Gt = Yt(() =>
+    h(
       "section",
       { class: "section" },
       [
-        y("div", { class: "section-title_component" }, [
-          y("div", { class: "container" }, [
-            y(
+        h("div", { class: "section-title_component" }, [
+          h("div", { class: "container" }, [
+            h(
               "div",
               {
                 class: "section-title_wrapper",
@@ -3338,18 +3499,18 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                 "data-aos-duration": "700",
               },
               [
-                y(
+                h(
                   "div",
                   { class: "section-title_dot", style: { opacity: "1" } },
                   [
-                    y("div", {
+                    h("div", {
                       class: "section-title_dot-fill",
                       style: { width: "100%", height: "100%" },
                     }),
                   ]
                 ),
-                y("div", { class: "u-overflow-hidden" }, [
-                  y(
+                h("div", { class: "u-overflow-hidden" }, [
+                  h(
                     "div",
                     {
                       class: "section-title_title",
@@ -3358,20 +3519,20 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h2", { class: "u-ts-4" }, "What We Do")]
+                    [h("h2", { class: "u-ts-4" }, "What We Do")]
                   ),
                 ]),
               ]
             ),
           ]),
         ]),
-        y("div", { class: "container" }, [
-          y("div", { "data-animation-element": "group" }, [
-            y(
+        h("div", { class: "container" }, [
+          h("div", { "data-animation-element": "group" }, [
+            h(
               "h3",
               { "data-animation-element": "title", class: "h1", style: {} },
               [
-                y(
+                h(
                   "div",
                   {
                     "data-aos": "fade-up",
@@ -3384,7 +3545,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         style: {
@@ -3400,7 +3561,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "u-overflow-hidden",
@@ -3413,7 +3574,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         style: {
@@ -3432,13 +3593,13 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               ]
             ),
           ]),
-          y("div", { class: "sticky-pair" }, [
-            y("div", { class: "w-layout-grid pair-grid" }, [
-              y(
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid" }, [
+              h(
                 "div",
                 { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       id:
@@ -3446,7 +3607,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       class: "card-wrapper cc-small",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           id:
@@ -3454,13 +3615,13 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           class: "w-dyn-list",
                         },
                         [
-                          y("div", { role: "list", class: "w-dyn-items" }, [
-                            y(
+                          h("div", { role: "list", class: "w-dyn-items" }, [
+                            h(
                               "div",
                               { role: "listitem", class: "w-dyn-item" },
                               [
-                                y("div", { class: "card-wrapper cc-small" }, [
-                                  y(
+                                h("div", { class: "card-wrapper cc-small" }, [
+                                  h(
                                     "div",
                                     {
                                       class: "card-animation cc-40",
@@ -3468,7 +3629,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                       "data-aos-duration": "700",
                                     },
                                     [
-                                      y(
+                                      h(
                                         "a",
                                         {
                                           "data-mouse-class": "cc-text",
@@ -3482,17 +3643,17 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                           },
                                         },
                                         [
-                                          y(
+                                          h(
                                             "div",
                                             { class: "card-image_wrapper" },
                                             [
-                                              y(
+                                              h(
                                                 "div",
                                                 {
                                                   class: "iframe-video_wrapper",
                                                 },
                                                 [
-                                                  y("iframe", {
+                                                  h("iframe", {
                                                     class:
                                                       "iframe-video_iframe",
                                                     width: "100%",
@@ -3508,7 +3669,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                                     title: "Yoginess 1",
                                                     loading: "lazy",
                                                   }),
-                                                  y("div", {
+                                                  h("div", {
                                                     class:
                                                       "iframe-video_blocker",
                                                   }),
@@ -3516,7 +3677,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                               ),
                                             ]
                                           ),
-                                          y(
+                                          h(
                                             "div",
                                             {
                                               class: "card-body",
@@ -3524,11 +3685,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                               "data-aos-duration": "700",
                                             },
                                             [
-                                              y(
+                                              h(
                                                 "div",
                                                 { class: "u-overflow-hidden" },
                                                 [
-                                                  y(
+                                                  h(
                                                     "div",
                                                     {
                                                       class: "card-up",
@@ -3540,7 +3701,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                                       },
                                                     },
                                                     [
-                                                      y(
+                                                      h(
                                                         "h4",
                                                         { class: "u-ts-4" },
                                                         "Yoginess Brand"
@@ -3565,18 +3726,18 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   ),
                 ]
               ),
-              y(
+              h(
                 "div",
                 {
                   id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
                   class: "w-dyn-list",
                 },
                 [
-                  y("div", { role: "list", class: "w-dyn-items" }, [
-                    y("div", { role: "listitem", class: "w-dyn-item" }, [
-                      y("div", { class: "card-wrapper cc-large" }, [
-                        y("div", { class: "card-animation cc-40" }, [
-                          y(
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h("div", { class: "card-animation cc-40" }, [
+                          h(
                             "a",
                             {
                               "data-mouse-class": "cc-text",
@@ -3592,9 +3753,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               },
                             },
                             [
-                              y("div", { class: "card-image_wrapper" }, [
-                                y("div", { class: "iframe-video_wrapper" }, [
-                                  y("iframe", {
+                              h("div", { class: "card-image_wrapper" }, [
+                                h("div", { class: "iframe-video_wrapper" }, [
+                                  h("iframe", {
                                     class: "iframe-video_iframe",
                                     width: "100%",
                                     height: "100%",
@@ -3607,10 +3768,10 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                     title: "Sable 9",
                                     loading: "lazy",
                                   }),
-                                  y("div", { class: "iframe-video_blocker" }),
+                                  h("div", { class: "iframe-video_blocker" }),
                                 ]),
                               ]),
-                              y(
+                              h(
                                 "div",
                                 {
                                   class: "card-body",
@@ -3618,8 +3779,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                   "data-aos-duration": "700",
                                 },
                                 [
-                                  y("div", { class: "u-overflow-hidden" }, [
-                                    y(
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h(
                                       "div",
                                       {
                                         class: "card-up",
@@ -3630,8 +3791,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                         },
                                       },
                                       [
-                                        y("div", { class: "card-large_text" }, [
-                                          y(
+                                        h("div", { class: "card-large_text" }, [
+                                          h(
                                             "h4",
                                             { class: "u-ts-4" },
                                             "Sable App"
@@ -3650,14 +3811,14 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   ]),
                 ]
               ),
-              y(
+              h(
                 "div",
                 {
                   id: "w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307",
                   class: "content",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "content-p cc-1",
@@ -3669,7 +3830,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "p",
                         {
                           class: "u-ts-3",
@@ -3680,8 +3841,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y("div", { class: "btn-group" }, [
-                    y(
+                  h("div", { class: "btn-group" }, [
+                    h(
                       "div",
                       {
                         class: "btn-item cc-1",
@@ -3693,7 +3854,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/cases",
@@ -3702,9 +3863,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y("div", { class: "btn-text" }, "View cases"),
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h("div", { class: "btn-text" }, "View cases"),
+                              h(
                                 "div",
                                 { class: "btn-text cc-bottom" },
                                 "View cases"
@@ -3714,7 +3875,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "btn-item cc-2",
@@ -3726,7 +3887,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/design-trial",
@@ -3735,9 +3896,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y("div", { class: "btn-text" }, "Design trial"),
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h("div", { class: "btn-text" }, "Design trial"),
+                              h(
                                 "div",
                                 { class: "btn-text cc-bottom" },
                                 "Design trial"
@@ -3757,20 +3918,20 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   ),
-  Ya = Fa(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+  Jt = Yt(() =>
+    h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  Ka = Fa(() =>
-    y(
+  es = Yt(() =>
+    h(
       "section",
       { class: "section" },
       [
-        y("div", { class: "section-title_component" }, [
-          y("div", { class: "container" }, [
-            y("div", { class: "section-title_wrapper" }, [
-              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-              y("div", { class: "u-overflow-hidden" }, [
-                y(
+        h("div", { class: "section-title_component" }, [
+          h("div", { class: "container" }, [
+            h("div", { class: "section-title_wrapper" }, [
+              h("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              h("div", { class: "u-overflow-hidden" }, [
+                h(
                   "div",
                   {
                     class: "section-title_title",
@@ -3779,21 +3940,21 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       "transform-style": "preserve-3d",
                     },
                   },
-                  [y("h2", { class: "u-ts-4" }, "Capabilities")]
+                  [h("h2", { class: "u-ts-4" }, "Capabilities")]
                 ),
               ]),
             ]),
           ]),
         ]),
-        y("div", { class: "container" }, [
-          y("div", { class: "w-layout-grid pair-grid" }, [
-            y(
+        h("div", { class: "container" }, [
+          h("div", { class: "w-layout-grid pair-grid" }, [
+            h(
               "div",
               { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
               [
-                y("div", { class: "service-list" }, [
-                  y("div", { class: "logomark_component" }, [
-                    y(
+                h("div", { class: "service-list" }, [
+                  h("div", { class: "logomark_component" }, [
+                    h(
                       "div",
                       {
                         class: "logomark w-embed",
@@ -3806,7 +3967,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "svg",
                           {
                             height: "100%",
@@ -3816,7 +3977,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             xmlns: "http://www.w3.org/2000/svg",
                           },
                           [
-                            y("path", {
+                            h("path", {
                               d:
                                 "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
                               fill: "currentColor",
@@ -3826,8 +3987,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ]
                     ),
                   ]),
-                  y("ul", { role: "list", class: "u-mt-3-5" }, [
-                    y(
+                  h("ul", { role: "list", class: "u-mt-3-5" }, [
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3836,7 +3997,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "100",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-1",
@@ -3846,11 +4007,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               "transform-style": "preserve-3d",
                             },
                           },
-                          [y("h3", { class: "u-tc-caps" }, "Research")]
+                          [h("h3", { class: "u-tc-caps" }, "Research")]
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3859,7 +4020,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "150",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-2",
@@ -3869,11 +4030,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               "transform-style": "preserve-3d",
                             },
                           },
-                          [y("h3", { class: "u-tc-caps" }, "Brand Strategy")]
+                          [h("h3", { class: "u-tc-caps" }, "Brand Strategy")]
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3882,7 +4043,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "200",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-3",
@@ -3893,7 +4054,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             },
                           },
                           [
-                            y(
+                            h(
                               "h3",
                               { class: "u-tc-caps" },
                               "Creative Direction"
@@ -3902,7 +4063,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3911,7 +4072,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "250",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-4",
@@ -3921,11 +4082,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               "transform-style": "preserve-3d",
                             },
                           },
-                          [y("h3", { class: "u-tc-caps" }, "Brand identity")]
+                          [h("h3", { class: "u-tc-caps" }, "Brand identity")]
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3934,7 +4095,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "300",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-5",
@@ -3944,11 +4105,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               "transform-style": "preserve-3d",
                             },
                           },
-                          [y("h3", { class: "u-tc-caps" }, "UX & UI Design")]
+                          [h("h3", { class: "u-tc-caps" }, "UX & UI Design")]
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3957,7 +4118,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "350",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-6",
@@ -3968,7 +4129,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             },
                           },
                           [
-                            y(
+                            h(
                               "h3",
                               { class: "u-tc-caps" },
                               "Interaction Design"
@@ -3977,7 +4138,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -3986,7 +4147,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "400",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-7",
@@ -3996,11 +4157,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                               "transform-style": "preserve-3d",
                             },
                           },
-                          [y("h3", { class: "u-tc-caps" }, "Implementation")]
+                          [h("h3", { class: "u-tc-caps" }, "Implementation")]
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "li",
                       {
                         class: "u-overflow-hidden",
@@ -4009,7 +4170,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         "data-aos-delay": "450",
                       },
                       [
-                        y(
+                        h(
                           "div",
                           {
                             class: "list-content cc-8",
@@ -4020,7 +4181,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             },
                           },
                           [
-                            y(
+                            h(
                               "h3",
                               { class: "u-tc-caps" },
                               "Webflow Development"
@@ -4030,8 +4191,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ]
                     ),
                   ]),
-                  y("div", { class: "btn-group" }, [
-                    y(
+                  h("div", { class: "btn-group" }, [
+                    h(
                       "div",
                       {
                         class: "btn-item cc-1",
@@ -4043,7 +4204,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/about",
@@ -4052,9 +4213,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y("div", { class: "btn-text" }, "Our services"),
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h("div", { class: "btn-text" }, "Our services"),
+                              h(
                                 "div",
                                 { class: "btn-text cc-bottom" },
                                 "Our services"
@@ -4074,15 +4235,15 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   ),
-  Xa = Fa(() =>
-    y(
+  as = Yt(() =>
+    h(
       "section",
       { class: "section cc-apps" },
       [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y("div", { "data-animation-element": "group", class: "col" }, [
-              y(
+        h("div", { class: "container" }, [
+          h("div", { class: "row" }, [
+            h("div", { "data-animation-element": "group", class: "col" }, [
+              h(
                 "h3",
                 {
                   "data-animation-element": "title",
@@ -4093,7 +4254,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   "data-aos-delay": "600",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -4104,7 +4265,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -4125,16 +4286,16 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
             ]),
           ]),
         ]),
-        y("div", { "data-apps": "component", class: "apps_component" }, [
-          y("div", { class: "apps_media-wrapper" }, [
-            y(
+        h("div", { "data-apps": "component", class: "apps_component" }, [
+          h("div", { class: "apps_media-wrapper" }, [
+            h(
               "div",
               {
                 "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
                 class: "apps_media-list",
               },
               [
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -4143,7 +4304,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     "data-aos-delay": "100",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png",
                       loading: "lazy",
@@ -4162,7 +4323,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -4171,7 +4332,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     "data-aos-delay": "150",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
@@ -4183,9 +4344,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y(
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -4193,7 +4354,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                y("img", {
+                                h("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -4211,7 +4372,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -4220,7 +4381,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     "data-aos-delay": "200",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
@@ -4232,9 +4393,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y(
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -4242,7 +4403,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                y("img", {
+                                h("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -4260,7 +4421,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper cc-watch",
@@ -4269,7 +4430,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     "data-aos-delay": "250",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
@@ -4281,7 +4442,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
                           loading: "eager",
@@ -4295,10 +4456,10 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               ]
             ),
           ]),
-          y("div", { class: "apps_scroll" }, [
-            y("div", { class: "mobile-scroll_cta" }, [
-              y("div", { class: "mobile-scroll_icon w-embed" }, [
-                y(
+          h("div", { class: "apps_scroll" }, [
+            h("div", { class: "mobile-scroll_cta" }, [
+              h("div", { class: "mobile-scroll_icon w-embed" }, [
+                h(
                   "svg",
                   {
                     width: "100%",
@@ -4308,7 +4469,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     xmlns: "http://www.w3.org/2000/svg",
                   },
                   [
-                    y("path", {
+                    h("path", {
                       d:
                         "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
                       fill: "currentColor",
@@ -4323,15 +4484,15 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   ),
-  $a = Fa(() =>
-    y(
+  ts = Yt(() =>
+    h(
       "section",
       { class: "section cc-fd" },
       [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y("div", { "data-animation-element": "group", class: "col" }, [
-              y(
+        h("div", { class: "container" }, [
+          h("div", { class: "row" }, [
+            h("div", { "data-animation-element": "group", class: "col" }, [
+              h(
                 "h3",
                 {
                   "data-animation-element": "title",
@@ -4341,7 +4502,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   "data-aos-duration": "700",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -4352,7 +4513,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -4368,7 +4529,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -4379,7 +4540,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -4399,19 +4560,19 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               ),
             ]),
           ]),
-          y("div", { class: "sticky-pair" }, [
-            y("div", { class: "w-layout-grid pair-grid is-leading" }, [
-              y(
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid is-leading" }, [
+              h(
                 "div",
                 {
                   id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
                   class: "w-dyn-list",
                 },
                 [
-                  y("div", { role: "list", class: "w-dyn-items" }, [
-                    y("div", { role: "listitem", class: "w-dyn-item" }, [
-                      y("div", { class: "card-wrapper cc-large" }, [
-                        y(
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h(
                           "div",
                           {
                             class: "card-animation cc-40",
@@ -4419,7 +4580,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "800",
                           },
                           [
-                            y(
+                            h(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -4433,9 +4594,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                 },
                               },
                               [
-                                y("div", { class: "card-image_wrapper" }, [
-                                  y("div", { class: "iframe-video_wrapper" }, [
-                                    y("iframe", {
+                                h("div", { class: "card-image_wrapper" }, [
+                                  h("div", { class: "iframe-video_wrapper" }, [
+                                    h("iframe", {
                                       class: "iframe-video_iframe",
                                       width: "100%",
                                       height: "100%",
@@ -4448,12 +4609,12 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                       title: "Seen 1",
                                       loading: "lazy",
                                     }),
-                                    y("div", { class: "iframe-video_blocker" }),
+                                    h("div", { class: "iframe-video_blocker" }),
                                   ]),
                                 ]),
-                                y("div", { class: "card-body" }, [
-                                  y("div", { class: "u-overflow-hidden" }, [
-                                    y(
+                                h("div", { class: "card-body" }, [
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h(
                                       "div",
                                       {
                                         class: "card-up",
@@ -4464,8 +4625,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                         },
                                       },
                                       [
-                                        y("div", { class: "card-large_text" }, [
-                                          y(
+                                        h("div", { class: "card-large_text" }, [
+                                          h(
                                             "h4",
                                             { class: "u-ts-4" },
                                             "Seen Brand"
@@ -4484,15 +4645,15 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   ]),
                 ]
               ),
-              y("div", null, [
-                y(
+              h("div", null, [
+                h(
                   "div",
                   {
                     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
                     class: "card-wrapper cc-small",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         id:
@@ -4500,10 +4661,10 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         class: "w-dyn-list",
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y("div", { class: "card-wrapper cc-small" }, [
-                              y(
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h("div", { class: "card-wrapper cc-small" }, [
+                              h(
                                 "div",
                                 {
                                   class: "card-animation cc-40",
@@ -4511,7 +4672,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                   "data-aos-duration": "800",
                                 },
                                 [
-                                  y(
+                                  h(
                                     "a",
                                     {
                                       "data-mouse-class": "cc-text",
@@ -4524,15 +4685,15 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                       },
                                     },
                                     [
-                                      y(
+                                      h(
                                         "div",
                                         { class: "card-image_wrapper" },
                                         [
-                                          y(
+                                          h(
                                             "div",
                                             { class: "iframe-video_wrapper" },
                                             [
-                                              y("iframe", {
+                                              h("iframe", {
                                                 class: "iframe-video_iframe",
                                                 width: "100%",
                                                 height: "100%",
@@ -4545,19 +4706,19 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                                 title: "Sable 1",
                                                 loading: "lazy",
                                               }),
-                                              y("div", {
+                                              h("div", {
                                                 class: "iframe-video_blocker",
                                               }),
                                             ]
                                           ),
                                         ]
                                       ),
-                                      y("div", { class: "card-body" }, [
-                                        y(
+                                      h("div", { class: "card-body" }, [
+                                        h(
                                           "div",
                                           { class: "u-overflow-hidden" },
                                           [
-                                            y(
+                                            h(
                                               "div",
                                               {
                                                 class: "card-up",
@@ -4569,7 +4730,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                                 },
                                               },
                                               [
-                                                y(
+                                                h(
                                                   "h4",
                                                   { class: "u-ts-4" },
                                                   "Sable App"
@@ -4591,14 +4752,14 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   ]
                 ),
               ]),
-              y(
+              h(
                 "div",
                 {
                   id: "w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307",
                   class: "content is-grid",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "content-p cc-1",
@@ -4610,7 +4771,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "p",
                         {
                           class: "u-ts-3",
@@ -4622,8 +4783,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y("div", { class: "btn-group" }, [
-                    y(
+                  h("div", { class: "btn-group" }, [
+                    h(
                       "div",
                       {
                         class: "btn-item cc-1",
@@ -4635,7 +4796,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/fintech-design",
@@ -4644,13 +4805,13 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h(
                                 "div",
                                 { class: "btn-text" },
                                 "Fintech services"
                               ),
-                              y(
+                              h(
                                 "div",
                                 { class: "btn-text cc-bottom" },
                                 "Fintech services"
@@ -4660,7 +4821,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "btn-item cc-2",
@@ -4672,7 +4833,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/design-trial",
@@ -4681,9 +4842,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y("div", { class: "btn-text" }, "Design trial"),
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h("div", { class: "btn-text" }, "Design trial"),
+                              h(
                                 "div",
                                 { class: "btn-text cc-bottom" },
                                 "Design trial"
@@ -4703,15 +4864,15 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   ),
-  Ga = Fa(() =>
-    y(
+  ss = Yt(() =>
+    h(
       "section",
       { class: "section" },
       [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y("div", { "data-animation-element": "group", class: "col" }, [
-              y(
+        h("div", { class: "container" }, [
+          h("div", { class: "row" }, [
+            h("div", { "data-animation-element": "group", class: "col" }, [
+              h(
                 "h3",
                 {
                   "data-animation-element": "title",
@@ -4721,7 +4882,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   "data-aos-duration": "1000",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -4732,7 +4893,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -4752,13 +4913,13 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               ),
             ]),
           ]),
-          y("div", { class: "sticky-pair" }, [
-            y("div", { class: "w-layout-grid pair-grid" }, [
-              y(
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid" }, [
+              h(
                 "div",
                 { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       id:
@@ -4766,7 +4927,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       class: "card-wrapper cc-small",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           id:
@@ -4774,13 +4935,13 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           class: "w-dyn-list",
                         },
                         [
-                          y("div", { role: "list", class: "w-dyn-items" }, [
-                            y(
+                          h("div", { role: "list", class: "w-dyn-items" }, [
+                            h(
                               "div",
                               { role: "listitem", class: "w-dyn-item" },
                               [
-                                y("div", { class: "card-wrapper cc-small" }, [
-                                  y(
+                                h("div", { class: "card-wrapper cc-small" }, [
+                                  h(
                                     "div",
                                     {
                                       class: "card-animation cc-40",
@@ -4788,7 +4949,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                       "data-aos-duration": "800",
                                     },
                                     [
-                                      y(
+                                      h(
                                         "a",
                                         {
                                           "data-mouse-class": "cc-text",
@@ -4803,17 +4964,17 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                           },
                                         },
                                         [
-                                          y(
+                                          h(
                                             "div",
                                             { class: "card-image_wrapper" },
                                             [
-                                              y(
+                                              h(
                                                 "div",
                                                 {
                                                   class: "iframe-video_wrapper",
                                                 },
                                                 [
-                                                  y("iframe", {
+                                                  h("iframe", {
                                                     class:
                                                       "iframe-video_iframe",
                                                     width: "100%",
@@ -4829,7 +4990,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                                     title: "Gaffa 1",
                                                     loading: "lazy",
                                                   }),
-                                                  y("div", {
+                                                  h("div", {
                                                     class:
                                                       "iframe-video_blocker",
                                                   }),
@@ -4837,12 +4998,12 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                               ),
                                             ]
                                           ),
-                                          y("div", { class: "card-body" }, [
-                                            y(
+                                          h("div", { class: "card-body" }, [
+                                            h(
                                               "div",
                                               { class: "u-overflow-hidden" },
                                               [
-                                                y(
+                                                h(
                                                   "div",
                                                   {
                                                     class: "card-up",
@@ -4854,7 +5015,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                                     },
                                                   },
                                                   [
-                                                    y(
+                                                    h(
                                                       "h4",
                                                       { class: "u-ts-4" },
                                                       " Gaffa Brand & Website "
@@ -4878,17 +5039,17 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   ),
                 ]
               ),
-              y(
+              h(
                 "div",
                 {
                   id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
                   class: "w-dyn-list",
                 },
                 [
-                  y("div", { role: "list", class: "w-dyn-items" }, [
-                    y("div", { role: "listitem", class: "w-dyn-item" }, [
-                      y("div", { class: "card-wrapper cc-large" }, [
-                        y(
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h(
                           "div",
                           {
                             class: "card-animation cc-40",
@@ -4896,7 +5057,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "700",
                           },
                           [
-                            y(
+                            h(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -4910,9 +5071,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                 },
                               },
                               [
-                                y("div", { class: "card-image_wrapper" }, [
-                                  y("div", { class: "iframe-video_wrapper" }, [
-                                    y("iframe", {
+                                h("div", { class: "card-image_wrapper" }, [
+                                  h("div", { class: "iframe-video_wrapper" }, [
+                                    h("iframe", {
                                       class: "iframe-video_iframe",
                                       width: "100%",
                                       height: "100%",
@@ -4925,12 +5086,12 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                       title: "Sable 10",
                                       loading: "lazy",
                                     }),
-                                    y("div", { class: "iframe-video_blocker" }),
+                                    h("div", { class: "iframe-video_blocker" }),
                                   ]),
                                 ]),
-                                y("div", { class: "card-body" }, [
-                                  y("div", { class: "u-overflow-hidden" }, [
-                                    y(
+                                h("div", { class: "card-body" }, [
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h(
                                       "div",
                                       {
                                         class: "card-up",
@@ -4941,8 +5102,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                         },
                                       },
                                       [
-                                        y("div", { class: "card-large_text" }, [
-                                          y(
+                                        h("div", { class: "card-large_text" }, [
+                                          h(
                                             "h4",
                                             { class: "u-ts-4" },
                                             "Sable Brand"
@@ -4961,14 +5122,14 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   ]),
                 ]
               ),
-              y(
+              h(
                 "div",
                 {
                   id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307",
                   class: "content is-grid",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "content-p cc-1",
@@ -4980,7 +5141,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "p",
                         {
                           class: "u-ts-3",
@@ -4991,8 +5152,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                       ),
                     ]
                   ),
-                  y("div", { class: "btn-group" }, [
-                    y(
+                  h("div", { class: "btn-group" }, [
+                    h(
                       "div",
                       {
                         class: "btn-item cc-1",
@@ -5004,7 +5165,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/cases",
@@ -5013,9 +5174,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y("div", { class: "btn-text" }, "View cases"),
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h("div", { class: "btn-text" }, "View cases"),
+                              h(
                                 "div",
                                 { class: "btn-text cc-bottom" },
                                 "View cases"
@@ -5025,7 +5186,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         ),
                       ]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "btn-item cc-2",
@@ -5037,7 +5198,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y(
+                        h(
                           "a",
                           {
                             href: "/design-trial",
@@ -5046,8 +5207,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                             "data-aos-duration": "1000",
                           },
                           [
-                            y("div", { class: "btn-text-wrap" }, [
-                              y(
+                            h("div", { class: "btn-text-wrap" }, [
+                              h(
                                 "div",
                                 {
                                   class: "btn-text",
@@ -5059,7 +5220,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                                 },
                                 " Design trial "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   class: "btn-text cc-bottom",
@@ -5086,17 +5247,17 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   ),
-  Ja = N(
+  ls = N(
     '<section class="section" data-v-764ed4b3><div class="section-title_component" data-v-764ed4b3><div class="container" data-v-764ed4b3><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-764ed4b3><div class="section-title_dot" style="opacity:1;" data-v-764ed4b3></div><div class="u-overflow-hidden" data-v-764ed4b3><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-764ed4b3><h2 class="u-ts-4" data-v-764ed4b3>Contact Us</h2></div></div></div></div></div><div class="container" data-v-764ed4b3><div class="w-layout-grid pair-grid" data-v-764ed4b3><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-764ed4b3><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-764ed4b3><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-764ed4b3><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-764ed4b3><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-764ed4b3><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-764ed4b3><div style="position:relative;display:inline-block;" data-v-764ed4b3> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   ),
-  es = Fa(() =>
-    y(
+  os = Yt(() =>
+    h(
       "div",
       null,
       [
-        y("aside", { class: "pre-footer" }, [
-          y(
+        h("aside", { class: "pre-footer" }, [
+          h(
             "a",
             {
               "data-mouse-text": "Read Next",
@@ -5105,8 +5266,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               class: "section cc-pre-footer w-inline-block",
             },
             [
-              y("div", { class: "iframe-video_wrapper" }, [
-                y("iframe", {
+              h("div", { class: "iframe-video_wrapper" }, [
+                h("iframe", {
                   class: "iframe-video_iframe",
                   width: "100%",
                   height: "100%",
@@ -5119,11 +5280,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   title: "Sable 12",
                   loading: "lazy",
                 }),
-                y("div", { class: "iframe-video_blocker" }),
+                h("div", { class: "iframe-video_blocker" }),
               ]),
-              y("div", { class: "pre-footer_gradient" }),
-              y("div", { class: "marquee" }, [
-                y(
+              h("div", { class: "pre-footer_gradient" }),
+              h("div", { class: "marquee" }, [
+                h(
                   "div",
                   {
                     class: "marquee_content cc-text transparent",
@@ -5135,7 +5296,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -5145,9 +5306,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Case Studies ")]
+                      [h("div", { class: "h1" }, "Case Studies ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -5157,9 +5318,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Case Studies ")]
+                      [h("div", { class: "h1" }, "Case Studies ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -5169,11 +5330,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Case Studies ")]
+                      [h("div", { class: "h1" }, "Case Studies ")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "marquee_content cc-text transparent",
@@ -5185,7 +5346,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -5195,9 +5356,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Case Studies ")]
+                      [h("div", { class: "h1" }, "Case Studies ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -5207,9 +5368,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Case Studies ")]
+                      [h("div", { class: "h1" }, "Case Studies ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -5219,20 +5380,20 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Case Studies ")]
+                      [h("div", { class: "h1" }, "Case Studies ")]
                     ),
                   ]
                 ),
               ]),
-              y("div", { class: "pre-footer_button" }, [
-                y("div", { class: "btn cc-large-landscape" }, [
-                  y("div", { class: "btn-text-wrap" }, [
-                    y(
+              h("div", { class: "pre-footer_button" }, [
+                h("div", { class: "btn cc-large-landscape" }, [
+                  h("div", { class: "btn-text-wrap" }, [
+                    h(
                       "div",
                       { class: "btn-text cc-large-landscape" },
                       "REad Next"
                     ),
-                    y(
+                    h(
                       "div",
                       { class: "btn-text cc-bottom cc-large-landscape" },
                       "Button"
@@ -5242,7 +5403,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               ]),
             ]
           ),
-          y(
+          h(
             "a",
             {
               "data-mouse-text": "Read Next",
@@ -5251,8 +5412,8 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
               class: "section cc-pre-footer w-inline-block",
             },
             [
-              y("div", { class: "iframe-video_wrapper" }, [
-                y("iframe", {
+              h("div", { class: "iframe-video_wrapper" }, [
+                h("iframe", {
                   class: "iframe-video_iframe",
                   width: "100%",
                   height: "100%",
@@ -5265,11 +5426,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                   title: "Trial 1",
                   loading: "lazy",
                 }),
-                y("div", { class: "iframe-video_blocker" }),
+                h("div", { class: "iframe-video_blocker" }),
               ]),
-              y("div", { class: "pre-footer_gradient" }),
-              y("div", { class: "marquee" }, [
-                y(
+              h("div", { class: "pre-footer_gradient" }),
+              h("div", { class: "marquee" }, [
+                h(
                   "div",
                   {
                     class: "marquee_content cc-text transparent",
@@ -5280,7 +5441,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -5290,9 +5451,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Design Trial ")]
+                      [h("div", { class: "h1" }, "Design Trial ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -5302,9 +5463,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Design Trial ")]
+                      [h("div", { class: "h1" }, "Design Trial ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -5314,11 +5475,11 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Design Trial ")]
+                      [h("div", { class: "h1" }, "Design Trial ")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "marquee_content cc-text transparent",
@@ -5329,7 +5490,7 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -5339,9 +5500,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Design Trial ")]
+                      [h("div", { class: "h1" }, "Design Trial ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -5351,9 +5512,9 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Design Trial ")]
+                      [h("div", { class: "h1" }, "Design Trial ")]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -5363,20 +5524,20 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("div", { class: "h1" }, "Design Trial ")]
+                      [h("div", { class: "h1" }, "Design Trial ")]
                     ),
                   ]
                 ),
               ]),
-              y("div", { class: "pre-footer_button" }, [
-                y("div", { class: "btn cc-large-landscape" }, [
-                  y("div", { class: "btn-text-wrap" }, [
-                    y(
+              h("div", { class: "pre-footer_button" }, [
+                h("div", { class: "btn cc-large-landscape" }, [
+                  h("div", { class: "btn-text-wrap" }, [
+                    h(
                       "div",
                       { class: "btn-text cc-large-landscape" },
                       "REad Next"
                     ),
-                    y(
+                    h(
                       "div",
                       { class: "btn-text cc-bottom cc-large-landscape" },
                       "Button"
@@ -5391,10 +5552,10 @@ const Fa = (e) => (me("data-v-764ed4b3"), (e = e()), ve(), e),
       -1
     )
   );
-var ts = ke(Ua, [
+var is = ke(Nt, [
     [
       "render",
-      function (e, t, a, s, l, o) {
+      function (e, a, t, s, l, o) {
         const i = j("View"),
           r = j("Footer");
         return (
@@ -5402,7 +5563,7 @@ var ts = ke(Ua, [
           b(
             w,
             null,
-            [L(i), Ra, Wa, Za, Na, Ya, Ka, Xa, $a, Ga, Ja, es, L(r)],
+            [L(i), Kt, Xt, $t, Gt, Jt, es, as, ts, ss, ls, os, L(r)],
             64
           )
         );
@@ -5410,88 +5571,97 @@ var ts = ke(Ua, [
     ],
     ["__scopeId", "data-v-764ed4b3"],
   ]),
-  as = Object.freeze(
+  rs = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ts },
+      { __proto__: null, default: is },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ss = {
+const ns = {
     "../pages/about.vue": () =>
-      Nt(
+      Na(
         () =>
           Promise.resolve().then(function () {
-            return sa;
+            return st;
+          }),
+        void 0
+      ),
+    "../pages/case.vue": () =>
+      Na(
+        () =>
+          Promise.resolve().then(function () {
+            return nt;
           }),
         void 0
       ),
     "../pages/demo.vue": () =>
-      Nt(
+      Na(
         () =>
           Promise.resolve().then(function () {
-            return wa;
+            return kt;
           }),
         void 0
       ),
     "../pages/home.vue": () =>
-      Nt(
+      Na(
         () =>
           Promise.resolve().then(function () {
-            return Pa;
+            return Vt;
           }),
         void 0
       ),
     "../pages/index.vue": () =>
-      Nt(
+      Na(
         () =>
           Promise.resolve().then(function () {
-            return as;
+            return rs;
           }),
         void 0
       ),
   },
-  ls = {
-    "../pages/about.vue": sa,
-    "../pages/demo.vue": wa,
-    "../pages/home.vue": Pa,
-    "../pages/index.vue": as,
+  cs = {
+    "../pages/about.vue": st,
+    "../pages/case.vue": nt,
+    "../pages/demo.vue": kt,
+    "../pages/home.vue": Vt,
+    "../pages/index.vue": rs,
   },
-  os = [];
-for (let xs in ss) {
-  let e = xs.replace("../pages", "").toLowerCase().replace(".vue", "");
+  ds = [];
+for (let Ss in ns) {
+  let e = Ss.replace("../pages", "").toLowerCase().replace(".vue", "");
   (e = e.replace(/\/index$/, "")),
     (e = e.replace(/\/_+/g, "/:")),
-    os.push({
+    ds.push({
       path: e,
       name: e,
       meta: {
-        layout: ls[xs].default.layout || "layout-default",
+        layout: cs[Ss].default.layout || "layout-default",
         title:
-          null != (a = null == (t = ls[xs].default) ? void 0 : t.title)
-            ? a
+          null != (t = null == (a = cs[Ss].default) ? void 0 : a.title)
+            ? t
             : "app.project.title",
         header:
-          null != (l = null == (s = ls[xs].default) ? void 0 : s.header)
+          null != (l = null == (s = cs[Ss].default) ? void 0 : s.header)
             ? l
             : "header-default",
         scroll:
-          null != (i = null == (o = ls[xs].default) ? void 0 : o.noScroll) && i,
+          null != (i = null == (o = cs[Ss].default) ? void 0 : o.noScroll) && i,
       },
-      component: ss[xs],
+      component: ns[Ss],
     });
 }
-const is = ge({
+const ps = ge({
   history: be("./"),
   routes:
-    ((rs = { defaultPath: "/home" }),
+    ((us = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: M({ defaultPath: "/" }, rs).defaultPath },
+        redirect: { name: M({ defaultPath: "/" }, us).defaultPath },
       },
-      ...os,
+      ...ds,
       {
         path: "/404",
         name: "not-found",
@@ -5506,34 +5676,34 @@ const is = ge({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var rs;
-is.beforeEach(async (e, t, a) => {
-  a();
+var us;
+ps.beforeEach(async (e, a, t) => {
+  t();
 });
-var ns = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: is }, Symbol.toStringTag, {
+var fs = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: ps }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const cs = ye({ modules: Wt });
-he(cs, is);
-var ds = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: cs }, Symbol.toStringTag, {
+const ms = he({ modules: Wa });
+ye(ms, ps);
+var vs = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: ms }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const ps = {
+const gs = {
     use(e) {
       e.interceptors.response.use(
-        async function (t) {
-          if (100004 === t.data.code) {
-            const a = e.get("/app/jwt-token", {
-              params: { account: cs.state.auth.user.account },
+        async function (a) {
+          if (100004 === a.data.code) {
+            const t = e.get("/app/jwt-token", {
+              params: { account: ms.state.auth.user.account },
             });
-            1 === a.data.code && V.set("token", a.data.data.jwt_token, !0);
-            return await e.request(t.config);
+            1 === t.data.code && V.set("token", t.data.data.jwt_token, !0);
+            return await e.request(a.config);
           }
-          return t;
+          return a;
         },
         function (e) {
           return Promise.reject(e);
@@ -5541,15 +5711,15 @@ const ps = {
       );
     },
   },
-  us = {
+  bs = {
     use(e) {
       (window.isAlert = !1),
         e.interceptors.response.use(
           async function (e) {
-            const { noredirect: t = !1 } = e.config;
-            if (!t && !window.isAlert) {
-              const t = e.data;
-              switch (t.code) {
+            const { noredirect: a = !1 } = e.config;
+            if (!a && !window.isAlert) {
+              const a = e.data;
+              switch (a.code) {
                 case 0:
                 case 100002:
                 case 200001:
@@ -5558,15 +5728,15 @@ const ps = {
                 case 200004:
                 case 200005: {
                   const { isConfirmed: e } = await Be.alert({
-                    title: `Error(${t.code})`,
-                    text: Le.t(`error.code.${t.code}`),
+                    title: `Error(${a.code})`,
+                    text: Le.t(`error.code.${a.code}`),
                   });
                   return (
                     e &&
-                      (await cs.dispatch("auth/logout"),
-                      await is.replace("/login"),
+                      (await ms.dispatch("auth/logout"),
+                      await ps.replace("/login"),
                       (window.isAlert = !1)),
-                    Promise.reject(`Error: ${t.code}`)
+                    Promise.reject(`Error: ${a.code}`)
                   );
                 }
               }
@@ -5579,20 +5749,20 @@ const ps = {
         );
     },
   },
-  fs = {
+  hs = {
     use(e) {
       e.interceptors.response.use(
         async function (e) {
-          const { novalidate: t = !1 } = e.config;
-          if (!t) {
-            const t = e.data;
-            switch (t.code) {
+          const { novalidate: a = !1 } = e.config;
+          if (!a) {
+            const a = e.data;
+            switch (a.code) {
               case 1e5:
               case 100001:
               case 100003:
                 await Be.alert({
-                  title: `Error(${t.code})`,
-                  text: Le.t(`error.code.${t.code}`),
+                  title: `Error(${a.code})`,
+                  text: Le.t(`error.code.${a.code}`),
                 });
             }
           }
@@ -5604,12 +5774,12 @@ const ps = {
       );
     },
   };
-class ms {
+class ys {
   constructor() {
-    (this.provider = new Ht({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ha({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, Pt, ps, us, fs, zt);
+    this.provider.use({}, Pa, gs, bs, hs, Ta);
   }
   get get() {
     return this.provider.instance.get;
@@ -5624,19 +5794,19 @@ class ms {
     return this.provider.instance.delete;
   }
 }
-ms.prototype.install = function (e) {
-  const t = "http-service";
-  (e.config.globalProperties[t] = this), e.provide(t, this);
+ys.prototype.install = function (e) {
+  const a = "http-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var vs = new ms(),
-  gs = Object.freeze(
+var ws = new ys(),
+  _s = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: ms, default: vs },
+      { __proto__: null, HttpService: ys, default: ws },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class bs {
+class xs {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -5659,12 +5829,12 @@ class bs {
     };
   }
   get state() {
-    return cs.state.app.popupState;
+    return ms.state.app.popupState;
   }
   async modal(e = {}) {
     const {
-      title: t,
-      text: a,
+      title: a,
+      text: t,
       component: s = null,
       showCancelButton: l = !0,
       showConfirmButton: o = !0,
@@ -5674,14 +5844,14 @@ class bs {
       props: c = {},
     } = e;
     return new Promise((e) => {
-      cs.commit(
+      ms.commit(
         "app/set/popup",
         v(m({}, this.initStates), {
           type: "Modal",
           resolve: e,
-          title: t,
-          text: a,
-          component: s ? ae(s) : null,
+          title: a,
+          text: t,
+          component: s ? te(s) : null,
           showCancelButton: l,
           showConfirmButton: o,
           confirmButtonText: i,
@@ -5693,41 +5863,41 @@ class bs {
     });
   }
   clear() {
-    cs.commit("app/clear/popup");
+    ms.commit("app/clear/popup");
   }
 }
-bs.prototype.install = function (e) {
-  const t = "popup-service";
-  (e.config.globalProperties[t] = this), e.provide(t, this);
+xs.prototype.install = function (e) {
+  const a = "popup-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var ys = new bs();
-const hs = {
-    "../services/alert-service.js": Bt,
-    "../services/http-service.js": gs,
+var Cs = new xs();
+const As = {
+    "../services/alert-service.js": Ba,
+    "../services/http-service.js": _s,
     "../services/i18n-service.js": qe,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: bs, default: ys },
+        { __proto__: null, PopupService: xs, default: Cs },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": ns,
-    "../services/storage-service.js": ze,
-    "../services/store-service.js": ds,
+    "../services/router-service.js": fs,
+    "../services/storage-service.js": Te,
+    "../services/store-service.js": vs,
   },
-  ws = {
+  ks = {
     install: (e) => {
-      for (let t in hs) e.use(hs[t].default);
+      for (let a in As) e.use(As[a].default);
     },
   };
-const _s = we(je);
-_s.provide("$jQuery", _e),
-  _s.provide("$swal", Be),
-  _s.provide("$storage", V),
-  _s.provide("$tabsslider", xe),
-  _s.use(ct),
-  _s.use(Ot),
-  _s.use(Ce, { loading: "", error: "" }),
-  _s.use(ws),
-  _s.mount("#app");
+const js = we(je);
+js.provide("$jQuery", _e),
+  js.provide("$swal", Be),
+  js.provide("$storage", V),
+  js.provide("$tabsslider", xe),
+  js.use(ca),
+  js.use(Oa),
+  js.use(Ce, { loading: "", error: "" }),
+  js.use(ks),
+  js.mount("#app");
