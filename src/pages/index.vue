@@ -416,6 +416,8 @@
               >
                 <img
                   loading="eager"
+                  data-aos="fade-up"
+                  data-aos-delay="800"
                   src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png"
                   alt=""
                   class="marquee_logo"
@@ -433,6 +435,8 @@
               >
                 <img
                   loading="eager"
+                  data-aos="fade-up"
+                  data-aos-delay="900"
                   src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png"
                   alt=""
                   class="marquee_logo"
@@ -450,6 +454,8 @@
               >
                 <img
                   loading="eager"
+                  data-aos="fade-up"
+                  data-aos-delay="1000"
                   src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png"
                   alt=""
                   class="marquee_logo"
@@ -467,6 +473,8 @@
               >
                 <img
                   loading="eager"
+                  data-aos="fade-up"
+                  data-aos-delay="1100"
                   src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png"
                   alt=""
                   class="marquee_logo"

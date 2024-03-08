@@ -2375,7 +2375,7 @@ const Ua = {
   },
 };
 fe.init();
-const Fa = (e) => (me("data-v-b3297830"), (e = e()), ve(), e),
+const Fa = (e) => (me("data-v-1447ed98"), (e = e()), ve(), e),
   Ra = Fa(() =>
     y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
@@ -2945,6 +2945,8 @@ const Fa = (e) => (me("data-v-b3297830"), (e = e()), ve(), e),
                         [
                           y("img", {
                             loading: "eager",
+                            "data-aos": "fade-up",
+                            "data-aos-delay": "800",
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
                             alt: "",
@@ -2971,6 +2973,8 @@ const Fa = (e) => (me("data-v-b3297830"), (e = e()), ve(), e),
                         [
                           y("img", {
                             loading: "eager",
+                            "data-aos": "fade-up",
+                            "data-aos-delay": "900",
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
                             alt: "",
@@ -2997,6 +3001,8 @@ const Fa = (e) => (me("data-v-b3297830"), (e = e()), ve(), e),
                         [
                           y("img", {
                             loading: "eager",
+                            "data-aos": "fade-up",
+                            "data-aos-delay": "1000",
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
                             alt: "",
@@ -3023,6 +3029,8 @@ const Fa = (e) => (me("data-v-b3297830"), (e = e()), ve(), e),
                         [
                           y("img", {
                             loading: "eager",
+                            "data-aos": "fade-up",
+                            "data-aos-delay": "1100",
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
                             alt: "",
@@ -5074,7 +5082,7 @@ const Fa = (e) => (me("data-v-b3297830"), (e = e()), ve(), e),
     )
   ),
   Ja = N(
-    '<section class="section" data-v-b3297830><div class="section-title_component" data-v-b3297830><div class="container" data-v-b3297830><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-b3297830><div class="section-title_dot" style="opacity:1;" data-v-b3297830></div><div class="u-overflow-hidden" data-v-b3297830><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-b3297830><h2 class="u-ts-4" data-v-b3297830>Contact Us</h2></div></div></div></div></div><div class="container" data-v-b3297830><div class="w-layout-grid pair-grid" data-v-b3297830><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-b3297830><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-b3297830><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-b3297830><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-b3297830><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-b3297830> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-b3297830> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-b3297830> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-b3297830> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-b3297830> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-b3297830><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-b3297830><div style="position:relative;display:inline-block;" data-v-b3297830> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    '<section class="section" data-v-1447ed98><div class="section-title_component" data-v-1447ed98><div class="container" data-v-1447ed98><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-1447ed98><div class="section-title_dot" style="opacity:1;" data-v-1447ed98></div><div class="u-overflow-hidden" data-v-1447ed98><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-1447ed98><h2 class="u-ts-4" data-v-1447ed98>Contact Us</h2></div></div></div></div></div><div class="container" data-v-1447ed98><div class="w-layout-grid pair-grid" data-v-1447ed98><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-1447ed98><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-1447ed98><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-1447ed98><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-1447ed98><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-1447ed98><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-1447ed98><div style="position:relative;display:inline-block;" data-v-1447ed98> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   ),
   es = Fa(() =>
@@ -5395,7 +5403,7 @@ var ts = ke(Ua, [
         );
       },
     ],
-    ["__scopeId", "data-v-b3297830"],
+    ["__scopeId", "data-v-1447ed98"],
   ]),
   as = Object.freeze(
     Object.defineProperty(
