@@ -2263,7 +2263,7 @@ AOS.init();
   height: 0.5px;
   background-color: var(--swatch--white);
   &:first-child {
-    margin-top: 10rem;
+    margin-top: 30px;
   }
 
   &.active {

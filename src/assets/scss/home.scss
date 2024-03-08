@@ -47,6 +47,12 @@
     border-radius: 6px;
     overflow: hidden;
     opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden; /* Mozilla Firefox */
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d; /* Mozilla Firefox */
+    transform-style: preserve-3d;
   }
   img {
     // width: 100%;

@@ -3660,7 +3660,7 @@ strong {
   display: flex;
   position: absolute;
   top: auto;
-  bottom: 5rem;
+  bottom: 20%;
   left: 0%;
   right: 0%;
 }
