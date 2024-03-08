@@ -2493,32 +2493,32 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 .op0[data-v-0eb24f08] {
   opacity: 0;
 }
-.transparent[data-v-b3297830] {
+.transparent[data-v-1447ed98] {
   background-color: transparent !important;
 }
-.target_line[data-v-b3297830] {
+.target_line[data-v-1447ed98] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-b3297830]:first-child {
+.target_line[data-v-1447ed98]:first-child {
   margin-top: 10rem;
 }
-.target_line.active[data-v-b3297830] {
-  -webkit-animation-name: line-b3297830;
-  animation-name: line-b3297830;
+.target_line.active[data-v-1447ed98] {
+  -webkit-animation-name: line-1447ed98;
+  animation-name: line-1447ed98;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .apps_asset.cc-2.w-dyn-list[data-v-b3297830],
-  .apps_asset.cc-1[data-v-b3297830] {
+  .apps_asset.cc-2.w-dyn-list[data-v-1447ed98],
+  .apps_asset.cc-1[data-v-1447ed98] {
     transform: translateZ(0) !important;
   }
 }
-@-webkit-keyframes line-b3297830 {
+@-webkit-keyframes line-1447ed98 {
   0% {
     width: 0;
   }
@@ -2526,7 +2526,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-b3297830 {
+@keyframes line-1447ed98 {
   0% {
     width: 0;
   }
