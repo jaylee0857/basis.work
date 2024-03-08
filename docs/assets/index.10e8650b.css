@@ -1552,6 +1552,8 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  -ms-perspective: 1000;
+  perspective: 1000;
 }
 .view img {
   max-width: 230px;
@@ -2493,7 +2495,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos="flip-down"].aos-animate {
   transform: perspective(2500px) rotateX(0);
 }
-.op0[data-v-13f86aa6] {
+.op0[data-v-57918575] {
   opacity: 0;
 }
 .transparent[data-v-764ed4b3] {
@@ -11719,6 +11721,8 @@ strong {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  -ms-perspective: 1000;
+  perspective: 1000;
 }
 .view img {
   max-width: 230px;

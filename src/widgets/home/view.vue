@@ -290,11 +290,16 @@ const domScrollUnoberser = (doms) => {
 
 // 滚动到 studio 元素的方法
 const scrollDown = () => {
-  const windowHeight = window.innerHeight;
-  window.scrollTo({
-    top: windowHeight + 60, // 向下滚动 100vh 的距离
-    behavior: "smooth",
-  });
+  const studioElement = document.getElementById("studio");
+  if (studioElement) {
+    const studioDistanceToTop = studioElement.offsetTop;
+    window.scrollTo({
+      top: studioDistanceToTop,
+      behavior: "smooth",
+    });
+  } else {
+    console.error("Studio element not found");
+  }
 };
 
 watch(
