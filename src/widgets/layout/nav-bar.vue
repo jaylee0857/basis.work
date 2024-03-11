@@ -6,6 +6,7 @@
         :key="item"
         :style="`--i: ${item}`"
         @mouseenter="enterIndex(index)"
+        @click="goToAboutPage(item.path)"
       >
         <div class="line"></div>
         <div class="list_style">
@@ -44,10 +45,11 @@
 
 <script setup>
 import { computed, ref } from "vue";
-
+import { useRouter } from "vue-router";
 const activeIndex = ref(1);
 
 const isLeft = ref(true);
+const router = useRouter();
 
 // const isMove = ref(false);
 const menu = ref([
@@ -55,21 +57,25 @@ const menu = ref([
     title: "Overview",
     content:
       "Meet Basis. We increase the value of digital products and their brands through design",
+    path: "/overview", // 添加路径属性
   },
   {
     title: "Cases",
     content:
       "See our past work, ranging from the largest brands in the world to fast-moving startups.",
+    path: "/cases", // 添加路径属性
   },
   {
     title: "Fintech Design",
     content:
       "See why Basis specializes in product and brand design for innovative financial technology companies.",
+    path: "/fintech-design", // 添加路径属性
   },
   {
     title: "About & Contact",
     content:
       "Meet Basis. We increase the value of digital products and their brands through design",
+    path: "/about-contact", // 添加路径属性
   },
 ]);
 
@@ -89,6 +95,10 @@ const moveRight = computed(() => {
 });
 
 const mvoeWidth = ref(25);
+
+const goToAboutPage = (path) => {
+  router.push(path);
+};
 
 /** NOTE:絲滑操作 */
 // const enterIndex = (index) => {
