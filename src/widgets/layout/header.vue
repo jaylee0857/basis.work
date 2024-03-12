@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-deafult-header">
+  <div class="layout-deafult-header" :class="{ active: isOpen }">
     <div
       href="/"
       aria-current="page"
@@ -56,7 +56,7 @@
       <div></div>
     </div>
   </div>
-  <Nav v-if="isOpen" />
+  <Nav v-if="isOpen" :is-open="isOpen" @toggle-open="getToggleOpen" />
 </template>
 
 <script setup>
@@ -67,7 +67,9 @@ import Nav from "@/widgets/layout/nav-bar.vue";
 import { ref } from "vue";
 
 const isOpen = ref(false);
-
+const getToggleOpen = (boolean) => {
+  isOpen.value = !boolean;
+};
 // const lang = computed(() => {
 //   const fullName = locale.value;
 //   switch (fullName) {

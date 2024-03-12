@@ -12,6 +12,9 @@
   background: transparent;
   // background: #e0e2f0;
   background-color: rgba(0, 0, 0, 0.8);
+  &.active {
+    background-color: transparent;
+  }
   &-logo {
     width: 8rem;
     div {
@@ -27,6 +30,7 @@
     width: 108px;
     height: 22px;
     user-select: none;
+    cursor: pointer;
     div {
       margin-top: 6px;
       margin-bottom: 6px;

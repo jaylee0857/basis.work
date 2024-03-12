@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-deafult-header-nav">
+  <div class="layout-deafult-header-nav" :class="{ active: props.isOpen }">
     <ul>
       <li
         v-for="(item, index) in menu"
@@ -50,20 +50,21 @@ const activeIndex = ref(1);
 
 const isLeft = ref(true);
 const router = useRouter();
-
+const props = defineProps(["isOpen"]);
+const emits = defineEmits(["toggleOpen"]);
 // const isMove = ref(false);
 const menu = ref([
   {
     title: "Overview",
     content:
       "Meet Basis. We increase the value of digital products and their brands through design",
-    path: "/overview", // 添加路径属性
+    path: "/", // 添加路径属性
   },
   {
     title: "Cases",
     content:
       "See our past work, ranging from the largest brands in the world to fast-moving startups.",
-    path: "/cases", // 添加路径属性
+    path: "/case", // 添加路径属性
   },
   {
     title: "Fintech Design",
@@ -75,7 +76,7 @@ const menu = ref([
     title: "About & Contact",
     content:
       "Meet Basis. We increase the value of digital products and their brands through design",
-    path: "/about-contact", // 添加路径属性
+    path: "/about", // 添加路径属性
   },
 ]);
 
@@ -98,6 +99,7 @@ const mvoeWidth = ref(25);
 
 const goToAboutPage = (path) => {
   router.push(path);
+  emits("toggleOpen", props.isOpen);
 };
 
 /** NOTE:絲滑操作 */

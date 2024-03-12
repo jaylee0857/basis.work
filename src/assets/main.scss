@@ -19,7 +19,7 @@ body {
   //   Verdana,
   //   sans-serif;
   // overflow-x: hidden;
-  background-color: black;
+  background-color: rgba(237, 102, 23, 1);
   scroll-behavior: smooth;
 }
 
@@ -456,4 +456,45 @@ input:-webkit-autofill:active {
 .submit-btn:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+.target_line {
+  width: 0%;
+  height: 0.5px;
+  background-color: var(--swatch--white);
+  &:first-child {
+    margin-top: 30px;
+  }
+
+  &.active {
+    animation-name: line;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+}
+
+.w-layout-grid.pair-grid.is-leading {
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
+}
+
+.apps_asset.cc-2.w-dyn-list,
+.apps_asset.cc-1 {
+  @media (max-width: 768px) {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+@keyframes line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
