@@ -26,7 +26,7 @@
         :data-item="'img'"
       >
         <img
-          :src="item.url"
+          :src="getImageUrl(item.url)"
           :style="{
             transform: `translate3d(${position.x / 2}px,${
               position.y / 2
@@ -67,7 +67,7 @@ import { nextTick, onMounted, reactive, ref, watch } from "vue";
 import { useStore } from "vuex";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { getImageUrl } from "@/unit/getImageUrl";
 const store = useStore();
 
 /**
@@ -81,11 +81,9 @@ const position = reactive({
   x: 0,
   y: 0,
 });
-
 const imagesOption = ref([
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552350_home-hero-08.webp",
+    url: "home/img/1.jpg",
     css: {
       left: "-5%",
       top: "60%",
@@ -98,8 +96,7 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552341_home-hero-01.webp",
+    url: "home/img/2.jpg",
     css: {
       left: "11%",
       top: "10%",
@@ -112,12 +109,11 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552342_home-hero-09.webp",
+    url: "home/img/3.jpg",
     css: {
       left: "31%",
       top: "45%",
-      m_right: "80%",
+      m_right: "62%",
       m_top: "57%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 3.5s forwards",
@@ -126,12 +122,11 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552355_home-hero-13.webp",
+    url: "home/img/4.jpg",
     css: {
       left: "31%",
       top: "72%",
-      m_right: "80%",
+      m_right: "55%",
       m_top: "78%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 2s forwards",
@@ -140,8 +135,7 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552340_home-hero-02.webp",
+    url: "home/img/5.jpg",
     css: {
       left: "40%",
       top: "10%",
@@ -154,12 +148,11 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552352_home-hero-05.webp",
+    url: "home/img/6.jpg",
     css: {
       left: "51%",
       top: "27%",
-      m_right: "30%",
+      m_right: "9%",
       m_top: "46%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 2.5s forwards",
@@ -168,8 +161,7 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552356_home-hero-14.webp",
+    url: "home/img/7.jpg",
     css: {
       left: "63%",
       top: "63%",
@@ -182,8 +174,7 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552343_home-hero-03.webp",
+    url: "home/img/8.jpg",
     css: {
       left: "68%",
       top: "12%",
@@ -196,8 +187,7 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552351_home-hero-06.webp",
+    url: "home/img/9.jpg",
     css: {
       left: "83%",
       top: "33%",
@@ -210,8 +200,7 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url:
-      "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235b_home-seen.webp",
+    url: "home/img/10.jpg",
     css: {
       left: "86%",
       top: "69%",

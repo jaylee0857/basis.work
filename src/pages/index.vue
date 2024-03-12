@@ -751,9 +751,8 @@
                         data-aos="fade-up"
                         data-aos-duration="700"
                       >
-                        <a
+                        <div
                           data-mouse-class="cc-text"
-                          href="/cases/yoginess-brand"
                           class="card is-link w-inline-block"
                           style="
                             transform: translate3d(0px, 0%, 0px)
@@ -762,20 +761,23 @@
                             transform-style: preserve-3d;
                             opacity: 1;
                           "
-                          ><div class="card-image_wrapper">
+                        >
+                          <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
-                              <iframe
-                                class="iframe-video_iframe"
+                              <video
+                                class="video-cover"
                                 width="100%"
                                 height="100%"
-                                style="overflow: hidden"
-                                frameborder="0"
-                                scrolling="no"
-                                allow="fullscreen"
-                                src="https://app.vidzflow.com/v/XqnSO3RNUV?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                                title="Yoginess 1"
-                                loading="lazy"
-                              ></iframe>
+                                autoplay
+                                loop
+                                muted
+                              >
+                                <source
+                                  :src="getVideoUrl('home/knife1-1.mp4')"
+                                  type="video/mp4"
+                                />
+                                Your browser does not support the video tag.
+                              </video>
                               <div class="iframe-video_blocker"></div>
                             </div>
                           </div>
@@ -797,8 +799,8 @@
                                 <h4 class="u-ts-4">Yoginess Brand</h4>
                               </div>
                             </div>
-                          </div></a
-                        >
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -814,11 +816,10 @@
               <div role="listitem" class="w-dyn-item">
                 <div class="card-wrapper cc-large">
                   <div class="card-animation cc-40">
-                    <a
+                    <div
                       data-mouse-class="cc-text"
                       data-aos="fade-up"
                       data-aos-duration="700"
-                      href="/cases/sable-app"
                       class="card is-link w-inline-block"
                       style="
                         transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
@@ -827,20 +828,23 @@
                         transform-style: preserve-3d;
                         opacity: 1;
                       "
-                      ><div class="card-image_wrapper">
+                    >
+                      <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
-                          <iframe
-                            class="iframe-video_iframe"
+                          <video
+                            class="video-cover"
                             width="100%"
                             height="100%"
-                            style="overflow: hidden"
-                            frameborder="0"
-                            scrolling="no"
-                            allow="fullscreen"
-                            src="https://app.vidzflow.com/v/Fpm2N6tlSr?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                            title="Sable 9"
-                            loading="lazy"
-                          ></iframe>
+                            autoplay
+                            loop
+                            muted
+                          >
+                            <source
+                              :src="getVideoUrl('home/knife1-2.mp4')"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
                           <div class="iframe-video_blocker"></div>
                         </div>
                       </div>
@@ -864,8 +868,8 @@
                             </div>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -978,18 +982,7 @@
                   transform-style: preserve-3d;
                 "
               >
-                <svg
-                  height="100%"
-                  style=""
-                  viewBox="0 0 185 80"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
+                <img :src="getImageUrl('logo.png')" alt="" />
               </div>
             </div>
             <ul role="list" class="u-mt-3-5">
@@ -1158,7 +1151,7 @@
     </div>
   </section>
   <!-- --- -->
-  <section class="section cc-apps">
+  <!-- <section class="section cc-apps">
     <div class="container">
       <div class="row">
         <div data-animation-element="group" class="col">
@@ -1335,9 +1328,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- -- -->
-  <section class="section cc-fd">
+  <section class="section">
     <div class="container">
       <div class="row">
         <div data-animation-element="group" class="col">
@@ -1399,9 +1392,8 @@
                     data-aos="fade-up"
                     data-aos-duration="800"
                   >
-                    <a
+                    <div
                       data-mouse-class="cc-text"
-                      href="/cases/seen-brand"
                       class="card is-link w-inline-block"
                       style="
                         transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
@@ -1410,20 +1402,23 @@
                         transform-style: preserve-3d;
                         opacity: 1;
                       "
-                      ><div class="card-image_wrapper">
+                    >
+                      <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
-                          <iframe
-                            class="iframe-video_iframe"
+                          <video
+                            class="video-cover"
                             width="100%"
                             height="100%"
-                            style="overflow: hidden"
-                            frameborder="0"
-                            scrolling="no"
-                            allow="fullscreen"
-                            src="https://app.vidzflow.com/v/NUxOAlqRFn?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;piv=true&amp;bc=%234E5FFD&amp;controls=false"
-                            title="Seen 1"
-                            loading="lazy"
-                          ></iframe>
+                            autoplay
+                            loop
+                            muted
+                          >
+                            <source
+                              :src="getVideoUrl('home/knife2-3.mp4')"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
                           <div class="iframe-video_blocker"></div>
                         </div>
                       </div>
@@ -1443,8 +1438,8 @@
                             </div>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1467,9 +1462,8 @@
                         data-aos="fade-up"
                         data-aos-duration="800"
                       >
-                        <a
+                        <div
                           data-mouse-class="cc-text"
-                          href="/cases/sable-app"
                           class="card is-link w-inline-block"
                           style="
                             transform: translate3d(0px, 0%, 0px)
@@ -1478,20 +1472,23 @@
                             transform-style: preserve-3d;
                             opacity: 1;
                           "
-                          ><div class="card-image_wrapper">
+                        >
+                          <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
-                              <iframe
-                                class="iframe-video_iframe"
+                              <video
+                                class="video-cover"
                                 width="100%"
                                 height="100%"
-                                style="overflow: hidden"
-                                frameborder="0"
-                                scrolling="no"
-                                allow="fullscreen"
-                                src="https://app.vidzflow.com/v/h69w08i83W?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                                title="Sable 1"
-                                loading="lazy"
-                              ></iframe>
+                                autoplay
+                                loop
+                                muted
+                              >
+                                <source
+                                  :src="getVideoUrl('home/knife2-1.mp4')"
+                                  type="video/mp4"
+                                />
+                                Your browser does not support the video tag.
+                              </video>
                               <div class="iframe-video_blocker"></div>
                             </div>
                           </div>
@@ -1509,8 +1506,8 @@
                                 <h4 class="u-ts-4">Sable App</h4>
                               </div>
                             </div>
-                          </div></a
-                        >
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1644,9 +1641,8 @@
                         data-aos="fade-up"
                         data-aos-duration="800"
                       >
-                        <a
+                        <div
                           data-mouse-class="cc-text"
-                          href="/cases/gaffa-brand-and-website"
                           class="card is-link w-inline-block"
                           style="
                             transform: translate3d(0px, 0%, 0px)
@@ -1655,20 +1651,23 @@
                             transform-style: preserve-3d;
                             opacity: 1;
                           "
-                          ><div class="card-image_wrapper">
+                        >
+                          <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
-                              <iframe
-                                class="iframe-video_iframe"
+                              <video
+                                class="video-cover"
                                 width="100%"
                                 height="100%"
-                                style="overflow: hidden"
-                                frameborder="0"
-                                scrolling="no"
-                                allow="fullscreen"
-                                src="https://app.vidzflow.com/v/wqEi0zfmTg?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                                title="Gaffa 1"
-                                loading="lazy"
-                              ></iframe>
+                                autoplay
+                                loop
+                                muted
+                              >
+                                <source
+                                  :src="getVideoUrl('home/knife2-4.mp4')"
+                                  type="video/mp4"
+                                />
+                                Your browser does not support the video tag.
+                              </video>
                               <div class="iframe-video_blocker"></div>
                             </div>
                           </div>
@@ -1688,8 +1687,8 @@
                                 </h4>
                               </div>
                             </div>
-                          </div></a
-                        >
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1709,9 +1708,8 @@
                     data-aos="fade-up"
                     data-aos-duration="700"
                   >
-                    <a
+                    <div
                       data-mouse-class="cc-text"
-                      href="/cases/sable-brand"
                       class="card is-link w-inline-block"
                       style="
                         transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
@@ -1720,20 +1718,23 @@
                         transform-style: preserve-3d;
                         opacity: 1;
                       "
-                      ><div class="card-image_wrapper">
+                    >
+                      <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
-                          <iframe
-                            class="iframe-video_iframe"
+                          <video
+                            class="video-cover"
                             width="100%"
                             height="100%"
-                            style="overflow: hidden"
-                            frameborder="0"
-                            scrolling="no"
-                            allow="fullscreen"
-                            src="https://app.vidzflow.com/v/haxQWmbFQh?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                            title="Sable 10"
-                            loading="lazy"
-                          ></iframe>
+                            autoplay
+                            loop
+                            muted
+                          >
+                            <source
+                              :src="getVideoUrl('home/knife1-2.mp4')"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
                           <div class="iframe-video_blocker"></div>
                         </div>
                       </div>
@@ -1753,8 +1754,8 @@
                             </div>
                           </div>
                         </div>
-                      </div></a
-                    >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1985,229 +1986,228 @@
   <!-- --- -->
   <div>
     <aside class="pre-footer">
-      <a
+      <div
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
-        href="/cases"
         class="section cc-pre-footer w-inline-block"
-        ><div class="iframe-video_wrapper">
-          <iframe
-            class="iframe-video_iframe"
-            width="100%"
-            height="100%"
-            style="overflow: hidden"
-            frameborder="0"
-            scrolling="no"
-            allow="fullscreen"
-            src="https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-            title="Sable 12"
-            loading="lazy"
-          ></iframe>
-          <div class="iframe-video_blocker"></div>
-        </div>
-        <div class="pre-footer_gradient"></div>
-        <div class="marquee">
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-          </div>
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-          </div>
-        </div>
-        <div class="pre-footer_button">
-          <div class="btn cc-large-landscape">
-            <div class="btn-text-wrap">
-              <div class="btn-text cc-large-landscape">REad Next</div>
-              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
-            </div>
-          </div>
-        </div></a
-      ><a
-        data-mouse-text="Read Next"
-        data-mouse-class="cc-text"
-        href="/design-trial"
-        class="section cc-pre-footer w-inline-block"
-        ><div class="iframe-video_wrapper">
-          <iframe
-            class="iframe-video_iframe"
-            width="100%"
-            height="100%"
-            style="overflow: hidden"
-            frameborder="0"
-            scrolling="no"
-            allow="fullscreen"
-            src="https://app.vidzflow.com/v/B3TEbIzupw?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-            title="Trial 1"
-            loading="lazy"
-          ></iframe>
-          <div class="iframe-video_blocker"></div>
-        </div>
-        <div class="pre-footer_gradient"></div>
-        <div class="marquee">
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-69%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-          </div>
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-69%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-          </div>
-        </div>
-        <div class="pre-footer_button">
-          <div class="btn cc-large-landscape">
-            <div class="btn-text-wrap">
-              <div class="btn-text cc-large-landscape">REad Next</div>
-              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
-            </div>
-          </div>
-        </div></a
       >
+        <div class="iframe-video_wrapper">
+          <video
+            class="video-cover"
+            width="100%"
+            height="100%"
+            autoplay
+            loop
+            muted
+          >
+            <source :src="getVideoUrl('home/buddha1.mp4')" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="iframe-video_blocker"></div>
+        </div>
+        <div class="pre-footer_gradient"></div>
+        <div class="marquee">
+          <div
+            class="marquee_content cc-text transparent"
+            style="
+              will-change: transform;
+              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <div
+              class="marquee_item cc-1"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Case Studies&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-2"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Case Studies&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-3"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Case Studies&nbsp;</div>
+            </div>
+          </div>
+          <div
+            class="marquee_content cc-text transparent"
+            style="
+              will-change: transform;
+              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <div
+              class="marquee_item cc-1"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Case Studies&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-2"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Case Studies&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-3"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Case Studies&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="pre-footer_button">
+          <div class="btn cc-large-landscape">
+            <div class="btn-text-wrap">
+              <div class="btn-text cc-large-landscape">REad Next</div>
+              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-mouse-text="Read Next"
+        data-mouse-class="cc-text"
+        class="section cc-pre-footer w-inline-block"
+      >
+        <div class="iframe-video_wrapper">
+          <video
+            class="video-cover"
+            width="100%"
+            height="100%"
+            autoplay
+            loop
+            muted
+          >
+            <source :src="getVideoUrl('home/tea_1.mp4')" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="iframe-video_blocker"></div>
+        </div>
+        <div class="pre-footer_gradient"></div>
+        <div class="marquee">
+          <div
+            class="marquee_content cc-text transparent"
+            style="
+              will-change: transform;
+              transform: translate3d(-69%, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <div
+              class="marquee_item cc-1"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Design Trial&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-2"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Design Trial&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-3"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Design Trial&nbsp;</div>
+            </div>
+          </div>
+          <div
+            class="marquee_content cc-text transparent"
+            style="
+              will-change: transform;
+              transform: translate3d(-69%, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            <div
+              class="marquee_item cc-1"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Design Trial&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-2"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Design Trial&nbsp;</div>
+            </div>
+            <div
+              class="marquee_item cc-3"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div class="h1">Design Trial&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="pre-footer_button">
+          <div class="btn cc-large-landscape">
+            <div class="btn-text-wrap">
+              <div class="btn-text cc-large-landscape">REad Next</div>
+              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </aside>
   </div>
   <Footer></Footer>
@@ -2219,6 +2219,9 @@ import { ref } from "vue";
 import Footer from "@/widgets/layout/footer.vue";
 import View from "@/widgets/home/view.vue";
 import { onMounted } from "vue";
+import { getVideoUrl } from "@/unit/getVideoUrl";
+import { getImageUrl } from "@/unit/getImageUrl";
+
 export default {
   components: {
     Footer,
@@ -2248,6 +2251,8 @@ export default {
 
     return {
       a,
+      getVideoUrl,
+      getImageUrl,
     };
   },
 };
