@@ -3678,7 +3678,7 @@ strong {
 .section-title_dot-fill {
   width: 100%;
   height: 100%;
-  background-color: var(--swatch--white);
+  background-color: var(--swatch--black);
   position: absolute;
   top: auto;
   bottom: 0%;
@@ -3783,6 +3783,7 @@ strong {
   font-size: 0.875em;
   font-weight: 500;
   line-height: 1;
+  opacity: 0;
   text-decoration: none;
   transition: background-color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
     color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);

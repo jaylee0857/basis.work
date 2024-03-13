@@ -39,7 +39,7 @@
     </div>
   </div>
   <div data-reveal="button" class="home-hero_btn">
-    <div class="btn-contain btn-contain-scroll op0">
+    <div class="btn-contain btn-contain-scroll">
       <div class="btn-scroll w-inline-block" @click="scrollDown">
         <div class="btn-text-wrap">
           <div class="btn-text cc-scroll">Scroll</div>
@@ -342,14 +342,14 @@ watch(
     isShowComponent.value = !isLoading;
     if (isLoading) {
       const imgsDom = document.querySelectorAll(".img-wrap");
-      const scrollBtnDom = document.querySelector(".btn-contain-scroll");
+      const scrollBtnDom = document.querySelector(".btn-scroll");
       const doms = [...imgsDom, scrollBtnDom];
       domScrollUnoberser(doms);
     } else {
       /** 這邊使用nextTick等待Component的dom掛載完成後才抓取 否則會抓到空值 */
       nextTick(() => {
         const imgsDom = document.querySelectorAll(".img-wrap");
-        const scrollBtnDom = document.querySelector(".btn-contain-scroll");
+        const scrollBtnDom = document.querySelector(".btn-scroll");
         const doms = [...imgsDom, scrollBtnDom];
         domScrollObserver(doms);
       });
@@ -368,8 +368,3 @@ onMounted(() => {
   AOS.init();
 });
 </script>
-<style scoped>
-.op0 {
-  opacity: 0;
-}
-</style>

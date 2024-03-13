@@ -4878,371 +4878,357 @@ const ps = ["data-index"],
   vs = ["src"],
   ms = [
     pa(
-      '<div class="btn-text-wrap" data-v-db9bd6d2><div class="btn-text cc-scroll" data-v-db9bd6d2>Scroll</div><div class="btn-text cc-bottom cc-scroll" data-v-db9bd6d2>Scroll</div></div><div class="btn-icon cc-small w-embed" data-v-db9bd6d2><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-db9bd6d2><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor" data-v-db9bd6d2></path></svg></div>',
+      '<div class="btn-text-wrap"><div class="btn-text cc-scroll">Scroll</div><div class="btn-text cc-bottom cc-scroll">Scroll</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
   ];
 const fs = {
   components: {
     Footer: it,
-    View: Sa(
-      {
-        setup(a) {
-          const e = x(),
-            t = va({ x: 0, y: 0 }),
-            s = k([
-              {
-                url: "home/opening/1.jpg",
-                css: {
-                  width: "17vw",
-                  height: "20.2vw",
-                  left: "-5%",
-                  top: "60%",
-                  m_right: "3000px",
-                  m_top: "0%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
+    View: {
+      setup(a) {
+        const e = x(),
+          t = va({ x: 0, y: 0 }),
+          s = k([
+            {
+              url: "home/opening/1.jpg",
+              css: {
+                width: "17vw",
+                height: "20.2vw",
+                left: "-5%",
+                top: "60%",
+                m_right: "3000px",
+                m_top: "0%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 2.5s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
               },
-              {
-                url: "home/opening/2.jpg",
-                css: {
-                  width: "16.5vw",
-                  height: "21.3vw",
-                  left: "11%",
-                  top: "10%",
-                  m_right: "3000px",
-                  m_top: "0%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 1.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/3.jpg",
-                css: {
-                  width: "21.3vw",
-                  height: "16.6vw",
-                  m_width: "55.9vw",
-                  m_height: "42.5vw",
-                  left: "22%",
-                  top: "45%",
-                  m_right: "71%",
-                  m_top: "44%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 3.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/4.jpg",
-                css: {
-                  width: "15.5vw",
-                  height: "16.6vw",
-                  m_width: "42.5vw",
-                  m_height: "42.5vw",
-                  left: "31%",
-                  top: "72%",
-                  m_right: "73%",
-                  m_top: "80%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/5.jpg",
-                css: {
-                  width: "24vw",
-                  height: "19.6vw",
-                  m_width: "34vw",
-                  m_height: "34vw",
-                  left: "33%",
-                  top: "-1%",
-                  m_right: "-2%",
-                  m_top: "1%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 1s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/6.jpg",
-                css: {
-                  width: "21.1vw",
-                  height: "26.3vw",
-                  m_width: "25.5vw",
-                  m_height: "33vw",
-                  left: "51%",
-                  top: "27%",
-                  m_right: "15%",
-                  m_top: "39%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/7.jpg",
-                css: {
-                  width: "18.1vw",
-                  height: "21.8vw",
-                  m_width: "43.5vw",
-                  m_height: "50vw",
-                  left: "63%",
-                  top: "74%",
-                  m_right: "8%",
-                  m_top: "70%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 3s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/8.jpg",
-                css: {
-                  width: "18.3vw",
-                  height: "14.6vw",
-                  m_width: "46.1vw",
-                  m_height: "35.7vw",
-                  left: "70%",
-                  top: "-4%",
-                  m_right: "57%",
-                  m_top: "15%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 3.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/9.jpg",
-                css: {
-                  width: "22.8vw",
-                  height: "22vw",
-                  m_width: "36vw",
-                  m_height: "20vw",
-                  left: "83%",
-                  top: "33%",
-                  m_right: "-10%",
-                  m_top: "25%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                  objectAposition: "right",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/10.jpg",
-                css: {
-                  width: "21.3vw",
-                  height: "16.6vw",
-                  left: "86%",
-                  top: "69%",
-                  m_right: "30000px",
-                  m_top: "0%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 1.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-            ]),
-            l = k(!1),
-            i = {
-              rootMargin: "0px",
-              threshold: Array(100)
-                .fill()
-                .map((a, e) => 0.01 * e),
+              isEnter: !0,
             },
-            o = new IntersectionObserver((a) => {
-              a.forEach((a) => {
-                var e, t;
-                const { intersectionRatio: l, target: i } = a,
-                  o = null == (e = i.dataset) ? void 0 : e.index;
-                if ("img" === (null == (t = i.dataset) ? void 0 : t.item))
-                  s.value[o].isEnter = !(l < 0.4);
-                else
-                  i.style.animation =
-                    l < 1 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
-              });
-            }, i),
-            r = () => {
-              const a = document.getElementById("studio");
-              if (a) {
-                const e = a.offsetTop;
-                window.scrollTo({ top: e, behavior: "smooth" });
-              }
-            };
-          C(
-            () => e.state.app.isLoading,
-            (a) => {
-              if (((l.value = !a), a)) {
+            {
+              url: "home/opening/2.jpg",
+              css: {
+                width: "16.5vw",
+                height: "21.3vw",
+                left: "11%",
+                top: "10%",
+                m_right: "3000px",
+                m_top: "0%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 1.5s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/3.jpg",
+              css: {
+                width: "21.3vw",
+                height: "16.6vw",
+                m_width: "55.9vw",
+                m_height: "42.5vw",
+                left: "22%",
+                top: "45%",
+                m_right: "71%",
+                m_top: "44%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 3.5s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/4.jpg",
+              css: {
+                width: "15.5vw",
+                height: "16.6vw",
+                m_width: "42.5vw",
+                m_height: "42.5vw",
+                left: "31%",
+                top: "72%",
+                m_right: "73%",
+                m_top: "80%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 2s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/5.jpg",
+              css: {
+                width: "24vw",
+                height: "19.6vw",
+                m_width: "34vw",
+                m_height: "34vw",
+                left: "33%",
+                top: "-1%",
+                m_right: "-2%",
+                m_top: "1%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 1s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/6.jpg",
+              css: {
+                width: "21.1vw",
+                height: "26.3vw",
+                m_width: "25.5vw",
+                m_height: "33vw",
+                left: "51%",
+                top: "27%",
+                m_right: "15%",
+                m_top: "39%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 2.5s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/7.jpg",
+              css: {
+                width: "18.1vw",
+                height: "21.8vw",
+                m_width: "43.5vw",
+                m_height: "50vw",
+                left: "63%",
+                top: "74%",
+                m_right: "8%",
+                m_top: "70%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 3s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/8.jpg",
+              css: {
+                width: "18.3vw",
+                height: "14.6vw",
+                m_width: "46.1vw",
+                m_height: "35.7vw",
+                left: "70%",
+                top: "-4%",
+                m_right: "57%",
+                m_top: "15%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 3.5s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/9.jpg",
+              css: {
+                width: "22.8vw",
+                height: "22vw",
+                m_width: "36vw",
+                m_height: "20vw",
+                left: "83%",
+                top: "33%",
+                m_right: "-10%",
+                m_top: "25%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 2s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+                objectAposition: "right",
+              },
+              isEnter: !0,
+            },
+            {
+              url: "home/opening/10.jpg",
+              css: {
+                width: "21.3vw",
+                height: "16.6vw",
+                left: "86%",
+                top: "69%",
+                m_right: "30000px",
+                m_top: "0%",
+                transform: "translate3d(1px, 2px, 1px)",
+                enterAnimation: "zoomIn 1.5s forwards",
+                leaveAnimation: "fadeOut 1s forwards",
+              },
+              isEnter: !0,
+            },
+          ]),
+          l = k(!1),
+          i = {
+            rootMargin: "0px",
+            threshold: Array(100)
+              .fill()
+              .map((a, e) => 0.01 * e),
+          },
+          o = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              var e, t;
+              const { intersectionRatio: l, target: i } = a,
+                o = null == (e = i.dataset) ? void 0 : e.index;
+              if ("img" === (null == (t = i.dataset) ? void 0 : t.item))
+                s.value[o].isEnter = !(l < 0.4);
+              else
+                i.style.animation =
+                  l < 1 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
+            });
+          }, i),
+          r = () => {
+            const a = document.getElementById("studio");
+            if (a) {
+              const e = a.offsetTop;
+              window.scrollTo({ top: e, behavior: "smooth" });
+            }
+          };
+        C(
+          () => e.state.app.isLoading,
+          (a) => {
+            if (((l.value = !a), a)) {
+              ((a) => {
+                for (const e of a) o.unobserve(e);
+              })([
+                ...document.querySelectorAll(".img-wrap"),
+                document.querySelector(".btn-scroll"),
+              ]);
+            } else
+              ma(() => {
                 ((a) => {
-                  for (const e of a) o.unobserve(e);
+                  for (const e of a) o.observe(e);
                 })([
                   ...document.querySelectorAll(".img-wrap"),
-                  document.querySelector(".btn-contain-scroll"),
+                  document.querySelector(".btn-scroll"),
                 ]);
-              } else
-                ma(() => {
-                  ((a) => {
-                    for (const e of a) o.observe(e);
-                  })([
-                    ...document.querySelectorAll(".img-wrap"),
-                    document.querySelector(".btn-contain-scroll"),
-                  ]);
-                });
-            }
-          );
-          const n = k(!1),
-            d = () => {
-              n.value = window.innerWidth < 991;
-            };
-          return (
-            q(() => {
-              d(), window.addEventListener("resize", d), fa.init();
-            }),
-            (a, e) => (
-              g(),
-              b(
-                _,
-                null,
-                [
-                  y(
-                    "div",
-                    {
-                      class: "view",
-                      onMousemove:
-                        e[0] ||
-                        (e[0] = (a) =>
-                          ((a) => {
-                            if (window.innerWidth > 576) {
-                              const e = window.innerWidth / 2,
-                                s = window.innerHeight / 2;
-                              (t.x = ((e - a.clientX) / 100) * 3),
-                                (t.y = ((s - a.clientY) / 100) * 3);
-                            }
-                          })(a)),
-                    },
-                    [
-                      l.value
-                        ? (g(),
-                          b(
-                            "div",
-                            {
-                              key: 0,
-                              class: "view-wrap",
-                              style: N({
-                                transform: `translate3d(${2 * w(t).x}px, ${
-                                  w(t).y
-                                }px, 0) rotateX(${-w(t).y / 2}deg) rotateY(${
-                                  -w(t).x / 2
-                                }deg)`,
-                                transformOrigin: "center center",
-                              }),
-                            },
-                            [
-                              (g(!0),
-                              b(
-                                _,
-                                null,
-                                W(
-                                  s.value,
-                                  (a, e) => (
-                                    g(),
-                                    b(
-                                      "div",
-                                      {
-                                        class:
-                                          "img-wrap home-hero_image-placer",
-                                        key: a.url + e,
-                                        style: N({
-                                          left: n.value ? "unset" : a.css.left,
-                                          right: n.value
-                                            ? a.css.m_right
-                                            : "unset",
-                                          top: n.value
-                                            ? a.css.m_top
-                                            : a.css.top,
-                                          animation: a.isEnter
-                                            ? a.css.enterAnimation
-                                            : a.css.leaveAnimation,
-                                        }),
-                                        "data-index": e,
-                                        "data-item": "img",
-                                      },
-                                      [
-                                        y(
-                                          "img",
-                                          {
-                                            src: w(ka)(a.url),
-                                            style: N({
-                                              width: n.value
-                                                ? a.css.m_width
-                                                : a.css.width,
-                                              height: n.value
-                                                ? a.css.m_height
-                                                : a.css.height,
-                                              transform: `translate3d(${
-                                                w(t).x / 2
-                                              }px,${w(t).y / 2}px, 100px)`,
-                                            }),
-                                          },
-                                          null,
-                                          12,
-                                          vs
-                                        ),
-                                      ],
-                                      12,
-                                      ps
-                                    )
+              });
+          }
+        );
+        const n = k(!1),
+          d = () => {
+            n.value = window.innerWidth < 991;
+          };
+        return (
+          q(() => {
+            d(), window.addEventListener("resize", d), fa.init();
+          }),
+          (a, e) => (
+            g(),
+            b(
+              _,
+              null,
+              [
+                y(
+                  "div",
+                  {
+                    class: "view",
+                    onMousemove:
+                      e[0] ||
+                      (e[0] = (a) =>
+                        ((a) => {
+                          if (window.innerWidth > 576) {
+                            const e = window.innerWidth / 2,
+                              s = window.innerHeight / 2;
+                            (t.x = ((e - a.clientX) / 100) * 3),
+                              (t.y = ((s - a.clientY) / 100) * 3);
+                          }
+                        })(a)),
+                  },
+                  [
+                    l.value
+                      ? (g(),
+                        b(
+                          "div",
+                          {
+                            key: 0,
+                            class: "view-wrap",
+                            style: N({
+                              transform: `translate3d(${2 * w(t).x}px, ${
+                                w(t).y
+                              }px, 0) rotateX(${-w(t).y / 2}deg) rotateY(${
+                                -w(t).x / 2
+                              }deg)`,
+                              transformOrigin: "center center",
+                            }),
+                          },
+                          [
+                            (g(!0),
+                            b(
+                              _,
+                              null,
+                              W(
+                                s.value,
+                                (a, e) => (
+                                  g(),
+                                  b(
+                                    "div",
+                                    {
+                                      class: "img-wrap home-hero_image-placer",
+                                      key: a.url + e,
+                                      style: N({
+                                        left: n.value ? "unset" : a.css.left,
+                                        right: n.value
+                                          ? a.css.m_right
+                                          : "unset",
+                                        top: n.value ? a.css.m_top : a.css.top,
+                                        animation: a.isEnter
+                                          ? a.css.enterAnimation
+                                          : a.css.leaveAnimation,
+                                      }),
+                                      "data-index": e,
+                                      "data-item": "img",
+                                    },
+                                    [
+                                      y(
+                                        "img",
+                                        {
+                                          src: w(ka)(a.url),
+                                          style: N({
+                                            width: n.value
+                                              ? a.css.m_width
+                                              : a.css.width,
+                                            height: n.value
+                                              ? a.css.m_height
+                                              : a.css.height,
+                                            transform: `translate3d(${
+                                              w(t).x / 2
+                                            }px,${w(t).y / 2}px, 100px)`,
+                                          }),
+                                        },
+                                        null,
+                                        12,
+                                        vs
+                                      ),
+                                    ],
+                                    12,
+                                    ps
                                   )
-                                ),
-                                128
-                              )),
-                            ],
-                            4
-                          ))
-                        : E("", !0),
-                    ],
-                    32
-                  ),
-                  y(
-                    "div",
-                    { "data-reveal": "button", class: "home-hero_btn" },
-                    [
-                      y(
-                        "div",
-                        { class: "btn-contain btn-contain-scroll op0" },
-                        [
-                          y(
-                            "div",
-                            { class: "btn-scroll w-inline-block", onClick: r },
-                            ms
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ],
-                64
-              )
+                                )
+                              ),
+                              128
+                            )),
+                          ],
+                          4
+                        ))
+                      : E("", !0),
+                  ],
+                  32
+                ),
+                y("div", { "data-reveal": "button", class: "home-hero_btn" }, [
+                  y("div", { class: "btn-contain btn-contain-scroll" }, [
+                    y(
+                      "div",
+                      { class: "btn-scroll w-inline-block", onClick: r },
+                      ms
+                    ),
+                  ]),
+                ]),
+              ],
+              64
             )
-          );
-        },
+          )
+        );
       },
-      [["__scopeId", "data-v-db9bd6d2"]]
-    ),
+    },
   },
   setup() {
     const a = k("");
