@@ -2519,35 +2519,35 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos="flip-down"].aos-animate {
   transform: perspective(2500px) rotateX(0);
 }
-.transparent[data-v-18945abc] {
+.transparent[data-v-4bd0ac2f] {
   background-color: transparent !important;
 }
-.target_line[data-v-18945abc] {
+.target_line[data-v-4bd0ac2f] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-18945abc]:first-child {
+.target_line[data-v-4bd0ac2f]:first-child {
   margin-top: 30px;
 }
-.target_line.active[data-v-18945abc] {
-  -webkit-animation-name: line-18945abc;
-  animation-name: line-18945abc;
+.target_line.active[data-v-4bd0ac2f] {
+  -webkit-animation-name: line-4bd0ac2f;
+  animation-name: line-4bd0ac2f;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .w-layout-grid.pair-grid.is-leading[data-v-18945abc] {
+  .w-layout-grid.pair-grid.is-leading[data-v-4bd0ac2f] {
     overflow: hidden;
   }
-  .apps_asset.cc-2.w-dyn-list[data-v-18945abc],
-  .apps_asset.cc-1[data-v-18945abc] {
+  .apps_asset.cc-2.w-dyn-list[data-v-4bd0ac2f],
+  .apps_asset.cc-1[data-v-4bd0ac2f] {
     transform: translateZ(0) !important;
   }
 }
-@-webkit-keyframes line-18945abc {
+@-webkit-keyframes line-4bd0ac2f {
   0% {
     width: 0;
   }
@@ -2555,7 +2555,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-18945abc {
+@keyframes line-4bd0ac2f {
   0% {
     width: 0;
   }

@@ -940,7 +940,7 @@
     </div>
   </section>
   <!-- --- -->
-  <!-- <section class="section cc-apps">
+  <section class="section">
     <div class="container">
       <div class="row">
         <div data-animation-element="group" class="col">
@@ -966,7 +966,7 @@
                   transform: translate(0px, 0%);
                 "
               >
-                Apps
+                館藏特約藝術家
               </div>
             </div>
           </h3>
@@ -996,11 +996,6 @@
                 https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png       750w
               "
               class="apps_asset cc-1"
-              style="
-                transform: translate3d(0px, 10%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
             />
           </div>
           <div
@@ -1117,7 +1112,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- -- -->
   <section class="section">
     <div class="container">
@@ -1144,10 +1139,10 @@
                   transform: translate(0px, 0%);
                 "
               >
-                Fintech
+                拍賣中心
               </div>
             </div>
-            <div
+            <!-- <div
               class="u-overflow-hidden"
               style="display: block; text-align: start; position: relative"
             >
@@ -1163,7 +1158,7 @@
               >
                 Design
               </div>
-            </div>
+            </div> -->
           </h3>
         </div>
       </div>
@@ -1223,7 +1218,7 @@
                             "
                           >
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">Seen Brand</h4>
+                              <h4 class="u-ts-4">Skyart7325鑑賞中心</h4>
                             </div>
                           </div>
                         </div>
