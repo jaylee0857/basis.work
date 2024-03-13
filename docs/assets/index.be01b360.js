@@ -1,5 +1,5 @@
-var a,
-  e,
+var e,
+  a,
   t,
   s,
   l,
@@ -7,20 +7,20 @@ var a,
   o,
   r = Object.defineProperty,
   n = Object.defineProperties,
-  d = Object.getOwnPropertyDescriptors,
-  c = Object.getOwnPropertySymbols,
+  c = Object.getOwnPropertyDescriptors,
+  d = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
-  m = (a, e, t) =>
-    e in a
-      ? r(a, e, { enumerable: !0, configurable: !0, writable: !0, value: t })
-      : (a[e] = t),
-  f = (a, e) => {
-    for (var t in e || (e = {})) p.call(e, t) && m(a, t, e[t]);
-    if (c) for (var t of c(e)) v.call(e, t) && m(a, t, e[t]);
-    return a;
+  m = (e, a, t) =>
+    a in e
+      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t })
+      : (e[a] = t),
+  f = (e, a) => {
+    for (var t in a || (a = {})) p.call(a, t) && m(e, t, a[t]);
+    if (d) for (var t of d(a)) v.call(a, t) && m(e, t, a[t]);
+    return e;
   },
-  u = (a, e) => n(a, d(e));
+  u = (e, a) => n(e, c(a));
 import {
   o as g,
   c as b,
@@ -43,16 +43,16 @@ import {
   m as P,
   p as I,
   q as A,
-  s as D,
-  t as M,
+  s as M,
+  t as D,
   v as $,
   x as V,
   y as U,
   S as F,
   z as H,
   A as R,
-  B as W,
-  C as N,
+  B as N,
+  C as W,
   D as X,
   E as Y,
   G,
@@ -60,62 +60,62 @@ import {
   I as K,
   J as Q,
   T as J,
-  K as aa,
-  L as ea,
-  M as ta,
-  N as sa,
-  O as la,
-  P as ia,
-  Q as oa,
-  R as ra,
-  U as na,
-  V as da,
-  W as ca,
-  X as pa,
-  Y as va,
-  Z as ma,
-  _ as fa,
-  $ as ua,
-  a0 as ga,
-  a1 as ba,
-  a2 as ya,
-  a3 as ha,
-  a4 as wa,
-  a5 as _a,
-  a6 as xa,
+  K as ee,
+  L as ae,
+  M as te,
+  N as se,
+  O as le,
+  P as ie,
+  Q as oe,
+  R as re,
+  U as ne,
+  V as ce,
+  W as de,
+  X as pe,
+  Y as ve,
+  Z as me,
+  _ as fe,
+  $ as ue,
+  a0 as ge,
+  a1 as be,
+  a2 as ye,
+  a3 as he,
+  a4 as we,
+  a5 as _e,
+  a6 as xe,
 } from "./vendor.4fa19e74.js";
 !(function () {
-  const a = document.createElement("link").relList;
-  if (!(a && a.supports && a.supports("modulepreload"))) {
-    for (const a of document.querySelectorAll('link[rel="modulepreload"]'))
-      e(a);
-    new MutationObserver((a) => {
-      for (const t of a)
+  const e = document.createElement("link").relList;
+  if (!(e && e.supports && e.supports("modulepreload"))) {
+    for (const e of document.querySelectorAll('link[rel="modulepreload"]'))
+      a(e);
+    new MutationObserver((e) => {
+      for (const t of e)
         if ("childList" === t.type)
-          for (const a of t.addedNodes)
-            "LINK" === a.tagName && "modulepreload" === a.rel && e(a);
+          for (const e of t.addedNodes)
+            "LINK" === e.tagName && "modulepreload" === e.rel && a(e);
     }).observe(document, { childList: !0, subtree: !0 });
   }
-  function e(a) {
-    if (a.ep) return;
-    a.ep = !0;
-    const e = (function (a) {
-      const e = {};
+  function a(e) {
+    if (e.ep) return;
+    e.ep = !0;
+    const a = (function (e) {
+      const a = {};
       return (
-        a.integrity && (e.integrity = a.integrity),
-        a.referrerpolicy && (e.referrerPolicy = a.referrerpolicy),
-        "use-credentials" === a.crossorigin
-          ? (e.credentials = "include")
-          : "anonymous" === a.crossorigin
-          ? (e.credentials = "omit")
-          : (e.credentials = "same-origin"),
-        e
+        e.integrity && (a.integrity = e.integrity),
+        e.referrerpolicy && (a.referrerPolicy = e.referrerpolicy),
+        "use-credentials" === e.crossorigin
+          ? (a.credentials = "include")
+          : "anonymous" === e.crossorigin
+          ? (a.credentials = "omit")
+          : (a.credentials = "same-origin"),
+        a
       );
-    })(a);
-    fetch(a.href, e);
+    })(e);
+    fetch(e.href, a);
   }
 })();
-const ka = (a) =>
+const ke = (e) =>
     new URL(
       {
         "../assets/images/icon_back.svg": "./assets/icon_back.556b6f96.svg",
@@ -155,41 +155,41 @@ const ka = (a) =>
         "../assets/images/home/opening/7.jpg": "./assets/7.8d695fe6.jpg",
         "../assets/images/home/opening/8.jpg": "./assets/8.107a61ce.jpg",
         "../assets/images/home/opening/9.jpg": "./assets/9.e0cc08c9.jpg",
-      }[`../assets/images/${a}`],
+      }[`../assets/images/${e}`],
       self.location
     ).href,
-  ja = { class: "icon" },
-  Ca = { class: "svg_box" },
-  qa = ["src"];
-var Sa = (a, e) => {
-  const t = a.__vccOpts || a;
-  for (const [s, l] of e) t[s] = l;
+  je = { class: "icon" },
+  Ce = { class: "svg_box" },
+  qe = ["src"];
+var Se = (e, a) => {
+  const t = e.__vccOpts || e;
+  for (const [s, l] of a) t[s] = l;
   return t;
 };
-var Oa = Sa(
+var Oe = Se(
   {
     components: {
       Loading: {
         props: { mode: String },
-        setup: (a) => (e, t) => (
+        setup: (e) => (a, t) => (
           g(),
           b(
             _,
             null,
             [
-              y("div", { class: h(["mask", a.mode]) }, null, 2),
+              y("div", { class: h(["mask", e.mode]) }, null, 2),
               y(
                 "div",
-                { class: h(["bg", a.mode]) },
+                { class: h(["bg", e.mode]) },
                 [
-                  y("div", ja, [
-                    y("div", Ca, [
+                  y("div", je, [
+                    y("div", Ce, [
                       y(
                         "img",
-                        { src: w(ka)("logo.png"), alt: "" },
+                        { src: w(ke)("logo.png"), alt: "" },
                         null,
                         8,
-                        qa
+                        qe
                       ),
                     ]),
                   ]),
@@ -203,41 +203,41 @@ var Oa = Sa(
       },
     },
     setup() {
-      const a = x(),
-        e = k(!1),
+      const e = x(),
+        a = k(!1),
         t = k(""),
         s = k("leave"),
         l = j(() => "stop" === s.value),
         i = j(() => {
-          if (L(a.state.route.path)) return null;
-          return P("layout-error")(I(["meta", "layout"], a.state.route));
+          if (L(e.state.route.path)) return null;
+          return P("layout-error")(I(["meta", "layout"], e.state.route));
         });
       return (
         C(
-          () => a.state.route,
+          () => e.state.route,
           (l) => {
             t.value !== l &&
-              ((e.value = !0),
+              ((a.value = !0),
               setTimeout(() => {
-                (e.value = !1), (s.value = "enter");
+                (a.value = !1), (s.value = "enter");
               }, 3500)),
-              (t.value = a.state.route.path);
+              (t.value = e.state.route.path);
           }
         ),
-        C(e, (e) => {
-          a.commit("app/systm/Loading", e);
+        C(a, (a) => {
+          e.commit("app/systm/Loading", a);
         }),
         q(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: i, isShowLoading: e, mode: s, isError: l }
+        { layout: i, isShowLoading: a, mode: s, isError: l }
       );
     },
   },
   [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         const o = S("router-view"),
           r = S("the-popup"),
           n = S("Loading");
@@ -251,7 +251,7 @@ var Oa = Sa(
               O(T(s.layout), null, {
                 default: z(() => [
                   B(o, null, {
-                    default: z(({ Component: a }) => [(g(), O(T(a)))]),
+                    default: z(({ Component: e }) => [(g(), O(T(e)))]),
                     _: 1,
                   }),
                 ]),
@@ -270,7 +270,7 @@ var Oa = Sa(
     ["__scopeId", "data-v-6ef0256d"],
   ]
 );
-const za = {
+const ze = {
     "../locales/en/app.js": Object.freeze(
       Object.defineProperty(
         {
@@ -479,27 +479,27 @@ const za = {
       )
     ),
   },
-  Ta = {};
-for (let Uo in za) {
-  const a = Uo.replace("../locales/", "").toLowerCase().replace(".js", ""),
-    [e, ...t] = a.split("/"),
+  Te = {};
+for (let Uo in ze) {
+  const e = Uo.replace("../locales/", "").toLowerCase().replace(".js", ""),
+    [a, ...t] = e.split("/"),
     s = A(".", t),
-    l = za[Uo].default;
-  Ta[e] = D((a, e) => M(a, { [`${s}.${e}`]: l[e] }), Ta[e] || {}, $(l));
+    l = ze[Uo].default;
+  Te[a] = M((e, a) => D(e, { [`${s}.${a}`]: l[a] }), Te[a] || {}, $(l));
 }
-const Ba = (() => {
-    var a, e, t, s;
+const Be = (() => {
+    var e, a, t, s;
     const l = V.get("locale");
     if (l) return l;
     let i =
       null !=
       (s =
         null !=
-        (t = null == (a = navigator.language) ? void 0 : a.toLowerCase())
+        (t = null == (e = navigator.language) ? void 0 : e.toLowerCase())
           ? t
-          : null == (e = navigator.userLanguage)
+          : null == (a = navigator.userLanguage)
           ? void 0
-          : e.toLowerCase())
+          : a.toLowerCase())
         ? s
         : null;
     return i
@@ -508,23 +508,23 @@ const Ba = (() => {
           : i.includes("zh")
           ? (i = "zh-tw")
           : i.includes("en") && (i = "en"),
-        (i = i in Ta ? i : {}.VITE_LOCALE),
+        (i = i in Te ? i : {}.VITE_LOCALE),
         i)
       : {}.VITE_LOCALE;
   })(),
-  Ea = U.exports.createI18n({
-    initLocale: Ba,
-    fallbackLocale: null != (a = {}.VITE_DEFAULT_LANG) ? a : "zh-tw",
-    messages: Ta,
+  Ee = U.exports.createI18n({
+    initLocale: Be,
+    fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
+    messages: Te,
   });
-var La = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ea }, Symbol.toStringTag, {
+var Le = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ee }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(F.toast = function (a) {
+(F.toast = function (e) {
   return this.fire({
-    title: a,
+    title: e,
     toast: !0,
     showConfirmButton: !1,
     customClass: "swal2-toast",
@@ -532,23 +532,23 @@ var La = Object.freeze(
     hideClass: { popup: "animate__animated animate__fadeOutDown" },
     timer: 2e3,
     background: "transparent",
-    didOpen: (a) => {
-      a.addEventListener("click", F.close);
+    didOpen: (e) => {
+      e.addEventListener("click", F.close);
     },
   });
 }),
   (F.alert = function ({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
-    confirmButtonText: i = Ea.t("button.confirm"),
+    confirmButtonText: i = Ee.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: l,
       customClass: `swal2-alert ${o}`,
       heightAuto: s,
@@ -569,15 +569,15 @@ var La = Object.freeze(
     });
   }),
   (F.confirm = function ({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     html: t,
     confirmCallback: s = null,
     heightAuto: l = !1,
   }) {
     return this.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: t,
       customClass: "swal2-confirm",
       heightAuto: l,
@@ -589,7 +589,7 @@ var La = Object.freeze(
       },
     });
   });
-const Pa = F.mixin({
+const Pe = F.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -597,62 +597,62 @@ const Pa = F.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Ea.t("button.confirm"),
-  cancelButtonText: Ea.t("button.cancel"),
-  didOpen(a) {
-    const e = a.querySelector(".swal2-cancel");
-    a.querySelector(".swal2-confirm").blur(), e.blur();
+  confirmButtonText: Ee.t("button.confirm"),
+  cancelButtonText: Ee.t("button.cancel"),
+  didOpen(e) {
+    const a = e.querySelector(".swal2-cancel");
+    e.querySelector(".swal2-confirm").blur(), a.blur();
   },
 });
-class Ia {
+class Ie {
   constructor() {
     return V;
   }
 }
-class Aa {
+class Ae {
   constructor() {
-    this.provider = new Ia();
+    this.provider = new Ie();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Aa.prototype.install = function (a) {
-  const e = "storage-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Ae.prototype.install = function (e) {
+  const a = "storage-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Da = new Aa(),
-  Ma = Object.freeze(
+var Me = new Ae(),
+  De = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Aa, default: Da },
+      { __proto__: null, StorageService: Ae, default: Me },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const $a = () => {
-    const a = U.exports.useI18n(),
-      e = k({}),
+const $e = () => {
+    const e = U.exports.useI18n(),
+      a = k({}),
       t = (s, l = {}) => {
         const [i, ...o] = H(".", s);
-        return i in e.value ? t(`${e.value[i]}.${A(".", o)}`, l) : a.t(s, l);
+        return i in a.value ? t(`${a.value[i]}.${A(".", o)}`, l) : e.t(s, l);
       };
     return {
-      locale: a.locale,
-      change: (e) => {
-        a.setLocale(e), Da.provider.set("locale", e);
+      locale: e.locale,
+      change: (a) => {
+        e.setLocale(a), Me.provider.set("locale", a);
       },
-      setPrefix: (a) => {
-        e.value = "string" == typeof a ? { $current: a } : f(f({}, e.value), a);
+      setPrefix: (e) => {
+        a.value = "string" == typeof e ? { $current: e } : f(f({}, a.value), e);
       },
       t: t,
-      addMessages: a.addMessages,
+      addMessages: e.addMessages,
     };
   },
-  Va = ["onMouseenter", "onClick"],
-  Ua = y("div", { class: "line" }, null, -1),
-  Fa = { class: "list_style" },
-  Ha = { class: "nav_link-top" },
-  Ra = y(
+  Ve = ["onMouseenter", "onClick"],
+  Ue = y("div", { class: "line" }, null, -1),
+  Fe = { class: "list_style" },
+  He = { class: "nav_link-top" },
+  Re = y(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -661,10 +661,10 @@ const $a = () => {
     null,
     -1
   ),
-  Wa = { class: "nav_link-title" },
-  Na = { class: "u-ts-3" },
-  Xa = { class: "nav_link-p" },
-  Ya = y(
+  Ne = { class: "nav_link-title" },
+  We = { class: "u-ts-3" },
+  Xe = { class: "nav_link-p" },
+  Ye = y(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -673,12 +673,12 @@ const $a = () => {
     null,
     -1
   ),
-  Ga = y("div", { id: "pink_mask" }, null, -1),
-  Za = {
+  Ge = y("div", { id: "pink_mask" }, null, -1),
+  Ze = {
     props: ["isOpen"],
     emits: ["toggleOpen"],
-    setup(a, { emit: e }) {
-      const t = a,
+    setup(e, { emit: a }) {
+      const t = e,
         s = k(1),
         l = k(!0),
         i = R(),
@@ -721,8 +721,8 @@ const $a = () => {
               return 75;
           }
         }),
-        d = k(25);
-      return (a, c) => (
+        c = k(25);
+      return (e, d) => (
         g(),
         b(
           "div",
@@ -733,34 +733,34 @@ const $a = () => {
               b(
                 _,
                 null,
-                W(
+                N(
                   o.value,
-                  (a, l) => (
+                  (e, l) => (
                     g(),
                     b(
                       "li",
                       {
-                        key: a,
-                        style: N(`--i: ${a}`),
-                        onMouseenter: (a) =>
-                          ((a) => {
-                            s.value = a;
+                        key: e,
+                        style: W(`--i: ${e}`),
+                        onMouseenter: (e) =>
+                          ((e) => {
+                            s.value = e;
                           })(l),
                         onClick: (s) => {
                           return (
-                            (l = a.path),
+                            (l = e.path),
                             i.push(l),
-                            void e("toggleOpen", t.isOpen)
+                            void a("toggleOpen", t.isOpen)
                           );
                           var l;
                         },
                       },
                       [
-                        Ua,
-                        y("div", Fa, [
-                          y("div", Ha, [
-                            Ra,
-                            y("div", Wa, [y("div", Na, X(a.title), 1)]),
+                        Ue,
+                        y("div", Fe, [
+                          y("div", He, [
+                            Re,
+                            y("div", Ne, [y("div", We, X(e.title), 1)]),
                           ]),
                           y(
                             "div",
@@ -770,13 +770,13 @@ const $a = () => {
                                 { active: s.value === l },
                               ]),
                             },
-                            [y("p", Xa, X(a.content), 1), Ya],
+                            [y("p", Xe, X(e.content), 1), Ye],
                             2
                           ),
                         ]),
                       ],
                       44,
-                      Va
+                      Ve
                     )
                   )
                 ),
@@ -786,38 +786,38 @@ const $a = () => {
                 "div",
                 {
                   class: "move-item",
-                  style: N({
+                  style: W({
                     left: "" + (l.value ? `calc(${w(r)}% - 4px)` : "auto"),
                     right: "" + (l.value ? "auto" : `calc(${w(n)}% - 4px)`),
-                    width: `calc(${d.value}% + 8px)`,
+                    width: `calc(${c.value}% + 8px)`,
                   }),
                 },
                 null,
                 4
               ),
             ]),
-            Ga,
+            Ge,
           ],
           2
         )
       );
     },
   },
-  Ka = { key: 0 },
-  Qa = ["src"],
-  Ja = ["src"],
-  ae = [y("div", null, null, -1), y("div", null, null, -1)],
-  ee = { class: "layout-deafult pb-32" };
-var te = Sa(
+  Ke = { key: 0 },
+  Qe = ["src"],
+  Je = ["src"],
+  ea = [y("div", null, null, -1), y("div", null, null, -1)],
+  aa = { class: "layout-deafult pb-32" };
+var ta = Se(
     {
       components: {
         LayoutHeader: {
-          setup(a) {
-            const e = k(!1),
-              t = (a) => {
-                e.value = !a;
+          setup(e) {
+            const a = k(!1),
+              t = (e) => {
+                a.value = !e;
               };
-            return (a, s) => (
+            return (e, s) => (
               g(),
               b(
                 _,
@@ -826,7 +826,7 @@ var te = Sa(
                   y(
                     "div",
                     {
-                      class: h(["layout-deafult-header", { active: e.value }]),
+                      class: h(["layout-deafult-header", { active: a.value }]),
                     },
                     [
                       y(
@@ -836,28 +836,28 @@ var te = Sa(
                           "aria-current": "page",
                           class: h([
                             "layout-deafult-header-logo",
-                            { "layout-deafult-header-logo--open": e.value },
+                            { "layout-deafult-header-logo--open": a.value },
                           ]),
                           "aria-label": "home",
                         },
                         [
-                          e.value
+                          a.value
                             ? (g(),
                               b(
                                 "img",
-                                { key: 1, src: w(ka)("logo.png"), alt: "" },
+                                { key: 1, src: w(ke)("logo.png"), alt: "" },
                                 null,
                                 8,
-                                Ja
+                                Je
                               ))
                             : (g(),
-                              b("div", Ka, [
+                              b("div", Ke, [
                                 y(
                                   "img",
-                                  { src: w(ka)("logo.png"), alt: "" },
+                                  { src: w(ke)("logo.png"), alt: "" },
                                   null,
                                   8,
-                                  Qa
+                                  Qe
                                 ),
                               ])),
                         ],
@@ -868,21 +868,21 @@ var te = Sa(
                         {
                           class: h([
                             "layout-deafult-header-btn",
-                            { "layout-deafult-header-btn--open": e.value },
+                            { "layout-deafult-header-btn--open": a.value },
                           ]),
-                          onClick: s[0] || (s[0] = (a) => (e.value = !e.value)),
+                          onClick: s[0] || (s[0] = (e) => (a.value = !a.value)),
                         },
-                        ae,
+                        ea,
                         2
                       ),
                     ],
                     2
                   ),
-                  e.value
+                  a.value
                     ? (g(),
                       O(
-                        Za,
-                        { key: 0, "is-open": e.value, onToggleOpen: t },
+                        Ze,
+                        { key: 0, "is-open": a.value, onToggleOpen: t },
                         null,
                         8,
                         ["is-open"]
@@ -896,184 +896,184 @@ var te = Sa(
         },
       },
       setup() {
-        const { t: a } = $a();
-        return { t: a };
+        const { t: e } = $e();
+        return { t: e };
       },
     },
     [
       [
         "render",
-        function (a, e, t, s, l, i) {
+        function (e, a, t, s, l, i) {
           const o = S("LayoutHeader");
           return (
-            g(), b(_, null, [B(o), y("div", ee, [Y(a.$slots, "default")])], 64)
+            g(), b(_, null, [B(o), y("div", aa, [Y(e.$slots, "default")])], 64)
           );
         },
       ],
     ]
   ),
-  se = Object.freeze(
+  sa = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: te },
+      { __proto__: null, default: ta },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const le = { class: "layout-demo" };
-var ie = Sa({ setup() {} }, [
+const la = { class: "layout-demo" };
+var ia = Se({ setup() {} }, [
   [
     "render",
-    function (a, e, t, s, l, i) {
-      return g(), b("div", le, [Y(a.$slots, "default")]);
+    function (e, a, t, s, l, i) {
+      return g(), b("div", la, [Y(e.$slots, "default")]);
     },
   ],
 ]);
-const oe = {
-    "../layouts/layout-default.vue": se,
+const oa = {
+    "../layouts/layout-default.vue": sa,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: ie },
+        { __proto__: null, default: ia },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  re = [];
-for (let Uo in oe) {
-  const a = Uo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  re.push({ componentName: a, component: oe[Uo].default });
+  ra = [];
+for (let Uo in oa) {
+  const e = Uo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  ra.push({ componentName: e, component: oa[Uo].default });
 }
-const ne = {
-  install: (a) => {
-    re.forEach((e) => {
-      a.component(e.componentName, e.component);
+const na = {
+  install: (e) => {
+    ra.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-const de = {
+const ca = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
-      const a = R();
+      const e = R();
       return {
         goBack: () => {
-          a.options.history.state.back
-            ? a.back()
-            : a.push({ name: "default-path" });
+          e.options.history.state.back
+            ? e.back()
+            : e.push({ name: "default-path" });
         },
       };
     },
   },
-  ce = {
+  da = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
-  pe = { class: "font-bold" },
-  ve = { class: "absolute right-8 top-6" };
-var me = Sa(de, [
+  pa = { class: "font-bold" },
+  va = { class: "absolute right-8 top-6" };
+var ma = Se(ca, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         return (
           g(),
-          b("div", ce, [
+          b("div", da, [
             t.goBackButton
               ? (g(),
                 b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
-                    e[0] || (e[0] = (...a) => s.goBack && s.goBack(...a)),
+                    a[0] || (a[0] = (...e) => s.goBack && s.goBack(...e)),
                 }))
               : E("", !0),
-            y("div", pe, [
-              Y(a.$slots, "title", {}, () => [G(X(t.title), 1)], !0),
+            y("div", pa, [
+              Y(e.$slots, "title", {}, () => [G(X(t.title), 1)], !0),
             ]),
-            y("div", ve, [Y(a.$slots, "actions", {}, void 0, !0)]),
+            y("div", va, [Y(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
     ],
     ["__scopeId", "data-v-50981458"],
   ]),
-  fe = Object.freeze(
+  fa = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: me },
+      { __proto__: null, default: ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ue = () => Z("popup-service");
-const ge = {
+const ua = () => Z("popup-service");
+const ga = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  be = { class: "swal2-title", style: { display: "block" } },
-  ye = { class: "swal2-html-container", style: { display: "block" } },
-  he = { class: "swal2-actions", style: { display: "flex" } };
-var we = Sa({}, [
+  ba = { class: "swal2-title", style: { display: "block" } },
+  ya = { class: "swal2-html-container", style: { display: "block" } },
+  ha = { class: "swal2-actions", style: { display: "flex" } };
+var wa = Se({}, [
   [
     "render",
-    function (a, e) {
+    function (e, a) {
       return (
         g(),
-        b("div", ge, [
-          y("h2", be, [Y(a.$slots, "title")]),
-          y("div", ye, [Y(a.$slots, "content")]),
-          y("div", he, [Y(a.$slots, "actions")]),
+        b("div", ga, [
+          y("h2", ba, [Y(e.$slots, "title")]),
+          y("div", ya, [Y(e.$slots, "content")]),
+          y("div", ha, [Y(e.$slots, "actions")]),
         ])
       );
     },
   ],
 ]);
-const _e = {
+const _a = {
     key: 0,
     class:
       "fixed z-[1041] inset-0 w-full h-full flex justify-center items-center pointer-events-none",
   },
-  xe = { key: 1 },
-  ke = ["data-timer", "data-end"];
-var je = Sa(
+  xa = { key: 1 },
+  ka = ["data-timer", "data-end"];
+var ja = Se(
   {
-    setup(a) {
-      const e = ue(),
-        t = j(() => e.state),
-        s = (a) => {
+    setup(e) {
+      const a = ua(),
+        t = j(() => a.state),
+        s = (e) => {
           t.value.resolve(
             f(
               { isConfirmed: !1, isDismissed: !1, dismiss: null, result: null },
-              a
+              e
             )
           );
         },
-        l = j(() => (t.value.type, ea(we))),
+        l = j(() => (t.value.type, ae(wa))),
         i = j(() => t.value.BackdropStyle),
         o = k();
       let r = null;
       const n = () => {
         clearTimeout(r), (r = null);
       };
-      C([() => t.value.autoClose, () => t.value.timer], ([a, e]) => {
-        e &&
+      C([() => t.value.autoClose, () => t.value.timer], ([e, a]) => {
+        a &&
           (n(),
           (r = setTimeout(() => {
-            n(), a && d("timer");
-          }, e)));
+            n(), e && c("timer");
+          }, a)));
       });
-      const d = async (a) => {
+      const c = async (e) => {
           if (r) {
             if (!t.value.allowDismissWhenTimerRunning) return;
             n();
           }
           if (o.value && "onDismissed" in o.value) {
             const t = await o.value.onDismissed();
-            t && (s({ isDismissed: !0, dismiss: a, result: t }), e.clear());
-          } else s({ isDismissed: !0, dismiss: a }), e.clear();
+            t && (s({ isDismissed: !0, dismiss: e, result: t }), a.clear());
+          } else s({ isDismissed: !0, dismiss: e }), a.clear();
         },
-        c = async () => {
-          t.value.allowOutsideClick && d("backdrop");
+        d = async () => {
+          t.value.allowOutsideClick && c("backdrop");
         },
         p = async () => {
-          d("cancel");
+          c("cancel");
         },
         v = async () => {
           if (r) {
@@ -1081,23 +1081,23 @@ var je = Sa(
             n();
           }
           if (o.value && "onConfirmed" in o.value) {
-            const a = await o.value.onConfirmed();
-            a && (s({ isConfirmed: !0, result: a }), e.clear());
-          } else s({ isConfirmed: !0 }), e.clear();
+            const e = await o.value.onConfirmed();
+            e && (s({ isConfirmed: !0, result: e }), a.clear());
+          } else s({ isConfirmed: !0 }), a.clear();
         };
-      return (a, e) => (
+      return (e, a) => (
         g(),
-        O(aa, { to: "body" }, [
+        O(ee, { to: "body" }, [
           B(
             J,
             { name: "popup", duration: "600" },
             {
               default: z(() => {
-                var a;
+                var e;
                 return [
                   w(t).$display
                     ? (g(),
-                      b("div", _e, [
+                      b("div", _a, [
                         (g(),
                         O(
                           T(w(l)),
@@ -1106,9 +1106,9 @@ var je = Sa(
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
-                                  null == (a = w(t))
+                                  null == (e = w(t))
                                     ? void 0
-                                    : a.noEnterAnimation,
+                                    : e.noEnterAnimation,
                               },
                             ]),
                           },
@@ -1127,7 +1127,7 @@ var je = Sa(
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xe, X(w(t).text), 1)),
+                                  : (g(), b("div", xa, X(w(t).text), 1)),
                               ]),
                               actions: z(() => [
                                 w(t).showCancelButton
@@ -1175,7 +1175,7 @@ var je = Sa(
                                         },
                                         null,
                                         8,
-                                        ke
+                                        ka
                                       ),
                                     ]),
                                   }
@@ -1208,8 +1208,8 @@ var je = Sa(
                       {
                         key: 0,
                         class: "popup-backdrop",
-                        style: N({ background: w(i) }),
-                        onClick: c,
+                        style: W({ background: w(i) }),
+                        onClick: d,
                       },
                       null,
                       4
@@ -1225,29 +1225,29 @@ var je = Sa(
   },
   [["__scopeId", "data-v-aca526dc"]]
 );
-const Ce = {
-    "../components/the-header.vue": fe,
+const Ca = {
+    "../components/the-header.vue": fa,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: je },
+        { __proto__: null, default: ja },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  qe = [];
-for (let Uo in Ce) {
-  const a = Uo.replace("../components/", "").toLowerCase().replace(".vue", "");
-  qe.push({ componentName: a, component: Ce[Uo].default });
+  qa = [];
+for (let Uo in Ca) {
+  const e = Uo.replace("../components/", "").toLowerCase().replace(".vue", "");
+  qa.push({ componentName: e, component: Ca[Uo].default });
 }
-const Se = {
-  install: (a) => {
-    qe.forEach((e) => {
-      a.component(e.componentName, e.component);
+const Sa = {
+  install: (e) => {
+    qa.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-class Oe {
+class Oa {
   constructor() {
     return F.mixin({
       reverseButtons: !0,
@@ -1257,22 +1257,22 @@ class Oe {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Ea.t("button.confirm"),
-      cancelButtonText: Ea.t("button.cancel"),
-      didOpen(a) {
-        const e = a.querySelector(".swal2-cancel");
-        a.querySelector(".swal2-confirm").blur(), e.blur();
+      confirmButtonText: Ee.t("button.confirm"),
+      cancelButtonText: Ee.t("button.cancel"),
+      didOpen(e) {
+        const a = e.querySelector(".swal2-cancel");
+        e.querySelector(".swal2-confirm").blur(), a.blur();
       },
     });
   }
 }
-class ze {
+class za {
   constructor() {
-    this.provider = new Oe();
+    this.provider = new Oa();
   }
-  toast(a) {
+  toast(e) {
     return this.provider.fire({
-      title: a,
+      title: e,
       toast: !0,
       showConfirmButton: !1,
       customClass: "swal2-toast",
@@ -1280,23 +1280,23 @@ class ze {
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       timer: 2e3,
       background: "transparent",
-      didOpen: (a) => {
-        a.addEventListener("click", this.provider.close);
+      didOpen: (e) => {
+        e.addEventListener("click", this.provider.close);
       },
     });
   }
   alert({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
-    confirmButtonText: i = Ea.t("button.confirm"),
+    confirmButtonText: i = Ee.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: l,
       customClass: `swal2-alert ${o}`,
       heightAuto: s,
@@ -1319,16 +1319,16 @@ class ze {
     });
   }
   confirm({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     html: t,
-    confirmButtonText: s = Ea.t("button.confirm"),
+    confirmButtonText: s = Ee.t("button.confirm"),
     confirmCallback: l = null,
     heightAuto: i = !1,
   }) {
     return this.provider.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: t,
       customClass: "swal2-confirm",
       confirmButtonText: s,
@@ -1345,143 +1345,143 @@ class ze {
     this.provider.close();
   }
 }
-ze.prototype.install = function (a) {
-  const e = "alert-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+za.prototype.install = function (e) {
+  const a = "alert-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Te = new ze(),
-  Be = Object.freeze(
+var Ta = new za(),
+  Ba = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: ze, default: Te },
+      { __proto__: null, AlertService: za, default: Ta },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ee {
-  constructor(a, e = {}) {
-    this.instance = ta.create(f({ baseURL: a }, e));
+class Ea {
+  constructor(e, a = {}) {
+    this.instance = te.create(f({ baseURL: e }, a));
   }
   init() {
-    this.instance.defaults.validateStatus = (a) => a >= 200 && a < 300;
+    this.instance.defaults.validateStatus = (e) => e >= 200 && e < 300;
   }
-  use(...a) {
-    a.forEach((a) => {
-      var e;
-      null == (e = a.use) || e.call(a, this.instance);
+  use(...e) {
+    e.forEach((e) => {
+      var a;
+      null == (a = e.use) || a.call(e, this.instance);
     });
   }
 }
-const Le = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
-          const e = V.get("token");
-          return e && (a.headers.Authorization = `Bearer ${e}`), a;
+const La = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
+          const a = V.get("token");
+          return a && (e.headers.Authorization = `Bearer ${a}`), e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   },
-  Pe = (a, { rejectNil: e, rejectEmpty: t }) =>
-    D(
+  Pa = (e, { rejectNil: a, rejectEmpty: t }) =>
+    M(
       (s, l) => {
-        const i = a[l];
-        return (e && L(i)) || (t && sa(i)) ? s : la(l, i, s);
+        const i = e[l];
+        return (a && L(i)) || (t && se(i)) ? s : le(l, i, s);
       },
       {},
-      $(a)
+      $(e)
     ),
-  Ie = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
+  Ia = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
           const {
-            rejectNil: e = !0,
+            rejectNil: a = !0,
             rejectEmpty: t = !1,
             isFormData: s = !1,
-          } = a;
+          } = e;
           if (
-            (a.params &&
-              (a.params = Pe(a.params, { rejectNil: e, rejectEmpty: t })),
-            a.data &&
-              ((a.data = Pe(a.data, { rejectNil: e, rejectEmpty: t })), s))
+            (e.params &&
+              (e.params = Pa(e.params, { rejectNil: a, rejectEmpty: t })),
+            e.data &&
+              ((e.data = Pa(e.data, { rejectNil: a, rejectEmpty: t })), s))
           ) {
-            const e = new FormData();
-            ia((t) => {
-              a.data[t] instanceof Array
-                ? ia((a) => {
-                    e.append(`${t}[]`, a);
-                  }, a.data[t])
-                : e.append(t, a.data[t]);
-            }, $(a.data)),
-              (a.data = e);
+            const a = new FormData();
+            ie((t) => {
+              e.data[t] instanceof Array
+                ? ie((e) => {
+                    a.append(`${t}[]`, e);
+                  }, e.data[t])
+                : a.append(t, e.data[t]);
+            }, $(e.data)),
+              (e.data = a);
           }
-          return a;
+          return e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       ),
-        a.interceptors.response.use(
-          async function (a) {
-            return a.data;
+        e.interceptors.response.use(
+          async function (e) {
+            return e.data;
           },
-          function (a) {
-            return Promise.reject(a);
+          function (e) {
+            return Promise.reject(e);
           }
         );
     },
   },
-  Ae = ta.create();
-(Ae.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Ae.defaults.validateStatus = (a) => a >= 200 && a < 300);
-const De = {
+  Aa = te.create();
+(Aa.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Aa.defaults.validateStatus = (e) => e >= 200 && e < 300);
+const Ma = {
   async "read/marquee"() {
-    const a = await Ae.get("/app/user/news", {
+    const e = await Aa.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Ae.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: a.data, withdraw: e.data };
+      a = await Aa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Me = {
-  "set/popup"(a, e) {
-    a.popupState = u(f({}, e), { $display: !0, $timestamp: Date.now() });
+const Da = {
+  "set/popup"(e, a) {
+    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(a) {
-    a.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(e) {
+    e.popupState = { $display: !1, $timestamp: -1 };
   },
-  "systm/Loading"(a, e) {
-    a.isLoading = e;
+  "systm/Loading"(e, a) {
+    e.isLoading = a;
   },
 };
-const $e = {
+const $a = {
   async "read/marquee"() {
-    const a = await Ae.get("/app/user/news", {
+    const e = await Aa.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Ae.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: a.data, withdraw: e.data };
+      a = await Aa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Ve = {
-  "set/popup"(a, e) {
-    a.popupState = u(f({}, e), { $display: !0, $timestamp: Date.now() });
+const Va = {
+  "set/popup"(e, a) {
+    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(a) {
-    a.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(e) {
+    e.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Ue = {
+const Ua = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: De },
+      { __proto__: null, default: Ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1491,10 +1491,10 @@ const Ue = {
       {
         __proto__: null,
         default: {
-          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
-          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
-          getHadValueTypeFirstItem: (a) => (e) =>
-            a.tips.find((a) => a.type === e && "" !== a.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1503,7 +1503,7 @@ const Ue = {
   ),
   "../store/app/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Me },
+      { __proto__: null, default: Da },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1525,7 +1525,7 @@ const Ue = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: $e },
+      { __proto__: null, default: $a },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1535,10 +1535,10 @@ const Ue = {
       {
         __proto__: null,
         default: {
-          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
-          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
-          getHadValueTypeFirstItem: (a) => (e) =>
-            a.tips.find((a) => a.type === e && "" !== a.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1547,7 +1547,7 @@ const Ue = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ve },
+      { __proto__: null, default: Va },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1567,55 +1567,55 @@ const Ue = {
     )
   ),
 };
-let Fe = {};
-const He = (a, e, t) => {
-  const [s, ...l] = a;
+let Fa = {};
+const Ha = (e, a, t) => {
+  const [s, ...l] = e;
   return l.length
-    ? { [s]: { namespaced: !0, modules: He(l, e, t) } }
-    : { [s]: { namespaced: !0, [e]: t } };
+    ? { [s]: { namespaced: !0, modules: Ha(l, a, t) } }
+    : { [s]: { namespaced: !0, [a]: t } };
 };
-for (let Uo in Ue) {
-  const a = Uo.replace("../store/", "")
+for (let Uo in Ua) {
+  const e = Uo.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Fe = na(Fe, He(ra(a), oa(a), Ue[Uo].default));
+  Fa = ne(Fa, Ha(re(e), oe(e), Ua[Uo].default));
 }
-var Re = Fe;
-const We = {},
-  Ne = function (a, e) {
-    return e && 0 !== e.length
+var Ra = Fa;
+const Na = {},
+  Wa = function (e, a) {
+    return a && 0 !== a.length
       ? Promise.all(
-          e.map((a) => {
-            if ((a = `./${a}`) in We) return;
-            We[a] = !0;
-            const e = a.endsWith(".css"),
-              t = e ? '[rel="stylesheet"]' : "";
-            if (document.querySelector(`link[href="${a}"]${t}`)) return;
+          a.map((e) => {
+            if ((e = `./${e}`) in Na) return;
+            Na[e] = !0;
+            const a = e.endsWith(".css"),
+              t = a ? '[rel="stylesheet"]' : "";
+            if (document.querySelector(`link[href="${e}"]${t}`)) return;
             const s = document.createElement("link");
             return (
-              (s.rel = e ? "stylesheet" : "modulepreload"),
-              e || ((s.as = "script"), (s.crossOrigin = "")),
-              (s.href = a),
+              (s.rel = a ? "stylesheet" : "modulepreload"),
+              a || ((s.as = "script"), (s.crossOrigin = "")),
+              (s.href = e),
               document.head.appendChild(s),
-              e
-                ? new Promise((e, t) => {
-                    s.addEventListener("load", e),
+              a
+                ? new Promise((a, t) => {
+                    s.addEventListener("load", a),
                       s.addEventListener("error", () =>
-                        t(new Error(`Unable to preload CSS for ${a}`))
+                        t(new Error(`Unable to preload CSS for ${e}`))
                       );
                   })
                 : void 0
             );
           })
-        ).then(() => a())
-      : a();
+        ).then(() => e())
+      : e();
   };
-const Xe = (a) => (da("data-v-7daf12f0"), (a = a()), ca(), a),
-  Ye = { class: "footer" },
-  Ge = { class: "container" },
-  Ze = { class: "row row-justify-center" },
-  Ke = Xe(() =>
+const Xa = (e) => (ce("data-v-7daf12f0"), (e = e()), de(), e),
+  Ya = { class: "footer" },
+  Ga = { class: "container" },
+  Za = { class: "row row-justify-center" },
+  Ka = Xa(() =>
     y(
       "div",
       { class: "col col-lg-3 col-md-12" },
@@ -1666,7 +1666,7 @@ const Xe = (a) => (da("data-v-7daf12f0"), (a = a()), ca(), a),
       -1
     )
   ),
-  Qe = Xe(() =>
+  Qa = Xa(() =>
     y(
       "div",
       { class: "col col-lg-3 col-md-12" },
@@ -1713,12 +1713,12 @@ const Xe = (a) => (da("data-v-7daf12f0"), (a = a()), ca(), a),
       -1
     )
   ),
-  Je = Xe(() => y("div", { class: "col col-md-hide" }, null, -1)),
-  at = { class: "col col-lg-4 col-md-12 col-md-first" },
-  et = { href: "/", class: "footer-wordmark w-inline-block" },
+  Ja = Xa(() => y("div", { class: "col col-md-hide" }, null, -1)),
+  et = { class: "col col-lg-4 col-md-12 col-md-first" },
+  at = { href: "/", class: "footer-wordmark w-inline-block" },
   tt = { class: "wordmark w-embed" },
   st = ["src"],
-  lt = Xe(() =>
+  lt = Xa(() =>
     y(
       "div",
       { class: "footer-copyright" },
@@ -1731,20 +1731,20 @@ const Xe = (a) => (da("data-v-7daf12f0"), (a = a()), ca(), a),
       -1
     )
   );
-var it = Sa(
+var it = Se(
   {
-    setup: (a) => (a, e) => (
+    setup: (e) => (e, a) => (
       g(),
-      b("footer", Ye, [
-        y("div", Ge, [
-          y("div", Ze, [
-            Ke,
-            Qe,
-            Je,
-            y("div", at, [
-              y("a", et, [
+      b("footer", Ya, [
+        y("div", Ga, [
+          y("div", Za, [
+            Ka,
+            Qa,
+            Ja,
+            y("div", et, [
+              y("a", at, [
                 y("div", tt, [
-                  y("img", { src: w(ka)("logo.png"), alt: "" }, null, 8, st),
+                  y("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, st),
                 ]),
               ]),
             ]),
@@ -1759,8 +1759,8 @@ var it = Sa(
 const ot = {
     components: { Footer: it },
     setup() {
-      const { t: a } = $a();
-      return { t: a };
+      const { t: e } = $e();
+      return { t: e };
     },
   },
   rt = y(
@@ -2143,7 +2143,7 @@ const ot = {
     -1
   ),
   nt = y("div", { class: "spacing" }, null, -1),
-  dt = y(
+  ct = y(
     "section",
     { class: "section" },
     [
@@ -3219,7 +3219,7 @@ const ot = {
     ],
     -1
   ),
-  ct = y(
+  dt = y(
     "section",
     { class: "section" },
     [
@@ -3392,16 +3392,16 @@ const ot = {
     ],
     -1
   ),
-  pt = pa(
+  pt = pe(
     '<section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   );
-var vt = Sa(ot, [
+var vt = Se(ot, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         const o = S("Footer");
-        return g(), b(_, null, [rt, nt, dt, ct, pt, B(o)], 64);
+        return g(), b(_, null, [rt, nt, ct, dt, pt, B(o)], 64);
       },
     ],
   ]),
@@ -3415,8 +3415,8 @@ var vt = Sa(ot, [
 const ft = {
     title: "pages.home.nav.about",
     setup() {
-      const { t: a } = $a();
-      return { t: a };
+      const { t: e } = $e();
+      return { t: e };
     },
   },
   ut = { class: "about" },
@@ -3542,10 +3542,10 @@ const ft = {
       -1
     ),
   ];
-var bt = Sa(ft, [
+var bt = Se(ft, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         return g(), b("div", ut, gt);
       },
     ],
@@ -3560,32 +3560,32 @@ var bt = Sa(ft, [
 const ht = {
     layout: "layout-demo",
     setup() {
-      const a = ue(),
-        { t: e, locale: t, setPrefix: s, change: l } = $a();
+      const e = ua(),
+        { t: a, locale: t, setPrefix: s, change: l } = $e();
       s({ $current: "pages.demo" });
       const i = R(),
         o = Z("alert-service"),
-        r = va({ current: t.value || "zh-tw" });
+        r = ve({ current: t.value || "zh-tw" });
       return (
         q(() => {}),
         {
-          t: e,
+          t: a,
           lang: r,
           toHome: () => {
             i.push("/home");
           },
           swalModal: () => {
             o.alert({
-              title: e("$current.modal.swal.title"),
-              text: e("$current.modal.swal"),
+              title: a("$current.modal.swal.title"),
+              text: a("$current.modal.swal"),
             });
           },
           changeLang: () => {
-            const a = "zh-tw" === r.current ? "en" : "zh-tw";
-            (r.current = a), l(a);
+            const e = "zh-tw" === r.current ? "en" : "zh-tw";
+            (r.current = e), l(e);
           },
           popupModal: async () => {
-            await a.modal({ title: "popup", text: "this a popup" });
+            await e.modal({ title: "popup", text: "this a popup" });
           },
         }
       );
@@ -3608,10 +3608,10 @@ const ht = {
   Bt = { class: "name" },
   Et = y("input", { type: "radio", name: "radio" }, null, -1),
   Lt = { class: "name" };
-var Pt = Sa(ht, [
+var Pt = Se(ht, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         return (
           g(),
           b("div", wt, [
@@ -3624,8 +3624,8 @@ var Pt = Sa(ht, [
                     {
                       class: "toggle",
                       onClick:
-                        e[0] ||
-                        (e[0] = (...a) => s.changeLang && s.changeLang(...a)),
+                        a[0] ||
+                        (a[0] = (...e) => s.changeLang && s.changeLang(...e)),
                     },
                     jt
                   ),
@@ -3640,7 +3640,7 @@ var Pt = Sa(ht, [
                   {
                     class: "radio",
                     onClick:
-                      e[1] || (e[1] = (...a) => s.toHome && s.toHome(...a)),
+                      a[1] || (a[1] = (...e) => s.toHome && s.toHome(...e)),
                   },
                   [Ot, y("span", zt, X(s.t("$current.router.link")), 1)]
                 ),
@@ -3649,8 +3649,8 @@ var Pt = Sa(ht, [
                   {
                     class: "radio",
                     onClick:
-                      e[2] ||
-                      (e[2] = (...a) => s.swalModal && s.swalModal(...a)),
+                      a[2] ||
+                      (a[2] = (...e) => s.swalModal && s.swalModal(...e)),
                   },
                   [Tt, y("span", Bt, X(s.t("$current.modal.swal")), 1)]
                 ),
@@ -3659,8 +3659,8 @@ var Pt = Sa(ht, [
                   {
                     class: "radio",
                     onClick:
-                      e[3] ||
-                      (e[3] = (...a) => s.popupModal && s.popupModal(...a)),
+                      a[3] ||
+                      (a[3] = (...e) => s.popupModal && s.popupModal(...e)),
                   },
                   [Et, y("span", Lt, X(s.t("$current.popup.use")), 1)]
                 ),
@@ -3678,7 +3678,7 @@ var Pt = Sa(ht, [
       { value: "Module" }
     )
   );
-const At = (a) =>
+const At = (e) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -3688,31 +3688,31 @@ const At = (a) =>
         "../assets/video/home/knife2-3.mp4": "./assets/knife2-3.db814c22.mp4",
         "../assets/video/home/knife2-4.mp4": "./assets/knife2-4.0d587ad1.mp4",
         "../assets/video/home/tea_1.mp4": "./assets/tea_1.8e120b16.mp4",
-      }[`../assets/video/${a}`],
+      }[`../assets/video/${e}`],
       self.location
     ).href,
-  Dt = {
+  Mt = {
     components: { Footer: it },
     setup() {
-      const { t: a } = $a();
+      const { t: e } = $e();
       return (
         q(() => {
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a, getVideoUrl: At }
+        { t: e, getVideoUrl: At }
       );
     },
   },
-  Mt = { "data-mouse-class": "cc-icon", class: "header cc-large" },
+  Dt = { "data-mouse-class": "cc-icon", class: "header cc-large" },
   $t = {
     class: "header-image_wrap",
     style: {
@@ -3739,8 +3739,8 @@ const At = (a) =>
   },
   Ht = ["src"],
   Rt = G(" Your browser does not support the video tag. "),
-  Wt = y("div", { class: "iframe-video_blocker" }, null, -1),
-  Nt = pa(
+  Nt = y("div", { class: "iframe-video_blocker" }, null, -1),
+  Wt = pe(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance"><h1 data-animation-element="title" class="h4" style=""><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
@@ -4768,11 +4768,11 @@ const At = (a) =>
     ],
     -1
   ),
-  as = pa(
+  es = pe(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  es = { class: "pre-footer" },
+  as = { class: "pre-footer" },
   ts = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
@@ -4790,14 +4790,14 @@ const At = (a) =>
   is = ["src"],
   os = G(" Your browser does not support the video tag. "),
   rs = y("div", { class: "iframe-video_blocker" }, null, -1),
-  ns = pa(
+  ns = pe(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ds = Sa(Dt, [
+var cs = Se(Mt, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         const o = S("Footer");
         return (
           g(),
@@ -4805,7 +4805,7 @@ var ds = Sa(Dt, [
             _,
             null,
             [
-              y("header", Mt, [
+              y("header", Dt, [
                 y("div", $t, [
                   y("div", Vt, [
                     y("div", Ut, [
@@ -4822,11 +4822,11 @@ var ds = Sa(Dt, [
                         ),
                         Rt,
                       ]),
-                      Wt,
+                      Nt,
                     ]),
                   ]),
                 ]),
-                Nt,
+                Wt,
               ]),
               Xt,
               Yt,
@@ -4835,9 +4835,9 @@ var ds = Sa(Dt, [
               Kt,
               Qt,
               Jt,
-              as,
+              es,
               y("div", null, [
-                y("aside", es, [
+                y("aside", as, [
                   y("a", ts, [
                     y("div", ss, [
                       y("video", ls, [
@@ -4867,9 +4867,9 @@ var ds = Sa(Dt, [
       },
     ],
   ]),
-  cs = Object.freeze(
+  ds = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ds },
+      { __proto__: null, default: cs },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -4877,8 +4877,8 @@ var ds = Sa(Dt, [
 const ps = ["data-index"],
   vs = ["src"],
   ms = [
-    pa(
-      '<div class="btn-text-wrap"><div class="btn-text cc-scroll">Scroll</div><div class="btn-text cc-bottom cc-scroll">Scroll</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
+    pe(
+      '<div class="btn-text-wrap"><div class="btn-text cc-scroll">請往下滑</div><div class="btn-text cc-bottom cc-scroll">請往下滑</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
   ];
@@ -4886,9 +4886,9 @@ const fs = {
   components: {
     Footer: it,
     View: {
-      setup(a) {
-        const e = x(),
-          t = va({ x: 0, y: 0 }),
+      setup(e) {
+        const a = x(),
+          t = ve({ x: 0, y: 0 }),
           s = k([
             {
               url: "home/opening/1.jpg",
@@ -5061,13 +5061,13 @@ const fs = {
             rootMargin: "0px",
             threshold: Array(100)
               .fill()
-              .map((a, e) => 0.01 * e),
+              .map((e, a) => 0.01 * a),
           },
-          o = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              var e, t;
-              const { intersectionRatio: l, target: i } = a,
-                o = null == (e = i.dataset) ? void 0 : e.index;
+          o = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              var a, t;
+              const { intersectionRatio: l, target: i } = e,
+                o = null == (a = i.dataset) ? void 0 : a.index;
               if ("img" === (null == (t = i.dataset) ? void 0 : t.item))
                 s.value[o].isEnter = !(l < 0.4);
               else
@@ -5076,26 +5076,26 @@ const fs = {
             });
           }, i),
           r = () => {
-            const a = document.getElementById("studio");
-            if (a) {
-              const e = a.offsetTop;
-              window.scrollTo({ top: e, behavior: "smooth" });
+            const e = document.getElementById("studio");
+            if (e) {
+              const a = e.offsetTop;
+              window.scrollTo({ top: a, behavior: "smooth" });
             }
           };
         C(
-          () => e.state.app.isLoading,
-          (a) => {
-            if (((l.value = !a), a)) {
-              ((a) => {
-                for (const e of a) o.unobserve(e);
+          () => a.state.app.isLoading,
+          (e) => {
+            if (((l.value = !e), e)) {
+              ((e) => {
+                for (const a of e) o.unobserve(a);
               })([
                 ...document.querySelectorAll(".img-wrap"),
                 document.querySelector(".btn-scroll"),
               ]);
             } else
-              ma(() => {
-                ((a) => {
-                  for (const e of a) o.observe(e);
+              me(() => {
+                ((e) => {
+                  for (const a of e) o.observe(a);
                 })([
                   ...document.querySelectorAll(".img-wrap"),
                   document.querySelector(".btn-scroll"),
@@ -5104,14 +5104,14 @@ const fs = {
           }
         );
         const n = k(!1),
-          d = () => {
+          c = () => {
             n.value = window.innerWidth < 991;
           };
         return (
           q(() => {
-            d(), window.addEventListener("resize", d), fa.init();
+            c(), window.addEventListener("resize", c), fe.init();
           }),
-          (a, e) => (
+          (e, a) => (
             g(),
             b(
               _,
@@ -5122,16 +5122,16 @@ const fs = {
                   {
                     class: "view",
                     onMousemove:
-                      e[0] ||
-                      (e[0] = (a) =>
-                        ((a) => {
+                      a[0] ||
+                      (a[0] = (e) =>
+                        ((e) => {
                           if (window.innerWidth > 576) {
-                            const e = window.innerWidth / 2,
+                            const a = window.innerWidth / 2,
                               s = window.innerHeight / 2;
-                            (t.x = ((e - a.clientX) / 100) * 3),
-                              (t.y = ((s - a.clientY) / 100) * 3);
+                            (t.x = ((a - e.clientX) / 100) * 3),
+                              (t.y = ((s - e.clientY) / 100) * 3);
                           }
-                        })(a)),
+                        })(e)),
                   },
                   [
                     l.value
@@ -5141,7 +5141,7 @@ const fs = {
                           {
                             key: 0,
                             class: "view-wrap",
-                            style: N({
+                            style: W({
                               transform: `translate3d(${2 * w(t).x}px, ${
                                 w(t).y
                               }px, 0) rotateX(${-w(t).y / 2}deg) rotateY(${
@@ -5155,40 +5155,40 @@ const fs = {
                             b(
                               _,
                               null,
-                              W(
+                              N(
                                 s.value,
-                                (a, e) => (
+                                (e, a) => (
                                   g(),
                                   b(
                                     "div",
                                     {
                                       class: "img-wrap home-hero_image-placer",
-                                      key: a.url + e,
-                                      style: N({
-                                        left: n.value ? "unset" : a.css.left,
+                                      key: e.url + a,
+                                      style: W({
+                                        left: n.value ? "unset" : e.css.left,
                                         right: n.value
-                                          ? a.css.m_right
+                                          ? e.css.m_right
                                           : "unset",
-                                        top: n.value ? a.css.m_top : a.css.top,
-                                        animation: a.isEnter
-                                          ? a.css.enterAnimation
-                                          : a.css.leaveAnimation,
+                                        top: n.value ? e.css.m_top : e.css.top,
+                                        animation: e.isEnter
+                                          ? e.css.enterAnimation
+                                          : e.css.leaveAnimation,
                                       }),
-                                      "data-index": e,
+                                      "data-index": a,
                                       "data-item": "img",
                                     },
                                     [
                                       y(
                                         "img",
                                         {
-                                          src: w(ka)(a.url),
-                                          style: N({
+                                          src: w(ke)(e.url),
+                                          style: W({
                                             width: n.value
-                                              ? a.css.m_width
-                                              : a.css.width,
+                                              ? e.css.m_width
+                                              : e.css.width,
                                             height: n.value
-                                              ? a.css.m_height
-                                              : a.css.height,
+                                              ? e.css.m_height
+                                              : e.css.height,
                                             transform: `translate3d(${
                                               w(t).x / 2
                                             }px,${w(t).y / 2}px, 100px)`,
@@ -5231,35 +5231,35 @@ const fs = {
     },
   },
   setup() {
-    const a = k("");
+    const e = k("");
     return (
       q(() => {
-        document.querySelectorAll(".video-cover").forEach((a) => {
-          a.play();
+        document.querySelectorAll(".video-cover").forEach((e) => {
+          e.play();
         });
-        const a = new IntersectionObserver((a) => {
-          a.forEach((a) => {
-            a.isIntersecting
-              ? a.target.classList.add("active")
-              : a.target.classList.remove("active");
+        const e = new IntersectionObserver((e) => {
+          e.forEach((e) => {
+            e.isIntersecting
+              ? e.target.classList.add("active")
+              : e.target.classList.remove("active");
           });
         });
-        document.querySelectorAll(".target_line").forEach((e) => {
-          a.observe(e);
+        document.querySelectorAll(".target_line").forEach((a) => {
+          e.observe(a);
         });
       }),
-      { a: a, getVideoUrl: At, getImageUrl: ka }
+      { a: e, getVideoUrl: At, getImageUrl: ke }
     );
   },
 };
-fa.init();
-const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
+fe.init();
+const us = (e) => (ce("data-v-18945abc"), (e = e()), de(), e),
   gs = us(() =>
     y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
   bs = { id: "studio", class: "section" },
-  ys = pa(
-    '<div class="section-title_component" data-v-457baaa7><div class="container" data-v-457baaa7><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div class="section-title_dot" style="opacity:1;" data-v-457baaa7><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-457baaa7></div></div><div class="u-overflow-hidden" data-v-457baaa7><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><h2 class="u-ts-4" data-v-457baaa7>About Basis</h2></div></div></div></div></div><div class="container" data-v-457baaa7><div class="w-layout-grid pair-grid" data-v-457baaa7><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-457baaa7><h3 data-animation-element="title" style="" data-v-457baaa7><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Basis </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> increases </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> the </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> value </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> digital </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="800" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> products </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> and </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> their </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="900" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> brands </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> through </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="1000" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> design. </div></div></h3><div class="btn-group" data-v-457baaa7><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-457baaa7><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7> View cases </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7> View cases </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-457baaa7><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7> About us </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7> About us </div></div></a></div></div></div></div></div>',
+  ys = pe(
+    '<div class="section-title_component" data-v-18945abc><div class="container" data-v-18945abc><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div class="section-title_dot" style="opacity:1;" data-v-18945abc><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-18945abc></div></div><div class="u-overflow-hidden" data-v-18945abc><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><h2 class="u-ts-4" data-v-18945abc>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-18945abc><div class="w-layout-grid pair-grid" data-v-18945abc><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-18945abc><h3 data-animation-element="title" style="" data-v-18945abc><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-18945abc><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-18945abc><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc> 館藏查詢 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc> 館藏查詢 </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-18945abc><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc> 預約參觀 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc> 預約參觀 </div></div></a></div></div></div></div></div>',
     2
   ),
   hs = { class: "u-mt-8-75" },
@@ -5318,8 +5318,8 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
       "transform-style": "preserve-3d",
     },
   },
-  Ds = ["src"],
-  Ms = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Ms = ["src"],
+  Ds = { role: "listitem", class: "marquee_logo w-dyn-item" },
   $s = {
     class: "marquee_item cc-6",
     style: {
@@ -5338,14 +5338,14 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   },
   Hs = ["src"],
   Rs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ws = {
+  Ns = {
     class: "marquee_item cc-8",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ns = ["src"],
+  Ws = ["src"],
   Xs = { role: "listitem", class: "marquee_logo w-dyn-item" },
   Ys = {
     class: "marquee_item cc-9",
@@ -5359,16 +5359,16 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
     y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
   Ks = { class: "section" },
-  Qs = pa(
-    '<div class="section-title_component" data-v-457baaa7><div class="container" data-v-457baaa7><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div class="section-title_dot" style="opacity:1;" data-v-457baaa7><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-457baaa7></div></div><div class="u-overflow-hidden" data-v-457baaa7><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><h2 class="u-ts-4" data-v-457baaa7>What We Do</h2></div></div></div></div></div>',
+  Qs = pe(
+    '<div class="section-title_component" data-v-18945abc><div class="container" data-v-18945abc><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div class="section-title_dot" style="opacity:1;" data-v-18945abc><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-18945abc></div></div><div class="u-overflow-hidden" data-v-18945abc><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><h2 class="u-ts-4" data-v-18945abc>空間預約</h2></div></div></div></div></div>',
     1
   ),
   Js = { class: "container" },
-  al = pa(
-    '<div data-animation-element="group" data-v-457baaa7><h3 data-animation-element="title" class="h1" style="" data-v-457baaa7><div data-aos="fade-up" data-aos-duration="700" class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Digital </div></div><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="700" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Products </div></div></h3></div>',
+  el = pe(
+    '<div data-animation-element="group" data-v-18945abc><h3 data-animation-element="title" class="h1" style="" data-v-18945abc><div data-aos="fade-up" data-aos-duration="700" class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> 詹紹綺人文藝術中心 </div></div><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="700" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> (Skyart7325)開放每日一組預約。 </div></div></h3></div>',
     1
   ),
-  el = { class: "sticky-pair" },
+  al = { class: "sticky-pair" },
   tl = { class: "w-layout-grid pair-grid" },
   sl = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
   ll = {
@@ -5382,12 +5382,12 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   ol = { role: "list", class: "w-dyn-items" },
   rl = { role: "listitem", class: "w-dyn-item" },
   nl = { class: "card-wrapper cc-small" },
-  dl = {
+  cl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  cl = {
+  dl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -5424,7 +5424,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, "Yoginess Brand")]
+            [y("h4", { class: "u-ts-4" }, "Skyart3725全景")]
           ),
         ]),
       ],
@@ -5463,26 +5463,26 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   Sl = ["src"],
   Ol = G(" Your browser does not support the video tag. "),
   zl = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  Tl = pa(
-    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div class="u-overflow-hidden" data-v-457baaa7><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-457baaa7><div class="card-large_text" data-v-457baaa7><h4 class="u-ts-4" data-v-457baaa7>Sable App</h4></div></div></div></div>',
+  Tl = pe(
+    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div class="u-overflow-hidden" data-v-18945abc><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-18945abc><div class="card-large_text" data-v-18945abc><h4 class="u-ts-4" data-v-18945abc>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  Bl = pa(
-    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-457baaa7><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-457baaa7><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7> We help companies grow by harnessing the power of narrative, design, and technology. From new ventures to industry leaders, Basis believes that starting small and establishing core principles creates better design systems for digital products and their brands. </p></div><div class="btn-group" data-v-457baaa7><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" data-v-457baaa7>View cases</div><div class="btn-text cc-bottom" data-v-457baaa7>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" data-v-457baaa7>Design trial</div><div class="btn-text cc-bottom" data-v-457baaa7>Design trial</div></div></a></div></div></div>',
+  Bl = pe(
+    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-18945abc><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-18945abc><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-18945abc> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-18945abc><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" data-v-18945abc>空間介紹</div><div class="btn-text cc-bottom" data-v-18945abc>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" data-v-18945abc>立即預約</div><div class="btn-text cc-bottom" data-v-18945abc>立即預約</div></div></a></div></div></div>',
     1
   ),
   El = us(() =>
     y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
   Ll = { class: "section" },
-  Pl = pa(
-    '<div class="section-title_component" data-v-457baaa7><div class="container" data-v-457baaa7><div class="section-title_wrapper" data-v-457baaa7><div class="section-title_dot" style="opacity:1;" data-v-457baaa7></div><div class="u-overflow-hidden" data-v-457baaa7><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><h2 class="u-ts-4" data-v-457baaa7>Capabilities</h2></div></div></div></div></div>',
+  Pl = pe(
+    '<div class="section-title_component" data-v-18945abc><div class="container" data-v-18945abc><div class="section-title_wrapper" data-v-18945abc><div class="section-title_dot" style="opacity:1;" data-v-18945abc></div><div class="u-overflow-hidden" data-v-18945abc><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><h2 class="u-ts-4" data-v-18945abc>Capabilities</h2></div></div></div></div></div>',
     1
   ),
   Il = { class: "container" },
   Al = { class: "w-layout-grid pair-grid" },
-  Dl = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
-  Ml = { class: "service-list" },
+  Ml = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
+  Dl = { class: "service-list" },
   $l = { class: "logomark_component" },
   Vl = {
     class: "logomark w-embed",
@@ -5517,7 +5517,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Research")]
+              [y("h3", { class: "u-tc-caps" }, "定香人文")]
             ),
           ]
         ),
@@ -5539,7 +5539,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Brand Strategy")]
+              [y("h3", { class: "u-tc-caps" }, "藝術品經紀")]
             ),
           ]
         ),
@@ -5561,7 +5561,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Creative Direction")]
+              [y("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
             ),
           ]
         ),
@@ -5583,7 +5583,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Brand identity")]
+              [y("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
             ),
           ]
         ),
@@ -5605,7 +5605,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "UX & UI Design")]
+              [y("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
             ),
           ]
         ),
@@ -5627,7 +5627,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Interaction Design")]
+              [y("h3", { class: "u-tc-caps" }, "精品咖啡")]
             ),
           ]
         ),
@@ -5649,7 +5649,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Implementation")]
+              [y("h3", { class: "u-tc-caps" }, "天幕茶碗")]
             ),
           ]
         ),
@@ -5671,7 +5671,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "Webflow Development")]
+              [y("h3", { class: "u-tc-caps" }, "典藏名酒")]
             ),
           ]
         ),
@@ -5679,14 +5679,14 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
       -1
     )
   ),
-  Hl = pa(
-    '<div class="btn-group" data-v-457baaa7><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-457baaa7><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" data-v-457baaa7>Our services</div><div class="btn-text cc-bottom" data-v-457baaa7>Our services</div></div></a></div></div>',
+  Hl = pe(
+    '<div class="btn-group" data-v-18945abc><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-18945abc><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" data-v-18945abc>藝品介紹</div><div class="btn-text cc-bottom" data-v-18945abc>藝品介紹</div></div></a></div></div>',
     1
   ),
   Rl = { class: "section" },
-  Wl = { class: "container" },
-  Nl = pa(
-    '<div class="row" data-v-457baaa7><div data-animation-element="group" class="col" data-v-457baaa7><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Fintech </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Design </div></div></h3></div></div>',
+  Nl = { class: "container" },
+  Wl = pe(
+    '<div class="row" data-v-18945abc><div data-animation-element="group" class="col" data-v-18945abc><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> Fintech </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> Design </div></div></h3></div></div>',
     1
   ),
   Xl = { class: "sticky-pair" },
@@ -5703,7 +5703,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ai = {
+  ei = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -5712,7 +5712,7 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
       opacity: "1",
     },
   },
-  ei = { class: "card-image_wrapper" },
+  ai = { class: "card-image_wrapper" },
   ti = { class: "iframe-video_wrapper" },
   si = {
     class: "video-cover",
@@ -5725,19 +5725,19 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   li = ["src"],
   ii = G(" Your browser does not support the video tag. "),
   oi = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  ri = pa(
-    '<div class="card-body" data-v-457baaa7><div class="u-overflow-hidden" data-v-457baaa7><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-457baaa7><div class="card-large_text" data-v-457baaa7><h4 class="u-ts-4" data-v-457baaa7>Seen Brand</h4></div></div></div></div>',
+  ri = pe(
+    '<div class="card-body" data-v-18945abc><div class="u-overflow-hidden" data-v-18945abc><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-18945abc><div class="card-large_text" data-v-18945abc><h4 class="u-ts-4" data-v-18945abc>Seen Brand</h4></div></div></div></div>',
     1
   ),
   ni = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  di = {
+  ci = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  ci = { role: "list", class: "w-dyn-items" },
+  di = { role: "list", class: "w-dyn-items" },
   pi = { role: "listitem", class: "w-dyn-item" },
   vi = { class: "card-wrapper cc-small" },
   mi = {
@@ -5789,14 +5789,14 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
       -1
     )
   ),
-  xi = pa(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-457baaa7><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-457baaa7><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-457baaa7> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-457baaa7><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" data-v-457baaa7>Fintech services</div><div class="btn-text cc-bottom" data-v-457baaa7>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" data-v-457baaa7>Design trial</div><div class="btn-text cc-bottom" data-v-457baaa7>Design trial</div></div></a></div></div></div>',
+  xi = pe(
+    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-18945abc><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-18945abc><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-18945abc> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-18945abc><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" data-v-18945abc>Fintech services</div><div class="btn-text cc-bottom" data-v-18945abc>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" data-v-18945abc>Design trial</div><div class="btn-text cc-bottom" data-v-18945abc>Design trial</div></div></a></div></div></div>',
     1
   ),
   ki = { class: "section" },
   ji = { class: "container" },
-  Ci = pa(
-    '<div class="row" data-v-457baaa7><div data-animation-element="group" class="col" data-v-457baaa7><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-457baaa7><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Branding </div></div></h3></div></div>',
+  Ci = pe(
+    '<div class="row" data-v-18945abc><div data-animation-element="group" class="col" data-v-18945abc><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-18945abc><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> Branding </div></div></h3></div></div>',
     1
   ),
   qi = { class: "sticky-pair" },
@@ -5828,8 +5828,8 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
     },
   },
   Ai = { class: "card-image_wrapper" },
-  Di = { class: "iframe-video_wrapper" },
-  Mi = {
+  Mi = { class: "iframe-video_wrapper" },
+  Di = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -5867,8 +5867,8 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
     class: "w-dyn-list",
   },
   Ri = { role: "list", class: "w-dyn-items" },
-  Wi = { role: "listitem", class: "w-dyn-item" },
-  Ni = { class: "card-wrapper cc-large" },
+  Ni = { role: "listitem", class: "w-dyn-item" },
+  Wi = { class: "card-wrapper cc-large" },
   Xi = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
@@ -5895,17 +5895,17 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   },
   Qi = ["src"],
   Ji = G(" Your browser does not support the video tag. "),
-  ao = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  eo = pa(
-    '<div class="card-body" data-v-457baaa7><div class="u-overflow-hidden" data-v-457baaa7><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-457baaa7><div class="card-large_text" data-v-457baaa7><h4 class="u-ts-4" data-v-457baaa7>Sable Brand</h4></div></div></div></div>',
+  eo = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  ao = pe(
+    '<div class="card-body" data-v-18945abc><div class="u-overflow-hidden" data-v-18945abc><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-18945abc><div class="card-large_text" data-v-18945abc><h4 class="u-ts-4" data-v-18945abc>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  to = pa(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-457baaa7><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-457baaa7><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-457baaa7> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-457baaa7><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" data-v-457baaa7>View cases</div><div class="btn-text cc-bottom" data-v-457baaa7>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7> Design trial </div></div></a></div></div></div>',
+  to = pe(
+    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-18945abc><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-18945abc><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-18945abc> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-18945abc><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" data-v-18945abc>View cases</div><div class="btn-text cc-bottom" data-v-18945abc>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc> Design trial </div></div></a></div></div></div>',
     1
   ),
-  so = pa(
-    '<section class="section" data-v-457baaa7><div class="section-title_component" data-v-457baaa7><div class="container" data-v-457baaa7><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div class="section-title_dot" style="opacity:1;" data-v-457baaa7></div><div class="u-overflow-hidden" data-v-457baaa7><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><h2 class="u-ts-4" data-v-457baaa7>Contact Us</h2></div></div></div></div></div><div class="container" data-v-457baaa7><div class="w-layout-grid pair-grid" data-v-457baaa7><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-457baaa7><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-457baaa7><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-457baaa7><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-457baaa7><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-457baaa7><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-457baaa7><div style="position:relative;display:inline-block;" data-v-457baaa7> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+  so = pe(
+    '<section class="section" data-v-18945abc><div class="section-title_component" data-v-18945abc><div class="container" data-v-18945abc><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div class="section-title_dot" style="opacity:1;" data-v-18945abc></div><div class="u-overflow-hidden" data-v-18945abc><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><h2 class="u-ts-4" data-v-18945abc>Contact Us</h2></div></div></div></div></div><div class="container" data-v-18945abc><div class="w-layout-grid pair-grid" data-v-18945abc><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-18945abc><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-18945abc><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-18945abc><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-18945abc><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-18945abc><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-18945abc><div style="position:relative;display:inline-block;" data-v-18945abc> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   ),
   lo = { class: "pre-footer" },
@@ -5926,8 +5926,8 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   no = ["src"],
   co = G(" Your browser does not support the video tag. "),
   po = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  vo = pa(
-    '<div class="pre-footer_gradient" data-v-457baaa7></div><div class="marquee" data-v-457baaa7><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-457baaa7><div class="btn cc-large-landscape" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text cc-large-landscape" data-v-457baaa7>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-457baaa7>Button</div></div></div></div>',
+  vo = pe(
+    '<div class="pre-footer_gradient" data-v-18945abc></div><div class="marquee" data-v-18945abc><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-18945abc><div class="btn cc-large-landscape" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text cc-large-landscape" data-v-18945abc>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-18945abc>Button</div></div></div></div>',
     3
   ),
   mo = {
@@ -5947,14 +5947,14 @@ const us = (a) => (da("data-v-457baaa7"), (a = a()), ca(), a),
   go = ["src"],
   bo = G(" Your browser does not support the video tag. "),
   yo = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  ho = pa(
-    '<div class="pre-footer_gradient" data-v-457baaa7></div><div class="marquee" data-v-457baaa7><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-457baaa7><div class="h1" data-v-457baaa7>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-457baaa7><div class="btn cc-large-landscape" data-v-457baaa7><div class="btn-text-wrap" data-v-457baaa7><div class="btn-text cc-large-landscape" data-v-457baaa7>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-457baaa7>Button</div></div></div></div>',
+  ho = pe(
+    '<div class="pre-footer_gradient" data-v-18945abc></div><div class="marquee" data-v-18945abc><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-18945abc><div class="h1" data-v-18945abc>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-18945abc><div class="btn cc-large-landscape" data-v-18945abc><div class="btn-text-wrap" data-v-18945abc><div class="btn-text cc-large-landscape" data-v-18945abc>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-18945abc>Button</div></div></div></div>',
     3
   );
-var wo = Sa(fs, [
+var wo = Se(fs, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, t, s, l, i) {
         const o = S("View"),
           r = S("Footer");
         return (
@@ -6057,11 +6057,11 @@ var wo = Sa(fs, [
                               },
                               null,
                               8,
-                              Ds
+                              Ms
                             ),
                           ]),
                         ]),
-                        y("div", Ms, [
+                        y("div", Ds, [
                           y("div", $s, [
                             y(
                               "img",
@@ -6098,7 +6098,7 @@ var wo = Sa(fs, [
                           ]),
                         ]),
                         y("div", Rs, [
-                          y("div", Ws, [
+                          y("div", Ns, [
                             y(
                               "img",
                               {
@@ -6111,7 +6111,7 @@ var wo = Sa(fs, [
                               },
                               null,
                               8,
-                              Ns
+                              Ws
                             ),
                           ]),
                         ]),
@@ -6142,8 +6142,8 @@ var wo = Sa(fs, [
               y("section", Ks, [
                 Qs,
                 y("div", Js, [
-                  al,
-                  y("div", el, [
+                  el,
+                  y("div", al, [
                     y("div", tl, [
                       y("div", sl, [
                         y("div", ll, [
@@ -6151,8 +6151,8 @@ var wo = Sa(fs, [
                             y("div", ol, [
                               y("div", rl, [
                                 y("div", nl, [
-                                  y("div", dl, [
-                                    y("div", cl, [
+                                  y("div", cl, [
+                                    y("div", dl, [
                                       y("div", pl, [
                                         y("div", vl, [
                                           y("video", ml, [
@@ -6225,8 +6225,8 @@ var wo = Sa(fs, [
                 Pl,
                 y("div", Il, [
                   y("div", Al, [
-                    y("div", Dl, [
-                      y("div", Ml, [
+                    y("div", Ml, [
+                      y("div", Dl, [
                         y("div", $l, [
                           y("div", Vl, [
                             y(
@@ -6246,8 +6246,8 @@ var wo = Sa(fs, [
                 ]),
               ]),
               y("section", Rl, [
-                y("div", Wl, [
-                  Nl,
+                y("div", Nl, [
+                  Wl,
                   y("div", Xl, [
                     y("div", Yl, [
                       y("div", Gl, [
@@ -6255,8 +6255,8 @@ var wo = Sa(fs, [
                           y("div", Kl, [
                             y("div", Ql, [
                               y("div", Jl, [
-                                y("div", ai, [
-                                  y("div", ei, [
+                                y("div", ei, [
+                                  y("div", ai, [
                                     y("div", ti, [
                                       y("video", si, [
                                         y(
@@ -6285,8 +6285,8 @@ var wo = Sa(fs, [
                       ]),
                       y("div", null, [
                         y("div", ni, [
-                          y("div", di, [
-                            y("div", ci, [
+                          y("div", ci, [
+                            y("div", di, [
                               y("div", pi, [
                                 y("div", vi, [
                                   y("div", mi, [
@@ -6339,8 +6339,8 @@ var wo = Sa(fs, [
                                   y("div", Pi, [
                                     y("div", Ii, [
                                       y("div", Ai, [
-                                        y("div", Di, [
-                                          y("video", Mi, [
+                                        y("div", Mi, [
+                                          y("video", Di, [
                                             y(
                                               "source",
                                               {
@@ -6369,8 +6369,8 @@ var wo = Sa(fs, [
                       ]),
                       y("div", Hi, [
                         y("div", Ri, [
-                          y("div", Wi, [
-                            y("div", Ni, [
+                          y("div", Ni, [
+                            y("div", Wi, [
                               y("div", Xi, [
                                 y("div", Yi, [
                                   y("div", Gi, [
@@ -6390,10 +6390,10 @@ var wo = Sa(fs, [
                                         ),
                                         Ji,
                                       ]),
-                                      ao,
+                                      eo,
                                     ]),
                                   ]),
-                                  eo,
+                                  ao,
                                 ]),
                               ]),
                             ]),
@@ -6455,7 +6455,7 @@ var wo = Sa(fs, [
         );
       },
     ],
-    ["__scopeId", "data-v-457baaa7"],
+    ["__scopeId", "data-v-18945abc"],
   ]),
   _o = Object.freeze(
     Object.defineProperty(
@@ -6466,7 +6466,7 @@ var wo = Sa(fs, [
   );
 const xo = {
     "../pages/about.vue": () =>
-      Ne(
+      Wa(
         () =>
           Promise.resolve().then(function () {
             return mt;
@@ -6474,7 +6474,7 @@ const xo = {
         void 0
       ),
     "../pages/case.vue": () =>
-      Ne(
+      Wa(
         () =>
           Promise.resolve().then(function () {
             return yt;
@@ -6482,7 +6482,7 @@ const xo = {
         void 0
       ),
     "../pages/demo.vue": () =>
-      Ne(
+      Wa(
         () =>
           Promise.resolve().then(function () {
             return It;
@@ -6490,15 +6490,15 @@ const xo = {
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Ne(
+      Wa(
         () =>
           Promise.resolve().then(function () {
-            return cs;
+            return ds;
           }),
         void 0
       ),
     "../pages/index.vue": () =>
-      Ne(
+      Wa(
         () =>
           Promise.resolve().then(function () {
             return _o;
@@ -6510,21 +6510,21 @@ const xo = {
     "../pages/about.vue": mt,
     "../pages/case.vue": yt,
     "../pages/demo.vue": It,
-    "../pages/fintech-design.vue": cs,
+    "../pages/fintech-design.vue": ds,
     "../pages/index.vue": _o,
   },
   jo = [];
 for (let Uo in xo) {
-  let a = Uo.replace("../pages", "").toLowerCase().replace(".vue", "");
-  (a = a.replace(/\/index$/, "")),
-    (a = a.replace(/\/_+/g, "/:")),
+  let e = Uo.replace("../pages", "").toLowerCase().replace(".vue", "");
+  (e = e.replace(/\/index$/, "")),
+    (e = e.replace(/\/_+/g, "/:")),
     jo.push({
-      path: a,
-      name: a,
+      path: e,
+      name: e,
       meta: {
         layout: ko[Uo].default.layout || "layout-default",
         title:
-          null != (t = null == (e = ko[Uo].default) ? void 0 : e.title)
+          null != (t = null == (a = ko[Uo].default) ? void 0 : a.title)
             ? t
             : "app.project.title",
         header:
@@ -6537,15 +6537,15 @@ for (let Uo in xo) {
       component: xo[Uo],
     });
 }
-const Co = ua({
-  history: ga("./"),
+const Co = ue({
+  history: ge("./"),
   routes:
     ((qo = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: M({ defaultPath: "/" }, qo).defaultPath },
+        redirect: { name: D({ defaultPath: "/" }, qo).defaultPath },
       },
       ...jo,
       {
@@ -6563,7 +6563,7 @@ const Co = ua({
   scrollBehavior: () => ({ top: 0 }),
 });
 var qo;
-Co.beforeEach(async (a, e, t) => {
+Co.beforeEach(async (e, a, t) => {
   t();
 });
 var So = Object.freeze(
@@ -6571,41 +6571,41 @@ var So = Object.freeze(
     value: "Module",
   })
 );
-const Oo = ba({ modules: Re });
-ya(Oo, Co);
+const Oo = be({ modules: Ra });
+ye(Oo, Co);
 var zo = Object.freeze(
   Object.defineProperty({ __proto__: null, default: Oo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
 const To = {
-    use(a) {
-      a.interceptors.response.use(
-        async function (e) {
-          if (100004 === e.data.code) {
-            const t = a.get("/app/jwt-token", {
+    use(e) {
+      e.interceptors.response.use(
+        async function (a) {
+          if (100004 === a.data.code) {
+            const t = e.get("/app/jwt-token", {
               params: { account: Oo.state.auth.user.account },
             });
             1 === t.data.code && V.set("token", t.data.data.jwt_token, !0);
-            return await a.request(e.config);
+            return await e.request(a.config);
           }
-          return e;
+          return a;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   },
   Bo = {
-    use(a) {
+    use(e) {
       (window.isAlert = !1),
-        a.interceptors.response.use(
-          async function (a) {
-            const { noredirect: e = !1 } = a.config;
-            if (!e && !window.isAlert) {
-              const e = a.data;
-              switch (e.code) {
+        e.interceptors.response.use(
+          async function (e) {
+            const { noredirect: a = !1 } = e.config;
+            if (!a && !window.isAlert) {
+              const a = e.data;
+              switch (a.code) {
                 case 0:
                 case 100002:
                 case 200001:
@@ -6613,59 +6613,59 @@ const To = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: a } = await Pa.alert({
-                    title: `Error(${e.code})`,
-                    text: Ea.t(`error.code.${e.code}`),
+                  const { isConfirmed: e } = await Pe.alert({
+                    title: `Error(${a.code})`,
+                    text: Ee.t(`error.code.${a.code}`),
                   });
                   return (
-                    a &&
+                    e &&
                       (await Oo.dispatch("auth/logout"),
                       await Co.replace("/login"),
                       (window.isAlert = !1)),
-                    Promise.reject(`Error: ${e.code}`)
+                    Promise.reject(`Error: ${a.code}`)
                   );
                 }
               }
             }
-            return a;
+            return e;
           },
-          function (a) {
-            return Promise.reject(a);
+          function (e) {
+            return Promise.reject(e);
           }
         );
     },
   },
   Eo = {
-    use(a) {
-      a.interceptors.response.use(
-        async function (a) {
-          const { novalidate: e = !1 } = a.config;
-          if (!e) {
-            const e = a.data;
-            switch (e.code) {
+    use(e) {
+      e.interceptors.response.use(
+        async function (e) {
+          const { novalidate: a = !1 } = e.config;
+          if (!a) {
+            const a = e.data;
+            switch (a.code) {
               case 1e5:
               case 100001:
               case 100003:
-                await Pa.alert({
-                  title: `Error(${e.code})`,
-                  text: Ea.t(`error.code.${e.code}`),
+                await Pe.alert({
+                  title: `Error(${a.code})`,
+                  text: Ee.t(`error.code.${a.code}`),
                 });
             }
           }
-          return a;
+          return e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   };
 class Lo {
   constructor() {
-    (this.provider = new Ee({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ea({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, Le, To, Bo, Eo, Ie);
+    this.provider.use({}, La, To, Bo, Eo, Ia);
   }
   get get() {
     return this.provider.instance.get;
@@ -6680,9 +6680,9 @@ class Lo {
     return this.provider.instance.delete;
   }
 }
-Lo.prototype.install = function (a) {
-  const e = "http-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Lo.prototype.install = function (e) {
+  const a = "http-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
 var Po = new Lo(),
   Io = Object.freeze(
@@ -6702,8 +6702,8 @@ class Ao {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Ea.t("button.confirm"),
-      cancelButtonText: Ea.t("button.cancel"),
+      confirmButtonText: Ee.t("button.confirm"),
+      cancelButtonText: Ee.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -6717,33 +6717,33 @@ class Ao {
   get state() {
     return Oo.state.app.popupState;
   }
-  async modal(a = {}) {
+  async modal(e = {}) {
     const {
-      title: e,
+      title: a,
       text: t,
       component: s = null,
       showCancelButton: l = !0,
       showConfirmButton: i = !0,
-      confirmButtonText: o = Ea.t("button.confirm"),
-      cancelButtonText: r = Ea.t("button.cancel"),
+      confirmButtonText: o = Ee.t("button.confirm"),
+      cancelButtonText: r = Ee.t("button.cancel"),
       allowOutsideClick: n = !0,
-      props: d = {},
-    } = a;
-    return new Promise((a) => {
+      props: c = {},
+    } = e;
+    return new Promise((e) => {
       Oo.commit(
         "app/set/popup",
         u(f({}, this.initStates), {
           type: "Modal",
-          resolve: a,
-          title: e,
+          resolve: e,
+          title: a,
           text: t,
-          component: s ? ea(s) : null,
+          component: s ? ae(s) : null,
           showCancelButton: l,
           showConfirmButton: i,
           confirmButtonText: o,
           cancelButtonText: r,
           allowOutsideClick: n,
-          props: d,
+          props: c,
         })
       );
     });
@@ -6752,38 +6752,38 @@ class Ao {
     Oo.commit("app/clear/popup");
   }
 }
-Ao.prototype.install = function (a) {
-  const e = "popup-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Ao.prototype.install = function (e) {
+  const a = "popup-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Do = new Ao();
-const Mo = {
-    "../services/alert-service.js": Be,
+var Mo = new Ao();
+const Do = {
+    "../services/alert-service.js": Ba,
     "../services/http-service.js": Io,
-    "../services/i18n-service.js": La,
+    "../services/i18n-service.js": Le,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: Ao, default: Do },
+        { __proto__: null, PopupService: Ao, default: Mo },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
     "../services/router-service.js": So,
-    "../services/storage-service.js": Ma,
+    "../services/storage-service.js": De,
     "../services/store-service.js": zo,
   },
   $o = {
-    install: (a) => {
-      for (let e in Mo) a.use(Mo[e].default);
+    install: (e) => {
+      for (let a in Do) e.use(Do[a].default);
     },
   };
-const Vo = ha(Oa);
-Vo.provide("$jQuery", wa),
-  Vo.provide("$swal", Pa),
+const Vo = he(Oe);
+Vo.provide("$jQuery", we),
+  Vo.provide("$swal", Pe),
   Vo.provide("$storage", V),
-  Vo.provide("$tabsslider", _a),
-  Vo.use(ne),
-  Vo.use(Se),
-  Vo.use(xa, { loading: "", error: "" }),
+  Vo.provide("$tabsslider", _e),
+  Vo.use(na),
+  Vo.use(Sa),
+  Vo.use(xe, { loading: "", error: "" }),
   Vo.use($o),
   Vo.mount("#app");

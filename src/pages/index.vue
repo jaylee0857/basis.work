@@ -27,7 +27,7 @@
                 transform-style: preserve-3d;
               "
             >
-              <h2 class="u-ts-4">About Basis</h2>
+              <h2 class="u-ts-4">詹紹綺人文藝術中心</h2>
             </div>
           </div>
         </div>
@@ -56,31 +56,7 @@
                   transform: translate(0px, 0%);
                 "
               >
-                Basis
-              </div>
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                increases
-              </div>
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                the
+                位於25樓雲海之中的藝術與文化博物館，
               </div>
             </div>
             <div
@@ -99,22 +75,10 @@
                   transform: translate(0px, 0%);
                 "
               >
-                value
-              </div>
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                digital
+                典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。
               </div>
             </div>
-            <div
+            <!-- <div
               class="u-overflow-hidden"
               style="display: block; text-align: start; position: relative"
               data-aos="fade-up"
@@ -206,7 +170,7 @@
               >
                 design.
               </div>
-            </div>
+            </div> -->
           </h3>
           <div class="btn-group">
             <div
@@ -220,7 +184,6 @@
               "
             >
               <a
-                href="/cases"
                 class="btn w-inline-block"
                 data-aos="fade-left"
                 data-aos-duration="1000"
@@ -234,7 +197,7 @@
                       transform-style: preserve-3d;
                     "
                   >
-                    View cases
+                    館藏查詢
                   </div>
                   <div
                     class="btn-text cc-bottom"
@@ -245,7 +208,7 @@
                       transform-style: preserve-3d;
                     "
                   >
-                    View cases
+                    館藏查詢
                   </div>
                 </div></a
               >
@@ -277,7 +240,7 @@
                       transform-style: preserve-3d;
                     "
                   >
-                    About us
+                    預約參觀
                   </div>
                   <div
                     class="btn-text cc-bottom"
@@ -288,7 +251,7 @@
                       transform-style: preserve-3d;
                     "
                   >
-                    About us
+                    預約參觀
                   </div>
                 </div></a
               >
@@ -513,7 +476,7 @@
                 transform-style: preserve-3d;
               "
             >
-              <h2 class="u-ts-4">What We Do</h2>
+              <h2 class="u-ts-4">空間預約</h2>
             </div>
           </div>
         </div>
@@ -538,7 +501,7 @@
                 transform: translate(0px, 0%);
               "
             >
-              Digital
+              詹紹綺人文藝術中心
             </div>
           </div>
           <div
@@ -557,7 +520,7 @@
                 transform: translate(0px, 0%);
               "
             >
-              Products
+              (Skyart7325)開放每日一組預約。
             </div>
           </div>
         </h3>
@@ -626,7 +589,7 @@
                                   transform-style: preserve-3d;
                                 "
                               >
-                                <h4 class="u-ts-4">Yoginess Brand</h4>
+                                <h4 class="u-ts-4">Skyart3725全景</h4>
                               </div>
                             </div>
                           </div>
@@ -694,7 +657,7 @@
                             "
                           >
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">Sable App</h4>
+                              <h4 class="u-ts-4">多功能茶席空間</h4>
                             </div>
                           </div>
                         </div>
@@ -719,11 +682,7 @@
               "
             >
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="700">
-                We help companies grow by harnessing the power of narrative,
-                design, and technology. From new ventures to industry leaders,
-                Basis believes that starting small and establishing core
-                principles creates better design systems for digital products
-                and their brands.
+                博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。
               </p>
             </div>
             <div class="btn-group">
@@ -742,8 +701,8 @@
                   data-aos="fade-left"
                   data-aos-duration="1000"
                   ><div class="btn-text-wrap">
-                    <div class="btn-text">View cases</div>
-                    <div class="btn-text cc-bottom">View cases</div>
+                    <div class="btn-text">空間介紹</div>
+                    <div class="btn-text cc-bottom">空間介紹</div>
                   </div></a
                 >
               </div>
@@ -762,8 +721,8 @@
                   data-aos="fade-left"
                   data-aos-duration="1000"
                   ><div class="btn-text-wrap">
-                    <div class="btn-text">Design trial</div>
-                    <div class="btn-text cc-bottom">Design trial</div>
+                    <div class="btn-text">立即預約</div>
+                    <div class="btn-text cc-bottom">立即預約</div>
                   </div></a
                 >
               </div>
@@ -830,7 +789,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Research</h3>
+                  <h3 class="u-tc-caps">定香人文</h3>
                 </div>
               </li>
               <li
@@ -847,7 +806,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Brand Strategy</h3>
+                  <h3 class="u-tc-caps">藝術品經紀</h3>
                 </div>
               </li>
               <li
@@ -864,7 +823,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Creative Direction</h3>
+                  <h3 class="u-tc-caps">藝術品拍賣</h3>
                 </div>
               </li>
               <li
@@ -881,7 +840,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Brand identity</h3>
+                  <h3 class="u-tc-caps">台灣高山冠軍茶</h3>
                 </div>
               </li>
               <li
@@ -898,7 +857,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">UX &amp; UI Design</h3>
+                  <h3 class="u-tc-caps">雲南古樹普洱茶</h3>
                 </div>
               </li>
               <li
@@ -915,7 +874,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Interaction Design</h3>
+                  <h3 class="u-tc-caps">精品咖啡</h3>
                 </div>
               </li>
               <li
@@ -932,7 +891,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Implementation</h3>
+                  <h3 class="u-tc-caps">天幕茶碗</h3>
                 </div>
               </li>
               <li
@@ -949,7 +908,7 @@
                     transform-style: preserve-3d;
                   "
                 >
-                  <h3 class="u-tc-caps">Webflow Development</h3>
+                  <h3 class="u-tc-caps">典藏名酒</h3>
                 </div>
               </li>
             </ul>
@@ -969,8 +928,8 @@
                   data-aos="fade-left"
                   data-aos-duration="1000"
                   ><div class="btn-text-wrap">
-                    <div class="btn-text">Our services</div>
-                    <div class="btn-text cc-bottom">Our services</div>
+                    <div class="btn-text">藝品介紹</div>
+                    <div class="btn-text cc-bottom">藝品介紹</div>
                   </div></a
                 >
               </div>

@@ -42,8 +42,8 @@
     <div class="btn-contain btn-contain-scroll">
       <div class="btn-scroll w-inline-block" @click="scrollDown">
         <div class="btn-text-wrap">
-          <div class="btn-text cc-scroll">Scroll</div>
-          <div class="btn-text cc-bottom cc-scroll">Scroll</div>
+          <div class="btn-text cc-scroll">請往下滑</div>
+          <div class="btn-text cc-bottom cc-scroll">請往下滑</div>
         </div>
         <div class="btn-icon cc-small w-embed">
           <svg
