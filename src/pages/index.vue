@@ -750,7 +750,7 @@
                 transform-style: preserve-3d;
               "
             >
-              <h2 class="u-ts-4">Capabilities</h2>
+              <h2 class="u-ts-4">定香人文</h2>
             </div>
           </div>
         </div>
@@ -775,7 +775,7 @@
               </div>
             </div>
             <ul role="list" class="u-mt-3-5">
-              <li
+              <!-- <li
                 class="u-overflow-hidden"
                 data-aos="fade-up"
                 data-aos-duration="700"
@@ -791,7 +791,7 @@
                 >
                   <h3 class="u-tc-caps">定香人文</h3>
                 </div>
-              </li>
+              </li> -->
               <li
                 class="u-overflow-hidden"
                 data-aos="fade-up"
