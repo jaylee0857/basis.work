@@ -4,9 +4,9 @@
       class="view-wrap"
       v-if="isShowComponent"
       :style="{
-        transform: `translate3d(${position.x}px, ${position.y}px, 0) rotateX(${
-          position.x / 5
-        }deg) rotateY(${position.y / 8}deg)`,
+        transform: `translate3d(${position.x * 2}px, ${
+          position.y
+        }px, 0) rotateX(${-position.y / 2}deg) rotateY(${-position.x / 2}deg)`,
         transformOrigin: 'center center', // 注意驼峰命名
       }"
     >
@@ -28,6 +28,8 @@
         <img
           :src="getImageUrl(item.url)"
           :style="{
+            width: isMobile ? item.css.m_width : item.css.width,
+            height: isMobile ? item.css.m_height : item.css.height,
             transform: `translate3d(${position.x / 2}px,${
               position.y / 2
             }px, 100px)`,
@@ -83,8 +85,10 @@ const position = reactive({
 });
 const imagesOption = ref([
   {
-    url: "home/img/1.jpg",
+    url: "home/opening/1.jpg",
     css: {
+      width: "17vw",
+      height: "20.2vw",
       left: "-5%",
       top: "60%",
       m_right: "3000px",
@@ -96,8 +100,10 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/2.jpg",
+    url: "home/opening/2.jpg",
     css: {
+      width: "16.5vw",
+      height: "21.3vw",
       left: "11%",
       top: "10%",
       m_right: "3000px",
@@ -109,12 +115,16 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/3.jpg",
+    url: "home/opening/3.jpg",
     css: {
-      left: "31%",
+      width: "21.3vw",
+      height: "16.6vw",
+      m_width: "55.9vw",
+      m_height: "42.5vw",
+      left: "22%",
       top: "45%",
-      m_right: "62%",
-      m_top: "57%",
+      m_right: "71%",
+      m_top: "44%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 3.5s forwards",
       leaveAnimation: "fadeOut 1s forwards",
@@ -122,12 +132,16 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/4.jpg",
+    url: "home/opening/4.jpg",
     css: {
+      width: "15.5vw",
+      height: "16.6vw",
+      m_width: "42.5vw",
+      m_height: "42.5vw",
       left: "31%",
       top: "72%",
-      m_right: "55%",
-      m_top: "78%",
+      m_right: "73%",
+      m_top: "80%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 2s forwards",
       leaveAnimation: "fadeOut 1s forwards",
@@ -135,12 +149,16 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/5.jpg",
+    url: "home/opening/5.jpg",
     css: {
-      left: "40%",
-      top: "10%",
-      m_right: "55%",
-      m_top: "30%",
+      width: "24vw",
+      height: "19.6vw",
+      m_width: "34vw",
+      m_height: "34vw",
+      left: "33%",
+      top: "-1%",
+      m_right: "-2%",
+      m_top: "1%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 1s forwards",
       leaveAnimation: "fadeOut 1s forwards",
@@ -148,12 +166,16 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/6.jpg",
+    url: "home/opening/6.jpg",
     css: {
+      width: "21.1vw",
+      height: "26.3vw",
+      m_width: "25.5vw",
+      m_height: "33vw",
       left: "51%",
       top: "27%",
-      m_right: "9%",
-      m_top: "46%",
+      m_right: "15%",
+      m_top: "39%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 2.5s forwards",
       leaveAnimation: "fadeOut 1s forwards",
@@ -161,10 +183,14 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/7.jpg",
+    url: "home/opening/7.jpg",
     css: {
+      width: "18.1vw",
+      height: "21.8vw",
+      m_width: "43.5vw",
+      m_height: "50vw",
       left: "63%",
-      top: "63%",
+      top: "74%",
       m_right: "8%",
       m_top: "70%",
       transform: "translate3d(1px, 2px, 1px)",
@@ -174,12 +200,16 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/8.jpg",
+    url: "home/opening/8.jpg",
     css: {
-      left: "68%",
-      top: "12%",
-      m_right: "0%",
-      m_top: "13%",
+      width: "18.3vw",
+      height: "14.6vw",
+      m_width: "46.1vw",
+      m_height: "35.7vw",
+      left: "70%",
+      top: "-4%",
+      m_right: "57%",
+      m_top: "15%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 3.5s forwards",
       leaveAnimation: "fadeOut 1s forwards",
@@ -187,21 +217,28 @@ const imagesOption = ref([
     isEnter: true,
   },
   {
-    url: "home/img/9.jpg",
+    url: "home/opening/9.jpg",
     css: {
+      width: "22.8vw",
+      height: "22vw",
+      m_width: "36vw",
+      m_height: "20vw",
       left: "83%",
       top: "33%",
-      m_right: "-22%",
-      m_top: "29%",
+      m_right: "-10%",
+      m_top: "25%",
       transform: "translate3d(1px, 2px, 1px)",
       enterAnimation: "zoomIn 2s forwards",
       leaveAnimation: "fadeOut 1s forwards",
+      objectAposition: "right",
     },
     isEnter: true,
   },
   {
-    url: "home/img/10.jpg",
+    url: "home/opening/10.jpg",
     css: {
+      width: "21.3vw",
+      height: "16.6vw",
       left: "86%",
       top: "69%",
       m_right: "30000px",
@@ -212,18 +249,6 @@ const imagesOption = ref([
     },
     isEnter: true,
   },
-  // {
-  //   url:
-  //     "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233e_home-hero-07.webp",
-  //   css: {
-  //     left: "85%",
-  //     top: "70%",
-  //     transform: "translate3d(1px, 2px, 1px)",
-  //     enterAnimation: "zoomIn 2.5s forwards",
-  //     leaveAnimation: "fadeOut 1s forwards",
-  //   },
-  //   isEnter: true,
-  // },
 ]);
 
 const moveView = (e) => {
@@ -232,8 +257,8 @@ const moveView = (e) => {
     const windowCenterX = window.innerWidth / 2;
     const windowCenterY = window.innerHeight / 2;
 
-    position.x = ((windowCenterX - e.clientX) / 100) * 10;
-    position.y = ((windowCenterY - e.clientY) / 100) * 10;
+    position.x = ((windowCenterX - e.clientX) / 100) * 3;
+    position.y = ((windowCenterY - e.clientY) / 100) * 3;
 
     // 在窗口宽度小于576时执行的操作
     // console.log(position.x);
@@ -268,7 +293,7 @@ const callback = (entries) => {
     switch (itemName) {
       case "img":
         imagesOption.value[index].isEnter =
-          intersectionRatio < 0.3 ? false : true;
+          intersectionRatio < 0.4 ? false : true;
         console.log(target.dataset?.index, "index");
         console.log(intersectionRatio);
         break;

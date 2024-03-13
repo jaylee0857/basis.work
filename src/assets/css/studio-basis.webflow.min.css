@@ -2185,13 +2185,16 @@ strong {
   font-size: 0.875em;
 }
 .btn.cc-secondary {
-  border-color: var(--swatch--white);
-  color: var(--swatch--white);
+  /* border-color: var(--swatch--white);
+  color: var(--swatch--white); */
   background-color: transparent;
+  border-color: var(--swatch--black);
+  color: var(--swatch--black);
+  transition: 0.3s;
 }
 .btn.cc-secondary:hover {
-  background-color: var(--swatch--white);
-  color: var(--swatch--black);
+  background-color: var(--swatch--black);
+  color: var(--swatch--white);
 }
 .card {
   grid-row-gap: 1.5em;
@@ -3044,6 +3047,7 @@ strong {
 }
 .logomark {
   /* height: 5rem; */
+  width: 50%;
   max-height: 100%;
   justify-content: flex-start;
   align-items: center;
@@ -4791,7 +4795,7 @@ strong {
     display: none;
   }
   .home-hero_btn {
-    height: 100svh;
+    height: 80svh;
     pointer-events: none;
     align-items: flex-end;
     padding-bottom: 1.5rem;

@@ -92,3 +92,11 @@
 <script setup>
 import { getImageUrl } from "@/unit/getImageUrl";
 </script>
+
+<style lang="scss" scoped>
+.footer_list-item {
+  a {
+    color: black !important;
+  }
+}
+</style>

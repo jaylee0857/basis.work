@@ -323,7 +323,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="300"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png"
+                  :src="getImageUrl('home/img/1.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -342,7 +342,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="400"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png"
+                  :src="getImageUrl('home/img/2.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -361,7 +361,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="500"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png"
+                  :src="getImageUrl('home/img/3.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -380,7 +380,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="600"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png"
+                  :src="getImageUrl('home/img/4.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -399,7 +399,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="700"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png"
+                  :src="getImageUrl('home/img/5.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -418,7 +418,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="800"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png"
+                  :src="getImageUrl('home/img/6.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -437,7 +437,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="900"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png"
+                  :src="getImageUrl('home/img/6.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -456,7 +456,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="1000"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png"
+                  :src="getImageUrl('home/img/7.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -475,181 +475,11 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="1100"
-                  src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png"
+                  :src="getImageUrl('home/img/8.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="marquee_row w-dyn-list">
-          <div
-            role="list"
-            class="marquee_content w-dyn-items"
-            style="
-              transform: translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-              will-change: transform;
-            "
-          >
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="marquee_row w-dyn-list">
-          <div
-            role="list"
-            class="marquee_content w-dyn-items"
-            style="
-              transform: translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-              will-change: transform;
-            "
-          >
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png"
-                alt=""
-                class="marquee_logo"
-              />
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <img
-                loading="eager"
-                src="https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png"
-                alt=""
-                class="marquee_logo"
-              />
             </div>
           </div>
         </div>
@@ -2231,6 +2061,11 @@ export default {
     // 475 768 991
     const a = ref("");
     onMounted(() => {
+      const videoElements = document.querySelectorAll(".video-cover");
+      videoElements.forEach((video) => {
+        // 播放视频
+        video.play();
+      });
       console.log("index");
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

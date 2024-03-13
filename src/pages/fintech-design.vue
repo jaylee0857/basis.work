@@ -8,29 +8,6 @@
         transform-style: preserve-3d;
       "
     >
-      <img
-        src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp"
-        loading="eager"
-        alt=""
-        sizes="100vw"
-        srcset="
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-500.jpg   500w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-800.jpg   800w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-1080.jpg 1080w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-1600.jpg 1600w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-2000.jpg 2000w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-2600.jpg 2600w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp       3200w
-        "
-        class="header-image"
-        style="
-          will-change: transform;
-          transform: translate3d(0px, -0.0648%, 0px)
-            scale3d(1.00065, 1.00065, 1) rotateX(0deg) rotateY(0deg)
-            rotateZ(0deg) skew(0deg, 0deg);
-          transform-style: preserve-3d;
-        "
-      />
       <div
         class="header-image"
         style="
@@ -42,18 +19,17 @@
         "
       >
         <div class="iframe-video_wrapper">
-          <iframe
-            class="iframe-video_iframe"
+          <video
+            class="video-cover"
             width="100%"
             height="100%"
-            style="overflow: hidden"
-            frameborder="0"
-            scrolling="no"
-            allow="fullscreen"
-            src="https://app.vidzflow.com/v/uiNA4jAd82?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;piv=true&amp;bc=%234E5FFD&amp;controls=false"
-            title="Fintech 1"
-            loading="lazy"
-          ></iframe>
+            autoplay
+            loop
+            muted
+          >
+            <source :src="getVideoUrl('home/knife1-1.mp4')" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div class="iframe-video_blocker"></div>
         </div>
       </div>
@@ -1146,21 +1122,19 @@
       <a
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
-        href="/design-trial"
         class="section cc-pre-footer w-inline-block"
         ><div class="iframe-video_wrapper">
-          <iframe
-            class="iframe-video_iframe"
+          <video
+            class="video-cover"
             width="100%"
             height="100%"
-            style="overflow: hidden"
-            frameborder="0"
-            scrolling="no"
-            allow="fullscreen"
-            src="https://app.vidzflow.com/v/B3TEbIzupw?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-            title="Trial 1"
-            loading="lazy"
-          ></iframe>
+            autoplay
+            loop
+            muted
+          >
+            <source :src="getVideoUrl('home/knife1-1.mp4')" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div class="iframe-video_blocker"></div>
         </div>
         <div class="pre-footer_gradient"></div>
@@ -1264,6 +1238,7 @@
 import { useI18n } from "@/hooks/use-i18n";
 import { onMounted } from "vue";
 import Footer from "@/widgets/layout/footer.vue";
+import { getVideoUrl } from "@/unit/getVideoUrl";
 export default {
   components: {
     Footer,
@@ -1290,6 +1265,7 @@ export default {
     });
     return {
       t,
+      getVideoUrl,
     };
   },
 };
