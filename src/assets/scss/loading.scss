@@ -28,16 +28,16 @@
   animation-fill-mode:forwards;
   .icon{
     position: relative;
-    width: 12rem;
-    height: 12rem;
+    width: 16rem;
+    height: 16rem;
     overflow: hidden;
     .svg_box{
       position: absolute;
       top: 0;
       left: 0;
-      width: 12rem;
+      width: 16rem;
       animation-name: prelude;
-      animation-duration:2s;
+      animation-duration:1s;
       animation-delay:1s;
       animation-fill-mode:forwards;
     }

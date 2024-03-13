@@ -1573,14 +1573,9 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   transform-style: preserve-3d;
   width: 18.4vw;
   height: 20.5vw;
-  max-width: 350px;
+  max-width: 330px;
   min-width: 150px;
-}
-@media screen and (max-width: 991px) {
-  .view img {
-    max-width: 350px;
-    max-height: 170px;
-  }
+  max-height: 250px;
 }
 @media screen and (max-width: 576px) {
   .view img {
@@ -10989,12 +10984,11 @@ strong {
     display: none;
   }
   .home-hero_btn {
-    height: 80svh;
     pointer-events: none;
     align-items: flex-end;
     padding-bottom: 1.5rem;
     top: 0%;
-    bottom: auto;
+    bottom: 25%;
     left: 0%;
     right: 0%;
   }
@@ -11777,14 +11771,9 @@ strong {
   transform-style: preserve-3d;
   width: 18.4vw;
   height: 20.5vw;
-  max-width: 350px;
+  max-width: 330px;
   min-width: 150px;
-}
-@media screen and (max-width: 991px) {
-  .view img {
-    max-width: 350px;
-    max-height: 170px;
-  }
+  max-height: 250px;
 }
 @media screen and (max-width: 576px) {
   .view img {
@@ -12016,19 +12005,19 @@ strong {
 }
 .bg .icon {
   position: relative;
-  width: 12rem;
-  height: 12rem;
+  width: 16rem;
+  height: 16rem;
   overflow: hidden;
 }
 .bg .icon .svg_box {
   position: absolute;
   top: 0;
   left: 0;
-  width: 12rem;
+  width: 16rem;
   -webkit-animation-name: prelude;
   animation-name: prelude;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;

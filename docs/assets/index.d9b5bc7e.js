@@ -4895,7 +4895,7 @@ const fs = {
               css: {
                 width: "17vw",
                 height: "20.2vw",
-                left: "-5%",
+                left: "1%",
                 top: "60%",
                 m_right: "3000px",
                 m_top: "0%",
