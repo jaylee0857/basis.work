@@ -2524,35 +2524,35 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     transform: translateZ(0);
   }
 }
-.transparent[data-v-41b289de] {
+.transparent[data-v-a392040e] {
   background-color: transparent !important;
 }
-.target_line[data-v-41b289de] {
+.target_line[data-v-a392040e] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-41b289de]:first-child {
+.target_line[data-v-a392040e]:first-child {
   margin-top: 30px;
 }
-.target_line.active[data-v-41b289de] {
-  -webkit-animation-name: line-41b289de;
-  animation-name: line-41b289de;
+.target_line.active[data-v-a392040e] {
+  -webkit-animation-name: line-a392040e;
+  animation-name: line-a392040e;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .w-layout-grid.pair-grid.is-leading[data-v-41b289de] {
+  .w-layout-grid.pair-grid.is-leading[data-v-a392040e] {
     overflow: hidden;
   }
-  .apps_asset.cc-2.w-dyn-list[data-v-41b289de],
-  .apps_asset.cc-1[data-v-41b289de] {
+  .apps_asset.cc-2.w-dyn-list[data-v-a392040e],
+  .apps_asset.cc-1[data-v-a392040e] {
     transform: translateZ(0) !important;
   }
 }
-@-webkit-keyframes line-41b289de {
+@-webkit-keyframes line-a392040e {
   0% {
     width: 0;
   }
@@ -2560,7 +2560,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-41b289de {
+@keyframes line-a392040e {
   0% {
     width: 0;
   }
@@ -11423,12 +11423,26 @@ strong {
 }
 .layout-deafult-header-logo--open {
   width: auto;
-  height: 21.95px;
   -webkit-animation: topMoveBottom 0.5s;
   animation: topMoveBottom 0.5s;
 }
+@media screen and (max-width: 991px) {
+  .layout-deafult-header-logo--open {
+    height: 21.95px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .layout-deafult-header-logo--open {
+    max-width: 50%;
+  }
+}
 .layout-deafult-header-logo--open img {
-  width: 50%;
+  width: 60%;
+}
+@media screen and (max-width: 576px) {
+  .layout-deafult-header-logo--open img {
+    width: 100%;
+  }
 }
 .layout-deafult-header-btn {
   width: 108px;
