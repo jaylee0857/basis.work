@@ -6,9 +6,9 @@ var e,
   i,
   o,
   r = Object.defineProperty,
-  n = Object.defineProperties,
-  c = Object.getOwnPropertyDescriptors,
-  d = Object.getOwnPropertySymbols,
+  d = Object.defineProperties,
+  n = Object.getOwnPropertyDescriptors,
+  c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
   m = (e, a, t) =>
@@ -17,14 +17,14 @@ var e,
       : (e[a] = t),
   f = (e, a) => {
     for (var t in a || (a = {})) p.call(a, t) && m(e, t, a[t]);
-    if (d) for (var t of d(a)) v.call(a, t) && m(e, t, a[t]);
+    if (c) for (var t of c(a)) v.call(a, t) && m(e, t, a[t]);
     return e;
   },
-  u = (e, a) => n(e, c(a));
+  u = (e, a) => d(e, n(a));
 import {
   o as g,
-  c as y,
-  a as b,
+  c as b,
+  a as y,
   n as h,
   u as w,
   F as _,
@@ -36,11 +36,11 @@ import {
   f as S,
   g as z,
   h as O,
-  i as T,
-  j as A,
+  i as A,
+  j as T,
   k as E,
-  l as B,
-  m as L,
+  l as L,
+  m as B,
   p as I,
   q as P,
   s as M,
@@ -68,22 +68,22 @@ import {
   P as ie,
   Q as oe,
   R as re,
-  U as ne,
-  V as ce,
-  W as de,
+  U as de,
+  V as ne,
+  W as ce,
   X as pe,
   Y as ve,
   Z as me,
   _ as fe,
   $ as ue,
   a0 as ge,
-  a1 as ye,
-  a2 as be,
+  a1 as be,
+  a2 as ye,
   a3 as he,
   a4 as we,
   a5 as _e,
   a6 as xe,
-} from "./vendor.741a0b4d.js";
+} from "./vendor.fc0dc942.js";
 !(function () {
   const e = document.createElement("link").relList;
   if (!(e && e.supports && e.supports("modulepreload"))) {
@@ -175,18 +175,18 @@ var ze = Se(
         props: { mode: String },
         setup: (e) => (a, t) => (
           g(),
-          y(
+          b(
             _,
             null,
             [
-              b("div", { class: h(["mask", e.mode]) }, null, 2),
-              b(
+              y("div", { class: h(["mask", e.mode]) }, null, 2),
+              y(
                 "div",
                 { class: h(["bg", e.mode]) },
                 [
-                  b("div", je, [
-                    b("div", Ce, [
-                      b(
+                  y("div", je, [
+                    y("div", Ce, [
+                      y(
                         "img",
                         { src: w(ke)("favicon.png"), alt: "" },
                         null,
@@ -211,8 +211,8 @@ var ze = Se(
         s = k("leave"),
         l = j(() => "stop" === s.value),
         i = j(() => {
-          if (B(e.state.route.path)) return null;
-          return L("layout-error")(I(["meta", "layout"], e.state.route));
+          if (L(e.state.route.path)) return null;
+          return B("layout-error")(I(["meta", "layout"], e.state.route));
         });
       return (
         C(
@@ -242,26 +242,26 @@ var ze = Se(
       function (e, a, t, s, l, i) {
         const o = S("router-view"),
           r = S("the-popup"),
-          n = S("Loading");
+          d = S("Loading");
         return (
           g(),
-          y(
+          b(
             _,
             null,
             [
               (g(),
-              z(T(s.layout), null, {
+              z(A(s.layout), null, {
                 default: O(() => [
-                  A(o, null, {
-                    default: O(({ Component: e }) => [(g(), z(T(e)))]),
+                  T(o, null, {
+                    default: O(({ Component: e }) => [(g(), z(A(e)))]),
                     _: 1,
                   }),
                 ]),
                 _: 1,
               })),
-              A(r),
+              T(r),
               s.isError || s.isShowLoading
-                ? (g(), z(n, { key: 0, mode: s.mode }, null, 8, ["mode"]))
+                ? (g(), z(d, { key: 0, mode: s.mode }, null, 8, ["mode"]))
                 : E("", !0),
             ],
             64
@@ -481,15 +481,15 @@ const Oe = {
       )
     ),
   },
-  Te = {};
+  Ae = {};
 for (let Vo in Oe) {
   const e = Vo.replace("../locales/", "").toLowerCase().replace(".js", ""),
     [a, ...t] = e.split("/"),
     s = P(".", t),
     l = Oe[Vo].default;
-  Te[a] = M((e, a) => D(e, { [`${s}.${a}`]: l[a] }), Te[a] || {}, F(l));
+  Ae[a] = M((e, a) => D(e, { [`${s}.${a}`]: l[a] }), Ae[a] || {}, F(l));
 }
-const Ae = (() => {
+const Te = (() => {
     var e, a, t, s;
     const l = U.get("locale");
     if (l) return l;
@@ -510,16 +510,16 @@ const Ae = (() => {
           : i.includes("zh")
           ? (i = "zh-tw")
           : i.includes("en") && (i = "en"),
-        (i = i in Te ? i : {}.VITE_LOCALE),
+        (i = i in Ae ? i : {}.VITE_LOCALE),
         i)
       : {}.VITE_LOCALE;
   })(),
   Ee = V.exports.createI18n({
-    initLocale: Ae,
+    initLocale: Te,
     fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
-    messages: Te,
+    messages: Ae,
   });
-var Be = Object.freeze(
+var Le = Object.freeze(
   Object.defineProperty({ __proto__: null, default: Ee }, Symbol.toStringTag, {
     value: "Module",
   })
@@ -591,7 +591,7 @@ var Be = Object.freeze(
       },
     });
   });
-const Le = H.mixin({
+const Be = H.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -651,10 +651,10 @@ const Fe = () => {
     };
   },
   Ue = ["onMouseenter", "onClick"],
-  Ve = b("div", { class: "line" }, null, -1),
+  Ve = y("div", { class: "line" }, null, -1),
   He = { class: "list_style" },
   Ne = { class: "nav_link-top" },
-  Xe = b(
+  Xe = y(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -666,7 +666,7 @@ const Fe = () => {
   Re = { class: "nav_link-title" },
   Ze = { class: "u-ts-3" },
   Ye = { class: "nav_link-p" },
-  We = b(
+  We = y(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -675,7 +675,7 @@ const Fe = () => {
     null,
     -1
   ),
-  Ge = b("div", { id: "pink_mask" }, null, -1),
+  Ge = y("div", { id: "pink_mask" }, null, -1),
   Ke = {
     props: ["isOpen"],
     emits: ["toggleOpen"],
@@ -711,7 +711,7 @@ const Fe = () => {
           },
         ]),
         r = j(() => 25 * s.value),
-        n = j(() => {
+        d = j(() => {
           switch (s.value) {
             case 1:
               return 50;
@@ -723,23 +723,23 @@ const Fe = () => {
               return 75;
           }
         }),
-        c = k(25);
-      return (e, d) => (
+        n = k(25);
+      return (e, c) => (
         g(),
-        y(
+        b(
           "div",
           { class: h(["layout-deafult-header-nav", { active: t.isOpen }]) },
           [
-            b("ul", null, [
+            y("ul", null, [
               (g(!0),
-              y(
+              b(
                 _,
                 null,
                 R(
                   o.value,
                   (e, l) => (
                     g(),
-                    y(
+                    b(
                       "li",
                       {
                         key: e,
@@ -759,12 +759,12 @@ const Fe = () => {
                       },
                       [
                         Ve,
-                        b("div", He, [
-                          b("div", Ne, [
+                        y("div", He, [
+                          y("div", Ne, [
                             Xe,
-                            b("div", Re, [b("div", Ze, Y(e.title), 1)]),
+                            y("div", Re, [y("div", Ze, Y(e.title), 1)]),
                           ]),
-                          b(
+                          y(
                             "div",
                             {
                               class: h([
@@ -772,7 +772,7 @@ const Fe = () => {
                                 { active: s.value === l },
                               ]),
                             },
-                            [b("p", Ye, Y(e.content), 1), We],
+                            [y("p", Ye, Y(e.content), 1), We],
                             2
                           ),
                         ]),
@@ -784,14 +784,14 @@ const Fe = () => {
                 ),
                 128
               )),
-              b(
+              y(
                 "div",
                 {
                   class: "move-item",
                   style: Z({
                     left: "" + (l.value ? `calc(${w(r)}% - 4px)` : "auto"),
-                    right: "" + (l.value ? "auto" : `calc(${w(n)}% - 4px)`),
-                    width: `calc(${c.value}% + 8px)`,
+                    right: "" + (l.value ? "auto" : `calc(${w(d)}% - 4px)`),
+                    width: `calc(${n.value}% + 8px)`,
                   }),
                 },
                 null,
@@ -808,7 +808,7 @@ const Fe = () => {
   $e = { key: 0 },
   Je = ["src"],
   Qe = ["src"],
-  ea = [b("div", null, null, -1), b("div", null, null, -1)],
+  ea = [y("div", null, null, -1), y("div", null, null, -1)],
   aa = { class: "layout-deafult pb-32" };
 var ta = Se(
     {
@@ -821,17 +821,17 @@ var ta = Se(
               };
             return (e, s) => (
               g(),
-              y(
+              b(
                 _,
                 null,
                 [
-                  b(
+                  y(
                     "div",
                     {
                       class: h(["layout-deafult-header", { active: a.value }]),
                     },
                     [
-                      b(
+                      y(
                         "div",
                         {
                           href: "/",
@@ -845,7 +845,7 @@ var ta = Se(
                         [
                           a.value
                             ? (g(),
-                              y(
+                              b(
                                 "img",
                                 { key: 1, src: w(ke)("logo.png"), alt: "" },
                                 null,
@@ -853,8 +853,8 @@ var ta = Se(
                                 Qe
                               ))
                             : (g(),
-                              y("div", $e, [
-                                b(
+                              b("div", $e, [
+                                y(
                                   "img",
                                   { src: w(ke)("logo.png"), alt: "" },
                                   null,
@@ -865,7 +865,7 @@ var ta = Se(
                         ],
                         2
                       ),
-                      b(
+                      y(
                         "div",
                         {
                           class: h([
@@ -908,7 +908,7 @@ var ta = Se(
         function (e, a, t, s, l, i) {
           const o = S("LayoutHeader");
           return (
-            g(), y(_, null, [A(o), b("div", aa, [W(e.$slots, "default")])], 64)
+            g(), b(_, null, [T(o), y("div", aa, [W(e.$slots, "default")])], 64)
           );
         },
       ],
@@ -926,7 +926,7 @@ var ia = Se({ setup() {} }, [
   [
     "render",
     function (e, a, t, s, l, i) {
-      return g(), y("div", la, [W(e.$slots, "default")]);
+      return g(), b("div", la, [W(e.$slots, "default")]);
     },
   ],
 ]);
@@ -945,14 +945,14 @@ for (let Vo in oa) {
   const e = Vo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
   ra.push({ componentName: e, component: oa[Vo].default });
 }
-const na = {
+const da = {
   install: (e) => {
     ra.forEach((a) => {
       e.component(a.componentName, a.component);
     });
   },
 };
-const ca = {
+const na = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
       const e = X();
@@ -965,31 +965,31 @@ const ca = {
       };
     },
   },
-  da = {
+  ca = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
   pa = { class: "font-bold" },
   va = { class: "absolute right-8 top-6" };
-var ma = Se(ca, [
+var ma = Se(na, [
     [
       "render",
       function (e, a, t, s, l, i) {
         return (
           g(),
-          y("div", da, [
+          b("div", ca, [
             t.goBackButton
               ? (g(),
-                y("div", {
+                b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
                     a[0] || (a[0] = (...e) => s.goBack && s.goBack(...e)),
                 }))
               : E("", !0),
-            b("div", pa, [
+            y("div", pa, [
               W(e.$slots, "title", {}, () => [G(Y(t.title), 1)], !0),
             ]),
-            b("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
+            y("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
@@ -1009,8 +1009,8 @@ const ga = {
     tabindex: "-1",
     style: { display: "grid" },
   },
-  ya = { class: "swal2-title", style: { display: "block" } },
-  ba = { class: "swal2-html-container", style: { display: "block" } },
+  ba = { class: "swal2-title", style: { display: "block" } },
+  ya = { class: "swal2-html-container", style: { display: "block" } },
   ha = { class: "swal2-actions", style: { display: "flex" } };
 var wa = Se({}, [
   [
@@ -1018,10 +1018,10 @@ var wa = Se({}, [
     function (e, a) {
       return (
         g(),
-        y("div", ga, [
-          b("h2", ya, [W(e.$slots, "title")]),
-          b("div", ba, [W(e.$slots, "content")]),
-          b("div", ha, [W(e.$slots, "actions")]),
+        b("div", ga, [
+          y("h2", ba, [W(e.$slots, "title")]),
+          y("div", ya, [W(e.$slots, "content")]),
+          y("div", ha, [W(e.$slots, "actions")]),
         ])
       );
     },
@@ -1051,36 +1051,36 @@ var ja = Se(
         i = j(() => t.value.BackdropStyle),
         o = k();
       let r = null;
-      const n = () => {
+      const d = () => {
         clearTimeout(r), (r = null);
       };
       C([() => t.value.autoClose, () => t.value.timer], ([e, a]) => {
         a &&
-          (n(),
+          (d(),
           (r = setTimeout(() => {
-            n(), e && c("timer");
+            d(), e && n("timer");
           }, a)));
       });
-      const c = async (e) => {
+      const n = async (e) => {
           if (r) {
             if (!t.value.allowDismissWhenTimerRunning) return;
-            n();
+            d();
           }
           if (o.value && "onDismissed" in o.value) {
             const t = await o.value.onDismissed();
             t && (s({ isDismissed: !0, dismiss: e, result: t }), a.clear());
           } else s({ isDismissed: !0, dismiss: e }), a.clear();
         },
-        d = async () => {
-          t.value.allowOutsideClick && c("backdrop");
+        c = async () => {
+          t.value.allowOutsideClick && n("backdrop");
         },
         p = async () => {
-          c("cancel");
+          n("cancel");
         },
         v = async () => {
           if (r) {
             if (!t.value.allowConfirmWhenTimerRunning) return;
-            n();
+            d();
           }
           if (o.value && "onConfirmed" in o.value) {
             const e = await o.value.onConfirmed();
@@ -1090,7 +1090,7 @@ var ja = Se(
       return (e, a) => (
         g(),
         z(ee, { to: "body" }, [
-          A(
+          T(
             Q,
             { name: "popup", duration: "600" },
             {
@@ -1099,10 +1099,10 @@ var ja = Se(
                 return [
                   w(t).$display
                     ? (g(),
-                      y("div", _a, [
+                      b("div", _a, [
                         (g(),
                         z(
-                          T(w(l)),
+                          A(w(l)),
                           {
                             class: h([
                               "popup__inner pointer-events-auto",
@@ -1121,7 +1121,7 @@ var ja = Se(
                                 w(t).component
                                   ? (g(),
                                     z(
-                                      T(w(t).component),
+                                      A(w(t).component),
                                       J(
                                         { key: 0, ref_key: "compRef", ref: o },
                                         w(t).props
@@ -1129,12 +1129,12 @@ var ja = Se(
                                       null,
                                       16
                                     ))
-                                  : (g(), y("div", xa, Y(w(t).text), 1)),
+                                  : (g(), b("div", xa, Y(w(t).text), 1)),
                               ]),
                               actions: O(() => [
                                 w(t).showCancelButton
                                   ? (g(),
-                                    y(
+                                    b(
                                       "button",
                                       {
                                         key: 0,
@@ -1148,7 +1148,7 @@ var ja = Se(
                                   : E("", !0),
                                 w(t).showConfirmButton
                                   ? (g(),
-                                    y(
+                                    b(
                                       "button",
                                       {
                                         key: 1,
@@ -1168,7 +1168,7 @@ var ja = Se(
                                 ? {
                                     name: "timer",
                                     fn: O(() => [
-                                      b(
+                                      y(
                                         "div",
                                         {
                                           class: "timer-progress",
@@ -1194,7 +1194,7 @@ var ja = Se(
               _: 1,
             }
           ),
-          A(
+          T(
             Q,
             {
               name: "popup-backdrop",
@@ -1205,13 +1205,13 @@ var ja = Se(
               default: O(() => [
                 w(t).$display
                   ? (g(),
-                    y(
+                    b(
                       "div",
                       {
                         key: 0,
                         class: "popup-backdrop",
                         style: Z({ background: w(i) }),
-                        onClick: d,
+                        onClick: c,
                       },
                       null,
                       4
@@ -1351,10 +1351,10 @@ Oa.prototype.install = function (e) {
   const a = "alert-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Ta = new Oa(),
-  Aa = Object.freeze(
+var Aa = new Oa(),
+  Ta = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Oa, default: Ta },
+      { __proto__: null, AlertService: Oa, default: Aa },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1373,7 +1373,7 @@ class Ea {
     });
   }
 }
-const Ba = {
+const La = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
@@ -1386,11 +1386,11 @@ const Ba = {
       );
     },
   },
-  La = (e, { rejectNil: a, rejectEmpty: t }) =>
+  Ba = (e, { rejectNil: a, rejectEmpty: t }) =>
     M(
       (s, l) => {
         const i = e[l];
-        return (a && B(i)) || (t && se(i)) ? s : le(l, i, s);
+        return (a && L(i)) || (t && se(i)) ? s : le(l, i, s);
       },
       {},
       F(e)
@@ -1406,9 +1406,9 @@ const Ba = {
           } = e;
           if (
             (e.params &&
-              (e.params = La(e.params, { rejectNil: a, rejectEmpty: t })),
+              (e.params = Ba(e.params, { rejectNil: a, rejectEmpty: t })),
             e.data &&
-              ((e.data = La(e.data, { rejectNil: a, rejectEmpty: t })), s))
+              ((e.data = Ba(e.data, { rejectNil: a, rejectEmpty: t })), s))
           ) {
             const a = new FormData();
             ie((t) => {
@@ -1581,7 +1581,7 @@ for (let Vo in Va) {
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Ha = ne(Ha, Na(re(e), oe(e), Va[Vo].default));
+  Ha = de(Ha, Na(re(e), oe(e), Va[Vo].default));
 }
 var Xa = Ha;
 const Ra = {},
@@ -1616,48 +1616,48 @@ const Ra = {},
   Ya = { class: "footer" },
   Wa = { class: "container" },
   Ga = { class: "row row-justify-center" },
-  Ka = b(
+  Ka = y(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
-      b("div", { class: "footer_group cc-above" }, [
-        b("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
-        b("ul", { role: "list", class: "footer_list" }, [
-          b("li", { class: "footer_list-item" }, [
-            b(
+      y("div", { class: "footer_group cc-above" }, [
+        y("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
+        y("ul", { role: "list", class: "footer_list" }, [
+          y("li", { class: "footer_list-item" }, [
+            y(
               "a",
               {
                 href: "mailto:hello@basis.work",
                 class: "footer_link w-inline-block",
               },
-              [b("div", { class: "u-ts-3" }, "hello@basis.work")]
+              [y("div", { class: "u-ts-3" }, "hello@basis.work")]
             ),
           ]),
         ]),
       ]),
-      b("div", { class: "footer_group" }, [
-        b("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
-        b("ul", { role: "list", class: "footer_list" }, [
-          b("li", { class: "footer_list-item" }, [
-            b(
+      y("div", { class: "footer_group" }, [
+        y("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
+        y("ul", { role: "list", class: "footer_list" }, [
+          y("li", { class: "footer_list-item" }, [
+            y(
               "a",
               {
                 href: "https://www.instagram.com/basis.work/",
                 target: "_blank",
                 class: "footer_link w-inline-block",
               },
-              [b("div", { class: "u-ts-3" }, "Instagram")]
+              [y("div", { class: "u-ts-3" }, "Instagram")]
             ),
           ]),
-          b("li", { class: "footer_list-item" }, [
-            b(
+          y("li", { class: "footer_list-item" }, [
+            y(
               "a",
               {
                 href: "https://www.linkedin.com/company/basisstudio/",
                 target: "_blank",
                 class: "footer_link w-inline-block",
               },
-              [b("div", { class: "u-ts-3" }, "Linkedin")]
+              [y("div", { class: "u-ts-3" }, "Linkedin")]
             ),
           ]),
         ]),
@@ -1665,44 +1665,44 @@ const Ra = {},
     ],
     -1
   ),
-  $a = b(
+  $a = y(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
-      b("div", { class: "footer_group" }, [
-        b("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
-        b("ul", { role: "list", class: "footer_list" }, [
-          b("li", { class: "footer_list-item" }, [
-            b("a", { href: "/", class: "footer_link w-inline-block" }, [
-              b("div", { class: "u-ts-3" }, "Overview"),
+      y("div", { class: "footer_group" }, [
+        y("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
+        y("ul", { role: "list", class: "footer_list" }, [
+          y("li", { class: "footer_list-item" }, [
+            y("a", { href: "/", class: "footer_link w-inline-block" }, [
+              y("div", { class: "u-ts-3" }, "Overview"),
             ]),
           ]),
-          b("li", { class: "footer_list-item" }, [
-            b("a", { href: "/cases", class: "footer_link w-inline-block" }, [
-              b("div", { class: "u-ts-3" }, "Cases"),
+          y("li", { class: "footer_list-item" }, [
+            y("a", { href: "/cases", class: "footer_link w-inline-block" }, [
+              y("div", { class: "u-ts-3" }, "Cases"),
             ]),
           ]),
-          b("li", { class: "footer_list-item" }, [
-            b("a", { href: "/about", class: "footer_link w-inline-block" }, [
-              b("div", { class: "u-ts-3" }, "Services"),
+          y("li", { class: "footer_list-item" }, [
+            y("a", { href: "/about", class: "footer_link w-inline-block" }, [
+              y("div", { class: "u-ts-3" }, "Services"),
             ]),
           ]),
-          b("li", { class: "footer_list-item" }, [
-            b(
+          y("li", { class: "footer_list-item" }, [
+            y(
               "a",
               { href: "/design-trial", class: "footer_link w-inline-block" },
-              [b("div", { class: "u-ts-3" }, "Design Trial")]
+              [y("div", { class: "u-ts-3" }, "Design Trial")]
             ),
           ]),
-          b("li", { class: "footer_list-item" }, [
-            b(
+          y("li", { class: "footer_list-item" }, [
+            y(
               "a",
               {
                 href: "/fintech-design",
                 "aria-current": "page",
                 class: "footer_link w-inline-block w--current",
               },
-              [b("div", { class: "u-ts-3" }, "Fintech Design")]
+              [y("div", { class: "u-ts-3" }, "Fintech Design")]
             ),
           ]),
         ]),
@@ -1710,18 +1710,18 @@ const Ra = {},
     ],
     -1
   ),
-  Ja = b("div", { class: "col col-md-hide" }, null, -1),
+  Ja = y("div", { class: "col col-md-hide" }, null, -1),
   Qa = { class: "col col-lg-4 col-md-12 col-md-first" },
   et = { href: "/", class: "footer-wordmark w-inline-block" },
   at = { class: "wordmark w-embed" },
   tt = ["src"],
-  st = b(
+  st = y(
     "div",
     { class: "footer-copyright" },
     [
-      b("div", { "data-copyright": "" }, [
+      y("div", { "data-copyright": "" }, [
         G(" Copyright © "),
-        b("span", { "data-dynamic": "year" }, "2024"),
+        y("span", { "data-dynamic": "year" }, "2024"),
       ]),
     ],
     -1
@@ -1729,16 +1729,16 @@ const Ra = {},
   lt = {
     setup: (e) => (e, a) => (
       g(),
-      y("footer", Ya, [
-        b("div", Wa, [
-          b("div", Ga, [
+      b("footer", Ya, [
+        y("div", Wa, [
+          y("div", Ga, [
             Ka,
             $a,
             Ja,
-            b("div", Qa, [
-              b("a", et, [
-                b("div", at, [
-                  b("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, tt),
+            y("div", Qa, [
+              y("a", et, [
+                y("div", at, [
+                  y("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, tt),
                 ]),
               ]),
             ]),
@@ -1747,20 +1747,35 @@ const Ra = {},
         ]),
       ])
     ),
-  },
-  it = {
+  };
+const it = {
     components: { Footer: lt },
     setup() {
       const { t: e } = Fe();
-      return { t: e };
+      return (
+        q(() => {
+          ne.init();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
+            });
+          });
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
+          });
+        }),
+        { t: e }
+      );
     },
   },
-  ot = b(
+  ot = y(
     "header",
     { "data-mouse-class": "cc-icon", class: "header cc-large" },
     [
-      b("div", { class: "nav_mode w-embed" }),
-      b(
+      y("div", { class: "nav_mode w-embed" }),
+      y(
         "div",
         {
           class: "header-image_wrap",
@@ -1771,7 +1786,7 @@ const Ra = {},
           },
         },
         [
-          b("img", {
+          y("img", {
             src:
               "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp",
             loading: "eager",
@@ -1787,7 +1802,7 @@ const Ra = {},
               "transform-style": "preserve-3d",
             },
           }),
-          b(
+          y(
             "div",
             {
               class: "header-image",
@@ -1799,8 +1814,8 @@ const Ra = {},
               },
             },
             [
-              b("div", { class: "iframe-video_wrapper" }, [
-                b("iframe", {
+              y("div", { class: "iframe-video_wrapper" }, [
+                y("iframe", {
                   class: "iframe-video_iframe",
                   width: "100%",
                   height: "100%",
@@ -1813,16 +1828,16 @@ const Ra = {},
                   title: "Services 1",
                   loading: "lazy",
                 }),
-                b("div", { class: "iframe-video_blocker" }),
+                y("div", { class: "iframe-video_blocker" }),
               ]),
             ]
           ),
         ]
       ),
-      b("div", { class: "header-content_wrapper" }, [
-        b("div", { class: "container" }, [
-          b("div", { class: "row" }, [
-            b(
+      y("div", { class: "header-content_wrapper" }, [
+        y("div", { class: "container" }, [
+          y("div", { class: "row" }, [
+            y(
               "div",
               {
                 "data-animation-trigger": "transition",
@@ -1830,444 +1845,463 @@ const Ra = {},
                 class: "col col-lg-6 col-md-12",
               },
               [
-                b("div", { class: "header-content_main" }, [
-                  b("div", { class: "text-wrap-balance" }, [
-                    b(
-                      "h1",
-                      {
-                        "data-animation-element": "title",
-                        class: "h4",
-                        style: {},
-                      },
-                      [
-                        b(
-                          "div",
-                          {
-                            class: "u-overflow-hidden",
-                            style: {
-                              display: "block",
-                              "text-align": "start",
-                              position: "relative",
-                            },
-                          },
-                          [
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " Basis "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " gets "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " you "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " closer "
-                            ),
-                          ]
-                        ),
-                        b(
-                          "div",
-                          {
-                            class: "u-overflow-hidden",
-                            style: {
-                              display: "block",
-                              "text-align": "start",
-                              position: "relative",
-                            },
-                          },
-                          [
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " to "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " your "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " long-term "
-                            ),
-                          ]
-                        ),
-                        b(
-                          "div",
-                          {
-                            class: "u-overflow-hidden",
-                            style: {
-                              display: "block",
-                              "text-align": "start",
-                              position: "relative",
-                            },
-                          },
-                          [
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " vision, "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " first "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " by "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " meeting "
-                            ),
-                          ]
-                        ),
-                        b(
-                          "div",
-                          {
-                            class: "u-overflow-hidden",
-                            style: {
-                              display: "block",
-                              "text-align": "start",
-                              position: "relative",
-                            },
-                          },
-                          [
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " your "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " short-term "
-                            ),
-                            b(
-                              "div",
-                              {
-                                style: {
-                                  position: "relative",
-                                  display: "inline-block",
-                                  translate: "none",
-                                  rotate: "none",
-                                  scale: "none",
-                                  transform: "translate(0px, 0%)",
-                                },
-                              },
-                              " goals. "
-                            ),
-                          ]
-                        ),
-                      ]
-                    ),
-                  ]),
-                  b(
+                y("div", { class: "header-content_main" }, [
+                  y(
                     "div",
                     {
-                      class: "header-content_cta",
-                      style: {
-                        transform:
-                          "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                        opacity: "1",
-                      },
+                      class: "text-wrap-balance",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
                     },
                     [
-                      b("div", { class: "header-content_icon w-embed" }, [
-                        b(
-                          "svg",
-                          {
-                            width: "100%",
-                            style: {},
-                            viewBox: "0 0 20 20",
-                            fill: "none",
-                            xmlns: "http://www.w3.org/2000/svg",
-                          },
-                          [
-                            b("path", {
-                              d:
-                                "M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z",
-                              fill: "black",
-                            }),
-                          ]
-                        ),
-                      ]),
+                      y(
+                        "h1",
+                        {
+                          "data-animation-element": "title",
+                          class: "h4",
+                          style: {},
+                        },
+                        [
+                          y(
+                            "div",
+                            {
+                              class: "u-overflow-hidden",
+                              style: {
+                                display: "block",
+                                "text-align": "start",
+                                position: "relative",
+                              },
+                            },
+                            [
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " Basis "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " gets "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " you "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " closer "
+                              ),
+                            ]
+                          ),
+                          y(
+                            "div",
+                            {
+                              class: "u-overflow-hidden",
+                              style: {
+                                display: "block",
+                                "text-align": "start",
+                                position: "relative",
+                              },
+                            },
+                            [
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " to "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " your "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " long-term "
+                              ),
+                            ]
+                          ),
+                          y(
+                            "div",
+                            {
+                              class: "u-overflow-hidden",
+                              style: {
+                                display: "block",
+                                "text-align": "start",
+                                position: "relative",
+                              },
+                            },
+                            [
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " vision, "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " first "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " by "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " meeting "
+                              ),
+                            ]
+                          ),
+                          y(
+                            "div",
+                            {
+                              class: "u-overflow-hidden",
+                              style: {
+                                display: "block",
+                                "text-align": "start",
+                                position: "relative",
+                              },
+                            },
+                            [
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " your "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " short-term "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " goals. "
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
                     ]
                   ),
+                  y("div", { class: "header-content_cta" }, [
+                    y("div", { class: "header-content_icon w-embed" }, [
+                      y(
+                        "svg",
+                        {
+                          width: "100%",
+                          style: {},
+                          viewBox: "0 0 20 20",
+                          fill: "none",
+                          xmlns: "http://www.w3.org/2000/svg",
+                        },
+                        [
+                          y("path", {
+                            d:
+                              "M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z",
+                            fill: "black",
+                          }),
+                        ]
+                      ),
+                    ]),
+                  ]),
                 ]),
               ]
             ),
           ]),
         ]),
       ]),
-      b("div", { "data-transition": "in", class: "header-trigger" }),
+      y("div", { "data-transition": "in", class: "header-trigger" }),
     ],
     -1
   ),
-  rt = b("div", { class: "spacing" }, null, -1),
-  nt = b(
+  rt = y("div", { class: "spacing" }, null, -1),
+  dt = y(
     "section",
     { class: "section" },
     [
-      b("div", { class: "section-title_component" }, [
-        b("div", { class: "container" }, [
-          b("div", { class: "section-title_wrapper" }, [
-            b("div", { class: "section-title_dot", style: { opacity: "1" } }, [
-              b("div", {
-                class: "section-title_dot-fill",
-                style: { width: "100%", height: "100%" },
-              }),
-            ]),
-            b("div", { class: "u-overflow-hidden" }, [
-              b(
-                "div",
-                {
-                  class: "section-title_title",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [b("h2", { class: "u-ts-4" }, "Work with Basis")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-      b("div", { class: "container" }, [
-        b("div", { class: "w-layout-grid pair-grid" }, [
-          b(
+      y("div", { class: "section-title_component" }, [
+        y("div", { class: "container" }, [
+          y(
             "div",
-            { id: "w-node-e8a07e93-34f6-be32-54f2-b34bf2439e43-af55239f" },
+            {
+              class: "section-title_wrapper",
+              "data-aos": "fade-up",
+              "data-aos-duration": "700",
+            },
             [
-              b("div", { class: "case-details is-about" }, [
-                b("div", { class: "u-ts-4" }, [
-                  b("div", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "case-detail_title cc-1",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [
-                        b(
-                          "h2",
-                          { class: "u-ts-4 u-text-mid" },
-                          "Project inquiries"
-                        ),
-                      ]
-                    ),
-                  ]),
-                  b(
-                    "a",
-                    {
-                      href: "mailto:hello@basis.work",
-                      class: "case-detail_item cc-1",
-                      style: {
-                        transform:
-                          "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                        opacity: "1",
-                      },
+              y(
+                "div",
+                { class: "section-title_dot", style: { opacity: "1" } },
+                [
+                  y("div", {
+                    class: "section-title_dot-fill",
+                    style: { width: "100%", height: "100%" },
+                  }),
+                ]
+              ),
+              y("div", { class: "u-overflow-hidden" }, [
+                y(
+                  "div",
+                  {
+                    class: "section-title_title",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
                     },
-                    "hello@basis.work"
-                  ),
-                ]),
-                b("div", { class: "u-ts-4" }, [
-                  b("div", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "case-detail_title cc-2",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [b("h2", { class: "u-ts-4 u-text-mid" }, "Join the team")]
-                    ),
-                  ]),
-                  b(
-                    "a",
-                    {
-                      href: "mailto:jobs@basis.work",
-                      class: "case-detail_item cc-2",
-                      style: {
-                        transform:
-                          "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                        opacity: "1",
-                      },
-                    },
-                    "jobs@basis.work"
-                  ),
-                ]),
+                  },
+                  [y("h2", { class: "u-ts-4" }, "Work with Basis")]
+                ),
               ]),
             ]
           ),
-          b(
+        ]),
+      ]),
+      y("div", { class: "container" }, [
+        y("div", { class: "w-layout-grid pair-grid" }, [
+          y(
+            "div",
+            { id: "w-node-e8a07e93-34f6-be32-54f2-b34bf2439e43-af55239f" },
+            [
+              y(
+                "div",
+                {
+                  class: "case-details is-about",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  y("div", { class: "u-ts-4" }, [
+                    y("div", { class: "u-overflow-hidden" }, [
+                      y(
+                        "div",
+                        {
+                          class: "case-detail_title cc-1",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [
+                          y(
+                            "h2",
+                            { class: "u-ts-4 u-text-mid" },
+                            "Project inquiries"
+                          ),
+                        ]
+                      ),
+                    ]),
+                    y(
+                      "a",
+                      {
+                        href: "mailto:hello@basis.work",
+                        class: "case-detail_item cc-1",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                          opacity: "1",
+                        },
+                      },
+                      "hello@basis.work"
+                    ),
+                  ]),
+                  y("div", { class: "u-ts-4" }, [
+                    y("div", { class: "u-overflow-hidden" }, [
+                      y(
+                        "div",
+                        {
+                          class: "case-detail_title cc-2",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [
+                          y(
+                            "h2",
+                            { class: "u-ts-4 u-text-mid" },
+                            "Join the team"
+                          ),
+                        ]
+                      ),
+                    ]),
+                    y(
+                      "a",
+                      {
+                        href: "mailto:jobs@basis.work",
+                        class: "case-detail_item cc-2",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                          opacity: "1",
+                        },
+                      },
+                      "jobs@basis.work"
+                    ),
+                  ]),
+                ]
+              ),
+            ]
+          ),
+          y(
             "div",
             {
               id: "w-node-_2eada710-eca2-ae0e-be9f-54fbff32a11c-af55239f",
               class: "content",
             },
             [
-              b(
+              y(
                 "div",
                 {
                   "data-animation-element": "paragraphs",
                   class: "content-p cc-1",
-                  style: {
-                    transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                    opacity: "1",
-                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
                 },
                 [
-                  b(
+                  y(
                     "p",
                     { class: "u-ts-1 u-mb-0" },
                     " Startups and enterprises hire us when they can’t afford to fail. As the technology of our world gets increasingly more complex, your brand and product are being asked to adapt to more situations, more platforms, more devices, and a more global audience than ever. That’s why you need the expertise of a studio that builds true systems: From the first touch of brand awareness to the product needs of your most engaged user, Basis sees it all as part of one holistic experience. "
                   ),
                 ]
               ),
-              b("div", { class: "btn-group" }, [
-                b(
+              y("div", { class: "btn-group" }, [
+                y(
                   "div",
                   {
                     class: "btn-item cc-1",
@@ -2278,18 +2312,17 @@ const Ra = {},
                     },
                   },
                   [
-                    b(
+                    y(
                       "a",
                       {
-                        href:
-                          "https://calendly.com/basis-studio/30min?month=2024-02",
-                        target: "_blank",
                         class: "btn w-inline-block",
+                        "data-aos": "fade-left",
+                        "data-aos-duration": "1000",
                       },
                       [
-                        b("div", { class: "btn-text-wrap" }, [
-                          b("div", { class: "btn-text" }, "Start a project"),
-                          b(
+                        y("div", { class: "btn-text-wrap" }, [
+                          y("div", { class: "btn-text" }, "Start a project"),
+                          y(
                             "div",
                             { class: "btn-text cc-bottom" },
                             "Start a project"
@@ -2299,7 +2332,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     class: "btn-item cc-2",
@@ -2310,16 +2343,17 @@ const Ra = {},
                     },
                   },
                   [
-                    b(
+                    y(
                       "a",
                       {
-                        href: "/design-trial",
                         class: "btn cc-secondary w-inline-block",
+                        "data-aos": "fade-left",
+                        "data-aos-duration": "1000",
                       },
                       [
-                        b("div", { class: "btn-text-wrap" }, [
-                          b("div", { class: "btn-text" }, "Design trial"),
-                          b(
+                        y("div", { class: "btn-text-wrap" }, [
+                          y("div", { class: "btn-text" }, "Design trial"),
+                          y(
                             "div",
                             { class: "btn-text cc-bottom" },
                             "Design trial"
@@ -2333,16 +2367,68 @@ const Ra = {},
             ]
           ),
         ]),
-        b("div", { class: "sticky-pair cc-far" }, [
-          b("div", { class: "w-layout-grid pair-grid" }, [
-            b("div", { class: "div-block" }, [
-              b("div", { class: "card-wrapper cc-small" }, [
-                b("div", { class: "card-animation cc-40" }, [
-                  b(
+        y("div", { class: "sticky-pair cc-far" }, [
+          y("div", { class: "w-layout-grid pair-grid" }, [
+            y("div", { class: "div-block" }, [
+              y(
+                "div",
+                {
+                  class: "card-wrapper cc-small",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  y("div", { class: "card-animation cc-40" }, [
+                    y(
+                      "div",
+                      {
+                        "data-mouse-class": "cc-none",
+                        class: "card",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                          opacity: "1",
+                        },
+                      },
+                      [
+                        y("div", { class: "card-image_wrapper" }, [
+                          y("img", {
+                            loading: "lazy",
+                            sizes: "100vw",
+                            srcset:
+                              "\n                        https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552359_meet-bases-01-p-500.jpg 500w,\n                        https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552359_meet-bases-01.webp      886w\n                      ",
+                            alt: "",
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552359_meet-bases-01.webp",
+                            class: "card-image",
+                            style: {
+                              "will-change": "transform",
+                              transform: "translate3d(0px, -20%, 0px)",
+                              "transform-style": "preserve-3d",
+                            },
+                          }),
+                        ]),
+                      ]
+                    ),
+                  ]),
+                ]
+              ),
+            ]),
+            y(
+              "div",
+              {
+                class: "card-wrapper cc-large",
+                "data-aos": "fade-up",
+                "data-aos-duration": "700",
+              },
+              [
+                y("div", { class: "card-animation cc-40" }, [
+                  y(
                     "div",
                     {
                       "data-mouse-class": "cc-none",
-                      class: "card",
+                      class: "card cc-large",
                       style: {
                         transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
                         "transform-style": "preserve-3d",
@@ -2350,15 +2436,15 @@ const Ra = {},
                       },
                     },
                     [
-                      b("div", { class: "card-image_wrapper" }, [
-                        b("img", {
+                      y("div", { class: "card-image_wrapper" }, [
+                        y("img", {
                           loading: "lazy",
                           sizes: "100vw",
                           srcset:
-                            "\n                        https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552359_meet-bases-01-p-500.jpg 500w,\n                        https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552359_meet-bases-01.webp      886w\n                      ",
+                            "\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-500.jpg   500w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-800.jpg   800w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-1080.jpg 1080w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-1600.jpg 1600w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02.webp       1818w\n                    ",
                           alt: "",
                           src:
-                            "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af552359_meet-bases-01.webp",
+                            "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02.webp",
                           class: "card-image",
                           style: {
                             "will-change": "transform",
@@ -2370,55 +2456,22 @@ const Ra = {},
                     ]
                   ),
                 ]),
-              ]),
-            ]),
-            b("div", { class: "card-wrapper cc-large" }, [
-              b("div", { class: "card-animation cc-40" }, [
-                b(
-                  "div",
-                  {
-                    "data-mouse-class": "cc-none",
-                    class: "card cc-large",
-                    style: {
-                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                      "transform-style": "preserve-3d",
-                      opacity: "1",
-                    },
-                  },
-                  [
-                    b("div", { class: "card-image_wrapper" }, [
-                      b("img", {
-                        loading: "lazy",
-                        sizes: "100vw",
-                        srcset:
-                          "\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-500.jpg   500w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-800.jpg   800w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-1080.jpg 1080w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02-p-1600.jpg 1600w,\n                      https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02.webp       1818w\n                    ",
-                        alt: "",
-                        src:
-                          "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02.webp",
-                        class: "card-image",
-                        style: {
-                          "will-change": "transform",
-                          transform: "translate3d(0px, -20%, 0px)",
-                          "transform-style": "preserve-3d",
-                        },
-                      }),
-                    ]),
-                  ]
-                ),
-              ]),
-            ]),
-            b(
+              ]
+            ),
+            y(
               "div",
               {
                 id: "w-node-ce72eb91-efb6-6f0b-43b7-a66f9003cbae-af55239f",
                 class: "content",
               },
               [
-                b(
+                y(
                   "div",
                   {
                     "data-animation-element": "paragraphs",
                     class: "content-p cc-1",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
                     style: {
                       transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
                       "transform-style": "preserve-3d",
@@ -2426,14 +2479,14 @@ const Ra = {},
                     },
                   },
                   [
-                    b(
+                    y(
                       "p",
                       { class: "u-ts-1" },
                       " Whether it’s shaping a new venture 0 → 1, evolving an existing company 1 → N, or taking an industry leader from N → XYZ, Basis has a formula that delivers results in record time. Our team is respected for crafting world-class experiences through our signature Product and Brand Trials, led by Michal Škvarenina, the design director behind digital experiences for Google, Airbnb, Red Bull, Mastercard, PC Financial, and more. "
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     "data-animation-element": "paragraphs",
@@ -2445,15 +2498,15 @@ const Ra = {},
                     },
                   },
                   [
-                    b(
+                    y(
                       "p",
                       { class: "u-ts-1" },
                       " When you want to build enduring digital products for an increasingly-digital future, first establish your Basis. "
                     ),
                   ]
                 ),
-                b("div", { class: "btn-group" }, [
-                  b(
+                y("div", { class: "btn-group" }, [
+                  y(
                     "div",
                     {
                       class: "btn-item cc-1",
@@ -2465,18 +2518,17 @@ const Ra = {},
                       },
                     },
                     [
-                      b(
+                      y(
                         "a",
                         {
-                          href:
-                            "https://calendly.com/basis-studio/30min?month=2024-02",
-                          target: "_blank",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
                           class: "btn w-inline-block",
                         },
                         [
-                          b("div", { class: "btn-text-wrap" }, [
-                            b("div", { class: "btn-text" }, "Start a project"),
-                            b(
+                          y("div", { class: "btn-text-wrap" }, [
+                            y("div", { class: "btn-text" }, "Start a project"),
+                            y(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Start a project"
@@ -2486,7 +2538,7 @@ const Ra = {},
                       ),
                     ]
                   ),
-                  b(
+                  y(
                     "div",
                     {
                       class: "btn-item cc-2",
@@ -2498,16 +2550,17 @@ const Ra = {},
                       },
                     },
                     [
-                      b(
+                      y(
                         "a",
                         {
-                          href: "/design-trial",
                           class: "btn cc-secondary w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
                         },
                         [
-                          b("div", { class: "btn-text-wrap" }, [
-                            b("div", { class: "btn-text" }, "Design trial"),
-                            b(
+                          y("div", { class: "btn-text-wrap" }, [
+                            y("div", { class: "btn-text" }, "Design trial"),
+                            y(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Design trial"
@@ -2523,10 +2576,10 @@ const Ra = {},
           ]),
         ]),
       ]),
-      b("div", { class: "u-mt-8-75", "data-v-57509004": "" }, [
-        b("div", { class: "marquee", "data-v-57509004": "" }, [
-          b("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            b(
+      y("div", { class: "u-mt-8-75", "data-v-57509004": "" }, [
+        y("div", { class: "marquee", "data-v-57509004": "" }, [
+          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            y(
               "div",
               {
                 role: "list",
@@ -2539,7 +2592,7 @@ const Ra = {},
                 },
               },
               [
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2547,7 +2600,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -2559,7 +2612,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "300",
@@ -2573,7 +2626,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2581,7 +2634,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -2593,7 +2646,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "400",
@@ -2607,7 +2660,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2615,7 +2668,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -2627,7 +2680,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "500",
@@ -2641,7 +2694,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2649,7 +2702,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-4",
@@ -2661,7 +2714,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "600",
@@ -2675,7 +2728,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2683,7 +2736,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-5",
@@ -2695,7 +2748,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "700",
@@ -2709,7 +2762,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2717,7 +2770,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-6",
@@ -2729,7 +2782,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "800",
@@ -2743,7 +2796,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2751,7 +2804,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-7",
@@ -2763,7 +2816,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "900",
@@ -2777,7 +2830,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2785,7 +2838,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-8",
@@ -2797,7 +2850,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "1000",
@@ -2811,7 +2864,7 @@ const Ra = {},
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2819,7 +2872,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         class: "marquee_item cc-9",
@@ -2831,7 +2884,7 @@ const Ra = {},
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "1100",
@@ -2848,8 +2901,8 @@ const Ra = {},
               ]
             ),
           ]),
-          b("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            b(
+          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            y(
               "div",
               {
                 role: "list",
@@ -2862,7 +2915,7 @@ const Ra = {},
                 },
               },
               [
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2870,7 +2923,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -2880,7 +2933,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2888,7 +2941,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -2898,7 +2951,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2906,7 +2959,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -2916,7 +2969,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2924,7 +2977,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -2934,7 +2987,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2942,7 +2995,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -2952,7 +3005,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2960,7 +3013,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -2970,7 +3023,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2978,7 +3031,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -2988,7 +3041,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -2996,7 +3049,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3006,7 +3059,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3014,7 +3067,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3027,8 +3080,8 @@ const Ra = {},
               ]
             ),
           ]),
-          b("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            b(
+          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            y(
               "div",
               {
                 role: "list",
@@ -3041,7 +3094,7 @@ const Ra = {},
                 },
               },
               [
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3049,7 +3102,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -3059,7 +3112,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3067,7 +3120,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -3077,7 +3130,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3085,7 +3138,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -3095,7 +3148,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3103,7 +3156,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -3113,7 +3166,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3121,7 +3174,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -3131,7 +3184,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3139,7 +3192,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -3149,7 +3202,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3157,7 +3210,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -3167,7 +3220,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3175,7 +3228,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3185,7 +3238,7 @@ const Ra = {},
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     role: "listitem",
@@ -3193,7 +3246,7 @@ const Ra = {},
                     "data-v-57509004": "",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3211,172 +3264,258 @@ const Ra = {},
     ],
     -1
   ),
-  ct = b(
+  nt = y(
+    "div",
+    { class: "container" },
+    [y("div", { class: "target_line" })],
+    -1
+  ),
+  ct = y(
     "section",
     { class: "section" },
     [
-      b("div", { class: "section-title_component" }, [
-        b("div", { class: "container" }, [
-          b("div", { class: "section-title_wrapper" }, [
-            b("div", { class: "section-title_dot", style: { opacity: "1" } }),
-            b("div", { class: "u-overflow-hidden" }, [
-              b(
-                "div",
-                {
-                  class: "section-title_title",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [b("h2", { class: "u-ts-4" }, "What we do")]
-              ),
-            ]),
-          ]),
+      y("div", { class: "section-title_component" }, [
+        y("div", { class: "container" }, [
+          y(
+            "div",
+            {
+              class: "section-title_wrapper",
+              "data-aos": "fade-up",
+              "data-aos-duration": "700",
+            },
+            [
+              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              y("div", { class: "u-overflow-hidden" }, [
+                y("div", { class: "section-title_title" }, [
+                  y("h2", { class: "u-ts-4" }, "What we do"),
+                ]),
+              ]),
+            ]
+          ),
         ]),
       ]),
-      b("div", { class: "container" }, [
-        b("div", { "data-animation-element": "group", class: "row" }, [
-          b("div", { class: "col col-lg-4 col-md-hide" }),
-          b("div", { class: "col" }, [
-            b("div", { class: "service-list" }, [
-              b("div", { class: "logomark_component" }, [
-                b(
-                  "div",
-                  {
-                    class: "logomark w-embed",
-                    style: {
-                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                      "transform-style": "preserve-3d",
+      y("div", { class: "container" }, [
+        y("div", { "data-animation-element": "group", class: "row" }, [
+          y("div", { class: "col col-lg-4 col-md-hide" }),
+          y("div", { class: "col" }, [
+            y("div", { class: "service-list" }, [
+              y(
+                "div",
+                {
+                  class: "logomark_component",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  y(
+                    "div",
+                    {
+                      class: "logomark w-embed",
+                      style: {
+                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                        "transform-style": "preserve-3d",
+                      },
                     },
+                    [
+                      y(
+                        "svg",
+                        {
+                          height: "100%",
+                          style: {},
+                          viewBox: "0 0 185 80",
+                          fill: "currentColor",
+                          xmlns: "http://www.w3.org/2000/svg",
+                        },
+                        [
+                          y("path", {
+                            d:
+                              "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
+                            fill: "currentColor",
+                          }),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              y("ul", { role: "list", class: "u-mt-3-5" }, [
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
                   },
                   [
-                    b(
-                      "svg",
+                    y(
+                      "div",
                       {
-                        height: "100%",
-                        style: {},
-                        viewBox: "0 0 185 80",
-                        fill: "currentColor",
-                        xmlns: "http://www.w3.org/2000/svg",
+                        class: "list-content cc-1",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
                       },
-                      [
-                        b("path", {
-                          d:
-                            "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
-                          fill: "currentColor",
-                        }),
-                      ]
+                      [y("h3", { class: "u-tc-caps" }, "Research")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-2",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "Brand Strategy")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-3",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "Creative Direction")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-4",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "Brand identity")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-5",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "UX & UI Design")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-6",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "Interaction Design")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-7",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "Implementation")]
+                    ),
+                  ]
+                ),
+                y(
+                  "li",
+                  {
+                    class: "u-overflow-hidden",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
+                      "div",
+                      {
+                        class: "list-content cc-8",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h3", { class: "u-tc-caps" }, "Webflow Development")]
                     ),
                   ]
                 ),
               ]),
-              b("ul", { role: "list", class: "u-mt-3-5" }, [
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-1",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Research")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-2",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Brand Strategy")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-3",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Creative Direction")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-4",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Brand identity")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-5",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "UX & UI Design")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-6",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Interaction Design")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-7",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Implementation")]
-                  ),
-                ]),
-                b("li", { class: "u-overflow-hidden" }, [
-                  b(
-                    "div",
-                    {
-                      class: "list-content cc-8",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [b("h3", { class: "u-tc-caps" }, "Webflow Development")]
-                  ),
-                ]),
-              ]),
             ]),
           ]),
         ]),
@@ -3384,125 +3523,86 @@ const Ra = {},
     ],
     -1
   ),
-  dt = ce(
-    '<section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
-    1
+  pt = ce(
+    '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    2
   );
-var pt = Se(it, [
+var vt = Se(it, [
     [
       "render",
       function (e, a, t, s, l, i) {
         const o = S("Footer");
-        return g(), y(_, null, [ot, rt, nt, ct, dt, A(o)], 64);
+        return g(), b(_, null, [ot, rt, dt, nt, ct, pt, T(o)], 64);
       },
     ],
   ]),
-  vt = Object.freeze(
+  mt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: pt },
+      { __proto__: null, default: vt },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const mt = {
+const ft = {
     title: "pages.home.nav.about",
+    components: { Footer: lt },
     setup() {
       const { t: e } = Fe();
-      return { t: e };
+      return (
+        q(() => {
+          ne.init();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
+            });
+          });
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
+          });
+        }),
+        { t: e }
+      );
     },
   },
-  ft = { class: "about" },
-  ut = [
-    b(
+  ut = ((e) => (pe("data-v-e64ae5a2"), (e = e()), ve(), e))(() =>
+    y(
       "div",
-      { role: "listitem", class: "cases-item w-dyn-item" },
+      { class: "about" },
       [
-        b(
-          "a",
-          {
-            "data-mouse-class": "cc-text",
-            href: "/cases/sable-brand",
-            class: "cases-card cc-immediate w-inline-block",
-            style: {
-              transform:
-                "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
-              "transform-style": "preserve-3d",
-              opacity: "1",
+        y("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+          y(
+            "a",
+            {
+              "data-mouse-class": "cc-text",
+              href: "/cases/sable-brand",
+              class: "cases-card cc-immediate w-inline-block",
+              style: {
+                transform:
+                  "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
+                "transform-style": "preserve-3d",
+                opacity: "1",
+              },
             },
-          },
-          [
-            b("div", { class: "cases-assets" }, [
-              b("img", {
-                src:
-                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
-                loading: "lazy",
-                alt: "",
-                class: "cases-portrait",
-              }),
-              b("img", {
-                src:
-                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
-                loading: "eager",
-                alt: "",
-                class: "cases-landscape",
-              }),
-              b("div", { class: "iframe-video_wrapper" }, [
-                b("iframe", {
-                  class: "iframe-video_iframe",
-                  width: "100%",
-                  height: "100%",
-                  style: { overflow: "hidden" },
-                  frameborder: "0",
-                  scrolling: "no",
-                  allow: "fullscreen",
+            [
+              y("div", { class: "cases-assets" }, [
+                y("img", {
                   src:
-                    "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                  title: "Sable 12",
+                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                   loading: "lazy",
+                  alt: "",
+                  class: "cases-portrait",
                 }),
-                b("div", { class: "iframe-video_blocker" }),
-              ]),
-            ]),
-            b("div", { class: "cases-text" }, [
-              b("div", { class: "u-ts-2" }, "Sable Brand"),
-            ]),
-          ]
-        ),
-        b("link", { rel: "prerender", href: "/cases/sable-brand" }),
-        b(
-          "a",
-          {
-            "data-mouse-text": "Contact Us",
-            "data-mouse-class": "cc-text",
-            href: "mailto:hello@basis.work?subject=Enquiry",
-            class:
-              "cases-card cc-immediate w-inline-block w-condition-invisible",
-            style: {
-              transform:
-                "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
-              "transform-style": "preserve-3d",
-              opacity: "1",
-            },
-          },
-          [
-            b("div", { class: "cases-assets" }, [
-              b("img", {
-                src:
-                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
-                loading: "lazy",
-                alt: "",
-                class: "cases-portrait w-condition-invisible",
-              }),
-              b("img", {
-                src:
-                  "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
-                loading: "lazy",
-                alt: "",
-                class: "cases-landscape w-condition-invisible",
-              }),
-              b("div", null, [
-                b("div", { class: "iframe-video_wrapper" }, [
-                  b("iframe", {
+                y("img", {
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                  loading: "eager",
+                  alt: "",
+                  class: "cases-landscape",
+                }),
+                y("div", { class: "iframe-video_wrapper" }, [
+                  y("iframe", {
                     class: "iframe-video_iframe",
                     width: "100%",
                     height: "100%",
@@ -3515,41 +3615,293 @@ const mt = {
                     title: "Sable 12",
                     loading: "lazy",
                   }),
-                  b("div", { class: "iframe-video_blocker" }),
+                  y("div", { class: "iframe-video_blocker" }),
                 ]),
               ]),
-            ]),
-            b("div", { class: "cases-text" }, [
-              b("div", { class: "cases-more" }, [
-                b("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                  G(" Contact us"),
-                  b("span", { class: "hide-tablet" }, " for more"),
+              y("div", { class: "cases-text" }, [
+                y("div", { class: "u-ts-2" }, "Sable Brand"),
+              ]),
+            ]
+          ),
+          y("link", { rel: "prerender", href: "/cases/sable-brand" }),
+          y(
+            "a",
+            {
+              "data-mouse-text": "Contact Us",
+              "data-mouse-class": "cc-text",
+              href: "mailto:hello@basis.work?subject=Enquiry",
+              class:
+                "cases-card cc-immediate w-inline-block w-condition-invisible",
+              style: {
+                transform:
+                  "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
+                "transform-style": "preserve-3d",
+                opacity: "1",
+              },
+            },
+            [
+              y("div", { class: "cases-assets" }, [
+                y("img", {
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
+                  loading: "lazy",
+                  alt: "",
+                  class: "cases-portrait w-condition-invisible",
+                }),
+                y("img", {
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                  loading: "lazy",
+                  alt: "",
+                  class: "cases-landscape w-condition-invisible",
+                }),
+                y("div", null, [
+                  y("div", { class: "iframe-video_wrapper" }, [
+                    y("iframe", {
+                      class: "iframe-video_iframe",
+                      width: "100%",
+                      height: "100%",
+                      style: { overflow: "hidden" },
+                      frameborder: "0",
+                      scrolling: "no",
+                      allow: "fullscreen",
+                      src:
+                        "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                      title: "Sable 12",
+                      loading: "lazy",
+                    }),
+                    y("div", { class: "iframe-video_blocker" }),
+                  ]),
                 ]),
               ]),
-              b("div", { class: "u-ts-2" }, "Sable Brand"),
+              y("div", { class: "cases-text" }, [
+                y("div", { class: "cases-more" }, [
+                  y("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                    G(" Contact us"),
+                    y("span", { class: "hide-tablet" }, " for more"),
+                  ]),
+                ]),
+                y("div", { class: "u-ts-2" }, "Sable Brand"),
+              ]),
+            ]
+          ),
+        ]),
+        y("div", { class: "container mobile-show" }, [
+          y("div", { class: "target_line" }),
+        ]),
+        y("section", { class: "section mobile-show" }, [
+          y("div", { class: "section-title_component" }, [
+            y("div", { class: "container" }, [
+              y(
+                "div",
+                {
+                  class: "section-title_wrapper",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  y("div", {
+                    class: "section-title_dot",
+                    style: { opacity: "1" },
+                  }),
+                  y("div", { class: "u-overflow-hidden" }, [
+                    y(
+                      "div",
+                      {
+                        class: "section-title_title",
+                        style: {
+                          transform:
+                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                          "transform-style": "preserve-3d",
+                        },
+                      },
+                      [y("h2", { class: "u-ts-4" }, "Contact Us")]
+                    ),
+                  ]),
+                ]
+              ),
             ]),
-          ]
-        ),
+          ]),
+          y("div", { class: "container" }, [
+            y("div", { class: "w-layout-grid pair-grid" }, [
+              y(
+                "div",
+                {
+                  "data-animation-element": "group",
+                  id: "w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67",
+                },
+                [
+                  y(
+                    "div",
+                    {
+                      "data-animation-element": "rich-text",
+                      id:
+                        "w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67",
+                      class: "contact-cta w-richtext",
+                    },
+                    [
+                      y(
+                        "h3",
+                        {
+                          "data-animation-element": "title",
+                          style: {},
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y(
+                            "div",
+                            {
+                              class: "u-overflow-hidden",
+                              style: {
+                                display: "block",
+                                "text-align": "start",
+                                position: "relative",
+                              },
+                            },
+                            [
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " Have "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " a "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " project "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " in "
+                              ),
+                              y(
+                                "div",
+                                {
+                                  style: {
+                                    position: "relative",
+                                    display: "inline-block",
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                " mind? "
+                              ),
+                            ]
+                          ),
+                          y(
+                            "div",
+                            {
+                              class: "u-overflow-hidden",
+                              style: {
+                                display: "block",
+                                "text-align": "start",
+                                position: "relative",
+                              },
+                            },
+                            [
+                              y(
+                                "a",
+                                {
+                                  "data-aos": "fade-up",
+                                  "data-aos-duration": "700",
+                                  href: "mailto:hello@basis.work",
+                                  style: {
+                                    translate: "none",
+                                    rotate: "none",
+                                    scale: "none",
+                                    transform: "translate(0px, 0%)",
+                                  },
+                                },
+                                [
+                                  y(
+                                    "div",
+                                    {
+                                      style: {
+                                        position: "relative",
+                                        display: "inline-block",
+                                      },
+                                    },
+                                    " hello@basis.work "
+                                  ),
+                                ]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
+          ]),
+        ]),
       ],
       -1
-    ),
-  ];
-var gt = Se(mt, [
+    )
+  );
+var gt = Se(ft, [
     [
       "render",
       function (e, a, t, s, l, i) {
-        return g(), y("div", ft, ut);
+        const o = S("Footer");
+        return g(), b(_, null, [ut, T(o, { class: "mobile-show" })], 64);
       },
     ],
+    ["__scopeId", "data-v-e64ae5a2"],
   ]),
-  yt = Object.freeze(
+  bt = Object.freeze(
     Object.defineProperty(
       { __proto__: null, default: gt },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const bt = {
+const yt = {
     layout: "layout-demo",
     setup() {
       const e = ua(),
@@ -3557,7 +3909,7 @@ const bt = {
       s({ $current: "pages.demo" });
       const i = X(),
         o = K("alert-service"),
-        r = de({ current: t.value || "zh-tw" });
+        r = me({ current: t.value || "zh-tw" });
       return (
         q(() => {}),
         {
@@ -3586,32 +3938,32 @@ const bt = {
   ht = { class: "demo" },
   wt = { class: "demo-head" },
   _t = { class: "switch" },
-  xt = b("input", { type: "checkbox", class: "cb" }, null, -1),
+  xt = y("input", { type: "checkbox", class: "cb" }, null, -1),
   kt = [
-    b("span", { class: "left" }, "CN", -1),
-    b("span", { class: "right" }, "En", -1),
+    y("span", { class: "left" }, "CN", -1),
+    y("span", { class: "right" }, "En", -1),
   ],
   jt = { class: "demo-head-content" },
   Ct = { class: "demo-actions" },
   qt = { class: "radio-inputs" },
-  St = b("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  St = y("input", { type: "radio", name: "radio", checked: "" }, null, -1),
   zt = { class: "name" },
-  Ot = b("input", { type: "radio", name: "radio" }, null, -1),
-  Tt = { class: "name" },
-  At = b("input", { type: "radio", name: "radio" }, null, -1),
+  Ot = y("input", { type: "radio", name: "radio" }, null, -1),
+  At = { class: "name" },
+  Tt = y("input", { type: "radio", name: "radio" }, null, -1),
   Et = { class: "name" };
-var Bt = Se(bt, [
+var Lt = Se(yt, [
     [
       "render",
       function (e, a, t, s, l, i) {
         return (
           g(),
-          y("div", ht, [
-            b("div", wt, [
-              b("div", null, [
-                b("label", _t, [
+          b("div", ht, [
+            y("div", wt, [
+              y("div", null, [
+                y("label", _t, [
                   xt,
-                  b(
+                  y(
                     "span",
                     {
                       class: "toggle",
@@ -3623,20 +3975,20 @@ var Bt = Se(bt, [
                   ),
                 ]),
               ]),
-              b("div", jt, "lang:" + Y(s.lang.current), 1),
+              y("div", jt, "lang:" + Y(s.lang.current), 1),
             ]),
-            b("div", Ct, [
-              b("div", qt, [
-                b(
+            y("div", Ct, [
+              y("div", qt, [
+                y(
                   "label",
                   {
                     class: "radio",
                     onClick:
                       a[1] || (a[1] = (...e) => s.toHome && s.toHome(...e)),
                   },
-                  [St, b("span", zt, Y(s.t("$current.router.link")), 1)]
+                  [St, y("span", zt, Y(s.t("$current.router.link")), 1)]
                 ),
-                b(
+                y(
                   "label",
                   {
                     class: "radio",
@@ -3644,9 +3996,9 @@ var Bt = Se(bt, [
                       a[2] ||
                       (a[2] = (...e) => s.swalModal && s.swalModal(...e)),
                   },
-                  [Ot, b("span", Tt, Y(s.t("$current.modal.swal")), 1)]
+                  [Ot, y("span", At, Y(s.t("$current.modal.swal")), 1)]
                 ),
-                b(
+                y(
                   "label",
                   {
                     class: "radio",
@@ -3654,7 +4006,7 @@ var Bt = Se(bt, [
                       a[3] ||
                       (a[3] = (...e) => s.popupModal && s.popupModal(...e)),
                   },
-                  [At, b("span", Et, Y(s.t("$current.popup.use")), 1)]
+                  [Tt, y("span", Et, Y(s.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -3663,9 +4015,9 @@ var Bt = Se(bt, [
       },
     ],
   ]),
-  Lt = Object.freeze(
+  Bt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Bt },
+      { __proto__: null, default: Lt },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -3689,6 +4041,7 @@ const It = (e) =>
       const { t: e } = Fe();
       return (
         q(() => {
+          ne.init();
           const e = new IntersectionObserver((e) => {
             e.forEach((e) => {
               e.isIntersecting
@@ -3731,83 +4084,103 @@ const It = (e) =>
   },
   Ht = ["src"],
   Nt = G(" Your browser does not support the video tag. "),
-  Xt = b("div", { class: "iframe-video_blocker" }, null, -1),
+  Xt = y("div", { class: "iframe-video_blocker" }, null, -1),
   Rt = ce(
-    '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance"><h1 data-animation-element="title" class="h4" style=""><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
+    '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4" style=""><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
-  Zt = b("div", { class: "spacing" }, null, -1),
-  Yt = b(
+  Zt = y("div", { class: "spacing" }, null, -1),
+  Yt = y(
     "div",
     { class: "container" },
-    [b("div", { class: "target_line" })],
+    [y("div", { class: "target_line" })],
     -1
   ),
-  Wt = b(
+  Wt = y(
     "section",
-    { class: "section" },
+    { class: "section over-h" },
     [
-      b("div", { class: "section-title_component" }, [
-        b("div", { class: "container" }, [
-          b("div", { class: "section-title_wrapper" }, [
-            b("div", { class: "section-title_dot", style: { opacity: "1" } }, [
-              b("div", {
-                class: "section-title_dot-fill",
-                style: { width: "100%", height: "100%" },
-              }),
-            ]),
-            b("div", { class: "u-overflow-hidden" }, [
-              b(
-                "div",
-                {
-                  class: "section-title_title",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [b("h2", { class: "u-ts-4" }, "Fintech Design Specialists")]
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-      b("div", { class: "container" }, [
-        b("div", { class: "w-layout-grid pair-grid" }, [
-          b(
+      y("div", { class: "section-title_component" }, [
+        y("div", { class: "container" }, [
+          y(
             "div",
             {
-              id: "w-node-_88e3e548-f2e0-1176-a852-0e15f232b846-af55239c",
-              class: "content",
+              class: "section-title_wrapper",
+              "data-aos": "fade-up",
+              "data-aos-duration": "700",
             },
             [
-              b(
+              y(
                 "div",
-                {
-                  class: "content-p cc-1",
-                  style: {
-                    transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                    opacity: "1",
-                  },
-                },
+                { class: "section-title_dot", style: { opacity: "1" } },
                 [
-                  b(
-                    "p",
-                    { class: "u-ts-1 u-mb-0" },
-                    " It’s an industry unlike any other. From credit cards to neobanks and personal finance apps, the whole array of fintech is a crowded, highly-regulated landscape that demands the attention of specialists. The world is going through a digital finance revolution—find your product's place in it with Basis. "
-                  ),
+                  y("div", {
+                    class: "section-title_dot-fill",
+                    style: { width: "100%", height: "100%" },
+                  }),
                 ]
               ),
+              y("div", { class: "u-overflow-hidden" }, [
+                y(
+                  "div",
+                  {
+                    class: "section-title_title",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [y("h2", { class: "u-ts-4" }, "Fintech Design Specialists")]
+                ),
+              ]),
             ]
           ),
         ]),
-        b("div", { class: "sticky-pair cc-far" }, [
-          b("div", { class: "w-layout-grid pair-grid" }, [
-            b("div", { class: "div-block" }, [
-              b("div", { class: "card-wrapper cc-small" }, [
-                b("div", { class: "card-animation cc-40" }, [
-                  b(
+      ]),
+      y("div", { class: "container" }, [
+        y(
+          "div",
+          {
+            class: "w-layout-grid pair-grid",
+            "data-aos": "fade-up",
+            "data-aos-duration": "700",
+          },
+          [
+            y(
+              "div",
+              {
+                id: "w-node-_88e3e548-f2e0-1176-a852-0e15f232b846-af55239c",
+                class: "content",
+              },
+              [
+                y(
+                  "div",
+                  {
+                    class: "content-p cc-1",
+                    style: {
+                      transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                      opacity: "1",
+                    },
+                  },
+                  [
+                    y(
+                      "p",
+                      { class: "u-ts-1 u-mb-0" },
+                      " It’s an industry unlike any other. From credit cards to neobanks and personal finance apps, the whole array of fintech is a crowded, highly-regulated landscape that demands the attention of specialists. The world is going through a digital finance revolution—find your product's place in it with Basis. "
+                    ),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
+        y("div", { class: "sticky-pair cc-far" }, [
+          y("div", { class: "w-layout-grid pair-grid" }, [
+            y("div", { class: "div-block" }, [
+              y("div", { class: "card-wrapper cc-small" }, [
+                y("div", { class: "card-animation cc-40" }, [
+                  y(
                     "div",
                     {
                       "data-mouse-class": "cc-none",
@@ -3819,54 +4192,70 @@ const It = (e) =>
                       },
                     },
                     [
-                      b("div", { class: "card-image_wrapper" }, [
-                        b("div", { class: "iframe-video_wrapper" }, [
-                          b("iframe", {
-                            class: "iframe-video_iframe",
-                            width: "100%",
-                            height: "100%",
-                            style: { overflow: "hidden" },
-                            frameborder: "0",
-                            scrolling: "no",
-                            allow: "fullscreen",
-                            src:
-                              "https://app.vidzflow.com/v/h69w08i83W?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                            title: "Sable 1",
-                            loading: "lazy",
-                          }),
-                          b("div", { class: "iframe-video_blocker" }),
-                        ]),
-                      ]),
-                      b("div", { class: "card-body" }, [
-                        b("div", { class: "u-overflow-hidden" }, [
-                          b(
-                            "div",
-                            {
-                              class: "card-up",
-                              style: {
-                                transform:
-                                  "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                                "transform-style": "preserve-3d",
+                      y(
+                        "div",
+                        {
+                          class: "card-image_wrapper",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("div", { class: "iframe-video_wrapper" }, [
+                            y("iframe", {
+                              class: "iframe-video_iframe",
+                              width: "100%",
+                              height: "100%",
+                              style: { overflow: "hidden" },
+                              frameborder: "0",
+                              scrolling: "no",
+                              allow: "fullscreen",
+                              src:
+                                "https://app.vidzflow.com/v/h69w08i83W?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                              title: "Sable 1",
+                              loading: "lazy",
+                            }),
+                            y("div", { class: "iframe-video_blocker" }),
+                          ]),
+                        ]
+                      ),
+                      y(
+                        "div",
+                        {
+                          class: "card-body",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("div", { class: "u-overflow-hidden" }, [
+                            y(
+                              "div",
+                              {
+                                class: "card-up",
+                                style: {
+                                  transform:
+                                    "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                                  "transform-style": "preserve-3d",
+                                },
                               },
-                            },
-                            [
-                              b(
-                                "h4",
-                                { class: "u-ts-4" },
-                                "In-app credit score"
-                              ),
-                            ]
-                          ),
-                        ]),
-                      ]),
+                              [
+                                y(
+                                  "h4",
+                                  { class: "u-ts-4" },
+                                  "In-app credit score"
+                                ),
+                              ]
+                            ),
+                          ]),
+                        ]
+                      ),
                     ]
                   ),
                 ]),
               ]),
             ]),
-            b("div", { class: "card-wrapper cc-large" }, [
-              b("div", { class: "card-animation cc-40" }, [
-                b(
+            y("div", { class: "card-wrapper cc-large" }, [
+              y("div", { class: "card-animation cc-40" }, [
+                y(
                   "div",
                   {
                     "data-mouse-class": "cc-none",
@@ -3878,79 +4267,92 @@ const It = (e) =>
                     },
                   },
                   [
-                    b("div", { class: "card-image_wrapper" }, [
-                      b("div", { class: "iframe-video_wrapper" }, [
-                        b("iframe", {
-                          class: "iframe-video_iframe",
-                          width: "100%",
-                          height: "100%",
-                          style: { overflow: "hidden" },
-                          frameborder: "0",
-                          scrolling: "no",
-                          allow: "fullscreen",
-                          src:
-                            "https://app.vidzflow.com/v/NHDnlIjW0Q?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                          title: "Sable 4",
-                          loading: "lazy",
-                        }),
-                        b("div", { class: "iframe-video_blocker" }),
-                      ]),
-                    ]),
-                    b("div", { class: "card-body" }, [
-                      b("div", { class: "u-overflow-hidden" }, [
-                        b(
-                          "div",
-                          {
-                            class: "card-up",
-                            style: {
-                              transform:
-                                "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                              "transform-style": "preserve-3d",
+                    y(
+                      "div",
+                      {
+                        class: "card-image_wrapper",
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "700",
+                      },
+                      [
+                        y("div", { class: "iframe-video_wrapper" }, [
+                          y("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            src:
+                              "https://app.vidzflow.com/v/NHDnlIjW0Q?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                            title: "Sable 4",
+                            loading: "lazy",
+                          }),
+                          y("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]
+                    ),
+                    y(
+                      "div",
+                      {
+                        class: "card-body",
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "700",
+                      },
+                      [
+                        y("div", { class: "u-overflow-hidden" }, [
+                          y(
+                            "div",
+                            {
+                              class: "card-up",
+                              style: {
+                                transform:
+                                  "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                                "transform-style": "preserve-3d",
+                              },
                             },
-                          },
-                          [
-                            b("div", { class: "card-large_text" }, [
-                              b(
-                                "h4",
-                                { class: "u-ts-4" },
-                                "Glow-in-the-dark credit card"
-                              ),
-                            ]),
-                          ]
-                        ),
-                      ]),
-                    ]),
+                            [
+                              y("div", { class: "card-large_text" }, [
+                                y(
+                                  "h4",
+                                  { class: "u-ts-4" },
+                                  "Glow-in-the-dark credit card"
+                                ),
+                              ]),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
                   ]
                 ),
               ]),
             ]),
-            b(
+            y(
               "div",
               {
                 id: "w-node-_197491fd-e75f-5caa-bd6c-f56fc5e78edc-af55239c",
                 class: "content",
               },
               [
-                b(
+                y(
                   "div",
                   {
                     class: "content-p cc-1",
-                    style: {
-                      transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                      "transform-style": "preserve-3d",
-                      opacity: "1",
-                    },
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
                   },
                   [
-                    b(
+                    y(
                       "p",
                       { class: "u-ts-1" },
                       " After rebranding banks, producing sleek new cards, and seamlessly integrating those elements into cohesive, future-proof brands, Basis can deliver results in record time. Get started with our Fintech Trial and get design results for your most essential deliverables in three weeks. "
                     ),
                   ]
                 ),
-                b("div", { class: "btn-group" }, [
-                  b(
+                y("div", { class: "btn-group" }, [
+                  y(
                     "div",
                     {
                       class: "btn-item cc-1",
@@ -3962,16 +4364,17 @@ const It = (e) =>
                       },
                     },
                     [
-                      b(
+                      y(
                         "a",
                         {
-                          href: "mailto:hello@basis.work?subject=Enquiry",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
                           class: "btn w-inline-block",
                         },
                         [
-                          b("div", { class: "btn-text-wrap" }, [
-                            b("div", { class: "btn-text" }, "Contact Us"),
-                            b(
+                          y("div", { class: "btn-text-wrap" }, [
+                            y("div", { class: "btn-text" }, "Contact Us"),
+                            y(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Contact Us"
@@ -3981,7 +4384,7 @@ const It = (e) =>
                       ),
                     ]
                   ),
-                  b(
+                  y(
                     "div",
                     {
                       class: "btn-item cc-2",
@@ -3993,15 +4396,16 @@ const It = (e) =>
                       },
                     },
                     [
-                      b(
+                      y(
                         "a",
                         {
-                          href: "/design-trial",
                           class: "btn cc-secondary w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
                         },
                         [
-                          b("div", { class: "btn-text-wrap" }, [
-                            b(
+                          y("div", { class: "btn-text-wrap" }, [
+                            y(
                               "div",
                               {
                                 class: "btn-text",
@@ -4013,7 +4417,7 @@ const It = (e) =>
                               },
                               " Design Trial "
                             ),
-                            b(
+                            y(
                               "div",
                               {
                                 class: "btn-text cc-bottom",
@@ -4039,153 +4443,66 @@ const It = (e) =>
     ],
     -1
   ),
-  Gt = b(
+  Gt = y(
     "div",
     { class: "container" },
-    [b("div", { class: "target_line" })],
+    [y("div", { class: "target_line" })],
     -1
   ),
-  Kt = b(
+  Kt = y(
     "section",
     { class: "section" },
     [
-      b("div", { class: "section-title_component" }, [
-        b("div", { class: "container" }, [
-          b("div", { class: "section-title_wrapper" }, [
-            b("div", { class: "section-title_dot", style: { opacity: "1" } }),
-            b("div", { class: "u-overflow-hidden" }, [
-              b(
-                "div",
-                {
-                  class: "section-title_title",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
+      y("div", { class: "section-title_component" }, [
+        y("div", { class: "container" }, [
+          y(
+            "div",
+            {
+              class: "section-title_wrapper",
+              "data-aos": "fade-up",
+              "data-aos-duration": "700",
+            },
+            [
+              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              y("div", { class: "u-overflow-hidden" }, [
+                y(
+                  "div",
+                  {
+                    class: "section-title_title",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
                   },
-                },
-                [b("h2", { class: "u-ts-4" }, "Fintech Capabilities")]
-              ),
-            ]),
-          ]),
+                  [y("h2", { class: "u-ts-4" }, "Fintech Capabilities")]
+                ),
+              ]),
+            ]
+          ),
         ]),
       ]),
-      b("div", { class: "container" }, [
-        b("div", { class: "w-layout-grid pair-grid" }, [
-          b(
+      y("div", { class: "container" }, [
+        y("div", { class: "w-layout-grid pair-grid" }, [
+          y(
             "div",
             {
               id: "w-node-b0cbec4a-56c8-e8e7-790a-68e14ee2ef27-af55239c",
               class: "service-list",
             },
             [
-              b("div", { class: "service-list" }, [
-                b("div", { class: "logomark_component" }, [
-                  b(
-                    "div",
-                    {
-                      class: "logomark w-embed",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [
-                      b(
-                        "svg",
-                        {
-                          height: "100%",
-                          style: {},
-                          viewBox: "0 0 185 80",
-                          fill: "currentColor",
-                          xmlns: "http://www.w3.org/2000/svg",
-                        },
-                        [
-                          b("path", {
-                            d:
-                              "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
-                            fill: "currentColor",
-                          }),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-                b("ul", { role: "list", class: "u-mt-3-5" }, [
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
+              y("div", { class: "service-list" }, [
+                y(
+                  "div",
+                  {
+                    class: "logomark_component",
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "700",
+                  },
+                  [
+                    y(
                       "div",
                       {
-                        class: "list-content cc-1",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Digital Banking,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-2",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Credit Card Designs,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-3",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Digital Wallets,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-4",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Payment Services,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-5",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Card Packaging,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-6",
+                        class: "logomark w-embed",
                         style: {
                           transform:
                             "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
@@ -4193,56 +4510,238 @@ const It = (e) =>
                         },
                       },
                       [
-                        b(
-                          "h3",
-                          { class: "u-tc-caps" },
-                          "Information Architecture,"
+                        y(
+                          "svg",
+                          {
+                            height: "100%",
+                            style: {},
+                            viewBox: "0 0 185 80",
+                            fill: "currentColor",
+                            xmlns: "http://www.w3.org/2000/svg",
+                          },
+                          [
+                            y("path", {
+                              d:
+                                "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
+                              fill: "currentColor",
+                            }),
+                          ]
                         ),
                       ]
                     ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-7",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
+                  ]
+                ),
+                y("ul", { role: "list", class: "u-mt-3-5" }, [
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-1",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
                         },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Mobile Apps,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-8",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
+                        [y("h3", { class: "u-tc-caps" }, "Digital Banking,")]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-2",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
                         },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Prototypes,")]
-                    ),
-                  ]),
-                  b("li", { class: "u-overflow-hidden" }, [
-                    b(
-                      "div",
-                      {
-                        class: "list-content cc-9",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
+                        [
+                          y(
+                            "h3",
+                            { class: "u-tc-caps" },
+                            "Credit Card Designs,"
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-3",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
                         },
-                      },
-                      [b("h3", { class: "u-tc-caps" }, "Gamification.")]
-                    ),
-                  ]),
+                        [y("h3", { class: "u-tc-caps" }, "Digital Wallets,")]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-4",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [y("h3", { class: "u-tc-caps" }, "Payment Services,")]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-5",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [y("h3", { class: "u-tc-caps" }, "Card Packaging,")]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-6",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [
+                          y(
+                            "h3",
+                            { class: "u-tc-caps" },
+                            "Information Architecture,"
+                          ),
+                        ]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-7",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [y("h3", { class: "u-tc-caps" }, "Mobile Apps,")]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-8",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [y("h3", { class: "u-tc-caps" }, "Prototypes,")]
+                      ),
+                    ]
+                  ),
+                  y(
+                    "li",
+                    {
+                      class: "u-overflow-hidden",
+                      "data-aos": "fade-up",
+                      "data-aos-duration": "700",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "list-content cc-9",
+                          style: {
+                            transform:
+                              "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                            "transform-style": "preserve-3d",
+                          },
+                        },
+                        [y("h3", { class: "u-tc-caps" }, "Gamification.")]
+                      ),
+                    ]
+                  ),
                 ]),
               ]),
             ]
@@ -4252,42 +4751,50 @@ const It = (e) =>
     ],
     -1
   ),
-  $t = b(
+  $t = y(
     "div",
     { class: "container" },
-    [b("div", { class: "target_line" })],
+    [y("div", { class: "target_line" })],
     -1
   ),
-  Jt = b(
+  Jt = y(
     "section",
     { class: "section" },
     [
-      b("div", { class: "section-title_component" }, [
-        b("div", { class: "container" }, [
-          b("div", { class: "section-title_wrapper" }, [
-            b("div", { class: "section-title_dot", style: { opacity: "1" } }),
-            b("div", { class: "u-overflow-hidden" }, [
-              b(
-                "div",
-                {
-                  class: "section-title_title",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
+      y("div", { class: "section-title_component" }, [
+        y("div", { class: "container" }, [
+          y(
+            "div",
+            {
+              class: "section-title_wrapper",
+              "data-aos": "fade-up",
+              "data-aos-duration": "700",
+            },
+            [
+              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              y("div", { class: "u-overflow-hidden" }, [
+                y(
+                  "div",
+                  {
+                    class: "section-title_title",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
                   },
-                },
-                [b("h2", { class: "u-ts-4" }, "Fintech Work")]
-              ),
-            ]),
-          ]),
+                  [y("h2", { class: "u-ts-4" }, "Fintech Work")]
+                ),
+              ]),
+            ]
+          ),
         ]),
       ]),
-      b("div", { class: "container" }, [
-        b("div", { class: "row" }, [b("div", { class: "col" })]),
-        b("div", { class: "w-dyn-list" }, [
-          b("div", { role: "list", class: "row w-dyn-items" }, [
-            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              b(
+      y("div", { class: "container" }, [
+        y("div", { class: "row" }, [y("div", { class: "col" })]),
+        y("div", { class: "w-dyn-list" }, [
+          y("div", { role: "list", class: "row w-dyn-items" }, [
+            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              y(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4299,7 +4806,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  b(
+                  y(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4307,24 +4814,93 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait w-condition-invisible",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape w-condition-invisible",
-                        }),
-                        b("div", null, [
-                          b("div", { class: "iframe-video_wrapper" }, [
-                            b("iframe", {
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait w-condition-invisible",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape w-condition-invisible",
+                          }),
+                          y("div", null, [
+                            y("div", { class: "iframe-video_wrapper" }, [
+                              y("iframe", {
+                                class: "iframe-video_iframe",
+                                width: "100%",
+                                height: "100%",
+                                style: { overflow: "hidden" },
+                                frameborder: "0",
+                                scrolling: "no",
+                                allow: "fullscreen",
+                                src:
+                                  "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                                title: "Sable 12",
+                                loading: "lazy",
+                              }),
+                              y("div", { class: "iframe-video_blocker" }),
+                            ]),
+                          ]),
+                        ]
+                      ),
+                      y(
+                        "div",
+                        {
+                          class: "cases-text cc-auto",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [y("div", { class: "u-ts-2" }, "Sable Brand")]
+                      ),
+                    ]
+                  ),
+                  y("link", { rel: "prerender", href: "/cases/sable-brand" }),
+                  y(
+                    "a",
+                    {
+                      "data-mouse-class": "cc-text",
+                      href: "mailto:hello@basis.work?subject=Enquiry",
+                      class:
+                        "cases-card cc-auto w-inline-block w-condition-invisible",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape",
+                          }),
+                          y("div", { class: "iframe-video_wrapper" }, [
+                            y("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4337,77 +4913,30 @@ const It = (e) =>
                               title: "Sable 12",
                               loading: "lazy",
                             }),
-                            b("div", { class: "iframe-video_blocker" }),
+                            y("div", { class: "iframe-video_blocker" }),
                           ]),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text cc-auto" }, [
-                        b("div", { class: "u-ts-2" }, "Sable Brand"),
-                      ]),
-                    ]
-                  ),
-                  b("link", { rel: "prerender", href: "/cases/sable-brand" }),
-                  b(
-                    "a",
-                    {
-                      "data-mouse-class": "cc-text",
-                      href: "mailto:hello@basis.work?subject=Enquiry",
-                      class:
-                        "cases-card cc-auto w-inline-block w-condition-invisible",
-                    },
-                    [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape",
-                        }),
-                        b("div", { class: "iframe-video_wrapper" }, [
-                          b("iframe", {
-                            class: "iframe-video_iframe",
-                            width: "100%",
-                            height: "100%",
-                            style: { overflow: "hidden" },
-                            frameborder: "0",
-                            scrolling: "no",
-                            allow: "fullscreen",
-                            src:
-                              "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                            title: "Sable 12",
-                            loading: "lazy",
-                          }),
-                          b("div", { class: "iframe-video_blocker" }),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text" }, [
-                        b("div", { class: "cases-more" }, [
-                          b(
+                        ]
+                      ),
+                      y("div", { class: "cases-text" }, [
+                        y("div", { class: "cases-more" }, [
+                          y(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              b("span", { class: "hide-tablet" }, " for more"),
+                              y("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        b("div", { class: "u-ts-2" }, "Sable Brand"),
+                        y("div", { class: "u-ts-2" }, "Sable Brand"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              b(
+            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              y(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4419,7 +4948,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  b(
+                  y(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4427,24 +4956,90 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape",
-                        }),
-                        b("div", { class: "w-condition-invisible" }, [
-                          b("div", { class: "iframe-video_wrapper" }, [
-                            b("iframe", {
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape",
+                          }),
+                          y("div", { class: "w-condition-invisible" }, [
+                            y("div", { class: "iframe-video_wrapper" }, [
+                              y("iframe", {
+                                class: "iframe-video_iframe",
+                                width: "100%",
+                                height: "100%",
+                                style: { overflow: "hidden" },
+                                frameborder: "0",
+                                scrolling: "no",
+                                allow: "fullscreen",
+                                loading: "lazy",
+                              }),
+                              y("div", { class: "iframe-video_blocker" }),
+                            ]),
+                          ]),
+                        ]
+                      ),
+                      y(
+                        "div",
+                        {
+                          class: "cases-text cc-auto",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [y("div", { class: "u-ts-2" }, "Sable Website")]
+                      ),
+                    ]
+                  ),
+                  y("link", { rel: "prerender", href: "/cases/sable-website" }),
+                  y(
+                    "a",
+                    {
+                      "data-mouse-class": "cc-text",
+                      href: "mailto:hello@basis.work?subject=Enquiry",
+                      class:
+                        "cases-card cc-auto w-inline-block w-condition-invisible",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape",
+                          }),
+                          y("div", { class: "iframe-video_wrapper" }, [
+                            y("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4454,74 +5049,30 @@ const It = (e) =>
                               allow: "fullscreen",
                               loading: "lazy",
                             }),
-                            b("div", { class: "iframe-video_blocker" }),
+                            y("div", { class: "iframe-video_blocker" }),
                           ]),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text cc-auto" }, [
-                        b("div", { class: "u-ts-2" }, "Sable Website"),
-                      ]),
-                    ]
-                  ),
-                  b("link", { rel: "prerender", href: "/cases/sable-website" }),
-                  b(
-                    "a",
-                    {
-                      "data-mouse-class": "cc-text",
-                      href: "mailto:hello@basis.work?subject=Enquiry",
-                      class:
-                        "cases-card cc-auto w-inline-block w-condition-invisible",
-                    },
-                    [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape",
-                        }),
-                        b("div", { class: "iframe-video_wrapper" }, [
-                          b("iframe", {
-                            class: "iframe-video_iframe",
-                            width: "100%",
-                            height: "100%",
-                            style: { overflow: "hidden" },
-                            frameborder: "0",
-                            scrolling: "no",
-                            allow: "fullscreen",
-                            loading: "lazy",
-                          }),
-                          b("div", { class: "iframe-video_blocker" }),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text" }, [
-                        b("div", { class: "cases-more" }, [
-                          b(
+                        ]
+                      ),
+                      y("div", { class: "cases-text" }, [
+                        y("div", { class: "cases-more" }, [
+                          y(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              b("span", { class: "hide-tablet" }, " for more"),
+                              y("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        b("div", { class: "u-ts-2" }, "Sable Website"),
+                        y("div", { class: "u-ts-2" }, "Sable Website"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              b(
+            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              y(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4533,7 +5084,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  b(
+                  y(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4541,24 +5092,93 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait w-condition-invisible",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape w-condition-invisible",
-                        }),
-                        b("div", null, [
-                          b("div", { class: "iframe-video_wrapper" }, [
-                            b("iframe", {
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait w-condition-invisible",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape w-condition-invisible",
+                          }),
+                          y("div", null, [
+                            y("div", { class: "iframe-video_wrapper" }, [
+                              y("iframe", {
+                                class: "iframe-video_iframe",
+                                width: "100%",
+                                height: "100%",
+                                style: { overflow: "hidden" },
+                                frameborder: "0",
+                                scrolling: "no",
+                                allow: "fullscreen",
+                                src:
+                                  "https://app.vidzflow.com/v/XBaN1uMmvl?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                                title: "Seen 1",
+                                loading: "lazy",
+                              }),
+                              y("div", { class: "iframe-video_blocker" }),
+                            ]),
+                          ]),
+                        ]
+                      ),
+                      y(
+                        "div",
+                        {
+                          class: "cases-text cc-auto",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [y("div", { class: "u-ts-2" }, "Seen Brand")]
+                      ),
+                    ]
+                  ),
+                  y("link", { rel: "prerender", href: "/cases/seen-brand" }),
+                  y(
+                    "a",
+                    {
+                      "data-mouse-class": "cc-text",
+                      href: "mailto:hello@basis.work?subject=Enquiry",
+                      class:
+                        "cases-card cc-auto w-inline-block w-condition-invisible",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape",
+                          }),
+                          y("div", { class: "iframe-video_wrapper" }, [
+                            y("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4571,77 +5191,30 @@ const It = (e) =>
                               title: "Seen 1",
                               loading: "lazy",
                             }),
-                            b("div", { class: "iframe-video_blocker" }),
+                            y("div", { class: "iframe-video_blocker" }),
                           ]),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text cc-auto" }, [
-                        b("div", { class: "u-ts-2" }, "Seen Brand"),
-                      ]),
-                    ]
-                  ),
-                  b("link", { rel: "prerender", href: "/cases/seen-brand" }),
-                  b(
-                    "a",
-                    {
-                      "data-mouse-class": "cc-text",
-                      href: "mailto:hello@basis.work?subject=Enquiry",
-                      class:
-                        "cases-card cc-auto w-inline-block w-condition-invisible",
-                    },
-                    [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape",
-                        }),
-                        b("div", { class: "iframe-video_wrapper" }, [
-                          b("iframe", {
-                            class: "iframe-video_iframe",
-                            width: "100%",
-                            height: "100%",
-                            style: { overflow: "hidden" },
-                            frameborder: "0",
-                            scrolling: "no",
-                            allow: "fullscreen",
-                            src:
-                              "https://app.vidzflow.com/v/XBaN1uMmvl?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                            title: "Seen 1",
-                            loading: "lazy",
-                          }),
-                          b("div", { class: "iframe-video_blocker" }),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text" }, [
-                        b("div", { class: "cases-more" }, [
-                          b(
+                        ]
+                      ),
+                      y("div", { class: "cases-text" }, [
+                        y("div", { class: "cases-more" }, [
+                          y(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              b("span", { class: "hide-tablet" }, " for more"),
+                              y("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        b("div", { class: "u-ts-2" }, "Seen Brand"),
+                        y("div", { class: "u-ts-2" }, "Seen Brand"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              b(
+            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              y(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4653,7 +5226,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  b(
+                  y(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4661,24 +5234,90 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape",
-                        }),
-                        b("div", { class: "w-condition-invisible" }, [
-                          b("div", { class: "iframe-video_wrapper" }, [
-                            b("iframe", {
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape",
+                          }),
+                          y("div", { class: "w-condition-invisible" }, [
+                            y("div", { class: "iframe-video_wrapper" }, [
+                              y("iframe", {
+                                class: "iframe-video_iframe",
+                                width: "100%",
+                                height: "100%",
+                                style: { overflow: "hidden" },
+                                frameborder: "0",
+                                scrolling: "no",
+                                allow: "fullscreen",
+                                loading: "lazy",
+                              }),
+                              y("div", { class: "iframe-video_blocker" }),
+                            ]),
+                          ]),
+                        ]
+                      ),
+                      y(
+                        "div",
+                        {
+                          class: "cases-text cc-auto",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [y("div", { class: "u-ts-2" }, "Sable App")]
+                      ),
+                    ]
+                  ),
+                  y("link", { rel: "prerender", href: "/cases/sable-app" }),
+                  y(
+                    "a",
+                    {
+                      "data-mouse-class": "cc-text",
+                      href: "mailto:hello@basis.work?subject=Enquiry",
+                      class:
+                        "cases-card cc-auto w-inline-block w-condition-invisible",
+                    },
+                    [
+                      y(
+                        "div",
+                        {
+                          class: "cases-assets",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "700",
+                        },
+                        [
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-portrait",
+                          }),
+                          y("img", {
+                            src:
+                              "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
+                            loading: "lazy",
+                            alt: "",
+                            class: "cases-landscape",
+                          }),
+                          y("div", { class: "iframe-video_wrapper" }, [
+                            y("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4688,66 +5327,22 @@ const It = (e) =>
                               allow: "fullscreen",
                               loading: "lazy",
                             }),
-                            b("div", { class: "iframe-video_blocker" }),
+                            y("div", { class: "iframe-video_blocker" }),
                           ]),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text cc-auto" }, [
-                        b("div", { class: "u-ts-2" }, "Sable App"),
-                      ]),
-                    ]
-                  ),
-                  b("link", { rel: "prerender", href: "/cases/sable-app" }),
-                  b(
-                    "a",
-                    {
-                      "data-mouse-class": "cc-text",
-                      href: "mailto:hello@basis.work?subject=Enquiry",
-                      class:
-                        "cases-card cc-auto w-inline-block w-condition-invisible",
-                    },
-                    [
-                      b("div", { class: "cases-assets" }, [
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-portrait",
-                        }),
-                        b("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
-                          loading: "lazy",
-                          alt: "",
-                          class: "cases-landscape",
-                        }),
-                        b("div", { class: "iframe-video_wrapper" }, [
-                          b("iframe", {
-                            class: "iframe-video_iframe",
-                            width: "100%",
-                            height: "100%",
-                            style: { overflow: "hidden" },
-                            frameborder: "0",
-                            scrolling: "no",
-                            allow: "fullscreen",
-                            loading: "lazy",
-                          }),
-                          b("div", { class: "iframe-video_blocker" }),
-                        ]),
-                      ]),
-                      b("div", { class: "cases-text" }, [
-                        b("div", { class: "cases-more" }, [
-                          b(
+                        ]
+                      ),
+                      y("div", { class: "cases-text" }, [
+                        y("div", { class: "cases-more" }, [
+                          y(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              b("span", { class: "hide-tablet" }, " for more"),
+                              y("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        b("div", { class: "u-ts-2" }, "Sable App"),
+                        y("div", { class: "u-ts-2" }, "Sable App"),
                       ]),
                     ]
                   ),
@@ -4781,28 +5376,28 @@ const It = (e) =>
   },
   ls = ["src"],
   is = G(" Your browser does not support the video tag. "),
-  os = b("div", { class: "iframe-video_blocker" }, null, -1),
+  os = y("div", { class: "iframe-video_blocker" }, null, -1),
   rs = ce(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ns = Se(Pt, [
+var ds = Se(Pt, [
     [
       "render",
       function (e, a, t, s, l, i) {
         const o = S("Footer");
         return (
           g(),
-          y(
+          b(
             _,
             null,
             [
-              b("header", Mt, [
-                b("div", Dt, [
-                  b("div", Ft, [
-                    b("div", Ut, [
-                      b("video", Vt, [
-                        b(
+              y("header", Mt, [
+                y("div", Dt, [
+                  y("div", Ft, [
+                    y("div", Ut, [
+                      y("video", Vt, [
+                        y(
                           "source",
                           {
                             src: s.getVideoUrl("home/knife1-1.mp4"),
@@ -4828,12 +5423,12 @@ var ns = Se(Pt, [
               $t,
               Jt,
               Qt,
-              b("div", null, [
-                b("aside", es, [
-                  b("a", as, [
-                    b("div", ts, [
-                      b("video", ss, [
-                        b(
+              y("div", null, [
+                y("aside", es, [
+                  y("a", as, [
+                    y("div", ts, [
+                      y("video", ss, [
+                        y(
                           "source",
                           {
                             src: s.getVideoUrl("home/knife1-1.mp4"),
@@ -4851,7 +5446,7 @@ var ns = Se(Pt, [
                   ]),
                 ]),
               ]),
-              A(o),
+              T(o),
             ],
             64
           )
@@ -4859,14 +5454,14 @@ var ns = Se(Pt, [
       },
     ],
   ]),
-  cs = Object.freeze(
+  ns = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ns },
+      { __proto__: null, default: ds },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ds = ["data-index"],
+const cs = ["data-index"],
   ps = ["src"],
   vs = [
     ce(
@@ -4880,7 +5475,7 @@ const ms = {
     View: {
       setup(e) {
         const a = x(),
-          t = de({ x: 0, y: 0 }),
+          t = me({ x: 0, y: 0 }),
           s = k([
             {
               url: "home/opening/1.jpg",
@@ -5085,7 +5680,7 @@ const ms = {
                 document.querySelector(".btn-scroll"),
               ]);
             } else
-              pe(() => {
+              fe(() => {
                 ((e) => {
                   for (const a of e) o.observe(a);
                 })([
@@ -5095,21 +5690,21 @@ const ms = {
               });
           }
         );
-        const n = k(!1),
-          c = () => {
-            n.value = window.innerWidth < 991;
+        const d = k(!1),
+          n = () => {
+            d.value = window.innerWidth < 991;
           };
         return (
           q(() => {
-            c(), window.addEventListener("resize", c), ve.init();
+            n(), window.addEventListener("resize", n), ne.init();
           }),
           (e, a) => (
             g(),
-            y(
+            b(
               _,
               null,
               [
-                b(
+                y(
                   "div",
                   {
                     class: "view",
@@ -5128,7 +5723,7 @@ const ms = {
                   [
                     l.value
                       ? (g(),
-                        y(
+                        b(
                           "div",
                           {
                             key: 0,
@@ -5144,24 +5739,24 @@ const ms = {
                           },
                           [
                             (g(!0),
-                            y(
+                            b(
                               _,
                               null,
                               R(
                                 s.value,
                                 (e, a) => (
                                   g(),
-                                  y(
+                                  b(
                                     "div",
                                     {
                                       class: "img-wrap home-hero_image-placer",
                                       key: e.url + a,
                                       style: Z({
-                                        left: n.value ? "unset" : e.css.left,
-                                        right: n.value
+                                        left: d.value ? "unset" : e.css.left,
+                                        right: d.value
                                           ? e.css.m_right
                                           : "unset",
-                                        top: n.value ? e.css.m_top : e.css.top,
+                                        top: d.value ? e.css.m_top : e.css.top,
                                         animation: e.isEnter
                                           ? e.css.enterAnimation
                                           : e.css.leaveAnimation,
@@ -5170,15 +5765,15 @@ const ms = {
                                       "data-item": "img",
                                     },
                                     [
-                                      b(
+                                      y(
                                         "img",
                                         {
                                           src: w(ke)(e.url),
                                           style: Z({
-                                            width: n.value
+                                            width: d.value
                                               ? e.css.m_width
                                               : e.css.width,
-                                            height: n.value
+                                            height: d.value
                                               ? e.css.m_height
                                               : e.css.height,
                                             transform: `translate3d(${
@@ -5192,7 +5787,7 @@ const ms = {
                                       ),
                                     ],
                                     12,
-                                    ds
+                                    cs
                                   )
                                 )
                               ),
@@ -5205,9 +5800,9 @@ const ms = {
                   ],
                   32
                 ),
-                b("div", { "data-reveal": "button", class: "home-hero_btn" }, [
-                  b("div", { class: "btn-contain btn-contain-scroll" }, [
-                    b(
+                y("div", { "data-reveal": "button", class: "home-hero_btn" }, [
+                  y("div", { class: "btn-contain btn-contain-scroll" }, [
+                    y(
                       "div",
                       { class: "btn-scroll w-inline-block", onClick: r },
                       vs
@@ -5244,17 +5839,17 @@ const ms = {
     );
   },
 };
-ve.init();
-const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
+ne.init();
+const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   us = fs(() =>
-    b("div", { class: "container" }, [b("div", { class: "target_line" })], -1)
+    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
   gs = { id: "studio", class: "section" },
-  ys = ce(
-    '<div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-7e810c9c></div></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-7e810c9c><div class="w-layout-grid pair-grid" data-v-7e810c9c><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-7e810c9c><h3 data-animation-element="title" style="" data-v-7e810c9c><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-7e810c9c><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 館藏查詢 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 館藏查詢 </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-7e810c9c><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 預約參觀 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 預約參觀 </div></div></a></div></div></div></div></div>',
+  bs = ce(
+    '<div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-41b289de></div></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-41b289de><div class="w-layout-grid pair-grid" data-v-41b289de><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-41b289de><h3 data-animation-element="title" style="" data-v-41b289de><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-41b289de><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 館藏查詢 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 館藏查詢 </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-41b289de><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 預約參觀 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 預約參觀 </div></div></a></div></div></div></div></div>',
     2
   ),
-  bs = { class: "u-mt-8-75" },
+  ys = { class: "u-mt-8-75" },
   hs = { class: "marquee" },
   ws = { class: "marquee_row w-dyn-list" },
   _s = {
@@ -5292,8 +5887,8 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
       "transform-style": "preserve-3d",
     },
   },
-  Ts = ["src"],
-  As = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  As = ["src"],
+  Ts = { role: "listitem", class: "marquee_logo w-dyn-item" },
   Es = {
     class: "marquee_item cc-4",
     style: {
@@ -5301,8 +5896,8 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
       "transform-style": "preserve-3d",
     },
   },
-  Bs = ["src"],
-  Ls = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Ls = ["src"],
+  Bs = { role: "listitem", class: "marquee_logo w-dyn-item" },
   Is = {
     class: "marquee_item cc-5",
     style: {
@@ -5348,21 +5943,21 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   Ws = ["src"],
   Gs = fs(() =>
-    b("div", { class: "container" }, [b("div", { class: "target_line" })], -1)
+    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
   Ks = { class: "section" },
   $s = ce(
-    '<div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-7e810c9c></div></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>空間預約</h2></div></div></div></div></div>',
+    '<div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-41b289de></div></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>空間預約</h2></div></div></div></div></div>',
     1
   ),
   Js = { class: "container" },
   Qs = fs(() =>
-    b(
+    y(
       "div",
       { "data-animation-element": "group" },
       [
-        b("h4", { "data-animation-element": "title", class: "h1", style: {} }, [
-          b(
+        y("h4", { "data-animation-element": "title", class: "h1", style: {} }, [
+          y(
             "div",
             {
               class: "u-overflow-hidden",
@@ -5375,7 +5970,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
               },
             },
             [
-              b(
+              y(
                 "div",
                 {
                   style: {
@@ -5410,12 +6005,12 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   il = { role: "list", class: "w-dyn-items" },
   ol = { role: "listitem", class: "w-dyn-item" },
   rl = { class: "card-wrapper cc-small" },
-  nl = {
+  dl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  cl = {
+  nl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -5424,7 +6019,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
       opacity: "1",
     },
   },
-  dl = { class: "card-image_wrapper" },
+  cl = { class: "card-image_wrapper" },
   pl = { class: "iframe-video_wrapper" },
   vl = {
     class: "video-cover",
@@ -5436,14 +6031,14 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   ml = ["src"],
   fl = G(" Your browser does not support the video tag. "),
-  ul = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  ul = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   gl = fs(() =>
-    b(
+    y(
       "div",
       { class: "card-body", "data-aos": "fade-up", "data-aos-duration": "700" },
       [
-        b("div", { class: "u-overflow-hidden" }, [
-          b(
+        y("div", { class: "u-overflow-hidden" }, [
+          y(
             "div",
             {
               class: "card-up",
@@ -5452,18 +6047,18 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [b("h4", { class: "u-ts-4" }, "Skyart3725全景")]
+            [y("h4", { class: "u-ts-4" }, "Skyart3725全景")]
           ),
         ]),
       ],
       -1
     )
   ),
-  yl = {
+  bl = {
     id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
     class: "w-dyn-list",
   },
-  bl = { role: "list", class: "w-dyn-items" },
+  yl = { role: "list", class: "w-dyn-items" },
   hl = { role: "listitem", class: "w-dyn-item" },
   wl = { class: "card-wrapper cc-large" },
   _l = { class: "card-animation cc-40" },
@@ -5490,24 +6085,24 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   ql = ["src"],
   Sl = G(" Your browser does not support the video tag. "),
-  zl = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  zl = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   Ol = ce(
-    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="u-overflow-hidden" data-v-7e810c9c><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-7e810c9c><div class="card-large_text" data-v-7e810c9c><h4 class="u-ts-4" data-v-7e810c9c>多功能茶席空間</h4></div></div></div></div>',
+    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="u-overflow-hidden" data-v-41b289de><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-41b289de><div class="card-large_text" data-v-41b289de><h4 class="u-ts-4" data-v-41b289de>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  Tl = ce(
-    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-7e810c9c><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>空間介紹</div><div class="btn-text cc-bottom" data-v-7e810c9c>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>立即預約</div><div class="btn-text cc-bottom" data-v-7e810c9c>立即預約</div></div></a></div></div></div>',
+  Al = ce(
+    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-41b289de><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-41b289de> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>空間介紹</div><div class="btn-text cc-bottom" data-v-41b289de>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>立即預約</div><div class="btn-text cc-bottom" data-v-41b289de>立即預約</div></div></a></div></div></div>',
     1
   ),
-  Al = fs(() =>
-    b("div", { class: "container" }, [b("div", { class: "target_line" })], -1)
+  Tl = fs(() =>
+    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
   ),
   El = { class: "section" },
-  Bl = ce(
-    '<div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>定香人文</h2></div></div></div></div></div>',
+  Ll = ce(
+    '<div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>定香人文</h2></div></div></div></div></div>',
     1
   ),
-  Ll = { class: "container" },
+  Bl = { class: "container" },
   Il = { class: "w-layout-grid pair-grid" },
   Pl = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
   Ml = { class: "service-list" },
@@ -5523,11 +6118,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   Ul = ["src"],
   Vl = fs(() =>
-    b(
+    y(
       "ul",
       { role: "list", class: "u-mt-3-5" },
       [
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5536,7 +6131,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "150",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-2",
@@ -5545,11 +6140,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "藝術品經紀")]
+              [y("h3", { class: "u-tc-caps" }, "藝術品經紀")]
             ),
           ]
         ),
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5558,7 +6153,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "200",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-3",
@@ -5567,11 +6162,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
+              [y("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
             ),
           ]
         ),
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5580,7 +6175,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "250",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-4",
@@ -5589,11 +6184,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
+              [y("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
             ),
           ]
         ),
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5602,7 +6197,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "300",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-5",
@@ -5611,11 +6206,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
+              [y("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
             ),
           ]
         ),
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5624,7 +6219,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "350",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-6",
@@ -5633,11 +6228,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "精品咖啡")]
+              [y("h3", { class: "u-tc-caps" }, "精品咖啡")]
             ),
           ]
         ),
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5646,7 +6241,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "400",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-7",
@@ -5655,11 +6250,11 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "天幕茶碗")]
+              [y("h3", { class: "u-tc-caps" }, "天幕茶碗")]
             ),
           ]
         ),
-        b(
+        y(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5668,7 +6263,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             "data-aos-delay": "450",
           },
           [
-            b(
+            y(
               "div",
               {
                 class: "list-content cc-8",
@@ -5677,7 +6272,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [b("h3", { class: "u-tc-caps" }, "典藏名酒")]
+              [y("h3", { class: "u-tc-caps" }, "典藏名酒")]
             ),
           ]
         ),
@@ -5686,18 +6281,18 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
     )
   ),
   Hl = ce(
-    '<div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>藝品介紹</div><div class="btn-text cc-bottom" data-v-7e810c9c>藝品介紹</div></div></a></div></div>',
+    '<div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>藝品介紹</div><div class="btn-text cc-bottom" data-v-41b289de>藝品介紹</div></div></a></div></div>',
     1
   ),
   Nl = fs(() =>
-    b(
+    y(
       "section",
       { class: "section cc-apps" },
       [
-        b("div", { class: "container" }, [
-          b("div", { class: "row" }, [
-            b("div", { "data-animation-element": "group", class: "col" }, [
-              b(
+        y("div", { class: "container" }, [
+          y("div", { class: "row" }, [
+            y("div", { "data-animation-element": "group", class: "col" }, [
+              y(
                 "h3",
                 {
                   "data-animation-element": "title",
@@ -5708,7 +6303,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                   "data-aos-delay": "600",
                 },
                 [
-                  b(
+                  y(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -5719,7 +6314,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                       },
                     },
                     [
-                      b(
+                      y(
                         "div",
                         {
                           style: {
@@ -5740,16 +6335,16 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
             ]),
           ]),
         ]),
-        b("div", { "data-apps": "component", class: "apps_component" }, [
-          b("div", { class: "apps_media-wrapper" }, [
-            b(
+        y("div", { "data-apps": "component", class: "apps_component" }, [
+          y("div", { class: "apps_media-wrapper" }, [
+            y(
               "div",
               {
                 "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
                 class: "apps_media-list",
               },
               [
-                b(
+                y(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -5758,7 +6353,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     "data-aos-delay": "100",
                   },
                   [
-                    b("img", {
+                    y("img", {
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png",
                       loading: "lazy",
@@ -5772,7 +6367,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     }),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -5781,7 +6376,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     "data-aos-delay": "150",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
@@ -5793,9 +6388,9 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                         },
                       },
                       [
-                        b("div", { role: "list", class: "w-dyn-items" }, [
-                          b("div", { role: "listitem", class: "w-dyn-item" }, [
-                            b(
+                        y("div", { role: "list", class: "w-dyn-items" }, [
+                          y("div", { role: "listitem", class: "w-dyn-item" }, [
+                            y(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -5803,7 +6398,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                b("img", {
+                                y("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -5821,7 +6416,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -5830,7 +6425,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     "data-aos-delay": "200",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
@@ -5842,9 +6437,9 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                         },
                       },
                       [
-                        b("div", { role: "list", class: "w-dyn-items" }, [
-                          b("div", { role: "listitem", class: "w-dyn-item" }, [
-                            b(
+                        y("div", { role: "list", class: "w-dyn-items" }, [
+                          y("div", { role: "listitem", class: "w-dyn-item" }, [
+                            y(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -5852,7 +6447,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                b("img", {
+                                y("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -5870,7 +6465,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     ),
                   ]
                 ),
-                b(
+                y(
                   "div",
                   {
                     class: "apps_asset-wrapper cc-watch",
@@ -5879,7 +6474,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     "data-aos-delay": "250",
                   },
                   [
-                    b(
+                    y(
                       "div",
                       {
                         "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
@@ -5891,7 +6486,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                         },
                       },
                       [
-                        b("img", {
+                        y("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
                           loading: "eager",
@@ -5905,10 +6500,10 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
               ]
             ),
           ]),
-          b("div", { class: "apps_scroll" }, [
-            b("div", { class: "mobile-scroll_cta" }, [
-              b("div", { class: "mobile-scroll_icon w-embed" }, [
-                b(
+          y("div", { class: "apps_scroll" }, [
+            y("div", { class: "mobile-scroll_cta" }, [
+              y("div", { class: "mobile-scroll_icon w-embed" }, [
+                y(
                   "svg",
                   {
                     width: "100%",
@@ -5918,7 +6513,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                     xmlns: "http://www.w3.org/2000/svg",
                   },
                   [
-                    b("path", {
+                    y("path", {
                       d:
                         "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
                       fill: "currentColor",
@@ -5936,7 +6531,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   Xl = { class: "section" },
   Rl = { class: "container" },
   Zl = ce(
-    '<div class="row" data-v-7e810c9c><div data-animation-element="group" class="col" data-v-7e810c9c><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> 拍賣中心 </div></div></h3></div></div>',
+    '<div class="row" data-v-41b289de><div data-animation-element="group" class="col" data-v-41b289de><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> 拍賣中心 </div></div></h3></div></div>',
     1
   ),
   Yl = { class: "sticky-pair" },
@@ -5974,20 +6569,20 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   li = ["src"],
   ii = G(" Your browser does not support the video tag. "),
-  oi = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  oi = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   ri = ce(
-    '<div class="card-body" data-v-7e810c9c><div class="u-overflow-hidden" data-v-7e810c9c><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-7e810c9c><div class="card-large_text" data-v-7e810c9c><h4 class="u-ts-4" data-v-7e810c9c>Skyart7325鑑賞中心</h4></div></div></div></div>',
+    '<div class="card-body" data-v-41b289de><div class="u-overflow-hidden" data-v-41b289de><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-41b289de><div class="card-large_text" data-v-41b289de><h4 class="u-ts-4" data-v-41b289de>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  ni = {
+  di = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  ci = {
+  ni = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  di = { role: "list", class: "w-dyn-items" },
+  ci = { role: "list", class: "w-dyn-items" },
   pi = { role: "listitem", class: "w-dyn-item" },
   vi = { class: "card-wrapper cc-small" },
   mi = {
@@ -6006,7 +6601,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   ui = { class: "card-image_wrapper" },
   gi = { class: "iframe-video_wrapper" },
-  yi = {
+  bi = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6014,16 +6609,16 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
     loop: "",
     muted: "",
   },
-  bi = ["src"],
+  yi = ["src"],
   hi = G(" Your browser does not support the video tag. "),
-  wi = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  wi = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   _i = fs(() =>
-    b(
+    y(
       "div",
       { class: "card-body" },
       [
-        b("div", { class: "u-overflow-hidden" }, [
-          b(
+        y("div", { class: "u-overflow-hidden" }, [
+          y(
             "div",
             {
               class: "card-up",
@@ -6032,7 +6627,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [b("h4", { class: "u-ts-4" }, "Sable App")]
+            [y("h4", { class: "u-ts-4" }, "Sable App")]
           ),
         ]),
       ],
@@ -6040,13 +6635,13 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
     )
   ),
   xi = ce(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-7e810c9c><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-7e810c9c> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>Fintech services</div><div class="btn-text cc-bottom" data-v-7e810c9c>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>Design trial</div><div class="btn-text cc-bottom" data-v-7e810c9c>Design trial</div></div></a></div></div></div>',
+    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-41b289de><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-41b289de> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>Fintech services</div><div class="btn-text cc-bottom" data-v-41b289de>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>Design trial</div><div class="btn-text cc-bottom" data-v-41b289de>Design trial</div></div></a></div></div></div>',
     1
   ),
   ki = { class: "section" },
   ji = { class: "container over-h" },
   Ci = ce(
-    '<div class="row" data-v-7e810c9c><div data-animation-element="group" class="col" data-v-7e810c9c><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-7e810c9c><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> Branding </div></div></h3></div></div>',
+    '<div class="row" data-v-41b289de><div data-animation-element="group" class="col" data-v-41b289de><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-41b289de><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> Branding </div></div></h3></div></div>',
     1
   ),
   qi = { class: "sticky-pair" },
@@ -6056,14 +6651,14 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  Ti = {
+  Ai = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  Ai = { role: "list", class: "w-dyn-items" },
+  Ti = { role: "list", class: "w-dyn-items" },
   Ei = { role: "listitem", class: "w-dyn-item" },
-  Bi = { class: "card-wrapper cc-small" },
-  Li = {
+  Li = { class: "card-wrapper cc-small" },
+  Bi = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
@@ -6089,14 +6684,14 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   Fi = ["src"],
   Ui = G(" Your browser does not support the video tag. "),
-  Vi = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  Vi = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   Hi = fs(() =>
-    b(
+    y(
       "div",
       { class: "card-body" },
       [
-        b("div", { class: "u-overflow-hidden" }, [
-          b(
+        y("div", { class: "u-overflow-hidden" }, [
+          y(
             "div",
             {
               class: "card-up",
@@ -6105,7 +6700,7 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [b("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
+            [y("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
           ),
         ]),
       ],
@@ -6145,18 +6740,18 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   Ji = ["src"],
   Qi = G(" Your browser does not support the video tag. "),
-  eo = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  eo = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   ao = ce(
-    '<div class="card-body" data-v-7e810c9c><div class="u-overflow-hidden" data-v-7e810c9c><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-7e810c9c><div class="card-large_text" data-v-7e810c9c><h4 class="u-ts-4" data-v-7e810c9c>Sable Brand</h4></div></div></div></div>',
+    '<div class="card-body" data-v-41b289de><div class="u-overflow-hidden" data-v-41b289de><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-41b289de><div class="card-large_text" data-v-41b289de><h4 class="u-ts-4" data-v-41b289de>Sable Brand</h4></div></div></div></div>',
     1
   ),
   to = ce(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-7e810c9c><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-7e810c9c> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>View cases</div><div class="btn-text cc-bottom" data-v-7e810c9c>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> Design trial </div></div></a></div></div></div>',
+    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-41b289de><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-41b289de> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>View cases</div><div class="btn-text cc-bottom" data-v-41b289de>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> Design trial </div></div></a></div></div></div>',
     1
   ),
   so = ce(
-    '<section class="section" data-v-7e810c9c><div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>Contact Us</h2></div></div></div></div></div><div class="container" data-v-7e810c9c><div class="w-layout-grid pair-grid" data-v-7e810c9c><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-7e810c9c><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-7e810c9c><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c><div style="position:relative;display:inline-block;" data-v-7e810c9c> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
-    1
+    '<div class="container" data-v-41b289de><div class="target_line" data-v-41b289de></div></div><section class="section" data-v-41b289de><div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>Contact Us</h2></div></div></div></div></div><div class="container" data-v-41b289de><div class="w-layout-grid pair-grid" data-v-41b289de><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-41b289de><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-41b289de><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de><div style="position:relative;display:inline-block;" data-v-41b289de> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    2
   ),
   lo = { class: "pre-footer" },
   io = {
@@ -6175,9 +6770,9 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
   },
   no = ["src"],
   co = G(" Your browser does not support the video tag. "),
-  po = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  po = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   vo = ce(
-    '<div class="pre-footer_gradient" data-v-7e810c9c></div><div class="marquee" data-v-7e810c9c><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-7e810c9c><div class="btn cc-large-landscape" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text cc-large-landscape" data-v-7e810c9c>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-7e810c9c>Button</div></div></div></div>',
+    '<div class="pre-footer_gradient" data-v-41b289de></div><div class="marquee" data-v-41b289de><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-41b289de><div class="btn cc-large-landscape" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text cc-large-landscape" data-v-41b289de>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-41b289de>Button</div></div></div></div>',
     3
   ),
   mo = {
@@ -6195,10 +6790,10 @@ const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
     muted: "",
   },
   go = ["src"],
-  yo = G(" Your browser does not support the video tag. "),
-  bo = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  bo = G(" Your browser does not support the video tag. "),
+  yo = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
   ho = ce(
-    '<div class="pre-footer_gradient" data-v-7e810c9c></div><div class="marquee" data-v-7e810c9c><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-7e810c9c><div class="btn cc-large-landscape" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text cc-large-landscape" data-v-7e810c9c>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-7e810c9c>Button</div></div></div></div>',
+    '<div class="pre-footer_gradient" data-v-41b289de></div><div class="marquee" data-v-41b289de><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-41b289de><div class="btn cc-large-landscape" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text cc-large-landscape" data-v-41b289de>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-41b289de>Button</div></div></div></div>',
     3
   );
 var wo = Se(ms, [
@@ -6209,21 +6804,21 @@ var wo = Se(ms, [
           r = S("Footer");
         return (
           g(),
-          y(
+          b(
             _,
             null,
             [
-              A(o),
+              T(o),
               us,
-              b("section", gs, [
-                ys,
-                b("div", bs, [
-                  b("div", hs, [
-                    b("div", ws, [
-                      b("div", _s, [
-                        b("div", xs, [
-                          b("div", ks, [
-                            b(
+              y("section", gs, [
+                bs,
+                y("div", ys, [
+                  y("div", hs, [
+                    y("div", ws, [
+                      y("div", _s, [
+                        y("div", xs, [
+                          y("div", ks, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
@@ -6239,9 +6834,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        b("div", Cs, [
-                          b("div", qs, [
-                            b(
+                        y("div", Cs, [
+                          y("div", qs, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
@@ -6257,9 +6852,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        b("div", zs, [
-                          b("div", Os, [
-                            b(
+                        y("div", zs, [
+                          y("div", Os, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
@@ -6271,13 +6866,13 @@ var wo = Se(ms, [
                               },
                               null,
                               8,
-                              Ts
+                              As
                             ),
                           ]),
                         ]),
-                        b("div", As, [
-                          b("div", Es, [
-                            b(
+                        y("div", Ts, [
+                          y("div", Es, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
@@ -6289,13 +6884,13 @@ var wo = Se(ms, [
                               },
                               null,
                               8,
-                              Bs
+                              Ls
                             ),
                           ]),
                         ]),
-                        b("div", Ls, [
-                          b("div", Is, [
-                            b(
+                        y("div", Bs, [
+                          y("div", Is, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
@@ -6311,9 +6906,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        b("div", Ms, [
-                          b("div", Ds, [
-                            b(
+                        y("div", Ms, [
+                          y("div", Ds, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
@@ -6329,15 +6924,15 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        b("div", Us, [
-                          b("div", Vs, [
-                            b(
+                        y("div", Us, [
+                          y("div", Vs, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "900",
-                                src: s.getImageUrl("home/img/6.jpg"),
+                                src: s.getImageUrl("home/img/7.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
@@ -6347,15 +6942,15 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        b("div", Ns, [
-                          b("div", Xs, [
-                            b(
+                        y("div", Ns, [
+                          y("div", Xs, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "1000",
-                                src: s.getImageUrl("home/img/7.jpg"),
+                                src: s.getImageUrl("home/img/8.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
@@ -6365,15 +6960,15 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        b("div", Zs, [
-                          b("div", Ys, [
-                            b(
+                        y("div", Zs, [
+                          y("div", Ys, [
+                            y(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "1100",
-                                src: s.getImageUrl("home/img/8.jpg"),
+                                src: s.getImageUrl("home/img/9.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
@@ -6389,24 +6984,24 @@ var wo = Se(ms, [
                 ]),
               ]),
               Gs,
-              b("section", Ks, [
+              y("section", Ks, [
                 $s,
-                b("div", Js, [
+                y("div", Js, [
                   Qs,
-                  b("div", el, [
-                    b("div", al, [
-                      b("div", tl, [
-                        b("div", sl, [
-                          b("div", ll, [
-                            b("div", il, [
-                              b("div", ol, [
-                                b("div", rl, [
-                                  b("div", nl, [
-                                    b("div", cl, [
-                                      b("div", dl, [
-                                        b("div", pl, [
-                                          b("video", vl, [
-                                            b(
+                  y("div", el, [
+                    y("div", al, [
+                      y("div", tl, [
+                        y("div", sl, [
+                          y("div", ll, [
+                            y("div", il, [
+                              y("div", ol, [
+                                y("div", rl, [
+                                  y("div", dl, [
+                                    y("div", nl, [
+                                      y("div", cl, [
+                                        y("div", pl, [
+                                          y("video", vl, [
+                                            y(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -6432,16 +7027,16 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      b("div", yl, [
-                        b("div", bl, [
-                          b("div", hl, [
-                            b("div", wl, [
-                              b("div", _l, [
-                                b("div", xl, [
-                                  b("div", kl, [
-                                    b("div", jl, [
-                                      b("video", Cl, [
-                                        b(
+                      y("div", bl, [
+                        y("div", yl, [
+                          y("div", hl, [
+                            y("div", wl, [
+                              y("div", _l, [
+                                y("div", xl, [
+                                  y("div", kl, [
+                                    y("div", jl, [
+                                      y("video", Cl, [
+                                        y(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -6465,21 +7060,21 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      Tl,
+                      Al,
                     ]),
                   ]),
                 ]),
               ]),
-              Al,
-              b("section", El, [
-                Bl,
-                b("div", Ll, [
-                  b("div", Il, [
-                    b("div", Pl, [
-                      b("div", Ml, [
-                        b("div", Dl, [
-                          b("div", Fl, [
-                            b(
+              Tl,
+              y("section", El, [
+                Ll,
+                y("div", Bl, [
+                  y("div", Il, [
+                    y("div", Pl, [
+                      y("div", Ml, [
+                        y("div", Dl, [
+                          y("div", Fl, [
+                            y(
                               "img",
                               { src: s.getImageUrl("logo.png"), alt: "" },
                               null,
@@ -6496,21 +7091,21 @@ var wo = Se(ms, [
                 ]),
               ]),
               Nl,
-              b("section", Xl, [
-                b("div", Rl, [
+              y("section", Xl, [
+                y("div", Rl, [
                   Zl,
-                  b("div", Yl, [
-                    b("div", Wl, [
-                      b("div", Gl, [
-                        b("div", Kl, [
-                          b("div", $l, [
-                            b("div", Jl, [
-                              b("div", Ql, [
-                                b("div", ei, [
-                                  b("div", ai, [
-                                    b("div", ti, [
-                                      b("video", si, [
-                                        b(
+                  y("div", Yl, [
+                    y("div", Wl, [
+                      y("div", Gl, [
+                        y("div", Kl, [
+                          y("div", $l, [
+                            y("div", Jl, [
+                              y("div", Ql, [
+                                y("div", ei, [
+                                  y("div", ai, [
+                                    y("div", ti, [
+                                      y("video", si, [
+                                        y(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -6534,18 +7129,18 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      b("div", null, [
-                        b("div", ni, [
-                          b("div", ci, [
-                            b("div", di, [
-                              b("div", pi, [
-                                b("div", vi, [
-                                  b("div", mi, [
-                                    b("div", fi, [
-                                      b("div", ui, [
-                                        b("div", gi, [
-                                          b("video", yi, [
-                                            b(
+                      y("div", null, [
+                        y("div", di, [
+                          y("div", ni, [
+                            y("div", ci, [
+                              y("div", pi, [
+                                y("div", vi, [
+                                  y("div", mi, [
+                                    y("div", fi, [
+                                      y("div", ui, [
+                                        y("div", gi, [
+                                          y("video", bi, [
+                                            y(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -6555,7 +7150,7 @@ var wo = Se(ms, [
                                               },
                                               null,
                                               8,
-                                              bi
+                                              yi
                                             ),
                                             hi,
                                           ]),
@@ -6576,23 +7171,23 @@ var wo = Se(ms, [
                   ]),
                 ]),
               ]),
-              b("section", ki, [
-                b("div", ji, [
+              y("section", ki, [
+                y("div", ji, [
                   Ci,
-                  b("div", qi, [
-                    b("div", Si, [
-                      b("div", zi, [
-                        b("div", Oi, [
-                          b("div", Ti, [
-                            b("div", Ai, [
-                              b("div", Ei, [
-                                b("div", Bi, [
-                                  b("div", Li, [
-                                    b("div", Ii, [
-                                      b("div", Pi, [
-                                        b("div", Mi, [
-                                          b("video", Di, [
-                                            b(
+                  y("div", qi, [
+                    y("div", Si, [
+                      y("div", zi, [
+                        y("div", Oi, [
+                          y("div", Ai, [
+                            y("div", Ti, [
+                              y("div", Ei, [
+                                y("div", Li, [
+                                  y("div", Bi, [
+                                    y("div", Ii, [
+                                      y("div", Pi, [
+                                        y("div", Mi, [
+                                          y("video", Di, [
+                                            y(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -6618,16 +7213,16 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      b("div", Ni, [
-                        b("div", Xi, [
-                          b("div", Ri, [
-                            b("div", Zi, [
-                              b("div", Yi, [
-                                b("div", Wi, [
-                                  b("div", Gi, [
-                                    b("div", Ki, [
-                                      b("video", $i, [
-                                        b(
+                      y("div", Ni, [
+                        y("div", Xi, [
+                          y("div", Ri, [
+                            y("div", Zi, [
+                              y("div", Yi, [
+                                y("div", Wi, [
+                                  y("div", Gi, [
+                                    y("div", Ki, [
+                                      y("video", $i, [
+                                        y(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -6657,12 +7252,12 @@ var wo = Se(ms, [
                 ]),
               ]),
               so,
-              b("div", null, [
-                b("aside", lo, [
-                  b("div", io, [
-                    b("div", oo, [
-                      b("video", ro, [
-                        b(
+              y("div", null, [
+                y("aside", lo, [
+                  y("div", io, [
+                    y("div", oo, [
+                      y("video", ro, [
+                        y(
                           "source",
                           {
                             src: s.getVideoUrl("home/buddha1.mp4"),
@@ -6678,10 +7273,10 @@ var wo = Se(ms, [
                     ]),
                     vo,
                   ]),
-                  b("div", mo, [
-                    b("div", fo, [
-                      b("video", uo, [
-                        b(
+                  y("div", mo, [
+                    y("div", fo, [
+                      y("video", uo, [
+                        y(
                           "source",
                           {
                             src: s.getVideoUrl("home/tea_1.mp4"),
@@ -6691,22 +7286,22 @@ var wo = Se(ms, [
                           8,
                           go
                         ),
-                        yo,
+                        bo,
                       ]),
-                      bo,
+                      yo,
                     ]),
                     ho,
                   ]),
                 ]),
               ]),
-              A(r),
+              T(r),
             ],
             64
           )
         );
       },
     ],
-    ["__scopeId", "data-v-7e810c9c"],
+    ["__scopeId", "data-v-41b289de"],
   ]),
   _o = Object.freeze(
     Object.defineProperty(
@@ -6720,7 +7315,7 @@ const xo = {
       Za(
         () =>
           Promise.resolve().then(function () {
-            return vt;
+            return mt;
           }),
         void 0
       ),
@@ -6728,7 +7323,7 @@ const xo = {
       Za(
         () =>
           Promise.resolve().then(function () {
-            return yt;
+            return bt;
           }),
         void 0
       ),
@@ -6736,7 +7331,7 @@ const xo = {
       Za(
         () =>
           Promise.resolve().then(function () {
-            return Lt;
+            return Bt;
           }),
         void 0
       ),
@@ -6744,7 +7339,7 @@ const xo = {
       Za(
         () =>
           Promise.resolve().then(function () {
-            return cs;
+            return ns;
           }),
         void 0
       ),
@@ -6758,10 +7353,10 @@ const xo = {
       ),
   },
   ko = {
-    "../pages/about.vue": vt,
-    "../pages/case.vue": yt,
-    "../pages/demo.vue": Lt,
-    "../pages/fintech-design.vue": cs,
+    "../pages/about.vue": mt,
+    "../pages/case.vue": bt,
+    "../pages/demo.vue": Bt,
+    "../pages/fintech-design.vue": ns,
     "../pages/index.vue": _o,
   },
   jo = [];
@@ -6822,14 +7417,14 @@ var So = Object.freeze(
     value: "Module",
   })
 );
-const zo = ye({ modules: Xa });
-be(zo, Co);
+const zo = be({ modules: Xa });
+ye(zo, Co);
 var Oo = Object.freeze(
   Object.defineProperty({ __proto__: null, default: zo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const To = {
+const Ao = {
     use(e) {
       e.interceptors.response.use(
         async function (a) {
@@ -6848,7 +7443,7 @@ const To = {
       );
     },
   },
-  Ao = {
+  To = {
     use(e) {
       (window.isAlert = !1),
         e.interceptors.response.use(
@@ -6864,7 +7459,7 @@ const To = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: e } = await Le.alert({
+                  const { isConfirmed: e } = await Be.alert({
                     title: `Error(${a.code})`,
                     text: Ee.t(`error.code.${a.code}`),
                   });
@@ -6897,7 +7492,7 @@ const To = {
               case 1e5:
               case 100001:
               case 100003:
-                await Le.alert({
+                await Be.alert({
                   title: `Error(${a.code})`,
                   text: Ee.t(`error.code.${a.code}`),
                 });
@@ -6911,12 +7506,12 @@ const To = {
       );
     },
   };
-class Bo {
+class Lo {
   constructor() {
     (this.provider = new Ea({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, Ba, To, Ao, Eo, Ia);
+    this.provider.use({}, La, Ao, To, Eo, Ia);
   }
   get get() {
     return this.provider.instance.get;
@@ -6931,14 +7526,14 @@ class Bo {
     return this.provider.instance.delete;
   }
 }
-Bo.prototype.install = function (e) {
+Lo.prototype.install = function (e) {
   const a = "http-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Lo = new Bo(),
+var Bo = new Lo(),
   Io = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: Bo, default: Lo },
+      { __proto__: null, HttpService: Lo, default: Bo },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -6977,8 +7572,8 @@ class Po {
       showConfirmButton: i = !0,
       confirmButtonText: o = Ee.t("button.confirm"),
       cancelButtonText: r = Ee.t("button.cancel"),
-      allowOutsideClick: n = !0,
-      props: c = {},
+      allowOutsideClick: d = !0,
+      props: n = {},
     } = e;
     return new Promise((e) => {
       zo.commit(
@@ -6993,8 +7588,8 @@ class Po {
           showConfirmButton: i,
           confirmButtonText: o,
           cancelButtonText: r,
-          allowOutsideClick: n,
-          props: c,
+          allowOutsideClick: d,
+          props: n,
         })
       );
     });
@@ -7009,9 +7604,9 @@ Po.prototype.install = function (e) {
 };
 var Mo = new Po();
 const Do = {
-    "../services/alert-service.js": Aa,
+    "../services/alert-service.js": Ta,
     "../services/http-service.js": Io,
-    "../services/i18n-service.js": Be,
+    "../services/i18n-service.js": Le,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
         { __proto__: null, PopupService: Po, default: Mo },
@@ -7030,10 +7625,10 @@ const Do = {
   };
 const Uo = he(ze);
 Uo.provide("$jQuery", we),
-  Uo.provide("$swal", Le),
+  Uo.provide("$swal", Be),
   Uo.provide("$storage", U),
   Uo.provide("$tabsslider", _e),
-  Uo.use(na),
+  Uo.use(da),
   Uo.use(Sa),
   Uo.use(xe, { loading: "", error: "" }),
   Uo.use(Fo),

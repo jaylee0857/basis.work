@@ -66,7 +66,11 @@
             class="col col-lg-6 col-md-12"
           >
             <div class="header-content_main">
-              <div class="text-wrap-balance">
+              <div
+                class="text-wrap-balance"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <h1 data-animation-element="title" class="h4" style="">
                   <div
                     class="u-overflow-hidden"
@@ -274,15 +278,7 @@
                   </div>
                 </h1>
               </div>
-              <div
-                class="header-content_cta"
-                style="
-                  transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                  opacity: 1;
-                "
-              >
+              <div class="header-content_cta">
                 <div class="header-content_icon w-embed">
                   <svg
                     width="100%"
@@ -311,7 +307,11 @@
   <section class="section">
     <div class="section-title_component">
       <div class="container">
-        <div class="section-title_wrapper">
+        <div
+          class="section-title_wrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           <div class="section-title_dot" style="opacity: 1">
             <div
               class="section-title_dot-fill"
@@ -336,7 +336,11 @@
     <div class="container">
       <div class="w-layout-grid pair-grid">
         <div id="w-node-e8a07e93-34f6-be32-54f2-b34bf2439e43-af55239f">
-          <div class="case-details is-about">
+          <div
+            class="case-details is-about"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
             <div class="u-ts-4">
               <div class="u-overflow-hidden">
                 <div
@@ -396,12 +400,8 @@
           <div
             data-animation-element="paragraphs"
             class="content-p cc-1"
-            style="
-              transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-              opacity: 1;
-            "
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
             <p class="u-ts-1 u-mb-0">
               Startups and enterprises hire us when they can’t afford to fail.
@@ -425,9 +425,9 @@
               "
             >
               <a
-                href="https://calendly.com/basis-studio/30min?month=2024-02"
-                target="_blank"
                 class="btn w-inline-block"
+                data-aos="fade-left"
+                data-aos-duration="1000"
                 ><div class="btn-text-wrap">
                   <div class="btn-text">Start a project</div>
                   <div class="btn-text cc-bottom">Start a project</div>
@@ -443,7 +443,10 @@
                 transform-style: preserve-3d;
               "
             >
-              <a href="/design-trial" class="btn cc-secondary w-inline-block"
+              <a
+                class="btn cc-secondary w-inline-block"
+                data-aos="fade-left"
+                data-aos-duration="1000"
                 ><div class="btn-text-wrap">
                   <div class="btn-text">Design trial</div>
                   <div class="btn-text cc-bottom">Design trial</div>
@@ -456,7 +459,11 @@
       <div class="sticky-pair cc-far">
         <div class="w-layout-grid pair-grid">
           <div class="div-block">
-            <div class="card-wrapper cc-small">
+            <div
+              class="card-wrapper cc-small"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
               <div class="card-animation cc-40">
                 <div
                   data-mouse-class="cc-none"
@@ -492,7 +499,11 @@
               </div>
             </div>
           </div>
-          <div class="card-wrapper cc-large">
+          <div
+            class="card-wrapper cc-large"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
             <div class="card-animation cc-40">
               <div
                 data-mouse-class="cc-none"
@@ -537,6 +548,8 @@
             <div
               data-animation-element="paragraphs"
               class="content-p cc-1"
+              data-aos="fade-up"
+              data-aos-duration="700"
               style="
                 transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
                   rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -580,8 +593,8 @@
                 "
               >
                 <a
-                  href="https://calendly.com/basis-studio/30min?month=2024-02"
-                  target="_blank"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
                   class="btn w-inline-block"
                   ><div class="btn-text-wrap">
                     <div class="btn-text">Start a project</div>
@@ -598,7 +611,10 @@
                   transform-style: preserve-3d;
                 "
               >
-                <a href="/design-trial" class="btn cc-secondary w-inline-block"
+                <a
+                  class="btn cc-secondary w-inline-block"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
                   ><div class="btn-text-wrap">
                     <div class="btn-text">Design trial</div>
                     <div class="btn-text cc-bottom">Design trial</div>
@@ -1106,20 +1122,20 @@
   </section>
 
   <!-- ==== -->
+  <div class="container">
+    <div class="target_line"></div>
+  </div>
   <section class="section">
     <div class="section-title_component">
       <div class="container">
-        <div class="section-title_wrapper">
+        <div
+          class="section-title_wrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           <div class="section-title_dot" style="opacity: 1"></div>
           <div class="u-overflow-hidden">
-            <div
-              class="section-title_title"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="section-title_title">
               <h2 class="u-ts-4">What we do</h2>
             </div>
           </div>
@@ -1131,7 +1147,11 @@
         <div class="col col-lg-4 col-md-hide"></div>
         <div class="col">
           <div class="service-list">
-            <div class="logomark_component">
+            <div
+              class="logomark_component"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
               <div
                 class="logomark w-embed"
                 style="
@@ -1155,7 +1175,11 @@
               </div>
             </div>
             <ul role="list" class="u-mt-3-5">
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-1"
                   style="
@@ -1167,7 +1191,11 @@
                   <h3 class="u-tc-caps">Research</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-2"
                   style="
@@ -1179,7 +1207,11 @@
                   <h3 class="u-tc-caps">Brand Strategy</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-3"
                   style="
@@ -1191,7 +1223,11 @@
                   <h3 class="u-tc-caps">Creative Direction</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-4"
                   style="
@@ -1203,7 +1239,11 @@
                   <h3 class="u-tc-caps">Brand identity</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-5"
                   style="
@@ -1215,7 +1255,11 @@
                   <h3 class="u-tc-caps">UX &amp; UI Design</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-6"
                   style="
@@ -1227,7 +1271,11 @@
                   <h3 class="u-tc-caps">Interaction Design</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-7"
                   style="
@@ -1239,7 +1287,11 @@
                   <h3 class="u-tc-caps">Implementation</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-8"
                   style="
@@ -1259,6 +1311,9 @@
   </section>
 
   <!-- ==== -->
+  <div class="container">
+    <div class="target_line"></div>
+  </div>
   <section class="section">
     <div class="section-title_component">
       <div class="container">
@@ -1396,6 +1451,9 @@
 <script>
 import { useI18n } from "@/hooks/use-i18n";
 import Footer from "@/widgets/layout/footer.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { onMounted } from "vue";
 
 export default {
   components: {
@@ -1403,6 +1461,25 @@ export default {
   },
   setup() {
     const { t } = useI18n();
+    onMounted(() => {
+      AOS.init();
+      console.log("index");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      });
+
+      // 獲取所有目標元素並設置觀察
+      const targets = document.querySelectorAll(".target_line");
+      targets.forEach((target) => {
+        observer.observe(target);
+      });
+    });
     return {
       t,
     };

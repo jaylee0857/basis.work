@@ -400,7 +400,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="900"
-                  :src="getImageUrl('home/img/6.jpg')"
+                  :src="getImageUrl('home/img/7.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -419,7 +419,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="1000"
-                  :src="getImageUrl('home/img/7.jpg')"
+                  :src="getImageUrl('home/img/8.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -438,7 +438,7 @@
                   loading="eager"
                   data-aos="fade-up"
                   data-aos-delay="1100"
-                  :src="getImageUrl('home/img/8.jpg')"
+                  :src="getImageUrl('home/img/9.jpg')"
                   alt=""
                   class="marquee_logo"
                 />
@@ -1636,6 +1636,9 @@
     </div>
   </section>
   <!-- -- -->
+  <div class="container">
+    <div class="target_line"></div>
+  </div>
   <section class="section">
     <div class="section-title_component">
       <div class="container">
@@ -2050,12 +2053,6 @@ AOS.init();
 <style scoped lang="scss">
 .transparent {
   background-color: transparent !important;
-}
-
-.over-h {
-  @media (max-width: 768px) {
-    overflow: hidden;
-  }
 }
 
 .target_line {
