@@ -484,8 +484,8 @@
     </div>
     <div class="container">
       <div data-animation-element="group">
-        <h3 data-animation-element="title" class="h1" style="">
-          <div
+        <h4 data-animation-element="title" class="h1" style="">
+          <!-- <div
             data-aos="fade-up"
             data-aos-duration="700"
             class="u-overflow-hidden"
@@ -503,7 +503,7 @@
             >
               詹紹綺人文藝術中心
             </div>
-          </div>
+          </div> -->
           <div
             class="u-overflow-hidden"
             data-aos="fade-up"
@@ -523,7 +523,7 @@
               (Skyart7325)開放每日一組預約。
             </div>
           </div>
-        </h3>
+        </h4>
       </div>
       <div class="sticky-pair">
         <div class="w-layout-grid pair-grid">
@@ -940,7 +940,7 @@
     </div>
   </section>
   <!-- --- -->
-  <section class="section">
+  <section class="section cc-apps">
     <div class="container">
       <div class="row">
         <div data-animation-element="group" class="col">
@@ -1376,7 +1376,7 @@
   </section>
   <!-- --- -->
   <section class="section">
-    <div class="container">
+    <div class="container over-h">
       <div class="row">
         <div data-animation-element="group" class="col">
           <h3
@@ -2050,6 +2050,12 @@ AOS.init();
 <style scoped lang="scss">
 .transparent {
   background-color: transparent !important;
+}
+
+.over-h {
+  @media (max-width: 768px) {
+    overflow: hidden;
+  }
 }
 
 .target_line {

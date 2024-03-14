@@ -7,8 +7,8 @@ var e,
   o,
   r = Object.defineProperty,
   n = Object.defineProperties,
-  d = Object.getOwnPropertyDescriptors,
-  c = Object.getOwnPropertySymbols,
+  c = Object.getOwnPropertyDescriptors,
+  d = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
   m = (e, a, t) =>
@@ -17,14 +17,14 @@ var e,
       : (e[a] = t),
   f = (e, a) => {
     for (var t in a || (a = {})) p.call(a, t) && m(e, t, a[t]);
-    if (c) for (var t of c(a)) v.call(a, t) && m(e, t, a[t]);
+    if (d) for (var t of d(a)) v.call(a, t) && m(e, t, a[t]);
     return e;
   },
-  u = (e, a) => n(e, d(a));
+  u = (e, a) => n(e, c(a));
 import {
   o as g,
-  c as b,
-  a as y,
+  c as y,
+  a as b,
   n as h,
   u as w,
   F as _,
@@ -34,32 +34,32 @@ import {
   w as C,
   e as q,
   f as S,
-  g as O,
-  h as z,
+  g as z,
+  h as O,
   i as T,
-  j as L,
-  k as B,
-  l as E,
-  m as P,
+  j as A,
+  k as E,
+  l as B,
+  m as L,
   p as I,
-  q as A,
+  q as P,
   s as M,
   t as D,
-  v as $,
-  x as V,
-  y as U,
-  S as F,
-  z as H,
-  A as R,
-  B as N,
-  C as W,
-  D as X,
-  E as Y,
-  G as Z,
-  H as G,
-  I as K,
-  J as Q,
-  T as J,
+  v as F,
+  x as U,
+  y as V,
+  S as H,
+  z as N,
+  A as X,
+  B as R,
+  C as Z,
+  D as Y,
+  E as W,
+  G,
+  H as K,
+  I as $,
+  J,
+  T as Q,
   K as ee,
   L as ae,
   M as te,
@@ -69,21 +69,21 @@ import {
   Q as oe,
   R as re,
   U as ne,
-  V as de,
-  W as ce,
+  V as ce,
+  W as de,
   X as pe,
   Y as ve,
   Z as me,
   _ as fe,
   $ as ue,
   a0 as ge,
-  a1 as be,
-  a2 as ye,
+  a1 as ye,
+  a2 as be,
   a3 as he,
   a4 as we,
   a5 as _e,
   a6 as xe,
-} from "./vendor.4fa19e74.js";
+} from "./vendor.741a0b4d.js";
 !(function () {
   const e = document.createElement("link").relList;
   if (!(e && e.supports && e.supports("modulepreload"))) {
@@ -118,6 +118,8 @@ import {
 const ke = (e) =>
     new URL(
       {
+        "../assets/images/favicon.png":
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAIAAACTslUmAAAACXBIWXMAAAsSAAALEgHS3X78AAAKRklEQVR4nN1b7XmjvBJV9nn/iw5EB3grEFsB7kBxBXgrUFIBbAV4K8CpAFIBuAJIBUAF3B8nmSgSYBzb93nvPT/2A0tizmg0mhmJh3Ec2f8v/sFfbdvWdV2WZV3X2+0W/6Wf3t7e5vpzzn3f7/ve87wwDKkX0Pf96XSi/wZB4Pv+8Xjs+x4vGoYBPwkhfN9njL2+vi5LjJZ1XQ/DIKXEwzAMGWOQYbPZfKFX13UYhp7n4QXH49H3fXTwfR8Pgbquf//+zRiTUmIgz/No9IeHB7x+v9/7vg9lCSFM7aDl8Xjc7XZaa3qOoeq6htyMMfNXxliapsMwCCHCMGzb1uTQtu3z87PZOI7jp6cnz/PYOI5FURRFMa5DEASMsSiK3J8wdNd11nOlFH5qmgZPsiyDEO4gmBCllPU8iiKodU6woiiyLNNaQy9oyZqmEUKs5IZR5mjA/NwucRy7GuGcTzYGvTzPzYdVVXHOJ2lPAoOM48jyPGeMVVW1phsA9bi6n9Ru13WQzJIYnCd1xBizrAniCiHc9pOAvRRF8W7iWZat6bYscRAEriGAhvu8aRosMGtky4zHD0u+aA6qqvpCb/3aM/tzzs1XkklYzebUJ6XknJtPYPmmLpZHWAC6/EBnOMD12Gw2SZIMw+BuBm3b0r/3+z3EfXx8dAc5HA6Msb7vrefwrvhpu90yxpRSNEIYhpOjWRBCtG3LlFKWCtcjyzJYqda6aRrMHq1JcpgLRpUkCeecTBR2mCSJOYLlTtDGtN5JSCmVUgyO/nv0xnHsug6ri8A577qOuJGsc6CdRmuNf2ut4zjmnHPOXZuEuU5uKiaUUrTpM6XUSqc0iaZpkiSBcCbPs9zQFyZgQUo5JxL7ugN1XedOptb6kx6ksTzhN0Bejl3irqqqEkKY3CyPagFtxnHsuk5rPanHd3p5nkspSfFRFJ01ayCKosnJoT1qHbV3ULSglDq7AaAlrfwgCNx5LopCSvm56qqqiuMYPJVSa9bu3ALAwrvIlWN/WmnMa2wY0zbhVIqiiKIIDm2BpJRyIQKM43gyLnXRdR3iybMBFyaAFqqUcsH+4ziepgc0TQONBkGQZZlrMMv0VgIGNukhCRYrYDJeNYcFf1YUhdZ6ztzzPKdlKYSI4xjpRdd1QogFelVV5Xm+PP/jOEZRFMex2wauWCllupwgCLBLL/secm9JkjxEUfTy8sI5T9N0LhooyzJN05eXF/enOI7NiKdt27ZtKSXlnJdlaeZmjLHD4YB3mc+R4OJPSvmI1X6/3263eFFd1z9//tRaPz09ufLs9/s/f/5ABX3ff8kal91x13VJkiBQnNSCiSAItNaTi970YZOIoohmwF1dk7E4xIPTxg7HGMvz/EFrXZZlGIaUDh8OB4r65pCmKdJ2MPE8D+k2svuz3Q+HQ9u22+2273vMGJ6bFYDNZnM6nUanFHQ4HHa7XRRFx+PRfLjf7yE/ih2/fv1SSrEoirBMm6ahSArLbHnZTOZEK4EZWM7fML773Mo24edJ0RgQu6iUkllZTNM01JoxppTKsmySJ15/aSZFgPlN7sijkXC5P9EuYoWBcRzTUDY9y3Mi2DG9lpQyyzJTFMqIv0dvNHYF1wTIs7u9vkSSjEELlhg2vTkpsyyzokHMJ7YTNu+NqqqCZ1+IjEejiBJFkdlsMogxlw8Rm3RgcC2f9JZ9ZlEUSMwwousqgiCQHzDVIYQw92uYkyWNGU8jGOy6DlYXx7HWOooia8YQr8xNCXWXUjKY8jI90geEs3MNB0KIJEncUAG5jzufVtJo2QtNlFIK0eJy7oZggHMexzGzUmwX5Gzm3AAhSRKIshDywxonh+q6Ls9zilQ450KIIAiwDaI90p8FUTH5iGO11u/0JhdxVVVk62e5AbCK5cZVVQVBEATBnBbgNicNyq1WAVmWBUFgeikp5Sc9K0I1Pcrc8kUQ40pGOdjCtklZwuTI8HuT9KyZMD28lNIq22mtmVkUybKMYlb2kSvMiQghJoMmWpmwqzmecI9CCGsQGLm7W2D9Q6ewLIgqhHAbw8/ZJxWYrjiOz6bMiDzm3FdRFPT6hXwHhsq+Jm944ioF5oe4l1zoXNhk0xNCYE+bbA3PZuW4yz6JeGqtl2M3OAzGmFKKrCnPc3h/JFZWCH62nmDTOxt/mHEMNjoiDALYo9BmeSgXTdO4OeskrDW2lt7KShl897IEa6osmBbrIZXcoSNkzNAdc2r+q+hRaEvL9GyKPY5j13U4T0NIQUiSZGWhDf7DEhf03CobjlZWFm++0INiUF+gNQDjXhMuo9a9/q2WxNaEzB1XYeVfVHr7YpwmEzg9Mg+kHnNUV6ZFVVW5+xi2PirCQtFuEkjJ4Xpu4zjGcSyEYAuBvxm10LKO49hcM1RNc7sjyKK6gxsYmSVtQhAERVGQhVOJ4dIDsPczhuW8ZvzwaVaYi3SeDrLZR3EFg7p5w6TTwrQg5Vv2VZdO3TiOEqX3s/RMaZIkQfFiWRoCopaFMTGrGBmJiKUdrO2V7sqixxi7gJ4FWiEIPk0D1lpbqf2CEN8+XTw7MqNrO98AlTc9z9vv933fPz8/K6Vw5roSbduaJc3bw7wFciUwhxcZAmS4/tUuwOv9bP1sZXINHh8fOefPz89lWa5pv9ysLMuyLN2T94vwfeN04Xlemqa73e7x8bGu67PXEeiSwXa7tQryx+Px7e0tiqKLTH0C33Ytc1hTmzLtxwVKNd/wltbgUsofV+lmCjjZSNP0rF2hig5PS6ezSZK0bYtLd9cLc3t6YRgGQTAMQ5qmC83atj2dTkqpsiyfnp5ARimFqzC3wu3psY/bOsv0GGNKKWoDN3OTGTNxF3rww8MwLPhG3/cPhwO5HxwS3cSBm7gLPd/3EYuv3CHY/xY9xhgOetfTe319nSxOX4l70cM8WLfp5oAN8OYLr23bHzcflCClHIbBvCC4IAe7tWX2ff/29nZHeghE1tvnbQGV3cs42UdKsWb2YMOX3ildBpT7r6CH+Ma6H3I9hBC3zBgsQNz1If9KP7QSZVn6vn/H2QPWz8mVuc8k7k5vDWDGN6fX9/2/gh5m+LbGyRg7nU53pLfGqQArP466FEKIH3Aq99idQG8NSd/3EZGZ96iux3/DtawMG2Cft6XHyLXcw2tdBPrw7bbDvtO7+bK+dEx8bTIMww0Z3tc4L4pFfN/HgdHkJdTv4Z3e+jODiwBPuD6SRIp4Op1uMoHva34cR1xhwEW4a2pvJnBYx6a+0FsAulx0CjsJfIKXZdk/jLEwDP/+/bvb7Yg63axYiEWtz2oBXMtlRh3J+s51AX3fc86HYbjSz+Ger+d52+32ATqjy7rXjAsIITzPow+eOeebzcbUBa6EW73CMDwej9QriqK+7zebTd/3UJBr5JZ+6bL5nz9/GGN5nn/Sw1vTND0ej7c9suGce56Hj5/p620SCF+EM8Y8z/M8j2iT1bi6MKla0Qjd5w7DEC/6pEfAZX1XUKjHMleyxrqufd+/bUp6Pf4Dh5ybU5wY3ZkAAAAASUVORK5CYII=",
         "../assets/images/icon_back.svg": "./assets/icon_back.556b6f96.svg",
         "../assets/images/loading.gif": "./assets/loading.afec609f.gif",
         "../assets/images/logo.png": "./assets/logo.f0ed8cf7.png",
@@ -166,27 +168,27 @@ var Se = (e, a) => {
   for (const [s, l] of a) t[s] = l;
   return t;
 };
-var Oe = Se(
+var ze = Se(
   {
     components: {
       Loading: {
         props: { mode: String },
         setup: (e) => (a, t) => (
           g(),
-          b(
+          y(
             _,
             null,
             [
-              y("div", { class: h(["mask", e.mode]) }, null, 2),
-              y(
+              b("div", { class: h(["mask", e.mode]) }, null, 2),
+              b(
                 "div",
                 { class: h(["bg", e.mode]) },
                 [
-                  y("div", je, [
-                    y("div", Ce, [
-                      y(
+                  b("div", je, [
+                    b("div", Ce, [
+                      b(
                         "img",
-                        { src: w(ke)("logo.png"), alt: "" },
+                        { src: w(ke)("favicon.png"), alt: "" },
                         null,
                         8,
                         qe
@@ -209,8 +211,8 @@ var Oe = Se(
         s = k("leave"),
         l = j(() => "stop" === s.value),
         i = j(() => {
-          if (E(e.state.route.path)) return null;
-          return P("layout-error")(I(["meta", "layout"], e.state.route));
+          if (B(e.state.route.path)) return null;
+          return L("layout-error")(I(["meta", "layout"], e.state.route));
         });
       return (
         C(
@@ -243,24 +245,24 @@ var Oe = Se(
           n = S("Loading");
         return (
           g(),
-          b(
+          y(
             _,
             null,
             [
               (g(),
-              O(T(s.layout), null, {
-                default: z(() => [
-                  L(o, null, {
-                    default: z(({ Component: e }) => [(g(), O(T(e)))]),
+              z(T(s.layout), null, {
+                default: O(() => [
+                  A(o, null, {
+                    default: O(({ Component: e }) => [(g(), z(T(e)))]),
                     _: 1,
                   }),
                 ]),
                 _: 1,
               })),
-              L(r),
+              A(r),
               s.isError || s.isShowLoading
-                ? (g(), O(n, { key: 0, mode: s.mode }, null, 8, ["mode"]))
-                : B("", !0),
+                ? (g(), z(n, { key: 0, mode: s.mode }, null, 8, ["mode"]))
+                : E("", !0),
             ],
             64
           )
@@ -270,7 +272,7 @@ var Oe = Se(
     ["__scopeId", "data-v-6ef0256d"],
   ]
 );
-const ze = {
+const Oe = {
     "../locales/en/app.js": Object.freeze(
       Object.defineProperty(
         {
@@ -480,16 +482,16 @@ const ze = {
     ),
   },
   Te = {};
-for (let Fo in ze) {
-  const e = Fo.replace("../locales/", "").toLowerCase().replace(".js", ""),
+for (let Vo in Oe) {
+  const e = Vo.replace("../locales/", "").toLowerCase().replace(".js", ""),
     [a, ...t] = e.split("/"),
-    s = A(".", t),
-    l = ze[Fo].default;
-  Te[a] = M((e, a) => D(e, { [`${s}.${a}`]: l[a] }), Te[a] || {}, $(l));
+    s = P(".", t),
+    l = Oe[Vo].default;
+  Te[a] = M((e, a) => D(e, { [`${s}.${a}`]: l[a] }), Te[a] || {}, F(l));
 }
-const Le = (() => {
+const Ae = (() => {
     var e, a, t, s;
-    const l = V.get("locale");
+    const l = U.get("locale");
     if (l) return l;
     let i =
       null !=
@@ -512,17 +514,17 @@ const Le = (() => {
         i)
       : {}.VITE_LOCALE;
   })(),
-  Be = U.exports.createI18n({
-    initLocale: Le,
+  Ee = V.exports.createI18n({
+    initLocale: Ae,
     fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
     messages: Te,
   });
-var Ee = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Be }, Symbol.toStringTag, {
+var Be = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ee }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(F.toast = function (e) {
+(H.toast = function (e) {
   return this.fire({
     title: e,
     toast: !0,
@@ -533,17 +535,17 @@ var Ee = Object.freeze(
     timer: 2e3,
     background: "transparent",
     didOpen: (e) => {
-      e.addEventListener("click", F.close);
+      e.addEventListener("click", H.close);
     },
   });
 }),
-  (F.alert = function ({
+  (H.alert = function ({
     title: e,
     text: a,
     willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
-    confirmButtonText: i = Be.t("button.confirm"),
+    confirmButtonText: i = Ee.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
@@ -558,7 +560,7 @@ var Ee = Object.freeze(
       confirmButtonText: i,
     });
   }),
-  (F.showLoading = function () {
+  (H.showLoading = function () {
     return this.fire({
       title: "winner winner chicken dinner",
       showConfirmButton: !1,
@@ -568,7 +570,7 @@ var Ee = Object.freeze(
       background: "transparent",
     });
   }),
-  (F.confirm = function ({
+  (H.confirm = function ({
     title: e,
     text: a,
     html: t,
@@ -589,7 +591,7 @@ var Ee = Object.freeze(
       },
     });
   });
-const Pe = F.mixin({
+const Le = H.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -597,8 +599,8 @@ const Pe = F.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Be.t("button.confirm"),
-  cancelButtonText: Be.t("button.cancel"),
+  confirmButtonText: Ee.t("button.confirm"),
+  cancelButtonText: Ee.t("button.cancel"),
   didOpen(e) {
     const a = e.querySelector(".swal2-cancel");
     e.querySelector(".swal2-confirm").blur(), a.blur();
@@ -606,10 +608,10 @@ const Pe = F.mixin({
 });
 class Ie {
   constructor() {
-    return V;
+    return U;
   }
 }
-class Ae {
+class Pe {
   constructor() {
     this.provider = new Ie();
   }
@@ -617,24 +619,24 @@ class Ae {
     this.provider.clearAll();
   }
 }
-Ae.prototype.install = function (e) {
+Pe.prototype.install = function (e) {
   const a = "storage-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Me = new Ae(),
+var Me = new Pe(),
   De = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Ae, default: Me },
+      { __proto__: null, StorageService: Pe, default: Me },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const $e = () => {
-    const e = U.exports.useI18n(),
+const Fe = () => {
+    const e = V.exports.useI18n(),
       a = k({}),
       t = (s, l = {}) => {
-        const [i, ...o] = H(".", s);
-        return i in a.value ? t(`${a.value[i]}.${A(".", o)}`, l) : e.t(s, l);
+        const [i, ...o] = N(".", s);
+        return i in a.value ? t(`${a.value[i]}.${P(".", o)}`, l) : e.t(s, l);
       };
     return {
       locale: e.locale,
@@ -648,11 +650,11 @@ const $e = () => {
       addMessages: e.addMessages,
     };
   },
-  Ve = ["onMouseenter", "onClick"],
-  Ue = y("div", { class: "line" }, null, -1),
-  Fe = { class: "list_style" },
-  He = { class: "nav_link-top" },
-  Re = y(
+  Ue = ["onMouseenter", "onClick"],
+  Ve = b("div", { class: "line" }, null, -1),
+  He = { class: "list_style" },
+  Ne = { class: "nav_link-top" },
+  Xe = b(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -661,10 +663,10 @@ const $e = () => {
     null,
     -1
   ),
-  Ne = { class: "nav_link-title" },
-  We = { class: "u-ts-3" },
-  Xe = { class: "nav_link-p" },
-  Ye = y(
+  Re = { class: "nav_link-title" },
+  Ze = { class: "u-ts-3" },
+  Ye = { class: "nav_link-p" },
+  We = b(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -673,15 +675,15 @@ const $e = () => {
     null,
     -1
   ),
-  Ze = y("div", { id: "pink_mask" }, null, -1),
-  Ge = {
+  Ge = b("div", { id: "pink_mask" }, null, -1),
+  Ke = {
     props: ["isOpen"],
     emits: ["toggleOpen"],
     setup(e, { emit: a }) {
       const t = e,
         s = k(1),
         l = k(!0),
-        i = R(),
+        i = X(),
         o = k([
           {
             title: "Overview",
@@ -721,27 +723,27 @@ const $e = () => {
               return 75;
           }
         }),
-        d = k(25);
-      return (e, c) => (
+        c = k(25);
+      return (e, d) => (
         g(),
-        b(
+        y(
           "div",
           { class: h(["layout-deafult-header-nav", { active: t.isOpen }]) },
           [
-            y("ul", null, [
+            b("ul", null, [
               (g(!0),
-              b(
+              y(
                 _,
                 null,
-                N(
+                R(
                   o.value,
                   (e, l) => (
                     g(),
-                    b(
+                    y(
                       "li",
                       {
                         key: e,
-                        style: W(`--i: ${e}`),
+                        style: Z(`--i: ${e}`),
                         onMouseenter: (e) =>
                           ((e) => {
                             s.value = e;
@@ -756,13 +758,13 @@ const $e = () => {
                         },
                       },
                       [
-                        Ue,
-                        y("div", Fe, [
-                          y("div", He, [
-                            Re,
-                            y("div", Ne, [y("div", We, X(e.title), 1)]),
+                        Ve,
+                        b("div", He, [
+                          b("div", Ne, [
+                            Xe,
+                            b("div", Re, [b("div", Ze, Y(e.title), 1)]),
                           ]),
-                          y(
+                          b(
                             "div",
                             {
                               class: h([
@@ -770,43 +772,43 @@ const $e = () => {
                                 { active: s.value === l },
                               ]),
                             },
-                            [y("p", Xe, X(e.content), 1), Ye],
+                            [b("p", Ye, Y(e.content), 1), We],
                             2
                           ),
                         ]),
                       ],
                       44,
-                      Ve
+                      Ue
                     )
                   )
                 ),
                 128
               )),
-              y(
+              b(
                 "div",
                 {
                   class: "move-item",
-                  style: W({
+                  style: Z({
                     left: "" + (l.value ? `calc(${w(r)}% - 4px)` : "auto"),
                     right: "" + (l.value ? "auto" : `calc(${w(n)}% - 4px)`),
-                    width: `calc(${d.value}% + 8px)`,
+                    width: `calc(${c.value}% + 8px)`,
                   }),
                 },
                 null,
                 4
               ),
             ]),
-            Ze,
+            Ge,
           ],
           2
         )
       );
     },
   },
-  Ke = { key: 0 },
-  Qe = ["src"],
+  $e = { key: 0 },
   Je = ["src"],
-  ea = [y("div", null, null, -1), y("div", null, null, -1)],
+  Qe = ["src"],
+  ea = [b("div", null, null, -1), b("div", null, null, -1)],
   aa = { class: "layout-deafult pb-32" };
 var ta = Se(
     {
@@ -819,17 +821,17 @@ var ta = Se(
               };
             return (e, s) => (
               g(),
-              b(
+              y(
                 _,
                 null,
                 [
-                  y(
+                  b(
                     "div",
                     {
                       class: h(["layout-deafult-header", { active: a.value }]),
                     },
                     [
-                      y(
+                      b(
                         "div",
                         {
                           href: "/",
@@ -843,27 +845,27 @@ var ta = Se(
                         [
                           a.value
                             ? (g(),
-                              b(
+                              y(
                                 "img",
                                 { key: 1, src: w(ke)("logo.png"), alt: "" },
                                 null,
                                 8,
-                                Je
+                                Qe
                               ))
                             : (g(),
-                              b("div", Ke, [
-                                y(
+                              y("div", $e, [
+                                b(
                                   "img",
                                   { src: w(ke)("logo.png"), alt: "" },
                                   null,
                                   8,
-                                  Qe
+                                  Je
                                 ),
                               ])),
                         ],
                         2
                       ),
-                      y(
+                      b(
                         "div",
                         {
                           class: h([
@@ -880,14 +882,14 @@ var ta = Se(
                   ),
                   a.value
                     ? (g(),
-                      O(
-                        Ge,
+                      z(
+                        Ke,
                         { key: 0, "is-open": a.value, onToggleOpen: t },
                         null,
                         8,
                         ["is-open"]
                       ))
-                    : B("", !0),
+                    : E("", !0),
                 ],
                 64
               )
@@ -896,7 +898,7 @@ var ta = Se(
         },
       },
       setup() {
-        const { t: e } = $e();
+        const { t: e } = Fe();
         return { t: e };
       },
     },
@@ -906,7 +908,7 @@ var ta = Se(
         function (e, a, t, s, l, i) {
           const o = S("LayoutHeader");
           return (
-            g(), b(_, null, [L(o), y("div", aa, [Y(e.$slots, "default")])], 64)
+            g(), y(_, null, [A(o), b("div", aa, [W(e.$slots, "default")])], 64)
           );
         },
       ],
@@ -924,7 +926,7 @@ var ia = Se({ setup() {} }, [
   [
     "render",
     function (e, a, t, s, l, i) {
-      return g(), b("div", la, [Y(e.$slots, "default")]);
+      return g(), y("div", la, [W(e.$slots, "default")]);
     },
   ],
 ]);
@@ -939,9 +941,9 @@ const oa = {
     ),
   },
   ra = [];
-for (let Fo in oa) {
-  const e = Fo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  ra.push({ componentName: e, component: oa[Fo].default });
+for (let Vo in oa) {
+  const e = Vo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  ra.push({ componentName: e, component: oa[Vo].default });
 }
 const na = {
   install: (e) => {
@@ -950,10 +952,10 @@ const na = {
     });
   },
 };
-const da = {
+const ca = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
-      const e = R();
+      const e = X();
       return {
         goBack: () => {
           e.options.history.state.back
@@ -963,31 +965,31 @@ const da = {
       };
     },
   },
-  ca = {
+  da = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
   pa = { class: "font-bold" },
   va = { class: "absolute right-8 top-6" };
-var ma = Se(da, [
+var ma = Se(ca, [
     [
       "render",
       function (e, a, t, s, l, i) {
         return (
           g(),
-          b("div", ca, [
+          y("div", da, [
             t.goBackButton
               ? (g(),
-                b("div", {
+                y("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
                     a[0] || (a[0] = (...e) => s.goBack && s.goBack(...e)),
                 }))
-              : B("", !0),
-            y("div", pa, [
-              Y(e.$slots, "title", {}, () => [Z(X(t.title), 1)], !0),
+              : E("", !0),
+            b("div", pa, [
+              W(e.$slots, "title", {}, () => [G(Y(t.title), 1)], !0),
             ]),
-            y("div", va, [Y(e.$slots, "actions", {}, void 0, !0)]),
+            b("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
@@ -1001,14 +1003,14 @@ var ma = Se(da, [
       { value: "Module" }
     )
   );
-const ua = () => G("popup-service");
+const ua = () => K("popup-service");
 const ga = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  ba = { class: "swal2-title", style: { display: "block" } },
-  ya = { class: "swal2-html-container", style: { display: "block" } },
+  ya = { class: "swal2-title", style: { display: "block" } },
+  ba = { class: "swal2-html-container", style: { display: "block" } },
   ha = { class: "swal2-actions", style: { display: "flex" } };
 var wa = Se({}, [
   [
@@ -1016,10 +1018,10 @@ var wa = Se({}, [
     function (e, a) {
       return (
         g(),
-        b("div", ga, [
-          y("h2", ba, [Y(e.$slots, "title")]),
-          y("div", ya, [Y(e.$slots, "content")]),
-          y("div", ha, [Y(e.$slots, "actions")]),
+        y("div", ga, [
+          b("h2", ya, [W(e.$slots, "title")]),
+          b("div", ba, [W(e.$slots, "content")]),
+          b("div", ha, [W(e.$slots, "actions")]),
         ])
       );
     },
@@ -1056,10 +1058,10 @@ var ja = Se(
         a &&
           (n(),
           (r = setTimeout(() => {
-            n(), e && d("timer");
+            n(), e && c("timer");
           }, a)));
       });
-      const d = async (e) => {
+      const c = async (e) => {
           if (r) {
             if (!t.value.allowDismissWhenTimerRunning) return;
             n();
@@ -1069,11 +1071,11 @@ var ja = Se(
             t && (s({ isDismissed: !0, dismiss: e, result: t }), a.clear());
           } else s({ isDismissed: !0, dismiss: e }), a.clear();
         },
-        c = async () => {
-          t.value.allowOutsideClick && d("backdrop");
+        d = async () => {
+          t.value.allowOutsideClick && c("backdrop");
         },
         p = async () => {
-          d("cancel");
+          c("cancel");
         },
         v = async () => {
           if (r) {
@@ -1087,19 +1089,19 @@ var ja = Se(
         };
       return (e, a) => (
         g(),
-        O(ee, { to: "body" }, [
-          L(
-            J,
+        z(ee, { to: "body" }, [
+          A(
+            Q,
             { name: "popup", duration: "600" },
             {
-              default: z(() => {
+              default: O(() => {
                 var e;
                 return [
                   w(t).$display
                     ? (g(),
-                      b("div", _a, [
+                      y("div", _a, [
                         (g(),
-                        O(
+                        z(
                           T(w(l)),
                           {
                             class: h([
@@ -1112,27 +1114,27 @@ var ja = Se(
                               },
                             ]),
                           },
-                          K(
+                          $(
                             {
-                              title: z(() => [Z(X(w(t).title), 1)]),
-                              content: z(() => [
+                              title: O(() => [G(Y(w(t).title), 1)]),
+                              content: O(() => [
                                 w(t).component
                                   ? (g(),
-                                    O(
+                                    z(
                                       T(w(t).component),
-                                      Q(
+                                      J(
                                         { key: 0, ref_key: "compRef", ref: o },
                                         w(t).props
                                       ),
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xa, X(w(t).text), 1)),
+                                  : (g(), y("div", xa, Y(w(t).text), 1)),
                               ]),
-                              actions: z(() => [
+                              actions: O(() => [
                                 w(t).showCancelButton
                                   ? (g(),
-                                    b(
+                                    y(
                                       "button",
                                       {
                                         key: 0,
@@ -1140,13 +1142,13 @@ var ja = Se(
                                         class: "cancel-button",
                                         onClick: p,
                                       },
-                                      X(w(t).cancelButtonText),
+                                      Y(w(t).cancelButtonText),
                                       1
                                     ))
-                                  : B("", !0),
+                                  : E("", !0),
                                 w(t).showConfirmButton
                                   ? (g(),
-                                    b(
+                                    y(
                                       "button",
                                       {
                                         key: 1,
@@ -1154,10 +1156,10 @@ var ja = Se(
                                         class: "confirm-button",
                                         onClick: v,
                                       },
-                                      X(w(t).confirmButtonText),
+                                      Y(w(t).confirmButtonText),
                                       1
                                     ))
-                                  : B("", !0),
+                                  : E("", !0),
                               ]),
                               _: 2,
                             },
@@ -1165,8 +1167,8 @@ var ja = Se(
                               w(t).timer && w(t).timerProgress
                                 ? {
                                     name: "timer",
-                                    fn: z(() => [
-                                      y(
+                                    fn: O(() => [
+                                      b(
                                         "div",
                                         {
                                           class: "timer-progress",
@@ -1186,35 +1188,35 @@ var ja = Se(
                           ["class"]
                         )),
                       ]))
-                    : B("", !0),
+                    : E("", !0),
                 ];
               }),
               _: 1,
             }
           ),
-          L(
-            J,
+          A(
+            Q,
             {
               name: "popup-backdrop",
               "enter-active-class": "animate__animated animate__fadeIn",
               "leave-active-class": "animate__animated animate__fadeOut",
             },
             {
-              default: z(() => [
+              default: O(() => [
                 w(t).$display
                   ? (g(),
-                    b(
+                    y(
                       "div",
                       {
                         key: 0,
                         class: "popup-backdrop",
-                        style: W({ background: w(i) }),
-                        onClick: c,
+                        style: Z({ background: w(i) }),
+                        onClick: d,
                       },
                       null,
                       4
                     ))
-                  : B("", !0),
+                  : E("", !0),
               ]),
               _: 1,
             }
@@ -1236,9 +1238,9 @@ const Ca = {
     ),
   },
   qa = [];
-for (let Fo in Ca) {
-  const e = Fo.replace("../components/", "").toLowerCase().replace(".vue", "");
-  qa.push({ componentName: e, component: Ca[Fo].default });
+for (let Vo in Ca) {
+  const e = Vo.replace("../components/", "").toLowerCase().replace(".vue", "");
+  qa.push({ componentName: e, component: Ca[Vo].default });
 }
 const Sa = {
   install: (e) => {
@@ -1247,9 +1249,9 @@ const Sa = {
     });
   },
 };
-class Oa {
+class za {
   constructor() {
-    return F.mixin({
+    return H.mixin({
       reverseButtons: !0,
       heightAuto: !1,
       focusConfirm: !1,
@@ -1257,8 +1259,8 @@ class Oa {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Be.t("button.confirm"),
-      cancelButtonText: Be.t("button.cancel"),
+      confirmButtonText: Ee.t("button.confirm"),
+      cancelButtonText: Ee.t("button.cancel"),
       didOpen(e) {
         const a = e.querySelector(".swal2-cancel");
         e.querySelector(".swal2-confirm").blur(), a.blur();
@@ -1266,9 +1268,9 @@ class Oa {
     });
   }
 }
-class za {
+class Oa {
   constructor() {
-    this.provider = new Oa();
+    this.provider = new za();
   }
   toast(e) {
     return this.provider.fire({
@@ -1291,7 +1293,7 @@ class za {
     willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
-    confirmButtonText: i = Be.t("button.confirm"),
+    confirmButtonText: i = Ee.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
@@ -1322,7 +1324,7 @@ class za {
     title: e,
     text: a,
     html: t,
-    confirmButtonText: s = Be.t("button.confirm"),
+    confirmButtonText: s = Ee.t("button.confirm"),
     confirmCallback: l = null,
     heightAuto: i = !1,
   }) {
@@ -1345,19 +1347,19 @@ class za {
     this.provider.close();
   }
 }
-za.prototype.install = function (e) {
+Oa.prototype.install = function (e) {
   const a = "alert-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Ta = new za(),
-  La = Object.freeze(
+var Ta = new Oa(),
+  Aa = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: za, default: Ta },
+      { __proto__: null, AlertService: Oa, default: Ta },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ba {
+class Ea {
   constructor(e, a = {}) {
     this.instance = te.create(f({ baseURL: e }, a));
   }
@@ -1371,11 +1373,11 @@ class Ba {
     });
   }
 }
-const Ea = {
+const Ba = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
-          const a = V.get("token");
+          const a = U.get("token");
           return a && (e.headers.Authorization = `Bearer ${a}`), e;
         },
         function (e) {
@@ -1384,14 +1386,14 @@ const Ea = {
       );
     },
   },
-  Pa = (e, { rejectNil: a, rejectEmpty: t }) =>
+  La = (e, { rejectNil: a, rejectEmpty: t }) =>
     M(
       (s, l) => {
         const i = e[l];
-        return (a && E(i)) || (t && se(i)) ? s : le(l, i, s);
+        return (a && B(i)) || (t && se(i)) ? s : le(l, i, s);
       },
       {},
-      $(e)
+      F(e)
     ),
   Ia = {
     use(e) {
@@ -1404,9 +1406,9 @@ const Ea = {
           } = e;
           if (
             (e.params &&
-              (e.params = Pa(e.params, { rejectNil: a, rejectEmpty: t })),
+              (e.params = La(e.params, { rejectNil: a, rejectEmpty: t })),
             e.data &&
-              ((e.data = Pa(e.data, { rejectNil: a, rejectEmpty: t })), s))
+              ((e.data = La(e.data, { rejectNil: a, rejectEmpty: t })), s))
           ) {
             const a = new FormData();
             ie((t) => {
@@ -1415,7 +1417,7 @@ const Ea = {
                     a.append(`${t}[]`, e);
                   }, e.data[t])
                 : a.append(t, e.data[t]);
-            }, $(e.data)),
+            }, F(e.data)),
               (e.data = a);
           }
           return e;
@@ -1434,17 +1436,17 @@ const Ea = {
         );
     },
   },
-  Aa = te.create();
-(Aa.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Aa.defaults.validateStatus = (e) => e >= 200 && e < 300);
+  Pa = te.create();
+(Pa.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Pa.defaults.validateStatus = (e) => e >= 200 && e < 300);
 const Ma = {
   async "read/marquee"() {
-    const e = await Aa.get("/app/user/news", {
+    const e = await Pa.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Aa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+      a = await Pa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
     return { marquee: e.data, withdraw: a.data };
   },
 };
@@ -1459,18 +1461,18 @@ const Da = {
     e.isLoading = a;
   },
 };
-const $a = {
+const Fa = {
   async "read/marquee"() {
-    const e = await Aa.get("/app/user/news", {
+    const e = await Pa.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Aa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+      a = await Pa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
     return { marquee: e.data, withdraw: a.data };
   },
 };
-const Va = {
+const Ua = {
   "set/popup"(e, a) {
     e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
@@ -1478,7 +1480,7 @@ const Va = {
     e.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Ua = {
+const Va = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
       { __proto__: null, default: Ma },
@@ -1525,7 +1527,7 @@ const Ua = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: $a },
+      { __proto__: null, default: Fa },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1547,7 +1549,7 @@ const Ua = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Va },
+      { __proto__: null, default: Ua },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1567,28 +1569,28 @@ const Ua = {
     )
   ),
 };
-let Fa = {};
-const Ha = (e, a, t) => {
+let Ha = {};
+const Na = (e, a, t) => {
   const [s, ...l] = e;
   return l.length
-    ? { [s]: { namespaced: !0, modules: Ha(l, a, t) } }
+    ? { [s]: { namespaced: !0, modules: Na(l, a, t) } }
     : { [s]: { namespaced: !0, [a]: t } };
 };
-for (let Fo in Ua) {
-  const e = Fo.replace("../store/", "")
+for (let Vo in Va) {
+  const e = Vo.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Fa = ne(Fa, Ha(re(e), oe(e), Ua[Fo].default));
+  Ha = ne(Ha, Na(re(e), oe(e), Va[Vo].default));
 }
-var Ra = Fa;
-const Na = {},
-  Wa = function (e, a) {
+var Xa = Ha;
+const Ra = {},
+  Za = function (e, a) {
     return a && 0 !== a.length
       ? Promise.all(
           a.map((e) => {
-            if ((e = `./${e}`) in Na) return;
-            Na[e] = !0;
+            if ((e = `./${e}`) in Ra) return;
+            Ra[e] = !0;
             const a = e.endsWith(".css"),
               t = a ? '[rel="stylesheet"]' : "";
             if (document.querySelector(`link[href="${e}"]${t}`)) return;
@@ -1610,165 +1612,155 @@ const Na = {},
           })
         ).then(() => e())
       : e();
-  };
-const Xa = (e) => (de("data-v-7daf12f0"), (e = e()), ce(), e),
+  },
   Ya = { class: "footer" },
-  Za = { class: "container" },
+  Wa = { class: "container" },
   Ga = { class: "row row-justify-center" },
-  Ka = Xa(() =>
-    y(
-      "div",
-      { class: "col col-lg-3 col-md-12" },
-      [
-        y("div", { class: "footer_group cc-above" }, [
-          y("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
-          y("ul", { role: "list", class: "footer_list" }, [
-            y("li", { class: "footer_list-item" }, [
-              y(
-                "a",
-                {
-                  href: "mailto:hello@basis.work",
-                  class: "footer_link w-inline-block",
-                },
-                [y("div", { class: "u-ts-3" }, "hello@basis.work")]
-              ),
-            ]),
+  Ka = b(
+    "div",
+    { class: "col col-lg-3 col-md-12" },
+    [
+      b("div", { class: "footer_group cc-above" }, [
+        b("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
+        b("ul", { role: "list", class: "footer_list" }, [
+          b("li", { class: "footer_list-item" }, [
+            b(
+              "a",
+              {
+                href: "mailto:hello@basis.work",
+                class: "footer_link w-inline-block",
+              },
+              [b("div", { class: "u-ts-3" }, "hello@basis.work")]
+            ),
           ]),
         ]),
-        y("div", { class: "footer_group" }, [
-          y("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
-          y("ul", { role: "list", class: "footer_list" }, [
-            y("li", { class: "footer_list-item" }, [
-              y(
-                "a",
-                {
-                  href: "https://www.instagram.com/basis.work/",
-                  target: "_blank",
-                  class: "footer_link w-inline-block",
-                },
-                [y("div", { class: "u-ts-3" }, "Instagram")]
-              ),
-            ]),
-            y("li", { class: "footer_list-item" }, [
-              y(
-                "a",
-                {
-                  href: "https://www.linkedin.com/company/basisstudio/",
-                  target: "_blank",
-                  class: "footer_link w-inline-block",
-                },
-                [y("div", { class: "u-ts-3" }, "Linkedin")]
-              ),
-            ]),
+      ]),
+      b("div", { class: "footer_group" }, [
+        b("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
+        b("ul", { role: "list", class: "footer_list" }, [
+          b("li", { class: "footer_list-item" }, [
+            b(
+              "a",
+              {
+                href: "https://www.instagram.com/basis.work/",
+                target: "_blank",
+                class: "footer_link w-inline-block",
+              },
+              [b("div", { class: "u-ts-3" }, "Instagram")]
+            ),
+          ]),
+          b("li", { class: "footer_list-item" }, [
+            b(
+              "a",
+              {
+                href: "https://www.linkedin.com/company/basisstudio/",
+                target: "_blank",
+                class: "footer_link w-inline-block",
+              },
+              [b("div", { class: "u-ts-3" }, "Linkedin")]
+            ),
           ]),
         ]),
-      ],
-      -1
-    )
+      ]),
+    ],
+    -1
   ),
-  Qa = Xa(() =>
-    y(
-      "div",
-      { class: "col col-lg-3 col-md-12" },
-      [
-        y("div", { class: "footer_group" }, [
-          y("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
-          y("ul", { role: "list", class: "footer_list" }, [
-            y("li", { class: "footer_list-item" }, [
-              y("a", { href: "/", class: "footer_link w-inline-block" }, [
-                y("div", { class: "u-ts-3" }, "Overview"),
-              ]),
-            ]),
-            y("li", { class: "footer_list-item" }, [
-              y("a", { href: "/cases", class: "footer_link w-inline-block" }, [
-                y("div", { class: "u-ts-3" }, "Cases"),
-              ]),
-            ]),
-            y("li", { class: "footer_list-item" }, [
-              y("a", { href: "/about", class: "footer_link w-inline-block" }, [
-                y("div", { class: "u-ts-3" }, "Services"),
-              ]),
-            ]),
-            y("li", { class: "footer_list-item" }, [
-              y(
-                "a",
-                { href: "/design-trial", class: "footer_link w-inline-block" },
-                [y("div", { class: "u-ts-3" }, "Design Trial")]
-              ),
-            ]),
-            y("li", { class: "footer_list-item" }, [
-              y(
-                "a",
-                {
-                  href: "/fintech-design",
-                  "aria-current": "page",
-                  class: "footer_link w-inline-block w--current",
-                },
-                [y("div", { class: "u-ts-3" }, "Fintech Design")]
-              ),
+  $a = b(
+    "div",
+    { class: "col col-lg-3 col-md-12" },
+    [
+      b("div", { class: "footer_group" }, [
+        b("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
+        b("ul", { role: "list", class: "footer_list" }, [
+          b("li", { class: "footer_list-item" }, [
+            b("a", { href: "/", class: "footer_link w-inline-block" }, [
+              b("div", { class: "u-ts-3" }, "Overview"),
             ]),
           ]),
+          b("li", { class: "footer_list-item" }, [
+            b("a", { href: "/cases", class: "footer_link w-inline-block" }, [
+              b("div", { class: "u-ts-3" }, "Cases"),
+            ]),
+          ]),
+          b("li", { class: "footer_list-item" }, [
+            b("a", { href: "/about", class: "footer_link w-inline-block" }, [
+              b("div", { class: "u-ts-3" }, "Services"),
+            ]),
+          ]),
+          b("li", { class: "footer_list-item" }, [
+            b(
+              "a",
+              { href: "/design-trial", class: "footer_link w-inline-block" },
+              [b("div", { class: "u-ts-3" }, "Design Trial")]
+            ),
+          ]),
+          b("li", { class: "footer_list-item" }, [
+            b(
+              "a",
+              {
+                href: "/fintech-design",
+                "aria-current": "page",
+                class: "footer_link w-inline-block w--current",
+              },
+              [b("div", { class: "u-ts-3" }, "Fintech Design")]
+            ),
+          ]),
         ]),
-      ],
-      -1
-    )
+      ]),
+    ],
+    -1
   ),
-  Ja = Xa(() => y("div", { class: "col col-md-hide" }, null, -1)),
-  et = { class: "col col-lg-4 col-md-12 col-md-first" },
-  at = { href: "/", class: "footer-wordmark w-inline-block" },
-  tt = { class: "wordmark w-embed" },
-  st = ["src"],
-  lt = Xa(() =>
-    y(
-      "div",
-      { class: "footer-copyright" },
-      [
-        y("div", { "data-copyright": "" }, [
-          Z(" Copyright © "),
-          y("span", { "data-dynamic": "year" }, "2024"),
-        ]),
-      ],
-      -1
-    )
-  );
-var it = Se(
-  {
+  Ja = b("div", { class: "col col-md-hide" }, null, -1),
+  Qa = { class: "col col-lg-4 col-md-12 col-md-first" },
+  et = { href: "/", class: "footer-wordmark w-inline-block" },
+  at = { class: "wordmark w-embed" },
+  tt = ["src"],
+  st = b(
+    "div",
+    { class: "footer-copyright" },
+    [
+      b("div", { "data-copyright": "" }, [
+        G(" Copyright © "),
+        b("span", { "data-dynamic": "year" }, "2024"),
+      ]),
+    ],
+    -1
+  ),
+  lt = {
     setup: (e) => (e, a) => (
       g(),
-      b("footer", Ya, [
-        y("div", Za, [
-          y("div", Ga, [
+      y("footer", Ya, [
+        b("div", Wa, [
+          b("div", Ga, [
             Ka,
-            Qa,
+            $a,
             Ja,
-            y("div", et, [
-              y("a", at, [
-                y("div", tt, [
-                  y("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, st),
+            b("div", Qa, [
+              b("a", et, [
+                b("div", at, [
+                  b("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, tt),
                 ]),
               ]),
             ]),
           ]),
-          lt,
+          st,
         ]),
       ])
     ),
   },
-  [["__scopeId", "data-v-7daf12f0"]]
-);
-const ot = {
-    components: { Footer: it },
+  it = {
+    components: { Footer: lt },
     setup() {
-      const { t: e } = $e();
+      const { t: e } = Fe();
       return { t: e };
     },
   },
-  rt = y(
+  ot = b(
     "header",
     { "data-mouse-class": "cc-icon", class: "header cc-large" },
     [
-      y("div", { class: "nav_mode w-embed" }),
-      y(
+      b("div", { class: "nav_mode w-embed" }),
+      b(
         "div",
         {
           class: "header-image_wrap",
@@ -1779,7 +1771,7 @@ const ot = {
           },
         },
         [
-          y("img", {
+          b("img", {
             src:
               "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp",
             loading: "eager",
@@ -1795,7 +1787,7 @@ const ot = {
               "transform-style": "preserve-3d",
             },
           }),
-          y(
+          b(
             "div",
             {
               class: "header-image",
@@ -1807,8 +1799,8 @@ const ot = {
               },
             },
             [
-              y("div", { class: "iframe-video_wrapper" }, [
-                y("iframe", {
+              b("div", { class: "iframe-video_wrapper" }, [
+                b("iframe", {
                   class: "iframe-video_iframe",
                   width: "100%",
                   height: "100%",
@@ -1821,16 +1813,16 @@ const ot = {
                   title: "Services 1",
                   loading: "lazy",
                 }),
-                y("div", { class: "iframe-video_blocker" }),
+                b("div", { class: "iframe-video_blocker" }),
               ]),
             ]
           ),
         ]
       ),
-      y("div", { class: "header-content_wrapper" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y(
+      b("div", { class: "header-content_wrapper" }, [
+        b("div", { class: "container" }, [
+          b("div", { class: "row" }, [
+            b(
               "div",
               {
                 "data-animation-trigger": "transition",
@@ -1838,9 +1830,9 @@ const ot = {
                 class: "col col-lg-6 col-md-12",
               },
               [
-                y("div", { class: "header-content_main" }, [
-                  y("div", { class: "text-wrap-balance" }, [
-                    y(
+                b("div", { class: "header-content_main" }, [
+                  b("div", { class: "text-wrap-balance" }, [
+                    b(
                       "h1",
                       {
                         "data-animation-element": "title",
@@ -1848,7 +1840,7 @@ const ot = {
                         style: {},
                       },
                       [
-                        y(
+                        b(
                           "div",
                           {
                             class: "u-overflow-hidden",
@@ -1859,7 +1851,7 @@ const ot = {
                             },
                           },
                           [
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1873,7 +1865,7 @@ const ot = {
                               },
                               " Basis "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1887,7 +1879,7 @@ const ot = {
                               },
                               " gets "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1901,7 +1893,7 @@ const ot = {
                               },
                               " you "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1917,7 +1909,7 @@ const ot = {
                             ),
                           ]
                         ),
-                        y(
+                        b(
                           "div",
                           {
                             class: "u-overflow-hidden",
@@ -1928,7 +1920,7 @@ const ot = {
                             },
                           },
                           [
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1942,7 +1934,7 @@ const ot = {
                               },
                               " to "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1956,7 +1948,7 @@ const ot = {
                               },
                               " your "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1972,7 +1964,7 @@ const ot = {
                             ),
                           ]
                         ),
-                        y(
+                        b(
                           "div",
                           {
                             class: "u-overflow-hidden",
@@ -1983,7 +1975,7 @@ const ot = {
                             },
                           },
                           [
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -1997,7 +1989,7 @@ const ot = {
                               },
                               " vision, "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -2011,7 +2003,7 @@ const ot = {
                               },
                               " first "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -2025,7 +2017,7 @@ const ot = {
                               },
                               " by "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -2041,7 +2033,7 @@ const ot = {
                             ),
                           ]
                         ),
-                        y(
+                        b(
                           "div",
                           {
                             class: "u-overflow-hidden",
@@ -2052,7 +2044,7 @@ const ot = {
                             },
                           },
                           [
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -2066,7 +2058,7 @@ const ot = {
                               },
                               " your "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -2080,7 +2072,7 @@ const ot = {
                               },
                               " short-term "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 style: {
@@ -2099,7 +2091,7 @@ const ot = {
                       ]
                     ),
                   ]),
-                  y(
+                  b(
                     "div",
                     {
                       class: "header-content_cta",
@@ -2111,8 +2103,8 @@ const ot = {
                       },
                     },
                     [
-                      y("div", { class: "header-content_icon w-embed" }, [
-                        y(
+                      b("div", { class: "header-content_icon w-embed" }, [
+                        b(
                           "svg",
                           {
                             width: "100%",
@@ -2122,7 +2114,7 @@ const ot = {
                             xmlns: "http://www.w3.org/2000/svg",
                           },
                           [
-                            y("path", {
+                            b("path", {
                               d:
                                 "M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z",
                               fill: "black",
@@ -2138,26 +2130,26 @@ const ot = {
           ]),
         ]),
       ]),
-      y("div", { "data-transition": "in", class: "header-trigger" }),
+      b("div", { "data-transition": "in", class: "header-trigger" }),
     ],
     -1
   ),
-  nt = y("div", { class: "spacing" }, null, -1),
-  dt = y(
+  rt = b("div", { class: "spacing" }, null, -1),
+  nt = b(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "section-title_wrapper" }, [
-            y("div", { class: "section-title_dot", style: { opacity: "1" } }, [
-              y("div", {
+      b("div", { class: "section-title_component" }, [
+        b("div", { class: "container" }, [
+          b("div", { class: "section-title_wrapper" }, [
+            b("div", { class: "section-title_dot", style: { opacity: "1" } }, [
+              b("div", {
                 class: "section-title_dot-fill",
                 style: { width: "100%", height: "100%" },
               }),
             ]),
-            y("div", { class: "u-overflow-hidden" }, [
-              y(
+            b("div", { class: "u-overflow-hidden" }, [
+              b(
                 "div",
                 {
                   class: "section-title_title",
@@ -2166,22 +2158,22 @@ const ot = {
                     "transform-style": "preserve-3d",
                   },
                 },
-                [y("h2", { class: "u-ts-4" }, "Work with Basis")]
+                [b("h2", { class: "u-ts-4" }, "Work with Basis")]
               ),
             ]),
           ]),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "w-layout-grid pair-grid" }, [
-          y(
+      b("div", { class: "container" }, [
+        b("div", { class: "w-layout-grid pair-grid" }, [
+          b(
             "div",
             { id: "w-node-e8a07e93-34f6-be32-54f2-b34bf2439e43-af55239f" },
             [
-              y("div", { class: "case-details is-about" }, [
-                y("div", { class: "u-ts-4" }, [
-                  y("div", { class: "u-overflow-hidden" }, [
-                    y(
+              b("div", { class: "case-details is-about" }, [
+                b("div", { class: "u-ts-4" }, [
+                  b("div", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "case-detail_title cc-1",
@@ -2192,7 +2184,7 @@ const ot = {
                         },
                       },
                       [
-                        y(
+                        b(
                           "h2",
                           { class: "u-ts-4 u-text-mid" },
                           "Project inquiries"
@@ -2200,7 +2192,7 @@ const ot = {
                       ]
                     ),
                   ]),
-                  y(
+                  b(
                     "a",
                     {
                       href: "mailto:hello@basis.work",
@@ -2215,9 +2207,9 @@ const ot = {
                     "hello@basis.work"
                   ),
                 ]),
-                y("div", { class: "u-ts-4" }, [
-                  y("div", { class: "u-overflow-hidden" }, [
-                    y(
+                b("div", { class: "u-ts-4" }, [
+                  b("div", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "case-detail_title cc-2",
@@ -2227,10 +2219,10 @@ const ot = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h2", { class: "u-ts-4 u-text-mid" }, "Join the team")]
+                      [b("h2", { class: "u-ts-4 u-text-mid" }, "Join the team")]
                     ),
                   ]),
-                  y(
+                  b(
                     "a",
                     {
                       href: "mailto:jobs@basis.work",
@@ -2248,14 +2240,14 @@ const ot = {
               ]),
             ]
           ),
-          y(
+          b(
             "div",
             {
               id: "w-node-_2eada710-eca2-ae0e-be9f-54fbff32a11c-af55239f",
               class: "content",
             },
             [
-              y(
+              b(
                 "div",
                 {
                   "data-animation-element": "paragraphs",
@@ -2267,15 +2259,15 @@ const ot = {
                   },
                 },
                 [
-                  y(
+                  b(
                     "p",
                     { class: "u-ts-1 u-mb-0" },
                     " Startups and enterprises hire us when they can’t afford to fail. As the technology of our world gets increasingly more complex, your brand and product are being asked to adapt to more situations, more platforms, more devices, and a more global audience than ever. That’s why you need the expertise of a studio that builds true systems: From the first touch of brand awareness to the product needs of your most engaged user, Basis sees it all as part of one holistic experience. "
                   ),
                 ]
               ),
-              y("div", { class: "btn-group" }, [
-                y(
+              b("div", { class: "btn-group" }, [
+                b(
                   "div",
                   {
                     class: "btn-item cc-1",
@@ -2286,7 +2278,7 @@ const ot = {
                     },
                   },
                   [
-                    y(
+                    b(
                       "a",
                       {
                         href:
@@ -2295,9 +2287,9 @@ const ot = {
                         class: "btn w-inline-block",
                       },
                       [
-                        y("div", { class: "btn-text-wrap" }, [
-                          y("div", { class: "btn-text" }, "Start a project"),
-                          y(
+                        b("div", { class: "btn-text-wrap" }, [
+                          b("div", { class: "btn-text" }, "Start a project"),
+                          b(
                             "div",
                             { class: "btn-text cc-bottom" },
                             "Start a project"
@@ -2307,7 +2299,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     class: "btn-item cc-2",
@@ -2318,16 +2310,16 @@ const ot = {
                     },
                   },
                   [
-                    y(
+                    b(
                       "a",
                       {
                         href: "/design-trial",
                         class: "btn cc-secondary w-inline-block",
                       },
                       [
-                        y("div", { class: "btn-text-wrap" }, [
-                          y("div", { class: "btn-text" }, "Design trial"),
-                          y(
+                        b("div", { class: "btn-text-wrap" }, [
+                          b("div", { class: "btn-text" }, "Design trial"),
+                          b(
                             "div",
                             { class: "btn-text cc-bottom" },
                             "Design trial"
@@ -2341,12 +2333,12 @@ const ot = {
             ]
           ),
         ]),
-        y("div", { class: "sticky-pair cc-far" }, [
-          y("div", { class: "w-layout-grid pair-grid" }, [
-            y("div", { class: "div-block" }, [
-              y("div", { class: "card-wrapper cc-small" }, [
-                y("div", { class: "card-animation cc-40" }, [
-                  y(
+        b("div", { class: "sticky-pair cc-far" }, [
+          b("div", { class: "w-layout-grid pair-grid" }, [
+            b("div", { class: "div-block" }, [
+              b("div", { class: "card-wrapper cc-small" }, [
+                b("div", { class: "card-animation cc-40" }, [
+                  b(
                     "div",
                     {
                       "data-mouse-class": "cc-none",
@@ -2358,8 +2350,8 @@ const ot = {
                       },
                     },
                     [
-                      y("div", { class: "card-image_wrapper" }, [
-                        y("img", {
+                      b("div", { class: "card-image_wrapper" }, [
+                        b("img", {
                           loading: "lazy",
                           sizes: "100vw",
                           srcset:
@@ -2380,9 +2372,9 @@ const ot = {
                 ]),
               ]),
             ]),
-            y("div", { class: "card-wrapper cc-large" }, [
-              y("div", { class: "card-animation cc-40" }, [
-                y(
+            b("div", { class: "card-wrapper cc-large" }, [
+              b("div", { class: "card-animation cc-40" }, [
+                b(
                   "div",
                   {
                     "data-mouse-class": "cc-none",
@@ -2394,8 +2386,8 @@ const ot = {
                     },
                   },
                   [
-                    y("div", { class: "card-image_wrapper" }, [
-                      y("img", {
+                    b("div", { class: "card-image_wrapper" }, [
+                      b("img", {
                         loading: "lazy",
                         sizes: "100vw",
                         srcset:
@@ -2415,14 +2407,14 @@ const ot = {
                 ),
               ]),
             ]),
-            y(
+            b(
               "div",
               {
                 id: "w-node-ce72eb91-efb6-6f0b-43b7-a66f9003cbae-af55239f",
                 class: "content",
               },
               [
-                y(
+                b(
                   "div",
                   {
                     "data-animation-element": "paragraphs",
@@ -2434,14 +2426,14 @@ const ot = {
                     },
                   },
                   [
-                    y(
+                    b(
                       "p",
                       { class: "u-ts-1" },
                       " Whether it’s shaping a new venture 0 → 1, evolving an existing company 1 → N, or taking an industry leader from N → XYZ, Basis has a formula that delivers results in record time. Our team is respected for crafting world-class experiences through our signature Product and Brand Trials, led by Michal Škvarenina, the design director behind digital experiences for Google, Airbnb, Red Bull, Mastercard, PC Financial, and more. "
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     "data-animation-element": "paragraphs",
@@ -2453,15 +2445,15 @@ const ot = {
                     },
                   },
                   [
-                    y(
+                    b(
                       "p",
                       { class: "u-ts-1" },
                       " When you want to build enduring digital products for an increasingly-digital future, first establish your Basis. "
                     ),
                   ]
                 ),
-                y("div", { class: "btn-group" }, [
-                  y(
+                b("div", { class: "btn-group" }, [
+                  b(
                     "div",
                     {
                       class: "btn-item cc-1",
@@ -2473,7 +2465,7 @@ const ot = {
                       },
                     },
                     [
-                      y(
+                      b(
                         "a",
                         {
                           href:
@@ -2482,9 +2474,9 @@ const ot = {
                           class: "btn w-inline-block",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y("div", { class: "btn-text" }, "Start a project"),
-                            y(
+                          b("div", { class: "btn-text-wrap" }, [
+                            b("div", { class: "btn-text" }, "Start a project"),
+                            b(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Start a project"
@@ -2494,7 +2486,7 @@ const ot = {
                       ),
                     ]
                   ),
-                  y(
+                  b(
                     "div",
                     {
                       class: "btn-item cc-2",
@@ -2506,16 +2498,16 @@ const ot = {
                       },
                     },
                     [
-                      y(
+                      b(
                         "a",
                         {
                           href: "/design-trial",
                           class: "btn cc-secondary w-inline-block",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y("div", { class: "btn-text" }, "Design trial"),
-                            y(
+                          b("div", { class: "btn-text-wrap" }, [
+                            b("div", { class: "btn-text" }, "Design trial"),
+                            b(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Design trial"
@@ -2531,10 +2523,10 @@ const ot = {
           ]),
         ]),
       ]),
-      y("div", { class: "u-mt-8-75", "data-v-57509004": "" }, [
-        y("div", { class: "marquee", "data-v-57509004": "" }, [
-          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            y(
+      b("div", { class: "u-mt-8-75", "data-v-57509004": "" }, [
+        b("div", { class: "marquee", "data-v-57509004": "" }, [
+          b("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            b(
               "div",
               {
                 role: "list",
@@ -2547,7 +2539,7 @@ const ot = {
                 },
               },
               [
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2555,7 +2547,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -2567,7 +2559,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "300",
@@ -2581,7 +2573,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2589,7 +2581,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -2601,7 +2593,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "400",
@@ -2615,7 +2607,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2623,7 +2615,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -2635,7 +2627,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "500",
@@ -2649,7 +2641,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2657,7 +2649,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-4",
@@ -2669,7 +2661,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "600",
@@ -2683,7 +2675,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2691,7 +2683,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-5",
@@ -2703,7 +2695,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "700",
@@ -2717,7 +2709,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2725,7 +2717,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-6",
@@ -2737,7 +2729,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "800",
@@ -2751,7 +2743,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2759,7 +2751,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-7",
@@ -2771,7 +2763,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "900",
@@ -2785,7 +2777,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2793,7 +2785,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-8",
@@ -2805,7 +2797,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "1000",
@@ -2819,7 +2811,7 @@ const ot = {
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2827,7 +2819,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         class: "marquee_item cc-9",
@@ -2839,7 +2831,7 @@ const ot = {
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "1100",
@@ -2856,8 +2848,8 @@ const ot = {
               ]
             ),
           ]),
-          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            y(
+          b("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            b(
               "div",
               {
                 role: "list",
@@ -2870,7 +2862,7 @@ const ot = {
                 },
               },
               [
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2878,7 +2870,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -2888,7 +2880,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2896,7 +2888,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -2906,7 +2898,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2914,7 +2906,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -2924,7 +2916,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2932,7 +2924,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -2942,7 +2934,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2950,7 +2942,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -2960,7 +2952,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2968,7 +2960,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -2978,7 +2970,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -2986,7 +2978,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -2996,7 +2988,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3004,7 +2996,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3014,7 +3006,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3022,7 +3014,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3035,8 +3027,8 @@ const ot = {
               ]
             ),
           ]),
-          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            y(
+          b("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            b(
               "div",
               {
                 role: "list",
@@ -3049,7 +3041,7 @@ const ot = {
                 },
               },
               [
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3057,7 +3049,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -3067,7 +3059,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3075,7 +3067,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -3085,7 +3077,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3093,7 +3085,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -3103,7 +3095,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3111,7 +3103,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -3121,7 +3113,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3129,7 +3121,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -3139,7 +3131,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3147,7 +3139,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -3157,7 +3149,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3165,7 +3157,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -3175,7 +3167,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3183,7 +3175,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3193,7 +3185,7 @@ const ot = {
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     role: "listitem",
@@ -3201,7 +3193,7 @@ const ot = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3219,16 +3211,16 @@ const ot = {
     ],
     -1
   ),
-  ct = y(
+  ct = b(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "section-title_wrapper" }, [
-            y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-            y("div", { class: "u-overflow-hidden" }, [
-              y(
+      b("div", { class: "section-title_component" }, [
+        b("div", { class: "container" }, [
+          b("div", { class: "section-title_wrapper" }, [
+            b("div", { class: "section-title_dot", style: { opacity: "1" } }),
+            b("div", { class: "u-overflow-hidden" }, [
+              b(
                 "div",
                 {
                   class: "section-title_title",
@@ -3237,19 +3229,19 @@ const ot = {
                     "transform-style": "preserve-3d",
                   },
                 },
-                [y("h2", { class: "u-ts-4" }, "What we do")]
+                [b("h2", { class: "u-ts-4" }, "What we do")]
               ),
             ]),
           ]),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { "data-animation-element": "group", class: "row" }, [
-          y("div", { class: "col col-lg-4 col-md-hide" }),
-          y("div", { class: "col" }, [
-            y("div", { class: "service-list" }, [
-              y("div", { class: "logomark_component" }, [
-                y(
+      b("div", { class: "container" }, [
+        b("div", { "data-animation-element": "group", class: "row" }, [
+          b("div", { class: "col col-lg-4 col-md-hide" }),
+          b("div", { class: "col" }, [
+            b("div", { class: "service-list" }, [
+              b("div", { class: "logomark_component" }, [
+                b(
                   "div",
                   {
                     class: "logomark w-embed",
@@ -3259,7 +3251,7 @@ const ot = {
                     },
                   },
                   [
-                    y(
+                    b(
                       "svg",
                       {
                         height: "100%",
@@ -3269,7 +3261,7 @@ const ot = {
                         xmlns: "http://www.w3.org/2000/svg",
                       },
                       [
-                        y("path", {
+                        b("path", {
                           d:
                             "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
                           fill: "currentColor",
@@ -3279,9 +3271,9 @@ const ot = {
                   ]
                 ),
               ]),
-              y("ul", { role: "list", class: "u-mt-3-5" }, [
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+              b("ul", { role: "list", class: "u-mt-3-5" }, [
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-1",
@@ -3290,11 +3282,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Research")]
+                    [b("h3", { class: "u-tc-caps" }, "Research")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-2",
@@ -3303,11 +3295,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Brand Strategy")]
+                    [b("h3", { class: "u-tc-caps" }, "Brand Strategy")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-3",
@@ -3316,11 +3308,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Creative Direction")]
+                    [b("h3", { class: "u-tc-caps" }, "Creative Direction")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-4",
@@ -3329,11 +3321,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Brand identity")]
+                    [b("h3", { class: "u-tc-caps" }, "Brand identity")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-5",
@@ -3342,11 +3334,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "UX & UI Design")]
+                    [b("h3", { class: "u-tc-caps" }, "UX & UI Design")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-6",
@@ -3355,11 +3347,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Interaction Design")]
+                    [b("h3", { class: "u-tc-caps" }, "Interaction Design")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-7",
@@ -3368,11 +3360,11 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Implementation")]
+                    [b("h3", { class: "u-tc-caps" }, "Implementation")]
                   ),
                 ]),
-                y("li", { class: "u-overflow-hidden" }, [
-                  y(
+                b("li", { class: "u-overflow-hidden" }, [
+                  b(
                     "div",
                     {
                       class: "list-content cc-8",
@@ -3381,7 +3373,7 @@ const ot = {
                         "transform-style": "preserve-3d",
                       },
                     },
-                    [y("h3", { class: "u-tc-caps" }, "Webflow Development")]
+                    [b("h3", { class: "u-tc-caps" }, "Webflow Development")]
                   ),
                 ]),
               ]),
@@ -3392,40 +3384,40 @@ const ot = {
     ],
     -1
   ),
-  pt = pe(
+  dt = ce(
     '<section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   );
-var vt = Se(ot, [
+var pt = Se(it, [
     [
       "render",
       function (e, a, t, s, l, i) {
         const o = S("Footer");
-        return g(), b(_, null, [rt, nt, dt, ct, pt, L(o)], 64);
+        return g(), y(_, null, [ot, rt, nt, ct, dt, A(o)], 64);
       },
     ],
   ]),
-  mt = Object.freeze(
+  vt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: vt },
+      { __proto__: null, default: pt },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ft = {
+const mt = {
     title: "pages.home.nav.about",
     setup() {
-      const { t: e } = $e();
+      const { t: e } = Fe();
       return { t: e };
     },
   },
-  ut = { class: "about" },
-  gt = [
-    y(
+  ft = { class: "about" },
+  ut = [
+    b(
       "div",
       { role: "listitem", class: "cases-item w-dyn-item" },
       [
-        y(
+        b(
           "a",
           {
             "data-mouse-class": "cc-text",
@@ -3439,23 +3431,23 @@ const ft = {
             },
           },
           [
-            y("div", { class: "cases-assets" }, [
-              y("img", {
+            b("div", { class: "cases-assets" }, [
+              b("img", {
                 src:
                   "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                 loading: "lazy",
                 alt: "",
                 class: "cases-portrait",
               }),
-              y("img", {
+              b("img", {
                 src:
                   "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                 loading: "eager",
                 alt: "",
                 class: "cases-landscape",
               }),
-              y("div", { class: "iframe-video_wrapper" }, [
-                y("iframe", {
+              b("div", { class: "iframe-video_wrapper" }, [
+                b("iframe", {
                   class: "iframe-video_iframe",
                   width: "100%",
                   height: "100%",
@@ -3468,16 +3460,16 @@ const ft = {
                   title: "Sable 12",
                   loading: "lazy",
                 }),
-                y("div", { class: "iframe-video_blocker" }),
+                b("div", { class: "iframe-video_blocker" }),
               ]),
             ]),
-            y("div", { class: "cases-text" }, [
-              y("div", { class: "u-ts-2" }, "Sable Brand"),
+            b("div", { class: "cases-text" }, [
+              b("div", { class: "u-ts-2" }, "Sable Brand"),
             ]),
           ]
         ),
-        y("link", { rel: "prerender", href: "/cases/sable-brand" }),
-        y(
+        b("link", { rel: "prerender", href: "/cases/sable-brand" }),
+        b(
           "a",
           {
             "data-mouse-text": "Contact Us",
@@ -3493,24 +3485,24 @@ const ft = {
             },
           },
           [
-            y("div", { class: "cases-assets" }, [
-              y("img", {
+            b("div", { class: "cases-assets" }, [
+              b("img", {
                 src:
                   "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                 loading: "lazy",
                 alt: "",
                 class: "cases-portrait w-condition-invisible",
               }),
-              y("img", {
+              b("img", {
                 src:
                   "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                 loading: "lazy",
                 alt: "",
                 class: "cases-landscape w-condition-invisible",
               }),
-              y("div", null, [
-                y("div", { class: "iframe-video_wrapper" }, [
-                  y("iframe", {
+              b("div", null, [
+                b("div", { class: "iframe-video_wrapper" }, [
+                  b("iframe", {
                     class: "iframe-video_iframe",
                     width: "100%",
                     height: "100%",
@@ -3523,18 +3515,18 @@ const ft = {
                     title: "Sable 12",
                     loading: "lazy",
                   }),
-                  y("div", { class: "iframe-video_blocker" }),
+                  b("div", { class: "iframe-video_blocker" }),
                 ]),
               ]),
             ]),
-            y("div", { class: "cases-text" }, [
-              y("div", { class: "cases-more" }, [
-                y("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                  Z(" Contact us"),
-                  y("span", { class: "hide-tablet" }, " for more"),
+            b("div", { class: "cases-text" }, [
+              b("div", { class: "cases-more" }, [
+                b("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                  G(" Contact us"),
+                  b("span", { class: "hide-tablet" }, " for more"),
                 ]),
               ]),
-              y("div", { class: "u-ts-2" }, "Sable Brand"),
+              b("div", { class: "u-ts-2" }, "Sable Brand"),
             ]),
           ]
         ),
@@ -3542,30 +3534,30 @@ const ft = {
       -1
     ),
   ];
-var bt = Se(ft, [
+var gt = Se(mt, [
     [
       "render",
       function (e, a, t, s, l, i) {
-        return g(), b("div", ut, gt);
+        return g(), y("div", ft, ut);
       },
     ],
   ]),
   yt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: bt },
+      { __proto__: null, default: gt },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ht = {
+const bt = {
     layout: "layout-demo",
     setup() {
       const e = ua(),
-        { t: a, locale: t, setPrefix: s, change: l } = $e();
+        { t: a, locale: t, setPrefix: s, change: l } = Fe();
       s({ $current: "pages.demo" });
-      const i = R(),
-        o = G("alert-service"),
-        r = ve({ current: t.value || "zh-tw" });
+      const i = X(),
+        o = K("alert-service"),
+        r = de({ current: t.value || "zh-tw" });
       return (
         q(() => {}),
         {
@@ -3591,35 +3583,35 @@ const ht = {
       );
     },
   },
-  wt = { class: "demo" },
-  _t = { class: "demo-head" },
-  xt = { class: "switch" },
-  kt = y("input", { type: "checkbox", class: "cb" }, null, -1),
-  jt = [
-    y("span", { class: "left" }, "CN", -1),
-    y("span", { class: "right" }, "En", -1),
+  ht = { class: "demo" },
+  wt = { class: "demo-head" },
+  _t = { class: "switch" },
+  xt = b("input", { type: "checkbox", class: "cb" }, null, -1),
+  kt = [
+    b("span", { class: "left" }, "CN", -1),
+    b("span", { class: "right" }, "En", -1),
   ],
-  Ct = { class: "demo-head-content" },
-  qt = { class: "demo-actions" },
-  St = { class: "radio-inputs" },
-  Ot = y("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  jt = { class: "demo-head-content" },
+  Ct = { class: "demo-actions" },
+  qt = { class: "radio-inputs" },
+  St = b("input", { type: "radio", name: "radio", checked: "" }, null, -1),
   zt = { class: "name" },
-  Tt = y("input", { type: "radio", name: "radio" }, null, -1),
-  Lt = { class: "name" },
-  Bt = y("input", { type: "radio", name: "radio" }, null, -1),
+  Ot = b("input", { type: "radio", name: "radio" }, null, -1),
+  Tt = { class: "name" },
+  At = b("input", { type: "radio", name: "radio" }, null, -1),
   Et = { class: "name" };
-var Pt = Se(ht, [
+var Bt = Se(bt, [
     [
       "render",
       function (e, a, t, s, l, i) {
         return (
           g(),
-          b("div", wt, [
-            y("div", _t, [
-              y("div", null, [
-                y("label", xt, [
-                  kt,
-                  y(
+          y("div", ht, [
+            b("div", wt, [
+              b("div", null, [
+                b("label", _t, [
+                  xt,
+                  b(
                     "span",
                     {
                       class: "toggle",
@@ -3627,24 +3619,24 @@ var Pt = Se(ht, [
                         a[0] ||
                         (a[0] = (...e) => s.changeLang && s.changeLang(...e)),
                     },
-                    jt
+                    kt
                   ),
                 ]),
               ]),
-              y("div", Ct, "lang:" + X(s.lang.current), 1),
+              b("div", jt, "lang:" + Y(s.lang.current), 1),
             ]),
-            y("div", qt, [
-              y("div", St, [
-                y(
+            b("div", Ct, [
+              b("div", qt, [
+                b(
                   "label",
                   {
                     class: "radio",
                     onClick:
                       a[1] || (a[1] = (...e) => s.toHome && s.toHome(...e)),
                   },
-                  [Ot, y("span", zt, X(s.t("$current.router.link")), 1)]
+                  [St, b("span", zt, Y(s.t("$current.router.link")), 1)]
                 ),
-                y(
+                b(
                   "label",
                   {
                     class: "radio",
@@ -3652,9 +3644,9 @@ var Pt = Se(ht, [
                       a[2] ||
                       (a[2] = (...e) => s.swalModal && s.swalModal(...e)),
                   },
-                  [Tt, y("span", Lt, X(s.t("$current.modal.swal")), 1)]
+                  [Ot, b("span", Tt, Y(s.t("$current.modal.swal")), 1)]
                 ),
-                y(
+                b(
                   "label",
                   {
                     class: "radio",
@@ -3662,7 +3654,7 @@ var Pt = Se(ht, [
                       a[3] ||
                       (a[3] = (...e) => s.popupModal && s.popupModal(...e)),
                   },
-                  [Bt, y("span", Et, X(s.t("$current.popup.use")), 1)]
+                  [At, b("span", Et, Y(s.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -3671,14 +3663,14 @@ var Pt = Se(ht, [
       },
     ],
   ]),
-  It = Object.freeze(
+  Lt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Pt },
+      { __proto__: null, default: Bt },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const At = (e) =>
+const It = (e) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -3691,10 +3683,10 @@ const At = (e) =>
       }[`../assets/video/${e}`],
       self.location
     ).href,
-  Mt = {
-    components: { Footer: it },
+  Pt = {
+    components: { Footer: lt },
     setup() {
-      const { t: e } = $e();
+      const { t: e } = Fe();
       return (
         q(() => {
           const e = new IntersectionObserver((e) => {
@@ -3708,19 +3700,19 @@ const At = (e) =>
             e.observe(a);
           });
         }),
-        { t: e, getVideoUrl: At }
+        { t: e, getVideoUrl: It }
       );
     },
   },
-  Dt = { "data-mouse-class": "cc-icon", class: "header cc-large" },
-  $t = {
+  Mt = { "data-mouse-class": "cc-icon", class: "header cc-large" },
+  Dt = {
     class: "header-image_wrap",
     style: {
       transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)",
       "transform-style": "preserve-3d",
     },
   },
-  Vt = {
+  Ft = {
     class: "header-image",
     style: {
       "will-change": "transform",
@@ -3729,7 +3721,7 @@ const At = (e) =>
     },
   },
   Ut = { class: "iframe-video_wrapper" },
-  Ft = {
+  Vt = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -3738,34 +3730,34 @@ const At = (e) =>
     muted: "",
   },
   Ht = ["src"],
-  Rt = Z(" Your browser does not support the video tag. "),
-  Nt = y("div", { class: "iframe-video_blocker" }, null, -1),
-  Wt = pe(
+  Nt = G(" Your browser does not support the video tag. "),
+  Xt = b("div", { class: "iframe-video_blocker" }, null, -1),
+  Rt = ce(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance"><h1 data-animation-element="title" class="h4" style=""><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
-  Xt = y("div", { class: "spacing" }, null, -1),
-  Yt = y(
+  Zt = b("div", { class: "spacing" }, null, -1),
+  Yt = b(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [b("div", { class: "target_line" })],
     -1
   ),
-  Zt = y(
+  Wt = b(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "section-title_wrapper" }, [
-            y("div", { class: "section-title_dot", style: { opacity: "1" } }, [
-              y("div", {
+      b("div", { class: "section-title_component" }, [
+        b("div", { class: "container" }, [
+          b("div", { class: "section-title_wrapper" }, [
+            b("div", { class: "section-title_dot", style: { opacity: "1" } }, [
+              b("div", {
                 class: "section-title_dot-fill",
                 style: { width: "100%", height: "100%" },
               }),
             ]),
-            y("div", { class: "u-overflow-hidden" }, [
-              y(
+            b("div", { class: "u-overflow-hidden" }, [
+              b(
                 "div",
                 {
                   class: "section-title_title",
@@ -3774,22 +3766,22 @@ const At = (e) =>
                     "transform-style": "preserve-3d",
                   },
                 },
-                [y("h2", { class: "u-ts-4" }, "Fintech Design Specialists")]
+                [b("h2", { class: "u-ts-4" }, "Fintech Design Specialists")]
               ),
             ]),
           ]),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "w-layout-grid pair-grid" }, [
-          y(
+      b("div", { class: "container" }, [
+        b("div", { class: "w-layout-grid pair-grid" }, [
+          b(
             "div",
             {
               id: "w-node-_88e3e548-f2e0-1176-a852-0e15f232b846-af55239c",
               class: "content",
             },
             [
-              y(
+              b(
                 "div",
                 {
                   class: "content-p cc-1",
@@ -3800,7 +3792,7 @@ const At = (e) =>
                   },
                 },
                 [
-                  y(
+                  b(
                     "p",
                     { class: "u-ts-1 u-mb-0" },
                     " It’s an industry unlike any other. From credit cards to neobanks and personal finance apps, the whole array of fintech is a crowded, highly-regulated landscape that demands the attention of specialists. The world is going through a digital finance revolution—find your product's place in it with Basis. "
@@ -3810,12 +3802,12 @@ const At = (e) =>
             ]
           ),
         ]),
-        y("div", { class: "sticky-pair cc-far" }, [
-          y("div", { class: "w-layout-grid pair-grid" }, [
-            y("div", { class: "div-block" }, [
-              y("div", { class: "card-wrapper cc-small" }, [
-                y("div", { class: "card-animation cc-40" }, [
-                  y(
+        b("div", { class: "sticky-pair cc-far" }, [
+          b("div", { class: "w-layout-grid pair-grid" }, [
+            b("div", { class: "div-block" }, [
+              b("div", { class: "card-wrapper cc-small" }, [
+                b("div", { class: "card-animation cc-40" }, [
+                  b(
                     "div",
                     {
                       "data-mouse-class": "cc-none",
@@ -3827,9 +3819,9 @@ const At = (e) =>
                       },
                     },
                     [
-                      y("div", { class: "card-image_wrapper" }, [
-                        y("div", { class: "iframe-video_wrapper" }, [
-                          y("iframe", {
+                      b("div", { class: "card-image_wrapper" }, [
+                        b("div", { class: "iframe-video_wrapper" }, [
+                          b("iframe", {
                             class: "iframe-video_iframe",
                             width: "100%",
                             height: "100%",
@@ -3842,12 +3834,12 @@ const At = (e) =>
                             title: "Sable 1",
                             loading: "lazy",
                           }),
-                          y("div", { class: "iframe-video_blocker" }),
+                          b("div", { class: "iframe-video_blocker" }),
                         ]),
                       ]),
-                      y("div", { class: "card-body" }, [
-                        y("div", { class: "u-overflow-hidden" }, [
-                          y(
+                      b("div", { class: "card-body" }, [
+                        b("div", { class: "u-overflow-hidden" }, [
+                          b(
                             "div",
                             {
                               class: "card-up",
@@ -3858,7 +3850,7 @@ const At = (e) =>
                               },
                             },
                             [
-                              y(
+                              b(
                                 "h4",
                                 { class: "u-ts-4" },
                                 "In-app credit score"
@@ -3872,9 +3864,9 @@ const At = (e) =>
                 ]),
               ]),
             ]),
-            y("div", { class: "card-wrapper cc-large" }, [
-              y("div", { class: "card-animation cc-40" }, [
-                y(
+            b("div", { class: "card-wrapper cc-large" }, [
+              b("div", { class: "card-animation cc-40" }, [
+                b(
                   "div",
                   {
                     "data-mouse-class": "cc-none",
@@ -3886,9 +3878,9 @@ const At = (e) =>
                     },
                   },
                   [
-                    y("div", { class: "card-image_wrapper" }, [
-                      y("div", { class: "iframe-video_wrapper" }, [
-                        y("iframe", {
+                    b("div", { class: "card-image_wrapper" }, [
+                      b("div", { class: "iframe-video_wrapper" }, [
+                        b("iframe", {
                           class: "iframe-video_iframe",
                           width: "100%",
                           height: "100%",
@@ -3901,12 +3893,12 @@ const At = (e) =>
                           title: "Sable 4",
                           loading: "lazy",
                         }),
-                        y("div", { class: "iframe-video_blocker" }),
+                        b("div", { class: "iframe-video_blocker" }),
                       ]),
                     ]),
-                    y("div", { class: "card-body" }, [
-                      y("div", { class: "u-overflow-hidden" }, [
-                        y(
+                    b("div", { class: "card-body" }, [
+                      b("div", { class: "u-overflow-hidden" }, [
+                        b(
                           "div",
                           {
                             class: "card-up",
@@ -3917,8 +3909,8 @@ const At = (e) =>
                             },
                           },
                           [
-                            y("div", { class: "card-large_text" }, [
-                              y(
+                            b("div", { class: "card-large_text" }, [
+                              b(
                                 "h4",
                                 { class: "u-ts-4" },
                                 "Glow-in-the-dark credit card"
@@ -3932,14 +3924,14 @@ const At = (e) =>
                 ),
               ]),
             ]),
-            y(
+            b(
               "div",
               {
                 id: "w-node-_197491fd-e75f-5caa-bd6c-f56fc5e78edc-af55239c",
                 class: "content",
               },
               [
-                y(
+                b(
                   "div",
                   {
                     class: "content-p cc-1",
@@ -3950,15 +3942,15 @@ const At = (e) =>
                     },
                   },
                   [
-                    y(
+                    b(
                       "p",
                       { class: "u-ts-1" },
                       " After rebranding banks, producing sleek new cards, and seamlessly integrating those elements into cohesive, future-proof brands, Basis can deliver results in record time. Get started with our Fintech Trial and get design results for your most essential deliverables in three weeks. "
                     ),
                   ]
                 ),
-                y("div", { class: "btn-group" }, [
-                  y(
+                b("div", { class: "btn-group" }, [
+                  b(
                     "div",
                     {
                       class: "btn-item cc-1",
@@ -3970,16 +3962,16 @@ const At = (e) =>
                       },
                     },
                     [
-                      y(
+                      b(
                         "a",
                         {
                           href: "mailto:hello@basis.work?subject=Enquiry",
                           class: "btn w-inline-block",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y("div", { class: "btn-text" }, "Contact Us"),
-                            y(
+                          b("div", { class: "btn-text-wrap" }, [
+                            b("div", { class: "btn-text" }, "Contact Us"),
+                            b(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Contact Us"
@@ -3989,7 +3981,7 @@ const At = (e) =>
                       ),
                     ]
                   ),
-                  y(
+                  b(
                     "div",
                     {
                       class: "btn-item cc-2",
@@ -4001,15 +3993,15 @@ const At = (e) =>
                       },
                     },
                     [
-                      y(
+                      b(
                         "a",
                         {
                           href: "/design-trial",
                           class: "btn cc-secondary w-inline-block",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y(
+                          b("div", { class: "btn-text-wrap" }, [
+                            b(
                               "div",
                               {
                                 class: "btn-text",
@@ -4021,7 +4013,7 @@ const At = (e) =>
                               },
                               " Design Trial "
                             ),
-                            y(
+                            b(
                               "div",
                               {
                                 class: "btn-text cc-bottom",
@@ -4047,22 +4039,22 @@ const At = (e) =>
     ],
     -1
   ),
-  Gt = y(
+  Gt = b(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [b("div", { class: "target_line" })],
     -1
   ),
-  Kt = y(
+  Kt = b(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "section-title_wrapper" }, [
-            y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-            y("div", { class: "u-overflow-hidden" }, [
-              y(
+      b("div", { class: "section-title_component" }, [
+        b("div", { class: "container" }, [
+          b("div", { class: "section-title_wrapper" }, [
+            b("div", { class: "section-title_dot", style: { opacity: "1" } }),
+            b("div", { class: "u-overflow-hidden" }, [
+              b(
                 "div",
                 {
                   class: "section-title_title",
@@ -4071,24 +4063,24 @@ const At = (e) =>
                     "transform-style": "preserve-3d",
                   },
                 },
-                [y("h2", { class: "u-ts-4" }, "Fintech Capabilities")]
+                [b("h2", { class: "u-ts-4" }, "Fintech Capabilities")]
               ),
             ]),
           ]),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "w-layout-grid pair-grid" }, [
-          y(
+      b("div", { class: "container" }, [
+        b("div", { class: "w-layout-grid pair-grid" }, [
+          b(
             "div",
             {
               id: "w-node-b0cbec4a-56c8-e8e7-790a-68e14ee2ef27-af55239c",
               class: "service-list",
             },
             [
-              y("div", { class: "service-list" }, [
-                y("div", { class: "logomark_component" }, [
-                  y(
+              b("div", { class: "service-list" }, [
+                b("div", { class: "logomark_component" }, [
+                  b(
                     "div",
                     {
                       class: "logomark w-embed",
@@ -4098,7 +4090,7 @@ const At = (e) =>
                       },
                     },
                     [
-                      y(
+                      b(
                         "svg",
                         {
                           height: "100%",
@@ -4108,7 +4100,7 @@ const At = (e) =>
                           xmlns: "http://www.w3.org/2000/svg",
                         },
                         [
-                          y("path", {
+                          b("path", {
                             d:
                               "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
                             fill: "currentColor",
@@ -4118,9 +4110,9 @@ const At = (e) =>
                     ]
                   ),
                 ]),
-                y("ul", { role: "list", class: "u-mt-3-5" }, [
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                b("ul", { role: "list", class: "u-mt-3-5" }, [
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-1",
@@ -4130,11 +4122,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Digital Banking,")]
+                      [b("h3", { class: "u-tc-caps" }, "Digital Banking,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-2",
@@ -4144,11 +4136,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Credit Card Designs,")]
+                      [b("h3", { class: "u-tc-caps" }, "Credit Card Designs,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-3",
@@ -4158,11 +4150,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Digital Wallets,")]
+                      [b("h3", { class: "u-tc-caps" }, "Digital Wallets,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-4",
@@ -4172,11 +4164,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Payment Services,")]
+                      [b("h3", { class: "u-tc-caps" }, "Payment Services,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-5",
@@ -4186,11 +4178,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Card Packaging,")]
+                      [b("h3", { class: "u-tc-caps" }, "Card Packaging,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-6",
@@ -4201,7 +4193,7 @@ const At = (e) =>
                         },
                       },
                       [
-                        y(
+                        b(
                           "h3",
                           { class: "u-tc-caps" },
                           "Information Architecture,"
@@ -4209,8 +4201,8 @@ const At = (e) =>
                       ]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-7",
@@ -4220,11 +4212,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Mobile Apps,")]
+                      [b("h3", { class: "u-tc-caps" }, "Mobile Apps,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-8",
@@ -4234,11 +4226,11 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Prototypes,")]
+                      [b("h3", { class: "u-tc-caps" }, "Prototypes,")]
                     ),
                   ]),
-                  y("li", { class: "u-overflow-hidden" }, [
-                    y(
+                  b("li", { class: "u-overflow-hidden" }, [
+                    b(
                       "div",
                       {
                         class: "list-content cc-9",
@@ -4248,7 +4240,7 @@ const At = (e) =>
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Gamification.")]
+                      [b("h3", { class: "u-tc-caps" }, "Gamification.")]
                     ),
                   ]),
                 ]),
@@ -4260,22 +4252,22 @@ const At = (e) =>
     ],
     -1
   ),
-  Qt = y(
+  $t = b(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [b("div", { class: "target_line" })],
     -1
   ),
-  Jt = y(
+  Jt = b(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "section-title_wrapper" }, [
-            y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-            y("div", { class: "u-overflow-hidden" }, [
-              y(
+      b("div", { class: "section-title_component" }, [
+        b("div", { class: "container" }, [
+          b("div", { class: "section-title_wrapper" }, [
+            b("div", { class: "section-title_dot", style: { opacity: "1" } }),
+            b("div", { class: "u-overflow-hidden" }, [
+              b(
                 "div",
                 {
                   class: "section-title_title",
@@ -4284,18 +4276,18 @@ const At = (e) =>
                     "transform-style": "preserve-3d",
                   },
                 },
-                [y("h2", { class: "u-ts-4" }, "Fintech Work")]
+                [b("h2", { class: "u-ts-4" }, "Fintech Work")]
               ),
             ]),
           ]),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "row" }, [y("div", { class: "col" })]),
-        y("div", { class: "w-dyn-list" }, [
-          y("div", { role: "list", class: "row w-dyn-items" }, [
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+      b("div", { class: "container" }, [
+        b("div", { class: "row" }, [b("div", { class: "col" })]),
+        b("div", { class: "w-dyn-list" }, [
+          b("div", { role: "list", class: "row w-dyn-items" }, [
+            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              b(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4307,7 +4299,7 @@ const At = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4315,24 +4307,24 @@ const At = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait w-condition-invisible",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape w-condition-invisible",
                         }),
-                        y("div", null, [
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                        b("div", null, [
+                          b("div", { class: "iframe-video_wrapper" }, [
+                            b("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4345,17 +4337,17 @@ const At = (e) =>
                               title: "Sable 12",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            b("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]),
                       ]),
-                      y("div", { class: "cases-text cc-auto" }, [
-                        y("div", { class: "u-ts-2" }, "Sable Brand"),
+                      b("div", { class: "cases-text cc-auto" }, [
+                        b("div", { class: "u-ts-2" }, "Sable Brand"),
                       ]),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/sable-brand" }),
-                  y(
+                  b("link", { rel: "prerender", href: "/cases/sable-brand" }),
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4364,23 +4356,23 @@ const At = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape",
                         }),
-                        y("div", { class: "iframe-video_wrapper" }, [
-                          y("iframe", {
+                        b("div", { class: "iframe-video_wrapper" }, [
+                          b("iframe", {
                             class: "iframe-video_iframe",
                             width: "100%",
                             height: "100%",
@@ -4393,29 +4385,29 @@ const At = (e) =>
                             title: "Sable 12",
                             loading: "lazy",
                           }),
-                          y("div", { class: "iframe-video_blocker" }),
+                          b("div", { class: "iframe-video_blocker" }),
                         ]),
                       ]),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      b("div", { class: "cases-text" }, [
+                        b("div", { class: "cases-more" }, [
+                          b(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              G(" Contact us"),
+                              b("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Sable Brand"),
+                        b("div", { class: "u-ts-2" }, "Sable Brand"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              b(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4427,7 +4419,7 @@ const At = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4435,24 +4427,24 @@ const At = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape",
                         }),
-                        y("div", { class: "w-condition-invisible" }, [
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                        b("div", { class: "w-condition-invisible" }, [
+                          b("div", { class: "iframe-video_wrapper" }, [
+                            b("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4462,17 +4454,17 @@ const At = (e) =>
                               allow: "fullscreen",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            b("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]),
                       ]),
-                      y("div", { class: "cases-text cc-auto" }, [
-                        y("div", { class: "u-ts-2" }, "Sable Website"),
+                      b("div", { class: "cases-text cc-auto" }, [
+                        b("div", { class: "u-ts-2" }, "Sable Website"),
                       ]),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/sable-website" }),
-                  y(
+                  b("link", { rel: "prerender", href: "/cases/sable-website" }),
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4481,23 +4473,23 @@ const At = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape",
                         }),
-                        y("div", { class: "iframe-video_wrapper" }, [
-                          y("iframe", {
+                        b("div", { class: "iframe-video_wrapper" }, [
+                          b("iframe", {
                             class: "iframe-video_iframe",
                             width: "100%",
                             height: "100%",
@@ -4507,29 +4499,29 @@ const At = (e) =>
                             allow: "fullscreen",
                             loading: "lazy",
                           }),
-                          y("div", { class: "iframe-video_blocker" }),
+                          b("div", { class: "iframe-video_blocker" }),
                         ]),
                       ]),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      b("div", { class: "cases-text" }, [
+                        b("div", { class: "cases-more" }, [
+                          b(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              G(" Contact us"),
+                              b("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Sable Website"),
+                        b("div", { class: "u-ts-2" }, "Sable Website"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              b(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4541,7 +4533,7 @@ const At = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4549,24 +4541,24 @@ const At = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait w-condition-invisible",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape w-condition-invisible",
                         }),
-                        y("div", null, [
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                        b("div", null, [
+                          b("div", { class: "iframe-video_wrapper" }, [
+                            b("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4579,17 +4571,17 @@ const At = (e) =>
                               title: "Seen 1",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            b("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]),
                       ]),
-                      y("div", { class: "cases-text cc-auto" }, [
-                        y("div", { class: "u-ts-2" }, "Seen Brand"),
+                      b("div", { class: "cases-text cc-auto" }, [
+                        b("div", { class: "u-ts-2" }, "Seen Brand"),
                       ]),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/seen-brand" }),
-                  y(
+                  b("link", { rel: "prerender", href: "/cases/seen-brand" }),
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4598,23 +4590,23 @@ const At = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape",
                         }),
-                        y("div", { class: "iframe-video_wrapper" }, [
-                          y("iframe", {
+                        b("div", { class: "iframe-video_wrapper" }, [
+                          b("iframe", {
                             class: "iframe-video_iframe",
                             width: "100%",
                             height: "100%",
@@ -4627,29 +4619,29 @@ const At = (e) =>
                             title: "Seen 1",
                             loading: "lazy",
                           }),
-                          y("div", { class: "iframe-video_blocker" }),
+                          b("div", { class: "iframe-video_blocker" }),
                         ]),
                       ]),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      b("div", { class: "cases-text" }, [
+                        b("div", { class: "cases-more" }, [
+                          b(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              G(" Contact us"),
+                              b("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Seen Brand"),
+                        b("div", { class: "u-ts-2" }, "Seen Brand"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+            b("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              b(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4661,7 +4653,7 @@ const At = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4669,24 +4661,24 @@ const At = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape",
                         }),
-                        y("div", { class: "w-condition-invisible" }, [
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                        b("div", { class: "w-condition-invisible" }, [
+                          b("div", { class: "iframe-video_wrapper" }, [
+                            b("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4696,17 +4688,17 @@ const At = (e) =>
                               allow: "fullscreen",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            b("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]),
                       ]),
-                      y("div", { class: "cases-text cc-auto" }, [
-                        y("div", { class: "u-ts-2" }, "Sable App"),
+                      b("div", { class: "cases-text cc-auto" }, [
+                        b("div", { class: "u-ts-2" }, "Sable App"),
                       ]),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/sable-app" }),
-                  y(
+                  b("link", { rel: "prerender", href: "/cases/sable-app" }),
+                  b(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4715,23 +4707,23 @@ const At = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y("div", { class: "cases-assets" }, [
-                        y("img", {
+                      b("div", { class: "cases-assets" }, [
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-portrait",
                         }),
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
                           loading: "lazy",
                           alt: "",
                           class: "cases-landscape",
                         }),
-                        y("div", { class: "iframe-video_wrapper" }, [
-                          y("iframe", {
+                        b("div", { class: "iframe-video_wrapper" }, [
+                          b("iframe", {
                             class: "iframe-video_iframe",
                             width: "100%",
                             height: "100%",
@@ -4741,21 +4733,21 @@ const At = (e) =>
                             allow: "fullscreen",
                             loading: "lazy",
                           }),
-                          y("div", { class: "iframe-video_blocker" }),
+                          b("div", { class: "iframe-video_blocker" }),
                         ]),
                       ]),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      b("div", { class: "cases-text" }, [
+                        b("div", { class: "cases-more" }, [
+                          b(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              G(" Contact us"),
+                              b("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Sable App"),
+                        b("div", { class: "u-ts-2" }, "Sable App"),
                       ]),
                     ]
                   ),
@@ -4768,18 +4760,18 @@ const At = (e) =>
     ],
     -1
   ),
-  es = pe(
+  Qt = ce(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  as = { class: "pre-footer" },
-  ts = {
+  es = { class: "pre-footer" },
+  as = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  ss = { class: "iframe-video_wrapper" },
-  ls = {
+  ts = { class: "iframe-video_wrapper" },
+  ss = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -4787,30 +4779,30 @@ const At = (e) =>
     loop: "",
     muted: "",
   },
-  is = ["src"],
-  os = Z(" Your browser does not support the video tag. "),
-  rs = y("div", { class: "iframe-video_blocker" }, null, -1),
-  ns = pe(
+  ls = ["src"],
+  is = G(" Your browser does not support the video tag. "),
+  os = b("div", { class: "iframe-video_blocker" }, null, -1),
+  rs = ce(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ds = Se(Mt, [
+var ns = Se(Pt, [
     [
       "render",
       function (e, a, t, s, l, i) {
         const o = S("Footer");
         return (
           g(),
-          b(
+          y(
             _,
             null,
             [
-              y("header", Dt, [
-                y("div", $t, [
-                  y("div", Vt, [
-                    y("div", Ut, [
-                      y("video", Ft, [
-                        y(
+              b("header", Mt, [
+                b("div", Dt, [
+                  b("div", Ft, [
+                    b("div", Ut, [
+                      b("video", Vt, [
+                        b(
                           "source",
                           {
                             src: s.getVideoUrl("home/knife1-1.mp4"),
@@ -4820,28 +4812,28 @@ var ds = Se(Mt, [
                           8,
                           Ht
                         ),
-                        Rt,
+                        Nt,
                       ]),
-                      Nt,
+                      Xt,
                     ]),
                   ]),
                 ]),
-                Wt,
+                Rt,
               ]),
-              Xt,
-              Yt,
               Zt,
+              Yt,
+              Wt,
               Gt,
               Kt,
-              Qt,
+              $t,
               Jt,
-              es,
-              y("div", null, [
-                y("aside", as, [
-                  y("a", ts, [
-                    y("div", ss, [
-                      y("video", ls, [
-                        y(
+              Qt,
+              b("div", null, [
+                b("aside", es, [
+                  b("a", as, [
+                    b("div", ts, [
+                      b("video", ss, [
+                        b(
                           "source",
                           {
                             src: s.getVideoUrl("home/knife1-1.mp4"),
@@ -4849,17 +4841,17 @@ var ds = Se(Mt, [
                           },
                           null,
                           8,
-                          is
+                          ls
                         ),
-                        os,
+                        is,
                       ]),
-                      rs,
+                      os,
                     ]),
-                    ns,
+                    rs,
                   ]),
                 ]),
               ]),
-              L(o),
+              A(o),
             ],
             64
           )
@@ -4869,26 +4861,26 @@ var ds = Se(Mt, [
   ]),
   cs = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ds },
+      { __proto__: null, default: ns },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ps = ["data-index"],
-  vs = ["src"],
-  ms = [
-    pe(
+const ds = ["data-index"],
+  ps = ["src"],
+  vs = [
+    ce(
       '<div class="btn-text-wrap"><div class="btn-text cc-scroll">請往下滑</div><div class="btn-text cc-bottom cc-scroll">請往下滑</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
   ];
-const fs = {
+const ms = {
   components: {
-    Footer: it,
+    Footer: lt,
     View: {
       setup(e) {
         const a = x(),
-          t = ve({ x: 0, y: 0 }),
+          t = de({ x: 0, y: 0 }),
           s = k([
             {
               url: "home/opening/1.jpg",
@@ -5093,7 +5085,7 @@ const fs = {
                 document.querySelector(".btn-scroll"),
               ]);
             } else
-              me(() => {
+              pe(() => {
                 ((e) => {
                   for (const a of e) o.observe(a);
                 })([
@@ -5104,20 +5096,20 @@ const fs = {
           }
         );
         const n = k(!1),
-          d = () => {
+          c = () => {
             n.value = window.innerWidth < 991;
           };
         return (
           q(() => {
-            d(), window.addEventListener("resize", d), fe.init();
+            c(), window.addEventListener("resize", c), ve.init();
           }),
           (e, a) => (
             g(),
-            b(
+            y(
               _,
               null,
               [
-                y(
+                b(
                   "div",
                   {
                     class: "view",
@@ -5136,12 +5128,12 @@ const fs = {
                   [
                     l.value
                       ? (g(),
-                        b(
+                        y(
                           "div",
                           {
                             key: 0,
                             class: "view-wrap",
-                            style: W({
+                            style: Z({
                               transform: `translate3d(${2 * w(t).x}px, ${
                                 w(t).y
                               }px, 0) rotateX(${-w(t).y / 2}deg) rotateY(${
@@ -5152,19 +5144,19 @@ const fs = {
                           },
                           [
                             (g(!0),
-                            b(
+                            y(
                               _,
                               null,
-                              N(
+                              R(
                                 s.value,
                                 (e, a) => (
                                   g(),
-                                  b(
+                                  y(
                                     "div",
                                     {
                                       class: "img-wrap home-hero_image-placer",
                                       key: e.url + a,
-                                      style: W({
+                                      style: Z({
                                         left: n.value ? "unset" : e.css.left,
                                         right: n.value
                                           ? e.css.m_right
@@ -5178,11 +5170,11 @@ const fs = {
                                       "data-item": "img",
                                     },
                                     [
-                                      y(
+                                      b(
                                         "img",
                                         {
                                           src: w(ke)(e.url),
-                                          style: W({
+                                          style: Z({
                                             width: n.value
                                               ? e.css.m_width
                                               : e.css.width,
@@ -5196,11 +5188,11 @@ const fs = {
                                         },
                                         null,
                                         12,
-                                        vs
+                                        ps
                                       ),
                                     ],
                                     12,
-                                    ps
+                                    ds
                                   )
                                 )
                               ),
@@ -5209,16 +5201,16 @@ const fs = {
                           ],
                           4
                         ))
-                      : B("", !0),
+                      : E("", !0),
                   ],
                   32
                 ),
-                y("div", { "data-reveal": "button", class: "home-hero_btn" }, [
-                  y("div", { class: "btn-contain btn-contain-scroll" }, [
-                    y(
+                b("div", { "data-reveal": "button", class: "home-hero_btn" }, [
+                  b("div", { class: "btn-contain btn-contain-scroll" }, [
+                    b(
                       "div",
                       { class: "btn-scroll w-inline-block", onClick: r },
-                      ms
+                      vs
                     ),
                   ]),
                 ]),
@@ -5248,24 +5240,24 @@ const fs = {
           e.observe(a);
         });
       }),
-      { a: e, getVideoUrl: At, getImageUrl: ke }
+      { a: e, getVideoUrl: It, getImageUrl: ke }
     );
   },
 };
-fe.init();
-const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
-  gs = us(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+ve.init();
+const fs = (e) => (me("data-v-7e810c9c"), (e = e()), fe(), e),
+  us = fs(() =>
+    b("div", { class: "container" }, [b("div", { class: "target_line" })], -1)
   ),
-  bs = { id: "studio", class: "section" },
-  ys = pe(
-    '<div class="section-title_component" data-v-5b692e54><div class="container" data-v-5b692e54><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div class="section-title_dot" style="opacity:1;" data-v-5b692e54><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-5b692e54></div></div><div class="u-overflow-hidden" data-v-5b692e54><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><h2 class="u-ts-4" data-v-5b692e54>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-5b692e54><div class="w-layout-grid pair-grid" data-v-5b692e54><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-5b692e54><h3 data-animation-element="title" style="" data-v-5b692e54><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-5b692e54><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-5b692e54><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54> 館藏查詢 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54> 館藏查詢 </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-5b692e54><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54> 預約參觀 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54> 預約參觀 </div></div></a></div></div></div></div></div>',
+  gs = { id: "studio", class: "section" },
+  ys = ce(
+    '<div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-7e810c9c></div></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-7e810c9c><div class="w-layout-grid pair-grid" data-v-7e810c9c><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-7e810c9c><h3 data-animation-element="title" style="" data-v-7e810c9c><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-7e810c9c><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 館藏查詢 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 館藏查詢 </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-7e810c9c><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 預約參觀 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> 預約參觀 </div></div></a></div></div></div></div></div>',
     2
   ),
-  hs = { class: "u-mt-8-75" },
-  ws = { class: "marquee" },
-  _s = { class: "marquee_row w-dyn-list" },
-  xs = {
+  bs = { class: "u-mt-8-75" },
+  hs = { class: "marquee" },
+  ws = { class: "marquee_row w-dyn-list" },
+  _s = {
     role: "list",
     class: "marquee_content w-dyn-items",
     style: {
@@ -5274,34 +5266,34 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       "will-change": "transform",
     },
   },
-  ks = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  js = {
+  xs = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  ks = {
     class: "marquee_item cc-1",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Cs = ["src"],
-  qs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ss = {
+  js = ["src"],
+  Cs = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  qs = {
     class: "marquee_item cc-2",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Os = ["src"],
+  Ss = ["src"],
   zs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ts = {
+  Os = {
     class: "marquee_item cc-3",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ls = ["src"],
-  Bs = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Ts = ["src"],
+  As = { role: "listitem", class: "marquee_logo w-dyn-item" },
   Es = {
     class: "marquee_item cc-4",
     style: {
@@ -5309,27 +5301,27 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       "transform-style": "preserve-3d",
     },
   },
-  Ps = ["src"],
-  Is = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  As = {
+  Bs = ["src"],
+  Ls = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Is = {
     class: "marquee_item cc-5",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ms = ["src"],
-  Ds = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  $s = {
+  Ps = ["src"],
+  Ms = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Ds = {
     class: "marquee_item cc-6",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Vs = ["src"],
+  Fs = ["src"],
   Us = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Fs = {
+  Vs = {
     class: "marquee_item cc-7",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
@@ -5337,16 +5329,16 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     },
   },
   Hs = ["src"],
-  Rs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ns = {
+  Ns = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Xs = {
     class: "marquee_item cc-8",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ws = ["src"],
-  Xs = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Rs = ["src"],
+  Zs = { role: "listitem", class: "marquee_logo w-dyn-item" },
   Ys = {
     class: "marquee_item cc-9",
     style: {
@@ -5354,35 +5346,71 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       "transform-style": "preserve-3d",
     },
   },
-  Zs = ["src"],
-  Gs = us(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+  Ws = ["src"],
+  Gs = fs(() =>
+    b("div", { class: "container" }, [b("div", { class: "target_line" })], -1)
   ),
   Ks = { class: "section" },
-  Qs = pe(
-    '<div class="section-title_component" data-v-5b692e54><div class="container" data-v-5b692e54><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div class="section-title_dot" style="opacity:1;" data-v-5b692e54><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-5b692e54></div></div><div class="u-overflow-hidden" data-v-5b692e54><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><h2 class="u-ts-4" data-v-5b692e54>空間預約</h2></div></div></div></div></div>',
+  $s = ce(
+    '<div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-7e810c9c></div></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>空間預約</h2></div></div></div></div></div>',
     1
   ),
   Js = { class: "container" },
-  el = pe(
-    '<div data-animation-element="group" data-v-5b692e54><h3 data-animation-element="title" class="h1" style="" data-v-5b692e54><div data-aos="fade-up" data-aos-duration="700" class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> 詹紹綺人文藝術中心 </div></div><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="700" style="display:block;text-align:start;position:relative;" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> (Skyart7325)開放每日一組預約。 </div></div></h3></div>',
-    1
+  Qs = fs(() =>
+    b(
+      "div",
+      { "data-animation-element": "group" },
+      [
+        b("h4", { "data-animation-element": "title", class: "h1", style: {} }, [
+          b(
+            "div",
+            {
+              class: "u-overflow-hidden",
+              "data-aos": "fade-up",
+              "data-aos-duration": "700",
+              style: {
+                display: "block",
+                "text-align": "start",
+                position: "relative",
+              },
+            },
+            [
+              b(
+                "div",
+                {
+                  style: {
+                    position: "relative",
+                    display: "inline-block",
+                    translate: "none",
+                    rotate: "none",
+                    scale: "none",
+                    transform: "translate(0px, 0%)",
+                  },
+                },
+                " (Skyart7325)開放每日一組預約。 "
+              ),
+            ]
+          ),
+        ]),
+      ],
+      -1
+    )
   ),
-  al = { class: "sticky-pair" },
-  tl = { class: "w-layout-grid pair-grid" },
-  sl = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
-  ll = {
+  el = { class: "sticky-pair" },
+  al = { class: "w-layout-grid pair-grid" },
+  tl = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
+  sl = {
     id: "w-node-_137ddbb9-11b4-d169-f149-eca9f54873e8-af552307",
     class: "card-wrapper cc-small",
   },
-  il = {
+  ll = {
     id: "w-node-a3cc95fc-d4f5-0398-7194-1e8506932d8d-af552307",
     class: "w-dyn-list",
   },
-  ol = { role: "list", class: "w-dyn-items" },
-  rl = { role: "listitem", class: "w-dyn-item" },
-  nl = { class: "card-wrapper cc-small" },
-  dl = {
+  il = { role: "list", class: "w-dyn-items" },
+  ol = { role: "listitem", class: "w-dyn-item" },
+  rl = { class: "card-wrapper cc-small" },
+  nl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
@@ -5396,9 +5424,9 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       opacity: "1",
     },
   },
-  pl = { class: "card-image_wrapper" },
-  vl = { class: "iframe-video_wrapper" },
-  ml = {
+  dl = { class: "card-image_wrapper" },
+  pl = { class: "iframe-video_wrapper" },
+  vl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -5406,16 +5434,16 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  fl = ["src"],
-  ul = Z(" Your browser does not support the video tag. "),
-  gl = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  bl = us(() =>
-    y(
+  ml = ["src"],
+  fl = G(" Your browser does not support the video tag. "),
+  ul = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  gl = fs(() =>
+    b(
       "div",
       { class: "card-body", "data-aos": "fade-up", "data-aos-duration": "700" },
       [
-        y("div", { class: "u-overflow-hidden" }, [
-          y(
+        b("div", { class: "u-overflow-hidden" }, [
+          b(
             "div",
             {
               class: "card-up",
@@ -5424,7 +5452,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, "Skyart3725全景")]
+            [b("h4", { class: "u-ts-4" }, "Skyart3725全景")]
           ),
         ]),
       ],
@@ -5435,11 +5463,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
     class: "w-dyn-list",
   },
-  hl = { role: "list", class: "w-dyn-items" },
-  wl = { role: "listitem", class: "w-dyn-item" },
-  _l = { class: "card-wrapper cc-large" },
-  xl = { class: "card-animation cc-40" },
-  kl = {
+  bl = { role: "list", class: "w-dyn-items" },
+  hl = { role: "listitem", class: "w-dyn-item" },
+  wl = { class: "card-wrapper cc-large" },
+  _l = { class: "card-animation cc-40" },
+  xl = {
     "data-mouse-class": "cc-text",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
@@ -5450,9 +5478,9 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       opacity: "1",
     },
   },
-  jl = { class: "card-image_wrapper" },
-  Cl = { class: "iframe-video_wrapper" },
-  ql = {
+  kl = { class: "card-image_wrapper" },
+  jl = { class: "iframe-video_wrapper" },
+  Cl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -5460,31 +5488,31 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  Sl = ["src"],
-  Ol = Z(" Your browser does not support the video tag. "),
-  zl = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  Tl = pe(
-    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div class="u-overflow-hidden" data-v-5b692e54><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-5b692e54><div class="card-large_text" data-v-5b692e54><h4 class="u-ts-4" data-v-5b692e54>多功能茶席空間</h4></div></div></div></div>',
+  ql = ["src"],
+  Sl = G(" Your browser does not support the video tag. "),
+  zl = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  Ol = ce(
+    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="u-overflow-hidden" data-v-7e810c9c><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-7e810c9c><div class="card-large_text" data-v-7e810c9c><h4 class="u-ts-4" data-v-7e810c9c>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  Ll = pe(
-    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-5b692e54><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-5b692e54><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-5b692e54><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" data-v-5b692e54>空間介紹</div><div class="btn-text cc-bottom" data-v-5b692e54>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" data-v-5b692e54>立即預約</div><div class="btn-text cc-bottom" data-v-5b692e54>立即預約</div></div></a></div></div></div>',
+  Tl = ce(
+    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-7e810c9c><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>空間介紹</div><div class="btn-text cc-bottom" data-v-7e810c9c>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>立即預約</div><div class="btn-text cc-bottom" data-v-7e810c9c>立即預約</div></div></a></div></div></div>',
     1
   ),
-  Bl = us(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+  Al = fs(() =>
+    b("div", { class: "container" }, [b("div", { class: "target_line" })], -1)
   ),
   El = { class: "section" },
-  Pl = pe(
-    '<div class="section-title_component" data-v-5b692e54><div class="container" data-v-5b692e54><div class="section-title_wrapper" data-v-5b692e54><div class="section-title_dot" style="opacity:1;" data-v-5b692e54></div><div class="u-overflow-hidden" data-v-5b692e54><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><h2 class="u-ts-4" data-v-5b692e54>定香人文</h2></div></div></div></div></div>',
+  Bl = ce(
+    '<div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>定香人文</h2></div></div></div></div></div>',
     1
   ),
-  Il = { class: "container" },
-  Al = { class: "w-layout-grid pair-grid" },
-  Ml = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
-  Dl = { class: "service-list" },
-  $l = { class: "logomark_component" },
-  Vl = {
+  Ll = { class: "container" },
+  Il = { class: "w-layout-grid pair-grid" },
+  Pl = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
+  Ml = { class: "service-list" },
+  Dl = { class: "logomark_component" },
+  Fl = {
     class: "logomark w-embed",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
@@ -5494,12 +5522,12 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     },
   },
   Ul = ["src"],
-  Fl = us(() =>
-    y(
+  Vl = fs(() =>
+    b(
       "ul",
       { role: "list", class: "u-mt-3-5" },
       [
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5508,7 +5536,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "150",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-2",
@@ -5517,11 +5545,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "藝術品經紀")]
+              [b("h3", { class: "u-tc-caps" }, "藝術品經紀")]
             ),
           ]
         ),
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5530,7 +5558,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "200",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-3",
@@ -5539,11 +5567,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
+              [b("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
             ),
           ]
         ),
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5552,7 +5580,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "250",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-4",
@@ -5561,11 +5589,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
+              [b("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
             ),
           ]
         ),
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5574,7 +5602,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "300",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-5",
@@ -5583,11 +5611,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
+              [b("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
             ),
           ]
         ),
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5596,7 +5624,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "350",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-6",
@@ -5605,11 +5633,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "精品咖啡")]
+              [b("h3", { class: "u-tc-caps" }, "精品咖啡")]
             ),
           ]
         ),
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5618,7 +5646,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "400",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-7",
@@ -5627,11 +5655,11 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "天幕茶碗")]
+              [b("h3", { class: "u-tc-caps" }, "天幕茶碗")]
             ),
           ]
         ),
-        y(
+        b(
           "li",
           {
             class: "u-overflow-hidden",
@@ -5640,7 +5668,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             "data-aos-delay": "450",
           },
           [
-            y(
+            b(
               "div",
               {
                 class: "list-content cc-8",
@@ -5649,7 +5677,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "典藏名酒")]
+              [b("h3", { class: "u-tc-caps" }, "典藏名酒")]
             ),
           ]
         ),
@@ -5657,19 +5685,19 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       -1
     )
   ),
-  Hl = pe(
-    '<div class="btn-group" data-v-5b692e54><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-5b692e54><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" data-v-5b692e54>藝品介紹</div><div class="btn-text cc-bottom" data-v-5b692e54>藝品介紹</div></div></a></div></div>',
+  Hl = ce(
+    '<div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>藝品介紹</div><div class="btn-text cc-bottom" data-v-7e810c9c>藝品介紹</div></div></a></div></div>',
     1
   ),
-  Rl = us(() =>
-    y(
+  Nl = fs(() =>
+    b(
       "section",
-      { class: "section" },
+      { class: "section cc-apps" },
       [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y("div", { "data-animation-element": "group", class: "col" }, [
-              y(
+        b("div", { class: "container" }, [
+          b("div", { class: "row" }, [
+            b("div", { "data-animation-element": "group", class: "col" }, [
+              b(
                 "h3",
                 {
                   "data-animation-element": "title",
@@ -5680,7 +5708,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                   "data-aos-delay": "600",
                 },
                 [
-                  y(
+                  b(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -5691,7 +5719,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                       },
                     },
                     [
-                      y(
+                      b(
                         "div",
                         {
                           style: {
@@ -5712,16 +5740,16 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
             ]),
           ]),
         ]),
-        y("div", { "data-apps": "component", class: "apps_component" }, [
-          y("div", { class: "apps_media-wrapper" }, [
-            y(
+        b("div", { "data-apps": "component", class: "apps_component" }, [
+          b("div", { class: "apps_media-wrapper" }, [
+            b(
               "div",
               {
                 "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
                 class: "apps_media-list",
               },
               [
-                y(
+                b(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -5730,7 +5758,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     "data-aos-delay": "100",
                   },
                   [
-                    y("img", {
+                    b("img", {
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png",
                       loading: "lazy",
@@ -5744,7 +5772,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     }),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -5753,7 +5781,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     "data-aos-delay": "150",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
@@ -5765,9 +5793,9 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                         },
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y(
+                        b("div", { role: "list", class: "w-dyn-items" }, [
+                          b("div", { role: "listitem", class: "w-dyn-item" }, [
+                            b(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -5775,7 +5803,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                y("img", {
+                                b("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -5793,7 +5821,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -5802,7 +5830,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     "data-aos-delay": "200",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
@@ -5814,9 +5842,9 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                         },
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y(
+                        b("div", { role: "list", class: "w-dyn-items" }, [
+                          b("div", { role: "listitem", class: "w-dyn-item" }, [
+                            b(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -5824,7 +5852,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                y("img", {
+                                b("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -5842,7 +5870,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     ),
                   ]
                 ),
-                y(
+                b(
                   "div",
                   {
                     class: "apps_asset-wrapper cc-watch",
@@ -5851,7 +5879,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     "data-aos-delay": "250",
                   },
                   [
-                    y(
+                    b(
                       "div",
                       {
                         "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
@@ -5863,7 +5891,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                         },
                       },
                       [
-                        y("img", {
+                        b("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
                           loading: "eager",
@@ -5877,10 +5905,10 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
               ]
             ),
           ]),
-          y("div", { class: "apps_scroll" }, [
-            y("div", { class: "mobile-scroll_cta" }, [
-              y("div", { class: "mobile-scroll_icon w-embed" }, [
-                y(
+          b("div", { class: "apps_scroll" }, [
+            b("div", { class: "mobile-scroll_cta" }, [
+              b("div", { class: "mobile-scroll_icon w-embed" }, [
+                b(
                   "svg",
                   {
                     width: "100%",
@@ -5890,7 +5918,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                     xmlns: "http://www.w3.org/2000/svg",
                   },
                   [
-                    y("path", {
+                    b("path", {
                       d:
                         "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
                       fill: "currentColor",
@@ -5905,27 +5933,27 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       -1
     )
   ),
-  Nl = { class: "section" },
-  Wl = { class: "container" },
-  Xl = pe(
-    '<div class="row" data-v-5b692e54><div data-animation-element="group" class="col" data-v-5b692e54><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> 拍賣中心 </div></div></h3></div></div>',
+  Xl = { class: "section" },
+  Rl = { class: "container" },
+  Zl = ce(
+    '<div class="row" data-v-7e810c9c><div data-animation-element="group" class="col" data-v-7e810c9c><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> 拍賣中心 </div></div></h3></div></div>',
     1
   ),
   Yl = { class: "sticky-pair" },
-  Zl = { class: "w-layout-grid pair-grid is-leading" },
+  Wl = { class: "w-layout-grid pair-grid is-leading" },
   Gl = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
   Kl = { role: "list", class: "w-dyn-items" },
-  Ql = { role: "listitem", class: "w-dyn-item" },
+  $l = { role: "listitem", class: "w-dyn-item" },
   Jl = { class: "card-wrapper cc-large" },
-  ei = {
+  Ql = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ai = {
+  ei = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -5934,9 +5962,9 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       opacity: "1",
     },
   },
-  ti = { class: "card-image_wrapper" },
-  si = { class: "iframe-video_wrapper" },
-  li = {
+  ai = { class: "card-image_wrapper" },
+  ti = { class: "iframe-video_wrapper" },
+  si = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -5944,14 +5972,14 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  ii = ["src"],
-  oi = Z(" Your browser does not support the video tag. "),
-  ri = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  ni = pe(
-    '<div class="card-body" data-v-5b692e54><div class="u-overflow-hidden" data-v-5b692e54><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-5b692e54><div class="card-large_text" data-v-5b692e54><h4 class="u-ts-4" data-v-5b692e54>Skyart7325鑑賞中心</h4></div></div></div></div>',
+  li = ["src"],
+  ii = G(" Your browser does not support the video tag. "),
+  oi = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  ri = ce(
+    '<div class="card-body" data-v-7e810c9c><div class="u-overflow-hidden" data-v-7e810c9c><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-7e810c9c><div class="card-large_text" data-v-7e810c9c><h4 class="u-ts-4" data-v-7e810c9c>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  di = {
+  ni = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
@@ -5959,15 +5987,15 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  pi = { role: "list", class: "w-dyn-items" },
-  vi = { role: "listitem", class: "w-dyn-item" },
-  mi = { class: "card-wrapper cc-small" },
-  fi = {
+  di = { role: "list", class: "w-dyn-items" },
+  pi = { role: "listitem", class: "w-dyn-item" },
+  vi = { class: "card-wrapper cc-small" },
+  mi = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ui = {
+  fi = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -5976,8 +6004,8 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       opacity: "1",
     },
   },
-  gi = { class: "card-image_wrapper" },
-  bi = { class: "iframe-video_wrapper" },
+  ui = { class: "card-image_wrapper" },
+  gi = { class: "iframe-video_wrapper" },
   yi = {
     class: "video-cover",
     width: "100%",
@@ -5986,16 +6014,16 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  hi = ["src"],
-  wi = Z(" Your browser does not support the video tag. "),
-  _i = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  xi = us(() =>
-    y(
+  bi = ["src"],
+  hi = G(" Your browser does not support the video tag. "),
+  wi = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  _i = fs(() =>
+    b(
       "div",
       { class: "card-body" },
       [
-        y("div", { class: "u-overflow-hidden" }, [
-          y(
+        b("div", { class: "u-overflow-hidden" }, [
+          b(
             "div",
             {
               class: "card-up",
@@ -6004,43 +6032,43 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, "Sable App")]
+            [b("h4", { class: "u-ts-4" }, "Sable App")]
           ),
         ]),
       ],
       -1
     )
   ),
-  ki = pe(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-5b692e54><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-5b692e54><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-5b692e54> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-5b692e54><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" data-v-5b692e54>Fintech services</div><div class="btn-text cc-bottom" data-v-5b692e54>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" data-v-5b692e54>Design trial</div><div class="btn-text cc-bottom" data-v-5b692e54>Design trial</div></div></a></div></div></div>',
+  xi = ce(
+    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-7e810c9c><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-7e810c9c> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>Fintech services</div><div class="btn-text cc-bottom" data-v-7e810c9c>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>Design trial</div><div class="btn-text cc-bottom" data-v-7e810c9c>Design trial</div></div></a></div></div></div>',
     1
   ),
-  ji = { class: "section" },
-  Ci = { class: "container" },
-  qi = pe(
-    '<div class="row" data-v-5b692e54><div data-animation-element="group" class="col" data-v-5b692e54><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-5b692e54><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> Branding </div></div></h3></div></div>',
+  ki = { class: "section" },
+  ji = { class: "container over-h" },
+  Ci = ce(
+    '<div class="row" data-v-7e810c9c><div data-animation-element="group" class="col" data-v-7e810c9c><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-7e810c9c><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> Branding </div></div></h3></div></div>',
     1
   ),
-  Si = { class: "sticky-pair" },
-  Oi = { class: "w-layout-grid pair-grid" },
+  qi = { class: "sticky-pair" },
+  Si = { class: "w-layout-grid pair-grid" },
   zi = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  Ti = {
+  Oi = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  Li = {
+  Ti = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  Bi = { role: "list", class: "w-dyn-items" },
+  Ai = { role: "list", class: "w-dyn-items" },
   Ei = { role: "listitem", class: "w-dyn-item" },
-  Pi = { class: "card-wrapper cc-small" },
-  Ii = {
+  Bi = { class: "card-wrapper cc-small" },
+  Li = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Ai = {
+  Ii = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6049,9 +6077,9 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
       opacity: "1",
     },
   },
-  Mi = { class: "card-image_wrapper" },
-  Di = { class: "iframe-video_wrapper" },
-  $i = {
+  Pi = { class: "card-image_wrapper" },
+  Mi = { class: "iframe-video_wrapper" },
+  Di = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6059,16 +6087,16 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  Vi = ["src"],
-  Ui = Z(" Your browser does not support the video tag. "),
-  Fi = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  Hi = us(() =>
-    y(
+  Fi = ["src"],
+  Ui = G(" Your browser does not support the video tag. "),
+  Vi = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  Hi = fs(() =>
+    b(
       "div",
       { class: "card-body" },
       [
-        y("div", { class: "u-overflow-hidden" }, [
-          y(
+        b("div", { class: "u-overflow-hidden" }, [
+          b(
             "div",
             {
               class: "card-up",
@@ -6077,26 +6105,26 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
+            [b("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
           ),
         ]),
       ],
       -1
     )
   ),
-  Ri = {
+  Ni = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  Ni = { role: "list", class: "w-dyn-items" },
-  Wi = { role: "listitem", class: "w-dyn-item" },
-  Xi = { class: "card-wrapper cc-large" },
+  Xi = { role: "list", class: "w-dyn-items" },
+  Ri = { role: "listitem", class: "w-dyn-item" },
+  Zi = { class: "card-wrapper cc-large" },
   Yi = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Zi = {
+  Wi = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6107,7 +6135,7 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
   },
   Gi = { class: "card-image_wrapper" },
   Ki = { class: "iframe-video_wrapper" },
-  Qi = {
+  $i = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6116,28 +6144,28 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     muted: "",
   },
   Ji = ["src"],
-  eo = Z(" Your browser does not support the video tag. "),
-  ao = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  to = pe(
-    '<div class="card-body" data-v-5b692e54><div class="u-overflow-hidden" data-v-5b692e54><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-5b692e54><div class="card-large_text" data-v-5b692e54><h4 class="u-ts-4" data-v-5b692e54>Sable Brand</h4></div></div></div></div>',
+  Qi = G(" Your browser does not support the video tag. "),
+  eo = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  ao = ce(
+    '<div class="card-body" data-v-7e810c9c><div class="u-overflow-hidden" data-v-7e810c9c><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-7e810c9c><div class="card-large_text" data-v-7e810c9c><h4 class="u-ts-4" data-v-7e810c9c>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  so = pe(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-5b692e54><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-5b692e54><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-5b692e54> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-5b692e54><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" data-v-5b692e54>View cases</div><div class="btn-text cc-bottom" data-v-5b692e54>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54> Design trial </div></div></a></div></div></div>',
+  to = ce(
+    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-7e810c9c><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-7e810c9c><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-7e810c9c> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-7e810c9c><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" data-v-7e810c9c>View cases</div><div class="btn-text cc-bottom" data-v-7e810c9c>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c> Design trial </div></div></a></div></div></div>',
     1
   ),
-  lo = pe(
-    '<section class="section" data-v-5b692e54><div class="section-title_component" data-v-5b692e54><div class="container" data-v-5b692e54><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div class="section-title_dot" style="opacity:1;" data-v-5b692e54></div><div class="u-overflow-hidden" data-v-5b692e54><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><h2 class="u-ts-4" data-v-5b692e54>Contact Us</h2></div></div></div></div></div><div class="container" data-v-5b692e54><div class="w-layout-grid pair-grid" data-v-5b692e54><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-5b692e54><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-5b692e54><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-5b692e54><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-5b692e54><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-5b692e54><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-5b692e54><div style="position:relative;display:inline-block;" data-v-5b692e54> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+  so = ce(
+    '<section class="section" data-v-7e810c9c><div class="section-title_component" data-v-7e810c9c><div class="container" data-v-7e810c9c><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="section-title_dot" style="opacity:1;" data-v-7e810c9c></div><div class="u-overflow-hidden" data-v-7e810c9c><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><h2 class="u-ts-4" data-v-7e810c9c>Contact Us</h2></div></div></div></div></div><div class="container" data-v-7e810c9c><div class="w-layout-grid pair-grid" data-v-7e810c9c><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-7e810c9c><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-7e810c9c><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-7e810c9c><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-7e810c9c><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-7e810c9c><div style="position:relative;display:inline-block;" data-v-7e810c9c> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     1
   ),
-  io = { class: "pre-footer" },
-  oo = {
+  lo = { class: "pre-footer" },
+  io = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  ro = { class: "iframe-video_wrapper" },
-  no = {
+  oo = { class: "iframe-video_wrapper" },
+  ro = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6145,20 +6173,20 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  co = ["src"],
-  po = Z(" Your browser does not support the video tag. "),
-  vo = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  mo = pe(
-    '<div class="pre-footer_gradient" data-v-5b692e54></div><div class="marquee" data-v-5b692e54><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-5b692e54><div class="btn cc-large-landscape" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text cc-large-landscape" data-v-5b692e54>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-5b692e54>Button</div></div></div></div>',
+  no = ["src"],
+  co = G(" Your browser does not support the video tag. "),
+  po = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  vo = ce(
+    '<div class="pre-footer_gradient" data-v-7e810c9c></div><div class="marquee" data-v-7e810c9c><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-7e810c9c><div class="btn cc-large-landscape" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text cc-large-landscape" data-v-7e810c9c>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-7e810c9c>Button</div></div></div></div>',
     3
   ),
-  fo = {
+  mo = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  uo = { class: "iframe-video_wrapper" },
-  go = {
+  fo = { class: "iframe-video_wrapper" },
+  uo = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6166,14 +6194,14 @@ const us = (e) => (de("data-v-5b692e54"), (e = e()), ce(), e),
     loop: "",
     muted: "",
   },
-  bo = ["src"],
-  yo = Z(" Your browser does not support the video tag. "),
-  ho = us(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  wo = pe(
-    '<div class="pre-footer_gradient" data-v-5b692e54></div><div class="marquee" data-v-5b692e54><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-5b692e54><div class="h1" data-v-5b692e54>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-5b692e54><div class="btn cc-large-landscape" data-v-5b692e54><div class="btn-text-wrap" data-v-5b692e54><div class="btn-text cc-large-landscape" data-v-5b692e54>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-5b692e54>Button</div></div></div></div>',
+  go = ["src"],
+  yo = G(" Your browser does not support the video tag. "),
+  bo = fs(() => b("div", { class: "iframe-video_blocker" }, null, -1)),
+  ho = ce(
+    '<div class="pre-footer_gradient" data-v-7e810c9c></div><div class="marquee" data-v-7e810c9c><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-7e810c9c><div class="h1" data-v-7e810c9c>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-7e810c9c><div class="btn cc-large-landscape" data-v-7e810c9c><div class="btn-text-wrap" data-v-7e810c9c><div class="btn-text cc-large-landscape" data-v-7e810c9c>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-7e810c9c>Button</div></div></div></div>',
     3
   );
-var _o = Se(fs, [
+var wo = Se(ms, [
     [
       "render",
       function (e, a, t, s, l, i) {
@@ -6181,21 +6209,21 @@ var _o = Se(fs, [
           r = S("Footer");
         return (
           g(),
-          b(
+          y(
             _,
             null,
             [
-              L(o),
-              gs,
-              y("section", bs, [
+              A(o),
+              us,
+              b("section", gs, [
                 ys,
-                y("div", hs, [
-                  y("div", ws, [
-                    y("div", _s, [
-                      y("div", xs, [
-                        y("div", ks, [
-                          y("div", js, [
-                            y(
+                b("div", bs, [
+                  b("div", hs, [
+                    b("div", ws, [
+                      b("div", _s, [
+                        b("div", xs, [
+                          b("div", ks, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6207,13 +6235,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Cs
+                              js
                             ),
                           ]),
                         ]),
-                        y("div", qs, [
-                          y("div", Ss, [
-                            y(
+                        b("div", Cs, [
+                          b("div", qs, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6225,13 +6253,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Os
+                              Ss
                             ),
                           ]),
                         ]),
-                        y("div", zs, [
-                          y("div", Ts, [
-                            y(
+                        b("div", zs, [
+                          b("div", Os, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6243,13 +6271,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Ls
+                              Ts
                             ),
                           ]),
                         ]),
-                        y("div", Bs, [
-                          y("div", Es, [
-                            y(
+                        b("div", As, [
+                          b("div", Es, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6261,13 +6289,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Ps
+                              Bs
                             ),
                           ]),
                         ]),
-                        y("div", Is, [
-                          y("div", As, [
-                            y(
+                        b("div", Ls, [
+                          b("div", Is, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6279,13 +6307,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Ms
+                              Ps
                             ),
                           ]),
                         ]),
-                        y("div", Ds, [
-                          y("div", $s, [
-                            y(
+                        b("div", Ms, [
+                          b("div", Ds, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6297,13 +6325,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Vs
+                              Fs
                             ),
                           ]),
                         ]),
-                        y("div", Us, [
-                          y("div", Fs, [
-                            y(
+                        b("div", Us, [
+                          b("div", Vs, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6319,9 +6347,9 @@ var _o = Se(fs, [
                             ),
                           ]),
                         ]),
-                        y("div", Rs, [
-                          y("div", Ns, [
-                            y(
+                        b("div", Ns, [
+                          b("div", Xs, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6333,13 +6361,13 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Ws
+                              Rs
                             ),
                           ]),
                         ]),
-                        y("div", Xs, [
-                          y("div", Ys, [
-                            y(
+                        b("div", Zs, [
+                          b("div", Ys, [
+                            b(
                               "img",
                               {
                                 loading: "eager",
@@ -6351,7 +6379,7 @@ var _o = Se(fs, [
                               },
                               null,
                               8,
-                              Zs
+                              Ws
                             ),
                           ]),
                         ]),
@@ -6361,24 +6389,24 @@ var _o = Se(fs, [
                 ]),
               ]),
               Gs,
-              y("section", Ks, [
-                Qs,
-                y("div", Js, [
-                  el,
-                  y("div", al, [
-                    y("div", tl, [
-                      y("div", sl, [
-                        y("div", ll, [
-                          y("div", il, [
-                            y("div", ol, [
-                              y("div", rl, [
-                                y("div", nl, [
-                                  y("div", dl, [
-                                    y("div", cl, [
-                                      y("div", pl, [
-                                        y("div", vl, [
-                                          y("video", ml, [
-                                            y(
+              b("section", Ks, [
+                $s,
+                b("div", Js, [
+                  Qs,
+                  b("div", el, [
+                    b("div", al, [
+                      b("div", tl, [
+                        b("div", sl, [
+                          b("div", ll, [
+                            b("div", il, [
+                              b("div", ol, [
+                                b("div", rl, [
+                                  b("div", nl, [
+                                    b("div", cl, [
+                                      b("div", dl, [
+                                        b("div", pl, [
+                                          b("video", vl, [
+                                            b(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -6388,14 +6416,14 @@ var _o = Se(fs, [
                                               },
                                               null,
                                               8,
-                                              fl
+                                              ml
                                             ),
-                                            ul,
+                                            fl,
                                           ]),
-                                          gl,
+                                          ul,
                                         ]),
                                       ]),
-                                      bl,
+                                      gl,
                                     ]),
                                   ]),
                                 ]),
@@ -6404,16 +6432,16 @@ var _o = Se(fs, [
                           ]),
                         ]),
                       ]),
-                      y("div", yl, [
-                        y("div", hl, [
-                          y("div", wl, [
-                            y("div", _l, [
-                              y("div", xl, [
-                                y("div", kl, [
-                                  y("div", jl, [
-                                    y("div", Cl, [
-                                      y("video", ql, [
-                                        y(
+                      b("div", yl, [
+                        b("div", bl, [
+                          b("div", hl, [
+                            b("div", wl, [
+                              b("div", _l, [
+                                b("div", xl, [
+                                  b("div", kl, [
+                                    b("div", jl, [
+                                      b("video", Cl, [
+                                        b(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -6423,35 +6451,35 @@ var _o = Se(fs, [
                                           },
                                           null,
                                           8,
-                                          Sl
+                                          ql
                                         ),
-                                        Ol,
+                                        Sl,
                                       ]),
                                       zl,
                                     ]),
                                   ]),
-                                  Tl,
+                                  Ol,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      Ll,
+                      Tl,
                     ]),
                   ]),
                 ]),
               ]),
-              Bl,
-              y("section", El, [
-                Pl,
-                y("div", Il, [
-                  y("div", Al, [
-                    y("div", Ml, [
-                      y("div", Dl, [
-                        y("div", $l, [
-                          y("div", Vl, [
-                            y(
+              Al,
+              b("section", El, [
+                Bl,
+                b("div", Ll, [
+                  b("div", Il, [
+                    b("div", Pl, [
+                      b("div", Ml, [
+                        b("div", Dl, [
+                          b("div", Fl, [
+                            b(
                               "img",
                               { src: s.getImageUrl("logo.png"), alt: "" },
                               null,
@@ -6460,29 +6488,29 @@ var _o = Se(fs, [
                             ),
                           ]),
                         ]),
-                        Fl,
+                        Vl,
                         Hl,
                       ]),
                     ]),
                   ]),
                 ]),
               ]),
-              Rl,
-              y("section", Nl, [
-                y("div", Wl, [
-                  Xl,
-                  y("div", Yl, [
-                    y("div", Zl, [
-                      y("div", Gl, [
-                        y("div", Kl, [
-                          y("div", Ql, [
-                            y("div", Jl, [
-                              y("div", ei, [
-                                y("div", ai, [
-                                  y("div", ti, [
-                                    y("div", si, [
-                                      y("video", li, [
-                                        y(
+              Nl,
+              b("section", Xl, [
+                b("div", Rl, [
+                  Zl,
+                  b("div", Yl, [
+                    b("div", Wl, [
+                      b("div", Gl, [
+                        b("div", Kl, [
+                          b("div", $l, [
+                            b("div", Jl, [
+                              b("div", Ql, [
+                                b("div", ei, [
+                                  b("div", ai, [
+                                    b("div", ti, [
+                                      b("video", si, [
+                                        b(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -6492,32 +6520,32 @@ var _o = Se(fs, [
                                           },
                                           null,
                                           8,
-                                          ii
+                                          li
                                         ),
-                                        oi,
+                                        ii,
                                       ]),
-                                      ri,
+                                      oi,
                                     ]),
                                   ]),
-                                  ni,
+                                  ri,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      y("div", null, [
-                        y("div", di, [
-                          y("div", ci, [
-                            y("div", pi, [
-                              y("div", vi, [
-                                y("div", mi, [
-                                  y("div", fi, [
-                                    y("div", ui, [
-                                      y("div", gi, [
-                                        y("div", bi, [
-                                          y("video", yi, [
-                                            y(
+                      b("div", null, [
+                        b("div", ni, [
+                          b("div", ci, [
+                            b("div", di, [
+                              b("div", pi, [
+                                b("div", vi, [
+                                  b("div", mi, [
+                                    b("div", fi, [
+                                      b("div", ui, [
+                                        b("div", gi, [
+                                          b("video", yi, [
+                                            b(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -6527,14 +6555,14 @@ var _o = Se(fs, [
                                               },
                                               null,
                                               8,
-                                              hi
+                                              bi
                                             ),
-                                            wi,
+                                            hi,
                                           ]),
-                                          _i,
+                                          wi,
                                         ]),
                                       ]),
-                                      xi,
+                                      _i,
                                     ]),
                                   ]),
                                 ]),
@@ -6543,28 +6571,28 @@ var _o = Se(fs, [
                           ]),
                         ]),
                       ]),
-                      ki,
+                      xi,
                     ]),
                   ]),
                 ]),
               ]),
-              y("section", ji, [
-                y("div", Ci, [
-                  qi,
-                  y("div", Si, [
-                    y("div", Oi, [
-                      y("div", zi, [
-                        y("div", Ti, [
-                          y("div", Li, [
-                            y("div", Bi, [
-                              y("div", Ei, [
-                                y("div", Pi, [
-                                  y("div", Ii, [
-                                    y("div", Ai, [
-                                      y("div", Mi, [
-                                        y("div", Di, [
-                                          y("video", $i, [
-                                            y(
+              b("section", ki, [
+                b("div", ji, [
+                  Ci,
+                  b("div", qi, [
+                    b("div", Si, [
+                      b("div", zi, [
+                        b("div", Oi, [
+                          b("div", Ti, [
+                            b("div", Ai, [
+                              b("div", Ei, [
+                                b("div", Bi, [
+                                  b("div", Li, [
+                                    b("div", Ii, [
+                                      b("div", Pi, [
+                                        b("div", Mi, [
+                                          b("video", Di, [
+                                            b(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -6574,11 +6602,11 @@ var _o = Se(fs, [
                                               },
                                               null,
                                               8,
-                                              Vi
+                                              Fi
                                             ),
                                             Ui,
                                           ]),
-                                          Fi,
+                                          Vi,
                                         ]),
                                       ]),
                                       Hi,
@@ -6590,16 +6618,16 @@ var _o = Se(fs, [
                           ]),
                         ]),
                       ]),
-                      y("div", Ri, [
-                        y("div", Ni, [
-                          y("div", Wi, [
-                            y("div", Xi, [
-                              y("div", Yi, [
-                                y("div", Zi, [
-                                  y("div", Gi, [
-                                    y("div", Ki, [
-                                      y("video", Qi, [
-                                        y(
+                      b("div", Ni, [
+                        b("div", Xi, [
+                          b("div", Ri, [
+                            b("div", Zi, [
+                              b("div", Yi, [
+                                b("div", Wi, [
+                                  b("div", Gi, [
+                                    b("div", Ki, [
+                                      b("video", $i, [
+                                        b(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -6611,30 +6639,30 @@ var _o = Se(fs, [
                                           8,
                                           Ji
                                         ),
-                                        eo,
+                                        Qi,
                                       ]),
-                                      ao,
+                                      eo,
                                     ]),
                                   ]),
-                                  to,
+                                  ao,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      so,
+                      to,
                     ]),
                   ]),
                 ]),
               ]),
-              lo,
-              y("div", null, [
-                y("aside", io, [
-                  y("div", oo, [
-                    y("div", ro, [
-                      y("video", no, [
-                        y(
+              so,
+              b("div", null, [
+                b("aside", lo, [
+                  b("div", io, [
+                    b("div", oo, [
+                      b("video", ro, [
+                        b(
                           "source",
                           {
                             src: s.getVideoUrl("home/buddha1.mp4"),
@@ -6642,18 +6670,18 @@ var _o = Se(fs, [
                           },
                           null,
                           8,
-                          co
+                          no
                         ),
-                        po,
+                        co,
                       ]),
-                      vo,
+                      po,
                     ]),
-                    mo,
+                    vo,
                   ]),
-                  y("div", fo, [
-                    y("div", uo, [
-                      y("video", go, [
-                        y(
+                  b("div", mo, [
+                    b("div", fo, [
+                      b("video", uo, [
+                        b(
                           "source",
                           {
                             src: s.getVideoUrl("home/tea_1.mp4"),
@@ -6661,43 +6689,43 @@ var _o = Se(fs, [
                           },
                           null,
                           8,
-                          bo
+                          go
                         ),
                         yo,
                       ]),
-                      ho,
+                      bo,
                     ]),
-                    wo,
+                    ho,
                   ]),
                 ]),
               ]),
-              L(r),
+              A(r),
             ],
             64
           )
         );
       },
     ],
-    ["__scopeId", "data-v-5b692e54"],
+    ["__scopeId", "data-v-7e810c9c"],
   ]),
-  xo = Object.freeze(
+  _o = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: _o },
+      { __proto__: null, default: wo },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ko = {
+const xo = {
     "../pages/about.vue": () =>
-      Wa(
+      Za(
         () =>
           Promise.resolve().then(function () {
-            return mt;
+            return vt;
           }),
         void 0
       ),
     "../pages/case.vue": () =>
-      Wa(
+      Za(
         () =>
           Promise.resolve().then(function () {
             return yt;
@@ -6705,15 +6733,15 @@ const ko = {
         void 0
       ),
     "../pages/demo.vue": () =>
-      Wa(
+      Za(
         () =>
           Promise.resolve().then(function () {
-            return It;
+            return Lt;
           }),
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Wa(
+      Za(
         () =>
           Promise.resolve().then(function () {
             return cs;
@@ -6721,56 +6749,56 @@ const ko = {
         void 0
       ),
     "../pages/index.vue": () =>
-      Wa(
+      Za(
         () =>
           Promise.resolve().then(function () {
-            return xo;
+            return _o;
           }),
         void 0
       ),
   },
-  jo = {
-    "../pages/about.vue": mt,
+  ko = {
+    "../pages/about.vue": vt,
     "../pages/case.vue": yt,
-    "../pages/demo.vue": It,
+    "../pages/demo.vue": Lt,
     "../pages/fintech-design.vue": cs,
-    "../pages/index.vue": xo,
+    "../pages/index.vue": _o,
   },
-  Co = [];
-for (let Fo in ko) {
-  let e = Fo.replace("../pages", "").toLowerCase().replace(".vue", "");
+  jo = [];
+for (let Vo in xo) {
+  let e = Vo.replace("../pages", "").toLowerCase().replace(".vue", "");
   (e = e.replace(/\/index$/, "")),
     (e = e.replace(/\/_+/g, "/:")),
-    Co.push({
+    jo.push({
       path: e,
       name: e,
       meta: {
-        layout: jo[Fo].default.layout || "layout-default",
+        layout: ko[Vo].default.layout || "layout-default",
         title:
-          null != (t = null == (a = jo[Fo].default) ? void 0 : a.title)
+          null != (t = null == (a = ko[Vo].default) ? void 0 : a.title)
             ? t
             : "app.project.title",
         header:
-          null != (l = null == (s = jo[Fo].default) ? void 0 : s.header)
+          null != (l = null == (s = ko[Vo].default) ? void 0 : s.header)
             ? l
             : "header-default",
         scroll:
-          null != (o = null == (i = jo[Fo].default) ? void 0 : i.noScroll) && o,
+          null != (o = null == (i = ko[Vo].default) ? void 0 : i.noScroll) && o,
       },
-      component: ko[Fo],
+      component: xo[Vo],
     });
 }
-const qo = ue({
+const Co = ue({
   history: ge("./"),
   routes:
-    ((So = { defaultPath: "/home" }),
+    ((qo = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: D({ defaultPath: "/" }, So).defaultPath },
+        redirect: { name: D({ defaultPath: "/" }, qo).defaultPath },
       },
-      ...Co,
+      ...jo,
       {
         path: "/404",
         name: "not-found",
@@ -6785,23 +6813,23 @@ const qo = ue({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var So;
-qo.beforeEach(async (e, a, t) => {
+var qo;
+Co.beforeEach(async (e, a, t) => {
   t();
 });
-var Oo = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: qo }, Symbol.toStringTag, {
+var So = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Co }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const zo = be({ modules: Ra });
-ye(zo, qo);
-var To = Object.freeze(
+const zo = ye({ modules: Xa });
+be(zo, Co);
+var Oo = Object.freeze(
   Object.defineProperty({ __proto__: null, default: zo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const Lo = {
+const To = {
     use(e) {
       e.interceptors.response.use(
         async function (a) {
@@ -6809,7 +6837,7 @@ const Lo = {
             const t = e.get("/app/jwt-token", {
               params: { account: zo.state.auth.user.account },
             });
-            1 === t.data.code && V.set("token", t.data.data.jwt_token, !0);
+            1 === t.data.code && U.set("token", t.data.data.jwt_token, !0);
             return await e.request(a.config);
           }
           return a;
@@ -6820,7 +6848,7 @@ const Lo = {
       );
     },
   },
-  Bo = {
+  Ao = {
     use(e) {
       (window.isAlert = !1),
         e.interceptors.response.use(
@@ -6836,14 +6864,14 @@ const Lo = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: e } = await Pe.alert({
+                  const { isConfirmed: e } = await Le.alert({
                     title: `Error(${a.code})`,
-                    text: Be.t(`error.code.${a.code}`),
+                    text: Ee.t(`error.code.${a.code}`),
                   });
                   return (
                     e &&
                       (await zo.dispatch("auth/logout"),
-                      await qo.replace("/login"),
+                      await Co.replace("/login"),
                       (window.isAlert = !1)),
                     Promise.reject(`Error: ${a.code}`)
                   );
@@ -6869,9 +6897,9 @@ const Lo = {
               case 1e5:
               case 100001:
               case 100003:
-                await Pe.alert({
+                await Le.alert({
                   title: `Error(${a.code})`,
-                  text: Be.t(`error.code.${a.code}`),
+                  text: Ee.t(`error.code.${a.code}`),
                 });
             }
           }
@@ -6883,12 +6911,12 @@ const Lo = {
       );
     },
   };
-class Po {
+class Bo {
   constructor() {
-    (this.provider = new Ba({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ea({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, Ea, Lo, Bo, Eo, Ia);
+    this.provider.use({}, Ba, To, Ao, Eo, Ia);
   }
   get get() {
     return this.provider.instance.get;
@@ -6903,19 +6931,19 @@ class Po {
     return this.provider.instance.delete;
   }
 }
-Po.prototype.install = function (e) {
+Bo.prototype.install = function (e) {
   const a = "http-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Io = new Po(),
-  Ao = Object.freeze(
+var Lo = new Bo(),
+  Io = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: Po, default: Io },
+      { __proto__: null, HttpService: Bo, default: Lo },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Mo {
+class Po {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -6925,8 +6953,8 @@ class Mo {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Be.t("button.confirm"),
-      cancelButtonText: Be.t("button.cancel"),
+      confirmButtonText: Ee.t("button.confirm"),
+      cancelButtonText: Ee.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -6947,10 +6975,10 @@ class Mo {
       component: s = null,
       showCancelButton: l = !0,
       showConfirmButton: i = !0,
-      confirmButtonText: o = Be.t("button.confirm"),
-      cancelButtonText: r = Be.t("button.cancel"),
+      confirmButtonText: o = Ee.t("button.confirm"),
+      cancelButtonText: r = Ee.t("button.cancel"),
       allowOutsideClick: n = !0,
-      props: d = {},
+      props: c = {},
     } = e;
     return new Promise((e) => {
       zo.commit(
@@ -6966,7 +6994,7 @@ class Mo {
           confirmButtonText: o,
           cancelButtonText: r,
           allowOutsideClick: n,
-          props: d,
+          props: c,
         })
       );
     });
@@ -6975,38 +7003,38 @@ class Mo {
     zo.commit("app/clear/popup");
   }
 }
-Mo.prototype.install = function (e) {
+Po.prototype.install = function (e) {
   const a = "popup-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Do = new Mo();
-const $o = {
-    "../services/alert-service.js": La,
-    "../services/http-service.js": Ao,
-    "../services/i18n-service.js": Ee,
+var Mo = new Po();
+const Do = {
+    "../services/alert-service.js": Aa,
+    "../services/http-service.js": Io,
+    "../services/i18n-service.js": Be,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: Mo, default: Do },
+        { __proto__: null, PopupService: Po, default: Mo },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": Oo,
+    "../services/router-service.js": So,
     "../services/storage-service.js": De,
-    "../services/store-service.js": To,
+    "../services/store-service.js": Oo,
   },
-  Vo = {
+  Fo = {
     install: (e) => {
-      for (let a in $o) e.use($o[a].default);
+      for (let a in Do) e.use(Do[a].default);
     },
   };
-const Uo = he(Oe);
+const Uo = he(ze);
 Uo.provide("$jQuery", we),
-  Uo.provide("$swal", Pe),
-  Uo.provide("$storage", V),
+  Uo.provide("$swal", Le),
+  Uo.provide("$storage", U),
   Uo.provide("$tabsslider", _e),
   Uo.use(na),
   Uo.use(Sa),
   Uo.use(xe, { loading: "", error: "" }),
-  Uo.use(Vo),
+  Uo.use(Fo),
   Uo.mount("#app");

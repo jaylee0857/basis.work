@@ -2000,7 +2000,7 @@ strong {
   position: relative;
 }
 .section.cc-apps {
-  background-color: var(--swatch--dark);
+  /* background-color: var(--swatch--dark); */
   padding-bottom: 0;
 }
 .section.cc-pre-footer {
@@ -2188,13 +2188,13 @@ strong {
   /* border-color: var(--swatch--white);
   color: var(--swatch--white); */
   background-color: transparent;
-  border-color: var(--swatch--black);
-  color: var(--swatch--black);
+  border-color: var(--swatch--white);
+  color: var(--swatch--white);
   transition: 0.3s;
 }
 .btn.cc-secondary:hover {
-  background-color: var(--swatch--black);
-  color: var(--swatch--white);
+  background-color: var(--swatch--white);
+  color: var(--swatch--black);
 }
 .card {
   grid-row-gap: 1.5em;
@@ -2999,7 +2999,7 @@ strong {
 .section-title_dot {
   width: 0.75em;
   height: 0.75em;
-  box-shadow: inset 0 0 0 1px var(--swatch--black);
+  box-shadow: inset 0 0 0 1px var(--swatch--white);
   border-radius: 50%;
   flex: none;
   position: relative;
@@ -3069,6 +3069,7 @@ strong {
   bottom: 0%;
   left: 0%;
   right: 0%;
+  overflow: hidden;
 }
 .iphone-mockup {
   z-index: 1;
@@ -3471,6 +3472,8 @@ strong {
   overflow: hidden;
 }
 .apps_media-wrapper {
+  overflow: hidden;
+  scrollbar-width: none;
   padding-bottom: 38.25%;
   position: relative;
 }
@@ -3678,7 +3681,7 @@ strong {
 .section-title_dot-fill {
   width: 100%;
   height: 100%;
-  background-color: var(--swatch--black);
+  background-color: var(--swatch--white);
   position: absolute;
   top: auto;
   bottom: 0%;
@@ -4421,7 +4424,7 @@ strong {
     font-size: 3rem;
   }
   h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h4 {
     font-size: 2rem;
@@ -4443,7 +4446,7 @@ strong {
     font-size: 3rem;
   }
   .h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .h4 {
     font-size: 2rem;
@@ -4735,6 +4738,8 @@ strong {
   }
   .apps_media-wrapper {
     padding: 0 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
   .spacing {
     padding-top: 3.5rem;
@@ -5201,4 +5206,9 @@ strong {
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+}
+@media (max-width: 576px) {
+  .h1 {
+    font-size: 2.5rem;
+  }
 }

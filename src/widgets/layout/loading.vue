@@ -4,7 +4,7 @@
   <div class="bg" :class="mode">
     <div class="icon">
       <div class="svg_box">
-        <img :src="getImageUrl('logo.png')" alt="" />
+        <img :src="getImageUrl('favicon.png')" alt="" />
       </div>
     </div>
   </div>
