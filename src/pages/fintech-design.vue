@@ -8,29 +8,6 @@
         transform-style: preserve-3d;
       "
     >
-      <img
-        src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp"
-        loading="eager"
-        alt=""
-        sizes="100vw"
-        srcset="
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-500.jpg   500w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-800.jpg   800w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-1080.jpg 1080w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-1600.jpg 1600w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-2000.jpg 2000w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design-p-2600.jpg 2600w,
-          https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp       3200w
-        "
-        class="header-image"
-        style="
-          will-change: transform;
-          transform: translate3d(0px, -0.0648%, 0px)
-            scale3d(1.00065, 1.00065, 1) rotateX(0deg) rotateY(0deg)
-            rotateZ(0deg) skew(0deg, 0deg);
-          transform-style: preserve-3d;
-        "
-      />
       <div
         class="header-image"
         style="
@@ -42,18 +19,17 @@
         "
       >
         <div class="iframe-video_wrapper">
-          <iframe
-            class="iframe-video_iframe"
+          <video
+            class="video-cover"
             width="100%"
             height="100%"
-            style="overflow: hidden"
-            frameborder="0"
-            scrolling="no"
-            allow="fullscreen"
-            src="https://app.vidzflow.com/v/uiNA4jAd82?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;piv=true&amp;bc=%234E5FFD&amp;controls=false"
-            title="Fintech 1"
-            loading="lazy"
-          ></iframe>
+            autoplay
+            loop
+            muted
+          >
+            <source :src="getVideoUrl('home/knife1-1.mp4')" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div class="iframe-video_blocker"></div>
         </div>
       </div>
@@ -67,7 +43,11 @@
             class="col col-lg-6 col-md-12"
           >
             <div class="header-content_main">
-              <div class="text-wrap-balance">
+              <div
+                class="text-wrap-balance"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <h1 data-animation-element="title" class="h4" style="">
                   <div
                     class="u-overflow-hidden"
@@ -220,10 +200,14 @@
   <div class="container">
     <div class="target_line"></div>
   </div>
-  <section class="section">
+  <section class="section over-h">
     <div class="section-title_component">
       <div class="container">
-        <div class="section-title_wrapper">
+        <div
+          class="section-title_wrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           <div class="section-title_dot" style="opacity: 1">
             <div
               class="section-title_dot-fill"
@@ -246,7 +230,11 @@
       </div>
     </div>
     <div class="container">
-      <div class="w-layout-grid pair-grid">
+      <div
+        class="w-layout-grid pair-grid"
+        data-aos="fade-up"
+        data-aos-duration="700"
+      >
         <div
           id="w-node-_88e3e548-f2e0-1176-a852-0e15f232b846-af55239c"
           class="content"
@@ -285,7 +273,11 @@
                     opacity: 1;
                   "
                 >
-                  <div class="card-image_wrapper">
+                  <div
+                    class="card-image_wrapper"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                  >
                     <div class="iframe-video_wrapper">
                       <iframe
                         class="iframe-video_iframe"
@@ -302,7 +294,11 @@
                       <div class="iframe-video_blocker"></div>
                     </div>
                   </div>
-                  <div class="card-body">
+                  <div
+                    class="card-body"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                  >
                     <div class="u-overflow-hidden">
                       <div
                         class="card-up"
@@ -333,7 +329,11 @@
                   opacity: 1;
                 "
               >
-                <div class="card-image_wrapper">
+                <div
+                  class="card-image_wrapper"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div class="iframe-video_wrapper">
                     <iframe
                       class="iframe-video_iframe"
@@ -350,7 +350,11 @@
                     <div class="iframe-video_blocker"></div>
                   </div>
                 </div>
-                <div class="card-body">
+                <div
+                  class="card-body"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div class="u-overflow-hidden">
                     <div
                       class="card-up"
@@ -376,12 +380,8 @@
           >
             <div
               class="content-p cc-1"
-              style="
-                transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-                opacity: 1;
-              "
+              data-aos="fade-up"
+              data-aos-duration="700"
             >
               <p class="u-ts-1">
                 After rebranding banks, producing sleek new cards, and
@@ -402,7 +402,8 @@
                 "
               >
                 <a
-                  href="mailto:hello@basis.work?subject=Enquiry"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
                   class="btn w-inline-block"
                   ><div class="btn-text-wrap">
                     <div class="btn-text">Contact Us</div>
@@ -419,7 +420,10 @@
                   transform-style: preserve-3d;
                 "
               >
-                <a href="/design-trial" class="btn cc-secondary w-inline-block"
+                <a
+                  class="btn cc-secondary w-inline-block"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
                   ><div class="btn-text-wrap">
                     <div
                       class="btn-text"
@@ -458,7 +462,11 @@
   <section class="section">
     <div class="section-title_component">
       <div class="container">
-        <div class="section-title_wrapper">
+        <div
+          class="section-title_wrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           <div class="section-title_dot" style="opacity: 1"></div>
           <div class="u-overflow-hidden">
             <div
@@ -482,7 +490,11 @@
           class="service-list"
         >
           <div class="service-list">
-            <div class="logomark_component">
+            <div
+              class="logomark_component"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
               <div
                 class="logomark w-embed"
                 style="
@@ -506,7 +518,11 @@
               </div>
             </div>
             <ul role="list" class="u-mt-3-5">
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-1"
                   style="
@@ -518,7 +534,11 @@
                   <h3 class="u-tc-caps">Digital Banking,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-2"
                   style="
@@ -530,7 +550,11 @@
                   <h3 class="u-tc-caps">Credit Card Designs,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-3"
                   style="
@@ -542,7 +566,11 @@
                   <h3 class="u-tc-caps">Digital Wallets,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-4"
                   style="
@@ -554,7 +582,11 @@
                   <h3 class="u-tc-caps">Payment Services,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-5"
                   style="
@@ -566,7 +598,11 @@
                   <h3 class="u-tc-caps">Card Packaging,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-6"
                   style="
@@ -578,7 +614,11 @@
                   <h3 class="u-tc-caps">Information Architecture,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-7"
                   style="
@@ -590,7 +630,11 @@
                   <h3 class="u-tc-caps">Mobile Apps,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-8"
                   style="
@@ -602,7 +646,11 @@
                   <h3 class="u-tc-caps">Prototypes,</h3>
                 </div>
               </li>
-              <li class="u-overflow-hidden">
+              <li
+                class="u-overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <div
                   class="list-content cc-9"
                   style="
@@ -626,7 +674,11 @@
   <section class="section">
     <div class="section-title_component">
       <div class="container">
-        <div class="section-title_wrapper">
+        <div
+          class="section-title_wrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
           <div class="section-title_dot" style="opacity: 1"></div>
           <div class="u-overflow-hidden">
             <div
@@ -662,7 +714,11 @@
                 data-mouse-class="cc-text"
                 href="/cases/sable-brand"
                 class="cases-card cc-auto w-inline-block"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"
                     loading="lazy"
@@ -692,14 +748,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="cases-text cc-auto">
+                <div
+                  class="cases-text cc-auto"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div class="u-ts-2">Sable Brand</div>
                 </div></a
               ><link rel="prerender" href="/cases/sable-brand" /><a
                 data-mouse-class="cc-text"
                 href="mailto:hello@basis.work?subject=Enquiry"
                 class="cases-card cc-auto w-inline-block w-condition-invisible"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"
                     loading="lazy"
@@ -753,7 +817,11 @@
                 data-mouse-class="cc-text"
                 href="/cases/sable-website"
                 class="cases-card cc-auto w-inline-block"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg"
                     loading="lazy"
@@ -781,14 +849,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="cases-text cc-auto">
+                <div
+                  class="cases-text cc-auto"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div class="u-ts-2">Sable Website</div>
                 </div></a
               ><link rel="prerender" href="/cases/sable-website" /><a
                 data-mouse-class="cc-text"
                 href="mailto:hello@basis.work?subject=Enquiry"
                 class="cases-card cc-auto w-inline-block w-condition-invisible"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg"
                     loading="lazy"
@@ -840,7 +916,11 @@
                 data-mouse-class="cc-text"
                 href="/cases/seen-brand"
                 class="cases-card cc-auto w-inline-block"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg"
                     loading="lazy"
@@ -870,14 +950,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="cases-text cc-auto">
+                <div
+                  class="cases-text cc-auto"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div class="u-ts-2">Seen Brand</div>
                 </div></a
               ><link rel="prerender" href="/cases/seen-brand" /><a
                 data-mouse-class="cc-text"
                 href="mailto:hello@basis.work?subject=Enquiry"
                 class="cases-card cc-auto w-inline-block w-condition-invisible"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg"
                     loading="lazy"
@@ -931,7 +1019,11 @@
                 data-mouse-class="cc-text"
                 href="/cases/sable-app"
                 class="cases-card cc-auto w-inline-block"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg"
                     loading="lazy"
@@ -959,14 +1051,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="cases-text cc-auto">
+                <div
+                  class="cases-text cc-auto"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <div class="u-ts-2">Sable App</div>
                 </div></a
               ><link rel="prerender" href="/cases/sable-app" /><a
                 data-mouse-class="cc-text"
                 href="mailto:hello@basis.work?subject=Enquiry"
                 class="cases-card cc-auto w-inline-block w-condition-invisible"
-                ><div class="cases-assets">
+                ><div
+                  class="cases-assets"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
                   <img
                     src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg"
                     loading="lazy"
@@ -1146,21 +1246,19 @@
       <a
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
-        href="/design-trial"
         class="section cc-pre-footer w-inline-block"
         ><div class="iframe-video_wrapper">
-          <iframe
-            class="iframe-video_iframe"
+          <video
+            class="video-cover"
             width="100%"
             height="100%"
-            style="overflow: hidden"
-            frameborder="0"
-            scrolling="no"
-            allow="fullscreen"
-            src="https://app.vidzflow.com/v/B3TEbIzupw?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-            title="Trial 1"
-            loading="lazy"
-          ></iframe>
+            autoplay
+            loop
+            muted
+          >
+            <source :src="getVideoUrl('home/knife1-1.mp4')" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div class="iframe-video_blocker"></div>
         </div>
         <div class="pre-footer_gradient"></div>
@@ -1264,6 +1362,9 @@
 import { useI18n } from "@/hooks/use-i18n";
 import { onMounted } from "vue";
 import Footer from "@/widgets/layout/footer.vue";
+import { getVideoUrl } from "@/unit/getVideoUrl";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
   components: {
     Footer,
@@ -1271,6 +1372,7 @@ export default {
   setup() {
     const { t } = useI18n();
     onMounted(() => {
+      AOS.init();
       console.log("index");
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -1290,6 +1392,7 @@ export default {
     });
     return {
       t,
+      getVideoUrl,
     };
   },
 };
