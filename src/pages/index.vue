@@ -500,13 +500,6 @@
                         <div
                           data-mouse-class="cc-text"
                           class="card is-link w-inline-block"
-                          style="
-                            transform: translate3d(0px, 0%, 0px)
-                              scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                              rotateZ(0deg) skew(0deg, 0deg);
-                            transform-style: preserve-3d;
-                            opacity: 1;
-                          "
                         >
                           <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
@@ -533,15 +526,7 @@
                             data-aos-duration="700"
                           >
                             <div class="u-overflow-hidden">
-                              <div
-                                class="card-up"
-                                style="
-                                  transform: translate3d(0px, 0%, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                  transform-style: preserve-3d;
-                                "
-                              >
+                              <div class="card-up">
                                 <h4 class="u-ts-4">Skyart3725全景</h4>
                               </div>
                             </div>
@@ -567,13 +552,6 @@
                       data-aos="fade-up"
                       data-aos-duration="700"
                       class="card is-link w-inline-block"
-                      style="
-                        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                          skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                        opacity: 1;
-                      "
                     >
                       <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
@@ -600,15 +578,7 @@
                         data-aos-duration="700"
                       >
                         <div class="u-overflow-hidden">
-                          <div
-                            class="card-up"
-                            style="
-                              transform: translate3d(0px, 0%, 0px)
-                                scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                rotateZ(0deg) skew(0deg, 0deg);
-                              transform-style: preserve-3d;
-                            "
-                          >
+                          <div class="card-up">
                             <div class="card-large_text">
                               <h4 class="u-ts-4">多功能茶席空間</h4>
                             </div>
@@ -659,17 +629,8 @@
                   </div></a
                 >
               </div>
-              <div
-                class="btn-item cc-2"
-                style="
-                  opacity: 1;
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
+              <div class="btn-item cc-2">
                 <a
-                  href="/design-trial"
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -692,17 +653,14 @@
   <section class="section">
     <div class="section-title_component">
       <div class="container">
-        <div class="section-title_wrapper">
-          <div class="section-title_dot" style="opacity: 1"></div>
+        <div
+          class="section-title_wrapper"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <div class="section-title_dot"></div>
           <div class="u-overflow-hidden">
-            <div
-              class="section-title_title"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="section-title_title">
               <h2 class="u-ts-4">定香人文</h2>
             </div>
           </div>
@@ -718,11 +676,6 @@
                 class="logomark w-embed"
                 data-aos="fade-up"
                 data-aos-duration="700"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
               >
                 <img :src="getImageUrl('logo.png')" alt="" />
               </div>
@@ -751,14 +704,7 @@
                 data-aos-duration="700"
                 data-aos-delay="150"
               >
-                <div
-                  class="list-content cc-2"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-2">
                   <h3 class="u-tc-caps">藝術品經紀</h3>
                 </div>
               </li>
@@ -768,14 +714,7 @@
                 data-aos-duration="700"
                 data-aos-delay="200"
               >
-                <div
-                  class="list-content cc-3"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-3">
                   <h3 class="u-tc-caps">藝術品拍賣</h3>
                 </div>
               </li>
@@ -785,14 +724,7 @@
                 data-aos-duration="700"
                 data-aos-delay="250"
               >
-                <div
-                  class="list-content cc-4"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-4">
                   <h3 class="u-tc-caps">台灣高山冠軍茶</h3>
                 </div>
               </li>
@@ -802,14 +734,7 @@
                 data-aos-duration="700"
                 data-aos-delay="300"
               >
-                <div
-                  class="list-content cc-5"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-5">
                   <h3 class="u-tc-caps">雲南古樹普洱茶</h3>
                 </div>
               </li>
@@ -819,14 +744,7 @@
                 data-aos-duration="700"
                 data-aos-delay="350"
               >
-                <div
-                  class="list-content cc-6"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-6">
                   <h3 class="u-tc-caps">精品咖啡</h3>
                 </div>
               </li>
@@ -836,14 +754,7 @@
                 data-aos-duration="700"
                 data-aos-delay="400"
               >
-                <div
-                  class="list-content cc-7"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-7">
                   <h3 class="u-tc-caps">天幕茶碗</h3>
                 </div>
               </li>
@@ -853,28 +764,13 @@
                 data-aos-duration="700"
                 data-aos-delay="450"
               >
-                <div
-                  class="list-content cc-8"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
+                <div class="list-content cc-8">
                   <h3 class="u-tc-caps">典藏名酒</h3>
                 </div>
               </li>
             </ul>
             <div class="btn-group">
-              <div
-                class="btn-item cc-1"
-                style="
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                  opacity: 1;
-                "
-              >
+              <div class="btn-item cc-1">
                 <a
                   href="/about"
                   class="btn cc-secondary w-inline-block"

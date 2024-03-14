@@ -1,5 +1,5 @@
-var e,
-  a,
+var a,
+  e,
   t,
   s,
   l,
@@ -11,16 +11,16 @@ var e,
   c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
-  m = (e, a, t) =>
-    a in e
-      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t })
-      : (e[a] = t),
-  f = (e, a) => {
-    for (var t in a || (a = {})) p.call(a, t) && m(e, t, a[t]);
-    if (c) for (var t of c(a)) v.call(a, t) && m(e, t, a[t]);
-    return e;
+  m = (a, e, t) =>
+    e in a
+      ? r(a, e, { enumerable: !0, configurable: !0, writable: !0, value: t })
+      : (a[e] = t),
+  u = (a, e) => {
+    for (var t in e || (e = {})) p.call(e, t) && m(a, t, e[t]);
+    if (c) for (var t of c(e)) v.call(e, t) && m(a, t, e[t]);
+    return a;
   },
-  u = (e, a) => n(e, d(a));
+  f = (a, e) => n(a, d(e));
 import {
   o as g,
   c as b,
@@ -60,62 +60,62 @@ import {
   I as $,
   J,
   T as Q,
-  K as ee,
-  L as ae,
-  M as te,
-  N as se,
-  O as le,
-  P as ie,
-  Q as oe,
-  R as re,
-  U as ne,
-  V as de,
-  W as ce,
-  X as pe,
-  Y as ve,
-  Z as me,
-  _ as fe,
-  $ as ue,
-  a0 as ge,
-  a1 as be,
-  a2 as he,
-  a3 as ye,
-  a4 as we,
-  a5 as _e,
-  a6 as xe,
+  K as aa,
+  L as ea,
+  M as ta,
+  N as sa,
+  O as la,
+  P as ia,
+  Q as oa,
+  R as ra,
+  U as na,
+  V as da,
+  W as ca,
+  X as pa,
+  Y as va,
+  Z as ma,
+  _ as ua,
+  $ as fa,
+  a0 as ga,
+  a1 as ba,
+  a2 as ha,
+  a3 as ya,
+  a4 as wa,
+  a5 as _a,
+  a6 as xa,
 } from "./vendor.fc0dc942.js";
 !(function () {
-  const e = document.createElement("link").relList;
-  if (!(e && e.supports && e.supports("modulepreload"))) {
-    for (const e of document.querySelectorAll('link[rel="modulepreload"]'))
-      a(e);
-    new MutationObserver((e) => {
-      for (const t of e)
+  const a = document.createElement("link").relList;
+  if (!(a && a.supports && a.supports("modulepreload"))) {
+    for (const a of document.querySelectorAll('link[rel="modulepreload"]'))
+      e(a);
+    new MutationObserver((a) => {
+      for (const t of a)
         if ("childList" === t.type)
-          for (const e of t.addedNodes)
-            "LINK" === e.tagName && "modulepreload" === e.rel && a(e);
+          for (const a of t.addedNodes)
+            "LINK" === a.tagName && "modulepreload" === a.rel && e(a);
     }).observe(document, { childList: !0, subtree: !0 });
   }
-  function a(e) {
-    if (e.ep) return;
-    e.ep = !0;
-    const a = (function (e) {
-      const a = {};
+  function e(a) {
+    if (a.ep) return;
+    a.ep = !0;
+    const e = (function (a) {
+      const e = {};
       return (
-        e.integrity && (a.integrity = e.integrity),
-        e.referrerpolicy && (a.referrerPolicy = e.referrerpolicy),
-        "use-credentials" === e.crossorigin
-          ? (a.credentials = "include")
-          : "anonymous" === e.crossorigin
-          ? (a.credentials = "omit")
-          : (a.credentials = "same-origin"),
-        a
+        a.integrity && (e.integrity = a.integrity),
+        a.referrerpolicy && (e.referrerPolicy = a.referrerpolicy),
+        "use-credentials" === a.crossorigin
+          ? (e.credentials = "include")
+          : "anonymous" === a.crossorigin
+          ? (e.credentials = "omit")
+          : (e.credentials = "same-origin"),
+        e
       );
-    })(e);
-    fetch(e.href, a);
+    })(a);
+    fetch(a.href, e);
   }
 })();
-const ke = (e) =>
+const ka = (a) =>
     new URL(
       {
         "../assets/images/favicon.png":
@@ -157,41 +157,41 @@ const ke = (e) =>
         "../assets/images/home/opening/7.jpg": "./assets/7.8d695fe6.jpg",
         "../assets/images/home/opening/8.jpg": "./assets/8.107a61ce.jpg",
         "../assets/images/home/opening/9.jpg": "./assets/9.e0cc08c9.jpg",
-      }[`../assets/images/${e}`],
+      }[`../assets/images/${a}`],
       self.location
     ).href,
-  je = { class: "icon" },
-  Ce = { class: "svg_box" },
-  qe = ["src"];
-var Se = (e, a) => {
-  const t = e.__vccOpts || e;
-  for (const [s, l] of a) t[s] = l;
+  ja = { class: "icon" },
+  Ca = { class: "svg_box" },
+  qa = ["src"];
+var Sa = (a, e) => {
+  const t = a.__vccOpts || a;
+  for (const [s, l] of e) t[s] = l;
   return t;
 };
-var ze = Se(
+var za = Sa(
   {
     components: {
       Loading: {
         props: { mode: String },
-        setup: (e) => (a, t) => (
+        setup: (a) => (e, t) => (
           g(),
           b(
             _,
             null,
             [
-              h("div", { class: y(["mask", e.mode]) }, null, 2),
+              h("div", { class: y(["mask", a.mode]) }, null, 2),
               h(
                 "div",
-                { class: y(["bg", e.mode]) },
+                { class: y(["bg", a.mode]) },
                 [
-                  h("div", je, [
-                    h("div", Ce, [
+                  h("div", ja, [
+                    h("div", Ca, [
                       h(
                         "img",
-                        { src: w(ke)("favicon.png"), alt: "" },
+                        { src: w(ka)("favicon.png"), alt: "" },
                         null,
                         8,
-                        qe
+                        qa
                       ),
                     ]),
                   ]),
@@ -205,41 +205,41 @@ var ze = Se(
       },
     },
     setup() {
-      const e = x(),
-        a = k(!1),
+      const a = x(),
+        e = k(!1),
         t = k(""),
         s = k("leave"),
         l = j(() => "stop" === s.value),
         i = j(() => {
-          if (L(e.state.route.path)) return null;
-          return B("layout-error")(I(["meta", "layout"], e.state.route));
+          if (L(a.state.route.path)) return null;
+          return B("layout-error")(I(["meta", "layout"], a.state.route));
         });
       return (
         C(
-          () => e.state.route,
+          () => a.state.route,
           (l) => {
             t.value !== l &&
-              ((a.value = !0),
+              ((e.value = !0),
               setTimeout(() => {
-                (a.value = !1), (s.value = "enter");
+                (e.value = !1), (s.value = "enter");
               }, 3500)),
-              (t.value = e.state.route.path);
+              (t.value = a.state.route.path);
           }
         ),
-        C(a, (a) => {
-          e.commit("app/systm/Loading", a);
+        C(e, (e) => {
+          a.commit("app/systm/Loading", e);
         }),
         q(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: i, isShowLoading: a, mode: s, isError: l }
+        { layout: i, isShowLoading: e, mode: s, isError: l }
       );
     },
   },
   [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         const o = S("router-view"),
           r = S("the-popup"),
           n = S("Loading");
@@ -253,7 +253,7 @@ var ze = Se(
               z(A(s.layout), null, {
                 default: O(() => [
                   T(o, null, {
-                    default: O(({ Component: e }) => [(g(), z(A(e)))]),
+                    default: O(({ Component: a }) => [(g(), z(A(a)))]),
                     _: 1,
                   }),
                 ]),
@@ -272,7 +272,7 @@ var ze = Se(
     ["__scopeId", "data-v-6ef0256d"],
   ]
 );
-const Oe = {
+const Oa = {
     "../locales/en/app.js": Object.freeze(
       Object.defineProperty(
         {
@@ -481,27 +481,27 @@ const Oe = {
       )
     ),
   },
-  Ae = {};
-for (let Vo in Oe) {
-  const e = Vo.replace("../locales/", "").toLowerCase().replace(".js", ""),
-    [a, ...t] = e.split("/"),
+  Aa = {};
+for (let Vo in Oa) {
+  const a = Vo.replace("../locales/", "").toLowerCase().replace(".js", ""),
+    [e, ...t] = a.split("/"),
     s = P(".", t),
-    l = Oe[Vo].default;
-  Ae[a] = M((e, a) => D(e, { [`${s}.${a}`]: l[a] }), Ae[a] || {}, F(l));
+    l = Oa[Vo].default;
+  Aa[e] = M((a, e) => D(a, { [`${s}.${e}`]: l[e] }), Aa[e] || {}, F(l));
 }
-const Te = (() => {
-    var e, a, t, s;
+const Ta = (() => {
+    var a, e, t, s;
     const l = U.get("locale");
     if (l) return l;
     let i =
       null !=
       (s =
         null !=
-        (t = null == (e = navigator.language) ? void 0 : e.toLowerCase())
+        (t = null == (a = navigator.language) ? void 0 : a.toLowerCase())
           ? t
-          : null == (a = navigator.userLanguage)
+          : null == (e = navigator.userLanguage)
           ? void 0
-          : a.toLowerCase())
+          : e.toLowerCase())
         ? s
         : null;
     return i
@@ -510,23 +510,23 @@ const Te = (() => {
           : i.includes("zh")
           ? (i = "zh-tw")
           : i.includes("en") && (i = "en"),
-        (i = i in Ae ? i : {}.VITE_LOCALE),
+        (i = i in Aa ? i : {}.VITE_LOCALE),
         i)
       : {}.VITE_LOCALE;
   })(),
-  Ee = V.exports.createI18n({
-    initLocale: Te,
-    fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
-    messages: Ae,
+  Ea = V.exports.createI18n({
+    initLocale: Ta,
+    fallbackLocale: null != (a = {}.VITE_DEFAULT_LANG) ? a : "zh-tw",
+    messages: Aa,
   });
-var Le = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ee }, Symbol.toStringTag, {
+var La = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ea }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(H.toast = function (e) {
+(H.toast = function (a) {
   return this.fire({
-    title: e,
+    title: a,
     toast: !0,
     showConfirmButton: !1,
     customClass: "swal2-toast",
@@ -534,23 +534,23 @@ var Le = Object.freeze(
     hideClass: { popup: "animate__animated animate__fadeOutDown" },
     timer: 2e3,
     background: "transparent",
-    didOpen: (e) => {
-      e.addEventListener("click", H.close);
+    didOpen: (a) => {
+      a.addEventListener("click", H.close);
     },
   });
 }),
   (H.alert = function ({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
-    confirmButtonText: i = Ee.t("button.confirm"),
+    confirmButtonText: i = Ea.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: l,
       customClass: `swal2-alert ${o}`,
       heightAuto: s,
@@ -571,15 +571,15 @@ var Le = Object.freeze(
     });
   }),
   (H.confirm = function ({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     html: t,
     confirmCallback: s = null,
     heightAuto: l = !1,
   }) {
     return this.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: t,
       customClass: "swal2-confirm",
       heightAuto: l,
@@ -591,7 +591,7 @@ var Le = Object.freeze(
       },
     });
   });
-const Be = H.mixin({
+const Ba = H.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -599,62 +599,62 @@ const Be = H.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Ee.t("button.confirm"),
-  cancelButtonText: Ee.t("button.cancel"),
-  didOpen(e) {
-    const a = e.querySelector(".swal2-cancel");
-    e.querySelector(".swal2-confirm").blur(), a.blur();
+  confirmButtonText: Ea.t("button.confirm"),
+  cancelButtonText: Ea.t("button.cancel"),
+  didOpen(a) {
+    const e = a.querySelector(".swal2-cancel");
+    a.querySelector(".swal2-confirm").blur(), e.blur();
   },
 });
-class Ie {
+class Ia {
   constructor() {
     return U;
   }
 }
-class Pe {
+class Pa {
   constructor() {
-    this.provider = new Ie();
+    this.provider = new Ia();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Pe.prototype.install = function (e) {
-  const a = "storage-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+Pa.prototype.install = function (a) {
+  const e = "storage-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Me = new Pe(),
-  De = Object.freeze(
+var Ma = new Pa(),
+  Da = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Pe, default: Me },
+      { __proto__: null, StorageService: Pa, default: Ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Fe = () => {
-    const e = V.exports.useI18n(),
-      a = k({}),
+const Fa = () => {
+    const a = V.exports.useI18n(),
+      e = k({}),
       t = (s, l = {}) => {
         const [i, ...o] = N(".", s);
-        return i in a.value ? t(`${a.value[i]}.${P(".", o)}`, l) : e.t(s, l);
+        return i in e.value ? t(`${e.value[i]}.${P(".", o)}`, l) : a.t(s, l);
       };
     return {
-      locale: e.locale,
-      change: (a) => {
-        e.setLocale(a), Me.provider.set("locale", a);
+      locale: a.locale,
+      change: (e) => {
+        a.setLocale(e), Ma.provider.set("locale", e);
       },
-      setPrefix: (e) => {
-        a.value = "string" == typeof e ? { $current: e } : f(f({}, a.value), e);
+      setPrefix: (a) => {
+        e.value = "string" == typeof a ? { $current: a } : u(u({}, e.value), a);
       },
       t: t,
-      addMessages: e.addMessages,
+      addMessages: a.addMessages,
     };
   },
-  Ue = ["onMouseenter", "onClick"],
-  Ve = h("div", { class: "line" }, null, -1),
-  He = { class: "list_style" },
-  Ne = { class: "nav_link-top" },
-  Xe = h(
+  Ua = ["onMouseenter", "onClick"],
+  Va = h("div", { class: "line" }, null, -1),
+  Ha = { class: "list_style" },
+  Na = { class: "nav_link-top" },
+  Xa = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -663,10 +663,10 @@ const Fe = () => {
     null,
     -1
   ),
-  Re = { class: "nav_link-title" },
-  Ze = { class: "u-ts-3" },
-  Ye = { class: "nav_link-p" },
-  We = h(
+  Ra = { class: "nav_link-title" },
+  Za = { class: "u-ts-3" },
+  Ya = { class: "nav_link-p" },
+  Wa = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -675,12 +675,12 @@ const Fe = () => {
     null,
     -1
   ),
-  Ge = h("div", { id: "pink_mask" }, null, -1),
-  Ke = {
+  Ga = h("div", { id: "pink_mask" }, null, -1),
+  Ka = {
     props: ["isOpen"],
     emits: ["toggleOpen"],
-    setup(e, { emit: a }) {
-      const t = e,
+    setup(a, { emit: e }) {
+      const t = a,
         s = k(1),
         l = k(!0),
         i = X(),
@@ -724,7 +724,7 @@ const Fe = () => {
           }
         }),
         d = k(25);
-      return (e, c) => (
+      return (a, c) => (
         g(),
         b(
           "div",
@@ -737,32 +737,32 @@ const Fe = () => {
                 null,
                 R(
                   o.value,
-                  (e, l) => (
+                  (a, l) => (
                     g(),
                     b(
                       "li",
                       {
-                        key: e,
-                        style: Z(`--i: ${e}`),
-                        onMouseenter: (e) =>
-                          ((e) => {
-                            s.value = e;
+                        key: a,
+                        style: Z(`--i: ${a}`),
+                        onMouseenter: (a) =>
+                          ((a) => {
+                            s.value = a;
                           })(l),
                         onClick: (s) => {
                           return (
-                            (l = e.path),
+                            (l = a.path),
                             i.push(l),
-                            void a("toggleOpen", t.isOpen)
+                            void e("toggleOpen", t.isOpen)
                           );
                           var l;
                         },
                       },
                       [
-                        Ve,
-                        h("div", He, [
-                          h("div", Ne, [
-                            Xe,
-                            h("div", Re, [h("div", Ze, Y(e.title), 1)]),
+                        Va,
+                        h("div", Ha, [
+                          h("div", Na, [
+                            Xa,
+                            h("div", Ra, [h("div", Za, Y(a.title), 1)]),
                           ]),
                           h(
                             "div",
@@ -772,13 +772,13 @@ const Fe = () => {
                                 { active: s.value === l },
                               ]),
                             },
-                            [h("p", Ye, Y(e.content), 1), We],
+                            [h("p", Ya, Y(a.content), 1), Wa],
                             2
                           ),
                         ]),
                       ],
                       44,
-                      Ue
+                      Ua
                     )
                   )
                 ),
@@ -798,28 +798,28 @@ const Fe = () => {
                 4
               ),
             ]),
-            Ge,
+            Ga,
           ],
           2
         )
       );
     },
   },
-  $e = { key: 0 },
-  Je = ["src"],
-  Qe = ["src"],
-  ea = [h("div", null, null, -1), h("div", null, null, -1)],
-  aa = { class: "layout-deafult pb-32" };
-var ta = Se(
+  $a = { key: 0 },
+  Ja = ["src"],
+  Qa = ["src"],
+  ae = [h("div", null, null, -1), h("div", null, null, -1)],
+  ee = { class: "layout-deafult pb-32" };
+var te = Sa(
     {
       components: {
         LayoutHeader: {
-          setup(e) {
-            const a = k(!1),
-              t = (e) => {
-                a.value = !e;
+          setup(a) {
+            const e = k(!1),
+              t = (a) => {
+                e.value = !a;
               };
-            return (e, s) => {
+            return (a, s) => {
               const l = S("router-link");
               return (
                 g(),
@@ -832,7 +832,7 @@ var ta = Se(
                       {
                         class: y([
                           "layout-deafult-header",
-                          { active: a.value },
+                          { active: e.value },
                         ]),
                       },
                       [
@@ -843,29 +843,29 @@ var ta = Se(
                             "aria-current": "page",
                             class: y([
                               "layout-deafult-header-logo",
-                              { "layout-deafult-header-logo--open": a.value },
+                              { "layout-deafult-header-logo--open": e.value },
                             ]),
                             "aria-label": "home",
                           },
                           {
                             default: O(() => [
-                              a.value
+                              e.value
                                 ? (g(),
                                   b(
                                     "img",
-                                    { key: 1, src: w(ke)("logo.png"), alt: "" },
+                                    { key: 1, src: w(ka)("logo.png"), alt: "" },
                                     null,
                                     8,
-                                    Qe
+                                    Qa
                                   ))
                                 : (g(),
-                                  b("div", $e, [
+                                  b("div", $a, [
                                     h(
                                       "img",
-                                      { src: w(ke)("logo.png"), alt: "" },
+                                      { src: w(ka)("logo.png"), alt: "" },
                                       null,
                                       8,
-                                      Je
+                                      Ja
                                     ),
                                   ])),
                             ]),
@@ -879,22 +879,22 @@ var ta = Se(
                           {
                             class: y([
                               "layout-deafult-header-btn",
-                              { "layout-deafult-header-btn--open": a.value },
+                              { "layout-deafult-header-btn--open": e.value },
                             ]),
                             onClick:
-                              s[0] || (s[0] = (e) => (a.value = !a.value)),
+                              s[0] || (s[0] = (a) => (e.value = !e.value)),
                           },
-                          ea,
+                          ae,
                           2
                         ),
                       ],
                       2
                     ),
-                    a.value
+                    e.value
                       ? (g(),
                         z(
-                          Ke,
-                          { key: 0, "is-open": a.value, onToggleOpen: t },
+                          Ka,
+                          { key: 0, "is-open": e.value, onToggleOpen: t },
                           null,
                           8,
                           ["is-open"]
@@ -909,178 +909,178 @@ var ta = Se(
         },
       },
       setup() {
-        const { t: e } = Fe();
-        return { t: e };
+        const { t: a } = Fa();
+        return { t: a };
       },
     },
     [
       [
         "render",
-        function (e, a, t, s, l, i) {
+        function (a, e, t, s, l, i) {
           const o = S("LayoutHeader");
           return (
-            g(), b(_, null, [T(o), h("div", aa, [W(e.$slots, "default")])], 64)
+            g(), b(_, null, [T(o), h("div", ee, [W(a.$slots, "default")])], 64)
           );
         },
       ],
     ]
   ),
-  sa = Object.freeze(
+  se = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ta },
+      { __proto__: null, default: te },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const la = { class: "layout-demo" };
-var ia = Se({ setup() {} }, [
+const le = { class: "layout-demo" };
+var ie = Sa({ setup() {} }, [
   [
     "render",
-    function (e, a, t, s, l, i) {
-      return g(), b("div", la, [W(e.$slots, "default")]);
+    function (a, e, t, s, l, i) {
+      return g(), b("div", le, [W(a.$slots, "default")]);
     },
   ],
 ]);
-const oa = {
-    "../layouts/layout-default.vue": sa,
+const oe = {
+    "../layouts/layout-default.vue": se,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: ia },
+        { __proto__: null, default: ie },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  ra = [];
-for (let Vo in oa) {
-  const e = Vo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  ra.push({ componentName: e, component: oa[Vo].default });
+  re = [];
+for (let Vo in oe) {
+  const a = Vo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  re.push({ componentName: a, component: oe[Vo].default });
 }
-const na = {
-  install: (e) => {
-    ra.forEach((a) => {
-      e.component(a.componentName, a.component);
+const ne = {
+  install: (a) => {
+    re.forEach((e) => {
+      a.component(e.componentName, e.component);
     });
   },
 };
-const da = {
+const de = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
-      const e = X();
+      const a = X();
       return {
         goBack: () => {
-          e.options.history.state.back
-            ? e.back()
-            : e.push({ name: "default-path" });
+          a.options.history.state.back
+            ? a.back()
+            : a.push({ name: "default-path" });
         },
       };
     },
   },
-  ca = {
+  ce = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
-  pa = { class: "font-bold" },
-  va = { class: "absolute right-8 top-6" };
-var ma = Se(da, [
+  pe = { class: "font-bold" },
+  ve = { class: "absolute right-8 top-6" };
+var me = Sa(de, [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         return (
           g(),
-          b("div", ca, [
+          b("div", ce, [
             t.goBackButton
               ? (g(),
                 b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
-                    a[0] || (a[0] = (...e) => s.goBack && s.goBack(...e)),
+                    e[0] || (e[0] = (...a) => s.goBack && s.goBack(...a)),
                 }))
               : E("", !0),
-            h("div", pa, [
-              W(e.$slots, "title", {}, () => [G(Y(t.title), 1)], !0),
+            h("div", pe, [
+              W(a.$slots, "title", {}, () => [G(Y(t.title), 1)], !0),
             ]),
-            h("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
+            h("div", ve, [W(a.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
     ],
     ["__scopeId", "data-v-50981458"],
   ]),
-  fa = Object.freeze(
+  ue = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ma },
+      { __proto__: null, default: me },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ua = () => K("popup-service");
-const ga = {
+const fe = () => K("popup-service");
+const ge = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  ba = { class: "swal2-title", style: { display: "block" } },
-  ha = { class: "swal2-html-container", style: { display: "block" } },
-  ya = { class: "swal2-actions", style: { display: "flex" } };
-var wa = Se({}, [
+  be = { class: "swal2-title", style: { display: "block" } },
+  he = { class: "swal2-html-container", style: { display: "block" } },
+  ye = { class: "swal2-actions", style: { display: "flex" } };
+var we = Sa({}, [
   [
     "render",
-    function (e, a) {
+    function (a, e) {
       return (
         g(),
-        b("div", ga, [
-          h("h2", ba, [W(e.$slots, "title")]),
-          h("div", ha, [W(e.$slots, "content")]),
-          h("div", ya, [W(e.$slots, "actions")]),
+        b("div", ge, [
+          h("h2", be, [W(a.$slots, "title")]),
+          h("div", he, [W(a.$slots, "content")]),
+          h("div", ye, [W(a.$slots, "actions")]),
         ])
       );
     },
   ],
 ]);
-const _a = {
+const _e = {
     key: 0,
     class:
       "fixed z-[1041] inset-0 w-full h-full flex justify-center items-center pointer-events-none",
   },
-  xa = { key: 1 },
-  ka = ["data-timer", "data-end"];
-var ja = Se(
+  xe = { key: 1 },
+  ke = ["data-timer", "data-end"];
+var je = Sa(
   {
-    setup(e) {
-      const a = ua(),
-        t = j(() => a.state),
-        s = (e) => {
+    setup(a) {
+      const e = fe(),
+        t = j(() => e.state),
+        s = (a) => {
           t.value.resolve(
-            f(
+            u(
               { isConfirmed: !1, isDismissed: !1, dismiss: null, result: null },
-              e
+              a
             )
           );
         },
-        l = j(() => (t.value.type, ae(wa))),
+        l = j(() => (t.value.type, ea(we))),
         i = j(() => t.value.BackdropStyle),
         o = k();
       let r = null;
       const n = () => {
         clearTimeout(r), (r = null);
       };
-      C([() => t.value.autoClose, () => t.value.timer], ([e, a]) => {
-        a &&
+      C([() => t.value.autoClose, () => t.value.timer], ([a, e]) => {
+        e &&
           (n(),
           (r = setTimeout(() => {
-            n(), e && d("timer");
-          }, a)));
+            n(), a && d("timer");
+          }, e)));
       });
-      const d = async (e) => {
+      const d = async (a) => {
           if (r) {
             if (!t.value.allowDismissWhenTimerRunning) return;
             n();
           }
           if (o.value && "onDismissed" in o.value) {
             const t = await o.value.onDismissed();
-            t && (s({ isDismissed: !0, dismiss: e, result: t }), a.clear());
-          } else s({ isDismissed: !0, dismiss: e }), a.clear();
+            t && (s({ isDismissed: !0, dismiss: a, result: t }), e.clear());
+          } else s({ isDismissed: !0, dismiss: a }), e.clear();
         },
         c = async () => {
           t.value.allowOutsideClick && d("backdrop");
@@ -1094,23 +1094,23 @@ var ja = Se(
             n();
           }
           if (o.value && "onConfirmed" in o.value) {
-            const e = await o.value.onConfirmed();
-            e && (s({ isConfirmed: !0, result: e }), a.clear());
-          } else s({ isConfirmed: !0 }), a.clear();
+            const a = await o.value.onConfirmed();
+            a && (s({ isConfirmed: !0, result: a }), e.clear());
+          } else s({ isConfirmed: !0 }), e.clear();
         };
-      return (e, a) => (
+      return (a, e) => (
         g(),
-        z(ee, { to: "body" }, [
+        z(aa, { to: "body" }, [
           T(
             Q,
             { name: "popup", duration: "600" },
             {
               default: O(() => {
-                var e;
+                var a;
                 return [
                   w(t).$display
                     ? (g(),
-                      b("div", _a, [
+                      b("div", _e, [
                         (g(),
                         z(
                           A(w(l)),
@@ -1119,9 +1119,9 @@ var ja = Se(
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
-                                  null == (e = w(t))
+                                  null == (a = w(t))
                                     ? void 0
-                                    : e.noEnterAnimation,
+                                    : a.noEnterAnimation,
                               },
                             ]),
                           },
@@ -1140,7 +1140,7 @@ var ja = Se(
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xa, Y(w(t).text), 1)),
+                                  : (g(), b("div", xe, Y(w(t).text), 1)),
                               ]),
                               actions: O(() => [
                                 w(t).showCancelButton
@@ -1188,7 +1188,7 @@ var ja = Se(
                                         },
                                         null,
                                         8,
-                                        ka
+                                        ke
                                       ),
                                     ]),
                                   }
@@ -1238,29 +1238,29 @@ var ja = Se(
   },
   [["__scopeId", "data-v-aca526dc"]]
 );
-const Ca = {
-    "../components/the-header.vue": fa,
+const Ce = {
+    "../components/the-header.vue": ue,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: ja },
+        { __proto__: null, default: je },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  qa = [];
-for (let Vo in Ca) {
-  const e = Vo.replace("../components/", "").toLowerCase().replace(".vue", "");
-  qa.push({ componentName: e, component: Ca[Vo].default });
+  qe = [];
+for (let Vo in Ce) {
+  const a = Vo.replace("../components/", "").toLowerCase().replace(".vue", "");
+  qe.push({ componentName: a, component: Ce[Vo].default });
 }
-const Sa = {
-  install: (e) => {
-    qa.forEach((a) => {
-      e.component(a.componentName, a.component);
+const Se = {
+  install: (a) => {
+    qe.forEach((e) => {
+      a.component(e.componentName, e.component);
     });
   },
 };
-class za {
+class ze {
   constructor() {
     return H.mixin({
       reverseButtons: !0,
@@ -1270,22 +1270,22 @@ class za {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Ee.t("button.confirm"),
-      cancelButtonText: Ee.t("button.cancel"),
-      didOpen(e) {
-        const a = e.querySelector(".swal2-cancel");
-        e.querySelector(".swal2-confirm").blur(), a.blur();
+      confirmButtonText: Ea.t("button.confirm"),
+      cancelButtonText: Ea.t("button.cancel"),
+      didOpen(a) {
+        const e = a.querySelector(".swal2-cancel");
+        a.querySelector(".swal2-confirm").blur(), e.blur();
       },
     });
   }
 }
-class Oa {
+class Oe {
   constructor() {
-    this.provider = new za();
+    this.provider = new ze();
   }
-  toast(e) {
+  toast(a) {
     return this.provider.fire({
-      title: e,
+      title: a,
       toast: !0,
       showConfirmButton: !1,
       customClass: "swal2-toast",
@@ -1293,23 +1293,23 @@ class Oa {
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       timer: 2e3,
       background: "transparent",
-      didOpen: (e) => {
-        e.addEventListener("click", this.provider.close);
+      didOpen: (a) => {
+        a.addEventListener("click", this.provider.close);
       },
     });
   }
   alert({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     willClose: t = null,
     heightAuto: s = !1,
     html: l = !1,
-    confirmButtonText: i = Ee.t("button.confirm"),
+    confirmButtonText: i = Ea.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: l,
       customClass: `swal2-alert ${o}`,
       heightAuto: s,
@@ -1332,16 +1332,16 @@ class Oa {
     });
   }
   confirm({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     html: t,
-    confirmButtonText: s = Ee.t("button.confirm"),
+    confirmButtonText: s = Ea.t("button.confirm"),
     confirmCallback: l = null,
     heightAuto: i = !1,
   }) {
     return this.provider.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: t,
       customClass: "swal2-confirm",
       confirmButtonText: s,
@@ -1358,143 +1358,143 @@ class Oa {
     this.provider.close();
   }
 }
-Oa.prototype.install = function (e) {
-  const a = "alert-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+Oe.prototype.install = function (a) {
+  const e = "alert-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Aa = new Oa(),
-  Ta = Object.freeze(
+var Ae = new Oe(),
+  Te = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Oa, default: Aa },
+      { __proto__: null, AlertService: Oe, default: Ae },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ea {
-  constructor(e, a = {}) {
-    this.instance = te.create(f({ baseURL: e }, a));
+class Ee {
+  constructor(a, e = {}) {
+    this.instance = ta.create(u({ baseURL: a }, e));
   }
   init() {
-    this.instance.defaults.validateStatus = (e) => e >= 200 && e < 300;
+    this.instance.defaults.validateStatus = (a) => a >= 200 && a < 300;
   }
-  use(...e) {
-    e.forEach((e) => {
-      var a;
-      null == (a = e.use) || a.call(e, this.instance);
+  use(...a) {
+    a.forEach((a) => {
+      var e;
+      null == (e = a.use) || e.call(a, this.instance);
     });
   }
 }
-const La = {
-    use(e) {
-      e.interceptors.request.use(
-        function (e) {
-          const a = U.get("token");
-          return a && (e.headers.Authorization = `Bearer ${a}`), e;
+const Le = {
+    use(a) {
+      a.interceptors.request.use(
+        function (a) {
+          const e = U.get("token");
+          return e && (a.headers.Authorization = `Bearer ${e}`), a;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       );
     },
   },
-  Ba = (e, { rejectNil: a, rejectEmpty: t }) =>
+  Be = (a, { rejectNil: e, rejectEmpty: t }) =>
     M(
       (s, l) => {
-        const i = e[l];
-        return (a && L(i)) || (t && se(i)) ? s : le(l, i, s);
+        const i = a[l];
+        return (e && L(i)) || (t && sa(i)) ? s : la(l, i, s);
       },
       {},
-      F(e)
+      F(a)
     ),
-  Ia = {
-    use(e) {
-      e.interceptors.request.use(
-        function (e) {
+  Ie = {
+    use(a) {
+      a.interceptors.request.use(
+        function (a) {
           const {
-            rejectNil: a = !0,
+            rejectNil: e = !0,
             rejectEmpty: t = !1,
             isFormData: s = !1,
-          } = e;
+          } = a;
           if (
-            (e.params &&
-              (e.params = Ba(e.params, { rejectNil: a, rejectEmpty: t })),
-            e.data &&
-              ((e.data = Ba(e.data, { rejectNil: a, rejectEmpty: t })), s))
+            (a.params &&
+              (a.params = Be(a.params, { rejectNil: e, rejectEmpty: t })),
+            a.data &&
+              ((a.data = Be(a.data, { rejectNil: e, rejectEmpty: t })), s))
           ) {
-            const a = new FormData();
-            ie((t) => {
-              e.data[t] instanceof Array
-                ? ie((e) => {
-                    a.append(`${t}[]`, e);
-                  }, e.data[t])
-                : a.append(t, e.data[t]);
-            }, F(e.data)),
-              (e.data = a);
+            const e = new FormData();
+            ia((t) => {
+              a.data[t] instanceof Array
+                ? ia((a) => {
+                    e.append(`${t}[]`, a);
+                  }, a.data[t])
+                : e.append(t, a.data[t]);
+            }, F(a.data)),
+              (a.data = e);
           }
-          return e;
+          return a;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       ),
-        e.interceptors.response.use(
-          async function (e) {
-            return e.data;
+        a.interceptors.response.use(
+          async function (a) {
+            return a.data;
           },
-          function (e) {
-            return Promise.reject(e);
+          function (a) {
+            return Promise.reject(a);
           }
         );
     },
   },
-  Pa = te.create();
-(Pa.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Pa.defaults.validateStatus = (e) => e >= 200 && e < 300);
-const Ma = {
+  Pe = ta.create();
+(Pe.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Pe.defaults.validateStatus = (a) => a >= 200 && a < 300);
+const Me = {
   async "read/marquee"() {
-    const e = await Pa.get("/app/user/news", {
+    const a = await Pe.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Pa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: e.data, withdraw: a.data };
+      e = await Pe.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: a.data, withdraw: e.data };
   },
 };
-const Da = {
-  "set/popup"(e, a) {
-    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
+const De = {
+  "set/popup"(a, e) {
+    a.popupState = f(u({}, e), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(e) {
-    e.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(a) {
+    a.popupState = { $display: !1, $timestamp: -1 };
   },
-  "systm/Loading"(e, a) {
-    e.isLoading = a;
+  "systm/Loading"(a, e) {
+    a.isLoading = e;
   },
 };
-const Fa = {
+const Fe = {
   async "read/marquee"() {
-    const e = await Pa.get("/app/user/news", {
+    const a = await Pe.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Pa.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: e.data, withdraw: a.data };
+      e = await Pe.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: a.data, withdraw: e.data };
   },
 };
-const Ua = {
-  "set/popup"(e, a) {
-    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
+const Ue = {
+  "set/popup"(a, e) {
+    a.popupState = f(u({}, e), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(e) {
-    e.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(a) {
+    a.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Va = {
+const Ve = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ma },
+      { __proto__: null, default: Me },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1504,10 +1504,10 @@ const Va = {
       {
         __proto__: null,
         default: {
-          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
-          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
-          getHadValueTypeFirstItem: (e) => (a) =>
-            e.tips.find((e) => e.type === a && "" !== e.msg),
+          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
+          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
+          getHadValueTypeFirstItem: (a) => (e) =>
+            a.tips.find((a) => a.type === e && "" !== a.msg),
         },
       },
       Symbol.toStringTag,
@@ -1516,7 +1516,7 @@ const Va = {
   ),
   "../store/app/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Da },
+      { __proto__: null, default: De },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1538,7 +1538,7 @@ const Va = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Fa },
+      { __proto__: null, default: Fe },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1548,10 +1548,10 @@ const Va = {
       {
         __proto__: null,
         default: {
-          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
-          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
-          getHadValueTypeFirstItem: (e) => (a) =>
-            e.tips.find((e) => e.type === a && "" !== e.msg),
+          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
+          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
+          getHadValueTypeFirstItem: (a) => (e) =>
+            a.tips.find((a) => a.type === e && "" !== a.msg),
         },
       },
       Symbol.toStringTag,
@@ -1560,7 +1560,7 @@ const Va = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ua },
+      { __proto__: null, default: Ue },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1580,54 +1580,54 @@ const Va = {
     )
   ),
 };
-let Ha = {};
-const Na = (e, a, t) => {
-  const [s, ...l] = e;
+let He = {};
+const Ne = (a, e, t) => {
+  const [s, ...l] = a;
   return l.length
-    ? { [s]: { namespaced: !0, modules: Na(l, a, t) } }
-    : { [s]: { namespaced: !0, [a]: t } };
+    ? { [s]: { namespaced: !0, modules: Ne(l, e, t) } }
+    : { [s]: { namespaced: !0, [e]: t } };
 };
-for (let Vo in Va) {
-  const e = Vo.replace("../store/", "")
+for (let Vo in Ve) {
+  const a = Vo.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Ha = ne(Ha, Na(re(e), oe(e), Va[Vo].default));
+  He = na(He, Ne(ra(a), oa(a), Ve[Vo].default));
 }
-var Xa = Ha;
-const Ra = {},
-  Za = function (e, a) {
-    return a && 0 !== a.length
+var Xe = He;
+const Re = {},
+  Ze = function (a, e) {
+    return e && 0 !== e.length
       ? Promise.all(
-          a.map((e) => {
-            if ((e = `./${e}`) in Ra) return;
-            Ra[e] = !0;
-            const a = e.endsWith(".css"),
-              t = a ? '[rel="stylesheet"]' : "";
-            if (document.querySelector(`link[href="${e}"]${t}`)) return;
+          e.map((a) => {
+            if ((a = `./${a}`) in Re) return;
+            Re[a] = !0;
+            const e = a.endsWith(".css"),
+              t = e ? '[rel="stylesheet"]' : "";
+            if (document.querySelector(`link[href="${a}"]${t}`)) return;
             const s = document.createElement("link");
             return (
-              (s.rel = a ? "stylesheet" : "modulepreload"),
-              a || ((s.as = "script"), (s.crossOrigin = "")),
-              (s.href = e),
+              (s.rel = e ? "stylesheet" : "modulepreload"),
+              e || ((s.as = "script"), (s.crossOrigin = "")),
+              (s.href = a),
               document.head.appendChild(s),
-              a
-                ? new Promise((a, t) => {
-                    s.addEventListener("load", a),
+              e
+                ? new Promise((e, t) => {
+                    s.addEventListener("load", e),
                       s.addEventListener("error", () =>
-                        t(new Error(`Unable to preload CSS for ${e}`))
+                        t(new Error(`Unable to preload CSS for ${a}`))
                       );
                   })
                 : void 0
             );
           })
-        ).then(() => e())
-      : e();
+        ).then(() => a())
+      : a();
   },
-  Ya = { class: "footer" },
-  Wa = { class: "container" },
-  Ga = { class: "row row-justify-center" },
-  Ka = h(
+  Ye = { class: "footer" },
+  We = { class: "container" },
+  Ge = { class: "row row-justify-center" },
+  Ke = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1676,7 +1676,7 @@ const Ra = {},
     ],
     -1
   ),
-  $a = h(
+  $e = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1721,10 +1721,10 @@ const Ra = {},
     ],
     -1
   ),
-  Ja = h("div", { class: "col col-md-hide" }, null, -1),
-  Qa = { class: "col col-lg-4 col-md-12 col-md-first" },
-  et = { href: "/", class: "footer-wordmark w-inline-block" },
-  at = { class: "wordmark w-embed" },
+  Je = h("div", { class: "col col-md-hide" }, null, -1),
+  Qe = { class: "col col-lg-4 col-md-12 col-md-first" },
+  at = { href: "/", class: "footer-wordmark w-inline-block" },
+  et = { class: "wordmark w-embed" },
   tt = ["src"],
   st = h(
     "div",
@@ -1738,18 +1738,18 @@ const Ra = {},
     -1
   ),
   lt = {
-    setup: (e) => (e, a) => (
+    setup: (a) => (a, e) => (
       g(),
-      b("footer", Ya, [
-        h("div", Wa, [
-          h("div", Ga, [
-            Ka,
-            $a,
-            Ja,
-            h("div", Qa, [
-              h("a", et, [
-                h("div", at, [
-                  h("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, tt),
+      b("footer", Ye, [
+        h("div", We, [
+          h("div", Ge, [
+            Ke,
+            $e,
+            Je,
+            h("div", Qe, [
+              h("a", at, [
+                h("div", et, [
+                  h("img", { src: w(ka)("logo.png"), alt: "" }, null, 8, tt),
                 ]),
               ]),
             ]),
@@ -1762,22 +1762,22 @@ const Ra = {},
 const it = {
     components: { Footer: lt },
     setup() {
-      const { t: e } = Fe();
+      const { t: a } = Fa();
       return (
         q(() => {
-          de.init();
-          const e = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              e.isIntersecting
-                ? e.target.classList.add("active")
-                : e.target.classList.remove("active");
+          da.init();
+          const a = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              a.isIntersecting
+                ? a.target.classList.add("active")
+                : a.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((a) => {
-            e.observe(a);
+          document.querySelectorAll(".target_line").forEach((e) => {
+            a.observe(e);
           });
         }),
-        { t: e }
+        { t: a }
       );
     },
   },
@@ -3492,14 +3492,14 @@ const it = {
     ],
     -1
   ),
-  pt = ce(
+  pt = ca(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   );
-var vt = Se(it, [
+var vt = Sa(it, [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         const o = S("Footer");
         return g(), b(_, null, [ot, rt, nt, dt, ct, pt, T(o)], 64);
       },
@@ -3512,30 +3512,30 @@ var vt = Se(it, [
       { value: "Module" }
     )
   );
-const ft = {
+const ut = {
     title: "pages.home.nav.about",
     components: { Footer: lt },
     setup() {
-      const { t: e } = Fe();
+      const { t: a } = Fa();
       return (
         q(() => {
-          de.init();
-          const e = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              e.isIntersecting
-                ? e.target.classList.add("active")
-                : e.target.classList.remove("active");
+          da.init();
+          const a = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              a.isIntersecting
+                ? a.target.classList.add("active")
+                : a.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((a) => {
-            e.observe(a);
+          document.querySelectorAll(".target_line").forEach((e) => {
+            a.observe(e);
           });
         }),
-        { t: e }
+        { t: a }
       );
     },
   },
-  ut = ((e) => (pe("data-v-e64ae5a2"), (e = e()), ve(), e))(() =>
+  ft = ((a) => (pa("data-v-e64ae5a2"), (a = a()), va(), a))(() =>
     h(
       "div",
       { class: "about" },
@@ -3853,12 +3853,12 @@ const ft = {
       -1
     )
   );
-var gt = Se(ft, [
+var gt = Sa(ut, [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         const o = S("Footer");
-        return g(), b(_, null, [ut, T(o, { class: "mobile-show" })], 64);
+        return g(), b(_, null, [ft, T(o, { class: "mobile-show" })], 64);
       },
     ],
     ["__scopeId", "data-v-e64ae5a2"],
@@ -3873,32 +3873,32 @@ var gt = Se(ft, [
 const ht = {
     layout: "layout-demo",
     setup() {
-      const e = ua(),
-        { t: a, locale: t, setPrefix: s, change: l } = Fe();
+      const a = fe(),
+        { t: e, locale: t, setPrefix: s, change: l } = Fa();
       s({ $current: "pages.demo" });
       const i = X(),
         o = K("alert-service"),
-        r = me({ current: t.value || "zh-tw" });
+        r = ma({ current: t.value || "zh-tw" });
       return (
         q(() => {}),
         {
-          t: a,
+          t: e,
           lang: r,
           toHome: () => {
             i.push("/home");
           },
           swalModal: () => {
             o.alert({
-              title: a("$current.modal.swal.title"),
-              text: a("$current.modal.swal"),
+              title: e("$current.modal.swal.title"),
+              text: e("$current.modal.swal"),
             });
           },
           changeLang: () => {
-            const e = "zh-tw" === r.current ? "en" : "zh-tw";
-            (r.current = e), l(e);
+            const a = "zh-tw" === r.current ? "en" : "zh-tw";
+            (r.current = a), l(a);
           },
           popupModal: async () => {
-            await e.modal({ title: "popup", text: "this a popup" });
+            await a.modal({ title: "popup", text: "this a popup" });
           },
         }
       );
@@ -3921,10 +3921,10 @@ const ht = {
   At = { class: "name" },
   Tt = h("input", { type: "radio", name: "radio" }, null, -1),
   Et = { class: "name" };
-var Lt = Se(ht, [
+var Lt = Sa(ht, [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         return (
           g(),
           b("div", yt, [
@@ -3937,8 +3937,8 @@ var Lt = Se(ht, [
                     {
                       class: "toggle",
                       onClick:
-                        a[0] ||
-                        (a[0] = (...e) => s.changeLang && s.changeLang(...e)),
+                        e[0] ||
+                        (e[0] = (...a) => s.changeLang && s.changeLang(...a)),
                     },
                     kt
                   ),
@@ -3953,7 +3953,7 @@ var Lt = Se(ht, [
                   {
                     class: "radio",
                     onClick:
-                      a[1] || (a[1] = (...e) => s.toHome && s.toHome(...e)),
+                      e[1] || (e[1] = (...a) => s.toHome && s.toHome(...a)),
                   },
                   [St, h("span", zt, Y(s.t("$current.router.link")), 1)]
                 ),
@@ -3962,8 +3962,8 @@ var Lt = Se(ht, [
                   {
                     class: "radio",
                     onClick:
-                      a[2] ||
-                      (a[2] = (...e) => s.swalModal && s.swalModal(...e)),
+                      e[2] ||
+                      (e[2] = (...a) => s.swalModal && s.swalModal(...a)),
                   },
                   [Ot, h("span", At, Y(s.t("$current.modal.swal")), 1)]
                 ),
@@ -3972,8 +3972,8 @@ var Lt = Se(ht, [
                   {
                     class: "radio",
                     onClick:
-                      a[3] ||
-                      (a[3] = (...e) => s.popupModal && s.popupModal(...e)),
+                      e[3] ||
+                      (e[3] = (...a) => s.popupModal && s.popupModal(...a)),
                   },
                   [Tt, h("span", Et, Y(s.t("$current.popup.use")), 1)]
                 ),
@@ -3991,7 +3991,7 @@ var Lt = Se(ht, [
       { value: "Module" }
     )
   );
-const It = (e) =>
+const It = (a) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -4001,28 +4001,28 @@ const It = (e) =>
         "../assets/video/home/knife2-3.mp4": "./assets/knife2-3.db814c22.mp4",
         "../assets/video/home/knife2-4.mp4": "./assets/knife2-4.0d587ad1.mp4",
         "../assets/video/home/tea_1.mp4": "./assets/tea_1.8e120b16.mp4",
-      }[`../assets/video/${e}`],
+      }[`../assets/video/${a}`],
       self.location
     ).href,
   Pt = {
     components: { Footer: lt },
     setup() {
-      const { t: e } = Fe();
+      const { t: a } = Fa();
       return (
         q(() => {
-          de.init();
-          const e = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              e.isIntersecting
-                ? e.target.classList.add("active")
-                : e.target.classList.remove("active");
+          da.init();
+          const a = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              a.isIntersecting
+                ? a.target.classList.add("active")
+                : a.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((a) => {
-            e.observe(a);
+          document.querySelectorAll(".target_line").forEach((e) => {
+            a.observe(e);
           });
         }),
-        { t: e, getVideoUrl: It }
+        { t: a, getVideoUrl: It }
       );
     },
   },
@@ -4041,7 +4041,7 @@ const It = (e) =>
   Ht = ["src"],
   Nt = G(" Your browser does not support the video tag. "),
   Xt = h("div", { class: "iframe-video_blocker" }, null, -1),
-  Rt = ce(
+  Rt = ca(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
@@ -5311,12 +5311,12 @@ const It = (e) =>
     ],
     -1
   ),
-  Qt = ce(
+  Qt = ca(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  es = { class: "pre-footer" },
-  as = {
+  as = { class: "pre-footer" },
+  es = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
@@ -5333,14 +5333,14 @@ const It = (e) =>
   ls = ["src"],
   is = G(" Your browser does not support the video tag. "),
   os = h("div", { class: "iframe-video_blocker" }, null, -1),
-  rs = ce(
+  rs = ca(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ns = Se(Pt, [
+var ns = Sa(Pt, [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         const o = S("Footer");
         return (
           g(),
@@ -5380,8 +5380,8 @@ var ns = Se(Pt, [
               Jt,
               Qt,
               h("div", null, [
-                h("aside", es, [
-                  h("a", as, [
+                h("aside", as, [
+                  h("a", es, [
                     h("div", ts, [
                       h("video", ss, [
                         h(
@@ -5420,7 +5420,7 @@ var ns = Se(Pt, [
 const cs = ["data-index"],
   ps = ["src"],
   vs = [
-    ce(
+    ca(
       '<div class="btn-text-wrap"><div class="btn-text cc-scroll">請往下滑</div><div class="btn-text cc-bottom cc-scroll">請往下滑</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
@@ -5429,9 +5429,9 @@ const ms = {
   components: {
     Footer: lt,
     View: {
-      setup(e) {
-        const a = x(),
-          t = me({ x: 0, y: 0 }),
+      setup(a) {
+        const e = x(),
+          t = ma({ x: 0, y: 0 }),
           s = k([
             {
               url: "home/opening/1.jpg",
@@ -5604,13 +5604,13 @@ const ms = {
             rootMargin: "0px",
             threshold: Array(100)
               .fill()
-              .map((e, a) => 0.01 * a),
+              .map((a, e) => 0.01 * e),
           },
-          o = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              var a, t;
-              const { intersectionRatio: l, target: i } = e,
-                o = null == (a = i.dataset) ? void 0 : a.index;
+          o = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              var e, t;
+              const { intersectionRatio: l, target: i } = a,
+                o = null == (e = i.dataset) ? void 0 : e.index;
               if ("img" === (null == (t = i.dataset) ? void 0 : t.item))
                 s.value[o].isEnter = !(l < 0.4);
               else
@@ -5619,26 +5619,26 @@ const ms = {
             });
           }, i),
           r = () => {
-            const e = document.getElementById("studio");
-            if (e) {
-              const a = e.offsetTop;
-              window.scrollTo({ top: a, behavior: "smooth" });
+            const a = document.getElementById("studio");
+            if (a) {
+              const e = a.offsetTop;
+              window.scrollTo({ top: e, behavior: "smooth" });
             }
           };
         C(
-          () => a.state.app.isLoading,
-          (e) => {
-            if (((l.value = !e), e)) {
-              ((e) => {
-                for (const a of e) o.unobserve(a);
+          () => e.state.app.isLoading,
+          (a) => {
+            if (((l.value = !a), a)) {
+              ((a) => {
+                for (const e of a) o.unobserve(e);
               })([
                 ...document.querySelectorAll(".img-wrap"),
                 document.querySelector(".btn-scroll"),
               ]);
             } else
-              fe(() => {
-                ((e) => {
-                  for (const a of e) o.observe(a);
+              ua(() => {
+                ((a) => {
+                  for (const e of a) o.observe(e);
                 })([
                   ...document.querySelectorAll(".img-wrap"),
                   document.querySelector(".btn-scroll"),
@@ -5652,9 +5652,9 @@ const ms = {
           };
         return (
           q(() => {
-            d(), window.addEventListener("resize", d), de.init();
+            d(), window.addEventListener("resize", d), da.init();
           }),
-          (e, a) => (
+          (a, e) => (
             g(),
             b(
               _,
@@ -5665,16 +5665,16 @@ const ms = {
                   {
                     class: "view",
                     onMousemove:
-                      a[0] ||
-                      (a[0] = (e) =>
-                        ((e) => {
+                      e[0] ||
+                      (e[0] = (a) =>
+                        ((a) => {
                           if (window.innerWidth > 576) {
-                            const a = window.innerWidth / 2,
+                            const e = window.innerWidth / 2,
                               s = window.innerHeight / 2;
-                            (t.x = ((a - e.clientX) / 100) * 3),
-                              (t.y = ((s - e.clientY) / 100) * 3);
+                            (t.x = ((e - a.clientX) / 100) * 3),
+                              (t.y = ((s - a.clientY) / 100) * 3);
                           }
-                        })(e)),
+                        })(a)),
                   },
                   [
                     l.value
@@ -5700,38 +5700,38 @@ const ms = {
                               null,
                               R(
                                 s.value,
-                                (e, a) => (
+                                (a, e) => (
                                   g(),
                                   b(
                                     "div",
                                     {
                                       class: "img-wrap home-hero_image-placer",
-                                      key: e.url + a,
+                                      key: a.url + e,
                                       style: Z({
-                                        left: n.value ? "unset" : e.css.left,
+                                        left: n.value ? "unset" : a.css.left,
                                         right: n.value
-                                          ? e.css.m_right
+                                          ? a.css.m_right
                                           : "unset",
-                                        top: n.value ? e.css.m_top : e.css.top,
-                                        animation: e.isEnter
-                                          ? e.css.enterAnimation
-                                          : e.css.leaveAnimation,
+                                        top: n.value ? a.css.m_top : a.css.top,
+                                        animation: a.isEnter
+                                          ? a.css.enterAnimation
+                                          : a.css.leaveAnimation,
                                       }),
-                                      "data-index": a,
+                                      "data-index": e,
                                       "data-item": "img",
                                     },
                                     [
                                       h(
                                         "img",
                                         {
-                                          src: w(ke)(e.url),
+                                          src: w(ka)(a.url),
                                           style: Z({
                                             width: n.value
-                                              ? e.css.m_width
-                                              : e.css.width,
+                                              ? a.css.m_width
+                                              : a.css.width,
                                             height: n.value
-                                              ? e.css.m_height
-                                              : e.css.height,
+                                              ? a.css.m_height
+                                              : a.css.height,
                                             transform: `translate3d(${
                                               w(t).x / 2
                                             }px,${w(t).y / 2}px, 100px)`,
@@ -5774,35 +5774,35 @@ const ms = {
     },
   },
   setup() {
-    const e = k("");
+    const a = k("");
     return (
       q(() => {
-        document.querySelectorAll(".video-cover").forEach((e) => {
-          e.play();
+        document.querySelectorAll(".video-cover").forEach((a) => {
+          a.play();
         });
-        const e = new IntersectionObserver((e) => {
-          e.forEach((e) => {
-            e.isIntersecting
-              ? e.target.classList.add("active")
-              : e.target.classList.remove("active");
+        const a = new IntersectionObserver((a) => {
+          a.forEach((a) => {
+            a.isIntersecting
+              ? a.target.classList.add("active")
+              : a.target.classList.remove("active");
           });
         });
-        document.querySelectorAll(".target_line").forEach((a) => {
-          e.observe(a);
+        document.querySelectorAll(".target_line").forEach((e) => {
+          a.observe(e);
         });
       }),
-      { a: e, getVideoUrl: It, getImageUrl: ke }
+      { a: a, getVideoUrl: It, getImageUrl: ka }
     );
   },
 };
-de.init();
-const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
-  us = fs(() =>
+da.init();
+const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
+  fs = us(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   gs = { id: "studio", class: "section" },
-  bs = ce(
-    '<div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-027565eb></div></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-027565eb><div class="w-layout-grid pair-grid" data-v-027565eb><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-027565eb><h3 data-animation-element="title" data-v-027565eb><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-027565eb><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>館藏查詢</div><div class="btn-text cc-bottom" data-v-027565eb>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-027565eb><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>預約參觀</div><div class="btn-text cc-bottom" data-v-027565eb>預約參觀</div></div></a></div></div></div></div></div>',
+  bs = ca(
+    '<div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" style="opacity:1;" data-v-a392040e><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-a392040e></div></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-a392040e><div class="w-layout-grid pair-grid" data-v-a392040e><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-a392040e><h3 data-animation-element="title" data-v-a392040e><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-a392040e><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>館藏查詢</div><div class="btn-text cc-bottom" data-v-a392040e>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-a392040e><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>預約參觀</div><div class="btn-text cc-bottom" data-v-a392040e>預約參觀</div></div></a></div></div></div></div></div>',
     2
   ),
   hs = { class: "u-mt-8-75" },
@@ -5898,16 +5898,16 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     },
   },
   Ws = ["src"],
-  Gs = fs(() =>
+  Gs = us(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   Ks = { class: "section" },
-  $s = ce(
-    '<div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-027565eb></div></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>空間預約</h2></div></div></div></div></div>',
+  $s = ca(
+    '<div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" style="opacity:1;" data-v-a392040e><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-a392040e></div></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>空間預約</h2></div></div></div></div></div>',
     1
   ),
   Js = { class: "container" },
-  Qs = fs(() =>
+  Qs = us(() =>
     h(
       "div",
       { "data-animation-element": "group" },
@@ -5947,8 +5947,8 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
       -1
     )
   ),
-  el = { class: "sticky-pair" },
-  al = { class: "w-layout-grid pair-grid" },
+  al = { class: "sticky-pair" },
+  el = { class: "w-layout-grid pair-grid" },
   tl = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
   sl = {
     id: "w-node-_137ddbb9-11b4-d169-f149-eca9f54873e8-af552307",
@@ -5966,15 +5966,7 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  dl = {
-    "data-mouse-class": "cc-text",
-    class: "card is-link w-inline-block",
-    style: {
-      transform: "translate3d(0px, 0%, 0px)",
-      "transform-style": "preserve-3d",
-      opacity: "1",
-    },
-  },
+  dl = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
   cl = { class: "card-image_wrapper" },
   pl = { class: "iframe-video_wrapper" },
   vl = {
@@ -5986,25 +5978,17 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     muted: "",
   },
   ml = ["src"],
-  fl = G(" Your browser does not support the video tag. "),
-  ul = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  gl = fs(() =>
+  ul = G(" Your browser does not support the video tag. "),
+  fl = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  gl = us(() =>
     h(
       "div",
       { class: "card-body", "data-aos": "fade-up", "data-aos-duration": "700" },
       [
         h("div", { class: "u-overflow-hidden" }, [
-          h(
-            "div",
-            {
-              class: "card-up",
-              style: {
-                transform: "translate3d(0px, 0%, 0px)",
-                "transform-style": "preserve-3d",
-              },
-            },
-            [h("h4", { class: "u-ts-4" }, "Skyart3725全景")]
-          ),
+          h("div", { class: "card-up" }, [
+            h("h4", { class: "u-ts-4" }, "Skyart3725全景"),
+          ]),
         ]),
       ],
       -1
@@ -6023,11 +6007,6 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     class: "card is-link w-inline-block",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-      opacity: "1",
-    },
   },
   kl = { class: "card-image_wrapper" },
   jl = { class: "iframe-video_wrapper" },
@@ -6041,21 +6020,21 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   ql = ["src"],
   Sl = G(" Your browser does not support the video tag. "),
-  zl = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Ol = ce(
-    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="u-overflow-hidden" data-v-027565eb><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-027565eb><div class="card-large_text" data-v-027565eb><h4 class="u-ts-4" data-v-027565eb>多功能茶席空間</h4></div></div></div></div>',
+  zl = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Ol = ca(
+    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="u-overflow-hidden" data-v-a392040e><div class="card-up" data-v-a392040e><div class="card-large_text" data-v-a392040e><h4 class="u-ts-4" data-v-a392040e>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  Al = ce(
-    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-027565eb><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-027565eb> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>空間介紹</div><div class="btn-text cc-bottom" data-v-027565eb>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>立即預約</div><div class="btn-text cc-bottom" data-v-027565eb>立即預約</div></div></a></div></div></div>',
+  Al = ca(
+    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-a392040e><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-a392040e><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-a392040e> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>空間介紹</div><div class="btn-text cc-bottom" data-v-a392040e>空間介紹</div></div></a></div><div class="btn-item cc-2" data-v-a392040e><a class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>立即預約</div><div class="btn-text cc-bottom" data-v-a392040e>立即預約</div></div></a></div></div></div>',
     1
   ),
-  Tl = fs(() =>
+  Tl = us(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   El = { class: "section" },
-  Ll = ce(
-    '<div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>定香人文</h2></div></div></div></div></div>',
+  Ll = ca(
+    '<div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" data-v-a392040e></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>定香人文</h2></div></div></div></div></div>',
     1
   ),
   Bl = { class: "container" },
@@ -6067,13 +6046,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     class: "logomark w-embed",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
   },
   Ul = ["src"],
-  Vl = fs(() =>
+  Vl = us(() =>
     h(
       "ul",
       { role: "list", class: "u-mt-3-5" },
@@ -6087,17 +6062,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "150",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-2",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "藝術品經紀")]
-            ),
+            h("div", { class: "list-content cc-2" }, [
+              h("h3", { class: "u-tc-caps" }, "藝術品經紀"),
+            ]),
           ]
         ),
         h(
@@ -6109,17 +6076,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "200",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-3",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
-            ),
+            h("div", { class: "list-content cc-3" }, [
+              h("h3", { class: "u-tc-caps" }, "藝術品拍賣"),
+            ]),
           ]
         ),
         h(
@@ -6131,17 +6090,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "250",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-4",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
-            ),
+            h("div", { class: "list-content cc-4" }, [
+              h("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶"),
+            ]),
           ]
         ),
         h(
@@ -6153,17 +6104,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "300",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-5",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
-            ),
+            h("div", { class: "list-content cc-5" }, [
+              h("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶"),
+            ]),
           ]
         ),
         h(
@@ -6175,17 +6118,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "350",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-6",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "精品咖啡")]
-            ),
+            h("div", { class: "list-content cc-6" }, [
+              h("h3", { class: "u-tc-caps" }, "精品咖啡"),
+            ]),
           ]
         ),
         h(
@@ -6197,17 +6132,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "400",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-7",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "天幕茶碗")]
-            ),
+            h("div", { class: "list-content cc-7" }, [
+              h("h3", { class: "u-tc-caps" }, "天幕茶碗"),
+            ]),
           ]
         ),
         h(
@@ -6219,28 +6146,20 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
             "data-aos-delay": "450",
           },
           [
-            h(
-              "div",
-              {
-                class: "list-content cc-8",
-                style: {
-                  transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                  "transform-style": "preserve-3d",
-                },
-              },
-              [h("h3", { class: "u-tc-caps" }, "典藏名酒")]
-            ),
+            h("div", { class: "list-content cc-8" }, [
+              h("h3", { class: "u-tc-caps" }, "典藏名酒"),
+            ]),
           ]
         ),
       ],
       -1
     )
   ),
-  Hl = ce(
-    '<div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>藝品介紹</div><div class="btn-text cc-bottom" data-v-027565eb>藝品介紹</div></div></a></div></div>',
+  Hl = ca(
+    '<div class="btn-group" data-v-a392040e><div class="btn-item cc-1" data-v-a392040e><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>藝品介紹</div><div class="btn-text cc-bottom" data-v-a392040e>藝品介紹</div></div></a></div></div>',
     1
   ),
-  Nl = fs(() =>
+  Nl = us(() =>
     h(
       "section",
       { class: "section cc-apps" },
@@ -6486,8 +6405,8 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   ),
   Xl = { class: "section" },
   Rl = { class: "container" },
-  Zl = ce(
-    '<div class="row" data-v-027565eb><div data-animation-element="group" class="col" data-v-027565eb><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> 拍賣中心 </div></div></h3></div></div>',
+  Zl = ca(
+    '<div class="row" data-v-a392040e><div data-animation-element="group" class="col" data-v-a392040e><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> 拍賣中心 </div></div></h3></div></div>',
     1
   ),
   Yl = { class: "sticky-pair" },
@@ -6504,7 +6423,7 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ei = {
+  ai = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6513,7 +6432,7 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
       opacity: "1",
     },
   },
-  ai = { class: "card-image_wrapper" },
+  ei = { class: "card-image_wrapper" },
   ti = { class: "iframe-video_wrapper" },
   si = {
     class: "video-cover",
@@ -6525,9 +6444,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   li = ["src"],
   ii = G(" Your browser does not support the video tag. "),
-  oi = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  ri = ce(
-    '<div class="card-body" data-v-027565eb><div class="u-overflow-hidden" data-v-027565eb><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-027565eb><div class="card-large_text" data-v-027565eb><h4 class="u-ts-4" data-v-027565eb>Skyart7325鑑賞中心</h4></div></div></div></div>',
+  oi = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  ri = ca(
+    '<div class="card-body" data-v-a392040e><div class="u-overflow-hidden" data-v-a392040e><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-a392040e><div class="card-large_text" data-v-a392040e><h4 class="u-ts-4" data-v-a392040e>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
   ni = {
@@ -6546,7 +6465,7 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  fi = {
+  ui = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6555,7 +6474,7 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
       opacity: "1",
     },
   },
-  ui = { class: "card-image_wrapper" },
+  fi = { class: "card-image_wrapper" },
   gi = { class: "iframe-video_wrapper" },
   bi = {
     class: "video-cover",
@@ -6567,8 +6486,8 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   hi = ["src"],
   yi = G(" Your browser does not support the video tag. "),
-  wi = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  _i = fs(() =>
+  wi = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  _i = us(() =>
     h(
       "div",
       { class: "card-body" },
@@ -6590,14 +6509,14 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
       -1
     )
   ),
-  xi = ce(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-027565eb><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-027565eb> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>Fintech services</div><div class="btn-text cc-bottom" data-v-027565eb>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>Design trial</div><div class="btn-text cc-bottom" data-v-027565eb>Design trial</div></div></a></div></div></div>',
+  xi = ca(
+    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-a392040e><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-a392040e><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-a392040e> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>Fintech services</div><div class="btn-text cc-bottom" data-v-a392040e>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>Design trial</div><div class="btn-text cc-bottom" data-v-a392040e>Design trial</div></div></a></div></div></div>',
     1
   ),
   ki = { class: "section" },
   ji = { class: "container over-h" },
-  Ci = ce(
-    '<div class="row" data-v-027565eb><div data-animation-element="group" class="col" data-v-027565eb><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-027565eb><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> Branding </div></div></h3></div></div>',
+  Ci = ca(
+    '<div class="row" data-v-a392040e><div data-animation-element="group" class="col" data-v-a392040e><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-a392040e><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> Branding </div></div></h3></div></div>',
     1
   ),
   qi = { class: "sticky-pair" },
@@ -6640,8 +6559,8 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   Fi = ["src"],
   Ui = G(" Your browser does not support the video tag. "),
-  Vi = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Hi = fs(() =>
+  Vi = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Hi = us(() =>
     h(
       "div",
       { class: "card-body" },
@@ -6696,17 +6615,17 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   Ji = ["src"],
   Qi = G(" Your browser does not support the video tag. "),
-  eo = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  ao = ce(
-    '<div class="card-body" data-v-027565eb><div class="u-overflow-hidden" data-v-027565eb><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-027565eb><div class="card-large_text" data-v-027565eb><h4 class="u-ts-4" data-v-027565eb>Sable Brand</h4></div></div></div></div>',
+  ao = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  eo = ca(
+    '<div class="card-body" data-v-a392040e><div class="u-overflow-hidden" data-v-a392040e><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-a392040e><div class="card-large_text" data-v-a392040e><h4 class="u-ts-4" data-v-a392040e>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  to = ce(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-027565eb><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-027565eb> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>View cases</div><div class="btn-text cc-bottom" data-v-027565eb>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb> Design trial </div></div></a></div></div></div>',
+  to = ca(
+    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-a392040e><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-a392040e><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-a392040e> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>View cases</div><div class="btn-text cc-bottom" data-v-a392040e>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e> Design trial </div></div></a></div></div></div>',
     1
   ),
-  so = ce(
-    '<div class="container" data-v-027565eb><div class="target_line" data-v-027565eb></div></div><section class="section" data-v-027565eb><div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>Contact Us</h2></div></div></div></div></div><div class="container" data-v-027565eb><div class="w-layout-grid pair-grid" data-v-027565eb><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-027565eb><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-027565eb><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb><div style="position:relative;display:inline-block;" data-v-027565eb> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+  so = ca(
+    '<div class="container" data-v-a392040e><div class="target_line" data-v-a392040e></div></div><section class="section" data-v-a392040e><div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" style="opacity:1;" data-v-a392040e></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>Contact Us</h2></div></div></div></div></div><div class="container" data-v-a392040e><div class="w-layout-grid pair-grid" data-v-a392040e><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-a392040e><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-a392040e><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e><div style="position:relative;display:inline-block;" data-v-a392040e> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
   lo = { class: "pre-footer" },
@@ -6726,9 +6645,9 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   no = ["src"],
   co = G(" Your browser does not support the video tag. "),
-  po = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  vo = ce(
-    '<div class="pre-footer_gradient" data-v-027565eb></div><div class="marquee" data-v-027565eb><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-027565eb><div class="btn cc-large-landscape" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text cc-large-landscape" data-v-027565eb>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-027565eb>Button</div></div></div></div>',
+  po = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  vo = ca(
+    '<div class="pre-footer_gradient" data-v-a392040e></div><div class="marquee" data-v-a392040e><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-a392040e><div class="btn cc-large-landscape" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text cc-large-landscape" data-v-a392040e>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-a392040e>Button</div></div></div></div>',
     3
   ),
   mo = {
@@ -6736,8 +6655,8 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  fo = { class: "iframe-video_wrapper" },
-  uo = {
+  uo = { class: "iframe-video_wrapper" },
+  fo = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6747,15 +6666,15 @@ const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   },
   go = ["src"],
   bo = G(" Your browser does not support the video tag. "),
-  ho = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  yo = ce(
-    '<div class="pre-footer_gradient" data-v-027565eb></div><div class="marquee" data-v-027565eb><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-027565eb><div class="btn cc-large-landscape" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text cc-large-landscape" data-v-027565eb>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-027565eb>Button</div></div></div></div>',
+  ho = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  yo = ca(
+    '<div class="pre-footer_gradient" data-v-a392040e></div><div class="marquee" data-v-a392040e><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-a392040e><div class="btn cc-large-landscape" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text cc-large-landscape" data-v-a392040e>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-a392040e>Button</div></div></div></div>',
     3
   );
-var wo = Se(ms, [
+var wo = Sa(ms, [
     [
       "render",
-      function (e, a, t, s, l, i) {
+      function (a, e, t, s, l, i) {
         const o = S("View"),
           r = S("Footer");
         return (
@@ -6765,7 +6684,7 @@ var wo = Se(ms, [
             null,
             [
               T(o),
-              us,
+              fs,
               h("section", gs, [
                 bs,
                 h("div", hs, [
@@ -6944,8 +6863,8 @@ var wo = Se(ms, [
                 $s,
                 h("div", Js, [
                   Qs,
-                  h("div", el, [
-                    h("div", al, [
+                  h("div", al, [
+                    h("div", el, [
                       h("div", tl, [
                         h("div", sl, [
                           h("div", ll, [
@@ -6969,9 +6888,9 @@ var wo = Se(ms, [
                                               8,
                                               ml
                                             ),
-                                            fl,
+                                            ul,
                                           ]),
-                                          ul,
+                                          fl,
                                         ]),
                                       ]),
                                       gl,
@@ -7057,8 +6976,8 @@ var wo = Se(ms, [
                           h("div", $l, [
                             h("div", Jl, [
                               h("div", Ql, [
-                                h("div", ei, [
-                                  h("div", ai, [
+                                h("div", ai, [
+                                  h("div", ei, [
                                     h("div", ti, [
                                       h("video", si, [
                                         h(
@@ -7092,8 +7011,8 @@ var wo = Se(ms, [
                               h("div", pi, [
                                 h("div", vi, [
                                   h("div", mi, [
-                                    h("div", fi, [
-                                      h("div", ui, [
+                                    h("div", ui, [
+                                      h("div", fi, [
                                         h("div", gi, [
                                           h("video", bi, [
                                             h(
@@ -7192,10 +7111,10 @@ var wo = Se(ms, [
                                         ),
                                         Qi,
                                       ]),
-                                      eo,
+                                      ao,
                                     ]),
                                   ]),
-                                  ao,
+                                  eo,
                                 ]),
                               ]),
                             ]),
@@ -7230,8 +7149,8 @@ var wo = Se(ms, [
                     vo,
                   ]),
                   h("div", mo, [
-                    h("div", fo, [
-                      h("video", uo, [
+                    h("div", uo, [
+                      h("video", fo, [
                         h(
                           "source",
                           {
@@ -7257,7 +7176,7 @@ var wo = Se(ms, [
         );
       },
     ],
-    ["__scopeId", "data-v-027565eb"],
+    ["__scopeId", "data-v-a392040e"],
   ]),
   _o = Object.freeze(
     Object.defineProperty(
@@ -7268,7 +7187,7 @@ var wo = Se(ms, [
   );
 const xo = {
     "../pages/about.vue": () =>
-      Za(
+      Ze(
         () =>
           Promise.resolve().then(function () {
             return mt;
@@ -7276,7 +7195,7 @@ const xo = {
         void 0
       ),
     "../pages/case.vue": () =>
-      Za(
+      Ze(
         () =>
           Promise.resolve().then(function () {
             return bt;
@@ -7284,7 +7203,7 @@ const xo = {
         void 0
       ),
     "../pages/demo.vue": () =>
-      Za(
+      Ze(
         () =>
           Promise.resolve().then(function () {
             return Bt;
@@ -7292,7 +7211,7 @@ const xo = {
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Za(
+      Ze(
         () =>
           Promise.resolve().then(function () {
             return ds;
@@ -7300,7 +7219,7 @@ const xo = {
         void 0
       ),
     "../pages/index.vue": () =>
-      Za(
+      Ze(
         () =>
           Promise.resolve().then(function () {
             return _o;
@@ -7317,16 +7236,16 @@ const xo = {
   },
   jo = [];
 for (let Vo in xo) {
-  let e = Vo.replace("../pages", "").toLowerCase().replace(".vue", "");
-  (e = e.replace(/\/index$/, "")),
-    (e = e.replace(/\/_+/g, "/:")),
+  let a = Vo.replace("../pages", "").toLowerCase().replace(".vue", "");
+  (a = a.replace(/\/index$/, "")),
+    (a = a.replace(/\/_+/g, "/:")),
     jo.push({
-      path: e,
-      name: e,
+      path: a,
+      name: a,
       meta: {
         layout: ko[Vo].default.layout || "layout-default",
         title:
-          null != (t = null == (a = ko[Vo].default) ? void 0 : a.title)
+          null != (t = null == (e = ko[Vo].default) ? void 0 : e.title)
             ? t
             : "app.project.title",
         header:
@@ -7339,8 +7258,8 @@ for (let Vo in xo) {
       component: xo[Vo],
     });
 }
-const Co = ue({
-  history: ge("./"),
+const Co = fa({
+  history: ga("./"),
   routes:
     ((qo = { defaultPath: "/home" }),
     [
@@ -7365,7 +7284,7 @@ const Co = ue({
   scrollBehavior: () => ({ top: 0 }),
 });
 var qo;
-Co.beforeEach(async (e, a, t) => {
+Co.beforeEach(async (a, e, t) => {
   t();
 });
 var So = Object.freeze(
@@ -7373,41 +7292,41 @@ var So = Object.freeze(
     value: "Module",
   })
 );
-const zo = be({ modules: Xa });
-he(zo, Co);
+const zo = ba({ modules: Xe });
+ha(zo, Co);
 var Oo = Object.freeze(
   Object.defineProperty({ __proto__: null, default: zo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
 const Ao = {
-    use(e) {
-      e.interceptors.response.use(
-        async function (a) {
-          if (100004 === a.data.code) {
-            const t = e.get("/app/jwt-token", {
+    use(a) {
+      a.interceptors.response.use(
+        async function (e) {
+          if (100004 === e.data.code) {
+            const t = a.get("/app/jwt-token", {
               params: { account: zo.state.auth.user.account },
             });
             1 === t.data.code && U.set("token", t.data.data.jwt_token, !0);
-            return await e.request(a.config);
+            return await a.request(e.config);
           }
-          return a;
+          return e;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       );
     },
   },
   To = {
-    use(e) {
+    use(a) {
       (window.isAlert = !1),
-        e.interceptors.response.use(
-          async function (e) {
-            const { noredirect: a = !1 } = e.config;
-            if (!a && !window.isAlert) {
-              const a = e.data;
-              switch (a.code) {
+        a.interceptors.response.use(
+          async function (a) {
+            const { noredirect: e = !1 } = a.config;
+            if (!e && !window.isAlert) {
+              const e = a.data;
+              switch (e.code) {
                 case 0:
                 case 100002:
                 case 200001:
@@ -7415,59 +7334,59 @@ const Ao = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: e } = await Be.alert({
-                    title: `Error(${a.code})`,
-                    text: Ee.t(`error.code.${a.code}`),
+                  const { isConfirmed: a } = await Ba.alert({
+                    title: `Error(${e.code})`,
+                    text: Ea.t(`error.code.${e.code}`),
                   });
                   return (
-                    e &&
+                    a &&
                       (await zo.dispatch("auth/logout"),
                       await Co.replace("/login"),
                       (window.isAlert = !1)),
-                    Promise.reject(`Error: ${a.code}`)
+                    Promise.reject(`Error: ${e.code}`)
                   );
                 }
               }
             }
-            return e;
+            return a;
           },
-          function (e) {
-            return Promise.reject(e);
+          function (a) {
+            return Promise.reject(a);
           }
         );
     },
   },
   Eo = {
-    use(e) {
-      e.interceptors.response.use(
-        async function (e) {
-          const { novalidate: a = !1 } = e.config;
-          if (!a) {
-            const a = e.data;
-            switch (a.code) {
+    use(a) {
+      a.interceptors.response.use(
+        async function (a) {
+          const { novalidate: e = !1 } = a.config;
+          if (!e) {
+            const e = a.data;
+            switch (e.code) {
               case 1e5:
               case 100001:
               case 100003:
-                await Be.alert({
-                  title: `Error(${a.code})`,
-                  text: Ee.t(`error.code.${a.code}`),
+                await Ba.alert({
+                  title: `Error(${e.code})`,
+                  text: Ea.t(`error.code.${e.code}`),
                 });
             }
           }
-          return e;
+          return a;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       );
     },
   };
 class Lo {
   constructor() {
-    (this.provider = new Ea({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ee({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, La, Ao, To, Eo, Ia);
+    this.provider.use({}, Le, Ao, To, Eo, Ie);
   }
   get get() {
     return this.provider.instance.get;
@@ -7482,9 +7401,9 @@ class Lo {
     return this.provider.instance.delete;
   }
 }
-Lo.prototype.install = function (e) {
-  const a = "http-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+Lo.prototype.install = function (a) {
+  const e = "http-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
 var Bo = new Lo(),
   Io = Object.freeze(
@@ -7504,8 +7423,8 @@ class Po {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Ee.t("button.confirm"),
-      cancelButtonText: Ee.t("button.cancel"),
+      confirmButtonText: Ea.t("button.confirm"),
+      cancelButtonText: Ea.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -7519,27 +7438,27 @@ class Po {
   get state() {
     return zo.state.app.popupState;
   }
-  async modal(e = {}) {
+  async modal(a = {}) {
     const {
-      title: a,
+      title: e,
       text: t,
       component: s = null,
       showCancelButton: l = !0,
       showConfirmButton: i = !0,
-      confirmButtonText: o = Ee.t("button.confirm"),
-      cancelButtonText: r = Ee.t("button.cancel"),
+      confirmButtonText: o = Ea.t("button.confirm"),
+      cancelButtonText: r = Ea.t("button.cancel"),
       allowOutsideClick: n = !0,
       props: d = {},
-    } = e;
-    return new Promise((e) => {
+    } = a;
+    return new Promise((a) => {
       zo.commit(
         "app/set/popup",
-        u(f({}, this.initStates), {
+        f(u({}, this.initStates), {
           type: "Modal",
-          resolve: e,
-          title: a,
+          resolve: a,
+          title: e,
           text: t,
-          component: s ? ae(s) : null,
+          component: s ? ea(s) : null,
           showCancelButton: l,
           showConfirmButton: i,
           confirmButtonText: o,
@@ -7554,15 +7473,15 @@ class Po {
     zo.commit("app/clear/popup");
   }
 }
-Po.prototype.install = function (e) {
-  const a = "popup-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+Po.prototype.install = function (a) {
+  const e = "popup-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
 var Mo = new Po();
 const Do = {
-    "../services/alert-service.js": Ta,
+    "../services/alert-service.js": Te,
     "../services/http-service.js": Io,
-    "../services/i18n-service.js": Le,
+    "../services/i18n-service.js": La,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
         { __proto__: null, PopupService: Po, default: Mo },
@@ -7571,21 +7490,21 @@ const Do = {
       )
     ),
     "../services/router-service.js": So,
-    "../services/storage-service.js": De,
+    "../services/storage-service.js": Da,
     "../services/store-service.js": Oo,
   },
   Fo = {
-    install: (e) => {
-      for (let a in Do) e.use(Do[a].default);
+    install: (a) => {
+      for (let e in Do) a.use(Do[e].default);
     },
   };
-const Uo = ye(ze);
-Uo.provide("$jQuery", we),
-  Uo.provide("$swal", Be),
+const Uo = ya(za);
+Uo.provide("$jQuery", wa),
+  Uo.provide("$swal", Ba),
   Uo.provide("$storage", U),
-  Uo.provide("$tabsslider", _e),
-  Uo.use(na),
-  Uo.use(Sa),
-  Uo.use(xe, { loading: "", error: "" }),
+  Uo.provide("$tabsslider", _a),
+  Uo.use(ne),
+  Uo.use(Se),
+  Uo.use(xa, { loading: "", error: "" }),
   Uo.use(Fo),
   Uo.mount("#app");

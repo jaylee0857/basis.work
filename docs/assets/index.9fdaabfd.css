@@ -194,10 +194,9 @@
   left: 0;
   box-sizing: border-box;
   grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
-  grid-template-rows: minmax(-webkit-min-content, auto) minmax(
-      -webkit-min-content,
-      auto
-    ) minmax(-webkit-min-content, auto);
+  grid-template-rows:
+    minmax(-webkit-min-content, auto) minmax(-webkit-min-content, auto)
+    minmax(-webkit-min-content, auto);
   grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(
       min-content,
       auto
@@ -2524,35 +2523,35 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     transform: translateZ(0);
   }
 }
-.transparent[data-v-027565eb] {
+.transparent[data-v-a392040e] {
   background-color: transparent !important;
 }
-.target_line[data-v-027565eb] {
+.target_line[data-v-a392040e] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-027565eb]:first-child {
+.target_line[data-v-a392040e]:first-child {
   margin-top: 30px;
 }
-.target_line.active[data-v-027565eb] {
-  -webkit-animation-name: line-027565eb;
-  animation-name: line-027565eb;
+.target_line.active[data-v-a392040e] {
+  -webkit-animation-name: line-a392040e;
+  animation-name: line-a392040e;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .w-layout-grid.pair-grid.is-leading[data-v-027565eb] {
+  .w-layout-grid.pair-grid.is-leading[data-v-a392040e] {
     overflow: hidden;
   }
-  .apps_asset.cc-2.w-dyn-list[data-v-027565eb],
-  .apps_asset.cc-1[data-v-027565eb] {
+  .apps_asset.cc-2.w-dyn-list[data-v-a392040e],
+  .apps_asset.cc-1[data-v-a392040e] {
     transform: translateZ(0) !important;
   }
 }
-@-webkit-keyframes line-027565eb {
+@-webkit-keyframes line-a392040e {
   0% {
     width: 0;
   }
@@ -2560,7 +2559,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-027565eb {
+@keyframes line-a392040e {
   0% {
     width: 0;
   }
@@ -11423,6 +11422,7 @@ strong {
 }
 .layout-deafult-header-logo--open {
   width: auto;
+  max-width: 50%;
   height: 21.95px;
   -webkit-animation: topMoveBottom 0.5s;
   animation: topMoveBottom 0.5s;
