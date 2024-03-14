@@ -1,23 +1,7 @@
 <template>
   <header data-mouse-class="cc-icon" class="header cc-large">
-    <div
-      class="header-image_wrap"
-      style="
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
-      "
-    >
-      <div
-        class="header-image"
-        style="
-          will-change: transform;
-          transform: translate3d(0px, -0.0648%, 0px)
-            scale3d(1.00065, 1.00065, 1) rotateX(0deg) rotateY(0deg)
-            rotateZ(0deg) skew(0deg, 0deg);
-          transform-style: preserve-3d;
-        "
-      >
+    <div class="header-image_wrap">
+      <div class="header-image">
         <div class="iframe-video_wrapper">
           <video
             class="video-cover"
@@ -48,7 +32,7 @@
                 data-aos="fade-up"
                 data-aos-duration="700"
               >
-                <h1 data-animation-element="title" class="h4" style="">
+                <h1 data-animation-element="title" class="h4">
                   <div
                     class="u-overflow-hidden"
                     style="

@@ -354,15 +354,7 @@
                   <h2 class="u-ts-4 u-text-mid">Project inquiries</h2>
                 </div>
               </div>
-              <a
-                href="mailto:hello@basis.work"
-                class="case-detail_item cc-1"
-                style="
-                  transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                  opacity: 1;
-                "
+              <a href="mailto:hello@basis.work" class="case-detail_item cc-1"
                 >hello@basis.work</a
               >
             </div>
@@ -379,15 +371,7 @@
                   <h2 class="u-ts-4 u-text-mid">Join the team</h2>
                 </div>
               </div>
-              <a
-                href="mailto:jobs@basis.work"
-                class="case-detail_item cc-2"
-                style="
-                  transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                  opacity: 1;
-                "
+              <a href="mailto:jobs@basis.work" class="case-detail_item cc-2"
                 >jobs@basis.work</a
               >
             </div>
@@ -505,16 +489,7 @@
             data-aos-duration="700"
           >
             <div class="card-animation cc-40">
-              <div
-                data-mouse-class="cc-none"
-                class="card cc-large"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                  opacity: 1;
-                "
-              >
+              <div data-mouse-class="cc-none" class="card cc-large">
                 <div class="card-image_wrapper">
                   <img
                     loading="lazy"
@@ -529,33 +504,17 @@
                     alt=""
                     src="https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02.webp"
                     class="card-image"
-                    style="
-                      will-change: transform;
-                      transform: translate3d(0px, -20%, 0px)
-                        scale3d(1.2, 1.2, 1) rotateX(0deg) rotateY(0deg)
-                        rotateZ(0deg) skew(0deg, 0deg);
-                      transform-style: preserve-3d;
-                    "
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div
-            id="w-node-ce72eb91-efb6-6f0b-43b7-a66f9003cbae-af55239f"
-            class="content"
-          >
+          <div class="content">
             <div
               data-animation-element="paragraphs"
               class="content-p cc-1"
               data-aos="fade-up"
               data-aos-duration="700"
-              style="
-                transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-                opacity: 1;
-              "
             >
               <p class="u-ts-1">
                 Whether it’s shaping a new venture 0 → 1, evolving an existing
@@ -570,12 +529,8 @@
             <div
               data-animation-element="paragraphs"
               class="content-p cc-2"
-              style="
-                transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-                opacity: 1;
-              "
+              data-aos="fade-up"
+              data-aos-duration="700"
             >
               <p class="u-ts-1">
                 When you want to build enduring digital products for an

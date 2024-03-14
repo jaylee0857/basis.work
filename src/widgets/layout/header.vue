@@ -1,7 +1,7 @@
 <template>
   <div class="layout-deafult-header" :class="{ active: isOpen }">
-    <div
-      href="/"
+    <router-link
+      to="/"
       aria-current="page"
       class="layout-deafult-header-logo"
       :class="{ 'layout-deafult-header-logo--open': isOpen }"
@@ -11,7 +11,7 @@
         <img :src="getImageUrl('logo.png')" alt="" />
       </div>
       <img v-else :src="getImageUrl('logo.png')" alt="" />
-    </div>
+    </router-link>
     <div
       class="layout-deafult-header-btn"
       :class="{ 'layout-deafult-header-btn--open': isOpen }"

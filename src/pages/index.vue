@@ -19,14 +19,7 @@
             ></div>
           </div>
           <div class="u-overflow-hidden">
-            <div
-              class="section-title_title"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="section-title_title">
               <h2 class="u-ts-4">詹紹綺人文藝術中心</h2>
             </div>
           </div>
@@ -39,7 +32,7 @@
           data-animation-element="group"
           id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307"
         >
-          <h3 data-animation-element="title" style="">
+          <h3 data-animation-element="title">
             <div
               class="u-overflow-hidden"
               data-aos="fade-up"
@@ -188,28 +181,8 @@
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 ><div class="btn-text-wrap">
-                  <div
-                    class="btn-text"
-                    style="
-                      transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
-                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                        skew(0deg, 0deg);
-                      transform-style: preserve-3d;
-                    "
-                  >
-                    館藏查詢
-                  </div>
-                  <div
-                    class="btn-text cc-bottom"
-                    style="
-                      transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
-                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                        skew(0deg, 0deg);
-                      transform-style: preserve-3d;
-                    "
-                  >
-                    館藏查詢
-                  </div>
+                  <div class="btn-text">館藏查詢</div>
+                  <div class="btn-text cc-bottom">館藏查詢</div>
                 </div></a
               >
             </div>
@@ -231,28 +204,8 @@
                 data-aos="fade-left"
                 data-aos-duration="1000"
                 ><div class="btn-text-wrap">
-                  <div
-                    class="btn-text"
-                    style="
-                      transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
-                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                        skew(0deg, 0deg);
-                      transform-style: preserve-3d;
-                    "
-                  >
-                    預約參觀
-                  </div>
-                  <div
-                    class="btn-text cc-bottom"
-                    style="
-                      transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
-                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                        skew(0deg, 0deg);
-                      transform-style: preserve-3d;
-                    "
-                  >
-                    預約參觀
-                  </div>
+                  <div class="btn-text">預約參觀</div>
+                  <div class="btn-text cc-bottom">預約參觀</div>
                 </div></a
               >
             </div>

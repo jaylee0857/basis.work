@@ -6,8 +6,8 @@ var e,
   i,
   o,
   r = Object.defineProperty,
-  d = Object.defineProperties,
-  n = Object.getOwnPropertyDescriptors,
+  n = Object.defineProperties,
+  d = Object.getOwnPropertyDescriptors,
   c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
@@ -20,12 +20,12 @@ var e,
     if (c) for (var t of c(a)) v.call(a, t) && m(e, t, a[t]);
     return e;
   },
-  u = (e, a) => d(e, n(a));
+  u = (e, a) => n(e, d(a));
 import {
   o as g,
   c as b,
-  a as y,
-  n as h,
+  a as h,
+  n as y,
   u as w,
   F as _,
   b as x,
@@ -68,8 +68,8 @@ import {
   P as ie,
   Q as oe,
   R as re,
-  U as de,
-  V as ne,
+  U as ne,
+  V as de,
   W as ce,
   X as pe,
   Y as ve,
@@ -78,8 +78,8 @@ import {
   $ as ue,
   a0 as ge,
   a1 as be,
-  a2 as ye,
-  a3 as he,
+  a2 as he,
+  a3 as ye,
   a4 as we,
   a5 as _e,
   a6 as xe,
@@ -179,14 +179,14 @@ var ze = Se(
             _,
             null,
             [
-              y("div", { class: h(["mask", e.mode]) }, null, 2),
-              y(
+              h("div", { class: y(["mask", e.mode]) }, null, 2),
+              h(
                 "div",
-                { class: h(["bg", e.mode]) },
+                { class: y(["bg", e.mode]) },
                 [
-                  y("div", je, [
-                    y("div", Ce, [
-                      y(
+                  h("div", je, [
+                    h("div", Ce, [
+                      h(
                         "img",
                         { src: w(ke)("favicon.png"), alt: "" },
                         null,
@@ -242,7 +242,7 @@ var ze = Se(
       function (e, a, t, s, l, i) {
         const o = S("router-view"),
           r = S("the-popup"),
-          d = S("Loading");
+          n = S("Loading");
         return (
           g(),
           b(
@@ -261,7 +261,7 @@ var ze = Se(
               })),
               T(r),
               s.isError || s.isShowLoading
-                ? (g(), z(d, { key: 0, mode: s.mode }, null, 8, ["mode"]))
+                ? (g(), z(n, { key: 0, mode: s.mode }, null, 8, ["mode"]))
                 : E("", !0),
             ],
             64
@@ -651,10 +651,10 @@ const Fe = () => {
     };
   },
   Ue = ["onMouseenter", "onClick"],
-  Ve = y("div", { class: "line" }, null, -1),
+  Ve = h("div", { class: "line" }, null, -1),
   He = { class: "list_style" },
   Ne = { class: "nav_link-top" },
-  Xe = y(
+  Xe = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -666,7 +666,7 @@ const Fe = () => {
   Re = { class: "nav_link-title" },
   Ze = { class: "u-ts-3" },
   Ye = { class: "nav_link-p" },
-  We = y(
+  We = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -675,7 +675,7 @@ const Fe = () => {
     null,
     -1
   ),
-  Ge = y("div", { id: "pink_mask" }, null, -1),
+  Ge = h("div", { id: "pink_mask" }, null, -1),
   Ke = {
     props: ["isOpen"],
     emits: ["toggleOpen"],
@@ -711,7 +711,7 @@ const Fe = () => {
           },
         ]),
         r = j(() => 25 * s.value),
-        d = j(() => {
+        n = j(() => {
           switch (s.value) {
             case 1:
               return 50;
@@ -723,14 +723,14 @@ const Fe = () => {
               return 75;
           }
         }),
-        n = k(25);
+        d = k(25);
       return (e, c) => (
         g(),
         b(
           "div",
-          { class: h(["layout-deafult-header-nav", { active: t.isOpen }]) },
+          { class: y(["layout-deafult-header-nav", { active: t.isOpen }]) },
           [
-            y("ul", null, [
+            h("ul", null, [
               (g(!0),
               b(
                 _,
@@ -759,20 +759,20 @@ const Fe = () => {
                       },
                       [
                         Ve,
-                        y("div", He, [
-                          y("div", Ne, [
+                        h("div", He, [
+                          h("div", Ne, [
                             Xe,
-                            y("div", Re, [y("div", Ze, Y(e.title), 1)]),
+                            h("div", Re, [h("div", Ze, Y(e.title), 1)]),
                           ]),
-                          y(
+                          h(
                             "div",
                             {
-                              class: h([
+                              class: y([
                                 "nav_link-btm",
                                 { active: s.value === l },
                               ]),
                             },
-                            [y("p", Ye, Y(e.content), 1), We],
+                            [h("p", Ye, Y(e.content), 1), We],
                             2
                           ),
                         ]),
@@ -784,14 +784,14 @@ const Fe = () => {
                 ),
                 128
               )),
-              y(
+              h(
                 "div",
                 {
                   class: "move-item",
                   style: Z({
                     left: "" + (l.value ? `calc(${w(r)}% - 4px)` : "auto"),
-                    right: "" + (l.value ? "auto" : `calc(${w(d)}% - 4px)`),
-                    width: `calc(${n.value}% + 8px)`,
+                    right: "" + (l.value ? "auto" : `calc(${w(n)}% - 4px)`),
+                    width: `calc(${d.value}% + 8px)`,
                   }),
                 },
                 null,
@@ -808,7 +808,7 @@ const Fe = () => {
   $e = { key: 0 },
   Je = ["src"],
   Qe = ["src"],
-  ea = [y("div", null, null, -1), y("div", null, null, -1)],
+  ea = [h("div", null, null, -1), h("div", null, null, -1)],
   aa = { class: "layout-deafult pb-32" };
 var ta = Se(
     {
@@ -819,81 +819,92 @@ var ta = Se(
               t = (e) => {
                 a.value = !e;
               };
-            return (e, s) => (
-              g(),
-              b(
-                _,
-                null,
-                [
-                  y(
-                    "div",
-                    {
-                      class: h(["layout-deafult-header", { active: a.value }]),
-                    },
-                    [
-                      y(
-                        "div",
-                        {
-                          href: "/",
-                          "aria-current": "page",
-                          class: h([
-                            "layout-deafult-header-logo",
-                            { "layout-deafult-header-logo--open": a.value },
-                          ]),
-                          "aria-label": "home",
-                        },
-                        [
-                          a.value
-                            ? (g(),
-                              b(
-                                "img",
-                                { key: 1, src: w(ke)("logo.png"), alt: "" },
-                                null,
-                                8,
-                                Qe
-                              ))
-                            : (g(),
-                              b("div", $e, [
-                                y(
-                                  "img",
-                                  { src: w(ke)("logo.png"), alt: "" },
-                                  null,
-                                  8,
-                                  Je
-                                ),
-                              ])),
-                        ],
-                        2
-                      ),
-                      y(
-                        "div",
-                        {
-                          class: h([
-                            "layout-deafult-header-btn",
-                            { "layout-deafult-header-btn--open": a.value },
-                          ]),
-                          onClick: s[0] || (s[0] = (e) => (a.value = !a.value)),
-                        },
-                        ea,
-                        2
-                      ),
-                    ],
-                    2
-                  ),
-                  a.value
-                    ? (g(),
-                      z(
-                        Ke,
-                        { key: 0, "is-open": a.value, onToggleOpen: t },
-                        null,
-                        8,
-                        ["is-open"]
-                      ))
-                    : E("", !0),
-                ],
-                64
-              )
-            );
+            return (e, s) => {
+              const l = S("router-link");
+              return (
+                g(),
+                b(
+                  _,
+                  null,
+                  [
+                    h(
+                      "div",
+                      {
+                        class: y([
+                          "layout-deafult-header",
+                          { active: a.value },
+                        ]),
+                      },
+                      [
+                        T(
+                          l,
+                          {
+                            to: "/",
+                            "aria-current": "page",
+                            class: y([
+                              "layout-deafult-header-logo",
+                              { "layout-deafult-header-logo--open": a.value },
+                            ]),
+                            "aria-label": "home",
+                          },
+                          {
+                            default: O(() => [
+                              a.value
+                                ? (g(),
+                                  b(
+                                    "img",
+                                    { key: 1, src: w(ke)("logo.png"), alt: "" },
+                                    null,
+                                    8,
+                                    Qe
+                                  ))
+                                : (g(),
+                                  b("div", $e, [
+                                    h(
+                                      "img",
+                                      { src: w(ke)("logo.png"), alt: "" },
+                                      null,
+                                      8,
+                                      Je
+                                    ),
+                                  ])),
+                            ]),
+                            _: 1,
+                          },
+                          8,
+                          ["class"]
+                        ),
+                        h(
+                          "div",
+                          {
+                            class: y([
+                              "layout-deafult-header-btn",
+                              { "layout-deafult-header-btn--open": a.value },
+                            ]),
+                            onClick:
+                              s[0] || (s[0] = (e) => (a.value = !a.value)),
+                          },
+                          ea,
+                          2
+                        ),
+                      ],
+                      2
+                    ),
+                    a.value
+                      ? (g(),
+                        z(
+                          Ke,
+                          { key: 0, "is-open": a.value, onToggleOpen: t },
+                          null,
+                          8,
+                          ["is-open"]
+                        ))
+                      : E("", !0),
+                  ],
+                  64
+                )
+              );
+            };
           },
         },
       },
@@ -908,7 +919,7 @@ var ta = Se(
         function (e, a, t, s, l, i) {
           const o = S("LayoutHeader");
           return (
-            g(), b(_, null, [T(o), y("div", aa, [W(e.$slots, "default")])], 64)
+            g(), b(_, null, [T(o), h("div", aa, [W(e.$slots, "default")])], 64)
           );
         },
       ],
@@ -945,14 +956,14 @@ for (let Vo in oa) {
   const e = Vo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
   ra.push({ componentName: e, component: oa[Vo].default });
 }
-const da = {
+const na = {
   install: (e) => {
     ra.forEach((a) => {
       e.component(a.componentName, a.component);
     });
   },
 };
-const na = {
+const da = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
       const e = X();
@@ -970,7 +981,7 @@ const na = {
   },
   pa = { class: "font-bold" },
   va = { class: "absolute right-8 top-6" };
-var ma = Se(na, [
+var ma = Se(da, [
     [
       "render",
       function (e, a, t, s, l, i) {
@@ -986,10 +997,10 @@ var ma = Se(na, [
                     a[0] || (a[0] = (...e) => s.goBack && s.goBack(...e)),
                 }))
               : E("", !0),
-            y("div", pa, [
+            h("div", pa, [
               W(e.$slots, "title", {}, () => [G(Y(t.title), 1)], !0),
             ]),
-            y("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
+            h("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
@@ -1010,8 +1021,8 @@ const ga = {
     style: { display: "grid" },
   },
   ba = { class: "swal2-title", style: { display: "block" } },
-  ya = { class: "swal2-html-container", style: { display: "block" } },
-  ha = { class: "swal2-actions", style: { display: "flex" } };
+  ha = { class: "swal2-html-container", style: { display: "block" } },
+  ya = { class: "swal2-actions", style: { display: "flex" } };
 var wa = Se({}, [
   [
     "render",
@@ -1019,9 +1030,9 @@ var wa = Se({}, [
       return (
         g(),
         b("div", ga, [
-          y("h2", ba, [W(e.$slots, "title")]),
-          y("div", ya, [W(e.$slots, "content")]),
-          y("div", ha, [W(e.$slots, "actions")]),
+          h("h2", ba, [W(e.$slots, "title")]),
+          h("div", ha, [W(e.$slots, "content")]),
+          h("div", ya, [W(e.$slots, "actions")]),
         ])
       );
     },
@@ -1051,20 +1062,20 @@ var ja = Se(
         i = j(() => t.value.BackdropStyle),
         o = k();
       let r = null;
-      const d = () => {
+      const n = () => {
         clearTimeout(r), (r = null);
       };
       C([() => t.value.autoClose, () => t.value.timer], ([e, a]) => {
         a &&
-          (d(),
+          (n(),
           (r = setTimeout(() => {
-            d(), e && n("timer");
+            n(), e && d("timer");
           }, a)));
       });
-      const n = async (e) => {
+      const d = async (e) => {
           if (r) {
             if (!t.value.allowDismissWhenTimerRunning) return;
-            d();
+            n();
           }
           if (o.value && "onDismissed" in o.value) {
             const t = await o.value.onDismissed();
@@ -1072,15 +1083,15 @@ var ja = Se(
           } else s({ isDismissed: !0, dismiss: e }), a.clear();
         },
         c = async () => {
-          t.value.allowOutsideClick && n("backdrop");
+          t.value.allowOutsideClick && d("backdrop");
         },
         p = async () => {
-          n("cancel");
+          d("cancel");
         },
         v = async () => {
           if (r) {
             if (!t.value.allowConfirmWhenTimerRunning) return;
-            d();
+            n();
           }
           if (o.value && "onConfirmed" in o.value) {
             const e = await o.value.onConfirmed();
@@ -1104,7 +1115,7 @@ var ja = Se(
                         z(
                           A(w(l)),
                           {
-                            class: h([
+                            class: y([
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
@@ -1168,7 +1179,7 @@ var ja = Se(
                                 ? {
                                     name: "timer",
                                     fn: O(() => [
-                                      y(
+                                      h(
                                         "div",
                                         {
                                           class: "timer-progress",
@@ -1581,7 +1592,7 @@ for (let Vo in Va) {
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Ha = de(Ha, Na(re(e), oe(e), Va[Vo].default));
+  Ha = ne(Ha, Na(re(e), oe(e), Va[Vo].default));
 }
 var Xa = Ha;
 const Ra = {},
@@ -1616,48 +1627,48 @@ const Ra = {},
   Ya = { class: "footer" },
   Wa = { class: "container" },
   Ga = { class: "row row-justify-center" },
-  Ka = y(
+  Ka = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
-      y("div", { class: "footer_group cc-above" }, [
-        y("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
-        y("ul", { role: "list", class: "footer_list" }, [
-          y("li", { class: "footer_list-item" }, [
-            y(
+      h("div", { class: "footer_group cc-above" }, [
+        h("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
+        h("ul", { role: "list", class: "footer_list" }, [
+          h("li", { class: "footer_list-item" }, [
+            h(
               "a",
               {
                 href: "mailto:hello@basis.work",
                 class: "footer_link w-inline-block",
               },
-              [y("div", { class: "u-ts-3" }, "hello@basis.work")]
+              [h("div", { class: "u-ts-3" }, "hello@basis.work")]
             ),
           ]),
         ]),
       ]),
-      y("div", { class: "footer_group" }, [
-        y("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
-        y("ul", { role: "list", class: "footer_list" }, [
-          y("li", { class: "footer_list-item" }, [
-            y(
+      h("div", { class: "footer_group" }, [
+        h("h3", { class: "u-ts-6 u-text-secondary" }, "Social"),
+        h("ul", { role: "list", class: "footer_list" }, [
+          h("li", { class: "footer_list-item" }, [
+            h(
               "a",
               {
                 href: "https://www.instagram.com/basis.work/",
                 target: "_blank",
                 class: "footer_link w-inline-block",
               },
-              [y("div", { class: "u-ts-3" }, "Instagram")]
+              [h("div", { class: "u-ts-3" }, "Instagram")]
             ),
           ]),
-          y("li", { class: "footer_list-item" }, [
-            y(
+          h("li", { class: "footer_list-item" }, [
+            h(
               "a",
               {
                 href: "https://www.linkedin.com/company/basisstudio/",
                 target: "_blank",
                 class: "footer_link w-inline-block",
               },
-              [y("div", { class: "u-ts-3" }, "Linkedin")]
+              [h("div", { class: "u-ts-3" }, "Linkedin")]
             ),
           ]),
         ]),
@@ -1665,44 +1676,44 @@ const Ra = {},
     ],
     -1
   ),
-  $a = y(
+  $a = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
-      y("div", { class: "footer_group" }, [
-        y("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
-        y("ul", { role: "list", class: "footer_list" }, [
-          y("li", { class: "footer_list-item" }, [
-            y("a", { href: "/", class: "footer_link w-inline-block" }, [
-              y("div", { class: "u-ts-3" }, "Overview"),
+      h("div", { class: "footer_group" }, [
+        h("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation"),
+        h("ul", { role: "list", class: "footer_list" }, [
+          h("li", { class: "footer_list-item" }, [
+            h("a", { href: "/", class: "footer_link w-inline-block" }, [
+              h("div", { class: "u-ts-3" }, "Overview"),
             ]),
           ]),
-          y("li", { class: "footer_list-item" }, [
-            y("a", { href: "/cases", class: "footer_link w-inline-block" }, [
-              y("div", { class: "u-ts-3" }, "Cases"),
+          h("li", { class: "footer_list-item" }, [
+            h("a", { href: "/cases", class: "footer_link w-inline-block" }, [
+              h("div", { class: "u-ts-3" }, "Cases"),
             ]),
           ]),
-          y("li", { class: "footer_list-item" }, [
-            y("a", { href: "/about", class: "footer_link w-inline-block" }, [
-              y("div", { class: "u-ts-3" }, "Services"),
+          h("li", { class: "footer_list-item" }, [
+            h("a", { href: "/about", class: "footer_link w-inline-block" }, [
+              h("div", { class: "u-ts-3" }, "Services"),
             ]),
           ]),
-          y("li", { class: "footer_list-item" }, [
-            y(
+          h("li", { class: "footer_list-item" }, [
+            h(
               "a",
               { href: "/design-trial", class: "footer_link w-inline-block" },
-              [y("div", { class: "u-ts-3" }, "Design Trial")]
+              [h("div", { class: "u-ts-3" }, "Design Trial")]
             ),
           ]),
-          y("li", { class: "footer_list-item" }, [
-            y(
+          h("li", { class: "footer_list-item" }, [
+            h(
               "a",
               {
                 href: "/fintech-design",
                 "aria-current": "page",
                 class: "footer_link w-inline-block w--current",
               },
-              [y("div", { class: "u-ts-3" }, "Fintech Design")]
+              [h("div", { class: "u-ts-3" }, "Fintech Design")]
             ),
           ]),
         ]),
@@ -1710,18 +1721,18 @@ const Ra = {},
     ],
     -1
   ),
-  Ja = y("div", { class: "col col-md-hide" }, null, -1),
+  Ja = h("div", { class: "col col-md-hide" }, null, -1),
   Qa = { class: "col col-lg-4 col-md-12 col-md-first" },
   et = { href: "/", class: "footer-wordmark w-inline-block" },
   at = { class: "wordmark w-embed" },
   tt = ["src"],
-  st = y(
+  st = h(
     "div",
     { class: "footer-copyright" },
     [
-      y("div", { "data-copyright": "" }, [
+      h("div", { "data-copyright": "" }, [
         G(" Copyright © "),
-        y("span", { "data-dynamic": "year" }, "2024"),
+        h("span", { "data-dynamic": "year" }, "2024"),
       ]),
     ],
     -1
@@ -1730,15 +1741,15 @@ const Ra = {},
     setup: (e) => (e, a) => (
       g(),
       b("footer", Ya, [
-        y("div", Wa, [
-          y("div", Ga, [
+        h("div", Wa, [
+          h("div", Ga, [
             Ka,
             $a,
             Ja,
-            y("div", Qa, [
-              y("a", et, [
-                y("div", at, [
-                  y("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, tt),
+            h("div", Qa, [
+              h("a", et, [
+                h("div", at, [
+                  h("img", { src: w(ke)("logo.png"), alt: "" }, null, 8, tt),
                 ]),
               ]),
             ]),
@@ -1754,7 +1765,7 @@ const it = {
       const { t: e } = Fe();
       return (
         q(() => {
-          ne.init();
+          de.init();
           const e = new IntersectionObserver((e) => {
             e.forEach((e) => {
               e.isIntersecting
@@ -1770,12 +1781,12 @@ const it = {
       );
     },
   },
-  ot = y(
+  ot = h(
     "header",
     { "data-mouse-class": "cc-icon", class: "header cc-large" },
     [
-      y("div", { class: "nav_mode w-embed" }),
-      y(
+      h("div", { class: "nav_mode w-embed" }),
+      h(
         "div",
         {
           class: "header-image_wrap",
@@ -1786,7 +1797,7 @@ const it = {
           },
         },
         [
-          y("img", {
+          h("img", {
             src:
               "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55233c_hero_fintech-design.webp",
             loading: "eager",
@@ -1802,7 +1813,7 @@ const it = {
               "transform-style": "preserve-3d",
             },
           }),
-          y(
+          h(
             "div",
             {
               class: "header-image",
@@ -1814,8 +1825,8 @@ const it = {
               },
             },
             [
-              y("div", { class: "iframe-video_wrapper" }, [
-                y("iframe", {
+              h("div", { class: "iframe-video_wrapper" }, [
+                h("iframe", {
                   class: "iframe-video_iframe",
                   width: "100%",
                   height: "100%",
@@ -1828,16 +1839,16 @@ const it = {
                   title: "Services 1",
                   loading: "lazy",
                 }),
-                y("div", { class: "iframe-video_blocker" }),
+                h("div", { class: "iframe-video_blocker" }),
               ]),
             ]
           ),
         ]
       ),
-      y("div", { class: "header-content_wrapper" }, [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y(
+      h("div", { class: "header-content_wrapper" }, [
+        h("div", { class: "container" }, [
+          h("div", { class: "row" }, [
+            h(
               "div",
               {
                 "data-animation-trigger": "transition",
@@ -1845,8 +1856,8 @@ const it = {
                 class: "col col-lg-6 col-md-12",
               },
               [
-                y("div", { class: "header-content_main" }, [
-                  y(
+                h("div", { class: "header-content_main" }, [
+                  h(
                     "div",
                     {
                       class: "text-wrap-balance",
@@ -1854,7 +1865,7 @@ const it = {
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "h1",
                         {
                           "data-animation-element": "title",
@@ -1862,7 +1873,7 @@ const it = {
                           style: {},
                         },
                         [
-                          y(
+                          h(
                             "div",
                             {
                               class: "u-overflow-hidden",
@@ -1873,7 +1884,7 @@ const it = {
                               },
                             },
                             [
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1887,7 +1898,7 @@ const it = {
                                 },
                                 " Basis "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1901,7 +1912,7 @@ const it = {
                                 },
                                 " gets "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1915,7 +1926,7 @@ const it = {
                                 },
                                 " you "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1931,7 +1942,7 @@ const it = {
                               ),
                             ]
                           ),
-                          y(
+                          h(
                             "div",
                             {
                               class: "u-overflow-hidden",
@@ -1942,7 +1953,7 @@ const it = {
                               },
                             },
                             [
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1956,7 +1967,7 @@ const it = {
                                 },
                                 " to "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1970,7 +1981,7 @@ const it = {
                                 },
                                 " your "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -1986,7 +1997,7 @@ const it = {
                               ),
                             ]
                           ),
-                          y(
+                          h(
                             "div",
                             {
                               class: "u-overflow-hidden",
@@ -1997,7 +2008,7 @@ const it = {
                               },
                             },
                             [
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2011,7 +2022,7 @@ const it = {
                                 },
                                 " vision, "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2025,7 +2036,7 @@ const it = {
                                 },
                                 " first "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2039,7 +2050,7 @@ const it = {
                                 },
                                 " by "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2055,7 +2066,7 @@ const it = {
                               ),
                             ]
                           ),
-                          y(
+                          h(
                             "div",
                             {
                               class: "u-overflow-hidden",
@@ -2066,7 +2077,7 @@ const it = {
                               },
                             },
                             [
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2080,7 +2091,7 @@ const it = {
                                 },
                                 " your "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2094,7 +2105,7 @@ const it = {
                                 },
                                 " short-term "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -2114,9 +2125,9 @@ const it = {
                       ),
                     ]
                   ),
-                  y("div", { class: "header-content_cta" }, [
-                    y("div", { class: "header-content_icon w-embed" }, [
-                      y(
+                  h("div", { class: "header-content_cta" }, [
+                    h("div", { class: "header-content_icon w-embed" }, [
+                      h(
                         "svg",
                         {
                           width: "100%",
@@ -2126,7 +2137,7 @@ const it = {
                           xmlns: "http://www.w3.org/2000/svg",
                         },
                         [
-                          y("path", {
+                          h("path", {
                             d:
                               "M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z",
                             fill: "black",
@@ -2141,18 +2152,18 @@ const it = {
           ]),
         ]),
       ]),
-      y("div", { "data-transition": "in", class: "header-trigger" }),
+      h("div", { "data-transition": "in", class: "header-trigger" }),
     ],
     -1
   ),
-  rt = y("div", { class: "spacing" }, null, -1),
-  dt = y(
+  rt = h("div", { class: "spacing" }, null, -1),
+  nt = h(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y(
+      h("div", { class: "section-title_component" }, [
+        h("div", { class: "container" }, [
+          h(
             "div",
             {
               class: "section-title_wrapper",
@@ -2160,18 +2171,18 @@ const it = {
               "data-aos-duration": "700",
             },
             [
-              y(
+              h(
                 "div",
                 { class: "section-title_dot", style: { opacity: "1" } },
                 [
-                  y("div", {
+                  h("div", {
                     class: "section-title_dot-fill",
                     style: { width: "100%", height: "100%" },
                   }),
                 ]
               ),
-              y("div", { class: "u-overflow-hidden" }, [
-                y(
+              h("div", { class: "u-overflow-hidden" }, [
+                h(
                   "div",
                   {
                     class: "section-title_title",
@@ -2180,20 +2191,20 @@ const it = {
                       "transform-style": "preserve-3d",
                     },
                   },
-                  [y("h2", { class: "u-ts-4" }, "Work with Basis")]
+                  [h("h2", { class: "u-ts-4" }, "Work with Basis")]
                 ),
               ]),
             ]
           ),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "w-layout-grid pair-grid" }, [
-          y(
+      h("div", { class: "container" }, [
+        h("div", { class: "w-layout-grid pair-grid" }, [
+          h(
             "div",
             { id: "w-node-e8a07e93-34f6-be32-54f2-b34bf2439e43-af55239f" },
             [
-              y(
+              h(
                 "div",
                 {
                   class: "case-details is-about",
@@ -2201,9 +2212,9 @@ const it = {
                   "data-aos-duration": "700",
                 },
                 [
-                  y("div", { class: "u-ts-4" }, [
-                    y("div", { class: "u-overflow-hidden" }, [
-                      y(
+                  h("div", { class: "u-ts-4" }, [
+                    h("div", { class: "u-overflow-hidden" }, [
+                      h(
                         "div",
                         {
                           class: "case-detail_title cc-1",
@@ -2214,7 +2225,7 @@ const it = {
                           },
                         },
                         [
-                          y(
+                          h(
                             "h2",
                             { class: "u-ts-4 u-text-mid" },
                             "Project inquiries"
@@ -2222,24 +2233,18 @@ const it = {
                         ]
                       ),
                     ]),
-                    y(
+                    h(
                       "a",
                       {
                         href: "mailto:hello@basis.work",
                         class: "case-detail_item cc-1",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                          opacity: "1",
-                        },
                       },
                       "hello@basis.work"
                     ),
                   ]),
-                  y("div", { class: "u-ts-4" }, [
-                    y("div", { class: "u-overflow-hidden" }, [
-                      y(
+                  h("div", { class: "u-ts-4" }, [
+                    h("div", { class: "u-overflow-hidden" }, [
+                      h(
                         "div",
                         {
                           class: "case-detail_title cc-2",
@@ -2250,7 +2255,7 @@ const it = {
                           },
                         },
                         [
-                          y(
+                          h(
                             "h2",
                             { class: "u-ts-4 u-text-mid" },
                             "Join the team"
@@ -2258,17 +2263,11 @@ const it = {
                         ]
                       ),
                     ]),
-                    y(
+                    h(
                       "a",
                       {
                         href: "mailto:jobs@basis.work",
                         class: "case-detail_item cc-2",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                          opacity: "1",
-                        },
                       },
                       "jobs@basis.work"
                     ),
@@ -2277,14 +2276,14 @@ const it = {
               ),
             ]
           ),
-          y(
+          h(
             "div",
             {
               id: "w-node-_2eada710-eca2-ae0e-be9f-54fbff32a11c-af55239f",
               class: "content",
             },
             [
-              y(
+              h(
                 "div",
                 {
                   "data-animation-element": "paragraphs",
@@ -2293,15 +2292,15 @@ const it = {
                   "data-aos-duration": "700",
                 },
                 [
-                  y(
+                  h(
                     "p",
                     { class: "u-ts-1 u-mb-0" },
                     " Startups and enterprises hire us when they can’t afford to fail. As the technology of our world gets increasingly more complex, your brand and product are being asked to adapt to more situations, more platforms, more devices, and a more global audience than ever. That’s why you need the expertise of a studio that builds true systems: From the first touch of brand awareness to the product needs of your most engaged user, Basis sees it all as part of one holistic experience. "
                   ),
                 ]
               ),
-              y("div", { class: "btn-group" }, [
-                y(
+              h("div", { class: "btn-group" }, [
+                h(
                   "div",
                   {
                     class: "btn-item cc-1",
@@ -2312,7 +2311,7 @@ const it = {
                     },
                   },
                   [
-                    y(
+                    h(
                       "a",
                       {
                         class: "btn w-inline-block",
@@ -2320,9 +2319,9 @@ const it = {
                         "data-aos-duration": "1000",
                       },
                       [
-                        y("div", { class: "btn-text-wrap" }, [
-                          y("div", { class: "btn-text" }, "Start a project"),
-                          y(
+                        h("div", { class: "btn-text-wrap" }, [
+                          h("div", { class: "btn-text" }, "Start a project"),
+                          h(
                             "div",
                             { class: "btn-text cc-bottom" },
                             "Start a project"
@@ -2332,7 +2331,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "btn-item cc-2",
@@ -2343,7 +2342,7 @@ const it = {
                     },
                   },
                   [
-                    y(
+                    h(
                       "a",
                       {
                         class: "btn cc-secondary w-inline-block",
@@ -2351,9 +2350,9 @@ const it = {
                         "data-aos-duration": "1000",
                       },
                       [
-                        y("div", { class: "btn-text-wrap" }, [
-                          y("div", { class: "btn-text" }, "Design trial"),
-                          y(
+                        h("div", { class: "btn-text-wrap" }, [
+                          h("div", { class: "btn-text" }, "Design trial"),
+                          h(
                             "div",
                             { class: "btn-text cc-bottom" },
                             "Design trial"
@@ -2367,10 +2366,10 @@ const it = {
             ]
           ),
         ]),
-        y("div", { class: "sticky-pair cc-far" }, [
-          y("div", { class: "w-layout-grid pair-grid" }, [
-            y("div", { class: "div-block" }, [
-              y(
+        h("div", { class: "sticky-pair cc-far" }, [
+          h("div", { class: "w-layout-grid pair-grid" }, [
+            h("div", { class: "div-block" }, [
+              h(
                 "div",
                 {
                   class: "card-wrapper cc-small",
@@ -2378,8 +2377,8 @@ const it = {
                   "data-aos-duration": "700",
                 },
                 [
-                  y("div", { class: "card-animation cc-40" }, [
-                    y(
+                  h("div", { class: "card-animation cc-40" }, [
+                    h(
                       "div",
                       {
                         "data-mouse-class": "cc-none",
@@ -2392,8 +2391,8 @@ const it = {
                         },
                       },
                       [
-                        y("div", { class: "card-image_wrapper" }, [
-                          y("img", {
+                        h("div", { class: "card-image_wrapper" }, [
+                          h("img", {
                             loading: "lazy",
                             sizes: "100vw",
                             srcset:
@@ -2415,7 +2414,7 @@ const it = {
                 ]
               ),
             ]),
-            y(
+            h(
               "div",
               {
                 class: "card-wrapper cc-large",
@@ -2423,21 +2422,13 @@ const it = {
                 "data-aos-duration": "700",
               },
               [
-                y("div", { class: "card-animation cc-40" }, [
-                  y(
+                h("div", { class: "card-animation cc-40" }, [
+                  h(
                     "div",
-                    {
-                      "data-mouse-class": "cc-none",
-                      class: "card cc-large",
-                      style: {
-                        transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                        opacity: "1",
-                      },
-                    },
+                    { "data-mouse-class": "cc-none", class: "card cc-large" },
                     [
-                      y("div", { class: "card-image_wrapper" }, [
-                        y("img", {
+                      h("div", { class: "card-image_wrapper" }, [
+                        h("img", {
                           loading: "lazy",
                           sizes: "100vw",
                           srcset:
@@ -2446,11 +2437,6 @@ const it = {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552308/6584502438fea068af55235a_meet-bases-02.webp",
                           class: "card-image",
-                          style: {
-                            "will-change": "transform",
-                            transform: "translate3d(0px, -20%, 0px)",
-                            "transform-style": "preserve-3d",
-                          },
                         }),
                       ]),
                     ]
@@ -2458,128 +2444,111 @@ const it = {
                 ]),
               ]
             ),
-            y(
-              "div",
-              {
-                id: "w-node-ce72eb91-efb6-6f0b-43b7-a66f9003cbae-af55239f",
-                class: "content",
-              },
-              [
-                y(
+            h("div", { class: "content" }, [
+              h(
+                "div",
+                {
+                  "data-animation-element": "paragraphs",
+                  class: "content-p cc-1",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  h(
+                    "p",
+                    { class: "u-ts-1" },
+                    " Whether it’s shaping a new venture 0 → 1, evolving an existing company 1 → N, or taking an industry leader from N → XYZ, Basis has a formula that delivers results in record time. Our team is respected for crafting world-class experiences through our signature Product and Brand Trials, led by Michal Škvarenina, the design director behind digital experiences for Google, Airbnb, Red Bull, Mastercard, PC Financial, and more. "
+                  ),
+                ]
+              ),
+              h(
+                "div",
+                {
+                  "data-animation-element": "paragraphs",
+                  class: "content-p cc-2",
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  h(
+                    "p",
+                    { class: "u-ts-1" },
+                    " When you want to build enduring digital products for an increasingly-digital future, first establish your Basis. "
+                  ),
+                ]
+              ),
+              h("div", { class: "btn-group" }, [
+                h(
                   "div",
                   {
-                    "data-animation-element": "paragraphs",
-                    class: "content-p cc-1",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "700",
+                    class: "btn-item cc-1",
                     style: {
-                      transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                      "transform-style": "preserve-3d",
                       opacity: "1",
+                      transform: "translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
                     },
                   },
                   [
-                    y(
-                      "p",
-                      { class: "u-ts-1" },
-                      " Whether it’s shaping a new venture 0 → 1, evolving an existing company 1 → N, or taking an industry leader from N → XYZ, Basis has a formula that delivers results in record time. Our team is respected for crafting world-class experiences through our signature Product and Brand Trials, led by Michal Škvarenina, the design director behind digital experiences for Google, Airbnb, Red Bull, Mastercard, PC Financial, and more. "
+                    h(
+                      "a",
+                      {
+                        "data-aos": "fade-left",
+                        "data-aos-duration": "1000",
+                        class: "btn w-inline-block",
+                      },
+                      [
+                        h("div", { class: "btn-text-wrap" }, [
+                          h("div", { class: "btn-text" }, "Start a project"),
+                          h(
+                            "div",
+                            { class: "btn-text cc-bottom" },
+                            "Start a project"
+                          ),
+                        ]),
+                      ]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
-                    "data-animation-element": "paragraphs",
-                    class: "content-p cc-2",
+                    class: "btn-item cc-2",
                     style: {
-                      transform: "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
-                      "transform-style": "preserve-3d",
                       opacity: "1",
+                      transform: "translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
                     },
                   },
                   [
-                    y(
-                      "p",
-                      { class: "u-ts-1" },
-                      " When you want to build enduring digital products for an increasingly-digital future, first establish your Basis. "
+                    h(
+                      "a",
+                      {
+                        class: "btn cc-secondary w-inline-block",
+                        "data-aos": "fade-left",
+                        "data-aos-duration": "1000",
+                      },
+                      [
+                        h("div", { class: "btn-text-wrap" }, [
+                          h("div", { class: "btn-text" }, "Design trial"),
+                          h(
+                            "div",
+                            { class: "btn-text cc-bottom" },
+                            "Design trial"
+                          ),
+                        ]),
+                      ]
                     ),
                   ]
                 ),
-                y("div", { class: "btn-group" }, [
-                  y(
-                    "div",
-                    {
-                      class: "btn-item cc-1",
-                      style: {
-                        opacity: "1",
-                        transform:
-                          "translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [
-                      y(
-                        "a",
-                        {
-                          "data-aos": "fade-left",
-                          "data-aos-duration": "1000",
-                          class: "btn w-inline-block",
-                        },
-                        [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y("div", { class: "btn-text" }, "Start a project"),
-                            y(
-                              "div",
-                              { class: "btn-text cc-bottom" },
-                              "Start a project"
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]
-                  ),
-                  y(
-                    "div",
-                    {
-                      class: "btn-item cc-2",
-                      style: {
-                        opacity: "1",
-                        transform:
-                          "translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)",
-                        "transform-style": "preserve-3d",
-                      },
-                    },
-                    [
-                      y(
-                        "a",
-                        {
-                          class: "btn cc-secondary w-inline-block",
-                          "data-aos": "fade-left",
-                          "data-aos-duration": "1000",
-                        },
-                        [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y("div", { class: "btn-text" }, "Design trial"),
-                            y(
-                              "div",
-                              { class: "btn-text cc-bottom" },
-                              "Design trial"
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
+              ]),
+            ]),
           ]),
         ]),
       ]),
-      y("div", { class: "u-mt-8-75", "data-v-57509004": "" }, [
-        y("div", { class: "marquee", "data-v-57509004": "" }, [
-          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            y(
+      h("div", { class: "u-mt-8-75", "data-v-57509004": "" }, [
+        h("div", { class: "marquee", "data-v-57509004": "" }, [
+          h("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            h(
               "div",
               {
                 role: "list",
@@ -2592,7 +2561,7 @@ const it = {
                 },
               },
               [
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2600,7 +2569,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-1",
@@ -2612,7 +2581,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "300",
@@ -2626,7 +2595,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2634,7 +2603,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-2",
@@ -2646,7 +2615,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "400",
@@ -2660,7 +2629,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2668,7 +2637,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-3",
@@ -2680,7 +2649,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "500",
@@ -2694,7 +2663,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2702,7 +2671,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-4",
@@ -2714,7 +2683,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "600",
@@ -2728,7 +2697,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2736,7 +2705,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-5",
@@ -2748,7 +2717,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "700",
@@ -2762,7 +2731,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2770,7 +2739,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-6",
@@ -2782,7 +2751,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "800",
@@ -2796,7 +2765,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2804,7 +2773,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-7",
@@ -2816,7 +2785,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "900",
@@ -2830,7 +2799,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2838,7 +2807,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-8",
@@ -2850,7 +2819,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "1000",
@@ -2864,7 +2833,7 @@ const it = {
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2872,7 +2841,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "marquee_item cc-9",
@@ -2884,7 +2853,7 @@ const it = {
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           loading: "eager",
                           "data-aos": "fade-up",
                           "data-aos-delay": "1100",
@@ -2901,8 +2870,8 @@ const it = {
               ]
             ),
           ]),
-          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            y(
+          h("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            h(
               "div",
               {
                 role: "list",
@@ -2915,7 +2884,7 @@ const it = {
                 },
               },
               [
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2923,7 +2892,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -2933,7 +2902,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2941,7 +2910,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -2951,7 +2920,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2959,7 +2928,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -2969,7 +2938,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2977,7 +2946,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -2987,7 +2956,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -2995,7 +2964,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -3005,7 +2974,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3013,7 +2982,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -3023,7 +2992,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3031,7 +3000,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -3041,7 +3010,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3049,7 +3018,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3059,7 +3028,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3067,7 +3036,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3080,8 +3049,8 @@ const it = {
               ]
             ),
           ]),
-          y("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
-            y(
+          h("div", { class: "marquee_row w-dyn-list", "data-v-57509004": "" }, [
+            h(
               "div",
               {
                 role: "list",
@@ -3094,7 +3063,7 @@ const it = {
                 },
               },
               [
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3102,7 +3071,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
@@ -3112,7 +3081,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3120,7 +3089,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
@@ -3130,7 +3099,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3138,7 +3107,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
@@ -3148,7 +3117,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3156,7 +3125,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
@@ -3166,7 +3135,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3174,7 +3143,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
@@ -3184,7 +3153,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3192,7 +3161,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
@@ -3202,7 +3171,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3210,7 +3179,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
@@ -3220,7 +3189,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3228,7 +3197,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
@@ -3238,7 +3207,7 @@ const it = {
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     role: "listitem",
@@ -3246,7 +3215,7 @@ const it = {
                     "data-v-57509004": "",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       loading: "eager",
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
@@ -3264,19 +3233,19 @@ const it = {
     ],
     -1
   ),
-  nt = y(
+  dt = h(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [h("div", { class: "target_line" })],
     -1
   ),
-  ct = y(
+  ct = h(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y(
+      h("div", { class: "section-title_component" }, [
+        h("div", { class: "container" }, [
+          h(
             "div",
             {
               class: "section-title_wrapper",
@@ -3284,22 +3253,22 @@ const it = {
               "data-aos-duration": "700",
             },
             [
-              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-              y("div", { class: "u-overflow-hidden" }, [
-                y("div", { class: "section-title_title" }, [
-                  y("h2", { class: "u-ts-4" }, "What we do"),
+              h("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              h("div", { class: "u-overflow-hidden" }, [
+                h("div", { class: "section-title_title" }, [
+                  h("h2", { class: "u-ts-4" }, "What we do"),
                 ]),
               ]),
             ]
           ),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { "data-animation-element": "group", class: "row" }, [
-          y("div", { class: "col col-lg-4 col-md-hide" }),
-          y("div", { class: "col" }, [
-            y("div", { class: "service-list" }, [
-              y(
+      h("div", { class: "container" }, [
+        h("div", { "data-animation-element": "group", class: "row" }, [
+          h("div", { class: "col col-lg-4 col-md-hide" }),
+          h("div", { class: "col" }, [
+            h("div", { class: "service-list" }, [
+              h(
                 "div",
                 {
                   class: "logomark_component",
@@ -3307,7 +3276,7 @@ const it = {
                   "data-aos-duration": "700",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "logomark w-embed",
@@ -3317,7 +3286,7 @@ const it = {
                       },
                     },
                     [
-                      y(
+                      h(
                         "svg",
                         {
                           height: "100%",
@@ -3327,7 +3296,7 @@ const it = {
                           xmlns: "http://www.w3.org/2000/svg",
                         },
                         [
-                          y("path", {
+                          h("path", {
                             d:
                               "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
                             fill: "currentColor",
@@ -3338,8 +3307,8 @@ const it = {
                   ),
                 ]
               ),
-              y("ul", { role: "list", class: "u-mt-3-5" }, [
-                y(
+              h("ul", { role: "list", class: "u-mt-3-5" }, [
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3347,7 +3316,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-1",
@@ -3357,11 +3326,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Research")]
+                      [h("h3", { class: "u-tc-caps" }, "Research")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3369,7 +3338,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-2",
@@ -3379,11 +3348,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Brand Strategy")]
+                      [h("h3", { class: "u-tc-caps" }, "Brand Strategy")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3391,7 +3360,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-3",
@@ -3401,11 +3370,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Creative Direction")]
+                      [h("h3", { class: "u-tc-caps" }, "Creative Direction")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3413,7 +3382,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-4",
@@ -3423,11 +3392,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Brand identity")]
+                      [h("h3", { class: "u-tc-caps" }, "Brand identity")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3435,7 +3404,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-5",
@@ -3445,11 +3414,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "UX & UI Design")]
+                      [h("h3", { class: "u-tc-caps" }, "UX & UI Design")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3457,7 +3426,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-6",
@@ -3467,11 +3436,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Interaction Design")]
+                      [h("h3", { class: "u-tc-caps" }, "Interaction Design")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3479,7 +3448,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-7",
@@ -3489,11 +3458,11 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Implementation")]
+                      [h("h3", { class: "u-tc-caps" }, "Implementation")]
                     ),
                   ]
                 ),
-                y(
+                h(
                   "li",
                   {
                     class: "u-overflow-hidden",
@@ -3501,7 +3470,7 @@ const it = {
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "list-content cc-8",
@@ -3511,7 +3480,7 @@ const it = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h3", { class: "u-tc-caps" }, "Webflow Development")]
+                      [h("h3", { class: "u-tc-caps" }, "Webflow Development")]
                     ),
                   ]
                 ),
@@ -3532,7 +3501,7 @@ var vt = Se(it, [
       "render",
       function (e, a, t, s, l, i) {
         const o = S("Footer");
-        return g(), b(_, null, [ot, rt, dt, nt, ct, pt, T(o)], 64);
+        return g(), b(_, null, [ot, rt, nt, dt, ct, pt, T(o)], 64);
       },
     ],
   ]),
@@ -3550,7 +3519,7 @@ const ft = {
       const { t: e } = Fe();
       return (
         q(() => {
-          ne.init();
+          de.init();
           const e = new IntersectionObserver((e) => {
             e.forEach((e) => {
               e.isIntersecting
@@ -3567,12 +3536,12 @@ const ft = {
     },
   },
   ut = ((e) => (pe("data-v-e64ae5a2"), (e = e()), ve(), e))(() =>
-    y(
+    h(
       "div",
       { class: "about" },
       [
-        y("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
-          y(
+        h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+          h(
             "a",
             {
               "data-mouse-class": "cc-text",
@@ -3586,23 +3555,23 @@ const ft = {
               },
             },
             [
-              y("div", { class: "cases-assets" }, [
-                y("img", {
+              h("div", { class: "cases-assets" }, [
+                h("img", {
                   src:
                     "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                   loading: "lazy",
                   alt: "",
                   class: "cases-portrait",
                 }),
-                y("img", {
+                h("img", {
                   src:
                     "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                   loading: "eager",
                   alt: "",
                   class: "cases-landscape",
                 }),
-                y("div", { class: "iframe-video_wrapper" }, [
-                  y("iframe", {
+                h("div", { class: "iframe-video_wrapper" }, [
+                  h("iframe", {
                     class: "iframe-video_iframe",
                     width: "100%",
                     height: "100%",
@@ -3615,16 +3584,16 @@ const ft = {
                     title: "Sable 12",
                     loading: "lazy",
                   }),
-                  y("div", { class: "iframe-video_blocker" }),
+                  h("div", { class: "iframe-video_blocker" }),
                 ]),
               ]),
-              y("div", { class: "cases-text" }, [
-                y("div", { class: "u-ts-2" }, "Sable Brand"),
+              h("div", { class: "cases-text" }, [
+                h("div", { class: "u-ts-2" }, "Sable Brand"),
               ]),
             ]
           ),
-          y("link", { rel: "prerender", href: "/cases/sable-brand" }),
-          y(
+          h("link", { rel: "prerender", href: "/cases/sable-brand" }),
+          h(
             "a",
             {
               "data-mouse-text": "Contact Us",
@@ -3640,24 +3609,24 @@ const ft = {
               },
             },
             [
-              y("div", { class: "cases-assets" }, [
-                y("img", {
+              h("div", { class: "cases-assets" }, [
+                h("img", {
                   src:
                     "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                   loading: "lazy",
                   alt: "",
                   class: "cases-portrait w-condition-invisible",
                 }),
-                y("img", {
+                h("img", {
                   src:
                     "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                   loading: "lazy",
                   alt: "",
                   class: "cases-landscape w-condition-invisible",
                 }),
-                y("div", null, [
-                  y("div", { class: "iframe-video_wrapper" }, [
-                    y("iframe", {
+                h("div", null, [
+                  h("div", { class: "iframe-video_wrapper" }, [
+                    h("iframe", {
                       class: "iframe-video_iframe",
                       width: "100%",
                       height: "100%",
@@ -3670,29 +3639,29 @@ const ft = {
                       title: "Sable 12",
                       loading: "lazy",
                     }),
-                    y("div", { class: "iframe-video_blocker" }),
+                    h("div", { class: "iframe-video_blocker" }),
                   ]),
                 ]),
               ]),
-              y("div", { class: "cases-text" }, [
-                y("div", { class: "cases-more" }, [
-                  y("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+              h("div", { class: "cases-text" }, [
+                h("div", { class: "cases-more" }, [
+                  h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
                     G(" Contact us"),
-                    y("span", { class: "hide-tablet" }, " for more"),
+                    h("span", { class: "hide-tablet" }, " for more"),
                   ]),
                 ]),
-                y("div", { class: "u-ts-2" }, "Sable Brand"),
+                h("div", { class: "u-ts-2" }, "Sable Brand"),
               ]),
             ]
           ),
         ]),
-        y("div", { class: "container mobile-show" }, [
-          y("div", { class: "target_line" }),
+        h("div", { class: "container mobile-show" }, [
+          h("div", { class: "target_line" }),
         ]),
-        y("section", { class: "section mobile-show" }, [
-          y("div", { class: "section-title_component" }, [
-            y("div", { class: "container" }, [
-              y(
+        h("section", { class: "section mobile-show" }, [
+          h("div", { class: "section-title_component" }, [
+            h("div", { class: "container" }, [
+              h(
                 "div",
                 {
                   class: "section-title_wrapper",
@@ -3700,12 +3669,12 @@ const ft = {
                   "data-aos-duration": "700",
                 },
                 [
-                  y("div", {
+                  h("div", {
                     class: "section-title_dot",
                     style: { opacity: "1" },
                   }),
-                  y("div", { class: "u-overflow-hidden" }, [
-                    y(
+                  h("div", { class: "u-overflow-hidden" }, [
+                    h(
                       "div",
                       {
                         class: "section-title_title",
@@ -3715,23 +3684,23 @@ const ft = {
                           "transform-style": "preserve-3d",
                         },
                       },
-                      [y("h2", { class: "u-ts-4" }, "Contact Us")]
+                      [h("h2", { class: "u-ts-4" }, "Contact Us")]
                     ),
                   ]),
                 ]
               ),
             ]),
           ]),
-          y("div", { class: "container" }, [
-            y("div", { class: "w-layout-grid pair-grid" }, [
-              y(
+          h("div", { class: "container" }, [
+            h("div", { class: "w-layout-grid pair-grid" }, [
+              h(
                 "div",
                 {
                   "data-animation-element": "group",
                   id: "w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       "data-animation-element": "rich-text",
@@ -3740,7 +3709,7 @@ const ft = {
                       class: "contact-cta w-richtext",
                     },
                     [
-                      y(
+                      h(
                         "h3",
                         {
                           "data-animation-element": "title",
@@ -3749,7 +3718,7 @@ const ft = {
                           "data-aos-duration": "700",
                         },
                         [
-                          y(
+                          h(
                             "div",
                             {
                               class: "u-overflow-hidden",
@@ -3760,7 +3729,7 @@ const ft = {
                               },
                             },
                             [
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -3774,7 +3743,7 @@ const ft = {
                                 },
                                 " Have "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -3788,7 +3757,7 @@ const ft = {
                                 },
                                 " a "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -3802,7 +3771,7 @@ const ft = {
                                 },
                                 " project "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -3816,7 +3785,7 @@ const ft = {
                                 },
                                 " in "
                               ),
-                              y(
+                              h(
                                 "div",
                                 {
                                   style: {
@@ -3832,7 +3801,7 @@ const ft = {
                               ),
                             ]
                           ),
-                          y(
+                          h(
                             "div",
                             {
                               class: "u-overflow-hidden",
@@ -3843,7 +3812,7 @@ const ft = {
                               },
                             },
                             [
-                              y(
+                              h(
                                 "a",
                                 {
                                   "data-aos": "fade-up",
@@ -3857,7 +3826,7 @@ const ft = {
                                   },
                                 },
                                 [
-                                  y(
+                                  h(
                                     "div",
                                     {
                                       style: {
@@ -3901,7 +3870,7 @@ var gt = Se(ft, [
       { value: "Module" }
     )
   );
-const yt = {
+const ht = {
     layout: "layout-demo",
     setup() {
       const e = ua(),
@@ -3935,35 +3904,35 @@ const yt = {
       );
     },
   },
-  ht = { class: "demo" },
+  yt = { class: "demo" },
   wt = { class: "demo-head" },
   _t = { class: "switch" },
-  xt = y("input", { type: "checkbox", class: "cb" }, null, -1),
+  xt = h("input", { type: "checkbox", class: "cb" }, null, -1),
   kt = [
-    y("span", { class: "left" }, "CN", -1),
-    y("span", { class: "right" }, "En", -1),
+    h("span", { class: "left" }, "CN", -1),
+    h("span", { class: "right" }, "En", -1),
   ],
   jt = { class: "demo-head-content" },
   Ct = { class: "demo-actions" },
   qt = { class: "radio-inputs" },
-  St = y("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  St = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
   zt = { class: "name" },
-  Ot = y("input", { type: "radio", name: "radio" }, null, -1),
+  Ot = h("input", { type: "radio", name: "radio" }, null, -1),
   At = { class: "name" },
-  Tt = y("input", { type: "radio", name: "radio" }, null, -1),
+  Tt = h("input", { type: "radio", name: "radio" }, null, -1),
   Et = { class: "name" };
-var Lt = Se(yt, [
+var Lt = Se(ht, [
     [
       "render",
       function (e, a, t, s, l, i) {
         return (
           g(),
-          b("div", ht, [
-            y("div", wt, [
-              y("div", null, [
-                y("label", _t, [
+          b("div", yt, [
+            h("div", wt, [
+              h("div", null, [
+                h("label", _t, [
                   xt,
-                  y(
+                  h(
                     "span",
                     {
                       class: "toggle",
@@ -3975,20 +3944,20 @@ var Lt = Se(yt, [
                   ),
                 ]),
               ]),
-              y("div", jt, "lang:" + Y(s.lang.current), 1),
+              h("div", jt, "lang:" + Y(s.lang.current), 1),
             ]),
-            y("div", Ct, [
-              y("div", qt, [
-                y(
+            h("div", Ct, [
+              h("div", qt, [
+                h(
                   "label",
                   {
                     class: "radio",
                     onClick:
                       a[1] || (a[1] = (...e) => s.toHome && s.toHome(...e)),
                   },
-                  [St, y("span", zt, Y(s.t("$current.router.link")), 1)]
+                  [St, h("span", zt, Y(s.t("$current.router.link")), 1)]
                 ),
-                y(
+                h(
                   "label",
                   {
                     class: "radio",
@@ -3996,9 +3965,9 @@ var Lt = Se(yt, [
                       a[2] ||
                       (a[2] = (...e) => s.swalModal && s.swalModal(...e)),
                   },
-                  [Ot, y("span", At, Y(s.t("$current.modal.swal")), 1)]
+                  [Ot, h("span", At, Y(s.t("$current.modal.swal")), 1)]
                 ),
-                y(
+                h(
                   "label",
                   {
                     class: "radio",
@@ -4006,7 +3975,7 @@ var Lt = Se(yt, [
                       a[3] ||
                       (a[3] = (...e) => s.popupModal && s.popupModal(...e)),
                   },
-                  [Tt, y("span", Et, Y(s.t("$current.popup.use")), 1)]
+                  [Tt, h("span", Et, Y(s.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -4041,7 +4010,7 @@ const It = (e) =>
       const { t: e } = Fe();
       return (
         q(() => {
-          ne.init();
+          de.init();
           const e = new IntersectionObserver((e) => {
             e.forEach((e) => {
               e.isIntersecting
@@ -4058,21 +4027,8 @@ const It = (e) =>
     },
   },
   Mt = { "data-mouse-class": "cc-icon", class: "header cc-large" },
-  Dt = {
-    class: "header-image_wrap",
-    style: {
-      transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Ft = {
-    class: "header-image",
-    style: {
-      "will-change": "transform",
-      transform: "translate3d(0px, -0.0648%, 0px)",
-      "transform-style": "preserve-3d",
-    },
-  },
+  Dt = { class: "header-image_wrap" },
+  Ft = { class: "header-image" },
   Ut = { class: "iframe-video_wrapper" },
   Vt = {
     class: "video-cover",
@@ -4084,25 +4040,25 @@ const It = (e) =>
   },
   Ht = ["src"],
   Nt = G(" Your browser does not support the video tag. "),
-  Xt = y("div", { class: "iframe-video_blocker" }, null, -1),
+  Xt = h("div", { class: "iframe-video_blocker" }, null, -1),
   Rt = ce(
-    '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4" style=""><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
+    '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
-  Zt = y("div", { class: "spacing" }, null, -1),
-  Yt = y(
+  Zt = h("div", { class: "spacing" }, null, -1),
+  Yt = h(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [h("div", { class: "target_line" })],
     -1
   ),
-  Wt = y(
+  Wt = h(
     "section",
     { class: "section over-h" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y(
+      h("div", { class: "section-title_component" }, [
+        h("div", { class: "container" }, [
+          h(
             "div",
             {
               class: "section-title_wrapper",
@@ -4110,18 +4066,18 @@ const It = (e) =>
               "data-aos-duration": "700",
             },
             [
-              y(
+              h(
                 "div",
                 { class: "section-title_dot", style: { opacity: "1" } },
                 [
-                  y("div", {
+                  h("div", {
                     class: "section-title_dot-fill",
                     style: { width: "100%", height: "100%" },
                   }),
                 ]
               ),
-              y("div", { class: "u-overflow-hidden" }, [
-                y(
+              h("div", { class: "u-overflow-hidden" }, [
+                h(
                   "div",
                   {
                     class: "section-title_title",
@@ -4130,15 +4086,15 @@ const It = (e) =>
                       "transform-style": "preserve-3d",
                     },
                   },
-                  [y("h2", { class: "u-ts-4" }, "Fintech Design Specialists")]
+                  [h("h2", { class: "u-ts-4" }, "Fintech Design Specialists")]
                 ),
               ]),
             ]
           ),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y(
+      h("div", { class: "container" }, [
+        h(
           "div",
           {
             class: "w-layout-grid pair-grid",
@@ -4146,14 +4102,14 @@ const It = (e) =>
             "data-aos-duration": "700",
           },
           [
-            y(
+            h(
               "div",
               {
                 id: "w-node-_88e3e548-f2e0-1176-a852-0e15f232b846-af55239c",
                 class: "content",
               },
               [
-                y(
+                h(
                   "div",
                   {
                     class: "content-p cc-1",
@@ -4164,7 +4120,7 @@ const It = (e) =>
                     },
                   },
                   [
-                    y(
+                    h(
                       "p",
                       { class: "u-ts-1 u-mb-0" },
                       " It’s an industry unlike any other. From credit cards to neobanks and personal finance apps, the whole array of fintech is a crowded, highly-regulated landscape that demands the attention of specialists. The world is going through a digital finance revolution—find your product's place in it with Basis. "
@@ -4175,12 +4131,12 @@ const It = (e) =>
             ),
           ]
         ),
-        y("div", { class: "sticky-pair cc-far" }, [
-          y("div", { class: "w-layout-grid pair-grid" }, [
-            y("div", { class: "div-block" }, [
-              y("div", { class: "card-wrapper cc-small" }, [
-                y("div", { class: "card-animation cc-40" }, [
-                  y(
+        h("div", { class: "sticky-pair cc-far" }, [
+          h("div", { class: "w-layout-grid pair-grid" }, [
+            h("div", { class: "div-block" }, [
+              h("div", { class: "card-wrapper cc-small" }, [
+                h("div", { class: "card-animation cc-40" }, [
+                  h(
                     "div",
                     {
                       "data-mouse-class": "cc-none",
@@ -4192,7 +4148,7 @@ const It = (e) =>
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "card-image_wrapper",
@@ -4200,8 +4156,8 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                          h("div", { class: "iframe-video_wrapper" }, [
+                            h("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4214,11 +4170,11 @@ const It = (e) =>
                               title: "Sable 1",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            h("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           class: "card-body",
@@ -4226,8 +4182,8 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("div", { class: "u-overflow-hidden" }, [
-                            y(
+                          h("div", { class: "u-overflow-hidden" }, [
+                            h(
                               "div",
                               {
                                 class: "card-up",
@@ -4238,7 +4194,7 @@ const It = (e) =>
                                 },
                               },
                               [
-                                y(
+                                h(
                                   "h4",
                                   { class: "u-ts-4" },
                                   "In-app credit score"
@@ -4253,9 +4209,9 @@ const It = (e) =>
                 ]),
               ]),
             ]),
-            y("div", { class: "card-wrapper cc-large" }, [
-              y("div", { class: "card-animation cc-40" }, [
-                y(
+            h("div", { class: "card-wrapper cc-large" }, [
+              h("div", { class: "card-animation cc-40" }, [
+                h(
                   "div",
                   {
                     "data-mouse-class": "cc-none",
@@ -4267,7 +4223,7 @@ const It = (e) =>
                     },
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "card-image_wrapper",
@@ -4275,8 +4231,8 @@ const It = (e) =>
                         "data-aos-duration": "700",
                       },
                       [
-                        y("div", { class: "iframe-video_wrapper" }, [
-                          y("iframe", {
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
                             class: "iframe-video_iframe",
                             width: "100%",
                             height: "100%",
@@ -4289,11 +4245,11 @@ const It = (e) =>
                             title: "Sable 4",
                             loading: "lazy",
                           }),
-                          y("div", { class: "iframe-video_blocker" }),
+                          h("div", { class: "iframe-video_blocker" }),
                         ]),
                       ]
                     ),
-                    y(
+                    h(
                       "div",
                       {
                         class: "card-body",
@@ -4301,8 +4257,8 @@ const It = (e) =>
                         "data-aos-duration": "700",
                       },
                       [
-                        y("div", { class: "u-overflow-hidden" }, [
-                          y(
+                        h("div", { class: "u-overflow-hidden" }, [
+                          h(
                             "div",
                             {
                               class: "card-up",
@@ -4313,8 +4269,8 @@ const It = (e) =>
                               },
                             },
                             [
-                              y("div", { class: "card-large_text" }, [
-                                y(
+                              h("div", { class: "card-large_text" }, [
+                                h(
                                   "h4",
                                   { class: "u-ts-4" },
                                   "Glow-in-the-dark credit card"
@@ -4329,14 +4285,14 @@ const It = (e) =>
                 ),
               ]),
             ]),
-            y(
+            h(
               "div",
               {
                 id: "w-node-_197491fd-e75f-5caa-bd6c-f56fc5e78edc-af55239c",
                 class: "content",
               },
               [
-                y(
+                h(
                   "div",
                   {
                     class: "content-p cc-1",
@@ -4344,15 +4300,15 @@ const It = (e) =>
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "p",
                       { class: "u-ts-1" },
                       " After rebranding banks, producing sleek new cards, and seamlessly integrating those elements into cohesive, future-proof brands, Basis can deliver results in record time. Get started with our Fintech Trial and get design results for your most essential deliverables in three weeks. "
                     ),
                   ]
                 ),
-                y("div", { class: "btn-group" }, [
-                  y(
+                h("div", { class: "btn-group" }, [
+                  h(
                     "div",
                     {
                       class: "btn-item cc-1",
@@ -4364,7 +4320,7 @@ const It = (e) =>
                       },
                     },
                     [
-                      y(
+                      h(
                         "a",
                         {
                           "data-aos": "fade-left",
@@ -4372,9 +4328,9 @@ const It = (e) =>
                           class: "btn w-inline-block",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y("div", { class: "btn-text" }, "Contact Us"),
-                            y(
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "Contact Us"),
+                            h(
                               "div",
                               { class: "btn-text cc-bottom" },
                               "Contact Us"
@@ -4384,7 +4340,7 @@ const It = (e) =>
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "div",
                     {
                       class: "btn-item cc-2",
@@ -4396,7 +4352,7 @@ const It = (e) =>
                       },
                     },
                     [
-                      y(
+                      h(
                         "a",
                         {
                           class: "btn cc-secondary w-inline-block",
@@ -4404,8 +4360,8 @@ const It = (e) =>
                           "data-aos-duration": "1000",
                         },
                         [
-                          y("div", { class: "btn-text-wrap" }, [
-                            y(
+                          h("div", { class: "btn-text-wrap" }, [
+                            h(
                               "div",
                               {
                                 class: "btn-text",
@@ -4417,7 +4373,7 @@ const It = (e) =>
                               },
                               " Design Trial "
                             ),
-                            y(
+                            h(
                               "div",
                               {
                                 class: "btn-text cc-bottom",
@@ -4443,19 +4399,19 @@ const It = (e) =>
     ],
     -1
   ),
-  Gt = y(
+  Gt = h(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [h("div", { class: "target_line" })],
     -1
   ),
-  Kt = y(
+  Kt = h(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y(
+      h("div", { class: "section-title_component" }, [
+        h("div", { class: "container" }, [
+          h(
             "div",
             {
               class: "section-title_wrapper",
@@ -4463,9 +4419,9 @@ const It = (e) =>
               "data-aos-duration": "700",
             },
             [
-              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-              y("div", { class: "u-overflow-hidden" }, [
-                y(
+              h("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              h("div", { class: "u-overflow-hidden" }, [
+                h(
                   "div",
                   {
                     class: "section-title_title",
@@ -4474,24 +4430,24 @@ const It = (e) =>
                       "transform-style": "preserve-3d",
                     },
                   },
-                  [y("h2", { class: "u-ts-4" }, "Fintech Capabilities")]
+                  [h("h2", { class: "u-ts-4" }, "Fintech Capabilities")]
                 ),
               ]),
             ]
           ),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "w-layout-grid pair-grid" }, [
-          y(
+      h("div", { class: "container" }, [
+        h("div", { class: "w-layout-grid pair-grid" }, [
+          h(
             "div",
             {
               id: "w-node-b0cbec4a-56c8-e8e7-790a-68e14ee2ef27-af55239c",
               class: "service-list",
             },
             [
-              y("div", { class: "service-list" }, [
-                y(
+              h("div", { class: "service-list" }, [
+                h(
                   "div",
                   {
                     class: "logomark_component",
@@ -4499,7 +4455,7 @@ const It = (e) =>
                     "data-aos-duration": "700",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         class: "logomark w-embed",
@@ -4510,7 +4466,7 @@ const It = (e) =>
                         },
                       },
                       [
-                        y(
+                        h(
                           "svg",
                           {
                             height: "100%",
@@ -4520,7 +4476,7 @@ const It = (e) =>
                             xmlns: "http://www.w3.org/2000/svg",
                           },
                           [
-                            y("path", {
+                            h("path", {
                               d:
                                 "M99.7044 37.5233H153.037C191.13 37.5233 194.697 0 166.289 0H56.1904L0 80H124.808C162.901 80 166.468 42.4767 138.06 42.4767H96.2268L75.0995 72.5634H68.8476L89.9749 42.4767H35.7471L39.231 37.5168H93.4589L114.586 7.43022H120.838L99.7108 37.5168L99.7044 37.5233Z",
                               fill: "currentColor",
@@ -4531,8 +4487,8 @@ const It = (e) =>
                     ),
                   ]
                 ),
-                y("ul", { role: "list", class: "u-mt-3-5" }, [
-                  y(
+                h("ul", { role: "list", class: "u-mt-3-5" }, [
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4540,7 +4496,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-1",
@@ -4550,11 +4506,11 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Digital Banking,")]
+                        [h("h3", { class: "u-tc-caps" }, "Digital Banking,")]
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4562,7 +4518,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-2",
@@ -4573,7 +4529,7 @@ const It = (e) =>
                           },
                         },
                         [
-                          y(
+                          h(
                             "h3",
                             { class: "u-tc-caps" },
                             "Credit Card Designs,"
@@ -4582,7 +4538,7 @@ const It = (e) =>
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4590,7 +4546,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-3",
@@ -4600,11 +4556,11 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Digital Wallets,")]
+                        [h("h3", { class: "u-tc-caps" }, "Digital Wallets,")]
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4612,7 +4568,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-4",
@@ -4622,11 +4578,11 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Payment Services,")]
+                        [h("h3", { class: "u-tc-caps" }, "Payment Services,")]
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4634,7 +4590,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-5",
@@ -4644,11 +4600,11 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Card Packaging,")]
+                        [h("h3", { class: "u-tc-caps" }, "Card Packaging,")]
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4656,7 +4612,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-6",
@@ -4667,7 +4623,7 @@ const It = (e) =>
                           },
                         },
                         [
-                          y(
+                          h(
                             "h3",
                             { class: "u-tc-caps" },
                             "Information Architecture,"
@@ -4676,7 +4632,7 @@ const It = (e) =>
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4684,7 +4640,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-7",
@@ -4694,11 +4650,11 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Mobile Apps,")]
+                        [h("h3", { class: "u-tc-caps" }, "Mobile Apps,")]
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4706,7 +4662,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-8",
@@ -4716,11 +4672,11 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Prototypes,")]
+                        [h("h3", { class: "u-tc-caps" }, "Prototypes,")]
                       ),
                     ]
                   ),
-                  y(
+                  h(
                     "li",
                     {
                       class: "u-overflow-hidden",
@@ -4728,7 +4684,7 @@ const It = (e) =>
                       "data-aos-duration": "700",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "list-content cc-9",
@@ -4738,7 +4694,7 @@ const It = (e) =>
                             "transform-style": "preserve-3d",
                           },
                         },
-                        [y("h3", { class: "u-tc-caps" }, "Gamification.")]
+                        [h("h3", { class: "u-tc-caps" }, "Gamification.")]
                       ),
                     ]
                   ),
@@ -4751,19 +4707,19 @@ const It = (e) =>
     ],
     -1
   ),
-  $t = y(
+  $t = h(
     "div",
     { class: "container" },
-    [y("div", { class: "target_line" })],
+    [h("div", { class: "target_line" })],
     -1
   ),
-  Jt = y(
+  Jt = h(
     "section",
     { class: "section" },
     [
-      y("div", { class: "section-title_component" }, [
-        y("div", { class: "container" }, [
-          y(
+      h("div", { class: "section-title_component" }, [
+        h("div", { class: "container" }, [
+          h(
             "div",
             {
               class: "section-title_wrapper",
@@ -4771,9 +4727,9 @@ const It = (e) =>
               "data-aos-duration": "700",
             },
             [
-              y("div", { class: "section-title_dot", style: { opacity: "1" } }),
-              y("div", { class: "u-overflow-hidden" }, [
-                y(
+              h("div", { class: "section-title_dot", style: { opacity: "1" } }),
+              h("div", { class: "u-overflow-hidden" }, [
+                h(
                   "div",
                   {
                     class: "section-title_title",
@@ -4782,19 +4738,19 @@ const It = (e) =>
                       "transform-style": "preserve-3d",
                     },
                   },
-                  [y("h2", { class: "u-ts-4" }, "Fintech Work")]
+                  [h("h2", { class: "u-ts-4" }, "Fintech Work")]
                 ),
               ]),
             ]
           ),
         ]),
       ]),
-      y("div", { class: "container" }, [
-        y("div", { class: "row" }, [y("div", { class: "col" })]),
-        y("div", { class: "w-dyn-list" }, [
-          y("div", { role: "list", class: "row w-dyn-items" }, [
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+      h("div", { class: "container" }, [
+        h("div", { class: "row" }, [h("div", { class: "col" })]),
+        h("div", { class: "w-dyn-list" }, [
+          h("div", { role: "list", class: "row w-dyn-items" }, [
+            h("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              h(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4806,7 +4762,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4814,7 +4770,7 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -4822,23 +4778,23 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait w-condition-invisible",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape w-condition-invisible",
                           }),
-                          y("div", null, [
-                            y("div", { class: "iframe-video_wrapper" }, [
-                              y("iframe", {
+                          h("div", null, [
+                            h("div", { class: "iframe-video_wrapper" }, [
+                              h("iframe", {
                                 class: "iframe-video_iframe",
                                 width: "100%",
                                 height: "100%",
@@ -4851,24 +4807,24 @@ const It = (e) =>
                                 title: "Sable 12",
                                 loading: "lazy",
                               }),
-                              y("div", { class: "iframe-video_blocker" }),
+                              h("div", { class: "iframe-video_blocker" }),
                             ]),
                           ]),
                         ]
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-text cc-auto",
                           "data-aos": "fade-up",
                           "data-aos-duration": "700",
                         },
-                        [y("div", { class: "u-ts-2" }, "Sable Brand")]
+                        [h("div", { class: "u-ts-2" }, "Sable Brand")]
                       ),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/sable-brand" }),
-                  y(
+                  h("link", { rel: "prerender", href: "/cases/sable-brand" }),
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4877,7 +4833,7 @@ const It = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -4885,22 +4841,22 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape",
                           }),
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                          h("div", { class: "iframe-video_wrapper" }, [
+                            h("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -4913,30 +4869,30 @@ const It = (e) =>
                               title: "Sable 12",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            h("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]
                       ),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      h("div", { class: "cases-text" }, [
+                        h("div", { class: "cases-more" }, [
+                          h(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Sable Brand"),
+                        h("div", { class: "u-ts-2" }, "Sable Brand"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+            h("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              h(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -4948,7 +4904,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -4956,7 +4912,7 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -4964,23 +4920,23 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape",
                           }),
-                          y("div", { class: "w-condition-invisible" }, [
-                            y("div", { class: "iframe-video_wrapper" }, [
-                              y("iframe", {
+                          h("div", { class: "w-condition-invisible" }, [
+                            h("div", { class: "iframe-video_wrapper" }, [
+                              h("iframe", {
                                 class: "iframe-video_iframe",
                                 width: "100%",
                                 height: "100%",
@@ -4990,24 +4946,24 @@ const It = (e) =>
                                 allow: "fullscreen",
                                 loading: "lazy",
                               }),
-                              y("div", { class: "iframe-video_blocker" }),
+                              h("div", { class: "iframe-video_blocker" }),
                             ]),
                           ]),
                         ]
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-text cc-auto",
                           "data-aos": "fade-up",
                           "data-aos-duration": "700",
                         },
-                        [y("div", { class: "u-ts-2" }, "Sable Website")]
+                        [h("div", { class: "u-ts-2" }, "Sable Website")]
                       ),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/sable-website" }),
-                  y(
+                  h("link", { rel: "prerender", href: "/cases/sable-website" }),
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -5016,7 +4972,7 @@ const It = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -5024,22 +4980,22 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape",
                           }),
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                          h("div", { class: "iframe-video_wrapper" }, [
+                            h("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -5049,30 +5005,30 @@ const It = (e) =>
                               allow: "fullscreen",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            h("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]
                       ),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      h("div", { class: "cases-text" }, [
+                        h("div", { class: "cases-more" }, [
+                          h(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Sable Website"),
+                        h("div", { class: "u-ts-2" }, "Sable Website"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+            h("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              h(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -5084,7 +5040,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -5092,7 +5048,7 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -5100,23 +5056,23 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait w-condition-invisible",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape w-condition-invisible",
                           }),
-                          y("div", null, [
-                            y("div", { class: "iframe-video_wrapper" }, [
-                              y("iframe", {
+                          h("div", null, [
+                            h("div", { class: "iframe-video_wrapper" }, [
+                              h("iframe", {
                                 class: "iframe-video_iframe",
                                 width: "100%",
                                 height: "100%",
@@ -5129,24 +5085,24 @@ const It = (e) =>
                                 title: "Seen 1",
                                 loading: "lazy",
                               }),
-                              y("div", { class: "iframe-video_blocker" }),
+                              h("div", { class: "iframe-video_blocker" }),
                             ]),
                           ]),
                         ]
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-text cc-auto",
                           "data-aos": "fade-up",
                           "data-aos-duration": "700",
                         },
-                        [y("div", { class: "u-ts-2" }, "Seen Brand")]
+                        [h("div", { class: "u-ts-2" }, "Seen Brand")]
                       ),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/seen-brand" }),
-                  y(
+                  h("link", { rel: "prerender", href: "/cases/seen-brand" }),
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -5155,7 +5111,7 @@ const It = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -5163,22 +5119,22 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape",
                           }),
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                          h("div", { class: "iframe-video_wrapper" }, [
+                            h("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -5191,30 +5147,30 @@ const It = (e) =>
                               title: "Seen 1",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            h("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]
                       ),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      h("div", { class: "cases-text" }, [
+                        h("div", { class: "cases-more" }, [
+                          h(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Seen Brand"),
+                        h("div", { class: "u-ts-2" }, "Seen Brand"),
                       ]),
                     ]
                   ),
                 ]
               ),
             ]),
-            y("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
-              y(
+            h("div", { role: "listitem", class: "col col-md-12 w-dyn-item" }, [
+              h(
                 "div",
                 {
                   "data-w-id": "ca292e3d-cff1-64ba-f24a-14ac357cf62c",
@@ -5226,7 +5182,7 @@ const It = (e) =>
                   class: "cases-auto",
                 },
                 [
-                  y(
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -5234,7 +5190,7 @@ const It = (e) =>
                       class: "cases-card cc-auto w-inline-block",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -5242,23 +5198,23 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape",
                           }),
-                          y("div", { class: "w-condition-invisible" }, [
-                            y("div", { class: "iframe-video_wrapper" }, [
-                              y("iframe", {
+                          h("div", { class: "w-condition-invisible" }, [
+                            h("div", { class: "iframe-video_wrapper" }, [
+                              h("iframe", {
                                 class: "iframe-video_iframe",
                                 width: "100%",
                                 height: "100%",
@@ -5268,24 +5224,24 @@ const It = (e) =>
                                 allow: "fullscreen",
                                 loading: "lazy",
                               }),
-                              y("div", { class: "iframe-video_blocker" }),
+                              h("div", { class: "iframe-video_blocker" }),
                             ]),
                           ]),
                         ]
                       ),
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-text cc-auto",
                           "data-aos": "fade-up",
                           "data-aos-duration": "700",
                         },
-                        [y("div", { class: "u-ts-2" }, "Sable App")]
+                        [h("div", { class: "u-ts-2" }, "Sable App")]
                       ),
                     ]
                   ),
-                  y("link", { rel: "prerender", href: "/cases/sable-app" }),
-                  y(
+                  h("link", { rel: "prerender", href: "/cases/sable-app" }),
+                  h(
                     "a",
                     {
                       "data-mouse-class": "cc-text",
@@ -5294,7 +5250,7 @@ const It = (e) =>
                         "cases-card cc-auto w-inline-block w-condition-invisible",
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           class: "cases-assets",
@@ -5302,22 +5258,22 @@ const It = (e) =>
                           "data-aos-duration": "700",
                         },
                         [
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-portrait",
                           }),
-                          y("img", {
+                          h("img", {
                             src:
                               "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
                             loading: "lazy",
                             alt: "",
                             class: "cases-landscape",
                           }),
-                          y("div", { class: "iframe-video_wrapper" }, [
-                            y("iframe", {
+                          h("div", { class: "iframe-video_wrapper" }, [
+                            h("iframe", {
                               class: "iframe-video_iframe",
                               width: "100%",
                               height: "100%",
@@ -5327,22 +5283,22 @@ const It = (e) =>
                               allow: "fullscreen",
                               loading: "lazy",
                             }),
-                            y("div", { class: "iframe-video_blocker" }),
+                            h("div", { class: "iframe-video_blocker" }),
                           ]),
                         ]
                       ),
-                      y("div", { class: "cases-text" }, [
-                        y("div", { class: "cases-more" }, [
-                          y(
+                      h("div", { class: "cases-text" }, [
+                        h("div", { class: "cases-more" }, [
+                          h(
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
                               G(" Contact us"),
-                              y("span", { class: "hide-tablet" }, " for more"),
+                              h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
                         ]),
-                        y("div", { class: "u-ts-2" }, "Sable App"),
+                        h("div", { class: "u-ts-2" }, "Sable App"),
                       ]),
                     ]
                   ),
@@ -5376,12 +5332,12 @@ const It = (e) =>
   },
   ls = ["src"],
   is = G(" Your browser does not support the video tag. "),
-  os = y("div", { class: "iframe-video_blocker" }, null, -1),
+  os = h("div", { class: "iframe-video_blocker" }, null, -1),
   rs = ce(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ds = Se(Pt, [
+var ns = Se(Pt, [
     [
       "render",
       function (e, a, t, s, l, i) {
@@ -5392,12 +5348,12 @@ var ds = Se(Pt, [
             _,
             null,
             [
-              y("header", Mt, [
-                y("div", Dt, [
-                  y("div", Ft, [
-                    y("div", Ut, [
-                      y("video", Vt, [
-                        y(
+              h("header", Mt, [
+                h("div", Dt, [
+                  h("div", Ft, [
+                    h("div", Ut, [
+                      h("video", Vt, [
+                        h(
                           "source",
                           {
                             src: s.getVideoUrl("home/knife1-1.mp4"),
@@ -5423,12 +5379,12 @@ var ds = Se(Pt, [
               $t,
               Jt,
               Qt,
-              y("div", null, [
-                y("aside", es, [
-                  y("a", as, [
-                    y("div", ts, [
-                      y("video", ss, [
-                        y(
+              h("div", null, [
+                h("aside", es, [
+                  h("a", as, [
+                    h("div", ts, [
+                      h("video", ss, [
+                        h(
                           "source",
                           {
                             src: s.getVideoUrl("home/knife1-1.mp4"),
@@ -5454,9 +5410,9 @@ var ds = Se(Pt, [
       },
     ],
   ]),
-  ns = Object.freeze(
+  ds = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ds },
+      { __proto__: null, default: ns },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -5690,13 +5646,13 @@ const ms = {
               });
           }
         );
-        const d = k(!1),
-          n = () => {
-            d.value = window.innerWidth < 991;
+        const n = k(!1),
+          d = () => {
+            n.value = window.innerWidth < 991;
           };
         return (
           q(() => {
-            n(), window.addEventListener("resize", n), ne.init();
+            d(), window.addEventListener("resize", d), de.init();
           }),
           (e, a) => (
             g(),
@@ -5704,7 +5660,7 @@ const ms = {
               _,
               null,
               [
-                y(
+                h(
                   "div",
                   {
                     class: "view",
@@ -5752,11 +5708,11 @@ const ms = {
                                       class: "img-wrap home-hero_image-placer",
                                       key: e.url + a,
                                       style: Z({
-                                        left: d.value ? "unset" : e.css.left,
-                                        right: d.value
+                                        left: n.value ? "unset" : e.css.left,
+                                        right: n.value
                                           ? e.css.m_right
                                           : "unset",
-                                        top: d.value ? e.css.m_top : e.css.top,
+                                        top: n.value ? e.css.m_top : e.css.top,
                                         animation: e.isEnter
                                           ? e.css.enterAnimation
                                           : e.css.leaveAnimation,
@@ -5765,15 +5721,15 @@ const ms = {
                                       "data-item": "img",
                                     },
                                     [
-                                      y(
+                                      h(
                                         "img",
                                         {
                                           src: w(ke)(e.url),
                                           style: Z({
-                                            width: d.value
+                                            width: n.value
                                               ? e.css.m_width
                                               : e.css.width,
-                                            height: d.value
+                                            height: n.value
                                               ? e.css.m_height
                                               : e.css.height,
                                             transform: `translate3d(${
@@ -5800,9 +5756,9 @@ const ms = {
                   ],
                   32
                 ),
-                y("div", { "data-reveal": "button", class: "home-hero_btn" }, [
-                  y("div", { class: "btn-contain btn-contain-scroll" }, [
-                    y(
+                h("div", { "data-reveal": "button", class: "home-hero_btn" }, [
+                  h("div", { class: "btn-contain btn-contain-scroll" }, [
+                    h(
                       "div",
                       { class: "btn-scroll w-inline-block", onClick: r },
                       vs
@@ -5839,18 +5795,18 @@ const ms = {
     );
   },
 };
-ne.init();
-const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
+de.init();
+const fs = (e) => (pe("data-v-027565eb"), (e = e()), ve(), e),
   us = fs(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+    h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   gs = { id: "studio", class: "section" },
   bs = ce(
-    '<div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-41b289de></div></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-41b289de><div class="w-layout-grid pair-grid" data-v-41b289de><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-41b289de><h3 data-animation-element="title" style="" data-v-41b289de><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-41b289de><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 館藏查詢 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 館藏查詢 </div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-41b289de><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 預約參觀 </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> 預約參觀 </div></div></a></div></div></div></div></div>',
+    '<div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-027565eb></div></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-027565eb><div class="w-layout-grid pair-grid" data-v-027565eb><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-027565eb><h3 data-animation-element="title" data-v-027565eb><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-027565eb><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>館藏查詢</div><div class="btn-text cc-bottom" data-v-027565eb>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-027565eb><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>預約參觀</div><div class="btn-text cc-bottom" data-v-027565eb>預約參觀</div></div></a></div></div></div></div></div>',
     2
   ),
-  ys = { class: "u-mt-8-75" },
-  hs = { class: "marquee" },
+  hs = { class: "u-mt-8-75" },
+  ys = { class: "marquee" },
   ws = { class: "marquee_row w-dyn-list" },
   _s = {
     role: "list",
@@ -5943,21 +5899,21 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   Ws = ["src"],
   Gs = fs(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+    h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   Ks = { class: "section" },
   $s = ce(
-    '<div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-41b289de></div></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>空間預約</h2></div></div></div></div></div>',
+    '<div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-027565eb></div></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>空間預約</h2></div></div></div></div></div>',
     1
   ),
   Js = { class: "container" },
   Qs = fs(() =>
-    y(
+    h(
       "div",
       { "data-animation-element": "group" },
       [
-        y("h4", { "data-animation-element": "title", class: "h1", style: {} }, [
-          y(
+        h("h4", { "data-animation-element": "title", class: "h1", style: {} }, [
+          h(
             "div",
             {
               class: "u-overflow-hidden",
@@ -5970,7 +5926,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
               },
             },
             [
-              y(
+              h(
                 "div",
                 {
                   style: {
@@ -6005,12 +5961,12 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   il = { role: "list", class: "w-dyn-items" },
   ol = { role: "listitem", class: "w-dyn-item" },
   rl = { class: "card-wrapper cc-small" },
-  dl = {
+  nl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  nl = {
+  dl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6031,14 +5987,14 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   ml = ["src"],
   fl = G(" Your browser does not support the video tag. "),
-  ul = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  ul = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   gl = fs(() =>
-    y(
+    h(
       "div",
       { class: "card-body", "data-aos": "fade-up", "data-aos-duration": "700" },
       [
-        y("div", { class: "u-overflow-hidden" }, [
-          y(
+        h("div", { class: "u-overflow-hidden" }, [
+          h(
             "div",
             {
               class: "card-up",
@@ -6047,7 +6003,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, "Skyart3725全景")]
+            [h("h4", { class: "u-ts-4" }, "Skyart3725全景")]
           ),
         ]),
       ],
@@ -6058,8 +6014,8 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
     id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
     class: "w-dyn-list",
   },
-  yl = { role: "list", class: "w-dyn-items" },
-  hl = { role: "listitem", class: "w-dyn-item" },
+  hl = { role: "list", class: "w-dyn-items" },
+  yl = { role: "listitem", class: "w-dyn-item" },
   wl = { class: "card-wrapper cc-large" },
   _l = { class: "card-animation cc-40" },
   xl = {
@@ -6085,21 +6041,21 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   ql = ["src"],
   Sl = G(" Your browser does not support the video tag. "),
-  zl = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  zl = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   Ol = ce(
-    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="u-overflow-hidden" data-v-41b289de><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-41b289de><div class="card-large_text" data-v-41b289de><h4 class="u-ts-4" data-v-41b289de>多功能茶席空間</h4></div></div></div></div>',
+    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="u-overflow-hidden" data-v-027565eb><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-027565eb><div class="card-large_text" data-v-027565eb><h4 class="u-ts-4" data-v-027565eb>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
   Al = ce(
-    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-41b289de><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-41b289de> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>空間介紹</div><div class="btn-text cc-bottom" data-v-41b289de>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>立即預約</div><div class="btn-text cc-bottom" data-v-41b289de>立即預約</div></div></a></div></div></div>',
+    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-027565eb><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-027565eb> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>空間介紹</div><div class="btn-text cc-bottom" data-v-027565eb>空間介紹</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>立即預約</div><div class="btn-text cc-bottom" data-v-027565eb>立即預約</div></div></a></div></div></div>',
     1
   ),
   Tl = fs(() =>
-    y("div", { class: "container" }, [y("div", { class: "target_line" })], -1)
+    h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   El = { class: "section" },
   Ll = ce(
-    '<div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>定香人文</h2></div></div></div></div></div>',
+    '<div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>定香人文</h2></div></div></div></div></div>',
     1
   ),
   Bl = { class: "container" },
@@ -6118,11 +6074,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   Ul = ["src"],
   Vl = fs(() =>
-    y(
+    h(
       "ul",
       { role: "list", class: "u-mt-3-5" },
       [
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6131,7 +6087,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "150",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-2",
@@ -6140,11 +6096,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "藝術品經紀")]
+              [h("h3", { class: "u-tc-caps" }, "藝術品經紀")]
             ),
           ]
         ),
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6153,7 +6109,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "200",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-3",
@@ -6162,11 +6118,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
+              [h("h3", { class: "u-tc-caps" }, "藝術品拍賣")]
             ),
           ]
         ),
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6175,7 +6131,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "250",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-4",
@@ -6184,11 +6140,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
+              [h("h3", { class: "u-tc-caps" }, "台灣高山冠軍茶")]
             ),
           ]
         ),
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6197,7 +6153,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "300",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-5",
@@ -6206,11 +6162,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
+              [h("h3", { class: "u-tc-caps" }, "雲南古樹普洱茶")]
             ),
           ]
         ),
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6219,7 +6175,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "350",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-6",
@@ -6228,11 +6184,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "精品咖啡")]
+              [h("h3", { class: "u-tc-caps" }, "精品咖啡")]
             ),
           ]
         ),
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6241,7 +6197,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "400",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-7",
@@ -6250,11 +6206,11 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "天幕茶碗")]
+              [h("h3", { class: "u-tc-caps" }, "天幕茶碗")]
             ),
           ]
         ),
-        y(
+        h(
           "li",
           {
             class: "u-overflow-hidden",
@@ -6263,7 +6219,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             "data-aos-delay": "450",
           },
           [
-            y(
+            h(
               "div",
               {
                 class: "list-content cc-8",
@@ -6272,7 +6228,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "transform-style": "preserve-3d",
                 },
               },
-              [y("h3", { class: "u-tc-caps" }, "典藏名酒")]
+              [h("h3", { class: "u-tc-caps" }, "典藏名酒")]
             ),
           ]
         ),
@@ -6281,18 +6237,18 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
     )
   ),
   Hl = ce(
-    '<div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>藝品介紹</div><div class="btn-text cc-bottom" data-v-41b289de>藝品介紹</div></div></a></div></div>',
+    '<div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>藝品介紹</div><div class="btn-text cc-bottom" data-v-027565eb>藝品介紹</div></div></a></div></div>',
     1
   ),
   Nl = fs(() =>
-    y(
+    h(
       "section",
       { class: "section cc-apps" },
       [
-        y("div", { class: "container" }, [
-          y("div", { class: "row" }, [
-            y("div", { "data-animation-element": "group", class: "col" }, [
-              y(
+        h("div", { class: "container" }, [
+          h("div", { class: "row" }, [
+            h("div", { "data-animation-element": "group", class: "col" }, [
+              h(
                 "h3",
                 {
                   "data-animation-element": "title",
@@ -6303,7 +6259,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                   "data-aos-delay": "600",
                 },
                 [
-                  y(
+                  h(
                     "div",
                     {
                       class: "u-overflow-hidden",
@@ -6314,7 +6270,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                       },
                     },
                     [
-                      y(
+                      h(
                         "div",
                         {
                           style: {
@@ -6335,16 +6291,16 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
             ]),
           ]),
         ]),
-        y("div", { "data-apps": "component", class: "apps_component" }, [
-          y("div", { class: "apps_media-wrapper" }, [
-            y(
+        h("div", { "data-apps": "component", class: "apps_component" }, [
+          h("div", { class: "apps_media-wrapper" }, [
+            h(
               "div",
               {
                 "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
                 class: "apps_media-list",
               },
               [
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -6353,7 +6309,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     "data-aos-delay": "100",
                   },
                   [
-                    y("img", {
+                    h("img", {
                       src:
                         "https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png",
                       loading: "lazy",
@@ -6367,7 +6323,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     }),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -6376,7 +6332,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     "data-aos-delay": "150",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
@@ -6388,9 +6344,9 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y(
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -6398,7 +6354,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                y("img", {
+                                h("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -6416,7 +6372,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper",
@@ -6425,7 +6381,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     "data-aos-delay": "200",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
@@ -6437,9 +6393,9 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y("div", { role: "list", class: "w-dyn-items" }, [
-                          y("div", { role: "listitem", class: "w-dyn-item" }, [
-                            y(
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h(
                               "a",
                               {
                                 "data-mouse-class": "cc-text",
@@ -6447,7 +6403,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                                 class: "apps_link w-inline-block",
                               },
                               [
-                                y("img", {
+                                h("img", {
                                   alt: "",
                                   loading: "lazy",
                                   src:
@@ -6465,7 +6421,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     ),
                   ]
                 ),
-                y(
+                h(
                   "div",
                   {
                     class: "apps_asset-wrapper cc-watch",
@@ -6474,7 +6430,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     "data-aos-delay": "250",
                   },
                   [
-                    y(
+                    h(
                       "div",
                       {
                         "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
@@ -6486,7 +6442,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                         },
                       },
                       [
-                        y("img", {
+                        h("img", {
                           src:
                             "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
                           loading: "eager",
@@ -6500,10 +6456,10 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
               ]
             ),
           ]),
-          y("div", { class: "apps_scroll" }, [
-            y("div", { class: "mobile-scroll_cta" }, [
-              y("div", { class: "mobile-scroll_icon w-embed" }, [
-                y(
+          h("div", { class: "apps_scroll" }, [
+            h("div", { class: "mobile-scroll_cta" }, [
+              h("div", { class: "mobile-scroll_icon w-embed" }, [
+                h(
                   "svg",
                   {
                     width: "100%",
@@ -6513,7 +6469,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                     xmlns: "http://www.w3.org/2000/svg",
                   },
                   [
-                    y("path", {
+                    h("path", {
                       d:
                         "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
                       fill: "currentColor",
@@ -6531,7 +6487,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   Xl = { class: "section" },
   Rl = { class: "container" },
   Zl = ce(
-    '<div class="row" data-v-41b289de><div data-animation-element="group" class="col" data-v-41b289de><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> 拍賣中心 </div></div></h3></div></div>',
+    '<div class="row" data-v-027565eb><div data-animation-element="group" class="col" data-v-027565eb><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> 拍賣中心 </div></div></h3></div></div>',
     1
   ),
   Yl = { class: "sticky-pair" },
@@ -6569,16 +6525,16 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   li = ["src"],
   ii = G(" Your browser does not support the video tag. "),
-  oi = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  oi = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   ri = ce(
-    '<div class="card-body" data-v-41b289de><div class="u-overflow-hidden" data-v-41b289de><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-41b289de><div class="card-large_text" data-v-41b289de><h4 class="u-ts-4" data-v-41b289de>Skyart7325鑑賞中心</h4></div></div></div></div>',
+    '<div class="card-body" data-v-027565eb><div class="u-overflow-hidden" data-v-027565eb><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-027565eb><div class="card-large_text" data-v-027565eb><h4 class="u-ts-4" data-v-027565eb>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  di = {
+  ni = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  ni = {
+  di = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
@@ -6609,16 +6565,16 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
     loop: "",
     muted: "",
   },
-  yi = ["src"],
-  hi = G(" Your browser does not support the video tag. "),
-  wi = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  hi = ["src"],
+  yi = G(" Your browser does not support the video tag. "),
+  wi = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   _i = fs(() =>
-    y(
+    h(
       "div",
       { class: "card-body" },
       [
-        y("div", { class: "u-overflow-hidden" }, [
-          y(
+        h("div", { class: "u-overflow-hidden" }, [
+          h(
             "div",
             {
               class: "card-up",
@@ -6627,7 +6583,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, "Sable App")]
+            [h("h4", { class: "u-ts-4" }, "Sable App")]
           ),
         ]),
       ],
@@ -6635,13 +6591,13 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
     )
   ),
   xi = ce(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-41b289de><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-41b289de> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>Fintech services</div><div class="btn-text cc-bottom" data-v-41b289de>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>Design trial</div><div class="btn-text cc-bottom" data-v-41b289de>Design trial</div></div></a></div></div></div>',
+    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-027565eb><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-027565eb> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>Fintech services</div><div class="btn-text cc-bottom" data-v-027565eb>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>Design trial</div><div class="btn-text cc-bottom" data-v-027565eb>Design trial</div></div></a></div></div></div>',
     1
   ),
   ki = { class: "section" },
   ji = { class: "container over-h" },
   Ci = ce(
-    '<div class="row" data-v-41b289de><div data-animation-element="group" class="col" data-v-41b289de><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-41b289de><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> Branding </div></div></h3></div></div>',
+    '<div class="row" data-v-027565eb><div data-animation-element="group" class="col" data-v-027565eb><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-027565eb><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> Branding </div></div></h3></div></div>',
     1
   ),
   qi = { class: "sticky-pair" },
@@ -6684,14 +6640,14 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   Fi = ["src"],
   Ui = G(" Your browser does not support the video tag. "),
-  Vi = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  Vi = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   Hi = fs(() =>
-    y(
+    h(
       "div",
       { class: "card-body" },
       [
-        y("div", { class: "u-overflow-hidden" }, [
-          y(
+        h("div", { class: "u-overflow-hidden" }, [
+          h(
             "div",
             {
               class: "card-up",
@@ -6700,7 +6656,7 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
                 "transform-style": "preserve-3d",
               },
             },
-            [y("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
+            [h("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
           ),
         ]),
       ],
@@ -6740,17 +6696,17 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   Ji = ["src"],
   Qi = G(" Your browser does not support the video tag. "),
-  eo = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  eo = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   ao = ce(
-    '<div class="card-body" data-v-41b289de><div class="u-overflow-hidden" data-v-41b289de><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-41b289de><div class="card-large_text" data-v-41b289de><h4 class="u-ts-4" data-v-41b289de>Sable Brand</h4></div></div></div></div>',
+    '<div class="card-body" data-v-027565eb><div class="u-overflow-hidden" data-v-027565eb><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-027565eb><div class="card-large_text" data-v-027565eb><h4 class="u-ts-4" data-v-027565eb>Sable Brand</h4></div></div></div></div>',
     1
   ),
   to = ce(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-41b289de><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-41b289de><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-41b289de> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-41b289de><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" data-v-41b289de>View cases</div><div class="btn-text cc-bottom" data-v-41b289de>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de> Design trial </div></div></a></div></div></div>',
+    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-027565eb><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-027565eb><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-027565eb> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-027565eb><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" data-v-027565eb>View cases</div><div class="btn-text cc-bottom" data-v-027565eb>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb> Design trial </div></div></a></div></div></div>',
     1
   ),
   so = ce(
-    '<div class="container" data-v-41b289de><div class="target_line" data-v-41b289de></div></div><section class="section" data-v-41b289de><div class="section-title_component" data-v-41b289de><div class="container" data-v-41b289de><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="section-title_dot" style="opacity:1;" data-v-41b289de></div><div class="u-overflow-hidden" data-v-41b289de><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><h2 class="u-ts-4" data-v-41b289de>Contact Us</h2></div></div></div></div></div><div class="container" data-v-41b289de><div class="w-layout-grid pair-grid" data-v-41b289de><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-41b289de><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-41b289de><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-41b289de><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-41b289de><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-41b289de><div style="position:relative;display:inline-block;" data-v-41b289de> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    '<div class="container" data-v-027565eb><div class="target_line" data-v-027565eb></div></div><section class="section" data-v-027565eb><div class="section-title_component" data-v-027565eb><div class="container" data-v-027565eb><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="section-title_dot" style="opacity:1;" data-v-027565eb></div><div class="u-overflow-hidden" data-v-027565eb><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><h2 class="u-ts-4" data-v-027565eb>Contact Us</h2></div></div></div></div></div><div class="container" data-v-027565eb><div class="w-layout-grid pair-grid" data-v-027565eb><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-027565eb><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-027565eb><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-027565eb><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-027565eb><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-027565eb><div style="position:relative;display:inline-block;" data-v-027565eb> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
   lo = { class: "pre-footer" },
@@ -6770,9 +6726,9 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   no = ["src"],
   co = G(" Your browser does not support the video tag. "),
-  po = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
+  po = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
   vo = ce(
-    '<div class="pre-footer_gradient" data-v-41b289de></div><div class="marquee" data-v-41b289de><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-41b289de><div class="btn cc-large-landscape" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text cc-large-landscape" data-v-41b289de>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-41b289de>Button</div></div></div></div>',
+    '<div class="pre-footer_gradient" data-v-027565eb></div><div class="marquee" data-v-027565eb><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-027565eb><div class="btn cc-large-landscape" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text cc-large-landscape" data-v-027565eb>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-027565eb>Button</div></div></div></div>',
     3
   ),
   mo = {
@@ -6791,9 +6747,9 @@ const fs = (e) => (pe("data-v-41b289de"), (e = e()), ve(), e),
   },
   go = ["src"],
   bo = G(" Your browser does not support the video tag. "),
-  yo = fs(() => y("div", { class: "iframe-video_blocker" }, null, -1)),
-  ho = ce(
-    '<div class="pre-footer_gradient" data-v-41b289de></div><div class="marquee" data-v-41b289de><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-41b289de><div class="h1" data-v-41b289de>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-41b289de><div class="btn cc-large-landscape" data-v-41b289de><div class="btn-text-wrap" data-v-41b289de><div class="btn-text cc-large-landscape" data-v-41b289de>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-41b289de>Button</div></div></div></div>',
+  ho = fs(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  yo = ce(
+    '<div class="pre-footer_gradient" data-v-027565eb></div><div class="marquee" data-v-027565eb><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-027565eb><div class="h1" data-v-027565eb>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-027565eb><div class="btn cc-large-landscape" data-v-027565eb><div class="btn-text-wrap" data-v-027565eb><div class="btn-text cc-large-landscape" data-v-027565eb>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-027565eb>Button</div></div></div></div>',
     3
   );
 var wo = Se(ms, [
@@ -6810,15 +6766,15 @@ var wo = Se(ms, [
             [
               T(o),
               us,
-              y("section", gs, [
+              h("section", gs, [
                 bs,
-                y("div", ys, [
-                  y("div", hs, [
-                    y("div", ws, [
-                      y("div", _s, [
-                        y("div", xs, [
-                          y("div", ks, [
-                            y(
+                h("div", hs, [
+                  h("div", ys, [
+                    h("div", ws, [
+                      h("div", _s, [
+                        h("div", xs, [
+                          h("div", ks, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6834,9 +6790,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Cs, [
-                          y("div", qs, [
-                            y(
+                        h("div", Cs, [
+                          h("div", qs, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6852,9 +6808,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", zs, [
-                          y("div", Os, [
-                            y(
+                        h("div", zs, [
+                          h("div", Os, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6870,9 +6826,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Ts, [
-                          y("div", Es, [
-                            y(
+                        h("div", Ts, [
+                          h("div", Es, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6888,9 +6844,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Bs, [
-                          y("div", Is, [
-                            y(
+                        h("div", Bs, [
+                          h("div", Is, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6906,9 +6862,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Ms, [
-                          y("div", Ds, [
-                            y(
+                        h("div", Ms, [
+                          h("div", Ds, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6924,9 +6880,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Us, [
-                          y("div", Vs, [
-                            y(
+                        h("div", Us, [
+                          h("div", Vs, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6942,9 +6898,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Ns, [
-                          y("div", Xs, [
-                            y(
+                        h("div", Ns, [
+                          h("div", Xs, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6960,9 +6916,9 @@ var wo = Se(ms, [
                             ),
                           ]),
                         ]),
-                        y("div", Zs, [
-                          y("div", Ys, [
-                            y(
+                        h("div", Zs, [
+                          h("div", Ys, [
+                            h(
                               "img",
                               {
                                 loading: "eager",
@@ -6984,24 +6940,24 @@ var wo = Se(ms, [
                 ]),
               ]),
               Gs,
-              y("section", Ks, [
+              h("section", Ks, [
                 $s,
-                y("div", Js, [
+                h("div", Js, [
                   Qs,
-                  y("div", el, [
-                    y("div", al, [
-                      y("div", tl, [
-                        y("div", sl, [
-                          y("div", ll, [
-                            y("div", il, [
-                              y("div", ol, [
-                                y("div", rl, [
-                                  y("div", dl, [
-                                    y("div", nl, [
-                                      y("div", cl, [
-                                        y("div", pl, [
-                                          y("video", vl, [
-                                            y(
+                  h("div", el, [
+                    h("div", al, [
+                      h("div", tl, [
+                        h("div", sl, [
+                          h("div", ll, [
+                            h("div", il, [
+                              h("div", ol, [
+                                h("div", rl, [
+                                  h("div", nl, [
+                                    h("div", dl, [
+                                      h("div", cl, [
+                                        h("div", pl, [
+                                          h("video", vl, [
+                                            h(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -7027,16 +6983,16 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      y("div", bl, [
-                        y("div", yl, [
-                          y("div", hl, [
-                            y("div", wl, [
-                              y("div", _l, [
-                                y("div", xl, [
-                                  y("div", kl, [
-                                    y("div", jl, [
-                                      y("video", Cl, [
-                                        y(
+                      h("div", bl, [
+                        h("div", hl, [
+                          h("div", yl, [
+                            h("div", wl, [
+                              h("div", _l, [
+                                h("div", xl, [
+                                  h("div", kl, [
+                                    h("div", jl, [
+                                      h("video", Cl, [
+                                        h(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -7066,15 +7022,15 @@ var wo = Se(ms, [
                 ]),
               ]),
               Tl,
-              y("section", El, [
+              h("section", El, [
                 Ll,
-                y("div", Bl, [
-                  y("div", Il, [
-                    y("div", Pl, [
-                      y("div", Ml, [
-                        y("div", Dl, [
-                          y("div", Fl, [
-                            y(
+                h("div", Bl, [
+                  h("div", Il, [
+                    h("div", Pl, [
+                      h("div", Ml, [
+                        h("div", Dl, [
+                          h("div", Fl, [
+                            h(
                               "img",
                               { src: s.getImageUrl("logo.png"), alt: "" },
                               null,
@@ -7091,21 +7047,21 @@ var wo = Se(ms, [
                 ]),
               ]),
               Nl,
-              y("section", Xl, [
-                y("div", Rl, [
+              h("section", Xl, [
+                h("div", Rl, [
                   Zl,
-                  y("div", Yl, [
-                    y("div", Wl, [
-                      y("div", Gl, [
-                        y("div", Kl, [
-                          y("div", $l, [
-                            y("div", Jl, [
-                              y("div", Ql, [
-                                y("div", ei, [
-                                  y("div", ai, [
-                                    y("div", ti, [
-                                      y("video", si, [
-                                        y(
+                  h("div", Yl, [
+                    h("div", Wl, [
+                      h("div", Gl, [
+                        h("div", Kl, [
+                          h("div", $l, [
+                            h("div", Jl, [
+                              h("div", Ql, [
+                                h("div", ei, [
+                                  h("div", ai, [
+                                    h("div", ti, [
+                                      h("video", si, [
+                                        h(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -7129,18 +7085,18 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      y("div", null, [
-                        y("div", di, [
-                          y("div", ni, [
-                            y("div", ci, [
-                              y("div", pi, [
-                                y("div", vi, [
-                                  y("div", mi, [
-                                    y("div", fi, [
-                                      y("div", ui, [
-                                        y("div", gi, [
-                                          y("video", bi, [
-                                            y(
+                      h("div", null, [
+                        h("div", ni, [
+                          h("div", di, [
+                            h("div", ci, [
+                              h("div", pi, [
+                                h("div", vi, [
+                                  h("div", mi, [
+                                    h("div", fi, [
+                                      h("div", ui, [
+                                        h("div", gi, [
+                                          h("video", bi, [
+                                            h(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -7150,9 +7106,9 @@ var wo = Se(ms, [
                                               },
                                               null,
                                               8,
-                                              yi
+                                              hi
                                             ),
-                                            hi,
+                                            yi,
                                           ]),
                                           wi,
                                         ]),
@@ -7171,23 +7127,23 @@ var wo = Se(ms, [
                   ]),
                 ]),
               ]),
-              y("section", ki, [
-                y("div", ji, [
+              h("section", ki, [
+                h("div", ji, [
                   Ci,
-                  y("div", qi, [
-                    y("div", Si, [
-                      y("div", zi, [
-                        y("div", Oi, [
-                          y("div", Ai, [
-                            y("div", Ti, [
-                              y("div", Ei, [
-                                y("div", Li, [
-                                  y("div", Bi, [
-                                    y("div", Ii, [
-                                      y("div", Pi, [
-                                        y("div", Mi, [
-                                          y("video", Di, [
-                                            y(
+                  h("div", qi, [
+                    h("div", Si, [
+                      h("div", zi, [
+                        h("div", Oi, [
+                          h("div", Ai, [
+                            h("div", Ti, [
+                              h("div", Ei, [
+                                h("div", Li, [
+                                  h("div", Bi, [
+                                    h("div", Ii, [
+                                      h("div", Pi, [
+                                        h("div", Mi, [
+                                          h("video", Di, [
+                                            h(
                                               "source",
                                               {
                                                 src: s.getVideoUrl(
@@ -7213,16 +7169,16 @@ var wo = Se(ms, [
                           ]),
                         ]),
                       ]),
-                      y("div", Ni, [
-                        y("div", Xi, [
-                          y("div", Ri, [
-                            y("div", Zi, [
-                              y("div", Yi, [
-                                y("div", Wi, [
-                                  y("div", Gi, [
-                                    y("div", Ki, [
-                                      y("video", $i, [
-                                        y(
+                      h("div", Ni, [
+                        h("div", Xi, [
+                          h("div", Ri, [
+                            h("div", Zi, [
+                              h("div", Yi, [
+                                h("div", Wi, [
+                                  h("div", Gi, [
+                                    h("div", Ki, [
+                                      h("video", $i, [
+                                        h(
                                           "source",
                                           {
                                             src: s.getVideoUrl(
@@ -7252,12 +7208,12 @@ var wo = Se(ms, [
                 ]),
               ]),
               so,
-              y("div", null, [
-                y("aside", lo, [
-                  y("div", io, [
-                    y("div", oo, [
-                      y("video", ro, [
-                        y(
+              h("div", null, [
+                h("aside", lo, [
+                  h("div", io, [
+                    h("div", oo, [
+                      h("video", ro, [
+                        h(
                           "source",
                           {
                             src: s.getVideoUrl("home/buddha1.mp4"),
@@ -7273,10 +7229,10 @@ var wo = Se(ms, [
                     ]),
                     vo,
                   ]),
-                  y("div", mo, [
-                    y("div", fo, [
-                      y("video", uo, [
-                        y(
+                  h("div", mo, [
+                    h("div", fo, [
+                      h("video", uo, [
+                        h(
                           "source",
                           {
                             src: s.getVideoUrl("home/tea_1.mp4"),
@@ -7288,9 +7244,9 @@ var wo = Se(ms, [
                         ),
                         bo,
                       ]),
-                      yo,
+                      ho,
                     ]),
-                    ho,
+                    yo,
                   ]),
                 ]),
               ]),
@@ -7301,7 +7257,7 @@ var wo = Se(ms, [
         );
       },
     ],
-    ["__scopeId", "data-v-41b289de"],
+    ["__scopeId", "data-v-027565eb"],
   ]),
   _o = Object.freeze(
     Object.defineProperty(
@@ -7339,7 +7295,7 @@ const xo = {
       Za(
         () =>
           Promise.resolve().then(function () {
-            return ns;
+            return ds;
           }),
         void 0
       ),
@@ -7356,7 +7312,7 @@ const xo = {
     "../pages/about.vue": mt,
     "../pages/case.vue": bt,
     "../pages/demo.vue": Bt,
-    "../pages/fintech-design.vue": ns,
+    "../pages/fintech-design.vue": ds,
     "../pages/index.vue": _o,
   },
   jo = [];
@@ -7418,7 +7374,7 @@ var So = Object.freeze(
   })
 );
 const zo = be({ modules: Xa });
-ye(zo, Co);
+he(zo, Co);
 var Oo = Object.freeze(
   Object.defineProperty({ __proto__: null, default: zo }, Symbol.toStringTag, {
     value: "Module",
@@ -7572,8 +7528,8 @@ class Po {
       showConfirmButton: i = !0,
       confirmButtonText: o = Ee.t("button.confirm"),
       cancelButtonText: r = Ee.t("button.cancel"),
-      allowOutsideClick: d = !0,
-      props: n = {},
+      allowOutsideClick: n = !0,
+      props: d = {},
     } = e;
     return new Promise((e) => {
       zo.commit(
@@ -7588,8 +7544,8 @@ class Po {
           showConfirmButton: i,
           confirmButtonText: o,
           cancelButtonText: r,
-          allowOutsideClick: d,
-          props: n,
+          allowOutsideClick: n,
+          props: d,
         })
       );
     });
@@ -7623,12 +7579,12 @@ const Do = {
       for (let a in Do) e.use(Do[a].default);
     },
   };
-const Uo = he(ze);
+const Uo = ye(ze);
 Uo.provide("$jQuery", we),
   Uo.provide("$swal", Be),
   Uo.provide("$storage", U),
   Uo.provide("$tabsslider", _e),
-  Uo.use(da),
+  Uo.use(na),
   Uo.use(Sa),
   Uo.use(xe, { loading: "", error: "" }),
   Uo.use(Fo),
