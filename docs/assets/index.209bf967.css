@@ -11424,6 +11424,9 @@ strong {
   -webkit-animation: topMoveBottom 0.5s;
   animation: topMoveBottom 0.5s;
 }
+.layout-deafult-header-logo--open img {
+  width: 50%;
+}
 .layout-deafult-header-btn {
   width: 108px;
   height: 22px;
