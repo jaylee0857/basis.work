@@ -23,11 +23,18 @@
   }
   &-logo--open {
     width: auto;
-    max-width: 50%;
-    height: 21.95px;
     animation: topMoveBottom 0.5s;
+    @media screen and (max-width: 991px) {
+      height: 21.95px;
+    }
+    @media screen and (max-width: 576px) {
+      max-width: 50%;
+    }
     img{
-      width: 50%;
+      width: 60%;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
     }
   }
   &-btn {
