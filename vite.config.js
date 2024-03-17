@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
       html({
         inject: {
           data: {
-            title: env.VITE_LOGO_NAME,
+            title: env.VITE_TITLE,
             keyword: env.VITE_KEYWORD,
             subject: env.VITE_SUBJECT,
             logo: env.VITE_ENV_LOGO,
