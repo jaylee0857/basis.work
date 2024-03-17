@@ -1,5 +1,5 @@
-var e,
-  a,
+var a,
+  e,
   s,
   t,
   i,
@@ -11,16 +11,16 @@ var e,
   c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
-  m = (e, a, s) =>
-    a in e
-      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: s })
-      : (e[a] = s),
-  f = (e, a) => {
-    for (var s in a || (a = {})) p.call(a, s) && m(e, s, a[s]);
-    if (c) for (var s of c(a)) v.call(a, s) && m(e, s, a[s]);
-    return e;
+  m = (a, e, s) =>
+    e in a
+      ? r(a, e, { enumerable: !0, configurable: !0, writable: !0, value: s })
+      : (a[e] = s),
+  f = (a, e) => {
+    for (var s in e || (e = {})) p.call(e, s) && m(a, s, e[s]);
+    if (c) for (var s of c(e)) v.call(e, s) && m(a, s, e[s]);
+    return a;
   },
-  u = (e, a) => n(e, d(a));
+  u = (a, e) => n(a, d(e));
 import {
   o as g,
   c as b,
@@ -31,8 +31,8 @@ import {
   F as x,
   d as k,
   r as j,
-  e as z,
-  w as q,
+  e as q,
+  w as z,
   f as C,
   g as S,
   h as O,
@@ -41,13 +41,13 @@ import {
   k as E,
   l as T,
   m as L,
-  p as I,
-  q as P,
-  s as M,
+  p as P,
+  q as M,
+  s as I,
   t as D,
   v as F,
-  x as U,
-  y as H,
+  x as H,
+  y as U,
   S as V,
   z as N,
   A as G,
@@ -60,62 +60,62 @@ import {
   I as $,
   J,
   T as Q,
-  K as ee,
-  L as ae,
-  M as se,
-  N as te,
-  O as ie,
-  P as le,
-  Q as oe,
-  R as re,
-  U as ne,
-  V as de,
-  W as ce,
-  X as pe,
-  Y as ve,
-  Z as me,
-  _ as fe,
-  $ as ue,
-  a0 as ge,
-  a1 as be,
-  a2 as we,
-  a3 as he,
-  a4 as ye,
-  a5 as _e,
-  a6 as xe,
+  K as aa,
+  L as ea,
+  M as sa,
+  N as ta,
+  O as ia,
+  P as la,
+  Q as oa,
+  R as ra,
+  U as na,
+  V as da,
+  W as ca,
+  X as pa,
+  Y as va,
+  Z as ma,
+  _ as fa,
+  $ as ua,
+  a0 as ga,
+  a1 as ba,
+  a2 as wa,
+  a3 as ha,
+  a4 as ya,
+  a5 as _a,
+  a6 as xa,
 } from "./vendor.00fd3504.js";
 !(function () {
-  const e = document.createElement("link").relList;
-  if (!(e && e.supports && e.supports("modulepreload"))) {
-    for (const e of document.querySelectorAll('link[rel="modulepreload"]'))
-      a(e);
-    new MutationObserver((e) => {
-      for (const s of e)
+  const a = document.createElement("link").relList;
+  if (!(a && a.supports && a.supports("modulepreload"))) {
+    for (const a of document.querySelectorAll('link[rel="modulepreload"]'))
+      e(a);
+    new MutationObserver((a) => {
+      for (const s of a)
         if ("childList" === s.type)
-          for (const e of s.addedNodes)
-            "LINK" === e.tagName && "modulepreload" === e.rel && a(e);
+          for (const a of s.addedNodes)
+            "LINK" === a.tagName && "modulepreload" === a.rel && e(a);
     }).observe(document, { childList: !0, subtree: !0 });
   }
-  function a(e) {
-    if (e.ep) return;
-    e.ep = !0;
-    const a = (function (e) {
-      const a = {};
+  function e(a) {
+    if (a.ep) return;
+    a.ep = !0;
+    const e = (function (a) {
+      const e = {};
       return (
-        e.integrity && (a.integrity = e.integrity),
-        e.referrerpolicy && (a.referrerPolicy = e.referrerpolicy),
-        "use-credentials" === e.crossorigin
-          ? (a.credentials = "include")
-          : "anonymous" === e.crossorigin
-          ? (a.credentials = "omit")
-          : (a.credentials = "same-origin"),
-        a
+        a.integrity && (e.integrity = a.integrity),
+        a.referrerpolicy && (e.referrerPolicy = a.referrerpolicy),
+        "use-credentials" === a.crossorigin
+          ? (e.credentials = "include")
+          : "anonymous" === a.crossorigin
+          ? (e.credentials = "omit")
+          : (e.credentials = "same-origin"),
+        e
       );
-    })(e);
-    fetch(e.href, a);
+    })(a);
+    fetch(a.href, e);
   }
 })();
-const ke = (e) =>
+const ka = (a) =>
   new URL(
     {
       "../assets/images/favicon.png":
@@ -157,43 +157,43 @@ const ke = (e) =>
       "../assets/images/home/opening/7.jpg": "./assets/7.8d695fe6.jpg",
       "../assets/images/home/opening/8.jpg": "./assets/8.107a61ce.jpg",
       "../assets/images/home/opening/9.jpg": "./assets/9.e0cc08c9.jpg",
-    }[`../assets/images/${e}`],
+    }[`../assets/images/${a}`],
     self.location
   ).href;
-var je = (e, a) => {
-  const s = e.__vccOpts || e;
-  for (const [t, i] of a) s[t] = i;
+var ja = (a, e) => {
+  const s = a.__vccOpts || a;
+  for (const [t, i] of e) s[t] = i;
   return s;
 };
-const ze = { class: "icon" },
-  qe = { class: "svg_box" },
-  Ce = ["src"];
-var Se = je(
+const qa = { class: "icon" },
+  za = { class: "svg_box" },
+  Ca = ["src"];
+var Sa = ja(
   {
     components: {
-      Loading: je(
+      Loading: ja(
         {
           props: { mode: String },
-          setup: (e) => (a, s) => (
+          setup: (a) => (e, s) => (
             g(),
             b(
               x,
               null,
               [
                 w(" {{ mode }} "),
-                h("div", { class: y(["mask", e.mode]) }, null, 2),
+                h("div", { class: y(["mask", a.mode]) }, null, 2),
                 h(
                   "div",
-                  { class: y(["bg", e.mode]) },
+                  { class: y(["bg", a.mode]) },
                   [
-                    h("div", ze, [
-                      h("div", qe, [
+                    h("div", qa, [
+                      h("div", za, [
                         h(
                           "img",
-                          { src: _(ke)("favicon.png"), alt: "" },
+                          { src: _(ka)("favicon.png"), alt: "" },
                           null,
                           8,
-                          Ce
+                          Ca
                         ),
                       ]),
                     ]),
@@ -214,41 +214,41 @@ var Se = je(
       ),
     },
     setup() {
-      const e = k(),
-        a = j(!1),
+      const a = k(),
+        e = j(!1),
         s = j(""),
         t = j("leave"),
-        i = z(() => "stop" === t.value),
-        l = z(() => {
-          if (T(e.state.route.path)) return null;
-          return L("layout-error")(I(["meta", "layout"], e.state.route));
+        i = q(() => "stop" === t.value),
+        l = q(() => {
+          if (T(a.state.route.path)) return null;
+          return L("layout-error")(P(["meta", "layout"], a.state.route));
         });
       return (
-        q(
-          () => e.state.route,
+        z(
+          () => a.state.route,
           (i) => {
             s.value !== i &&
-              ((a.value = !0),
+              ((e.value = !0),
               setTimeout(() => {
-                (a.value = !1), (t.value = "enter");
+                (e.value = !1), (t.value = "enter");
               }, 3500)),
-              (s.value = e.state.route.path);
+              (s.value = a.state.route.path);
           }
         ),
-        q(a, (a) => {
-          e.commit("app/systm/Loading", a);
+        z(e, (e) => {
+          a.commit("app/systm/Loading", e);
         }),
         C(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: l, isShowLoading: a, mode: t, isError: i }
+        { layout: l, isShowLoading: e, mode: t, isError: i }
       );
     },
   },
   [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         const o = S("router-view"),
           r = S("the-popup"),
           n = S("Loading");
@@ -266,7 +266,7 @@ var Se = je(
                     ' 內層利用router顯示 透過解構賦值 取得從router-view取得的component 在把Component用在:is＝"Component"身上'
                   ),
                   E(o, null, {
-                    default: A(({ Component: e }) => [(g(), O(B(e)))]),
+                    default: A(({ Component: a }) => [(g(), O(B(a)))]),
                     _: 1,
                   }),
                 ]),
@@ -286,7 +286,7 @@ var Se = je(
     ["__file", "/Users/lishengjie/Documents/GitHub/basis.work/src/App.vue"],
   ]
 );
-const Oe = {
+const Oa = {
     "../locales/en/app.js": Object.freeze(
       Object.defineProperty(
         {
@@ -495,27 +495,27 @@ const Oe = {
       )
     ),
   },
-  Ae = {};
-for (let No in Oe) {
-  const e = No.replace("../locales/", "").toLowerCase().replace(".js", ""),
-    [a, ...s] = e.split("/"),
-    t = P(".", s),
-    i = Oe[No].default;
-  Ae[a] = M((e, a) => D(e, { [`${t}.${a}`]: i[a] }), Ae[a] || {}, F(i));
+  Aa = {};
+for (let go in Oa) {
+  const a = go.replace("../locales/", "").toLowerCase().replace(".js", ""),
+    [e, ...s] = a.split("/"),
+    t = M(".", s),
+    i = Oa[go].default;
+  Aa[e] = I((a, e) => D(a, { [`${t}.${e}`]: i[e] }), Aa[e] || {}, F(i));
 }
-const Be = (() => {
-    var e, a, s, t;
-    const i = U.get("locale");
+const Ba = (() => {
+    var a, e, s, t;
+    const i = H.get("locale");
     if (i) return i;
     let l =
       null !=
       (t =
         null !=
-        (s = null == (e = navigator.language) ? void 0 : e.toLowerCase())
+        (s = null == (a = navigator.language) ? void 0 : a.toLowerCase())
           ? s
-          : null == (a = navigator.userLanguage)
+          : null == (e = navigator.userLanguage)
           ? void 0
-          : a.toLowerCase())
+          : e.toLowerCase())
         ? t
         : null;
     return l
@@ -524,23 +524,23 @@ const Be = (() => {
           : l.includes("zh")
           ? (l = "zh-tw")
           : l.includes("en") && (l = "en"),
-        (l = l in Ae ? l : {}.VITE_LOCALE),
+        (l = l in Aa ? l : {}.VITE_LOCALE),
         l)
       : {}.VITE_LOCALE;
   })(),
-  Ee = H.exports.createI18n({
-    initLocale: Be,
-    fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
-    messages: Ae,
+  Ea = U.exports.createI18n({
+    initLocale: Ba,
+    fallbackLocale: null != (a = {}.VITE_DEFAULT_LANG) ? a : "zh-tw",
+    messages: Aa,
   });
-var Te = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ee }, Symbol.toStringTag, {
+var Ta = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ea }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(V.toast = function (e) {
+(V.toast = function (a) {
   return this.fire({
-    title: e,
+    title: a,
     toast: !0,
     showConfirmButton: !1,
     customClass: "swal2-toast",
@@ -548,23 +548,23 @@ var Te = Object.freeze(
     hideClass: { popup: "animate__animated animate__fadeOutDown" },
     timer: 2e3,
     background: "transparent",
-    didOpen: (e) => {
-      e.addEventListener("click", V.close);
+    didOpen: (a) => {
+      a.addEventListener("click", V.close);
     },
   });
 }),
   (V.alert = function ({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     willClose: s = null,
     heightAuto: t = !1,
     html: i = !1,
-    confirmButtonText: l = Ee.t("button.confirm"),
+    confirmButtonText: l = Ea.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: i,
       customClass: `swal2-alert ${o}`,
       heightAuto: t,
@@ -585,15 +585,15 @@ var Te = Object.freeze(
     });
   }),
   (V.confirm = function ({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     html: s,
     confirmCallback: t = null,
     heightAuto: i = !1,
   }) {
     return this.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: s,
       customClass: "swal2-confirm",
       heightAuto: i,
@@ -605,7 +605,7 @@ var Te = Object.freeze(
       },
     });
   });
-const Le = V.mixin({
+const La = V.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -613,62 +613,62 @@ const Le = V.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Ee.t("button.confirm"),
-  cancelButtonText: Ee.t("button.cancel"),
-  didOpen(e) {
-    const a = e.querySelector(".swal2-cancel");
-    e.querySelector(".swal2-confirm").blur(), a.blur();
+  confirmButtonText: Ea.t("button.confirm"),
+  cancelButtonText: Ea.t("button.cancel"),
+  didOpen(a) {
+    const e = a.querySelector(".swal2-cancel");
+    a.querySelector(".swal2-confirm").blur(), e.blur();
   },
 });
-class Ie {
+class Pa {
   constructor() {
-    return U;
+    return H;
   }
 }
-class Pe {
+class Ma {
   constructor() {
-    this.provider = new Ie();
+    this.provider = new Pa();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Pe.prototype.install = function (e) {
-  const a = "storage-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+Ma.prototype.install = function (a) {
+  const e = "storage-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Me = new Pe(),
-  De = Object.freeze(
+var Ia = new Ma(),
+  Da = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Pe, default: Me },
+      { __proto__: null, StorageService: Ma, default: Ia },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Fe = () => {
-    const e = H.exports.useI18n(),
-      a = j({}),
+const Fa = () => {
+    const a = U.exports.useI18n(),
+      e = j({}),
       s = (t, i = {}) => {
         const [l, ...o] = N(".", t);
-        return l in a.value ? s(`${a.value[l]}.${P(".", o)}`, i) : e.t(t, i);
+        return l in e.value ? s(`${e.value[l]}.${M(".", o)}`, i) : a.t(t, i);
       };
     return {
-      locale: e.locale,
-      change: (a) => {
-        e.setLocale(a), Me.provider.set("locale", a);
+      locale: a.locale,
+      change: (e) => {
+        a.setLocale(e), Ia.provider.set("locale", e);
       },
-      setPrefix: (e) => {
-        a.value = "string" == typeof e ? { $current: e } : f(f({}, a.value), e);
+      setPrefix: (a) => {
+        e.value = "string" == typeof a ? { $current: a } : f(f({}, e.value), a);
       },
       t: s,
-      addMessages: e.addMessages,
+      addMessages: a.addMessages,
     };
   },
-  Ue = ["onMouseenter", "onClick"],
-  He = h("div", { class: "line" }, null, -1),
-  Ve = { class: "list_style" },
-  Ne = { class: "nav_link-top" },
-  Ge = h(
+  Ha = ["onMouseenter", "onClick"],
+  Ua = h("div", { class: "line" }, null, -1),
+  Va = { class: "list_style" },
+  Na = { class: "nav_link-top" },
+  Ga = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -677,10 +677,10 @@ const Fe = () => {
     null,
     -1
   ),
-  Xe = { class: "nav_link-title" },
-  We = { class: "u-ts-3" },
-  Re = { class: "nav_link-p" },
-  Ye = h(
+  Xa = { class: "nav_link-title" },
+  Wa = { class: "u-ts-3" },
+  Ra = { class: "nav_link-p" },
+  Ya = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -689,13 +689,13 @@ const Fe = () => {
     null,
     -1
   ),
-  Ze = h("div", { id: "pink_mask" }, null, -1);
-var Ke = je(
+  Za = h("div", { id: "pink_mask" }, null, -1);
+var Ka = ja(
   {
     props: ["isOpen"],
     emits: ["toggleOpen"],
-    setup(e, { emit: a }) {
-      const s = e,
+    setup(a, { emit: e }) {
+      const s = a,
         t = j(1),
         i = j(!0),
         l = G(),
@@ -725,8 +725,8 @@ var Ke = je(
             path: "/about",
           },
         ]),
-        r = z(() => 25 * t.value),
-        n = z(() => {
+        r = q(() => 25 * t.value),
+        n = q(() => {
           switch (t.value) {
             case 1:
               return 50;
@@ -739,7 +739,7 @@ var Ke = je(
           }
         }),
         d = j(25);
-      return (e, c) => (
+      return (a, c) => (
         g(),
         b(
           "div",
@@ -752,32 +752,32 @@ var Ke = je(
                 null,
                 X(
                   o.value,
-                  (e, i) => (
+                  (a, i) => (
                     g(),
                     b(
                       "li",
                       {
-                        key: e,
-                        style: W(`--i: ${e}`),
-                        onMouseenter: (e) =>
-                          ((e) => {
-                            t.value = e;
+                        key: a,
+                        style: W(`--i: ${a}`),
+                        onMouseenter: (a) =>
+                          ((a) => {
+                            t.value = a;
                           })(i),
                         onClick: (t) => {
                           return (
-                            (i = e.path),
+                            (i = a.path),
                             l.push(i),
-                            void a("toggleOpen", s.isOpen)
+                            void e("toggleOpen", s.isOpen)
                           );
                           var i;
                         },
                       },
                       [
-                        He,
-                        h("div", Ve, [
-                          h("div", Ne, [
-                            Ge,
-                            h("div", Xe, [h("div", We, R(e.title), 1)]),
+                        Ua,
+                        h("div", Va, [
+                          h("div", Na, [
+                            Ga,
+                            h("div", Xa, [h("div", Wa, R(a.title), 1)]),
                           ]),
                           h(
                             "div",
@@ -787,13 +787,13 @@ var Ke = je(
                                 { active: t.value === i },
                               ]),
                             },
-                            [h("p", Re, R(e.content), 1), Ye],
+                            [h("p", Ra, R(a.content), 1), Ya],
                             2
                           ),
                         ]),
                       ],
                       44,
-                      Ue
+                      Ha
                     )
                   )
                 ),
@@ -813,7 +813,7 @@ var Ke = je(
                 4
               ),
             ]),
-            Ze,
+            Za,
           ],
           2
         )
@@ -827,22 +827,22 @@ var Ke = je(
     ],
   ]
 );
-const $e = { key: 0 },
-  Je = ["src"],
-  Qe = ["src"],
-  ea = [h("div", null, null, -1), h("div", null, null, -1)];
-const aa = { class: "layout-deafult pb-32" };
-var sa = je(
+const $a = { key: 0 },
+  Ja = ["src"],
+  Qa = ["src"],
+  ae = [h("div", null, null, -1), h("div", null, null, -1)];
+const ee = { class: "layout-deafult pb-32" };
+var se = ja(
     {
       components: {
-        LayoutHeader: je(
+        LayoutHeader: ja(
           {
-            setup(e) {
-              const a = j(!1),
-                s = (e) => {
-                  a.value = !e;
+            setup(a) {
+              const e = j(!1),
+                s = (a) => {
+                  e.value = !a;
                 };
-              return (e, t) => {
+              return (a, t) => {
                 const i = S("router-link");
                 return (
                   g(),
@@ -855,7 +855,7 @@ var sa = je(
                         {
                           class: y([
                             "layout-deafult-header",
-                            { active: a.value },
+                            { active: e.value },
                           ]),
                         },
                         [
@@ -866,33 +866,33 @@ var sa = je(
                               "aria-current": "page",
                               class: y([
                                 "layout-deafult-header-logo",
-                                { "layout-deafult-header-logo--open": a.value },
+                                { "layout-deafult-header-logo--open": e.value },
                               ]),
                               "aria-label": "home",
                             },
                             {
                               default: A(() => [
-                                a.value
+                                e.value
                                   ? (g(),
                                     b(
                                       "img",
                                       {
                                         key: 1,
-                                        src: _(ke)("logo.png"),
+                                        src: _(ka)("logo.png"),
                                         alt: "",
                                       },
                                       null,
                                       8,
-                                      Qe
+                                      Qa
                                     ))
                                   : (g(),
-                                    b("div", $e, [
+                                    b("div", $a, [
                                       h(
                                         "img",
-                                        { src: _(ke)("logo.png"), alt: "" },
+                                        { src: _(ka)("logo.png"), alt: "" },
                                         null,
                                         8,
-                                        Je
+                                        Ja
                                       ),
                                     ])),
                               ]),
@@ -906,22 +906,22 @@ var sa = je(
                             {
                               class: y([
                                 "layout-deafult-header-btn",
-                                { "layout-deafult-header-btn--open": a.value },
+                                { "layout-deafult-header-btn--open": e.value },
                               ]),
                               onClick:
-                                t[0] || (t[0] = (e) => (a.value = !a.value)),
+                                t[0] || (t[0] = (a) => (e.value = !e.value)),
                             },
-                            ea,
+                            ae,
                             2
                           ),
                         ],
                         2
                       ),
-                      a.value
+                      e.value
                         ? (g(),
                           O(
-                            Ke,
-                            { key: 0, "is-open": a.value, onToggleOpen: s },
+                            Ka,
+                            { key: 0, "is-open": e.value, onToggleOpen: s },
                             null,
                             8,
                             ["is-open"]
@@ -943,17 +943,17 @@ var sa = je(
         ),
       },
       setup() {
-        const { t: e } = Fe();
-        return { t: e };
+        const { t: a } = Fa();
+        return { t: a };
       },
     },
     [
       [
         "render",
-        function (e, a, s, t, i, l) {
+        function (a, e, s, t, i, l) {
           const o = S("LayoutHeader");
           return (
-            g(), b(x, null, [E(o), h("div", aa, [Y(e.$slots, "default")])], 64)
+            g(), b(x, null, [E(o), h("div", ee, [Y(a.$slots, "default")])], 64)
           );
         },
       ],
@@ -963,19 +963,19 @@ var sa = je(
       ],
     ]
   ),
-  ta = Object.freeze(
+  te = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: sa },
+      { __proto__: null, default: se },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ia = { class: "layout-demo" };
-var la = je({ setup() {} }, [
+const ie = { class: "layout-demo" };
+var le = ja({ setup() {} }, [
   [
     "render",
-    function (e, a, s, t, i, l) {
-      return g(), b("div", ia, [Y(e.$slots, "default")]);
+    function (a, e, s, t, i, l) {
+      return g(), b("div", ie, [Y(a.$slots, "default")]);
     },
   ],
   [
@@ -983,66 +983,66 @@ var la = je({ setup() {} }, [
     "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-demo.vue",
   ],
 ]);
-const oa = {
-    "../layouts/layout-default.vue": ta,
+const oe = {
+    "../layouts/layout-default.vue": te,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: la },
+        { __proto__: null, default: le },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  ra = [];
-for (let No in oa) {
-  const e = No.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  ra.push({ componentName: e, component: oa[No].default });
+  re = [];
+for (let go in oe) {
+  const a = go.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  re.push({ componentName: a, component: oe[go].default });
 }
-const na = {
-  install: (e) => {
-    ra.forEach((a) => {
-      e.component(a.componentName, a.component);
+const ne = {
+  install: (a) => {
+    re.forEach((e) => {
+      a.component(e.componentName, e.component);
     });
   },
 };
-const da = {
+const de = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
-      const e = G();
+      const a = G();
       return {
         goBack: () => {
-          e.options.history.state.back
-            ? e.back()
-            : e.push({ name: "default-path" });
+          a.options.history.state.back
+            ? a.back()
+            : a.push({ name: "default-path" });
         },
       };
     },
   },
-  ca = {
+  ce = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
-  pa = { class: "font-bold" },
-  va = { class: "absolute right-8 top-6" };
-var ma = je(da, [
+  pe = { class: "font-bold" },
+  ve = { class: "absolute right-8 top-6" };
+var me = ja(de, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         return (
           g(),
-          b("div", ca, [
+          b("div", ce, [
             s.goBackButton
               ? (g(),
                 b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
-                    a[0] || (a[0] = (...e) => t.goBack && t.goBack(...e)),
+                    e[0] || (e[0] = (...a) => t.goBack && t.goBack(...a)),
                 }))
               : w("v-if", !0),
-            h("div", pa, [
-              Y(e.$slots, "title", {}, () => [Z(R(s.title), 1)], !0),
+            h("div", pe, [
+              Y(a.$slots, "title", {}, () => [Z(R(s.title), 1)], !0),
             ]),
-            h("div", va, [Y(e.$slots, "actions", {}, void 0, !0)]),
+            h("div", ve, [Y(a.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
@@ -1053,32 +1053,32 @@ var ma = je(da, [
       "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-header.vue",
     ],
   ]),
-  fa = Object.freeze(
+  fe = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ma },
+      { __proto__: null, default: me },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ua = () => K("popup-service");
-const ga = {
+const ue = () => K("popup-service");
+const ge = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  ba = { class: "swal2-title", style: { display: "block" } },
-  wa = { class: "swal2-html-container", style: { display: "block" } },
-  ha = { class: "swal2-actions", style: { display: "flex" } };
-var ya = je({}, [
+  be = { class: "swal2-title", style: { display: "block" } },
+  we = { class: "swal2-html-container", style: { display: "block" } },
+  he = { class: "swal2-actions", style: { display: "flex" } };
+var ye = ja({}, [
   [
     "render",
-    function (e, a) {
+    function (a, e) {
       return (
         g(),
-        b("div", ga, [
-          h("h2", ba, [Y(e.$slots, "title")]),
-          h("div", wa, [Y(e.$slots, "content")]),
-          h("div", ha, [Y(e.$slots, "actions")]),
+        b("div", ge, [
+          h("h2", be, [Y(a.$slots, "title")]),
+          h("div", we, [Y(a.$slots, "content")]),
+          h("div", he, [Y(a.$slots, "actions")]),
         ])
       );
     },
@@ -1088,49 +1088,49 @@ var ya = je({}, [
     "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/popup/modal.vue",
   ],
 ]);
-const _a = {
+const _e = {
     key: 0,
     class:
       "fixed z-[1041] inset-0 w-full h-full flex justify-center items-center pointer-events-none",
   },
-  xa = { key: 1 },
-  ka = ["data-timer", "data-end"];
-var ja = je(
+  xe = { key: 1 },
+  ke = ["data-timer", "data-end"];
+var je = ja(
   {
-    setup(e) {
-      const a = ua(),
-        s = z(() => a.state),
-        t = (e) => {
+    setup(a) {
+      const e = ue(),
+        s = q(() => e.state),
+        t = (a) => {
           s.value.resolve(
             f(
               { isConfirmed: !1, isDismissed: !1, dismiss: null, result: null },
-              e
+              a
             )
           );
         },
-        i = z(() => (s.value.type, ae(ya))),
-        l = z(() => s.value.BackdropStyle),
+        i = q(() => (s.value.type, ea(ye))),
+        l = q(() => s.value.BackdropStyle),
         o = j();
       let r = null;
       const n = () => {
         clearTimeout(r), (r = null);
       };
-      q([() => s.value.autoClose, () => s.value.timer], ([e, a]) => {
-        a &&
+      z([() => s.value.autoClose, () => s.value.timer], ([a, e]) => {
+        e &&
           (n(),
           (r = setTimeout(() => {
-            n(), e && d("timer");
-          }, a)));
+            n(), a && d("timer");
+          }, e)));
       });
-      const d = async (e) => {
+      const d = async (a) => {
           if (r) {
             if (!s.value.allowDismissWhenTimerRunning) return;
             n();
           }
           if (o.value && "onDismissed" in o.value) {
             const s = await o.value.onDismissed();
-            s && (t({ isDismissed: !0, dismiss: e, result: s }), a.clear());
-          } else t({ isDismissed: !0, dismiss: e }), a.clear();
+            s && (t({ isDismissed: !0, dismiss: a, result: s }), e.clear());
+          } else t({ isDismissed: !0, dismiss: a }), e.clear();
         },
         c = async () => {
           s.value.allowOutsideClick && d("backdrop");
@@ -1144,23 +1144,23 @@ var ja = je(
             n();
           }
           if (o.value && "onConfirmed" in o.value) {
-            const e = await o.value.onConfirmed();
-            e && (t({ isConfirmed: !0, result: e }), a.clear());
-          } else t({ isConfirmed: !0 }), a.clear();
+            const a = await o.value.onConfirmed();
+            a && (t({ isConfirmed: !0, result: a }), e.clear());
+          } else t({ isConfirmed: !0 }), e.clear();
         };
-      return (e, a) => (
+      return (a, e) => (
         g(),
-        O(ee, { to: "body" }, [
+        O(aa, { to: "body" }, [
           E(
             Q,
             { name: "popup", duration: "600" },
             {
               default: A(() => {
-                var e;
+                var a;
                 return [
                   _(s).$display
                     ? (g(),
-                      b("div", _a, [
+                      b("div", _e, [
                         (g(),
                         O(
                           B(_(i)),
@@ -1169,9 +1169,9 @@ var ja = je(
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
-                                  null == (e = _(s))
+                                  null == (a = _(s))
                                     ? void 0
-                                    : e.noEnterAnimation,
+                                    : a.noEnterAnimation,
                               },
                             ]),
                           },
@@ -1190,7 +1190,7 @@ var ja = je(
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xa, R(_(s).text), 1)),
+                                  : (g(), b("div", xe, R(_(s).text), 1)),
                               ]),
                               actions: A(() => [
                                 _(s).showCancelButton
@@ -1241,7 +1241,7 @@ var ja = je(
                                         },
                                         null,
                                         8,
-                                        ka
+                                        ke
                                       ),
                                     ]),
                                   }
@@ -1297,29 +1297,29 @@ var ja = je(
     ],
   ]
 );
-const za = {
-    "../components/the-header.vue": fa,
+const qe = {
+    "../components/the-header.vue": fe,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: ja },
+        { __proto__: null, default: je },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  qa = [];
-for (let No in za) {
-  const e = No.replace("../components/", "").toLowerCase().replace(".vue", "");
-  qa.push({ componentName: e, component: za[No].default });
+  ze = [];
+for (let go in qe) {
+  const a = go.replace("../components/", "").toLowerCase().replace(".vue", "");
+  ze.push({ componentName: a, component: qe[go].default });
 }
-const Ca = {
-  install: (e) => {
-    qa.forEach((a) => {
-      e.component(a.componentName, a.component);
+const Ce = {
+  install: (a) => {
+    ze.forEach((e) => {
+      a.component(e.componentName, e.component);
     });
   },
 };
-class Sa {
+class Se {
   constructor() {
     return V.mixin({
       reverseButtons: !0,
@@ -1329,22 +1329,22 @@ class Sa {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Ee.t("button.confirm"),
-      cancelButtonText: Ee.t("button.cancel"),
-      didOpen(e) {
-        const a = e.querySelector(".swal2-cancel");
-        e.querySelector(".swal2-confirm").blur(), a.blur();
+      confirmButtonText: Ea.t("button.confirm"),
+      cancelButtonText: Ea.t("button.cancel"),
+      didOpen(a) {
+        const e = a.querySelector(".swal2-cancel");
+        a.querySelector(".swal2-confirm").blur(), e.blur();
       },
     });
   }
 }
-class Oa {
+class Oe {
   constructor() {
-    this.provider = new Sa();
+    this.provider = new Se();
   }
-  toast(e) {
+  toast(a) {
     return this.provider.fire({
-      title: e,
+      title: a,
       toast: !0,
       showConfirmButton: !1,
       customClass: "swal2-toast",
@@ -1352,23 +1352,23 @@ class Oa {
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       timer: 2e3,
       background: "transparent",
-      didOpen: (e) => {
-        e.addEventListener("click", this.provider.close);
+      didOpen: (a) => {
+        a.addEventListener("click", this.provider.close);
       },
     });
   }
   alert({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     willClose: s = null,
     heightAuto: t = !1,
     html: i = !1,
-    confirmButtonText: l = Ee.t("button.confirm"),
+    confirmButtonText: l = Ea.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: i,
       customClass: `swal2-alert ${o}`,
       heightAuto: t,
@@ -1391,16 +1391,16 @@ class Oa {
     });
   }
   confirm({
-    title: e,
-    text: a,
+    title: a,
+    text: e,
     html: s,
-    confirmButtonText: t = Ee.t("button.confirm"),
+    confirmButtonText: t = Ea.t("button.confirm"),
     confirmCallback: i = null,
     heightAuto: l = !1,
   }) {
     return this.provider.fire({
-      title: e,
-      text: a,
+      title: a,
+      text: e,
       html: s,
       customClass: "swal2-confirm",
       confirmButtonText: t,
@@ -1417,163 +1417,163 @@ class Oa {
     this.provider.close();
   }
 }
-Oa.prototype.install = function (e) {
-  const a = "alert-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+Oe.prototype.install = function (a) {
+  const e = "alert-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Aa = new Oa(),
-  Ba = Object.freeze(
+var Ae = new Oe(),
+  Be = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Oa, default: Aa },
+      { __proto__: null, AlertService: Oe, default: Ae },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ea {
-  constructor(e, a = {}) {
-    this.instance = se.create(f({ baseURL: e }, a));
+class Ee {
+  constructor(a, e = {}) {
+    this.instance = sa.create(f({ baseURL: a }, e));
   }
   init() {
-    this.instance.defaults.validateStatus = (e) => e >= 200 && e < 300;
+    this.instance.defaults.validateStatus = (a) => a >= 200 && a < 300;
   }
-  use(...e) {
-    e.forEach((e) => {
-      var a;
-      null == (a = e.use) || a.call(e, this.instance);
+  use(...a) {
+    a.forEach((a) => {
+      var e;
+      null == (e = a.use) || e.call(a, this.instance);
     });
   }
 }
-const Ta = {
-    use(e) {
-      e.interceptors.request.use(
-        function (e) {
-          return e;
+const Te = {
+    use(a) {
+      a.interceptors.request.use(
+        function (a) {
+          return a;
         },
-        function (e) {
-          return e && e.response, Promise.reject(e);
+        function (a) {
+          return a && a.response, Promise.reject(a);
         }
       ),
-        e.interceptors.response.use(
-          function (e) {
-            return e;
+        a.interceptors.response.use(
+          function (a) {
+            return a;
           },
-          function (e) {
-            return e && e.response, Promise.reject(e);
+          function (a) {
+            return a && a.response, Promise.reject(a);
           }
         );
     },
   },
-  La = {
-    use(e) {
-      e.interceptors.request.use(
-        function (e) {
-          const a = U.get("token");
-          return a && (e.headers.Authorization = `Bearer ${a}`), e;
+  Le = {
+    use(a) {
+      a.interceptors.request.use(
+        function (a) {
+          const e = H.get("token");
+          return e && (a.headers.Authorization = `Bearer ${e}`), a;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       );
     },
   },
-  Ia = (e, { rejectNil: a, rejectEmpty: s }) =>
-    M(
+  Pe = (a, { rejectNil: e, rejectEmpty: s }) =>
+    I(
       (t, i) => {
-        const l = e[i];
-        return (a && T(l)) || (s && te(l)) ? t : ie(i, l, t);
+        const l = a[i];
+        return (e && T(l)) || (s && ta(l)) ? t : ia(i, l, t);
       },
       {},
-      F(e)
+      F(a)
     ),
-  Pa = {
-    use(e) {
-      e.interceptors.request.use(
-        function (e) {
+  Me = {
+    use(a) {
+      a.interceptors.request.use(
+        function (a) {
           const {
-            rejectNil: a = !0,
+            rejectNil: e = !0,
             rejectEmpty: s = !1,
             isFormData: t = !1,
-          } = e;
+          } = a;
           if (
-            (e.params &&
-              (e.params = Ia(e.params, { rejectNil: a, rejectEmpty: s })),
-            e.data &&
-              ((e.data = Ia(e.data, { rejectNil: a, rejectEmpty: s })), t))
+            (a.params &&
+              (a.params = Pe(a.params, { rejectNil: e, rejectEmpty: s })),
+            a.data &&
+              ((a.data = Pe(a.data, { rejectNil: e, rejectEmpty: s })), t))
           ) {
-            const a = new FormData();
-            le((s) => {
-              e.data[s] instanceof Array
-                ? le((e) => {
-                    a.append(`${s}[]`, e);
-                  }, e.data[s])
-                : a.append(s, e.data[s]);
-            }, F(e.data)),
-              (e.data = a);
+            const e = new FormData();
+            la((s) => {
+              a.data[s] instanceof Array
+                ? la((a) => {
+                    e.append(`${s}[]`, a);
+                  }, a.data[s])
+                : e.append(s, a.data[s]);
+            }, F(a.data)),
+              (a.data = e);
           }
-          return e;
+          return a;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       ),
-        e.interceptors.response.use(
-          async function (e) {
-            return e.data;
+        a.interceptors.response.use(
+          async function (a) {
+            return a.data;
           },
-          function (e) {
-            return Promise.reject(e);
+          function (a) {
+            return Promise.reject(a);
           }
         );
     },
   },
-  Ma = se.create();
-(Ma.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Ma.defaults.validateStatus = (e) => e >= 200 && e < 300);
-const Da = {
+  Ie = sa.create();
+(Ie.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Ie.defaults.validateStatus = (a) => a >= 200 && a < 300);
+const De = {
   async "read/marquee"() {
-    const e = await Ma.get("/app/user/news", {
+    const a = await Ie.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: e.data, withdraw: a.data };
+      e = await Ie.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: a.data, withdraw: e.data };
   },
 };
-const Fa = {
-  "set/popup"(e, a) {
-    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
+const Fe = {
+  "set/popup"(a, e) {
+    a.popupState = u(f({}, e), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(e) {
-    e.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(a) {
+    a.popupState = { $display: !1, $timestamp: -1 };
   },
-  "systm/Loading"(e, a) {
-    e.isLoading = a;
+  "systm/Loading"(a, e) {
+    a.isLoading = e;
   },
 };
-const Ua = {
+const He = {
   async "read/marquee"() {
-    const e = await Ma.get("/app/user/news", {
+    const a = await Ie.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: e.data, withdraw: a.data };
+      e = await Ie.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: a.data, withdraw: e.data };
   },
 };
-const Ha = {
-  "set/popup"(e, a) {
-    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
+const Ue = {
+  "set/popup"(a, e) {
+    a.popupState = u(f({}, e), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(e) {
-    e.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(a) {
+    a.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Va = {
+const Ve = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Da },
+      { __proto__: null, default: De },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1583,10 +1583,10 @@ const Va = {
       {
         __proto__: null,
         default: {
-          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
-          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
-          getHadValueTypeFirstItem: (e) => (a) =>
-            e.tips.find((e) => e.type === a && "" !== e.msg),
+          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
+          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
+          getHadValueTypeFirstItem: (a) => (e) =>
+            a.tips.find((a) => a.type === e && "" !== a.msg),
         },
       },
       Symbol.toStringTag,
@@ -1595,7 +1595,7 @@ const Va = {
   ),
   "../store/app/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Fa },
+      { __proto__: null, default: Fe },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1617,7 +1617,7 @@ const Va = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ua },
+      { __proto__: null, default: He },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1627,10 +1627,10 @@ const Va = {
       {
         __proto__: null,
         default: {
-          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
-          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
-          getHadValueTypeFirstItem: (e) => (a) =>
-            e.tips.find((e) => e.type === a && "" !== e.msg),
+          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
+          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
+          getHadValueTypeFirstItem: (a) => (e) =>
+            a.tips.find((a) => a.type === e && "" !== a.msg),
         },
       },
       Symbol.toStringTag,
@@ -1639,7 +1639,7 @@ const Va = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ha },
+      { __proto__: null, default: Ue },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1659,54 +1659,55 @@ const Va = {
     )
   ),
 };
-let Na = {};
-const Ga = (e, a, s) => {
-  const [t, ...i] = e;
+let Ne = {};
+const Ge = (a, e, s) => {
+  const [t, ...i] = a;
   return i.length
-    ? { [t]: { namespaced: !0, modules: Ga(i, a, s) } }
-    : { [t]: { namespaced: !0, [a]: s } };
+    ? { [t]: { namespaced: !0, modules: Ge(i, e, s) } }
+    : { [t]: { namespaced: !0, [e]: s } };
 };
-for (let No in Va) {
-  const e = No.replace("../store/", "")
+for (let go in Ve) {
+  const a = go
+    .replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Na = ne(Na, Ga(re(e), oe(e), Va[No].default));
+  Ne = na(Ne, Ge(ra(a), oa(a), Ve[go].default));
 }
-var Xa = Na;
-const Wa = {},
-  Ra = function (e, a) {
-    return a && 0 !== a.length
+var Xe = Ne;
+const We = {},
+  Re = function (a, e) {
+    return e && 0 !== e.length
       ? Promise.all(
-          a.map((e) => {
-            if ((e = `./${e}`) in Wa) return;
-            Wa[e] = !0;
-            const a = e.endsWith(".css"),
-              s = a ? '[rel="stylesheet"]' : "";
-            if (document.querySelector(`link[href="${e}"]${s}`)) return;
+          e.map((a) => {
+            if ((a = `./${a}`) in We) return;
+            We[a] = !0;
+            const e = a.endsWith(".css"),
+              s = e ? '[rel="stylesheet"]' : "";
+            if (document.querySelector(`link[href="${a}"]${s}`)) return;
             const t = document.createElement("link");
             return (
-              (t.rel = a ? "stylesheet" : "modulepreload"),
-              a || ((t.as = "script"), (t.crossOrigin = "")),
-              (t.href = e),
+              (t.rel = e ? "stylesheet" : "modulepreload"),
+              e || ((t.as = "script"), (t.crossOrigin = "")),
+              (t.href = a),
               document.head.appendChild(t),
-              a
-                ? new Promise((a, s) => {
-                    t.addEventListener("load", a),
+              e
+                ? new Promise((e, s) => {
+                    t.addEventListener("load", e),
                       t.addEventListener("error", () =>
-                        s(new Error(`Unable to preload CSS for ${e}`))
+                        s(new Error(`Unable to preload CSS for ${a}`))
                       );
                   })
                 : void 0
             );
           })
-        ).then(() => e())
-      : e();
+        ).then(() => a())
+      : a();
   },
-  Ya = { class: "footer" },
-  Za = { class: "container" },
-  Ka = { class: "row row-justify-center" },
-  $a = h(
+  Ye = { class: "footer" },
+  Ze = { class: "container" },
+  Ke = { class: "row row-justify-center" },
+  $e = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1755,7 +1756,7 @@ const Wa = {},
     ],
     -1
   ),
-  Ja = h(
+  Je = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1800,9 +1801,9 @@ const Wa = {},
     ],
     -1
   ),
-  Qa = h("div", { class: "col col-md-hide" }, null, -1),
-  es = { class: "col col-lg-4 col-md-12 col-md-first" },
-  as = { href: "/", class: "footer-wordmark w-inline-block" },
+  Qe = h("div", { class: "col col-md-hide" }, null, -1),
+  as = { class: "col col-lg-4 col-md-12 col-md-first" },
+  es = { href: "/", class: "footer-wordmark w-inline-block" },
   ss = { class: "wordmark w-embed" },
   ts = ["src"],
   is = h(
@@ -1816,20 +1817,20 @@ const Wa = {},
     ],
     -1
   );
-var ls = je(
+var ls = ja(
   {
-    setup: (e) => (e, a) => (
+    setup: (a) => (a, e) => (
       g(),
-      b("footer", Ya, [
-        h("div", Za, [
-          h("div", Ka, [
-            $a,
-            Ja,
-            Qa,
-            h("div", es, [
-              h("a", as, [
+      b("footer", Ye, [
+        h("div", Ze, [
+          h("div", Ke, [
+            $e,
+            Je,
+            Qe,
+            h("div", as, [
+              h("a", es, [
                 h("div", ss, [
-                  h("img", { src: _(ke)("logo.png"), alt: "" }, null, 8, ts),
+                  h("img", { src: _(ka)("logo.png"), alt: "" }, null, 8, ts),
                 ]),
               ]),
             ]),
@@ -1849,22 +1850,22 @@ var ls = je(
 const os = {
     components: { Footer: ls },
     setup() {
-      const { t: e } = Fe();
+      const { t: a } = Fa();
       return (
         C(() => {
-          de.init();
-          const e = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              e.isIntersecting
-                ? e.target.classList.add("active")
-                : e.target.classList.remove("active");
+          da.init();
+          const a = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              a.isIntersecting
+                ? a.target.classList.add("active")
+                : a.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((a) => {
-            e.observe(a);
+          document.querySelectorAll(".target_line").forEach((e) => {
+            a.observe(e);
           });
         }),
-        { t: e }
+        { t: a }
       );
     },
   },
@@ -3579,14 +3580,14 @@ const os = {
     ],
     -1
   ),
-  vs = ce(
+  vs = ca(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   );
-var ms = je(os, [
+var ms = ja(os, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         const o = S("Footer");
         return (
           g(),
@@ -3627,33 +3628,33 @@ const us = {
     title: "pages.home.nav.about",
     components: { Footer: ls },
     setup() {
-      const { t: e } = Fe();
+      const { t: a } = Fa();
       return (
         C(() => {
-          de.init(),
+          da.init(),
             (() => {
-              let e = document.querySelector("#cases");
-              e.addEventListener("wheel", (a) => {
+              let a = document.querySelector("#cases");
+              a.addEventListener("wheel", (e) => {
                 window.innerWidth > 991 &&
-                  (a.preventDefault(), (e.scrollLeft += a.deltaY));
+                  (e.preventDefault(), (a.scrollLeft += e.deltaY));
               });
             })();
-          const e = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              e.isIntersecting
-                ? e.target.classList.add("active")
-                : e.target.classList.remove("active");
+          const a = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              a.isIntersecting
+                ? a.target.classList.add("active")
+                : a.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((a) => {
-            e.observe(a);
+          document.querySelectorAll(".target_line").forEach((e) => {
+            a.observe(e);
           });
         }),
-        { t: e }
+        { t: a }
       );
     },
   },
-  gs = ((e) => (pe("data-v-74f67db4"), (e = e()), ve(), e))(() =>
+  gs = ((a) => (pa("data-v-74f67db4"), (a = a()), va(), a))(() =>
     h(
       "div",
       { id: "cases", class: "wrap" },
@@ -4881,14 +4882,14 @@ const us = {
       -1
     )
   ),
-  bs = ce(
+  bs = ca(
     '<div class="container mobile-show" data-v-74f67db4><div class="target_line" data-v-74f67db4></div></div><section class="section mobile-show" data-v-74f67db4><div class="section-title_component" data-v-74f67db4><div class="container" data-v-74f67db4><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-74f67db4><div class="section-title_dot" style="opacity:1;" data-v-74f67db4></div><div class="u-overflow-hidden" data-v-74f67db4><div class="section-title_title" data-v-74f67db4><h2 class="u-ts-4" data-v-74f67db4>Contact Us</h2></div></div></div></div></div><div class="container" data-v-74f67db4><div class="w-layout-grid pair-grid" data-v-74f67db4><div data-v-74f67db4><div class="contact-cta w-richtext" data-v-74f67db4><h3 data-aos="fade-up" data-aos-duration="700" data-v-74f67db4><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-74f67db4><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-74f67db4><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4><div style="position:relative;display:inline-block;" data-v-74f67db4> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   );
-var ws = je(us, [
+var ws = ja(us, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         const o = S("Footer");
         return g(), b(x, null, [gs, bs, E(o, { class: "mobile-show" })], 64);
       },
@@ -4909,32 +4910,32 @@ var ws = je(us, [
 const ys = {
     layout: "layout-demo",
     setup() {
-      const e = ua(),
-        { t: a, locale: s, setPrefix: t, change: i } = Fe();
+      const a = ue(),
+        { t: e, locale: s, setPrefix: t, change: i } = Fa();
       t({ $current: "pages.demo" });
       const l = G(),
         o = K("alert-service"),
-        r = me({ current: s.value || "zh-tw" });
+        r = ma({ current: s.value || "zh-tw" });
       return (
         C(() => {}),
         {
-          t: a,
+          t: e,
           lang: r,
           toHome: () => {
             l.push("/home");
           },
           swalModal: () => {
             o.alert({
-              title: a("$current.modal.swal.title"),
-              text: a("$current.modal.swal"),
+              title: e("$current.modal.swal.title"),
+              text: e("$current.modal.swal"),
             });
           },
           changeLang: () => {
-            const e = "zh-tw" === r.current ? "en" : "zh-tw";
-            (r.current = e), i(e);
+            const a = "zh-tw" === r.current ? "en" : "zh-tw";
+            (r.current = a), i(a);
           },
           popupModal: async () => {
-            await e.modal({ title: "popup", text: "this a popup" });
+            await a.modal({ title: "popup", text: "this a popup" });
           },
         }
       );
@@ -4944,11 +4945,11 @@ const ys = {
   xs = { class: "demo-head" },
   ks = { class: "switch" },
   js = h("input", { type: "checkbox", class: "cb" }, null, -1),
-  zs = [
+  qs = [
     h("span", { class: "left" }, "CN", -1),
     h("span", { class: "right" }, "En", -1),
   ],
-  qs = { class: "demo-head-content" },
+  zs = { class: "demo-head-content" },
   Cs = { class: "demo-actions" },
   Ss = { class: "radio-inputs" },
   Os = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
@@ -4957,10 +4958,10 @@ const ys = {
   Es = { class: "name" },
   Ts = h("input", { type: "radio", name: "radio" }, null, -1),
   Ls = { class: "name" };
-var Is = je(ys, [
+var Ps = ja(ys, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         return (
           g(),
           b("div", _s, [
@@ -4973,14 +4974,14 @@ var Is = je(ys, [
                     {
                       class: "toggle",
                       onClick:
-                        a[0] ||
-                        (a[0] = (...e) => t.changeLang && t.changeLang(...e)),
+                        e[0] ||
+                        (e[0] = (...a) => t.changeLang && t.changeLang(...a)),
                     },
-                    zs
+                    qs
                   ),
                 ]),
               ]),
-              h("div", qs, "lang:" + R(t.lang.current), 1),
+              h("div", zs, "lang:" + R(t.lang.current), 1),
             ]),
             h("div", Cs, [
               h("div", Ss, [
@@ -4989,7 +4990,7 @@ var Is = je(ys, [
                   {
                     class: "radio",
                     onClick:
-                      a[1] || (a[1] = (...e) => t.toHome && t.toHome(...e)),
+                      e[1] || (e[1] = (...a) => t.toHome && t.toHome(...a)),
                   },
                   [Os, h("span", As, R(t.t("$current.router.link")), 1)]
                 ),
@@ -4998,8 +4999,8 @@ var Is = je(ys, [
                   {
                     class: "radio",
                     onClick:
-                      a[2] ||
-                      (a[2] = (...e) => t.swalModal && t.swalModal(...e)),
+                      e[2] ||
+                      (e[2] = (...a) => t.swalModal && t.swalModal(...a)),
                   },
                   [Bs, h("span", Es, R(t.t("$current.modal.swal")), 1)]
                 ),
@@ -5008,8 +5009,8 @@ var Is = je(ys, [
                   {
                     class: "radio",
                     onClick:
-                      a[3] ||
-                      (a[3] = (...e) => t.popupModal && t.popupModal(...e)),
+                      e[3] ||
+                      (e[3] = (...a) => t.popupModal && t.popupModal(...a)),
                   },
                   [Ts, h("span", Ls, R(t.t("$current.popup.use")), 1)]
                 ),
@@ -5024,14 +5025,14 @@ var Is = je(ys, [
       "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/demo.vue",
     ],
   ]),
-  Ps = Object.freeze(
+  Ms = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Is },
+      { __proto__: null, default: Ps },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Ms = (e) =>
+const Is = (a) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -5041,34 +5042,34 @@ const Ms = (e) =>
         "../assets/video/home/knife2-3.mp4": "./assets/knife2-3.db814c22.mp4",
         "../assets/video/home/knife2-4.mp4": "./assets/knife2-4.0d587ad1.mp4",
         "../assets/video/home/tea_1.mp4": "./assets/tea_1.8e120b16.mp4",
-      }[`../assets/video/${e}`],
+      }[`../assets/video/${a}`],
       self.location
     ).href,
   Ds = {
     components: { Footer: ls },
     setup() {
-      const { t: e } = Fe();
+      const { t: a } = Fa();
       return (
         C(() => {
-          de.init();
-          const e = new IntersectionObserver((e) => {
-            e.forEach((e) => {
-              e.isIntersecting
-                ? e.target.classList.add("active")
-                : e.target.classList.remove("active");
+          da.init();
+          const a = new IntersectionObserver((a) => {
+            a.forEach((a) => {
+              a.isIntersecting
+                ? a.target.classList.add("active")
+                : a.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((a) => {
-            e.observe(a);
+          document.querySelectorAll(".target_line").forEach((e) => {
+            a.observe(e);
           });
         }),
-        { t: e, getVideoUrl: Ms }
+        { t: a, getVideoUrl: Is }
       );
     },
   },
   Fs = { "data-mouse-class": "cc-icon", class: "header cc-large" },
-  Us = { class: "header-image_wrap" },
-  Hs = { class: "header-image" },
+  Hs = { class: "header-image_wrap" },
+  Us = { class: "header-image" },
   Vs = { class: "iframe-video_wrapper" },
   Ns = {
     class: "video-cover",
@@ -5081,7 +5082,7 @@ const Ms = (e) =>
   Gs = ["src"],
   Xs = Z(" Your browser does not support the video tag. "),
   Ws = h("div", { class: "iframe-video_blocker" }, null, -1),
-  Rs = ce(
+  Rs = ca(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
@@ -5753,7 +5754,7 @@ const Ms = (e) =>
     [h("div", { class: "target_line" })],
     -1
   ),
-  et = h(
+  at = h(
     "section",
     { class: "section" },
     [
@@ -6351,7 +6352,7 @@ const Ms = (e) =>
     ],
     -1
   ),
-  at = ce(
+  et = ca(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
@@ -6373,14 +6374,14 @@ const Ms = (e) =>
   ot = ["src"],
   rt = Z(" Your browser does not support the video tag. "),
   nt = h("div", { class: "iframe-video_blocker" }, null, -1),
-  dt = ce(
+  dt = ca(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ct = je(Ds, [
+var ct = ja(Ds, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         const o = S("Footer");
         return (
           g(),
@@ -6389,8 +6390,8 @@ var ct = je(Ds, [
             null,
             [
               h("header", Fs, [
-                h("div", Us, [
-                  h("div", Hs, [
+                h("div", Hs, [
+                  h("div", Us, [
                     h("div", Vs, [
                       h("video", Ns, [
                         h(
@@ -6417,8 +6418,8 @@ var ct = je(Ds, [
               $s,
               Js,
               Qs,
-              et,
               at,
+              et,
               h("div", null, [
                 h("aside", st, [
                   h("a", tt, [
@@ -6464,509 +6465,1108 @@ var ct = je(Ds, [
 const vt = ["data-index"],
   mt = ["src"],
   ft = [
-    ce(
+    ca(
       '<div class="btn-text-wrap"><div class="btn-text cc-scroll">請往下滑</div><div class="btn-text cc-bottom cc-scroll">請往下滑</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
   ];
-const ut = {
+var ut = ja(
+  {
+    setup(a) {
+      const e = k(),
+        s = ma({ x: 0, y: 0 }),
+        t = j([
+          {
+            url: "home/opening/1.jpg",
+            css: {
+              width: "17vw",
+              height: "20.2vw",
+              left: "1%",
+              top: "60%",
+              m_right: "3000px",
+              m_top: "0%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 2.5s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/2.jpg",
+            css: {
+              width: "16.5vw",
+              height: "21.3vw",
+              left: "11%",
+              top: "10%",
+              m_right: "3000px",
+              m_top: "0%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 1.5s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/3.jpg",
+            css: {
+              width: "21.3vw",
+              height: "16.6vw",
+              m_width: "55.9vw",
+              m_height: "42.5vw",
+              left: "22%",
+              top: "45%",
+              m_right: "71%",
+              m_top: "44%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 3.5s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/4.jpg",
+            css: {
+              width: "15.5vw",
+              height: "16.6vw",
+              m_width: "42.5vw",
+              m_height: "42.5vw",
+              left: "31%",
+              top: "72%",
+              m_right: "73%",
+              m_top: "80%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 2s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/5.jpg",
+            css: {
+              width: "24vw",
+              height: "19.6vw",
+              m_width: "34vw",
+              m_height: "34vw",
+              left: "33%",
+              top: "-1%",
+              m_right: "-2%",
+              m_top: "1%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 1s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/6.jpg",
+            css: {
+              width: "21.1vw",
+              height: "26.3vw",
+              m_width: "25.5vw",
+              m_height: "33vw",
+              left: "51%",
+              top: "27%",
+              m_right: "15%",
+              m_top: "39%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 2.5s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/7.jpg",
+            css: {
+              width: "18.1vw",
+              height: "21.8vw",
+              m_width: "43.5vw",
+              m_height: "50vw",
+              left: "63%",
+              top: "74%",
+              m_right: "8%",
+              m_top: "70%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 3s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/8.jpg",
+            css: {
+              width: "18.3vw",
+              height: "14.6vw",
+              m_width: "46.1vw",
+              m_height: "35.7vw",
+              left: "70%",
+              top: "-4%",
+              m_right: "57%",
+              m_top: "15%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 3.5s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/9.jpg",
+            css: {
+              width: "22.8vw",
+              height: "22vw",
+              m_width: "36vw",
+              m_height: "20vw",
+              left: "83%",
+              top: "33%",
+              m_right: "-10%",
+              m_top: "25%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 2s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+              objectAposition: "right",
+            },
+            isEnter: !0,
+          },
+          {
+            url: "home/opening/10.jpg",
+            css: {
+              width: "21.3vw",
+              height: "16.6vw",
+              left: "86%",
+              top: "69%",
+              m_right: "30000px",
+              m_top: "0%",
+              transform: "translate3d(1px, 2px, 1px)",
+              enterAnimation: "zoomIn 1.5s forwards",
+              leaveAnimation: "fadeOut 1s forwards",
+            },
+            isEnter: !0,
+          },
+        ]),
+        i = j(!1),
+        l = {
+          rootMargin: "0px",
+          threshold: Array(100)
+            .fill()
+            .map((a, e) => 0.01 * e),
+        },
+        o = new IntersectionObserver((a) => {
+          a.forEach((a) => {
+            var e, s;
+            const { intersectionRatio: i, target: l } = a,
+              o = null == (e = l.dataset) ? void 0 : e.index;
+            if ("img" === (null == (s = l.dataset) ? void 0 : s.item))
+              t.value[o].isEnter = !(i < 0.4);
+            else
+              l.style.animation =
+                i < 0.6 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
+          });
+        }, l),
+        r = () => {
+          const a = document.getElementById("studio");
+          if (a) {
+            const e = a.offsetTop;
+            window.scrollTo({ top: e, behavior: "smooth" });
+          }
+        };
+      z(
+        () => e.state.app.isLoading,
+        (a) => {
+          if (((i.value = !a), a)) {
+            ((a) => {
+              for (const e of a) o.unobserve(e);
+            })([
+              ...document.querySelectorAll(".img-wrap"),
+              document.querySelector(".btn-scroll"),
+            ]);
+          } else
+            fa(() => {
+              ((a) => {
+                for (const e of a) o.observe(e);
+              })([
+                ...document.querySelectorAll(".img-wrap"),
+                document.querySelector(".btn-scroll"),
+              ]);
+            });
+        }
+      );
+      const n = j(!1),
+        d = () => {
+          n.value = window.innerWidth < 991;
+        };
+      return (
+        C(() => {
+          d(), window.addEventListener("resize", d), da.init();
+        }),
+        (a, e) => (
+          g(),
+          b(
+            x,
+            null,
+            [
+              h(
+                "div",
+                {
+                  class: "view",
+                  onMousemove:
+                    e[0] ||
+                    (e[0] = (a) =>
+                      ((a) => {
+                        if (window.innerWidth > 576) {
+                          const e = window.innerWidth / 2,
+                            t = window.innerHeight / 2;
+                          (s.x = ((e - a.clientX) / 100) * 3),
+                            (s.y = ((t - a.clientY) / 100) * 3);
+                        }
+                      })(a)),
+                },
+                [
+                  i.value
+                    ? (g(),
+                      b(
+                        "div",
+                        {
+                          key: 0,
+                          class: "view-wrap",
+                          style: W({
+                            transform: `translate3d(${2 * _(s).x}px, ${
+                              _(s).y
+                            }px, 0) rotateX(${-_(s).y / 2}deg) rotateY(${
+                              -_(s).x / 2
+                            }deg)`,
+                            transformOrigin: "center center",
+                          }),
+                        },
+                        [
+                          (g(!0),
+                          b(
+                            x,
+                            null,
+                            X(
+                              t.value,
+                              (a, e) => (
+                                g(),
+                                b(
+                                  "div",
+                                  {
+                                    class: "img-wrap home-hero_image-placer",
+                                    key: a.url + e,
+                                    style: W({
+                                      left: n.value ? "unset" : a.css.left,
+                                      right: n.value ? a.css.m_right : "unset",
+                                      top: n.value ? a.css.m_top : a.css.top,
+                                      animation: a.isEnter
+                                        ? a.css.enterAnimation
+                                        : a.css.leaveAnimation,
+                                    }),
+                                    "data-index": e,
+                                    "data-item": "img",
+                                  },
+                                  [
+                                    h(
+                                      "img",
+                                      {
+                                        src: _(ka)(a.url),
+                                        style: W({
+                                          width: n.value
+                                            ? a.css.m_width
+                                            : a.css.width,
+                                          height: n.value
+                                            ? a.css.m_height
+                                            : a.css.height,
+                                          transform: `translate3d(${
+                                            _(s).x / 2
+                                          }px,${_(s).y / 2}px, 100px)`,
+                                        }),
+                                      },
+                                      null,
+                                      12,
+                                      mt
+                                    ),
+                                  ],
+                                  12,
+                                  vt
+                                )
+                              )
+                            ),
+                            128
+                          )),
+                        ],
+                        4
+                      ))
+                    : w("v-if", !0),
+                ],
+                32
+              ),
+              h("div", { "data-reveal": "button", class: "home-hero_btn" }, [
+                h("div", { class: "btn-contain btn-contain-scroll" }, [
+                  h(
+                    "div",
+                    { class: "btn-scroll w-inline-block", onClick: r },
+                    ft
+                  ),
+                ]),
+              ]),
+            ],
+            64
+          )
+        )
+      );
+    },
+  },
+  [
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/home/view.vue",
+    ],
+  ]
+);
+const gt = { class: "marquee", "data-v-57509004": "" },
+  bt = [
+    h(
+      "div",
+      { class: "marquee_row w-dyn-list", "data-v-57509004": "" },
+      [
+        h(
+          "div",
+          {
+            role: "list",
+            class: "marquee_content w-dyn-items",
+            "data-v-57509004": "",
+            style: {
+              transform: "translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)",
+              "transform-style": "preserve-3d",
+              "will-change": "transform",
+            },
+          },
+          [
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-1",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "300",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-2",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "400",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-3",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "500",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-4",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "600",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-5",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "700",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-6",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "800",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-7",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "900",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-8",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "1000",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h(
+                  "div",
+                  {
+                    class: "marquee_item cc-9",
+                    "data-v-57509004": "",
+                    style: {
+                      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                      "transform-style": "preserve-3d",
+                    },
+                  },
+                  [
+                    h("img", {
+                      loading: "eager",
+                      "data-aos": "fade-up",
+                      "data-aos-delay": "1100",
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
+                      alt: "",
+                      class: "marquee_logo aos-init aos-animate",
+                      "data-v-57509004": "",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
+      ],
+      -1
+    ),
+    h(
+      "div",
+      { class: "marquee_row w-dyn-list", "data-v-57509004": "" },
+      [
+        h(
+          "div",
+          {
+            role: "list",
+            class: "marquee_content w-dyn-items",
+            "data-v-57509004": "",
+            style: {
+              transform: "translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)",
+              "transform-style": "preserve-3d",
+              "will-change": "transform",
+            },
+          },
+          [
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+          ]
+        ),
+      ],
+      -1
+    ),
+    h(
+      "div",
+      { class: "marquee_row w-dyn-list", "data-v-57509004": "" },
+      [
+        h(
+          "div",
+          {
+            role: "list",
+            class: "marquee_content w-dyn-items",
+            "data-v-57509004": "",
+            style: {
+              transform: "translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)",
+              "transform-style": "preserve-3d",
+              "will-change": "transform",
+            },
+          },
+          [
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240a_logo_redbull.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240b_logo_airbnb.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240c_logo_sable.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240d_logo_mastercard.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240e_logo_google.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af55240f_logo_seen.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552410_logo_disney.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552411_logo_sc-financial.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+            h(
+              "div",
+              {
+                role: "listitem",
+                class: "marquee_logo w-dyn-item",
+                "data-v-57509004": "",
+              },
+              [
+                h("img", {
+                  loading: "eager",
+                  src:
+                    "https://assets-global.website-files.com/6584502438fea068af552349/6584502438fea068af552412_logo_prosody.png",
+                  alt: "",
+                  class: "marquee_logo",
+                  "data-v-57509004": "",
+                }),
+              ]
+            ),
+          ]
+        ),
+      ],
+      -1
+    ),
+  ];
+const wt = {
   components: {
     Footer: ls,
-    View: je(
-      {
-        setup(e) {
-          const a = k(),
-            s = me({ x: 0, y: 0 }),
-            t = j([
-              {
-                url: "home/opening/1.jpg",
-                css: {
-                  width: "17vw",
-                  height: "20.2vw",
-                  left: "1%",
-                  top: "60%",
-                  m_right: "3000px",
-                  m_top: "0%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/2.jpg",
-                css: {
-                  width: "16.5vw",
-                  height: "21.3vw",
-                  left: "11%",
-                  top: "10%",
-                  m_right: "3000px",
-                  m_top: "0%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 1.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/3.jpg",
-                css: {
-                  width: "21.3vw",
-                  height: "16.6vw",
-                  m_width: "55.9vw",
-                  m_height: "42.5vw",
-                  left: "22%",
-                  top: "45%",
-                  m_right: "71%",
-                  m_top: "44%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 3.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/4.jpg",
-                css: {
-                  width: "15.5vw",
-                  height: "16.6vw",
-                  m_width: "42.5vw",
-                  m_height: "42.5vw",
-                  left: "31%",
-                  top: "72%",
-                  m_right: "73%",
-                  m_top: "80%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/5.jpg",
-                css: {
-                  width: "24vw",
-                  height: "19.6vw",
-                  m_width: "34vw",
-                  m_height: "34vw",
-                  left: "33%",
-                  top: "-1%",
-                  m_right: "-2%",
-                  m_top: "1%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 1s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/6.jpg",
-                css: {
-                  width: "21.1vw",
-                  height: "26.3vw",
-                  m_width: "25.5vw",
-                  m_height: "33vw",
-                  left: "51%",
-                  top: "27%",
-                  m_right: "15%",
-                  m_top: "39%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/7.jpg",
-                css: {
-                  width: "18.1vw",
-                  height: "21.8vw",
-                  m_width: "43.5vw",
-                  m_height: "50vw",
-                  left: "63%",
-                  top: "74%",
-                  m_right: "8%",
-                  m_top: "70%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 3s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/8.jpg",
-                css: {
-                  width: "18.3vw",
-                  height: "14.6vw",
-                  m_width: "46.1vw",
-                  m_height: "35.7vw",
-                  left: "70%",
-                  top: "-4%",
-                  m_right: "57%",
-                  m_top: "15%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 3.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/9.jpg",
-                css: {
-                  width: "22.8vw",
-                  height: "22vw",
-                  m_width: "36vw",
-                  m_height: "20vw",
-                  left: "83%",
-                  top: "33%",
-                  m_right: "-10%",
-                  m_top: "25%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 2s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                  objectAposition: "right",
-                },
-                isEnter: !0,
-              },
-              {
-                url: "home/opening/10.jpg",
-                css: {
-                  width: "21.3vw",
-                  height: "16.6vw",
-                  left: "86%",
-                  top: "69%",
-                  m_right: "30000px",
-                  m_top: "0%",
-                  transform: "translate3d(1px, 2px, 1px)",
-                  enterAnimation: "zoomIn 1.5s forwards",
-                  leaveAnimation: "fadeOut 1s forwards",
-                },
-                isEnter: !0,
-              },
-            ]),
-            i = j(!1),
-            l = {
-              rootMargin: "0px",
-              threshold: Array(100)
-                .fill()
-                .map((e, a) => 0.01 * a),
-            },
-            o = new IntersectionObserver((e) => {
-              e.forEach((e) => {
-                var a, s;
-                const { intersectionRatio: i, target: l } = e,
-                  o = null == (a = l.dataset) ? void 0 : a.index;
-                if ("img" === (null == (s = l.dataset) ? void 0 : s.item))
-                  t.value[o].isEnter = !(i < 0.4);
-                else
-                  l.style.animation =
-                    i < 0.6 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
-              });
-            }, l),
-            r = () => {
-              const e = document.getElementById("studio");
-              if (e) {
-                const a = e.offsetTop;
-                window.scrollTo({ top: a, behavior: "smooth" });
-              }
-            };
-          q(
-            () => a.state.app.isLoading,
-            (e) => {
-              if (((i.value = !e), e)) {
-                ((e) => {
-                  for (const a of e) o.unobserve(a);
-                })([
-                  ...document.querySelectorAll(".img-wrap"),
-                  document.querySelector(".btn-scroll"),
-                ]);
-              } else
-                fe(() => {
-                  ((e) => {
-                    for (const a of e) o.observe(a);
-                  })([
-                    ...document.querySelectorAll(".img-wrap"),
-                    document.querySelector(".btn-scroll"),
-                  ]);
-                });
-            }
-          );
-          const n = j(!1),
-            d = () => {
-              n.value = window.innerWidth < 991;
-            };
-          return (
-            C(() => {
-              d(), window.addEventListener("resize", d), de.init();
-            }),
-            (e, a) => (
-              g(),
-              b(
-                x,
-                null,
-                [
-                  h(
-                    "div",
-                    {
-                      class: "view",
-                      onMousemove:
-                        a[0] ||
-                        (a[0] = (e) =>
-                          ((e) => {
-                            if (window.innerWidth > 576) {
-                              const a = window.innerWidth / 2,
-                                t = window.innerHeight / 2;
-                              (s.x = ((a - e.clientX) / 100) * 3),
-                                (s.y = ((t - e.clientY) / 100) * 3);
-                            }
-                          })(e)),
-                    },
-                    [
-                      i.value
-                        ? (g(),
-                          b(
-                            "div",
-                            {
-                              key: 0,
-                              class: "view-wrap",
-                              style: W({
-                                transform: `translate3d(${2 * _(s).x}px, ${
-                                  _(s).y
-                                }px, 0) rotateX(${-_(s).y / 2}deg) rotateY(${
-                                  -_(s).x / 2
-                                }deg)`,
-                                transformOrigin: "center center",
-                              }),
-                            },
-                            [
-                              (g(!0),
-                              b(
-                                x,
-                                null,
-                                X(
-                                  t.value,
-                                  (e, a) => (
-                                    g(),
-                                    b(
-                                      "div",
-                                      {
-                                        class:
-                                          "img-wrap home-hero_image-placer",
-                                        key: e.url + a,
-                                        style: W({
-                                          left: n.value ? "unset" : e.css.left,
-                                          right: n.value
-                                            ? e.css.m_right
-                                            : "unset",
-                                          top: n.value
-                                            ? e.css.m_top
-                                            : e.css.top,
-                                          animation: e.isEnter
-                                            ? e.css.enterAnimation
-                                            : e.css.leaveAnimation,
-                                        }),
-                                        "data-index": a,
-                                        "data-item": "img",
-                                      },
-                                      [
-                                        h(
-                                          "img",
-                                          {
-                                            src: _(ke)(e.url),
-                                            style: W({
-                                              width: n.value
-                                                ? e.css.m_width
-                                                : e.css.width,
-                                              height: n.value
-                                                ? e.css.m_height
-                                                : e.css.height,
-                                              transform: `translate3d(${
-                                                _(s).x / 2
-                                              }px,${_(s).y / 2}px, 100px)`,
-                                            }),
-                                          },
-                                          null,
-                                          12,
-                                          mt
-                                        ),
-                                      ],
-                                      12,
-                                      vt
-                                    )
-                                  )
-                                ),
-                                128
-                              )),
-                            ],
-                            4
-                          ))
-                        : w("v-if", !0),
-                    ],
-                    32
-                  ),
-                  h(
-                    "div",
-                    { "data-reveal": "button", class: "home-hero_btn" },
-                    [
-                      h("div", { class: "btn-contain btn-contain-scroll" }, [
-                        h(
-                          "div",
-                          { class: "btn-scroll w-inline-block", onClick: r },
-                          ft
-                        ),
-                      ]),
-                    ]
-                  ),
-                ],
-                64
-              )
-            )
-          );
-        },
-      },
+    Marquee: ja(
+      { setup: (a) => (da.init(), (a, e) => (g(), b("div", gt, bt))) },
       [
         [
           "__file",
-          "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/home/view.vue",
+          "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/marquee.vue",
         ],
       ]
     ),
+    View: ut,
   },
   setup() {
-    const e = j("");
+    const a = j("");
     return (
       C(() => {
-        document.querySelectorAll(".video-cover").forEach((e) => {
-          e.play();
+        document.querySelectorAll(".video-cover").forEach((a) => {
+          a.play();
         });
-        const e = new IntersectionObserver((e) => {
-          e.forEach((e) => {
-            e.isIntersecting
-              ? e.target.classList.add("active")
-              : e.target.classList.remove("active");
+        const a = new IntersectionObserver((a) => {
+          a.forEach((a) => {
+            a.isIntersecting
+              ? a.target.classList.add("active")
+              : a.target.classList.remove("active");
           });
         });
-        document.querySelectorAll(".target_line").forEach((a) => {
-          e.observe(a);
+        document.querySelectorAll(".target_line").forEach((e) => {
+          a.observe(e);
         });
       }),
-      { a: e, getVideoUrl: Ms, getImageUrl: ke }
+      { a: a, getVideoUrl: Is, getImageUrl: ka }
     );
   },
 };
-de.init();
-const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
-  bt = gt(() =>
+da.init();
+const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
+  yt = ht(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  wt = { id: "studio", class: "section" },
-  ht = ce(
+  _t = { id: "studio", class: "section" },
+  xt = ca(
     '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-57509004></div></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" data-v-57509004><h2 class="u-ts-4" data-v-57509004>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-57509004><h3 data-animation-element="title" data-v-57509004><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;800&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                products\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                and\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                their\n              &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;900&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                brands\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                through\n              &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;1000&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                design.\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-57509004><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>館藏查詢</div><div class="btn-text cc-bottom" data-v-57509004>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>預約參觀</div><div class="btn-text cc-bottom" data-v-57509004>預約參觀</div></div></a></div></div></div></div></div>',
     2
   ),
-  yt = { class: "u-mt-8-75" },
-  _t = { class: "marquee" },
-  xt = { class: "marquee_row w-dyn-list" },
-  kt = {
-    role: "list",
-    class: "marquee_content w-dyn-items",
-    style: {
-      transform: "translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-      "will-change": "transform",
-    },
-  },
-  jt = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  zt = {
-    class: "marquee_item cc-1",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  qt = ["src"],
-  Ct = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  St = {
-    class: "marquee_item cc-2",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Ot = ["src"],
-  At = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Bt = {
-    class: "marquee_item cc-3",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Et = ["src"],
-  Tt = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Lt = {
-    class: "marquee_item cc-4",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  It = ["src"],
-  Pt = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Mt = {
-    class: "marquee_item cc-5",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Dt = ["src"],
-  Ft = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ut = {
-    class: "marquee_item cc-6",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Ht = ["src"],
-  Vt = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Nt = {
-    class: "marquee_item cc-7",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Gt = ["src"],
-  Xt = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Wt = {
-    class: "marquee_item cc-8",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Rt = ["src"],
-  Yt = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Zt = {
-    class: "marquee_item cc-9",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
-  },
-  Kt = ["src"],
-  $t = gt(() =>
+  kt = { class: "u-mt-8-75" },
+  jt = ht(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  Jt = { class: "section" },
-  Qt = ce(
+  qt = { class: "section" },
+  zt = ca(
     '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-57509004></div></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>空間預約</h2></div></div></div></div></div>',
     1
   ),
-  ei = { class: "container" },
-  ai = gt(() =>
+  Ct = { class: "container" },
+  St = ht(() =>
     h(
       "div",
       { "data-animation-element": "group" },
@@ -7009,40 +7609,41 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  si = { class: "sticky-pair" },
-  ti = { class: "w-layout-grid pair-grid" },
-  ii = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
-  li = {
+  Ot = { class: "sticky-pair" },
+  At = { class: "w-layout-grid pair-grid" },
+  Bt = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
+  Et = {
     id: "w-node-_137ddbb9-11b4-d169-f149-eca9f54873e8-af552307",
     class: "card-wrapper cc-small",
   },
-  oi = {
+  Tt = {
     id: "w-node-a3cc95fc-d4f5-0398-7194-1e8506932d8d-af552307",
     class: "w-dyn-list",
   },
-  ri = { role: "list", class: "w-dyn-items" },
-  ni = { role: "listitem", class: "w-dyn-item" },
-  di = { class: "card-wrapper cc-small" },
-  ci = {
+  Lt = { role: "list", class: "w-dyn-items" },
+  Pt = { role: "listitem", class: "w-dyn-item" },
+  Mt = { class: "card-wrapper cc-small" },
+  It = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  pi = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  vi = { class: "card-image_wrapper" },
-  mi = { class: "iframe-video_wrapper" },
-  fi = {
+  Dt = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  Ft = { class: "card-image_wrapper" },
+  Ht = { class: "iframe-video_wrapper" },
+  Ut = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  ui = ["src"],
-  gi = Z(" Your browser does not support the video tag. "),
-  bi = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  wi = gt(() =>
+  Vt = ["src"],
+  Nt = Z(" Your browser does not support the video tag. "),
+  Gt = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Xt = ht(() =>
     h(
       "div",
       { class: "card-body", "data-aos": "fade-up", "data-aos-duration": "700" },
@@ -7056,61 +7657,62 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  hi = {
+  Wt = {
     id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
     class: "w-dyn-list",
   },
-  yi = { role: "list", class: "w-dyn-items" },
-  _i = { role: "listitem", class: "w-dyn-item" },
-  xi = { class: "card-wrapper cc-large" },
-  ki = { class: "card-animation cc-40" },
-  ji = {
+  Rt = { role: "list", class: "w-dyn-items" },
+  Yt = { role: "listitem", class: "w-dyn-item" },
+  Zt = { class: "card-wrapper cc-large" },
+  Kt = { class: "card-animation cc-40" },
+  $t = {
     "data-mouse-class": "cc-text",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     class: "card is-link w-inline-block",
   },
-  zi = { class: "card-image_wrapper" },
-  qi = { class: "iframe-video_wrapper" },
-  Ci = {
+  Jt = { class: "card-image_wrapper" },
+  Qt = { class: "iframe-video_wrapper" },
+  ai = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  Si = ["src"],
-  Oi = Z(" Your browser does not support the video tag. "),
-  Ai = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Bi = ce(
+  ei = ["src"],
+  si = Z(" Your browser does not support the video tag. "),
+  ti = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  ii = ca(
     '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  Ei = ce(
+  li = ca(
     '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-57509004> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>空間介紹</div><div class="btn-text cc-bottom" data-v-57509004>空間介紹</div></div></a></div><div class="btn-item cc-2" data-v-57509004><a class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>立即預約</div><div class="btn-text cc-bottom" data-v-57509004>立即預約</div></div></a></div></div></div>',
     1
   ),
-  Ti = gt(() =>
+  oi = ht(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  Li = { class: "section" },
-  Ii = ce(
+  ri = { class: "section" },
+  ni = ca(
     '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" data-v-57509004><h2 class="u-ts-4" data-v-57509004>定香人文</h2></div></div></div></div></div>',
     1
   ),
-  Pi = { class: "container" },
-  Mi = { class: "w-layout-grid pair-grid" },
-  Di = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
-  Fi = { class: "service-list" },
-  Ui = { class: "logomark_component" },
-  Hi = {
+  di = { class: "container" },
+  ci = { class: "w-layout-grid pair-grid" },
+  pi = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
+  vi = { class: "service-list" },
+  mi = { class: "logomark_component" },
+  fi = {
     class: "logomark w-embed",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Vi = ["src"],
-  Ni = gt(() =>
+  ui = ["src"],
+  gi = ht(() =>
     h(
       "ul",
       { role: "list", class: "u-mt-3-5" },
@@ -7220,11 +7822,11 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  Gi = ce(
+  bi = ca(
     '<div class="btn-group" data-v-57509004><div class="btn-item cc-1" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>藝品介紹</div><div class="btn-text cc-bottom" data-v-57509004>藝品介紹</div></div></a></div></div>',
     1
   ),
-  Xi = gt(() =>
+  wi = ht(() =>
     h(
       "section",
       { class: "section cc-apps" },
@@ -7468,27 +8070,27 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  Wi = { class: "section" },
-  Ri = { class: "container" },
-  Yi = ce(
+  hi = { class: "section" },
+  yi = { class: "container" },
+  _i = ca(
     '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 拍賣中心 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                Design\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3></div></div>',
     1
   ),
-  Zi = { class: "sticky-pair" },
-  Ki = { class: "w-layout-grid pair-grid is-leading" },
-  $i = {
+  xi = { class: "sticky-pair" },
+  ki = { class: "w-layout-grid pair-grid is-leading" },
+  ji = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
-  Ji = { role: "list", class: "w-dyn-items" },
-  Qi = { role: "listitem", class: "w-dyn-item" },
-  el = { class: "card-wrapper cc-large" },
-  al = {
+  qi = { role: "list", class: "w-dyn-items" },
+  zi = { role: "listitem", class: "w-dyn-item" },
+  Ci = { class: "card-wrapper cc-large" },
+  Si = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  sl = {
+  Oi = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -7497,40 +8099,41 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       opacity: "1",
     },
   },
-  tl = { class: "card-image_wrapper" },
-  il = { class: "iframe-video_wrapper" },
-  ll = {
+  Ai = { class: "card-image_wrapper" },
+  Bi = { class: "iframe-video_wrapper" },
+  Ei = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  ol = ["src"],
-  rl = Z(" Your browser does not support the video tag. "),
-  nl = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  dl = ce(
+  Ti = ["src"],
+  Li = Z(" Your browser does not support the video tag. "),
+  Pi = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Mi = ca(
     '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  cl = {
+  Ii = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  pl = {
+  Di = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  vl = { role: "list", class: "w-dyn-items" },
-  ml = { role: "listitem", class: "w-dyn-item" },
-  fl = { class: "card-wrapper cc-small" },
-  ul = {
+  Fi = { role: "list", class: "w-dyn-items" },
+  Hi = { role: "listitem", class: "w-dyn-item" },
+  Ui = { class: "card-wrapper cc-small" },
+  Vi = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  gl = {
+  Ni = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -7539,20 +8142,21 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       opacity: "1",
     },
   },
-  bl = { class: "card-image_wrapper" },
-  wl = { class: "iframe-video_wrapper" },
-  hl = {
+  Gi = { class: "card-image_wrapper" },
+  Xi = { class: "iframe-video_wrapper" },
+  Wi = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  yl = ["src"],
-  _l = Z(" Your browser does not support the video tag. "),
-  xl = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  kl = gt(() =>
+  Ri = ["src"],
+  Yi = Z(" Your browser does not support the video tag. "),
+  Zi = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Ki = ht(() =>
     h(
       "div",
       { class: "card-body" },
@@ -7574,36 +8178,36 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  jl = ce(
+  $i = ca(
     '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-57509004> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Fintech services</div><div class="btn-text cc-bottom" data-v-57509004>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Design trial</div><div class="btn-text cc-bottom" data-v-57509004>Design trial</div></div></a></div></div></div>',
     1
   ),
-  zl = { class: "section" },
-  ql = { class: "container over-h" },
-  Cl = ce(
+  Ji = { class: "section" },
+  Qi = { class: "container over-h" },
+  al = ca(
     '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Branding </div></div></h3></div></div>',
     1
   ),
-  Sl = { class: "sticky-pair" },
-  Ol = { class: "w-layout-grid pair-grid" },
-  Al = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  Bl = {
+  el = { class: "sticky-pair" },
+  sl = { class: "w-layout-grid pair-grid" },
+  tl = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+  il = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  El = {
+  ll = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  Tl = { role: "list", class: "w-dyn-items" },
-  Ll = { role: "listitem", class: "w-dyn-item" },
-  Il = { class: "card-wrapper cc-small" },
-  Pl = {
+  ol = { role: "list", class: "w-dyn-items" },
+  rl = { role: "listitem", class: "w-dyn-item" },
+  nl = { class: "card-wrapper cc-small" },
+  dl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Ml = {
+  cl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -7612,20 +8216,21 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       opacity: "1",
     },
   },
-  Dl = { class: "card-image_wrapper" },
-  Fl = { class: "iframe-video_wrapper" },
-  Ul = {
+  pl = { class: "card-image_wrapper" },
+  vl = { class: "iframe-video_wrapper" },
+  ml = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  Hl = ["src"],
-  Vl = Z(" Your browser does not support the video tag. "),
-  Nl = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Gl = gt(() =>
+  fl = ["src"],
+  ul = Z(" Your browser does not support the video tag. "),
+  gl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  bl = ht(() =>
     h(
       "div",
       { class: "card-body" },
@@ -7647,19 +8252,19 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  Xl = {
+  wl = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  Wl = { role: "list", class: "w-dyn-items" },
-  Rl = { role: "listitem", class: "w-dyn-item" },
-  Yl = { class: "card-wrapper cc-large" },
-  Zl = {
+  hl = { role: "list", class: "w-dyn-items" },
+  yl = { role: "listitem", class: "w-dyn-item" },
+  _l = { class: "card-wrapper cc-large" },
+  xl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Kl = {
+  kl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -7668,80 +8273,84 @@ const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       opacity: "1",
     },
   },
-  $l = { class: "card-image_wrapper" },
-  Jl = { class: "iframe-video_wrapper" },
-  Ql = {
+  jl = { class: "card-image_wrapper" },
+  ql = { class: "iframe-video_wrapper" },
+  zl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  eo = ["src"],
-  ao = Z(" Your browser does not support the video tag. "),
-  so = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  to = ce(
+  Cl = ["src"],
+  Sl = Z(" Your browser does not support the video tag. "),
+  Ol = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Al = ca(
     '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  io = ce(
+  Bl = ca(
     '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-57509004> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>View cases</div><div class="btn-text cc-bottom" data-v-57509004>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div></div></a></div></div></div>',
     1
   ),
-  lo = ce(
+  El = ca(
     '<div class="container" data-v-57509004><div class="target_line" data-v-57509004></div></div><section class="section" data-v-57509004><div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>Contact Us</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-57509004><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-57509004><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004><div style="position:relative;display:inline-block;" data-v-57509004> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  oo = { class: "pre-footer" },
-  ro = {
+  Tl = { class: "pre-footer" },
+  Ll = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  no = { class: "iframe-video_wrapper" },
-  co = {
+  Pl = { class: "iframe-video_wrapper" },
+  Ml = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  po = ["src"],
-  vo = Z(" Your browser does not support the video tag. "),
-  mo = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  fo = ce(
+  Il = ["src"],
+  Dl = Z(" Your browser does not support the video tag. "),
+  Fl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Hl = ca(
     '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   ),
-  uo = {
+  Ul = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  go = { class: "iframe-video_wrapper" },
-  bo = {
+  Vl = { class: "iframe-video_wrapper" },
+  Nl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
     autoplay: "",
     loop: "",
     muted: "",
+    playsinline: "",
   },
-  wo = ["src"],
-  ho = Z(" Your browser does not support the video tag. "),
-  yo = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  _o = ce(
+  Gl = ["src"],
+  Xl = Z(" Your browser does not support the video tag. "),
+  Wl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Rl = ca(
     '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   );
-var xo = je(ut, [
+var Yl = ja(wt, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (a, e, s, t, i, l) {
         const o = S("View"),
-          r = S("Footer");
+          r = S("Marquee"),
+          n = S("Footer");
         return (
           g(),
           b(
@@ -7750,199 +8359,27 @@ var xo = je(ut, [
             [
               E(o),
               w(" ------ "),
-              bt,
-              h("section", wt, [
-                ht,
-                h("div", yt, [
-                  h("div", _t, [
-                    h("div", xt, [
-                      h("div", kt, [
-                        h("div", jt, [
-                          h("div", zt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "300",
-                                src: t.getImageUrl("home/img/1.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              qt
-                            ),
-                          ]),
-                        ]),
-                        h("div", Ct, [
-                          h("div", St, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "400",
-                                src: t.getImageUrl("home/img/2.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Ot
-                            ),
-                          ]),
-                        ]),
-                        h("div", At, [
-                          h("div", Bt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "500",
-                                src: t.getImageUrl("home/img/3.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Et
-                            ),
-                          ]),
-                        ]),
-                        h("div", Tt, [
-                          h("div", Lt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "600",
-                                src: t.getImageUrl("home/img/4.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              It
-                            ),
-                          ]),
-                        ]),
-                        h("div", Pt, [
-                          h("div", Mt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "700",
-                                src: t.getImageUrl("home/img/5.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Dt
-                            ),
-                          ]),
-                        ]),
-                        h("div", Ft, [
-                          h("div", Ut, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "800",
-                                src: t.getImageUrl("home/img/6.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Ht
-                            ),
-                          ]),
-                        ]),
-                        h("div", Vt, [
-                          h("div", Nt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "900",
-                                src: t.getImageUrl("home/img/7.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Gt
-                            ),
-                          ]),
-                        ]),
-                        h("div", Xt, [
-                          h("div", Wt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "1000",
-                                src: t.getImageUrl("home/img/8.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Rt
-                            ),
-                          ]),
-                        ]),
-                        h("div", Yt, [
-                          h("div", Zt, [
-                            h(
-                              "img",
-                              {
-                                loading: "eager",
-                                "data-aos": "fade-up",
-                                "data-aos-delay": "1100",
-                                src: t.getImageUrl("home/img/9.jpg"),
-                                alt: "",
-                                class: "marquee_logo",
-                              },
-                              null,
-                              8,
-                              Kt
-                            ),
-                          ]),
-                        ]),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]),
+              yt,
+              h("section", _t, [xt, h("div", kt, [E(r)])]),
               w(" ------ "),
-              $t,
-              h("section", Jt, [
-                Qt,
-                h("div", ei, [
-                  ai,
-                  h("div", si, [
-                    h("div", ti, [
-                      h("div", ii, [
-                        h("div", li, [
-                          h("div", oi, [
-                            h("div", ri, [
-                              h("div", ni, [
-                                h("div", di, [
-                                  h("div", ci, [
-                                    h("div", pi, [
-                                      h("div", vi, [
-                                        h("div", mi, [
-                                          h("video", fi, [
+              jt,
+              h("section", qt, [
+                zt,
+                h("div", Ct, [
+                  St,
+                  h("div", Ot, [
+                    h("div", At, [
+                      h("div", Bt, [
+                        h("div", Et, [
+                          h("div", Tt, [
+                            h("div", Lt, [
+                              h("div", Pt, [
+                                h("div", Mt, [
+                                  h("div", It, [
+                                    h("div", Dt, [
+                                      h("div", Ft, [
+                                        h("div", Ht, [
+                                          h("video", Ut, [
                                             h(
                                               "source",
                                               {
@@ -7953,14 +8390,14 @@ var xo = je(ut, [
                                               },
                                               null,
                                               8,
-                                              ui
+                                              Vt
                                             ),
-                                            gi,
+                                            Nt,
                                           ]),
-                                          bi,
+                                          Gt,
                                         ]),
                                       ]),
-                                      wi,
+                                      Xt,
                                     ]),
                                   ]),
                                 ]),
@@ -7969,15 +8406,15 @@ var xo = je(ut, [
                           ]),
                         ]),
                       ]),
-                      h("div", hi, [
-                        h("div", yi, [
-                          h("div", _i, [
-                            h("div", xi, [
-                              h("div", ki, [
-                                h("div", ji, [
-                                  h("div", zi, [
-                                    h("div", qi, [
-                                      h("video", Ci, [
+                      h("div", Wt, [
+                        h("div", Rt, [
+                          h("div", Yt, [
+                            h("div", Zt, [
+                              h("div", Kt, [
+                                h("div", $t, [
+                                  h("div", Jt, [
+                                    h("div", Qt, [
+                                      h("video", ai, [
                                         h(
                                           "source",
                                           {
@@ -7988,68 +8425,68 @@ var xo = je(ut, [
                                           },
                                           null,
                                           8,
-                                          Si
+                                          ei
                                         ),
-                                        Oi,
+                                        si,
                                       ]),
-                                      Ai,
+                                      ti,
                                     ]),
                                   ]),
-                                  Bi,
+                                  ii,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      Ei,
+                      li,
                     ]),
                   ]),
                 ]),
               ]),
               w(" -- "),
-              Ti,
-              h("section", Li, [
-                Ii,
-                h("div", Pi, [
-                  h("div", Mi, [
-                    h("div", Di, [
-                      h("div", Fi, [
-                        h("div", Ui, [
-                          h("div", Hi, [
+              oi,
+              h("section", ri, [
+                ni,
+                h("div", di, [
+                  h("div", ci, [
+                    h("div", pi, [
+                      h("div", vi, [
+                        h("div", mi, [
+                          h("div", fi, [
                             h(
                               "img",
                               { src: t.getImageUrl("logo.png"), alt: "" },
                               null,
                               8,
-                              Vi
+                              ui
                             ),
                           ]),
                         ]),
-                        Ni,
-                        Gi,
+                        gi,
+                        bi,
                       ]),
                     ]),
                   ]),
                 ]),
               ]),
               w(" --- "),
-              Xi,
+              wi,
               w(" -- "),
-              h("section", Wi, [
-                h("div", Ri, [
-                  Yi,
-                  h("div", Zi, [
-                    h("div", Ki, [
-                      h("div", $i, [
-                        h("div", Ji, [
-                          h("div", Qi, [
-                            h("div", el, [
-                              h("div", al, [
-                                h("div", sl, [
-                                  h("div", tl, [
-                                    h("div", il, [
-                                      h("video", ll, [
+              h("section", hi, [
+                h("div", yi, [
+                  _i,
+                  h("div", xi, [
+                    h("div", ki, [
+                      h("div", ji, [
+                        h("div", qi, [
+                          h("div", zi, [
+                            h("div", Ci, [
+                              h("div", Si, [
+                                h("div", Oi, [
+                                  h("div", Ai, [
+                                    h("div", Bi, [
+                                      h("video", Ei, [
                                         h(
                                           "source",
                                           {
@@ -8060,14 +8497,14 @@ var xo = je(ut, [
                                           },
                                           null,
                                           8,
-                                          ol
+                                          Ti
                                         ),
-                                        rl,
+                                        Li,
                                       ]),
-                                      nl,
+                                      Pi,
                                     ]),
                                   ]),
-                                  dl,
+                                  Mi,
                                 ]),
                               ]),
                             ]),
@@ -8075,16 +8512,16 @@ var xo = je(ut, [
                         ]),
                       ]),
                       h("div", null, [
-                        h("div", cl, [
-                          h("div", pl, [
-                            h("div", vl, [
-                              h("div", ml, [
-                                h("div", fl, [
-                                  h("div", ul, [
-                                    h("div", gl, [
-                                      h("div", bl, [
-                                        h("div", wl, [
-                                          h("video", hl, [
+                        h("div", Ii, [
+                          h("div", Di, [
+                            h("div", Fi, [
+                              h("div", Hi, [
+                                h("div", Ui, [
+                                  h("div", Vi, [
+                                    h("div", Ni, [
+                                      h("div", Gi, [
+                                        h("div", Xi, [
+                                          h("video", Wi, [
                                             h(
                                               "source",
                                               {
@@ -8095,14 +8532,14 @@ var xo = je(ut, [
                                               },
                                               null,
                                               8,
-                                              yl
+                                              Ri
                                             ),
-                                            _l,
+                                            Yi,
                                           ]),
-                                          xl,
+                                          Zi,
                                         ]),
                                       ]),
-                                      kl,
+                                      Ki,
                                     ]),
                                   ]),
                                 ]),
@@ -8111,28 +8548,28 @@ var xo = je(ut, [
                           ]),
                         ]),
                       ]),
-                      jl,
+                      $i,
                     ]),
                   ]),
                 ]),
               ]),
               w(" --- "),
-              h("section", zl, [
-                h("div", ql, [
-                  Cl,
-                  h("div", Sl, [
-                    h("div", Ol, [
-                      h("div", Al, [
-                        h("div", Bl, [
-                          h("div", El, [
-                            h("div", Tl, [
-                              h("div", Ll, [
-                                h("div", Il, [
-                                  h("div", Pl, [
-                                    h("div", Ml, [
-                                      h("div", Dl, [
-                                        h("div", Fl, [
-                                          h("video", Ul, [
+              h("section", Ji, [
+                h("div", Qi, [
+                  al,
+                  h("div", el, [
+                    h("div", sl, [
+                      h("div", tl, [
+                        h("div", il, [
+                          h("div", ll, [
+                            h("div", ol, [
+                              h("div", rl, [
+                                h("div", nl, [
+                                  h("div", dl, [
+                                    h("div", cl, [
+                                      h("div", pl, [
+                                        h("div", vl, [
+                                          h("video", ml, [
                                             h(
                                               "source",
                                               {
@@ -8143,14 +8580,14 @@ var xo = je(ut, [
                                               },
                                               null,
                                               8,
-                                              Hl
+                                              fl
                                             ),
-                                            Vl,
+                                            ul,
                                           ]),
-                                          Nl,
+                                          gl,
                                         ]),
                                       ]),
-                                      Gl,
+                                      bl,
                                     ]),
                                   ]),
                                 ]),
@@ -8159,15 +8596,15 @@ var xo = je(ut, [
                           ]),
                         ]),
                       ]),
-                      h("div", Xl, [
-                        h("div", Wl, [
-                          h("div", Rl, [
-                            h("div", Yl, [
-                              h("div", Zl, [
-                                h("div", Kl, [
-                                  h("div", $l, [
-                                    h("div", Jl, [
-                                      h("video", Ql, [
+                      h("div", wl, [
+                        h("div", hl, [
+                          h("div", yl, [
+                            h("div", _l, [
+                              h("div", xl, [
+                                h("div", kl, [
+                                  h("div", jl, [
+                                    h("div", ql, [
+                                      h("video", zl, [
                                         h(
                                           "source",
                                           {
@@ -8178,33 +8615,33 @@ var xo = je(ut, [
                                           },
                                           null,
                                           8,
-                                          eo
+                                          Cl
                                         ),
-                                        ao,
+                                        Sl,
                                       ]),
-                                      so,
+                                      Ol,
                                     ]),
                                   ]),
-                                  to,
+                                  Al,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      io,
+                      Bl,
                     ]),
                   ]),
                 ]),
               ]),
               w(" -- "),
-              lo,
+              El,
               w(" --- "),
               h("div", null, [
-                h("aside", oo, [
-                  h("div", ro, [
-                    h("div", no, [
-                      h("video", co, [
+                h("aside", Tl, [
+                  h("div", Ll, [
+                    h("div", Pl, [
+                      h("video", Ml, [
                         h(
                           "source",
                           {
@@ -8213,17 +8650,17 @@ var xo = je(ut, [
                           },
                           null,
                           8,
-                          po
+                          Il
                         ),
-                        vo,
+                        Dl,
                       ]),
-                      mo,
+                      Fl,
                     ]),
-                    fo,
+                    Hl,
                   ]),
-                  h("div", uo, [
-                    h("div", go, [
-                      h("video", bo, [
+                  h("div", Ul, [
+                    h("div", Vl, [
+                      h("video", Nl, [
                         h(
                           "source",
                           {
@@ -8232,17 +8669,17 @@ var xo = je(ut, [
                           },
                           null,
                           8,
-                          wo
+                          Gl
                         ),
-                        ho,
+                        Xl,
                       ]),
-                      yo,
+                      Wl,
                     ]),
-                    _o,
+                    Rl,
                   ]),
                 ]),
               ]),
-              E(r),
+              E(n),
             ],
             64
           )
@@ -8255,16 +8692,16 @@ var xo = je(ut, [
       "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/index.vue",
     ],
   ]),
-  ko = Object.freeze(
+  Zl = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: xo },
+      { __proto__: null, default: Yl },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const jo = {
+const Kl = {
     "../pages/about.vue": () =>
-      Ra(
+      Re(
         () =>
           Promise.resolve().then(function () {
             return fs;
@@ -8272,7 +8709,7 @@ const jo = {
         void 0
       ),
     "../pages/case.vue": () =>
-      Ra(
+      Re(
         () =>
           Promise.resolve().then(function () {
             return hs;
@@ -8280,15 +8717,15 @@ const jo = {
         void 0
       ),
     "../pages/demo.vue": () =>
-      Ra(
+      Re(
         () =>
           Promise.resolve().then(function () {
-            return Ps;
+            return Ms;
           }),
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Ra(
+      Re(
         () =>
           Promise.resolve().then(function () {
             return pt;
@@ -8296,56 +8733,56 @@ const jo = {
         void 0
       ),
     "../pages/index.vue": () =>
-      Ra(
+      Re(
         () =>
           Promise.resolve().then(function () {
-            return ko;
+            return Zl;
           }),
         void 0
       ),
   },
-  zo = {
+  $l = {
     "../pages/about.vue": fs,
     "../pages/case.vue": hs,
-    "../pages/demo.vue": Ps,
+    "../pages/demo.vue": Ms,
     "../pages/fintech-design.vue": pt,
-    "../pages/index.vue": ko,
+    "../pages/index.vue": Zl,
   },
-  qo = [];
-for (let No in jo) {
-  let e = No.replace("../pages", "").toLowerCase().replace(".vue", "");
-  (e = e.replace(/\/index$/, "")),
-    (e = e.replace(/\/_+/g, "/:")),
-    qo.push({
-      path: e,
-      name: e,
+  Jl = [];
+for (let go in Kl) {
+  let a = go.replace("../pages", "").toLowerCase().replace(".vue", "");
+  (a = a.replace(/\/index$/, "")),
+    (a = a.replace(/\/_+/g, "/:")),
+    Jl.push({
+      path: a,
+      name: a,
       meta: {
-        layout: zo[No].default.layout || "layout-default",
+        layout: $l[go].default.layout || "layout-default",
         title:
-          null != (s = null == (a = zo[No].default) ? void 0 : a.title)
+          null != (s = null == (e = $l[go].default) ? void 0 : e.title)
             ? s
             : "app.project.title",
         header:
-          null != (i = null == (t = zo[No].default) ? void 0 : t.header)
+          null != (i = null == (t = $l[go].default) ? void 0 : t.header)
             ? i
             : "header-default",
         scroll:
-          null != (o = null == (l = zo[No].default) ? void 0 : l.noScroll) && o,
+          null != (o = null == (l = $l[go].default) ? void 0 : l.noScroll) && o,
       },
-      component: jo[No],
+      component: Kl[go],
     });
 }
-const Co = ue({
-  history: ge("./"),
+const Ql = ua({
+  history: ga("./"),
   routes:
-    ((So = { defaultPath: "/home" }),
+    ((ao = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: D({ defaultPath: "/" }, So).defaultPath },
+        redirect: { name: D({ defaultPath: "/" }, ao).defaultPath },
       },
-      ...qo,
+      ...Jl,
       {
         path: "/404",
         name: "not-found",
@@ -8360,50 +8797,50 @@ const Co = ue({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var So;
-Co.beforeEach(async (e, a, s) => {
+var ao;
+Ql.beforeEach(async (a, e, s) => {
   s();
 });
-var Oo = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Co }, Symbol.toStringTag, {
+var eo = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ql }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const Ao = be({ modules: Xa });
-we(Ao, Co);
-var Bo = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ao }, Symbol.toStringTag, {
+const so = ba({ modules: Xe });
+wa(so, Ql);
+var to = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: so }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const Eo = {
-    use(e) {
-      e.interceptors.response.use(
-        async function (a) {
-          if (100004 === a.data.code) {
-            const s = e.get("/app/jwt-token", {
-              params: { account: Ao.state.auth.user.account },
+const io = {
+    use(a) {
+      a.interceptors.response.use(
+        async function (e) {
+          if (100004 === e.data.code) {
+            const s = a.get("/app/jwt-token", {
+              params: { account: so.state.auth.user.account },
             });
-            1 === s.data.code && U.set("token", s.data.data.jwt_token, !0);
-            return await e.request(a.config);
+            1 === s.data.code && H.set("token", s.data.data.jwt_token, !0);
+            return await a.request(e.config);
           }
-          return a;
+          return e;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       );
     },
   },
-  To = {
-    use(e) {
+  lo = {
+    use(a) {
       (window.isAlert = !1),
-        e.interceptors.response.use(
-          async function (e) {
-            const { noredirect: a = !1 } = e.config;
-            if (!a && !window.isAlert) {
-              const a = e.data;
-              switch (a.code) {
+        a.interceptors.response.use(
+          async function (a) {
+            const { noredirect: e = !1 } = a.config;
+            if (!e && !window.isAlert) {
+              const e = a.data;
+              switch (e.code) {
                 case 0:
                 case 100002:
                 case 200001:
@@ -8411,59 +8848,59 @@ const Eo = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: e } = await Le.alert({
-                    title: `Error(${a.code})`,
-                    text: Ee.t(`error.code.${a.code}`),
+                  const { isConfirmed: a } = await La.alert({
+                    title: `Error(${e.code})`,
+                    text: Ea.t(`error.code.${e.code}`),
                   });
                   return (
-                    e &&
-                      (await Ao.dispatch("auth/logout"),
-                      await Co.replace("/login"),
+                    a &&
+                      (await so.dispatch("auth/logout"),
+                      await Ql.replace("/login"),
                       (window.isAlert = !1)),
-                    Promise.reject(`Error: ${a.code}`)
+                    Promise.reject(`Error: ${e.code}`)
                   );
                 }
               }
             }
-            return e;
+            return a;
           },
-          function (e) {
-            return Promise.reject(e);
+          function (a) {
+            return Promise.reject(a);
           }
         );
     },
   },
-  Lo = {
-    use(e) {
-      e.interceptors.response.use(
-        async function (e) {
-          const { novalidate: a = !1 } = e.config;
-          if (!a) {
-            const a = e.data;
-            switch (a.code) {
+  oo = {
+    use(a) {
+      a.interceptors.response.use(
+        async function (a) {
+          const { novalidate: e = !1 } = a.config;
+          if (!e) {
+            const e = a.data;
+            switch (e.code) {
               case 1e5:
               case 100001:
               case 100003:
-                await Le.alert({
-                  title: `Error(${a.code})`,
-                  text: Ee.t(`error.code.${a.code}`),
+                await La.alert({
+                  title: `Error(${e.code})`,
+                  text: Ea.t(`error.code.${e.code}`),
                 });
             }
           }
-          return e;
+          return a;
         },
-        function (e) {
-          return Promise.reject(e);
+        function (a) {
+          return Promise.reject(a);
         }
       );
     },
   };
-class Io {
+class ro {
   constructor() {
-    (this.provider = new Ea({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ee({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use(Ta, La, Eo, To, Lo, Pa);
+    this.provider.use(Te, Le, io, lo, oo, Me);
   }
   get get() {
     return this.provider.instance.get;
@@ -8478,19 +8915,19 @@ class Io {
     return this.provider.instance.delete;
   }
 }
-Io.prototype.install = function (e) {
-  const a = "http-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+ro.prototype.install = function (a) {
+  const e = "http-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Po = new Io(),
-  Mo = Object.freeze(
+var no = new ro(),
+  co = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: Io, default: Po },
+      { __proto__: null, HttpService: ro, default: no },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Do {
+class po {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -8500,8 +8937,8 @@ class Do {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Ee.t("button.confirm"),
-      cancelButtonText: Ee.t("button.cancel"),
+      confirmButtonText: Ea.t("button.confirm"),
+      cancelButtonText: Ea.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -8513,29 +8950,29 @@ class Do {
     };
   }
   get state() {
-    return Ao.state.app.popupState;
+    return so.state.app.popupState;
   }
-  async modal(e = {}) {
+  async modal(a = {}) {
     const {
-      title: a,
+      title: e,
       text: s,
       component: t = null,
       showCancelButton: i = !0,
       showConfirmButton: l = !0,
-      confirmButtonText: o = Ee.t("button.confirm"),
-      cancelButtonText: r = Ee.t("button.cancel"),
+      confirmButtonText: o = Ea.t("button.confirm"),
+      cancelButtonText: r = Ea.t("button.cancel"),
       allowOutsideClick: n = !0,
       props: d = {},
-    } = e;
-    return new Promise((e) => {
-      Ao.commit(
+    } = a;
+    return new Promise((a) => {
+      so.commit(
         "app/set/popup",
         u(f({}, this.initStates), {
           type: "Modal",
-          resolve: e,
-          title: a,
+          resolve: a,
+          title: e,
           text: s,
-          component: t ? ae(t) : null,
+          component: t ? ea(t) : null,
           showCancelButton: i,
           showConfirmButton: l,
           confirmButtonText: o,
@@ -8547,41 +8984,41 @@ class Do {
     });
   }
   clear() {
-    Ao.commit("app/clear/popup");
+    so.commit("app/clear/popup");
   }
 }
-Do.prototype.install = function (e) {
-  const a = "popup-service";
-  (e.config.globalProperties[a] = this), e.provide(a, this);
+po.prototype.install = function (a) {
+  const e = "popup-service";
+  (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Fo = new Do();
-const Uo = {
-    "../services/alert-service.js": Ba,
-    "../services/http-service.js": Mo,
-    "../services/i18n-service.js": Te,
+var vo = new po();
+const mo = {
+    "../services/alert-service.js": Be,
+    "../services/http-service.js": co,
+    "../services/i18n-service.js": Ta,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: Do, default: Fo },
+        { __proto__: null, PopupService: po, default: vo },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": Oo,
-    "../services/storage-service.js": De,
-    "../services/store-service.js": Bo,
+    "../services/router-service.js": eo,
+    "../services/storage-service.js": Da,
+    "../services/store-service.js": to,
   },
-  Ho = {
-    install: (e) => {
-      for (let a in Uo) e.use(Uo[a].default);
+  fo = {
+    install: (a) => {
+      for (let e in mo) a.use(mo[e].default);
     },
   };
-const Vo = he(Se);
-Vo.provide("$jQuery", ye),
-  Vo.provide("$swal", Le),
-  Vo.provide("$storage", U),
-  Vo.provide("$tabsslider", _e),
-  Vo.use(na),
-  Vo.use(Ca),
-  Vo.use(xe, { loading: "", error: "" }),
-  Vo.use(Ho),
-  Vo.mount("#app");
+const uo = ha(Sa);
+uo.provide("$jQuery", ya),
+  uo.provide("$swal", La),
+  uo.provide("$storage", H),
+  uo.provide("$tabsslider", _a),
+  uo.use(ne),
+  uo.use(Ce),
+  uo.use(xa, { loading: "", error: "" }),
+  uo.use(fo),
+  uo.mount("#app");
