@@ -214,192 +214,7 @@
       </div>
     </div>
     <div class="u-mt-8-75">
-      <div class="marquee">
-        <div class="marquee_row w-dyn-list">
-          <div
-            role="list"
-            class="marquee_content w-dyn-items"
-            style="
-              transform: translate3d(-4.75%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-              will-change: transform;
-            "
-          >
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-1"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                  :src="getImageUrl('home/img/1.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-2"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                  :src="getImageUrl('home/img/2.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-3"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                  :src="getImageUrl('home/img/3.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-4"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="600"
-                  :src="getImageUrl('home/img/4.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-5"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="700"
-                  :src="getImageUrl('home/img/5.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-6"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="800"
-                  :src="getImageUrl('home/img/6.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-7"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="900"
-                  :src="getImageUrl('home/img/7.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-8"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="1000"
-                  :src="getImageUrl('home/img/8.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-            <div role="listitem" class="marquee_logo w-dyn-item">
-              <div
-                class="marquee_item cc-9"
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
-                <img
-                  loading="eager"
-                  data-aos="fade-up"
-                  data-aos-delay="1100"
-                  :src="getImageUrl('home/img/9.jpg')"
-                  alt=""
-                  class="marquee_logo"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Marquee></Marquee>
     </div>
   </section>
   <!-- ------ -->
@@ -510,6 +325,7 @@
                                 autoplay
                                 loop
                                 muted
+                                playsinline
                               >
                                 <source
                                   :src="getVideoUrl('home/knife1-1.mp4')"
@@ -562,6 +378,7 @@
                             autoplay
                             loop
                             muted
+                            playsinline
                           >
                             <source
                               :src="getVideoUrl('home/knife1-2.mp4')"
@@ -1045,6 +862,7 @@
                             autoplay
                             loop
                             muted
+                            playsinline
                           >
                             <source
                               :src="getVideoUrl('home/knife2-3.mp4')"
@@ -1115,6 +933,7 @@
                                 autoplay
                                 loop
                                 muted
+                                playsinline
                               >
                                 <source
                                   :src="getVideoUrl('home/knife2-1.mp4')"
@@ -1294,6 +1113,7 @@
                                 autoplay
                                 loop
                                 muted
+                                playsinline
                               >
                                 <source
                                   :src="getVideoUrl('home/knife2-4.mp4')"
@@ -1361,6 +1181,7 @@
                             autoplay
                             loop
                             muted
+                            playsinline
                           >
                             <source
                               :src="getVideoUrl('home/knife1-2.mp4')"
@@ -1635,6 +1456,7 @@
             autoplay
             loop
             muted
+            playsinline
           >
             <source :src="getVideoUrl('home/buddha1.mp4')" type="video/mp4" />
             Your browser does not support the video tag.
@@ -1746,6 +1568,7 @@
             autoplay
             loop
             muted
+            playsinline
           >
             <source :src="getVideoUrl('home/tea_1.mp4')" type="video/mp4" />
             Your browser does not support the video tag.
@@ -1857,10 +1680,11 @@ import View from "@/widgets/home/view.vue";
 import { onMounted } from "vue";
 import { getVideoUrl } from "@/unit/getVideoUrl";
 import { getImageUrl } from "@/unit/getImageUrl";
-
+import Marquee from "@/widgets/layout/marquee.vue";
 export default {
   components: {
     Footer,
+    Marquee,
     View,
   },
   setup() {

@@ -2,7 +2,7 @@
 .marquee {
   .marquee_content{
     display: flex;
-    background: black;
+    background: var(--swatch--orange);
     .marquee_item{
       white-space: nowrap;
     text-transform: uppercase;

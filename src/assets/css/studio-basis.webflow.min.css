@@ -2143,8 +2143,8 @@ strong {
   display: none;
 }
 .btn {
-  border: 1px solid var(--swatch--primary);
-  background-color: var(--swatch--primary);
+  border: 1px solid var(--swatch--white);
+  background-color: var(--swatch--white);
   color: var(--swatch--black);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2158,14 +2158,12 @@ strong {
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
-  transition: border-color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
-    background-color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
-    color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.3s;
   display: flex;
 }
 .btn:hover {
-  border-color: var(--swatch--hover);
-  background-color: var(--swatch--hover);
+  border-color: var(--swatch--white);
+  background-color: transparent;
   color: var(--swatch--white);
 }
 .btn.cc-circular {
