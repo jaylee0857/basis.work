@@ -76,7 +76,11 @@
         <div class="col col-lg-4 col-md-12 col-md-first">
           <a href="/" class="footer-wordmark w-inline-block"
             ><div class="wordmark w-embed">
-              <img :src="getImageUrl('logo.png')" alt="" /></div
+              <img
+                class="img-filter"
+                :src="getImageUrl('logo.png')"
+                alt=""
+              /></div
           ></a>
         </div>
       </div>

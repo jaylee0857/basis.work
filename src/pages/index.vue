@@ -494,7 +494,7 @@
                 data-aos="fade-up"
                 data-aos-duration="700"
               >
-                <img :src="getImageUrl('logo.png')" alt="" />
+                <img class="img-filter" :src="getImageUrl('logo.png')" alt="" />
               </div>
             </div>
             <ul role="list" class="u-mt-3-5">
@@ -652,15 +652,11 @@
             data-aos-delay="100"
           >
             <img
-              src="https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png"
+              :src="getImageUrl('home/img/8.jpg')"
               loading="lazy"
               data-w-id="4712a24f-d922-c9f3-e8a3-7b35338a5a7d"
               sizes="(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw"
               alt=""
-              srcset="
-                https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup-p-500.png 500w,
-                https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png       750w
-              "
               class="apps_asset cc-1"
             />
           </div>
@@ -681,19 +677,12 @@
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
-                  <a
-                    data-mouse-class="cc-text"
-                    href="/cases/sable-app"
-                    class="apps_link w-inline-block"
+                  <a data-mouse-class="cc-text" class="apps_link w-inline-block"
                     ><img
                       alt=""
                       loading="lazy"
-                      src="https://assets-global.website-files.com/6584502438fea068af552349/65bcdadf450f31de60d06dc6_apps-sable.png"
+                      :src="getImageUrl('home/img/10.jpg')"
                       sizes="(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw"
-                      srcset="
-                        https://assets-global.website-files.com/6584502438fea068af552349/65bcdadf450f31de60d06dc6_apps-sable-p-500.png 500w,
-                        https://assets-global.website-files.com/6584502438fea068af552349/65bcdadf450f31de60d06dc6_apps-sable.png       750w
-                      "
                   /></a>
                 </div>
               </div>
@@ -723,12 +712,8 @@
                     ><img
                       alt=""
                       loading="lazy"
-                      src="https://assets-global.website-files.com/6584502438fea068af552349/65b7815b96bdc600e01bd174_apps-seen.png"
+                      :src="getImageUrl('home/img/10.jpg')"
                       sizes="(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw"
-                      srcset="
-                        https://assets-global.website-files.com/6584502438fea068af552349/65b7815b96bdc600e01bd174_apps-seen-p-500.png 500w,
-                        https://assets-global.website-files.com/6584502438fea068af552349/65b7815b96bdc600e01bd174_apps-seen.png       750w
-                      "
                   /></a>
                 </div>
               </div>

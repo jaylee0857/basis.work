@@ -4677,12 +4677,18 @@ strong {
     /* height: 2.5rem; */
   }
   .apps_media-list {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     height: auto;
     grid-column-gap: 2rem;
     justify-content: flex-start;
     margin-left: 0;
     margin-right: 0;
     position: relative;
+    overflow-x: scroll;
+  }
+  .apps_media-list::-webkit-scrollbar {
+    display: none;
   }
   .apps_asset-wrapper {
     width: 100%;
@@ -4736,7 +4742,6 @@ strong {
     order: -1;
   }
   .apps_media-wrapper {
-    padding: 0 1.5rem;
     overflow-x: auto;
     overflow-y: hidden;
   }
