@@ -4693,6 +4693,7 @@ strong {
   .apps_asset-wrapper {
     width: 100%;
     max-width: 14.5rem;
+    min-height: 155px;
     flex: none;
   }
   .home-hero_image-parallax {

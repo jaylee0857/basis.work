@@ -655,7 +655,6 @@
               :src="getImageUrl('home/img/8.jpg')"
               loading="lazy"
               data-w-id="4712a24f-d922-c9f3-e8a3-7b35338a5a7d"
-              sizes="(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw"
               alt=""
               class="apps_asset cc-1"
             />
@@ -669,11 +668,6 @@
             <div
               data-w-id="2aa36fa9-41c0-5a43-aa83-b39188bc3c2b"
               class="apps_asset cc-2 w-dyn-list"
-              style="
-                transform: translate3d(0px, 20%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
@@ -682,7 +676,6 @@
                       alt=""
                       loading="lazy"
                       :src="getImageUrl('home/img/10.jpg')"
-                      sizes="(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw"
                   /></a>
                 </div>
               </div>
@@ -712,34 +705,40 @@
                     ><img
                       alt=""
                       loading="lazy"
-                      :src="getImageUrl('home/img/10.jpg')"
-                      sizes="(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw"
+                      :src="getImageUrl('home/img/9.jpg')"
                   /></a>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="apps_asset-wrapper cc-watch"
+            class="apps_asset-wrapper"
             data-aos="fade-up"
             data-aos-duration="700"
-            data-aos-delay="250"
+            data-aos-delay="200"
           >
             <div
-              data-w-id="c91f325d-7e75-3988-4f22-39b9870c8ae8"
-              class="apps_asset cc-4"
+              data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
+              class="apps_asset cc-3 w-dyn-list"
               style="
-                transform: translate3d(0px, 5%, 0px) scale3d(1, 1, 1)
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
                   rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
                 transform-style: preserve-3d;
               "
             >
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png"
-                loading="eager"
-                alt=""
-                class="apps_watch"
-              />
+              <div role="list" class="w-dyn-items">
+                <div role="listitem" class="w-dyn-item">
+                  <a
+                    data-mouse-class="cc-text"
+                    href="/cases/seen-app"
+                    class="apps_link w-inline-block"
+                    ><img
+                      alt=""
+                      loading="lazy"
+                      :src="getImageUrl('home/img/12.jpg')"
+                  /></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1731,6 +1730,15 @@ AOS.init();
 .w-layout-grid.pair-grid.is-leading {
   @media (max-width: 768px) {
     overflow: hidden;
+  }
+}
+
+.apps_asset {
+  height: 155px;
+  div,
+  a,
+  img {
+    height: 100%;
   }
 }
 
