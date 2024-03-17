@@ -37,13 +37,13 @@ import {
   g as S,
   h as O,
   i as A,
-  j as B,
-  k as E,
+  j as E,
+  k as B,
   l as T,
   m as L,
-  p as P,
-  q as M,
-  s as I,
+  p as I,
+  q as P,
+  s as M,
   t as D,
   v as F,
   x as H,
@@ -83,7 +83,7 @@ import {
   a4 as ya,
   a5 as _a,
   a6 as xa,
-} from "./vendor.00fd3504.js";
+} from "./vendor.efff3440.js";
 !(function () {
   const a = document.createElement("link").relList;
   if (!(a && a.supports && a.supports("modulepreload"))) {
@@ -208,7 +208,7 @@ var Sa = ja(
         [
           [
             "__file",
-            "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/loading.vue",
+            "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/loading.vue",
           ],
         ]
       ),
@@ -221,7 +221,7 @@ var Sa = ja(
         i = q(() => "stop" === t.value),
         l = q(() => {
           if (T(a.state.route.path)) return null;
-          return L("layout-error")(P(["meta", "layout"], a.state.route));
+          return L("layout-error")(I(["meta", "layout"], a.state.route));
         });
       return (
         z(
@@ -260,19 +260,19 @@ var Sa = ja(
             [
               w(" 外層利用is載入layout "),
               (g(),
-              O(B(t.layout), null, {
+              O(E(t.layout), null, {
                 default: A(() => [
                   w(
                     ' 內層利用router顯示 透過解構賦值 取得從router-view取得的component 在把Component用在:is＝"Component"身上'
                   ),
-                  E(o, null, {
-                    default: A(({ Component: a }) => [(g(), O(B(a)))]),
+                  B(o, null, {
+                    default: A(({ Component: a }) => [(g(), O(E(a)))]),
                     _: 1,
                   }),
                 ]),
                 _: 1,
               })),
-              E(r),
+              B(r),
               t.isError || t.isShowLoading
                 ? (g(), O(n, { key: 0, mode: t.mode }, null, 8, ["mode"]))
                 : w("v-if", !0),
@@ -283,7 +283,7 @@ var Sa = ja(
       },
     ],
     ["__scopeId", "data-v-7ba5bd90"],
-    ["__file", "/Users/lishengjie/Documents/GitHub/basis.work/src/App.vue"],
+    ["__file", "/Users/georgehuang/Documents/GitHub/basis.work/src/App.vue"],
   ]
 );
 const Oa = {
@@ -496,14 +496,14 @@ const Oa = {
     ),
   },
   Aa = {};
-for (let go in Oa) {
-  const a = go.replace("../locales/", "").toLowerCase().replace(".js", ""),
+for (let Ao in Oa) {
+  const a = Ao.replace("../locales/", "").toLowerCase().replace(".js", ""),
     [e, ...s] = a.split("/"),
-    t = M(".", s),
-    i = Oa[go].default;
-  Aa[e] = I((a, e) => D(a, { [`${t}.${e}`]: i[e] }), Aa[e] || {}, F(i));
+    t = P(".", s),
+    i = Oa[Ao].default;
+  Aa[e] = M((a, e) => D(a, { [`${t}.${e}`]: i[e] }), Aa[e] || {}, F(i));
 }
-const Ba = (() => {
+const Ea = (() => {
     var a, e, s, t;
     const i = H.get("locale");
     if (i) return i;
@@ -528,13 +528,13 @@ const Ba = (() => {
         l)
       : {}.VITE_LOCALE;
   })(),
-  Ea = U.exports.createI18n({
-    initLocale: Ba,
+  Ba = U.exports.createI18n({
+    initLocale: Ea,
     fallbackLocale: null != (a = {}.VITE_DEFAULT_LANG) ? a : "zh-tw",
     messages: Aa,
   });
 var Ta = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ea }, Symbol.toStringTag, {
+  Object.defineProperty({ __proto__: null, default: Ba }, Symbol.toStringTag, {
     value: "Module",
   })
 );
@@ -559,7 +559,7 @@ var Ta = Object.freeze(
     willClose: s = null,
     heightAuto: t = !1,
     html: i = !1,
-    confirmButtonText: l = Ea.t("button.confirm"),
+    confirmButtonText: l = Ba.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
@@ -613,34 +613,34 @@ const La = V.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Ea.t("button.confirm"),
-  cancelButtonText: Ea.t("button.cancel"),
+  confirmButtonText: Ba.t("button.confirm"),
+  cancelButtonText: Ba.t("button.cancel"),
   didOpen(a) {
     const e = a.querySelector(".swal2-cancel");
     a.querySelector(".swal2-confirm").blur(), e.blur();
   },
 });
-class Pa {
+class Ia {
   constructor() {
     return H;
   }
 }
-class Ma {
+class Pa {
   constructor() {
-    this.provider = new Pa();
+    this.provider = new Ia();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Ma.prototype.install = function (a) {
+Pa.prototype.install = function (a) {
   const e = "storage-service";
   (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var Ia = new Ma(),
+var Ma = new Pa(),
   Da = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Ma, default: Ia },
+      { __proto__: null, StorageService: Pa, default: Ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -650,12 +650,12 @@ const Fa = () => {
       e = j({}),
       s = (t, i = {}) => {
         const [l, ...o] = N(".", t);
-        return l in e.value ? s(`${e.value[l]}.${M(".", o)}`, i) : a.t(t, i);
+        return l in e.value ? s(`${e.value[l]}.${P(".", o)}`, i) : a.t(t, i);
       };
     return {
       locale: a.locale,
       change: (e) => {
-        a.setLocale(e), Ia.provider.set("locale", e);
+        a.setLocale(e), Ma.provider.set("locale", e);
       },
       setPrefix: (a) => {
         e.value = "string" == typeof a ? { $current: a } : f(f({}, e.value), a);
@@ -823,7 +823,7 @@ var Ka = ja(
   [
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/nav-bar.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/nav-bar.vue",
     ],
   ]
 );
@@ -859,7 +859,7 @@ var se = ja(
                           ]),
                         },
                         [
-                          E(
+                          B(
                             i,
                             {
                               to: "/",
@@ -937,7 +937,7 @@ var se = ja(
           [
             [
               "__file",
-              "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/header.vue",
+              "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/header.vue",
             ],
           ]
         ),
@@ -953,13 +953,13 @@ var se = ja(
         function (a, e, s, t, i, l) {
           const o = S("LayoutHeader");
           return (
-            g(), b(x, null, [E(o), h("div", ee, [Y(a.$slots, "default")])], 64)
+            g(), b(x, null, [B(o), h("div", ee, [Y(a.$slots, "default")])], 64)
           );
         },
       ],
       [
         "__file",
-        "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-default.vue",
+        "/Users/georgehuang/Documents/GitHub/basis.work/src/layouts/layout-default.vue",
       ],
     ]
   ),
@@ -980,7 +980,7 @@ var le = ja({ setup() {} }, [
   ],
   [
     "__file",
-    "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-demo.vue",
+    "/Users/georgehuang/Documents/GitHub/basis.work/src/layouts/layout-demo.vue",
   ],
 ]);
 const oe = {
@@ -994,9 +994,9 @@ const oe = {
     ),
   },
   re = [];
-for (let go in oe) {
-  const a = go.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  re.push({ componentName: a, component: oe[go].default });
+for (let Ao in oe) {
+  const a = Ao.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  re.push({ componentName: a, component: oe[Ao].default });
 }
 const ne = {
   install: (a) => {
@@ -1050,7 +1050,7 @@ var me = ja(de, [
     ["__scopeId", "data-v-4c72660e"],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-header.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/components/the-header.vue",
     ],
   ]),
   fe = Object.freeze(
@@ -1085,7 +1085,7 @@ var ye = ja({}, [
   ],
   [
     "__file",
-    "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/popup/modal.vue",
+    "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/popup/modal.vue",
   ],
 ]);
 const _e = {
@@ -1151,7 +1151,7 @@ var je = ja(
       return (a, e) => (
         g(),
         O(aa, { to: "body" }, [
-          E(
+          B(
             Q,
             { name: "popup", duration: "600" },
             {
@@ -1163,7 +1163,7 @@ var je = ja(
                       b("div", _e, [
                         (g(),
                         O(
-                          B(_(i)),
+                          E(_(i)),
                           {
                             class: y([
                               "popup__inner pointer-events-auto",
@@ -1182,7 +1182,7 @@ var je = ja(
                                 _(s).component
                                   ? (g(),
                                     O(
-                                      B(_(s).component),
+                                      E(_(s).component),
                                       J(
                                         { key: 0, ref_key: "compRef", ref: o },
                                         _(s).props
@@ -1258,7 +1258,7 @@ var je = ja(
               _: 1,
             }
           ),
-          E(
+          B(
             Q,
             {
               name: "popup-backdrop",
@@ -1293,7 +1293,7 @@ var je = ja(
     ["__scopeId", "data-v-628f8c70"],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-popup.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/components/the-popup.vue",
     ],
   ]
 );
@@ -1308,9 +1308,9 @@ const qe = {
     ),
   },
   ze = [];
-for (let go in qe) {
-  const a = go.replace("../components/", "").toLowerCase().replace(".vue", "");
-  ze.push({ componentName: a, component: qe[go].default });
+for (let Ao in qe) {
+  const a = Ao.replace("../components/", "").toLowerCase().replace(".vue", "");
+  ze.push({ componentName: a, component: qe[Ao].default });
 }
 const Ce = {
   install: (a) => {
@@ -1329,8 +1329,8 @@ class Se {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Ea.t("button.confirm"),
-      cancelButtonText: Ea.t("button.cancel"),
+      confirmButtonText: Ba.t("button.confirm"),
+      cancelButtonText: Ba.t("button.cancel"),
       didOpen(a) {
         const e = a.querySelector(".swal2-cancel");
         a.querySelector(".swal2-confirm").blur(), e.blur();
@@ -1363,7 +1363,7 @@ class Oe {
     willClose: s = null,
     heightAuto: t = !1,
     html: i = !1,
-    confirmButtonText: l = Ea.t("button.confirm"),
+    confirmButtonText: l = Ba.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
@@ -1394,7 +1394,7 @@ class Oe {
     title: a,
     text: e,
     html: s,
-    confirmButtonText: t = Ea.t("button.confirm"),
+    confirmButtonText: t = Ba.t("button.confirm"),
     confirmCallback: i = null,
     heightAuto: l = !1,
   }) {
@@ -1422,14 +1422,14 @@ Oe.prototype.install = function (a) {
   (a.config.globalProperties[e] = this), a.provide(e, this);
 };
 var Ae = new Oe(),
-  Be = Object.freeze(
+  Ee = Object.freeze(
     Object.defineProperty(
       { __proto__: null, AlertService: Oe, default: Ae },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ee {
+class Be {
   constructor(a, e = {}) {
     this.instance = sa.create(f({ baseURL: a }, e));
   }
@@ -1476,8 +1476,8 @@ const Te = {
       );
     },
   },
-  Pe = (a, { rejectNil: e, rejectEmpty: s }) =>
-    I(
+  Ie = (a, { rejectNil: e, rejectEmpty: s }) =>
+    M(
       (t, i) => {
         const l = a[i];
         return (e && T(l)) || (s && ta(l)) ? t : ia(i, l, t);
@@ -1485,7 +1485,7 @@ const Te = {
       {},
       F(a)
     ),
-  Me = {
+  Pe = {
     use(a) {
       a.interceptors.request.use(
         function (a) {
@@ -1496,9 +1496,9 @@ const Te = {
           } = a;
           if (
             (a.params &&
-              (a.params = Pe(a.params, { rejectNil: e, rejectEmpty: s })),
+              (a.params = Ie(a.params, { rejectNil: e, rejectEmpty: s })),
             a.data &&
-              ((a.data = Pe(a.data, { rejectNil: e, rejectEmpty: s })), t))
+              ((a.data = Ie(a.data, { rejectNil: e, rejectEmpty: s })), t))
           ) {
             const e = new FormData();
             la((s) => {
@@ -1526,17 +1526,17 @@ const Te = {
         );
     },
   },
-  Ie = sa.create();
-(Ie.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Ie.defaults.validateStatus = (a) => a >= 200 && a < 300);
+  Me = sa.create();
+(Me.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Me.defaults.validateStatus = (a) => a >= 200 && a < 300);
 const De = {
   async "read/marquee"() {
-    const a = await Ie.get("/app/user/news", {
+    const a = await Me.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Ie.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+      e = await Me.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
     return { marquee: a.data, withdraw: e.data };
   },
 };
@@ -1553,12 +1553,12 @@ const Fe = {
 };
 const He = {
   async "read/marquee"() {
-    const a = await Ie.get("/app/user/news", {
+    const a = await Me.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Ie.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+      e = await Me.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
     return { marquee: a.data, withdraw: e.data };
   },
 };
@@ -1666,13 +1666,12 @@ const Ge = (a, e, s) => {
     ? { [t]: { namespaced: !0, modules: Ge(i, e, s) } }
     : { [t]: { namespaced: !0, [e]: s } };
 };
-for (let go in Ve) {
-  const a = go
-    .replace("../store/", "")
+for (let Ao in Ve) {
+  const a = Ao.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Ne = na(Ne, Ge(ra(a), oa(a), Ve[go].default));
+  Ne = na(Ne, Ge(ra(a), oa(a), Ve[Ao].default));
 }
 var Xe = Ne;
 const We = {},
@@ -1830,7 +1829,13 @@ var ls = ja(
             h("div", as, [
               h("a", es, [
                 h("div", ss, [
-                  h("img", { src: _(ka)("logo.png"), alt: "" }, null, 8, ts),
+                  h(
+                    "img",
+                    { class: "img-filter", src: _(ka)("logo.png"), alt: "" },
+                    null,
+                    8,
+                    ts
+                  ),
                 ]),
               ]),
             ]),
@@ -1843,7 +1848,7 @@ var ls = ja(
   [
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/footer.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/footer.vue",
     ],
   ]
 );
@@ -3605,7 +3610,7 @@ var ms = ja(os, [
               ps,
               w(" ==== "),
               vs,
-              E(o),
+              B(o),
             ],
             64
           )
@@ -3614,7 +3619,7 @@ var ms = ja(os, [
     ],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/about.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/about.vue",
     ],
   ]),
   fs = Object.freeze(
@@ -4891,13 +4896,13 @@ var ws = ja(us, [
       "render",
       function (a, e, s, t, i, l) {
         const o = S("Footer");
-        return g(), b(x, null, [gs, bs, E(o, { class: "mobile-show" })], 64);
+        return g(), b(x, null, [gs, bs, B(o, { class: "mobile-show" })], 64);
       },
     ],
     ["__scopeId", "data-v-74f67db4"],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/case.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/case.vue",
     ],
   ]),
   hs = Object.freeze(
@@ -4954,11 +4959,11 @@ const ys = {
   Ss = { class: "radio-inputs" },
   Os = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
   As = { class: "name" },
-  Bs = h("input", { type: "radio", name: "radio" }, null, -1),
-  Es = { class: "name" },
+  Es = h("input", { type: "radio", name: "radio" }, null, -1),
+  Bs = { class: "name" },
   Ts = h("input", { type: "radio", name: "radio" }, null, -1),
   Ls = { class: "name" };
-var Ps = ja(ys, [
+var Is = ja(ys, [
     [
       "render",
       function (a, e, s, t, i, l) {
@@ -5002,7 +5007,7 @@ var Ps = ja(ys, [
                       e[2] ||
                       (e[2] = (...a) => t.swalModal && t.swalModal(...a)),
                   },
-                  [Bs, h("span", Es, R(t.t("$current.modal.swal")), 1)]
+                  [Es, h("span", Bs, R(t.t("$current.modal.swal")), 1)]
                 ),
                 h(
                   "label",
@@ -5022,17 +5027,17 @@ var Ps = ja(ys, [
     ],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/demo.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/demo.vue",
     ],
   ]),
-  Ms = Object.freeze(
+  Ps = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ps },
+      { __proto__: null, default: Is },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Is = (a) =>
+const Ms = (a) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -5063,7 +5068,7 @@ const Is = (a) =>
             a.observe(e);
           });
         }),
-        { t: a, getVideoUrl: Is }
+        { t: a, getVideoUrl: Ms }
       );
     },
   },
@@ -6443,7 +6448,7 @@ var ct = ja(Ds, [
                   ]),
                 ]),
               ]),
-              E(o),
+              B(o),
             ],
             64
           )
@@ -6452,7 +6457,7 @@ var ct = ja(Ds, [
     ],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/fintech-design.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/fintech-design.vue",
     ],
   ]),
   pt = Object.freeze(
@@ -6816,7 +6821,7 @@ var ut = ja(
   [
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/home/view.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/home/view.vue",
     ],
   ]
 );
@@ -7518,7 +7523,7 @@ const wt = {
       [
         [
           "__file",
-          "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/marquee.vue",
+          "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/marquee.vue",
         ],
       ]
     ),
@@ -7542,7 +7547,7 @@ const wt = {
           a.observe(e);
         });
       }),
-      { a: a, getVideoUrl: Is, getImageUrl: ka }
+      { a: a, getVideoUrl: Ms, getImageUrl: ka }
     );
   },
 };
@@ -7611,8 +7616,8 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
   ),
   Ot = { class: "sticky-pair" },
   At = { class: "w-layout-grid pair-grid" },
-  Bt = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
-  Et = {
+  Et = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
+  Bt = {
     id: "w-node-_137ddbb9-11b4-d169-f149-eca9f54873e8-af552307",
     class: "card-wrapper cc-small",
   },
@@ -7621,9 +7626,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     class: "w-dyn-list",
   },
   Lt = { role: "list", class: "w-dyn-items" },
-  Pt = { role: "listitem", class: "w-dyn-item" },
-  Mt = { class: "card-wrapper cc-small" },
-  It = {
+  It = { role: "listitem", class: "w-dyn-item" },
+  Pt = { class: "card-wrapper cc-small" },
+  Mt = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
@@ -7826,271 +7831,123 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     '<div class="btn-group" data-v-57509004><div class="btn-item cc-1" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>藝品介紹</div><div class="btn-text cc-bottom" data-v-57509004>藝品介紹</div></div></a></div></div>',
     1
   ),
-  wi = ht(() =>
+  wi = { class: "section cc-apps" },
+  hi = ca(
+    '<div class="container" data-v-57509004><div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 館藏特約藝術家 </div></div></h3></div></div></div>',
+    1
+  ),
+  yi = { "data-apps": "component", class: "apps_component" },
+  _i = { class: "apps_media-wrapper" },
+  xi = {
+    "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
+    class: "apps_media-list",
+  },
+  ki = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "100",
+  },
+  ji = ["src"],
+  qi = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "150",
+  },
+  zi = {
+    "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
+    class: "apps_asset cc-2 w-dyn-list",
+    style: {
+      transform: "translate3d(0px, 20%, 0px) scale3d(1, 1, 1)",
+      "transform-style": "preserve-3d",
+    },
+  },
+  Ci = { role: "list", class: "w-dyn-items" },
+  Si = { role: "listitem", class: "w-dyn-item" },
+  Oi = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
+  Ai = ["src"],
+  Ei = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  Bi = {
+    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
+    class: "apps_asset cc-3 w-dyn-list",
+    style: {
+      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+      "transform-style": "preserve-3d",
+    },
+  },
+  Ti = { role: "list", class: "w-dyn-items" },
+  Li = { role: "listitem", class: "w-dyn-item" },
+  Ii = {
+    "data-mouse-class": "cc-text",
+    href: "/cases/seen-app",
+    class: "apps_link w-inline-block",
+  },
+  Pi = ["src"],
+  Mi = ht(() =>
     h(
-      "section",
-      { class: "section cc-apps" },
+      "div",
+      {
+        class: "apps_asset-wrapper cc-watch",
+        "data-aos": "fade-up",
+        "data-aos-duration": "700",
+        "data-aos-delay": "250",
+      },
       [
-        h("div", { class: "container" }, [
-          h("div", { class: "row" }, [
-            h("div", { "data-animation-element": "group", class: "col" }, [
-              h(
-                "h3",
-                {
-                  "data-animation-element": "title",
-                  class: "h1",
-                  style: {},
-                  "data-aos": "fade-up",
-                  "data-aos-duration": "700",
-                  "data-aos-delay": "600",
-                },
-                [
-                  h(
-                    "div",
-                    {
-                      class: "u-overflow-hidden",
-                      style: {
-                        display: "block",
-                        "text-align": "start",
-                        position: "relative",
-                      },
-                    },
-                    [
-                      h(
-                        "div",
-                        {
-                          style: {
-                            position: "relative",
-                            display: "inline-block",
-                            translate: "none",
-                            rotate: "none",
-                            scale: "none",
-                            transform: "translate(0px, 0%)",
-                          },
-                        },
-                        " 館藏特約藝術家 "
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
-        h("div", { "data-apps": "component", class: "apps_component" }, [
-          h("div", { class: "apps_media-wrapper" }, [
-            h(
-              "div",
-              {
-                "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
-                class: "apps_media-list",
-              },
-              [
-                h(
-                  "div",
-                  {
-                    class: "apps_asset-wrapper",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "700",
-                    "data-aos-delay": "100",
-                  },
-                  [
-                    h("img", {
-                      src:
-                        "https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png",
-                      loading: "lazy",
-                      "data-w-id": "4712a24f-d922-c9f3-e8a3-7b35338a5a7d",
-                      sizes:
-                        "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
-                      alt: "",
-                      srcset:
-                        "\n                https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup-p-500.png 500w,\n                https://assets-global.website-files.com/6584502438fea068af552308/65b7816c849994bfdb8d18b4_apps-mockup.png       750w\n              ",
-                      class: "apps_asset cc-1",
-                    }),
-                  ]
-                ),
-                h(
-                  "div",
-                  {
-                    class: "apps_asset-wrapper",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "700",
-                    "data-aos-delay": "150",
-                  },
-                  [
-                    h(
-                      "div",
-                      {
-                        "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
-                        class: "apps_asset cc-2 w-dyn-list",
-                        style: {
-                          transform:
-                            "translate3d(0px, 20%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [
-                        h("div", { role: "list", class: "w-dyn-items" }, [
-                          h("div", { role: "listitem", class: "w-dyn-item" }, [
-                            h(
-                              "a",
-                              {
-                                "data-mouse-class": "cc-text",
-                                href: "/cases/sable-app",
-                                class: "apps_link w-inline-block",
-                              },
-                              [
-                                h("img", {
-                                  alt: "",
-                                  loading: "lazy",
-                                  src:
-                                    "https://assets-global.website-files.com/6584502438fea068af552349/65bcdadf450f31de60d06dc6_apps-sable.png",
-                                  sizes:
-                                    "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
-                                  srcset:
-                                    "\n                        https://assets-global.website-files.com/6584502438fea068af552349/65bcdadf450f31de60d06dc6_apps-sable-p-500.png 500w,\n                        https://assets-global.website-files.com/6584502438fea068af552349/65bcdadf450f31de60d06dc6_apps-sable.png       750w\n                      ",
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                h(
-                  "div",
-                  {
-                    class: "apps_asset-wrapper",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "700",
-                    "data-aos-delay": "200",
-                  },
-                  [
-                    h(
-                      "div",
-                      {
-                        "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
-                        class: "apps_asset cc-3 w-dyn-list",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [
-                        h("div", { role: "list", class: "w-dyn-items" }, [
-                          h("div", { role: "listitem", class: "w-dyn-item" }, [
-                            h(
-                              "a",
-                              {
-                                "data-mouse-class": "cc-text",
-                                href: "/cases/seen-app",
-                                class: "apps_link w-inline-block",
-                              },
-                              [
-                                h("img", {
-                                  alt: "",
-                                  loading: "lazy",
-                                  src:
-                                    "https://assets-global.website-files.com/6584502438fea068af552349/65b7815b96bdc600e01bd174_apps-seen.png",
-                                  sizes:
-                                    "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
-                                  srcset:
-                                    "\n                        https://assets-global.website-files.com/6584502438fea068af552349/65b7815b96bdc600e01bd174_apps-seen-p-500.png 500w,\n                        https://assets-global.website-files.com/6584502438fea068af552349/65b7815b96bdc600e01bd174_apps-seen.png       750w\n                      ",
-                                }),
-                              ]
-                            ),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                  ]
-                ),
-                h(
-                  "div",
-                  {
-                    class: "apps_asset-wrapper cc-watch",
-                    "data-aos": "fade-up",
-                    "data-aos-duration": "700",
-                    "data-aos-delay": "250",
-                  },
-                  [
-                    h(
-                      "div",
-                      {
-                        "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
-                        class: "apps_asset cc-4",
-                        style: {
-                          transform:
-                            "translate3d(0px, 5%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [
-                        h("img", {
-                          src:
-                            "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
-                          loading: "eager",
-                          alt: "",
-                          class: "apps_watch",
-                        }),
-                      ]
-                    ),
-                  ]
-                ),
-              ]
-            ),
-          ]),
-          h("div", { class: "apps_scroll" }, [
-            h("div", { class: "mobile-scroll_cta" }, [
-              h("div", { class: "mobile-scroll_icon w-embed" }, [
-                h(
-                  "svg",
-                  {
-                    width: "100%",
-                    style: {},
-                    viewBox: "0 0 24 24",
-                    fill: "currentColor",
-                    xmlns: "http://www.w3.org/2000/svg",
-                  },
-                  [
-                    h("path", {
-                      d:
-                        "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
-                      fill: "currentColor",
-                    }),
-                  ]
-                ),
-              ]),
-            ]),
-          ]),
-        ]),
+        h(
+          "div",
+          {
+            "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
+            class: "apps_asset cc-4",
+            style: {
+              transform: "translate3d(0px, 5%, 0px) scale3d(1, 1, 1)",
+              "transform-style": "preserve-3d",
+            },
+          },
+          [
+            h("img", {
+              src:
+                "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
+              loading: "eager",
+              alt: "",
+              class: "apps_watch",
+            }),
+          ]
+        ),
       ],
       -1
     )
   ),
-  hi = { class: "section" },
-  yi = { class: "container" },
-  _i = ca(
+  Di = ca(
+    '<div class="apps_scroll" data-v-57509004><div class="mobile-scroll_cta" data-v-57509004><div class="mobile-scroll_icon w-embed" data-v-57509004><svg width="100%" style="" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-57509004><path d="M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z" fill="currentColor" data-v-57509004></path></svg></div></div></div>',
+    1
+  ),
+  Fi = { class: "section" },
+  Hi = { class: "container" },
+  Ui = ca(
     '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 拍賣中心 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                Design\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3></div></div>',
     1
   ),
-  xi = { class: "sticky-pair" },
-  ki = { class: "w-layout-grid pair-grid is-leading" },
-  ji = {
+  Vi = { class: "sticky-pair" },
+  Ni = { class: "w-layout-grid pair-grid is-leading" },
+  Gi = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
-  qi = { role: "list", class: "w-dyn-items" },
-  zi = { role: "listitem", class: "w-dyn-item" },
-  Ci = { class: "card-wrapper cc-large" },
-  Si = {
+  Xi = { role: "list", class: "w-dyn-items" },
+  Wi = { role: "listitem", class: "w-dyn-item" },
+  Ri = { class: "card-wrapper cc-large" },
+  Yi = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Oi = {
+  Zi = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -8099,9 +7956,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  Ai = { class: "card-image_wrapper" },
-  Bi = { class: "iframe-video_wrapper" },
-  Ei = {
+  Ki = { class: "card-image_wrapper" },
+  $i = { class: "iframe-video_wrapper" },
+  Ji = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8110,30 +7967,30 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Ti = ["src"],
-  Li = Z(" Your browser does not support the video tag. "),
-  Pi = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Mi = ca(
+  Qi = ["src"],
+  al = Z(" Your browser does not support the video tag. "),
+  el = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  sl = ca(
     '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  Ii = {
+  tl = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  Di = {
+  il = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  Fi = { role: "list", class: "w-dyn-items" },
-  Hi = { role: "listitem", class: "w-dyn-item" },
-  Ui = { class: "card-wrapper cc-small" },
-  Vi = {
+  ll = { role: "list", class: "w-dyn-items" },
+  ol = { role: "listitem", class: "w-dyn-item" },
+  rl = { class: "card-wrapper cc-small" },
+  nl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Ni = {
+  dl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -8142,9 +7999,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  Gi = { class: "card-image_wrapper" },
-  Xi = { class: "iframe-video_wrapper" },
-  Wi = {
+  cl = { class: "card-image_wrapper" },
+  pl = { class: "iframe-video_wrapper" },
+  vl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8153,10 +8010,10 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Ri = ["src"],
-  Yi = Z(" Your browser does not support the video tag. "),
-  Zi = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Ki = ht(() =>
+  ml = ["src"],
+  fl = Z(" Your browser does not support the video tag. "),
+  ul = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  gl = ht(() =>
     h(
       "div",
       { class: "card-body" },
@@ -8178,36 +8035,36 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       -1
     )
   ),
-  $i = ca(
+  bl = ca(
     '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-57509004> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Fintech services</div><div class="btn-text cc-bottom" data-v-57509004>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Design trial</div><div class="btn-text cc-bottom" data-v-57509004>Design trial</div></div></a></div></div></div>',
     1
   ),
-  Ji = { class: "section" },
-  Qi = { class: "container over-h" },
-  al = ca(
+  wl = { class: "section" },
+  hl = { class: "container over-h" },
+  yl = ca(
     '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Branding </div></div></h3></div></div>',
     1
   ),
-  el = { class: "sticky-pair" },
-  sl = { class: "w-layout-grid pair-grid" },
-  tl = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  il = {
+  _l = { class: "sticky-pair" },
+  xl = { class: "w-layout-grid pair-grid" },
+  kl = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+  jl = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  ll = {
+  ql = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  ol = { role: "list", class: "w-dyn-items" },
-  rl = { role: "listitem", class: "w-dyn-item" },
-  nl = { class: "card-wrapper cc-small" },
-  dl = {
+  zl = { role: "list", class: "w-dyn-items" },
+  Cl = { role: "listitem", class: "w-dyn-item" },
+  Sl = { class: "card-wrapper cc-small" },
+  Ol = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  cl = {
+  Al = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -8216,9 +8073,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  pl = { class: "card-image_wrapper" },
-  vl = { class: "iframe-video_wrapper" },
-  ml = {
+  El = { class: "card-image_wrapper" },
+  Bl = { class: "iframe-video_wrapper" },
+  Tl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8227,10 +8084,10 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  fl = ["src"],
-  ul = Z(" Your browser does not support the video tag. "),
-  gl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  bl = ht(() =>
+  Ll = ["src"],
+  Il = Z(" Your browser does not support the video tag. "),
+  Pl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Ml = ht(() =>
     h(
       "div",
       { class: "card-body" },
@@ -8252,19 +8109,19 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       -1
     )
   ),
-  wl = {
+  Dl = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  hl = { role: "list", class: "w-dyn-items" },
-  yl = { role: "listitem", class: "w-dyn-item" },
-  _l = { class: "card-wrapper cc-large" },
-  xl = {
+  Fl = { role: "list", class: "w-dyn-items" },
+  Hl = { role: "listitem", class: "w-dyn-item" },
+  Ul = { class: "card-wrapper cc-large" },
+  Vl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  kl = {
+  Nl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -8273,9 +8130,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  jl = { class: "card-image_wrapper" },
-  ql = { class: "iframe-video_wrapper" },
-  zl = {
+  Gl = { class: "card-image_wrapper" },
+  Xl = { class: "iframe-video_wrapper" },
+  Wl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8284,51 +8141,159 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Cl = ["src"],
-  Sl = Z(" Your browser does not support the video tag. "),
-  Ol = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Al = ca(
+  Rl = ["src"],
+  Yl = Z(" Your browser does not support the video tag. "),
+  Zl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Kl = ca(
     '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  Bl = ca(
+  $l = ca(
     '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-57509004> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>View cases</div><div class="btn-text cc-bottom" data-v-57509004>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div></div></a></div></div></div>',
     1
   ),
-  El = ca(
+  Jl = ca(
     '<div class="container" data-v-57509004><div class="target_line" data-v-57509004></div></div><section class="section" data-v-57509004><div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>Contact Us</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-57509004><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-57509004><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004><div style="position:relative;display:inline-block;" data-v-57509004> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  Tl = { class: "pre-footer" },
-  Ll = {
-    "data-mouse-text": "Read Next",
-    "data-mouse-class": "cc-text",
-    class: "section cc-pre-footer w-inline-block",
-  },
-  Pl = { class: "iframe-video_wrapper" },
-  Ml = {
-    class: "video-cover",
-    width: "100%",
-    height: "100%",
-    autoplay: "",
-    loop: "",
-    muted: "",
-    playsinline: "",
-  },
-  Il = ["src"],
-  Dl = Z(" Your browser does not support the video tag. "),
-  Fl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Hl = ca(
-    '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
-    3
+  Ql = { class: "pre-footer" },
+  ao = ht(() =>
+    h(
+      "div",
+      {
+        "data-mouse-text": "Read Next",
+        "data-mouse-class": "cc-text",
+        class: "section cc-pre-footer w-inline-block",
+      },
+      [
+        h("div", { class: "iframe-video_wrapper" }, [
+          h("iframe", {
+            src:
+              "https://app.vidzflow.com/v/RLLcIipF9Q?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+            frameborder: "0",
+            width: "100%",
+            height: "100%",
+          }),
+          h("div", { class: "iframe-video_blocker" }),
+        ]),
+        h("div", { class: "pre-footer_gradient" }),
+        h("div", { class: "marquee" }, [
+          h(
+            "div",
+            {
+              class: "marquee_content cc-text transparent",
+              style: {
+                "will-change": "transform",
+                transform: "translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)",
+                "transform-style": "preserve-3d",
+              },
+            },
+            [
+              h(
+                "div",
+                {
+                  class: "marquee_item cc-1",
+                  style: {
+                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                    "transform-style": "preserve-3d",
+                  },
+                },
+                [h("div", { class: "h1" }, "Case Studies ")]
+              ),
+              h(
+                "div",
+                {
+                  class: "marquee_item cc-2",
+                  style: {
+                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                    "transform-style": "preserve-3d",
+                  },
+                },
+                [h("div", { class: "h1" }, "Case Studies ")]
+              ),
+              h(
+                "div",
+                {
+                  class: "marquee_item cc-3",
+                  style: {
+                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                    "transform-style": "preserve-3d",
+                  },
+                },
+                [h("div", { class: "h1" }, "Case Studies ")]
+              ),
+            ]
+          ),
+          h(
+            "div",
+            {
+              class: "marquee_content cc-text transparent",
+              style: {
+                "will-change": "transform",
+                transform: "translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)",
+                "transform-style": "preserve-3d",
+              },
+            },
+            [
+              h(
+                "div",
+                {
+                  class: "marquee_item cc-1",
+                  style: {
+                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                    "transform-style": "preserve-3d",
+                  },
+                },
+                [h("div", { class: "h1" }, "Case Studies ")]
+              ),
+              h(
+                "div",
+                {
+                  class: "marquee_item cc-2",
+                  style: {
+                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                    "transform-style": "preserve-3d",
+                  },
+                },
+                [h("div", { class: "h1" }, "Case Studies ")]
+              ),
+              h(
+                "div",
+                {
+                  class: "marquee_item cc-3",
+                  style: {
+                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+                    "transform-style": "preserve-3d",
+                  },
+                },
+                [h("div", { class: "h1" }, "Case Studies ")]
+              ),
+            ]
+          ),
+        ]),
+        h("div", { class: "pre-footer_button" }, [
+          h("div", { class: "btn cc-large-landscape" }, [
+            h("div", { class: "btn-text-wrap" }, [
+              h("div", { class: "btn-text cc-large-landscape" }, "REad Next"),
+              h(
+                "div",
+                { class: "btn-text cc-bottom cc-large-landscape" },
+                "Button"
+              ),
+            ]),
+          ]),
+        ]),
+      ],
+      -1
+    )
   ),
-  Ul = {
+  eo = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  Vl = { class: "iframe-video_wrapper" },
-  Nl = {
+  so = { class: "iframe-video_wrapper" },
+  to = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8337,14 +8302,14 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Gl = ["src"],
-  Xl = Z(" Your browser does not support the video tag. "),
-  Wl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Rl = ca(
+  io = ["src"],
+  lo = Z(" Your browser does not support the video tag. "),
+  oo = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  ro = ca(
     '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   );
-var Yl = ja(wt, [
+var no = ja(wt, [
     [
       "render",
       function (a, e, s, t, i, l) {
@@ -8357,10 +8322,10 @@ var Yl = ja(wt, [
             x,
             null,
             [
-              E(o),
+              B(o),
               w(" ------ "),
               yt,
-              h("section", _t, [xt, h("div", kt, [E(r)])]),
+              h("section", _t, [xt, h("div", kt, [B(r)])]),
               w(" ------ "),
               jt,
               h("section", qt, [
@@ -8369,13 +8334,13 @@ var Yl = ja(wt, [
                   St,
                   h("div", Ot, [
                     h("div", At, [
-                      h("div", Bt, [
-                        h("div", Et, [
+                      h("div", Et, [
+                        h("div", Bt, [
                           h("div", Tt, [
                             h("div", Lt, [
-                              h("div", Pt, [
-                                h("div", Mt, [
-                                  h("div", It, [
+                              h("div", It, [
+                                h("div", Pt, [
+                                  h("div", Mt, [
                                     h("div", Dt, [
                                       h("div", Ft, [
                                         h("div", Ht, [
@@ -8456,7 +8421,11 @@ var Yl = ja(wt, [
                           h("div", fi, [
                             h(
                               "img",
-                              { src: t.getImageUrl("logo.png"), alt: "" },
+                              {
+                                class: "img-filter",
+                                src: t.getImageUrl("logo.png"),
+                                alt: "",
+                              },
                               null,
                               8,
                               ui
@@ -8471,22 +8440,95 @@ var Yl = ja(wt, [
                 ]),
               ]),
               w(" --- "),
-              wi,
-              w(" -- "),
-              h("section", hi, [
+              h("section", wi, [
+                hi,
                 h("div", yi, [
-                  _i,
-                  h("div", xi, [
-                    h("div", ki, [
-                      h("div", ji, [
-                        h("div", qi, [
-                          h("div", zi, [
-                            h("div", Ci, [
-                              h("div", Si, [
-                                h("div", Oi, [
-                                  h("div", Ai, [
-                                    h("div", Bi, [
-                                      h("video", Ei, [
+                  h("div", _i, [
+                    h("div", xi, [
+                      h("div", ki, [
+                        h(
+                          "img",
+                          {
+                            src: t.getImageUrl("home/img/8.jpg"),
+                            loading: "lazy",
+                            "data-w-id": "4712a24f-d922-c9f3-e8a3-7b35338a5a7d",
+                            sizes:
+                              "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
+                            alt: "",
+                            class: "apps_asset cc-1",
+                          },
+                          null,
+                          8,
+                          ji
+                        ),
+                      ]),
+                      h("div", qi, [
+                        h("div", zi, [
+                          h("div", Ci, [
+                            h("div", Si, [
+                              h("a", Oi, [
+                                h(
+                                  "img",
+                                  {
+                                    alt: "",
+                                    loading: "lazy",
+                                    src: t.getImageUrl("home/img/10.jpg"),
+                                    sizes:
+                                      "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
+                                  },
+                                  null,
+                                  8,
+                                  Ai
+                                ),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                      ]),
+                      h("div", Ei, [
+                        h("div", Bi, [
+                          h("div", Ti, [
+                            h("div", Li, [
+                              h("a", Ii, [
+                                h(
+                                  "img",
+                                  {
+                                    alt: "",
+                                    loading: "lazy",
+                                    src: t.getImageUrl("home/img/10.jpg"),
+                                    sizes:
+                                      "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
+                                  },
+                                  null,
+                                  8,
+                                  Pi
+                                ),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                      ]),
+                      Mi,
+                    ]),
+                  ]),
+                  Di,
+                ]),
+              ]),
+              w(" -- "),
+              h("section", Fi, [
+                h("div", Hi, [
+                  Ui,
+                  h("div", Vi, [
+                    h("div", Ni, [
+                      h("div", Gi, [
+                        h("div", Xi, [
+                          h("div", Wi, [
+                            h("div", Ri, [
+                              h("div", Yi, [
+                                h("div", Zi, [
+                                  h("div", Ki, [
+                                    h("div", $i, [
+                                      h("video", Ji, [
                                         h(
                                           "source",
                                           {
@@ -8497,14 +8539,14 @@ var Yl = ja(wt, [
                                           },
                                           null,
                                           8,
-                                          Ti
+                                          Qi
                                         ),
-                                        Li,
+                                        al,
                                       ]),
-                                      Pi,
+                                      el,
                                     ]),
                                   ]),
-                                  Mi,
+                                  sl,
                                 ]),
                               ]),
                             ]),
@@ -8512,16 +8554,16 @@ var Yl = ja(wt, [
                         ]),
                       ]),
                       h("div", null, [
-                        h("div", Ii, [
-                          h("div", Di, [
-                            h("div", Fi, [
-                              h("div", Hi, [
-                                h("div", Ui, [
-                                  h("div", Vi, [
-                                    h("div", Ni, [
-                                      h("div", Gi, [
-                                        h("div", Xi, [
-                                          h("video", Wi, [
+                        h("div", tl, [
+                          h("div", il, [
+                            h("div", ll, [
+                              h("div", ol, [
+                                h("div", rl, [
+                                  h("div", nl, [
+                                    h("div", dl, [
+                                      h("div", cl, [
+                                        h("div", pl, [
+                                          h("video", vl, [
                                             h(
                                               "source",
                                               {
@@ -8532,14 +8574,14 @@ var Yl = ja(wt, [
                                               },
                                               null,
                                               8,
-                                              Ri
+                                              ml
                                             ),
-                                            Yi,
+                                            fl,
                                           ]),
-                                          Zi,
+                                          ul,
                                         ]),
                                       ]),
-                                      Ki,
+                                      gl,
                                     ]),
                                   ]),
                                 ]),
@@ -8548,28 +8590,28 @@ var Yl = ja(wt, [
                           ]),
                         ]),
                       ]),
-                      $i,
+                      bl,
                     ]),
                   ]),
                 ]),
               ]),
               w(" --- "),
-              h("section", Ji, [
-                h("div", Qi, [
-                  al,
-                  h("div", el, [
-                    h("div", sl, [
-                      h("div", tl, [
-                        h("div", il, [
-                          h("div", ll, [
-                            h("div", ol, [
-                              h("div", rl, [
-                                h("div", nl, [
-                                  h("div", dl, [
-                                    h("div", cl, [
-                                      h("div", pl, [
-                                        h("div", vl, [
-                                          h("video", ml, [
+              h("section", wl, [
+                h("div", hl, [
+                  yl,
+                  h("div", _l, [
+                    h("div", xl, [
+                      h("div", kl, [
+                        h("div", jl, [
+                          h("div", ql, [
+                            h("div", zl, [
+                              h("div", Cl, [
+                                h("div", Sl, [
+                                  h("div", Ol, [
+                                    h("div", Al, [
+                                      h("div", El, [
+                                        h("div", Bl, [
+                                          h("video", Tl, [
                                             h(
                                               "source",
                                               {
@@ -8580,14 +8622,14 @@ var Yl = ja(wt, [
                                               },
                                               null,
                                               8,
-                                              fl
+                                              Ll
                                             ),
-                                            ul,
+                                            Il,
                                           ]),
-                                          gl,
+                                          Pl,
                                         ]),
                                       ]),
-                                      bl,
+                                      Ml,
                                     ]),
                                   ]),
                                 ]),
@@ -8596,15 +8638,15 @@ var Yl = ja(wt, [
                           ]),
                         ]),
                       ]),
-                      h("div", wl, [
-                        h("div", hl, [
-                          h("div", yl, [
-                            h("div", _l, [
-                              h("div", xl, [
-                                h("div", kl, [
-                                  h("div", jl, [
-                                    h("div", ql, [
-                                      h("video", zl, [
+                      h("div", Dl, [
+                        h("div", Fl, [
+                          h("div", Hl, [
+                            h("div", Ul, [
+                              h("div", Vl, [
+                                h("div", Nl, [
+                                  h("div", Gl, [
+                                    h("div", Xl, [
+                                      h("video", Wl, [
                                         h(
                                           "source",
                                           {
@@ -8615,52 +8657,34 @@ var Yl = ja(wt, [
                                           },
                                           null,
                                           8,
-                                          Cl
+                                          Rl
                                         ),
-                                        Sl,
+                                        Yl,
                                       ]),
-                                      Ol,
+                                      Zl,
                                     ]),
                                   ]),
-                                  Al,
+                                  Kl,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      Bl,
+                      $l,
                     ]),
                   ]),
                 ]),
               ]),
               w(" -- "),
-              El,
+              Jl,
               w(" --- "),
               h("div", null, [
-                h("aside", Tl, [
-                  h("div", Ll, [
-                    h("div", Pl, [
-                      h("video", Ml, [
-                        h(
-                          "source",
-                          {
-                            src: t.getVideoUrl("home/buddha1.mp4"),
-                            type: "video/mp4",
-                          },
-                          null,
-                          8,
-                          Il
-                        ),
-                        Dl,
-                      ]),
-                      Fl,
-                    ]),
-                    Hl,
-                  ]),
-                  h("div", Ul, [
-                    h("div", Vl, [
-                      h("video", Nl, [
+                h("aside", Ql, [
+                  ao,
+                  h("div", eo, [
+                    h("div", so, [
+                      h("video", to, [
                         h(
                           "source",
                           {
@@ -8669,17 +8693,17 @@ var Yl = ja(wt, [
                           },
                           null,
                           8,
-                          Gl
+                          io
                         ),
-                        Xl,
+                        lo,
                       ]),
-                      Wl,
+                      oo,
                     ]),
-                    Rl,
+                    ro,
                   ]),
                 ]),
               ]),
-              E(n),
+              B(n),
             ],
             64
           )
@@ -8689,17 +8713,17 @@ var Yl = ja(wt, [
     ["__scopeId", "data-v-57509004"],
     [
       "__file",
-      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/index.vue",
+      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/index.vue",
     ],
   ]),
-  Zl = Object.freeze(
+  co = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Yl },
+      { __proto__: null, default: no },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Kl = {
+const po = {
     "../pages/about.vue": () =>
       Re(
         () =>
@@ -8720,7 +8744,7 @@ const Kl = {
       Re(
         () =>
           Promise.resolve().then(function () {
-            return Ms;
+            return Ps;
           }),
         void 0
       ),
@@ -8736,53 +8760,53 @@ const Kl = {
       Re(
         () =>
           Promise.resolve().then(function () {
-            return Zl;
+            return co;
           }),
         void 0
       ),
   },
-  $l = {
+  vo = {
     "../pages/about.vue": fs,
     "../pages/case.vue": hs,
-    "../pages/demo.vue": Ms,
+    "../pages/demo.vue": Ps,
     "../pages/fintech-design.vue": pt,
-    "../pages/index.vue": Zl,
+    "../pages/index.vue": co,
   },
-  Jl = [];
-for (let go in Kl) {
-  let a = go.replace("../pages", "").toLowerCase().replace(".vue", "");
+  mo = [];
+for (let Ao in po) {
+  let a = Ao.replace("../pages", "").toLowerCase().replace(".vue", "");
   (a = a.replace(/\/index$/, "")),
     (a = a.replace(/\/_+/g, "/:")),
-    Jl.push({
+    mo.push({
       path: a,
       name: a,
       meta: {
-        layout: $l[go].default.layout || "layout-default",
+        layout: vo[Ao].default.layout || "layout-default",
         title:
-          null != (s = null == (e = $l[go].default) ? void 0 : e.title)
+          null != (s = null == (e = vo[Ao].default) ? void 0 : e.title)
             ? s
             : "app.project.title",
         header:
-          null != (i = null == (t = $l[go].default) ? void 0 : t.header)
+          null != (i = null == (t = vo[Ao].default) ? void 0 : t.header)
             ? i
             : "header-default",
         scroll:
-          null != (o = null == (l = $l[go].default) ? void 0 : l.noScroll) && o,
+          null != (o = null == (l = vo[Ao].default) ? void 0 : l.noScroll) && o,
       },
-      component: Kl[go],
+      component: po[Ao],
     });
 }
-const Ql = ua({
+const fo = ua({
   history: ga("./"),
   routes:
-    ((ao = { defaultPath: "/home" }),
+    ((uo = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: D({ defaultPath: "/" }, ao).defaultPath },
+        redirect: { name: D({ defaultPath: "/" }, uo).defaultPath },
       },
-      ...Jl,
+      ...mo,
       {
         path: "/404",
         name: "not-found",
@@ -8797,29 +8821,29 @@ const Ql = ua({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var ao;
-Ql.beforeEach(async (a, e, s) => {
+var uo;
+fo.beforeEach(async (a, e, s) => {
   s();
 });
-var eo = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ql }, Symbol.toStringTag, {
+var go = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: fo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const so = ba({ modules: Xe });
-wa(so, Ql);
-var to = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: so }, Symbol.toStringTag, {
+const bo = ba({ modules: Xe });
+wa(bo, fo);
+var wo = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: bo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const io = {
+const ho = {
     use(a) {
       a.interceptors.response.use(
         async function (e) {
           if (100004 === e.data.code) {
             const s = a.get("/app/jwt-token", {
-              params: { account: so.state.auth.user.account },
+              params: { account: bo.state.auth.user.account },
             });
             1 === s.data.code && H.set("token", s.data.data.jwt_token, !0);
             return await a.request(e.config);
@@ -8832,7 +8856,7 @@ const io = {
       );
     },
   },
-  lo = {
+  yo = {
     use(a) {
       (window.isAlert = !1),
         a.interceptors.response.use(
@@ -8850,12 +8874,12 @@ const io = {
                 case 200005: {
                   const { isConfirmed: a } = await La.alert({
                     title: `Error(${e.code})`,
-                    text: Ea.t(`error.code.${e.code}`),
+                    text: Ba.t(`error.code.${e.code}`),
                   });
                   return (
                     a &&
-                      (await so.dispatch("auth/logout"),
-                      await Ql.replace("/login"),
+                      (await bo.dispatch("auth/logout"),
+                      await fo.replace("/login"),
                       (window.isAlert = !1)),
                     Promise.reject(`Error: ${e.code}`)
                   );
@@ -8870,7 +8894,7 @@ const io = {
         );
     },
   },
-  oo = {
+  _o = {
     use(a) {
       a.interceptors.response.use(
         async function (a) {
@@ -8883,7 +8907,7 @@ const io = {
               case 100003:
                 await La.alert({
                   title: `Error(${e.code})`,
-                  text: Ea.t(`error.code.${e.code}`),
+                  text: Ba.t(`error.code.${e.code}`),
                 });
             }
           }
@@ -8895,12 +8919,12 @@ const io = {
       );
     },
   };
-class ro {
+class xo {
   constructor() {
-    (this.provider = new Ee({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Be({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use(Te, Le, io, lo, oo, Me);
+    this.provider.use(Te, Le, ho, yo, _o, Pe);
   }
   get get() {
     return this.provider.instance.get;
@@ -8915,19 +8939,19 @@ class ro {
     return this.provider.instance.delete;
   }
 }
-ro.prototype.install = function (a) {
+xo.prototype.install = function (a) {
   const e = "http-service";
   (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var no = new ro(),
-  co = Object.freeze(
+var ko = new xo(),
+  jo = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: ro, default: no },
+      { __proto__: null, HttpService: xo, default: ko },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class po {
+class qo {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -8937,8 +8961,8 @@ class po {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Ea.t("button.confirm"),
-      cancelButtonText: Ea.t("button.cancel"),
+      confirmButtonText: Ba.t("button.confirm"),
+      cancelButtonText: Ba.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -8950,7 +8974,7 @@ class po {
     };
   }
   get state() {
-    return so.state.app.popupState;
+    return bo.state.app.popupState;
   }
   async modal(a = {}) {
     const {
@@ -8959,13 +8983,13 @@ class po {
       component: t = null,
       showCancelButton: i = !0,
       showConfirmButton: l = !0,
-      confirmButtonText: o = Ea.t("button.confirm"),
-      cancelButtonText: r = Ea.t("button.cancel"),
+      confirmButtonText: o = Ba.t("button.confirm"),
+      cancelButtonText: r = Ba.t("button.cancel"),
       allowOutsideClick: n = !0,
       props: d = {},
     } = a;
     return new Promise((a) => {
-      so.commit(
+      bo.commit(
         "app/set/popup",
         u(f({}, this.initStates), {
           type: "Modal",
@@ -8984,41 +9008,41 @@ class po {
     });
   }
   clear() {
-    so.commit("app/clear/popup");
+    bo.commit("app/clear/popup");
   }
 }
-po.prototype.install = function (a) {
+qo.prototype.install = function (a) {
   const e = "popup-service";
   (a.config.globalProperties[e] = this), a.provide(e, this);
 };
-var vo = new po();
-const mo = {
-    "../services/alert-service.js": Be,
-    "../services/http-service.js": co,
+var zo = new qo();
+const Co = {
+    "../services/alert-service.js": Ee,
+    "../services/http-service.js": jo,
     "../services/i18n-service.js": Ta,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: po, default: vo },
+        { __proto__: null, PopupService: qo, default: zo },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": eo,
+    "../services/router-service.js": go,
     "../services/storage-service.js": Da,
-    "../services/store-service.js": to,
+    "../services/store-service.js": wo,
   },
-  fo = {
+  So = {
     install: (a) => {
-      for (let e in mo) a.use(mo[e].default);
+      for (let e in Co) a.use(Co[e].default);
     },
   };
-const uo = ha(Sa);
-uo.provide("$jQuery", ya),
-  uo.provide("$swal", La),
-  uo.provide("$storage", H),
-  uo.provide("$tabsslider", _a),
-  uo.use(ne),
-  uo.use(Ce),
-  uo.use(xa, { loading: "", error: "" }),
-  uo.use(fo),
-  uo.mount("#app");
+const Oo = ha(Sa);
+Oo.provide("$jQuery", ya),
+  Oo.provide("$swal", La),
+  Oo.provide("$storage", H),
+  Oo.provide("$tabsslider", _a),
+  Oo.use(ne),
+  Oo.use(Ce),
+  Oo.use(xa, { loading: "", error: "" }),
+  Oo.use(So),
+  Oo.mount("#app");

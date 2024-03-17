@@ -1433,18 +1433,12 @@
         class="section cc-pre-footer w-inline-block"
       >
         <div class="iframe-video_wrapper">
-          <video
-            class="video-cover"
+          <iframe
+            src="https://app.vidzflow.com/v/RLLcIipF9Q?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+            frameborder="0"
             width="100%"
             height="100%"
-            autoplay
-            loop
-            muted
-            playsinline
-          >
-            <source :src="getVideoUrl('home/buddha1.mp4')" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          ></iframe>
           <div class="iframe-video_blocker"></div>
         </div>
         <div class="pre-footer_gradient"></div>
