@@ -9,11 +9,13 @@
   width: 100%;
   // height: 6rem;
   z-index: 10;
-  background-color: var(--swatch--orange);
-  // background: #e0e2f0;
-  // background-color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+  transition: 0.4s;
+  &.offtop {
+    background-color: var(--swatch--orange);
+  }
   &.active {
-    background-color: white;
+    background-color: white !important;
   }
   &-logo {
     width: 8rem;

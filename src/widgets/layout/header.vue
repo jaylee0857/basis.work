@@ -1,5 +1,8 @@
 <template>
-  <div class="layout-deafult-header" :class="{ active: isOpen }">
+  <div
+    class="layout-deafult-header"
+    :class="{ active: isOpen, offtop: scrolledPastThreshold }"
+  >
     <router-link
       to="/"
       aria-current="page"
@@ -30,12 +33,24 @@ import { getImageUrl } from "@/unit/getImageUrl";
 import Nav from "@/widgets/layout/nav-bar.vue";
 // import { useRoute, useRouter } from "vue-router";
 
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const isOpen = ref(false);
 const getToggleOpen = (boolean) => {
   isOpen.value = !boolean;
 };
+const scrolledPastThreshold = ref(false);
+
+const handleScroll = () => {
+  if (window.pageYOffset > 100) {
+    scrolledPastThreshold.value = true;
+  } else {
+    scrolledPastThreshold.value = false;
+  }
+};
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
 // const lang = computed(() => {
 //   const fullName = locale.value;
 //   switch (fullName) {
