@@ -303,7 +303,7 @@ const callback = (entries) => {
 
       default:
         target.style.animation =
-          intersectionRatio < 0.3
+          intersectionRatio < 0.2
             ? "fadeOut 2s forwards"
             : "zoomIn 3.5s forwards";
         break;

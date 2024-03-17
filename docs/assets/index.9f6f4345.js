@@ -6677,7 +6677,7 @@ var ut = je(
               t.value[o].isEnter = !(i < 0.2);
             else
               l.style.animation =
-                i < 0.3 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
+                i < 0.2 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
           });
         }, l),
         r = () => {
