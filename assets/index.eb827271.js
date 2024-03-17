@@ -1,5 +1,5 @@
-var a,
-  e,
+var e,
+  a,
   s,
   t,
   i,
@@ -11,16 +11,16 @@ var a,
   c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
-  m = (a, e, s) =>
-    e in a
-      ? r(a, e, { enumerable: !0, configurable: !0, writable: !0, value: s })
-      : (a[e] = s),
-  f = (a, e) => {
-    for (var s in e || (e = {})) p.call(e, s) && m(a, s, e[s]);
-    if (c) for (var s of c(e)) v.call(e, s) && m(a, s, e[s]);
-    return a;
+  m = (e, a, s) =>
+    a in e
+      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: s })
+      : (e[a] = s),
+  f = (e, a) => {
+    for (var s in a || (a = {})) p.call(a, s) && m(e, s, a[s]);
+    if (c) for (var s of c(a)) v.call(a, s) && m(e, s, a[s]);
+    return e;
   },
-  u = (a, e) => n(a, d(e));
+  u = (e, a) => n(e, d(a));
 import {
   o as g,
   c as b,
@@ -60,62 +60,62 @@ import {
   I as $,
   J,
   T as Q,
-  K as aa,
-  L as ea,
-  M as sa,
-  N as ta,
-  O as ia,
-  P as la,
-  Q as oa,
-  R as ra,
-  U as na,
-  V as da,
-  W as ca,
-  X as pa,
-  Y as va,
-  Z as ma,
-  _ as fa,
-  $ as ua,
-  a0 as ga,
-  a1 as ba,
-  a2 as wa,
-  a3 as ha,
-  a4 as ya,
-  a5 as _a,
-  a6 as xa,
-} from "./vendor.efff3440.js";
+  K as ee,
+  L as ae,
+  M as se,
+  N as te,
+  O as ie,
+  P as le,
+  Q as oe,
+  R as re,
+  U as ne,
+  V as de,
+  W as ce,
+  X as pe,
+  Y as ve,
+  Z as me,
+  _ as fe,
+  $ as ue,
+  a0 as ge,
+  a1 as be,
+  a2 as we,
+  a3 as he,
+  a4 as ye,
+  a5 as _e,
+  a6 as xe,
+} from "./vendor.00fd3504.js";
 !(function () {
-  const a = document.createElement("link").relList;
-  if (!(a && a.supports && a.supports("modulepreload"))) {
-    for (const a of document.querySelectorAll('link[rel="modulepreload"]'))
-      e(a);
-    new MutationObserver((a) => {
-      for (const s of a)
+  const e = document.createElement("link").relList;
+  if (!(e && e.supports && e.supports("modulepreload"))) {
+    for (const e of document.querySelectorAll('link[rel="modulepreload"]'))
+      a(e);
+    new MutationObserver((e) => {
+      for (const s of e)
         if ("childList" === s.type)
-          for (const a of s.addedNodes)
-            "LINK" === a.tagName && "modulepreload" === a.rel && e(a);
+          for (const e of s.addedNodes)
+            "LINK" === e.tagName && "modulepreload" === e.rel && a(e);
     }).observe(document, { childList: !0, subtree: !0 });
   }
-  function e(a) {
-    if (a.ep) return;
-    a.ep = !0;
-    const e = (function (a) {
-      const e = {};
+  function a(e) {
+    if (e.ep) return;
+    e.ep = !0;
+    const a = (function (e) {
+      const a = {};
       return (
-        a.integrity && (e.integrity = a.integrity),
-        a.referrerpolicy && (e.referrerPolicy = a.referrerpolicy),
-        "use-credentials" === a.crossorigin
-          ? (e.credentials = "include")
-          : "anonymous" === a.crossorigin
-          ? (e.credentials = "omit")
-          : (e.credentials = "same-origin"),
-        e
+        e.integrity && (a.integrity = e.integrity),
+        e.referrerpolicy && (a.referrerPolicy = e.referrerpolicy),
+        "use-credentials" === e.crossorigin
+          ? (a.credentials = "include")
+          : "anonymous" === e.crossorigin
+          ? (a.credentials = "omit")
+          : (a.credentials = "same-origin"),
+        a
       );
-    })(a);
-    fetch(a.href, e);
+    })(e);
+    fetch(e.href, a);
   }
 })();
-const ka = (a) =>
+const ke = (e) =>
   new URL(
     {
       "../assets/images/favicon.png":
@@ -139,6 +139,7 @@ const ka = (a) =>
       "../assets/images/home/img/1.jpg": "./assets/1.f5fa3065.jpg",
       "../assets/images/home/img/10.jpg": "./assets/10.19f04185.jpg",
       "../assets/images/home/img/11.jpg": "./assets/11.122377c1.jpg",
+      "../assets/images/home/img/12.jpg": "./assets/12.d8a55947.jpg",
       "../assets/images/home/img/2.jpg": "./assets/2.cd10f399.jpg",
       "../assets/images/home/img/3.jpg": "./assets/3.a76b71ea.jpg",
       "../assets/images/home/img/4.jpg": "./assets/4.466d6924.jpg",
@@ -157,43 +158,43 @@ const ka = (a) =>
       "../assets/images/home/opening/7.jpg": "./assets/7.8d695fe6.jpg",
       "../assets/images/home/opening/8.jpg": "./assets/8.107a61ce.jpg",
       "../assets/images/home/opening/9.jpg": "./assets/9.e0cc08c9.jpg",
-    }[`../assets/images/${a}`],
+    }[`../assets/images/${e}`],
     self.location
   ).href;
-var ja = (a, e) => {
-  const s = a.__vccOpts || a;
-  for (const [t, i] of e) s[t] = i;
+var je = (e, a) => {
+  const s = e.__vccOpts || e;
+  for (const [t, i] of a) s[t] = i;
   return s;
 };
-const qa = { class: "icon" },
-  za = { class: "svg_box" },
-  Ca = ["src"];
-var Sa = ja(
+const qe = { class: "icon" },
+  ze = { class: "svg_box" },
+  Ce = ["src"];
+var Se = je(
   {
     components: {
-      Loading: ja(
+      Loading: je(
         {
           props: { mode: String },
-          setup: (a) => (e, s) => (
+          setup: (e) => (a, s) => (
             g(),
             b(
               x,
               null,
               [
                 w(" {{ mode }} "),
-                h("div", { class: y(["mask", a.mode]) }, null, 2),
+                h("div", { class: y(["mask", e.mode]) }, null, 2),
                 h(
                   "div",
-                  { class: y(["bg", a.mode]) },
+                  { class: y(["bg", e.mode]) },
                   [
-                    h("div", qa, [
-                      h("div", za, [
+                    h("div", qe, [
+                      h("div", ze, [
                         h(
                           "img",
-                          { src: _(ka)("favicon.png"), alt: "" },
+                          { src: _(ke)("favicon.png"), alt: "" },
                           null,
                           8,
-                          Ca
+                          Ce
                         ),
                       ]),
                     ]),
@@ -208,47 +209,47 @@ var Sa = ja(
         [
           [
             "__file",
-            "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/loading.vue",
+            "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/loading.vue",
           ],
         ]
       ),
     },
     setup() {
-      const a = k(),
-        e = j(!1),
+      const e = k(),
+        a = j(!1),
         s = j(""),
         t = j("leave"),
         i = q(() => "stop" === t.value),
         l = q(() => {
-          if (T(a.state.route.path)) return null;
-          return L("layout-error")(I(["meta", "layout"], a.state.route));
+          if (T(e.state.route.path)) return null;
+          return L("layout-error")(I(["meta", "layout"], e.state.route));
         });
       return (
         z(
-          () => a.state.route,
+          () => e.state.route,
           (i) => {
             s.value !== i &&
-              ((e.value = !0),
+              ((a.value = !0),
               setTimeout(() => {
-                (e.value = !1), (t.value = "enter");
+                (a.value = !1), (t.value = "enter");
               }, 3500)),
-              (s.value = a.state.route.path);
+              (s.value = e.state.route.path);
           }
         ),
-        z(e, (e) => {
-          a.commit("app/systm/Loading", e);
+        z(a, (a) => {
+          e.commit("app/systm/Loading", a);
         }),
         C(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: l, isShowLoading: e, mode: t, isError: i }
+        { layout: l, isShowLoading: a, mode: t, isError: i }
       );
     },
   },
   [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         const o = S("router-view"),
           r = S("the-popup"),
           n = S("Loading");
@@ -266,7 +267,7 @@ var Sa = ja(
                     ' 內層利用router顯示 透過解構賦值 取得從router-view取得的component 在把Component用在:is＝"Component"身上'
                   ),
                   B(o, null, {
-                    default: A(({ Component: a }) => [(g(), O(E(a)))]),
+                    default: A(({ Component: e }) => [(g(), O(E(e)))]),
                     _: 1,
                   }),
                 ]),
@@ -283,10 +284,10 @@ var Sa = ja(
       },
     ],
     ["__scopeId", "data-v-7ba5bd90"],
-    ["__file", "/Users/georgehuang/Documents/GitHub/basis.work/src/App.vue"],
+    ["__file", "/Users/lishengjie/Documents/GitHub/basis.work/src/App.vue"],
   ]
 );
-const Oa = {
+const Oe = {
     "../locales/en/app.js": Object.freeze(
       Object.defineProperty(
         {
@@ -495,27 +496,27 @@ const Oa = {
       )
     ),
   },
-  Aa = {};
-for (let Ao in Oa) {
-  const a = Ao.replace("../locales/", "").toLowerCase().replace(".js", ""),
-    [e, ...s] = a.split("/"),
+  Ae = {};
+for (let Po in Oe) {
+  const e = Po.replace("../locales/", "").toLowerCase().replace(".js", ""),
+    [a, ...s] = e.split("/"),
     t = P(".", s),
-    i = Oa[Ao].default;
-  Aa[e] = M((a, e) => D(a, { [`${t}.${e}`]: i[e] }), Aa[e] || {}, F(i));
+    i = Oe[Po].default;
+  Ae[a] = M((e, a) => D(e, { [`${t}.${a}`]: i[a] }), Ae[a] || {}, F(i));
 }
-const Ea = (() => {
-    var a, e, s, t;
+const Ee = (() => {
+    var e, a, s, t;
     const i = H.get("locale");
     if (i) return i;
     let l =
       null !=
       (t =
         null !=
-        (s = null == (a = navigator.language) ? void 0 : a.toLowerCase())
+        (s = null == (e = navigator.language) ? void 0 : e.toLowerCase())
           ? s
-          : null == (e = navigator.userLanguage)
+          : null == (a = navigator.userLanguage)
           ? void 0
-          : e.toLowerCase())
+          : a.toLowerCase())
         ? t
         : null;
     return l
@@ -524,23 +525,23 @@ const Ea = (() => {
           : l.includes("zh")
           ? (l = "zh-tw")
           : l.includes("en") && (l = "en"),
-        (l = l in Aa ? l : {}.VITE_LOCALE),
+        (l = l in Ae ? l : {}.VITE_LOCALE),
         l)
       : {}.VITE_LOCALE;
   })(),
-  Ba = U.exports.createI18n({
-    initLocale: Ea,
-    fallbackLocale: null != (a = {}.VITE_DEFAULT_LANG) ? a : "zh-tw",
-    messages: Aa,
+  Be = U.exports.createI18n({
+    initLocale: Ee,
+    fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
+    messages: Ae,
   });
-var Ta = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ba }, Symbol.toStringTag, {
+var Te = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Be }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(V.toast = function (a) {
+(V.toast = function (e) {
   return this.fire({
-    title: a,
+    title: e,
     toast: !0,
     showConfirmButton: !1,
     customClass: "swal2-toast",
@@ -548,23 +549,23 @@ var Ta = Object.freeze(
     hideClass: { popup: "animate__animated animate__fadeOutDown" },
     timer: 2e3,
     background: "transparent",
-    didOpen: (a) => {
-      a.addEventListener("click", V.close);
+    didOpen: (e) => {
+      e.addEventListener("click", V.close);
     },
   });
 }),
   (V.alert = function ({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     willClose: s = null,
     heightAuto: t = !1,
     html: i = !1,
-    confirmButtonText: l = Ba.t("button.confirm"),
+    confirmButtonText: l = Be.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: i,
       customClass: `swal2-alert ${o}`,
       heightAuto: t,
@@ -585,15 +586,15 @@ var Ta = Object.freeze(
     });
   }),
   (V.confirm = function ({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     html: s,
     confirmCallback: t = null,
     heightAuto: i = !1,
   }) {
     return this.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: s,
       customClass: "swal2-confirm",
       heightAuto: i,
@@ -605,7 +606,7 @@ var Ta = Object.freeze(
       },
     });
   });
-const La = V.mixin({
+const Le = V.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -613,62 +614,62 @@ const La = V.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Ba.t("button.confirm"),
-  cancelButtonText: Ba.t("button.cancel"),
-  didOpen(a) {
-    const e = a.querySelector(".swal2-cancel");
-    a.querySelector(".swal2-confirm").blur(), e.blur();
+  confirmButtonText: Be.t("button.confirm"),
+  cancelButtonText: Be.t("button.cancel"),
+  didOpen(e) {
+    const a = e.querySelector(".swal2-cancel");
+    e.querySelector(".swal2-confirm").blur(), a.blur();
   },
 });
-class Ia {
+class Ie {
   constructor() {
     return H;
   }
 }
-class Pa {
+class Pe {
   constructor() {
-    this.provider = new Ia();
+    this.provider = new Ie();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Pa.prototype.install = function (a) {
-  const e = "storage-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Pe.prototype.install = function (e) {
+  const a = "storage-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Ma = new Pa(),
-  Da = Object.freeze(
+var Me = new Pe(),
+  De = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Pa, default: Ma },
+      { __proto__: null, StorageService: Pe, default: Me },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Fa = () => {
-    const a = U.exports.useI18n(),
-      e = j({}),
+const Fe = () => {
+    const e = U.exports.useI18n(),
+      a = j({}),
       s = (t, i = {}) => {
         const [l, ...o] = N(".", t);
-        return l in e.value ? s(`${e.value[l]}.${P(".", o)}`, i) : a.t(t, i);
+        return l in a.value ? s(`${a.value[l]}.${P(".", o)}`, i) : e.t(t, i);
       };
     return {
-      locale: a.locale,
-      change: (e) => {
-        a.setLocale(e), Ma.provider.set("locale", e);
+      locale: e.locale,
+      change: (a) => {
+        e.setLocale(a), Me.provider.set("locale", a);
       },
-      setPrefix: (a) => {
-        e.value = "string" == typeof a ? { $current: a } : f(f({}, e.value), a);
+      setPrefix: (e) => {
+        a.value = "string" == typeof e ? { $current: e } : f(f({}, a.value), e);
       },
       t: s,
-      addMessages: a.addMessages,
+      addMessages: e.addMessages,
     };
   },
-  Ha = ["onMouseenter", "onClick"],
-  Ua = h("div", { class: "line" }, null, -1),
-  Va = { class: "list_style" },
-  Na = { class: "nav_link-top" },
-  Ga = h(
+  He = ["onMouseenter", "onClick"],
+  Ue = h("div", { class: "line" }, null, -1),
+  Ve = { class: "list_style" },
+  Ne = { class: "nav_link-top" },
+  Ge = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -677,10 +678,10 @@ const Fa = () => {
     null,
     -1
   ),
-  Xa = { class: "nav_link-title" },
-  Wa = { class: "u-ts-3" },
-  Ra = { class: "nav_link-p" },
-  Ya = h(
+  Xe = { class: "nav_link-title" },
+  We = { class: "u-ts-3" },
+  Re = { class: "nav_link-p" },
+  Ye = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -689,13 +690,13 @@ const Fa = () => {
     null,
     -1
   ),
-  Za = h("div", { id: "pink_mask" }, null, -1);
-var Ka = ja(
+  Ze = h("div", { id: "pink_mask" }, null, -1);
+var Ke = je(
   {
     props: ["isOpen"],
     emits: ["toggleOpen"],
-    setup(a, { emit: e }) {
-      const s = a,
+    setup(e, { emit: a }) {
+      const s = e,
         t = j(1),
         i = j(!0),
         l = G(),
@@ -739,7 +740,7 @@ var Ka = ja(
           }
         }),
         d = j(25);
-      return (a, c) => (
+      return (e, c) => (
         g(),
         b(
           "div",
@@ -752,32 +753,32 @@ var Ka = ja(
                 null,
                 X(
                   o.value,
-                  (a, i) => (
+                  (e, i) => (
                     g(),
                     b(
                       "li",
                       {
-                        key: a,
-                        style: W(`--i: ${a}`),
-                        onMouseenter: (a) =>
-                          ((a) => {
-                            t.value = a;
+                        key: e,
+                        style: W(`--i: ${e}`),
+                        onMouseenter: (e) =>
+                          ((e) => {
+                            t.value = e;
                           })(i),
                         onClick: (t) => {
                           return (
-                            (i = a.path),
+                            (i = e.path),
                             l.push(i),
-                            void e("toggleOpen", s.isOpen)
+                            void a("toggleOpen", s.isOpen)
                           );
                           var i;
                         },
                       },
                       [
-                        Ua,
-                        h("div", Va, [
-                          h("div", Na, [
-                            Ga,
-                            h("div", Xa, [h("div", Wa, R(a.title), 1)]),
+                        Ue,
+                        h("div", Ve, [
+                          h("div", Ne, [
+                            Ge,
+                            h("div", Xe, [h("div", We, R(e.title), 1)]),
                           ]),
                           h(
                             "div",
@@ -787,13 +788,13 @@ var Ka = ja(
                                 { active: t.value === i },
                               ]),
                             },
-                            [h("p", Ra, R(a.content), 1), Ya],
+                            [h("p", Re, R(e.content), 1), Ye],
                             2
                           ),
                         ]),
                       ],
                       44,
-                      Ha
+                      He
                     )
                   )
                 ),
@@ -813,7 +814,7 @@ var Ka = ja(
                 4
               ),
             ]),
-            Za,
+            Ze,
           ],
           2
         )
@@ -823,226 +824,239 @@ var Ka = ja(
   [
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/nav-bar.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/nav-bar.vue",
     ],
   ]
 );
-const $a = { key: 0 },
-  Ja = ["src"],
-  Qa = ["src"],
-  ae = [h("div", null, null, -1), h("div", null, null, -1)];
-const ee = { class: "layout-deafult pb-32" };
-var se = ja(
+const $e = { key: 0 },
+  Je = ["src"],
+  Qe = ["src"],
+  ea = [h("div", null, null, -1), h("div", null, null, -1)];
+const aa = { class: "layout-deafult pb-32" };
+var sa = je(
     {
       components: {
-        LayoutHeader: ja(
+        LayoutHeader: je(
           {
-            setup(a) {
-              const e = j(!1),
-                s = (a) => {
-                  e.value = !a;
+            setup(e) {
+              const a = j(!1),
+                s = (e) => {
+                  a.value = !e;
+                },
+                t = j(!1),
+                i = () => {
+                  window.pageYOffset > 100 ? (t.value = !0) : (t.value = !1);
                 };
-              return (a, t) => {
-                const i = S("router-link");
-                return (
-                  g(),
-                  b(
-                    x,
-                    null,
-                    [
-                      h(
-                        "div",
-                        {
-                          class: y([
-                            "layout-deafult-header",
-                            { active: e.value },
-                          ]),
-                        },
-                        [
-                          B(
-                            i,
-                            {
-                              to: "/",
-                              "aria-current": "page",
-                              class: y([
-                                "layout-deafult-header-logo",
-                                { "layout-deafult-header-logo--open": e.value },
-                              ]),
-                              "aria-label": "home",
-                            },
-                            {
-                              default: A(() => [
-                                e.value
-                                  ? (g(),
-                                    b(
-                                      "img",
-                                      {
-                                        key: 1,
-                                        src: _(ka)("logo.png"),
-                                        alt: "",
-                                      },
-                                      null,
-                                      8,
-                                      Qa
-                                    ))
-                                  : (g(),
-                                    b("div", $a, [
-                                      h(
+              return (
+                C(() => {
+                  window.addEventListener("scroll", i);
+                }),
+                (e, i) => {
+                  const l = S("router-link");
+                  return (
+                    g(),
+                    b(
+                      x,
+                      null,
+                      [
+                        h(
+                          "div",
+                          {
+                            class: y([
+                              "layout-deafult-header",
+                              { active: a.value, offtop: t.value },
+                            ]),
+                          },
+                          [
+                            B(
+                              l,
+                              {
+                                to: "/",
+                                "aria-current": "page",
+                                class: y([
+                                  "layout-deafult-header-logo",
+                                  {
+                                    "layout-deafult-header-logo--open": a.value,
+                                  },
+                                ]),
+                                "aria-label": "home",
+                              },
+                              {
+                                default: A(() => [
+                                  a.value
+                                    ? (g(),
+                                      b(
                                         "img",
-                                        { src: _(ka)("logo.png"), alt: "" },
+                                        {
+                                          key: 1,
+                                          src: _(ke)("logo.png"),
+                                          alt: "",
+                                        },
                                         null,
                                         8,
-                                        Ja
-                                      ),
-                                    ])),
-                              ]),
-                              _: 1,
-                            },
-                            8,
-                            ["class"]
-                          ),
-                          h(
-                            "div",
-                            {
-                              class: y([
-                                "layout-deafult-header-btn",
-                                { "layout-deafult-header-btn--open": e.value },
-                              ]),
-                              onClick:
-                                t[0] || (t[0] = (a) => (e.value = !e.value)),
-                            },
-                            ae,
-                            2
-                          ),
-                        ],
-                        2
-                      ),
-                      e.value
-                        ? (g(),
-                          O(
-                            Ka,
-                            { key: 0, "is-open": e.value, onToggleOpen: s },
-                            null,
-                            8,
-                            ["is-open"]
-                          ))
-                        : w("v-if", !0),
-                    ],
-                    64
-                  )
-                );
-              };
+                                        Qe
+                                      ))
+                                    : (g(),
+                                      b("div", $e, [
+                                        h(
+                                          "img",
+                                          { src: _(ke)("logo.png"), alt: "" },
+                                          null,
+                                          8,
+                                          Je
+                                        ),
+                                      ])),
+                                ]),
+                                _: 1,
+                              },
+                              8,
+                              ["class"]
+                            ),
+                            h(
+                              "div",
+                              {
+                                class: y([
+                                  "layout-deafult-header-btn",
+                                  {
+                                    "layout-deafult-header-btn--open": a.value,
+                                  },
+                                ]),
+                                onClick:
+                                  i[0] || (i[0] = (e) => (a.value = !a.value)),
+                              },
+                              ea,
+                              2
+                            ),
+                          ],
+                          2
+                        ),
+                        a.value
+                          ? (g(),
+                            O(
+                              Ke,
+                              { key: 0, "is-open": a.value, onToggleOpen: s },
+                              null,
+                              8,
+                              ["is-open"]
+                            ))
+                          : w("v-if", !0),
+                      ],
+                      64
+                    )
+                  );
+                }
+              );
             },
           },
           [
             [
               "__file",
-              "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/header.vue",
+              "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/header.vue",
             ],
           ]
         ),
       },
       setup() {
-        const { t: a } = Fa();
-        return { t: a };
+        const { t: e } = Fe();
+        return { t: e };
       },
     },
     [
       [
         "render",
-        function (a, e, s, t, i, l) {
+        function (e, a, s, t, i, l) {
           const o = S("LayoutHeader");
           return (
-            g(), b(x, null, [B(o), h("div", ee, [Y(a.$slots, "default")])], 64)
+            g(), b(x, null, [B(o), h("div", aa, [Y(e.$slots, "default")])], 64)
           );
         },
       ],
       [
         "__file",
-        "/Users/georgehuang/Documents/GitHub/basis.work/src/layouts/layout-default.vue",
+        "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-default.vue",
       ],
     ]
   ),
-  te = Object.freeze(
+  ta = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: se },
+      { __proto__: null, default: sa },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ie = { class: "layout-demo" };
-var le = ja({ setup() {} }, [
+const ia = { class: "layout-demo" };
+var la = je({ setup() {} }, [
   [
     "render",
-    function (a, e, s, t, i, l) {
-      return g(), b("div", ie, [Y(a.$slots, "default")]);
+    function (e, a, s, t, i, l) {
+      return g(), b("div", ia, [Y(e.$slots, "default")]);
     },
   ],
   [
     "__file",
-    "/Users/georgehuang/Documents/GitHub/basis.work/src/layouts/layout-demo.vue",
+    "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-demo.vue",
   ],
 ]);
-const oe = {
-    "../layouts/layout-default.vue": te,
+const oa = {
+    "../layouts/layout-default.vue": ta,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: le },
+        { __proto__: null, default: la },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  re = [];
-for (let Ao in oe) {
-  const a = Ao.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  re.push({ componentName: a, component: oe[Ao].default });
+  ra = [];
+for (let Po in oa) {
+  const e = Po.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  ra.push({ componentName: e, component: oa[Po].default });
 }
-const ne = {
-  install: (a) => {
-    re.forEach((e) => {
-      a.component(e.componentName, e.component);
+const na = {
+  install: (e) => {
+    ra.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-const de = {
+const da = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
-      const a = G();
+      const e = G();
       return {
         goBack: () => {
-          a.options.history.state.back
-            ? a.back()
-            : a.push({ name: "default-path" });
+          e.options.history.state.back
+            ? e.back()
+            : e.push({ name: "default-path" });
         },
       };
     },
   },
-  ce = {
+  ca = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
-  pe = { class: "font-bold" },
-  ve = { class: "absolute right-8 top-6" };
-var me = ja(de, [
+  pa = { class: "font-bold" },
+  va = { class: "absolute right-8 top-6" };
+var ma = je(da, [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         return (
           g(),
-          b("div", ce, [
+          b("div", ca, [
             s.goBackButton
               ? (g(),
                 b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
-                    e[0] || (e[0] = (...a) => t.goBack && t.goBack(...a)),
+                    a[0] || (a[0] = (...e) => t.goBack && t.goBack(...e)),
                 }))
               : w("v-if", !0),
-            h("div", pe, [
-              Y(a.$slots, "title", {}, () => [Z(R(s.title), 1)], !0),
+            h("div", pa, [
+              Y(e.$slots, "title", {}, () => [Z(R(s.title), 1)], !0),
             ]),
-            h("div", ve, [Y(a.$slots, "actions", {}, void 0, !0)]),
+            h("div", va, [Y(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
@@ -1050,87 +1064,87 @@ var me = ja(de, [
     ["__scopeId", "data-v-4c72660e"],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/components/the-header.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-header.vue",
     ],
   ]),
-  fe = Object.freeze(
+  fa = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: me },
+      { __proto__: null, default: ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ue = () => K("popup-service");
-const ge = {
+const ua = () => K("popup-service");
+const ga = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  be = { class: "swal2-title", style: { display: "block" } },
-  we = { class: "swal2-html-container", style: { display: "block" } },
-  he = { class: "swal2-actions", style: { display: "flex" } };
-var ye = ja({}, [
+  ba = { class: "swal2-title", style: { display: "block" } },
+  wa = { class: "swal2-html-container", style: { display: "block" } },
+  ha = { class: "swal2-actions", style: { display: "flex" } };
+var ya = je({}, [
   [
     "render",
-    function (a, e) {
+    function (e, a) {
       return (
         g(),
-        b("div", ge, [
-          h("h2", be, [Y(a.$slots, "title")]),
-          h("div", we, [Y(a.$slots, "content")]),
-          h("div", he, [Y(a.$slots, "actions")]),
+        b("div", ga, [
+          h("h2", ba, [Y(e.$slots, "title")]),
+          h("div", wa, [Y(e.$slots, "content")]),
+          h("div", ha, [Y(e.$slots, "actions")]),
         ])
       );
     },
   ],
   [
     "__file",
-    "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/popup/modal.vue",
+    "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/popup/modal.vue",
   ],
 ]);
-const _e = {
+const _a = {
     key: 0,
     class:
       "fixed z-[1041] inset-0 w-full h-full flex justify-center items-center pointer-events-none",
   },
-  xe = { key: 1 },
-  ke = ["data-timer", "data-end"];
-var je = ja(
+  xa = { key: 1 },
+  ka = ["data-timer", "data-end"];
+var ja = je(
   {
-    setup(a) {
-      const e = ue(),
-        s = q(() => e.state),
-        t = (a) => {
+    setup(e) {
+      const a = ua(),
+        s = q(() => a.state),
+        t = (e) => {
           s.value.resolve(
             f(
               { isConfirmed: !1, isDismissed: !1, dismiss: null, result: null },
-              a
+              e
             )
           );
         },
-        i = q(() => (s.value.type, ea(ye))),
+        i = q(() => (s.value.type, ae(ya))),
         l = q(() => s.value.BackdropStyle),
         o = j();
       let r = null;
       const n = () => {
         clearTimeout(r), (r = null);
       };
-      z([() => s.value.autoClose, () => s.value.timer], ([a, e]) => {
-        e &&
+      z([() => s.value.autoClose, () => s.value.timer], ([e, a]) => {
+        a &&
           (n(),
           (r = setTimeout(() => {
-            n(), a && d("timer");
-          }, e)));
+            n(), e && d("timer");
+          }, a)));
       });
-      const d = async (a) => {
+      const d = async (e) => {
           if (r) {
             if (!s.value.allowDismissWhenTimerRunning) return;
             n();
           }
           if (o.value && "onDismissed" in o.value) {
             const s = await o.value.onDismissed();
-            s && (t({ isDismissed: !0, dismiss: a, result: s }), e.clear());
-          } else t({ isDismissed: !0, dismiss: a }), e.clear();
+            s && (t({ isDismissed: !0, dismiss: e, result: s }), a.clear());
+          } else t({ isDismissed: !0, dismiss: e }), a.clear();
         },
         c = async () => {
           s.value.allowOutsideClick && d("backdrop");
@@ -1144,23 +1158,23 @@ var je = ja(
             n();
           }
           if (o.value && "onConfirmed" in o.value) {
-            const a = await o.value.onConfirmed();
-            a && (t({ isConfirmed: !0, result: a }), e.clear());
-          } else t({ isConfirmed: !0 }), e.clear();
+            const e = await o.value.onConfirmed();
+            e && (t({ isConfirmed: !0, result: e }), a.clear());
+          } else t({ isConfirmed: !0 }), a.clear();
         };
-      return (a, e) => (
+      return (e, a) => (
         g(),
-        O(aa, { to: "body" }, [
+        O(ee, { to: "body" }, [
           B(
             Q,
             { name: "popup", duration: "600" },
             {
               default: A(() => {
-                var a;
+                var e;
                 return [
                   _(s).$display
                     ? (g(),
-                      b("div", _e, [
+                      b("div", _a, [
                         (g(),
                         O(
                           E(_(i)),
@@ -1169,9 +1183,9 @@ var je = ja(
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
-                                  null == (a = _(s))
+                                  null == (e = _(s))
                                     ? void 0
-                                    : a.noEnterAnimation,
+                                    : e.noEnterAnimation,
                               },
                             ]),
                           },
@@ -1190,7 +1204,7 @@ var je = ja(
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xe, R(_(s).text), 1)),
+                                  : (g(), b("div", xa, R(_(s).text), 1)),
                               ]),
                               actions: A(() => [
                                 _(s).showCancelButton
@@ -1241,7 +1255,7 @@ var je = ja(
                                         },
                                         null,
                                         8,
-                                        ke
+                                        ka
                                       ),
                                     ]),
                                   }
@@ -1293,33 +1307,33 @@ var je = ja(
     ["__scopeId", "data-v-628f8c70"],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/components/the-popup.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-popup.vue",
     ],
   ]
 );
-const qe = {
-    "../components/the-header.vue": fe,
+const qa = {
+    "../components/the-header.vue": fa,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: je },
+        { __proto__: null, default: ja },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  ze = [];
-for (let Ao in qe) {
-  const a = Ao.replace("../components/", "").toLowerCase().replace(".vue", "");
-  ze.push({ componentName: a, component: qe[Ao].default });
+  za = [];
+for (let Po in qa) {
+  const e = Po.replace("../components/", "").toLowerCase().replace(".vue", "");
+  za.push({ componentName: e, component: qa[Po].default });
 }
-const Ce = {
-  install: (a) => {
-    ze.forEach((e) => {
-      a.component(e.componentName, e.component);
+const Ca = {
+  install: (e) => {
+    za.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-class Se {
+class Sa {
   constructor() {
     return V.mixin({
       reverseButtons: !0,
@@ -1329,22 +1343,22 @@ class Se {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Ba.t("button.confirm"),
-      cancelButtonText: Ba.t("button.cancel"),
-      didOpen(a) {
-        const e = a.querySelector(".swal2-cancel");
-        a.querySelector(".swal2-confirm").blur(), e.blur();
+      confirmButtonText: Be.t("button.confirm"),
+      cancelButtonText: Be.t("button.cancel"),
+      didOpen(e) {
+        const a = e.querySelector(".swal2-cancel");
+        e.querySelector(".swal2-confirm").blur(), a.blur();
       },
     });
   }
 }
-class Oe {
+class Oa {
   constructor() {
-    this.provider = new Se();
+    this.provider = new Sa();
   }
-  toast(a) {
+  toast(e) {
     return this.provider.fire({
-      title: a,
+      title: e,
       toast: !0,
       showConfirmButton: !1,
       customClass: "swal2-toast",
@@ -1352,23 +1366,23 @@ class Oe {
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       timer: 2e3,
       background: "transparent",
-      didOpen: (a) => {
-        a.addEventListener("click", this.provider.close);
+      didOpen: (e) => {
+        e.addEventListener("click", this.provider.close);
       },
     });
   }
   alert({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     willClose: s = null,
     heightAuto: t = !1,
     html: i = !1,
-    confirmButtonText: l = Ba.t("button.confirm"),
+    confirmButtonText: l = Be.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: i,
       customClass: `swal2-alert ${o}`,
       heightAuto: t,
@@ -1391,16 +1405,16 @@ class Oe {
     });
   }
   confirm({
-    title: a,
-    text: e,
+    title: e,
+    text: a,
     html: s,
-    confirmButtonText: t = Ba.t("button.confirm"),
+    confirmButtonText: t = Be.t("button.confirm"),
     confirmCallback: i = null,
     heightAuto: l = !1,
   }) {
     return this.provider.fire({
-      title: a,
-      text: e,
+      title: e,
+      text: a,
       html: s,
       customClass: "swal2-confirm",
       confirmButtonText: t,
@@ -1417,163 +1431,163 @@ class Oe {
     this.provider.close();
   }
 }
-Oe.prototype.install = function (a) {
-  const e = "alert-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Oa.prototype.install = function (e) {
+  const a = "alert-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Ae = new Oe(),
-  Ee = Object.freeze(
+var Aa = new Oa(),
+  Ea = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Oe, default: Ae },
+      { __proto__: null, AlertService: Oa, default: Aa },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Be {
-  constructor(a, e = {}) {
-    this.instance = sa.create(f({ baseURL: a }, e));
+class Ba {
+  constructor(e, a = {}) {
+    this.instance = se.create(f({ baseURL: e }, a));
   }
   init() {
-    this.instance.defaults.validateStatus = (a) => a >= 200 && a < 300;
+    this.instance.defaults.validateStatus = (e) => e >= 200 && e < 300;
   }
-  use(...a) {
-    a.forEach((a) => {
-      var e;
-      null == (e = a.use) || e.call(a, this.instance);
+  use(...e) {
+    e.forEach((e) => {
+      var a;
+      null == (a = e.use) || a.call(e, this.instance);
     });
   }
 }
-const Te = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
-          return a;
+const Ta = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
+          return e;
         },
-        function (a) {
-          return a && a.response, Promise.reject(a);
+        function (e) {
+          return e && e.response, Promise.reject(e);
         }
       ),
-        a.interceptors.response.use(
-          function (a) {
-            return a;
+        e.interceptors.response.use(
+          function (e) {
+            return e;
           },
-          function (a) {
-            return a && a.response, Promise.reject(a);
+          function (e) {
+            return e && e.response, Promise.reject(e);
           }
         );
     },
   },
-  Le = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
-          const e = H.get("token");
-          return e && (a.headers.Authorization = `Bearer ${e}`), a;
+  La = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
+          const a = H.get("token");
+          return a && (e.headers.Authorization = `Bearer ${a}`), e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   },
-  Ie = (a, { rejectNil: e, rejectEmpty: s }) =>
+  Ia = (e, { rejectNil: a, rejectEmpty: s }) =>
     M(
       (t, i) => {
-        const l = a[i];
-        return (e && T(l)) || (s && ta(l)) ? t : ia(i, l, t);
+        const l = e[i];
+        return (a && T(l)) || (s && te(l)) ? t : ie(i, l, t);
       },
       {},
-      F(a)
+      F(e)
     ),
-  Pe = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
+  Pa = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
           const {
-            rejectNil: e = !0,
+            rejectNil: a = !0,
             rejectEmpty: s = !1,
             isFormData: t = !1,
-          } = a;
+          } = e;
           if (
-            (a.params &&
-              (a.params = Ie(a.params, { rejectNil: e, rejectEmpty: s })),
-            a.data &&
-              ((a.data = Ie(a.data, { rejectNil: e, rejectEmpty: s })), t))
+            (e.params &&
+              (e.params = Ia(e.params, { rejectNil: a, rejectEmpty: s })),
+            e.data &&
+              ((e.data = Ia(e.data, { rejectNil: a, rejectEmpty: s })), t))
           ) {
-            const e = new FormData();
-            la((s) => {
-              a.data[s] instanceof Array
-                ? la((a) => {
-                    e.append(`${s}[]`, a);
-                  }, a.data[s])
-                : e.append(s, a.data[s]);
-            }, F(a.data)),
-              (a.data = e);
+            const a = new FormData();
+            le((s) => {
+              e.data[s] instanceof Array
+                ? le((e) => {
+                    a.append(`${s}[]`, e);
+                  }, e.data[s])
+                : a.append(s, e.data[s]);
+            }, F(e.data)),
+              (e.data = a);
           }
-          return a;
+          return e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       ),
-        a.interceptors.response.use(
-          async function (a) {
-            return a.data;
+        e.interceptors.response.use(
+          async function (e) {
+            return e.data;
           },
-          function (a) {
-            return Promise.reject(a);
+          function (e) {
+            return Promise.reject(e);
           }
         );
     },
   },
-  Me = sa.create();
-(Me.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Me.defaults.validateStatus = (a) => a >= 200 && a < 300);
-const De = {
+  Ma = se.create();
+(Ma.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Ma.defaults.validateStatus = (e) => e >= 200 && e < 300);
+const Da = {
   async "read/marquee"() {
-    const a = await Me.get("/app/user/news", {
+    const e = await Ma.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Me.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: a.data, withdraw: e.data };
+      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Fe = {
-  "set/popup"(a, e) {
-    a.popupState = u(f({}, e), { $display: !0, $timestamp: Date.now() });
+const Fa = {
+  "set/popup"(e, a) {
+    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(a) {
-    a.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(e) {
+    e.popupState = { $display: !1, $timestamp: -1 };
   },
-  "systm/Loading"(a, e) {
-    a.isLoading = e;
+  "systm/Loading"(e, a) {
+    e.isLoading = a;
   },
 };
-const He = {
+const Ha = {
   async "read/marquee"() {
-    const a = await Me.get("/app/user/news", {
+    const e = await Ma.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Me.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: a.data, withdraw: e.data };
+      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Ue = {
-  "set/popup"(a, e) {
-    a.popupState = u(f({}, e), { $display: !0, $timestamp: Date.now() });
+const Ua = {
+  "set/popup"(e, a) {
+    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(a) {
-    a.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(e) {
+    e.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Ve = {
+const Va = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: De },
+      { __proto__: null, default: Da },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1583,10 +1597,10 @@ const Ve = {
       {
         __proto__: null,
         default: {
-          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
-          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
-          getHadValueTypeFirstItem: (a) => (e) =>
-            a.tips.find((a) => a.type === e && "" !== a.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1595,7 +1609,7 @@ const Ve = {
   ),
   "../store/app/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Fe },
+      { __proto__: null, default: Fa },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1617,7 +1631,7 @@ const Ve = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: He },
+      { __proto__: null, default: Ha },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1627,10 +1641,10 @@ const Ve = {
       {
         __proto__: null,
         default: {
-          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
-          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
-          getHadValueTypeFirstItem: (a) => (e) =>
-            a.tips.find((a) => a.type === e && "" !== a.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1639,7 +1653,7 @@ const Ve = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ue },
+      { __proto__: null, default: Ua },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1659,54 +1673,54 @@ const Ve = {
     )
   ),
 };
-let Ne = {};
-const Ge = (a, e, s) => {
-  const [t, ...i] = a;
+let Na = {};
+const Ga = (e, a, s) => {
+  const [t, ...i] = e;
   return i.length
-    ? { [t]: { namespaced: !0, modules: Ge(i, e, s) } }
-    : { [t]: { namespaced: !0, [e]: s } };
+    ? { [t]: { namespaced: !0, modules: Ga(i, a, s) } }
+    : { [t]: { namespaced: !0, [a]: s } };
 };
-for (let Ao in Ve) {
-  const a = Ao.replace("../store/", "")
+for (let Po in Va) {
+  const e = Po.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Ne = na(Ne, Ge(ra(a), oa(a), Ve[Ao].default));
+  Na = ne(Na, Ga(re(e), oe(e), Va[Po].default));
 }
-var Xe = Ne;
-const We = {},
-  Re = function (a, e) {
-    return e && 0 !== e.length
+var Xa = Na;
+const Wa = {},
+  Ra = function (e, a) {
+    return a && 0 !== a.length
       ? Promise.all(
-          e.map((a) => {
-            if ((a = `./${a}`) in We) return;
-            We[a] = !0;
-            const e = a.endsWith(".css"),
-              s = e ? '[rel="stylesheet"]' : "";
-            if (document.querySelector(`link[href="${a}"]${s}`)) return;
+          a.map((e) => {
+            if ((e = `./${e}`) in Wa) return;
+            Wa[e] = !0;
+            const a = e.endsWith(".css"),
+              s = a ? '[rel="stylesheet"]' : "";
+            if (document.querySelector(`link[href="${e}"]${s}`)) return;
             const t = document.createElement("link");
             return (
-              (t.rel = e ? "stylesheet" : "modulepreload"),
-              e || ((t.as = "script"), (t.crossOrigin = "")),
-              (t.href = a),
+              (t.rel = a ? "stylesheet" : "modulepreload"),
+              a || ((t.as = "script"), (t.crossOrigin = "")),
+              (t.href = e),
               document.head.appendChild(t),
-              e
-                ? new Promise((e, s) => {
-                    t.addEventListener("load", e),
+              a
+                ? new Promise((a, s) => {
+                    t.addEventListener("load", a),
                       t.addEventListener("error", () =>
-                        s(new Error(`Unable to preload CSS for ${a}`))
+                        s(new Error(`Unable to preload CSS for ${e}`))
                       );
                   })
                 : void 0
             );
           })
-        ).then(() => a())
-      : a();
+        ).then(() => e())
+      : e();
   },
-  Ye = { class: "footer" },
-  Ze = { class: "container" },
-  Ke = { class: "row row-justify-center" },
-  $e = h(
+  Ya = { class: "footer" },
+  Za = { class: "container" },
+  Ka = { class: "row row-justify-center" },
+  $a = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1755,7 +1769,7 @@ const We = {},
     ],
     -1
   ),
-  Je = h(
+  Ja = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1800,9 +1814,9 @@ const We = {},
     ],
     -1
   ),
-  Qe = h("div", { class: "col col-md-hide" }, null, -1),
-  as = { class: "col col-lg-4 col-md-12 col-md-first" },
-  es = { href: "/", class: "footer-wordmark w-inline-block" },
+  Qa = h("div", { class: "col col-md-hide" }, null, -1),
+  es = { class: "col col-lg-4 col-md-12 col-md-first" },
+  as = { href: "/", class: "footer-wordmark w-inline-block" },
   ss = { class: "wordmark w-embed" },
   ts = ["src"],
   is = h(
@@ -1816,22 +1830,22 @@ const We = {},
     ],
     -1
   );
-var ls = ja(
+var ls = je(
   {
-    setup: (a) => (a, e) => (
+    setup: (e) => (e, a) => (
       g(),
-      b("footer", Ye, [
-        h("div", Ze, [
-          h("div", Ke, [
-            $e,
-            Je,
-            Qe,
-            h("div", as, [
-              h("a", es, [
+      b("footer", Ya, [
+        h("div", Za, [
+          h("div", Ka, [
+            $a,
+            Ja,
+            Qa,
+            h("div", es, [
+              h("a", as, [
                 h("div", ss, [
                   h(
                     "img",
-                    { class: "img-filter", src: _(ka)("logo.png"), alt: "" },
+                    { class: "img-filter", src: _(ke)("logo.png"), alt: "" },
                     null,
                     8,
                     ts
@@ -1848,29 +1862,29 @@ var ls = ja(
   [
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/footer.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/footer.vue",
     ],
   ]
 );
 const os = {
     components: { Footer: ls },
     setup() {
-      const { t: a } = Fa();
+      const { t: e } = Fe();
       return (
         C(() => {
-          da.init();
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+          de.init();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a }
+        { t: e }
       );
     },
   },
@@ -3585,14 +3599,14 @@ const os = {
     ],
     -1
   ),
-  vs = ca(
+  vs = ce(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   );
-var ms = ja(os, [
+var ms = je(os, [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         const o = S("Footer");
         return (
           g(),
@@ -3619,7 +3633,7 @@ var ms = ja(os, [
     ],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/about.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/about.vue",
     ],
   ]),
   fs = Object.freeze(
@@ -3633,33 +3647,33 @@ const us = {
     title: "pages.home.nav.about",
     components: { Footer: ls },
     setup() {
-      const { t: a } = Fa();
+      const { t: e } = Fe();
       return (
         C(() => {
-          da.init(),
+          de.init(),
             (() => {
-              let a = document.querySelector("#cases");
-              a.addEventListener("wheel", (e) => {
+              let e = document.querySelector("#cases");
+              e.addEventListener("wheel", (a) => {
                 window.innerWidth > 991 &&
-                  (e.preventDefault(), (a.scrollLeft += e.deltaY));
+                  (a.preventDefault(), (e.scrollLeft += a.deltaY));
               });
             })();
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a }
+        { t: e }
       );
     },
   },
-  gs = ((a) => (pa("data-v-74f67db4"), (a = a()), va(), a))(() =>
+  gs = ((e) => (pe("data-v-74f67db4"), (e = e()), ve(), e))(() =>
     h(
       "div",
       { id: "cases", class: "wrap" },
@@ -4887,14 +4901,14 @@ const us = {
       -1
     )
   ),
-  bs = ca(
+  bs = ce(
     '<div class="container mobile-show" data-v-74f67db4><div class="target_line" data-v-74f67db4></div></div><section class="section mobile-show" data-v-74f67db4><div class="section-title_component" data-v-74f67db4><div class="container" data-v-74f67db4><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-74f67db4><div class="section-title_dot" style="opacity:1;" data-v-74f67db4></div><div class="u-overflow-hidden" data-v-74f67db4><div class="section-title_title" data-v-74f67db4><h2 class="u-ts-4" data-v-74f67db4>Contact Us</h2></div></div></div></div></div><div class="container" data-v-74f67db4><div class="w-layout-grid pair-grid" data-v-74f67db4><div data-v-74f67db4><div class="contact-cta w-richtext" data-v-74f67db4><h3 data-aos="fade-up" data-aos-duration="700" data-v-74f67db4><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-74f67db4><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-74f67db4><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4><div style="position:relative;display:inline-block;" data-v-74f67db4> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   );
-var ws = ja(us, [
+var ws = je(us, [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         const o = S("Footer");
         return g(), b(x, null, [gs, bs, B(o, { class: "mobile-show" })], 64);
       },
@@ -4902,7 +4916,7 @@ var ws = ja(us, [
     ["__scopeId", "data-v-74f67db4"],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/case.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/case.vue",
     ],
   ]),
   hs = Object.freeze(
@@ -4915,32 +4929,32 @@ var ws = ja(us, [
 const ys = {
     layout: "layout-demo",
     setup() {
-      const a = ue(),
-        { t: e, locale: s, setPrefix: t, change: i } = Fa();
+      const e = ua(),
+        { t: a, locale: s, setPrefix: t, change: i } = Fe();
       t({ $current: "pages.demo" });
       const l = G(),
         o = K("alert-service"),
-        r = ma({ current: s.value || "zh-tw" });
+        r = me({ current: s.value || "zh-tw" });
       return (
         C(() => {}),
         {
-          t: e,
+          t: a,
           lang: r,
           toHome: () => {
             l.push("/home");
           },
           swalModal: () => {
             o.alert({
-              title: e("$current.modal.swal.title"),
-              text: e("$current.modal.swal"),
+              title: a("$current.modal.swal.title"),
+              text: a("$current.modal.swal"),
             });
           },
           changeLang: () => {
-            const a = "zh-tw" === r.current ? "en" : "zh-tw";
-            (r.current = a), i(a);
+            const e = "zh-tw" === r.current ? "en" : "zh-tw";
+            (r.current = e), i(e);
           },
           popupModal: async () => {
-            await a.modal({ title: "popup", text: "this a popup" });
+            await e.modal({ title: "popup", text: "this a popup" });
           },
         }
       );
@@ -4963,10 +4977,10 @@ const ys = {
   Bs = { class: "name" },
   Ts = h("input", { type: "radio", name: "radio" }, null, -1),
   Ls = { class: "name" };
-var Is = ja(ys, [
+var Is = je(ys, [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         return (
           g(),
           b("div", _s, [
@@ -4979,8 +4993,8 @@ var Is = ja(ys, [
                     {
                       class: "toggle",
                       onClick:
-                        e[0] ||
-                        (e[0] = (...a) => t.changeLang && t.changeLang(...a)),
+                        a[0] ||
+                        (a[0] = (...e) => t.changeLang && t.changeLang(...e)),
                     },
                     qs
                   ),
@@ -4995,7 +5009,7 @@ var Is = ja(ys, [
                   {
                     class: "radio",
                     onClick:
-                      e[1] || (e[1] = (...a) => t.toHome && t.toHome(...a)),
+                      a[1] || (a[1] = (...e) => t.toHome && t.toHome(...e)),
                   },
                   [Os, h("span", As, R(t.t("$current.router.link")), 1)]
                 ),
@@ -5004,8 +5018,8 @@ var Is = ja(ys, [
                   {
                     class: "radio",
                     onClick:
-                      e[2] ||
-                      (e[2] = (...a) => t.swalModal && t.swalModal(...a)),
+                      a[2] ||
+                      (a[2] = (...e) => t.swalModal && t.swalModal(...e)),
                   },
                   [Es, h("span", Bs, R(t.t("$current.modal.swal")), 1)]
                 ),
@@ -5014,8 +5028,8 @@ var Is = ja(ys, [
                   {
                     class: "radio",
                     onClick:
-                      e[3] ||
-                      (e[3] = (...a) => t.popupModal && t.popupModal(...a)),
+                      a[3] ||
+                      (a[3] = (...e) => t.popupModal && t.popupModal(...e)),
                   },
                   [Ts, h("span", Ls, R(t.t("$current.popup.use")), 1)]
                 ),
@@ -5027,7 +5041,7 @@ var Is = ja(ys, [
     ],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/demo.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/demo.vue",
     ],
   ]),
   Ps = Object.freeze(
@@ -5037,7 +5051,7 @@ var Is = ja(ys, [
       { value: "Module" }
     )
   );
-const Ms = (a) =>
+const Ms = (e) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -5047,28 +5061,28 @@ const Ms = (a) =>
         "../assets/video/home/knife2-3.mp4": "./assets/knife2-3.db814c22.mp4",
         "../assets/video/home/knife2-4.mp4": "./assets/knife2-4.0d587ad1.mp4",
         "../assets/video/home/tea_1.mp4": "./assets/tea_1.8e120b16.mp4",
-      }[`../assets/video/${a}`],
+      }[`../assets/video/${e}`],
       self.location
     ).href,
   Ds = {
     components: { Footer: ls },
     setup() {
-      const { t: a } = Fa();
+      const { t: e } = Fe();
       return (
         C(() => {
-          da.init();
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+          de.init();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a, getVideoUrl: Ms }
+        { t: e, getVideoUrl: Ms }
       );
     },
   },
@@ -5087,7 +5101,7 @@ const Ms = (a) =>
   Gs = ["src"],
   Xs = Z(" Your browser does not support the video tag. "),
   Ws = h("div", { class: "iframe-video_blocker" }, null, -1),
-  Rs = ca(
+  Rs = ce(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
@@ -5759,7 +5773,7 @@ const Ms = (a) =>
     [h("div", { class: "target_line" })],
     -1
   ),
-  at = h(
+  et = h(
     "section",
     { class: "section" },
     [
@@ -6357,7 +6371,7 @@ const Ms = (a) =>
     ],
     -1
   ),
-  et = ca(
+  at = ce(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
@@ -6379,14 +6393,14 @@ const Ms = (a) =>
   ot = ["src"],
   rt = Z(" Your browser does not support the video tag. "),
   nt = h("div", { class: "iframe-video_blocker" }, null, -1),
-  dt = ca(
+  dt = ce(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ct = ja(Ds, [
+var ct = je(Ds, [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         const o = S("Footer");
         return (
           g(),
@@ -6423,8 +6437,8 @@ var ct = ja(Ds, [
               $s,
               Js,
               Qs,
-              at,
               et,
+              at,
               h("div", null, [
                 h("aside", st, [
                   h("a", tt, [
@@ -6457,7 +6471,7 @@ var ct = ja(Ds, [
     ],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/fintech-design.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/fintech-design.vue",
     ],
   ]),
   pt = Object.freeze(
@@ -6470,16 +6484,16 @@ var ct = ja(Ds, [
 const vt = ["data-index"],
   mt = ["src"],
   ft = [
-    ca(
+    ce(
       '<div class="btn-text-wrap"><div class="btn-text cc-scroll">請往下滑</div><div class="btn-text cc-bottom cc-scroll">請往下滑</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
   ];
-var ut = ja(
+var ut = je(
   {
-    setup(a) {
-      const e = k(),
-        s = ma({ x: 0, y: 0 }),
+    setup(e) {
+      const a = k(),
+        s = me({ x: 0, y: 0 }),
         t = j([
           {
             url: "home/opening/1.jpg",
@@ -6490,7 +6504,7 @@ var ut = ja(
               top: "60%",
               m_right: "3000px",
               m_top: "0%",
-              transform: "translate3d(1px, 2px, 1px)",
+              transform: "",
               enterAnimation: "zoomIn 2.5s forwards",
               leaveAnimation: "fadeOut 1s forwards",
             },
@@ -6516,12 +6530,12 @@ var ut = ja(
             css: {
               width: "21.3vw",
               height: "16.6vw",
-              m_width: "55.9vw",
-              m_height: "42.5vw",
+              m_width: "46vw",
+              m_height: "34vw",
               left: "22%",
               top: "45%",
-              m_right: "71%",
-              m_top: "44%",
+              m_right: "77%",
+              m_top: "47%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 3.5s forwards",
               leaveAnimation: "fadeOut 1s forwards",
@@ -6537,8 +6551,8 @@ var ut = ja(
               m_height: "42.5vw",
               left: "31%",
               top: "72%",
-              m_right: "73%",
-              m_top: "80%",
+              m_right: "75%",
+              m_top: "75%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 2s forwards",
               leaveAnimation: "fadeOut 1s forwards",
@@ -6555,7 +6569,7 @@ var ut = ja(
               left: "33%",
               top: "-1%",
               m_right: "-2%",
-              m_top: "1%",
+              m_top: "10%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 1s forwards",
               leaveAnimation: "fadeOut 1s forwards",
@@ -6567,11 +6581,11 @@ var ut = ja(
             css: {
               width: "21.1vw",
               height: "26.3vw",
-              m_width: "25.5vw",
-              m_height: "33vw",
+              m_width: "43.5vw",
+              m_height: "54vw",
               left: "51%",
               top: "27%",
-              m_right: "15%",
+              m_right: "21%",
               m_top: "39%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 2.5s forwards",
@@ -6584,8 +6598,8 @@ var ut = ja(
             css: {
               width: "18.1vw",
               height: "21.8vw",
-              m_width: "43.5vw",
-              m_height: "50vw",
+              m_width: "35.5vw",
+              m_height: "43vw",
               left: "63%",
               top: "74%",
               m_right: "8%",
@@ -6601,12 +6615,12 @@ var ut = ja(
             css: {
               width: "18.3vw",
               height: "14.6vw",
-              m_width: "46.1vw",
-              m_height: "35.7vw",
+              m_width: "253px",
+              m_height: "196px",
               left: "70%",
               top: "-4%",
               m_right: "57%",
-              m_top: "15%",
+              m_top: "17%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 3.5s forwards",
               leaveAnimation: "fadeOut 1s forwards",
@@ -6618,13 +6632,13 @@ var ut = ja(
             css: {
               width: "22.8vw",
               height: "22vw",
-              m_width: "36vw",
-              m_height: "20vw",
+              m_width: "40vw",
+              m_height: "41vw",
               left: "83%",
               top: "33%",
-              m_right: "-10%",
-              m_top: "25%",
-              transform: "translate3d(1px, 2px, 1px)",
+              m_right: "-20%",
+              m_top: "30%",
+              transform: "scale(0.8)",
               enterAnimation: "zoomIn 2s forwards",
               leaveAnimation: "fadeOut 1s forwards",
               objectAposition: "right",
@@ -6652,13 +6666,13 @@ var ut = ja(
           rootMargin: "0px",
           threshold: Array(100)
             .fill()
-            .map((a, e) => 0.01 * e),
+            .map((e, a) => 0.01 * a),
         },
-        o = new IntersectionObserver((a) => {
-          a.forEach((a) => {
-            var e, s;
-            const { intersectionRatio: i, target: l } = a,
-              o = null == (e = l.dataset) ? void 0 : e.index;
+        o = new IntersectionObserver((e) => {
+          e.forEach((e) => {
+            var a, s;
+            const { intersectionRatio: i, target: l } = e,
+              o = null == (a = l.dataset) ? void 0 : a.index;
             if ("img" === (null == (s = l.dataset) ? void 0 : s.item))
               t.value[o].isEnter = !(i < 0.4);
             else
@@ -6667,26 +6681,26 @@ var ut = ja(
           });
         }, l),
         r = () => {
-          const a = document.getElementById("studio");
-          if (a) {
-            const e = a.offsetTop;
-            window.scrollTo({ top: e, behavior: "smooth" });
+          const e = document.getElementById("studio");
+          if (e) {
+            const a = e.offsetTop;
+            window.scrollTo({ top: a, behavior: "smooth" });
           }
         };
       z(
-        () => e.state.app.isLoading,
-        (a) => {
-          if (((i.value = !a), a)) {
-            ((a) => {
-              for (const e of a) o.unobserve(e);
+        () => a.state.app.isLoading,
+        (e) => {
+          if (((i.value = !e), e)) {
+            ((e) => {
+              for (const a of e) o.unobserve(a);
             })([
               ...document.querySelectorAll(".img-wrap"),
               document.querySelector(".btn-scroll"),
             ]);
           } else
-            fa(() => {
-              ((a) => {
-                for (const e of a) o.observe(e);
+            fe(() => {
+              ((e) => {
+                for (const a of e) o.observe(a);
               })([
                 ...document.querySelectorAll(".img-wrap"),
                 document.querySelector(".btn-scroll"),
@@ -6700,9 +6714,9 @@ var ut = ja(
         };
       return (
         C(() => {
-          d(), window.addEventListener("resize", d), da.init();
+          d(), window.addEventListener("resize", d), de.init();
         }),
-        (a, e) => (
+        (e, a) => (
           g(),
           b(
             x,
@@ -6713,16 +6727,16 @@ var ut = ja(
                 {
                   class: "view",
                   onMousemove:
-                    e[0] ||
-                    (e[0] = (a) =>
-                      ((a) => {
+                    a[0] ||
+                    (a[0] = (e) =>
+                      ((e) => {
                         if (window.innerWidth > 576) {
-                          const e = window.innerWidth / 2,
+                          const a = window.innerWidth / 2,
                             t = window.innerHeight / 2;
-                          (s.x = ((e - a.clientX) / 100) * 3),
-                            (s.y = ((t - a.clientY) / 100) * 3);
+                          (s.x = ((a - e.clientX) / 100) * 3),
+                            (s.y = ((t - e.clientY) / 100) * 3);
                         }
-                      })(a)),
+                      })(e)),
                 },
                 [
                   i.value
@@ -6748,36 +6762,39 @@ var ut = ja(
                             null,
                             X(
                               t.value,
-                              (a, e) => (
+                              (e, a) => (
                                 g(),
                                 b(
                                   "div",
                                   {
                                     class: "img-wrap home-hero_image-placer",
-                                    key: a.url + e,
+                                    key: e.url + a,
                                     style: W({
-                                      left: n.value ? "unset" : a.css.left,
-                                      right: n.value ? a.css.m_right : "unset",
-                                      top: n.value ? a.css.m_top : a.css.top,
-                                      animation: a.isEnter
-                                        ? a.css.enterAnimation
-                                        : a.css.leaveAnimation,
+                                      width: n.value ? e.css.m_width : "",
+                                      height: n.value ? e.css.m_height : "",
+                                      left: n.value ? "unset" : e.css.left,
+                                      right: n.value ? e.css.m_right : "unset",
+                                      top: n.value ? e.css.m_top : e.css.top,
+                                      transform: n.value ? e.css.transform : "",
+                                      animation: e.isEnter
+                                        ? e.css.enterAnimation
+                                        : e.css.leaveAnimation,
                                     }),
-                                    "data-index": e,
+                                    "data-index": a,
                                     "data-item": "img",
                                   },
                                   [
                                     h(
                                       "img",
                                       {
-                                        src: _(ka)(a.url),
+                                        src: _(ke)(e.url),
                                         style: W({
                                           width: n.value
-                                            ? a.css.m_width
-                                            : a.css.width,
+                                            ? e.css.m_width
+                                            : e.css.width,
                                           height: n.value
-                                            ? a.css.m_height
-                                            : a.css.height,
+                                            ? e.css.m_height
+                                            : e.css.height,
                                           transform: `translate3d(${
                                             _(s).x / 2
                                           }px,${_(s).y / 2}px, 100px)`,
@@ -6821,7 +6838,7 @@ var ut = ja(
   [
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/home/view.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/home/view.vue",
     ],
   ]
 );
@@ -7518,46 +7535,57 @@ const gt = { class: "marquee", "data-v-57509004": "" },
 const wt = {
   components: {
     Footer: ls,
-    Marquee: ja(
-      { setup: (a) => (da.init(), (a, e) => (g(), b("div", gt, bt))) },
+    Marquee: je(
+      { setup: (e) => (de.init(), (e, a) => (g(), b("div", gt, bt))) },
       [
         [
           "__file",
-          "/Users/georgehuang/Documents/GitHub/basis.work/src/widgets/layout/marquee.vue",
+          "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/marquee.vue",
         ],
       ]
     ),
     View: ut,
   },
   setup() {
-    const a = j("");
+    const e = j(!0),
+      a = j("");
     return (
       C(() => {
-        document.querySelectorAll(".video-cover").forEach((a) => {
-          a.play();
+        document.querySelectorAll(".video-cover").forEach((e) => {
+          e.play();
         });
-        const a = new IntersectionObserver((a) => {
-          a.forEach((a) => {
-            a.isIntersecting
-              ? a.target.classList.add("active")
-              : a.target.classList.remove("active");
+        const e = new IntersectionObserver((e) => {
+          e.forEach((e) => {
+            e.isIntersecting
+              ? e.target.classList.add("active")
+              : e.target.classList.remove("active");
           });
         });
-        document.querySelectorAll(".target_line").forEach((e) => {
-          a.observe(e);
+        document.querySelectorAll(".target_line").forEach((a) => {
+          e.observe(a);
         });
       }),
-      { a: a, getVideoUrl: Ms, getImageUrl: ka }
+      {
+        a: a,
+        getVideoUrl: Ms,
+        getImageUrl: ke,
+        scrollPosition: (a) => {
+          const s = document.querySelector(".apps_media-list"),
+            t = a.target.scrollLeft >= s.scrollWidth - s.clientWidth - 232;
+          e.value = !t;
+        },
+        hideHorizontalIcon: e,
+      }
     );
   },
 };
-da.init();
-const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
+de.init();
+const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
   yt = ht(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   _t = { id: "studio", class: "section" },
-  xt = ca(
+  xt = ce(
     '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-57509004></div></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" data-v-57509004><h2 class="u-ts-4" data-v-57509004>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-57509004><h3 data-animation-element="title" data-v-57509004><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;800&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                products\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                and\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                their\n              &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;900&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                brands\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                through\n              &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;1000&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                design.\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-57509004><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>館藏查詢</div><div class="btn-text cc-bottom" data-v-57509004>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>預約參觀</div><div class="btn-text cc-bottom" data-v-57509004>預約參觀</div></div></a></div></div></div></div></div>',
     2
   ),
@@ -7566,7 +7594,7 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   qt = { class: "section" },
-  zt = ca(
+  zt = ce(
     '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-57509004></div></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>空間預約</h2></div></div></div></div></div>',
     1
   ),
@@ -7678,7 +7706,7 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
   },
   Jt = { class: "card-image_wrapper" },
   Qt = { class: "iframe-video_wrapper" },
-  ai = {
+  ei = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -7687,14 +7715,14 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  ei = ["src"],
+  ai = ["src"],
   si = Z(" Your browser does not support the video tag. "),
   ti = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  ii = ca(
+  ii = ce(
     '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  li = ca(
+  li = ce(
     '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-57509004> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>空間介紹</div><div class="btn-text cc-bottom" data-v-57509004>空間介紹</div></div></a></div><div class="btn-item cc-2" data-v-57509004><a class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>立即預約</div><div class="btn-text cc-bottom" data-v-57509004>立即預約</div></div></a></div></div></div>',
     1
   ),
@@ -7702,7 +7730,7 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   ri = { class: "section" },
-  ni = ca(
+  ni = ce(
     '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" data-v-57509004><h2 class="u-ts-4" data-v-57509004>定香人文</h2></div></div></div></div></div>',
     1
   ),
@@ -7827,53 +7855,45 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       -1
     )
   ),
-  bi = ca(
+  bi = ce(
     '<div class="btn-group" data-v-57509004><div class="btn-item cc-1" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>藝品介紹</div><div class="btn-text cc-bottom" data-v-57509004>藝品介紹</div></div></a></div></div>',
     1
   ),
   wi = { class: "section cc-apps" },
-  hi = ca(
+  hi = ce(
     '<div class="container" data-v-57509004><div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 館藏特約藝術家 </div></div></h3></div></div></div>',
     1
   ),
   yi = { "data-apps": "component", class: "apps_component" },
   _i = { class: "apps_media-wrapper" },
   xi = {
-    "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
-    class: "apps_media-list",
-  },
-  ki = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "100",
   },
-  ji = ["src"],
-  qi = {
+  ki = ["src"],
+  ji = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "150",
   },
-  zi = {
+  qi = {
     "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
     class: "apps_asset cc-2 w-dyn-list",
-    style: {
-      transform: "translate3d(0px, 20%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-    },
   },
-  Ci = { role: "list", class: "w-dyn-items" },
-  Si = { role: "listitem", class: "w-dyn-item" },
-  Oi = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
-  Ai = ["src"],
-  Ei = {
+  zi = { role: "list", class: "w-dyn-items" },
+  Ci = { role: "listitem", class: "w-dyn-item" },
+  Si = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
+  Oi = ["src"],
+  Ai = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "200",
   },
-  Bi = {
+  Ei = {
     "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
     class: "apps_asset cc-3 w-dyn-list",
     style: {
@@ -7881,73 +7901,87 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       "transform-style": "preserve-3d",
     },
   },
-  Ti = { role: "list", class: "w-dyn-items" },
-  Li = { role: "listitem", class: "w-dyn-item" },
-  Ii = {
+  Bi = { role: "list", class: "w-dyn-items" },
+  Ti = { role: "listitem", class: "w-dyn-item" },
+  Li = {
     "data-mouse-class": "cc-text",
     href: "/cases/seen-app",
     class: "apps_link w-inline-block",
   },
-  Pi = ["src"],
-  Mi = ht(() =>
-    h(
-      "div",
-      {
-        class: "apps_asset-wrapper cc-watch",
-        "data-aos": "fade-up",
-        "data-aos-duration": "700",
-        "data-aos-delay": "250",
-      },
-      [
-        h(
-          "div",
-          {
-            "data-w-id": "c91f325d-7e75-3988-4f22-39b9870c8ae8",
-            class: "apps_asset cc-4",
-            style: {
-              transform: "translate3d(0px, 5%, 0px) scale3d(1, 1, 1)",
-              "transform-style": "preserve-3d",
+  Ii = ["src"],
+  Pi = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  Mi = {
+    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
+    class: "apps_asset cc-3 w-dyn-list",
+    style: {
+      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+      "transform-style": "preserve-3d",
+    },
+  },
+  Di = { role: "list", class: "w-dyn-items" },
+  Fi = { role: "listitem", class: "w-dyn-item" },
+  Hi = {
+    "data-mouse-class": "cc-text",
+    href: "/cases/seen-app",
+    class: "apps_link w-inline-block",
+  },
+  Ui = ["src"],
+  Vi = { class: "apps_scroll" },
+  Ni = { key: 0, class: "mobile-scroll_cta" },
+  Gi = [
+    ht(() =>
+      h(
+        "div",
+        { class: "mobile-scroll_icon w-embed" },
+        [
+          h(
+            "svg",
+            {
+              width: "100%",
+              style: {},
+              viewBox: "0 0 24 24",
+              fill: "currentColor",
+              xmlns: "http://www.w3.org/2000/svg",
             },
-          },
-          [
-            h("img", {
-              src:
-                "https://assets-global.website-files.com/6584502438fea068af552308/65b7816baa315cc23e4af8c8_apps-watch.png",
-              loading: "eager",
-              alt: "",
-              class: "apps_watch",
-            }),
-          ]
-        ),
-      ],
-      -1
-    )
-  ),
-  Di = ca(
-    '<div class="apps_scroll" data-v-57509004><div class="mobile-scroll_cta" data-v-57509004><div class="mobile-scroll_icon w-embed" data-v-57509004><svg width="100%" style="" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-v-57509004><path d="M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z" fill="currentColor" data-v-57509004></path></svg></div></div></div>',
-    1
-  ),
-  Fi = { class: "section" },
-  Hi = { class: "container" },
-  Ui = ca(
+            [
+              h("path", {
+                d:
+                  "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
+                fill: "currentColor",
+              }),
+            ]
+          ),
+        ],
+        -1
+      )
+    ),
+  ],
+  Xi = { class: "section" },
+  Wi = { class: "container" },
+  Ri = ce(
     '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 拍賣中心 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                Design\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3></div></div>',
     1
   ),
-  Vi = { class: "sticky-pair" },
-  Ni = { class: "w-layout-grid pair-grid is-leading" },
-  Gi = {
+  Yi = { class: "sticky-pair" },
+  Zi = { class: "w-layout-grid pair-grid is-leading" },
+  Ki = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
-  Xi = { role: "list", class: "w-dyn-items" },
-  Wi = { role: "listitem", class: "w-dyn-item" },
-  Ri = { class: "card-wrapper cc-large" },
-  Yi = {
+  $i = { role: "list", class: "w-dyn-items" },
+  Ji = { role: "listitem", class: "w-dyn-item" },
+  Qi = { class: "card-wrapper cc-large" },
+  el = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Zi = {
+  al = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -7956,9 +7990,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  Ki = { class: "card-image_wrapper" },
-  $i = { class: "iframe-video_wrapper" },
-  Ji = {
+  sl = { class: "card-image_wrapper" },
+  tl = { class: "iframe-video_wrapper" },
+  il = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -7967,30 +8001,30 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Qi = ["src"],
-  al = Z(" Your browser does not support the video tag. "),
-  el = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  sl = ca(
+  ll = ["src"],
+  ol = Z(" Your browser does not support the video tag. "),
+  rl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  nl = ce(
     '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  tl = {
+  dl = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  il = {
+  cl = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  ll = { role: "list", class: "w-dyn-items" },
-  ol = { role: "listitem", class: "w-dyn-item" },
-  rl = { class: "card-wrapper cc-small" },
-  nl = {
+  pl = { role: "list", class: "w-dyn-items" },
+  vl = { role: "listitem", class: "w-dyn-item" },
+  ml = { class: "card-wrapper cc-small" },
+  fl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  dl = {
+  ul = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -7999,9 +8033,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  cl = { class: "card-image_wrapper" },
-  pl = { class: "iframe-video_wrapper" },
-  vl = {
+  gl = { class: "card-image_wrapper" },
+  bl = { class: "iframe-video_wrapper" },
+  wl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8010,10 +8044,10 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  ml = ["src"],
-  fl = Z(" Your browser does not support the video tag. "),
-  ul = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  gl = ht(() =>
+  hl = ["src"],
+  yl = Z(" Your browser does not support the video tag. "),
+  _l = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  xl = ht(() =>
     h(
       "div",
       { class: "card-body" },
@@ -8035,36 +8069,36 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       -1
     )
   ),
-  bl = ca(
+  kl = ce(
     '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-57509004> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Fintech services</div><div class="btn-text cc-bottom" data-v-57509004>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Design trial</div><div class="btn-text cc-bottom" data-v-57509004>Design trial</div></div></a></div></div></div>',
     1
   ),
-  wl = { class: "section" },
-  hl = { class: "container over-h" },
-  yl = ca(
+  jl = { class: "section" },
+  ql = { class: "container over-h" },
+  zl = ce(
     '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Branding </div></div></h3></div></div>',
     1
   ),
-  _l = { class: "sticky-pair" },
-  xl = { class: "w-layout-grid pair-grid" },
-  kl = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  jl = {
+  Cl = { class: "sticky-pair" },
+  Sl = { class: "w-layout-grid pair-grid" },
+  Ol = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+  Al = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  ql = {
+  El = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  zl = { role: "list", class: "w-dyn-items" },
-  Cl = { role: "listitem", class: "w-dyn-item" },
-  Sl = { class: "card-wrapper cc-small" },
-  Ol = {
+  Bl = { role: "list", class: "w-dyn-items" },
+  Tl = { role: "listitem", class: "w-dyn-item" },
+  Ll = { class: "card-wrapper cc-small" },
+  Il = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Al = {
+  Pl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -8073,9 +8107,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  El = { class: "card-image_wrapper" },
-  Bl = { class: "iframe-video_wrapper" },
-  Tl = {
+  Ml = { class: "card-image_wrapper" },
+  Dl = { class: "iframe-video_wrapper" },
+  Fl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8084,10 +8118,10 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Ll = ["src"],
-  Il = Z(" Your browser does not support the video tag. "),
-  Pl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Ml = ht(() =>
+  Hl = ["src"],
+  Ul = Z(" Your browser does not support the video tag. "),
+  Vl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Nl = ht(() =>
     h(
       "div",
       { class: "card-body" },
@@ -8109,19 +8143,19 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       -1
     )
   ),
-  Dl = {
+  Gl = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  Fl = { role: "list", class: "w-dyn-items" },
-  Hl = { role: "listitem", class: "w-dyn-item" },
-  Ul = { class: "card-wrapper cc-large" },
-  Vl = {
+  Xl = { role: "list", class: "w-dyn-items" },
+  Wl = { role: "listitem", class: "w-dyn-item" },
+  Rl = { class: "card-wrapper cc-large" },
+  Yl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Nl = {
+  Zl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -8130,9 +8164,9 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  Gl = { class: "card-image_wrapper" },
-  Xl = { class: "iframe-video_wrapper" },
-  Wl = {
+  Kl = { class: "card-image_wrapper" },
+  $l = { class: "iframe-video_wrapper" },
+  Jl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8141,23 +8175,23 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  Rl = ["src"],
-  Yl = Z(" Your browser does not support the video tag. "),
-  Zl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Kl = ca(
+  Ql = ["src"],
+  eo = Z(" Your browser does not support the video tag. "),
+  ao = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  so = ce(
     '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  $l = ca(
+  to = ce(
     '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-57509004> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>View cases</div><div class="btn-text cc-bottom" data-v-57509004>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div></div></a></div></div></div>',
     1
   ),
-  Jl = ca(
+  io = ce(
     '<div class="container" data-v-57509004><div class="target_line" data-v-57509004></div></div><section class="section" data-v-57509004><div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>Contact Us</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-57509004><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-57509004><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004><div style="position:relative;display:inline-block;" data-v-57509004> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  Ql = { class: "pre-footer" },
-  ao = ht(() =>
+  lo = { class: "pre-footer" },
+  oo = ht(() =>
     h(
       "div",
       {
@@ -8287,13 +8321,13 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
       -1
     )
   ),
-  eo = {
+  ro = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  so = { class: "iframe-video_wrapper" },
-  to = {
+  no = { class: "iframe-video_wrapper" },
+  co = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8302,17 +8336,17 @@ const ht = (a) => (pa("data-v-57509004"), (a = a()), va(), a),
     muted: "",
     playsinline: "",
   },
-  io = ["src"],
-  lo = Z(" Your browser does not support the video tag. "),
-  oo = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  ro = ca(
+  po = ["src"],
+  vo = Z(" Your browser does not support the video tag. "),
+  mo = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  fo = ce(
     '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   );
-var no = ja(wt, [
+var uo = je(wt, [
     [
       "render",
-      function (a, e, s, t, i, l) {
+      function (e, a, s, t, i, l) {
         const o = S("View"),
           r = S("Marquee"),
           n = S("Footer");
@@ -8379,7 +8413,7 @@ var no = ja(wt, [
                                 h("div", $t, [
                                   h("div", Jt, [
                                     h("div", Qt, [
-                                      h("video", ai, [
+                                      h("video", ei, [
                                         h(
                                           "source",
                                           {
@@ -8390,7 +8424,7 @@ var no = ja(wt, [
                                           },
                                           null,
                                           8,
-                                          ei
+                                          ai
                                         ),
                                         si,
                                       ]),
@@ -8444,91 +8478,122 @@ var no = ja(wt, [
                 hi,
                 h("div", yi, [
                   h("div", _i, [
-                    h("div", xi, [
-                      h("div", ki, [
-                        h(
-                          "img",
-                          {
-                            src: t.getImageUrl("home/img/8.jpg"),
-                            loading: "lazy",
-                            "data-w-id": "4712a24f-d922-c9f3-e8a3-7b35338a5a7d",
-                            sizes:
-                              "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
-                            alt: "",
-                            class: "apps_asset cc-1",
-                          },
-                          null,
-                          8,
-                          ji
-                        ),
-                      ]),
-                      h("div", qi, [
-                        h("div", zi, [
-                          h("div", Ci, [
-                            h("div", Si, [
-                              h("a", Oi, [
-                                h(
-                                  "img",
-                                  {
-                                    alt: "",
-                                    loading: "lazy",
-                                    src: t.getImageUrl("home/img/10.jpg"),
-                                    sizes:
-                                      "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
-                                  },
-                                  null,
-                                  8,
-                                  Ai
-                                ),
+                    h(
+                      "div",
+                      {
+                        "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
+                        class: "apps_media-list",
+                        onScroll:
+                          a[0] ||
+                          (a[0] = (...e) =>
+                            t.scrollPosition && t.scrollPosition(...e)),
+                      },
+                      [
+                        h("div", xi, [
+                          h(
+                            "img",
+                            {
+                              src: t.getImageUrl("home/img/8.jpg"),
+                              loading: "lazy",
+                              "data-w-id":
+                                "4712a24f-d922-c9f3-e8a3-7b35338a5a7d",
+                              alt: "",
+                              class: "apps_asset cc-1",
+                            },
+                            null,
+                            8,
+                            ki
+                          ),
+                        ]),
+                        h("div", ji, [
+                          h("div", qi, [
+                            h("div", zi, [
+                              h("div", Ci, [
+                                h("a", Si, [
+                                  h(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: t.getImageUrl("home/img/10.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    Oi
+                                  ),
+                                ]),
                               ]),
                             ]),
                           ]),
                         ]),
-                      ]),
-                      h("div", Ei, [
-                        h("div", Bi, [
-                          h("div", Ti, [
-                            h("div", Li, [
-                              h("a", Ii, [
-                                h(
-                                  "img",
-                                  {
-                                    alt: "",
-                                    loading: "lazy",
-                                    src: t.getImageUrl("home/img/10.jpg"),
-                                    sizes:
-                                      "(max-width: 479px) 80vw, (max-width: 767px) 232px, 24vw",
-                                  },
-                                  null,
-                                  8,
-                                  Pi
-                                ),
+                        h("div", Ai, [
+                          h("div", Ei, [
+                            h("div", Bi, [
+                              h("div", Ti, [
+                                h("a", Li, [
+                                  h(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: t.getImageUrl("home/img/9.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    Ii
+                                  ),
+                                ]),
                               ]),
                             ]),
                           ]),
                         ]),
-                      ]),
-                      Mi,
-                    ]),
+                        h("div", Pi, [
+                          h("div", Mi, [
+                            h("div", Di, [
+                              h("div", Fi, [
+                                h("a", Hi, [
+                                  h(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: t.getImageUrl("home/img/12.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    Ui
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                      ],
+                      32
+                    ),
                   ]),
-                  Di,
+                  h("div", Vi, [
+                    t.hideHorizontalIcon
+                      ? (g(), b("div", Ni, Gi))
+                      : w("v-if", !0),
+                  ]),
                 ]),
               ]),
               w(" -- "),
-              h("section", Fi, [
-                h("div", Hi, [
-                  Ui,
-                  h("div", Vi, [
-                    h("div", Ni, [
-                      h("div", Gi, [
-                        h("div", Xi, [
-                          h("div", Wi, [
-                            h("div", Ri, [
-                              h("div", Yi, [
-                                h("div", Zi, [
-                                  h("div", Ki, [
-                                    h("div", $i, [
-                                      h("video", Ji, [
+              h("section", Xi, [
+                h("div", Wi, [
+                  Ri,
+                  h("div", Yi, [
+                    h("div", Zi, [
+                      h("div", Ki, [
+                        h("div", $i, [
+                          h("div", Ji, [
+                            h("div", Qi, [
+                              h("div", el, [
+                                h("div", al, [
+                                  h("div", sl, [
+                                    h("div", tl, [
+                                      h("video", il, [
                                         h(
                                           "source",
                                           {
@@ -8539,14 +8604,14 @@ var no = ja(wt, [
                                           },
                                           null,
                                           8,
-                                          Qi
+                                          ll
                                         ),
-                                        al,
+                                        ol,
                                       ]),
-                                      el,
+                                      rl,
                                     ]),
                                   ]),
-                                  sl,
+                                  nl,
                                 ]),
                               ]),
                             ]),
@@ -8554,16 +8619,16 @@ var no = ja(wt, [
                         ]),
                       ]),
                       h("div", null, [
-                        h("div", tl, [
-                          h("div", il, [
-                            h("div", ll, [
-                              h("div", ol, [
-                                h("div", rl, [
-                                  h("div", nl, [
-                                    h("div", dl, [
-                                      h("div", cl, [
-                                        h("div", pl, [
-                                          h("video", vl, [
+                        h("div", dl, [
+                          h("div", cl, [
+                            h("div", pl, [
+                              h("div", vl, [
+                                h("div", ml, [
+                                  h("div", fl, [
+                                    h("div", ul, [
+                                      h("div", gl, [
+                                        h("div", bl, [
+                                          h("video", wl, [
                                             h(
                                               "source",
                                               {
@@ -8574,14 +8639,14 @@ var no = ja(wt, [
                                               },
                                               null,
                                               8,
-                                              ml
+                                              hl
                                             ),
-                                            fl,
+                                            yl,
                                           ]),
-                                          ul,
+                                          _l,
                                         ]),
                                       ]),
-                                      gl,
+                                      xl,
                                     ]),
                                   ]),
                                 ]),
@@ -8590,28 +8655,28 @@ var no = ja(wt, [
                           ]),
                         ]),
                       ]),
-                      bl,
+                      kl,
                     ]),
                   ]),
                 ]),
               ]),
               w(" --- "),
-              h("section", wl, [
-                h("div", hl, [
-                  yl,
-                  h("div", _l, [
-                    h("div", xl, [
-                      h("div", kl, [
-                        h("div", jl, [
-                          h("div", ql, [
-                            h("div", zl, [
-                              h("div", Cl, [
-                                h("div", Sl, [
-                                  h("div", Ol, [
-                                    h("div", Al, [
-                                      h("div", El, [
-                                        h("div", Bl, [
-                                          h("video", Tl, [
+              h("section", jl, [
+                h("div", ql, [
+                  zl,
+                  h("div", Cl, [
+                    h("div", Sl, [
+                      h("div", Ol, [
+                        h("div", Al, [
+                          h("div", El, [
+                            h("div", Bl, [
+                              h("div", Tl, [
+                                h("div", Ll, [
+                                  h("div", Il, [
+                                    h("div", Pl, [
+                                      h("div", Ml, [
+                                        h("div", Dl, [
+                                          h("video", Fl, [
                                             h(
                                               "source",
                                               {
@@ -8622,14 +8687,14 @@ var no = ja(wt, [
                                               },
                                               null,
                                               8,
-                                              Ll
+                                              Hl
                                             ),
-                                            Il,
+                                            Ul,
                                           ]),
-                                          Pl,
+                                          Vl,
                                         ]),
                                       ]),
-                                      Ml,
+                                      Nl,
                                     ]),
                                   ]),
                                 ]),
@@ -8638,15 +8703,15 @@ var no = ja(wt, [
                           ]),
                         ]),
                       ]),
-                      h("div", Dl, [
-                        h("div", Fl, [
-                          h("div", Hl, [
-                            h("div", Ul, [
-                              h("div", Vl, [
-                                h("div", Nl, [
-                                  h("div", Gl, [
-                                    h("div", Xl, [
-                                      h("video", Wl, [
+                      h("div", Gl, [
+                        h("div", Xl, [
+                          h("div", Wl, [
+                            h("div", Rl, [
+                              h("div", Yl, [
+                                h("div", Zl, [
+                                  h("div", Kl, [
+                                    h("div", $l, [
+                                      h("video", Jl, [
                                         h(
                                           "source",
                                           {
@@ -8657,34 +8722,34 @@ var no = ja(wt, [
                                           },
                                           null,
                                           8,
-                                          Rl
+                                          Ql
                                         ),
-                                        Yl,
+                                        eo,
                                       ]),
-                                      Zl,
+                                      ao,
                                     ]),
                                   ]),
-                                  Kl,
+                                  so,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      $l,
+                      to,
                     ]),
                   ]),
                 ]),
               ]),
               w(" -- "),
-              Jl,
+              io,
               w(" --- "),
               h("div", null, [
-                h("aside", Ql, [
-                  ao,
-                  h("div", eo, [
-                    h("div", so, [
-                      h("video", to, [
+                h("aside", lo, [
+                  oo,
+                  h("div", ro, [
+                    h("div", no, [
+                      h("video", co, [
                         h(
                           "source",
                           {
@@ -8693,13 +8758,13 @@ var no = ja(wt, [
                           },
                           null,
                           8,
-                          io
+                          po
                         ),
-                        lo,
+                        vo,
                       ]),
-                      oo,
+                      mo,
                     ]),
-                    ro,
+                    fo,
                   ]),
                 ]),
               ]),
@@ -8713,19 +8778,19 @@ var no = ja(wt, [
     ["__scopeId", "data-v-57509004"],
     [
       "__file",
-      "/Users/georgehuang/Documents/GitHub/basis.work/src/pages/index.vue",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/index.vue",
     ],
   ]),
-  co = Object.freeze(
+  go = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: no },
+      { __proto__: null, default: uo },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const po = {
+const bo = {
     "../pages/about.vue": () =>
-      Re(
+      Ra(
         () =>
           Promise.resolve().then(function () {
             return fs;
@@ -8733,7 +8798,7 @@ const po = {
         void 0
       ),
     "../pages/case.vue": () =>
-      Re(
+      Ra(
         () =>
           Promise.resolve().then(function () {
             return hs;
@@ -8741,7 +8806,7 @@ const po = {
         void 0
       ),
     "../pages/demo.vue": () =>
-      Re(
+      Ra(
         () =>
           Promise.resolve().then(function () {
             return Ps;
@@ -8749,7 +8814,7 @@ const po = {
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Re(
+      Ra(
         () =>
           Promise.resolve().then(function () {
             return pt;
@@ -8757,56 +8822,56 @@ const po = {
         void 0
       ),
     "../pages/index.vue": () =>
-      Re(
+      Ra(
         () =>
           Promise.resolve().then(function () {
-            return co;
+            return go;
           }),
         void 0
       ),
   },
-  vo = {
+  wo = {
     "../pages/about.vue": fs,
     "../pages/case.vue": hs,
     "../pages/demo.vue": Ps,
     "../pages/fintech-design.vue": pt,
-    "../pages/index.vue": co,
+    "../pages/index.vue": go,
   },
-  mo = [];
-for (let Ao in po) {
-  let a = Ao.replace("../pages", "").toLowerCase().replace(".vue", "");
-  (a = a.replace(/\/index$/, "")),
-    (a = a.replace(/\/_+/g, "/:")),
-    mo.push({
-      path: a,
-      name: a,
+  ho = [];
+for (let Po in bo) {
+  let e = Po.replace("../pages", "").toLowerCase().replace(".vue", "");
+  (e = e.replace(/\/index$/, "")),
+    (e = e.replace(/\/_+/g, "/:")),
+    ho.push({
+      path: e,
+      name: e,
       meta: {
-        layout: vo[Ao].default.layout || "layout-default",
+        layout: wo[Po].default.layout || "layout-default",
         title:
-          null != (s = null == (e = vo[Ao].default) ? void 0 : e.title)
+          null != (s = null == (a = wo[Po].default) ? void 0 : a.title)
             ? s
             : "app.project.title",
         header:
-          null != (i = null == (t = vo[Ao].default) ? void 0 : t.header)
+          null != (i = null == (t = wo[Po].default) ? void 0 : t.header)
             ? i
             : "header-default",
         scroll:
-          null != (o = null == (l = vo[Ao].default) ? void 0 : l.noScroll) && o,
+          null != (o = null == (l = wo[Po].default) ? void 0 : l.noScroll) && o,
       },
-      component: po[Ao],
+      component: bo[Po],
     });
 }
-const fo = ua({
-  history: ga("./"),
+const yo = ue({
+  history: ge("./"),
   routes:
-    ((uo = { defaultPath: "/home" }),
+    ((_o = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: D({ defaultPath: "/" }, uo).defaultPath },
+        redirect: { name: D({ defaultPath: "/" }, _o).defaultPath },
       },
-      ...mo,
+      ...ho,
       {
         path: "/404",
         name: "not-found",
@@ -8821,50 +8886,50 @@ const fo = ua({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var uo;
-fo.beforeEach(async (a, e, s) => {
+var _o;
+yo.beforeEach(async (e, a, s) => {
   s();
 });
-var go = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: fo }, Symbol.toStringTag, {
+var xo = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: yo }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const bo = ba({ modules: Xe });
-wa(bo, fo);
-var wo = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: bo }, Symbol.toStringTag, {
+const ko = be({ modules: Xa });
+we(ko, yo);
+var jo = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: ko }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const ho = {
-    use(a) {
-      a.interceptors.response.use(
-        async function (e) {
-          if (100004 === e.data.code) {
-            const s = a.get("/app/jwt-token", {
-              params: { account: bo.state.auth.user.account },
+const qo = {
+    use(e) {
+      e.interceptors.response.use(
+        async function (a) {
+          if (100004 === a.data.code) {
+            const s = e.get("/app/jwt-token", {
+              params: { account: ko.state.auth.user.account },
             });
             1 === s.data.code && H.set("token", s.data.data.jwt_token, !0);
-            return await a.request(e.config);
+            return await e.request(a.config);
           }
-          return e;
+          return a;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   },
-  yo = {
-    use(a) {
+  zo = {
+    use(e) {
       (window.isAlert = !1),
-        a.interceptors.response.use(
-          async function (a) {
-            const { noredirect: e = !1 } = a.config;
-            if (!e && !window.isAlert) {
-              const e = a.data;
-              switch (e.code) {
+        e.interceptors.response.use(
+          async function (e) {
+            const { noredirect: a = !1 } = e.config;
+            if (!a && !window.isAlert) {
+              const a = e.data;
+              switch (a.code) {
                 case 0:
                 case 100002:
                 case 200001:
@@ -8872,59 +8937,59 @@ const ho = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: a } = await La.alert({
-                    title: `Error(${e.code})`,
-                    text: Ba.t(`error.code.${e.code}`),
+                  const { isConfirmed: e } = await Le.alert({
+                    title: `Error(${a.code})`,
+                    text: Be.t(`error.code.${a.code}`),
                   });
                   return (
-                    a &&
-                      (await bo.dispatch("auth/logout"),
-                      await fo.replace("/login"),
+                    e &&
+                      (await ko.dispatch("auth/logout"),
+                      await yo.replace("/login"),
                       (window.isAlert = !1)),
-                    Promise.reject(`Error: ${e.code}`)
+                    Promise.reject(`Error: ${a.code}`)
                   );
                 }
               }
             }
-            return a;
+            return e;
           },
-          function (a) {
-            return Promise.reject(a);
+          function (e) {
+            return Promise.reject(e);
           }
         );
     },
   },
-  _o = {
-    use(a) {
-      a.interceptors.response.use(
-        async function (a) {
-          const { novalidate: e = !1 } = a.config;
-          if (!e) {
-            const e = a.data;
-            switch (e.code) {
+  Co = {
+    use(e) {
+      e.interceptors.response.use(
+        async function (e) {
+          const { novalidate: a = !1 } = e.config;
+          if (!a) {
+            const a = e.data;
+            switch (a.code) {
               case 1e5:
               case 100001:
               case 100003:
-                await La.alert({
-                  title: `Error(${e.code})`,
-                  text: Ba.t(`error.code.${e.code}`),
+                await Le.alert({
+                  title: `Error(${a.code})`,
+                  text: Be.t(`error.code.${a.code}`),
                 });
             }
           }
-          return a;
+          return e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   };
-class xo {
+class So {
   constructor() {
-    (this.provider = new Be({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ba({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use(Te, Le, ho, yo, _o, Pe);
+    this.provider.use(Ta, La, qo, zo, Co, Pa);
   }
   get get() {
     return this.provider.instance.get;
@@ -8939,19 +9004,19 @@ class xo {
     return this.provider.instance.delete;
   }
 }
-xo.prototype.install = function (a) {
-  const e = "http-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+So.prototype.install = function (e) {
+  const a = "http-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var ko = new xo(),
-  jo = Object.freeze(
+var Oo = new So(),
+  Ao = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: xo, default: ko },
+      { __proto__: null, HttpService: So, default: Oo },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class qo {
+class Eo {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -8961,8 +9026,8 @@ class qo {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Ba.t("button.confirm"),
-      cancelButtonText: Ba.t("button.cancel"),
+      confirmButtonText: Be.t("button.confirm"),
+      cancelButtonText: Be.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -8974,29 +9039,29 @@ class qo {
     };
   }
   get state() {
-    return bo.state.app.popupState;
+    return ko.state.app.popupState;
   }
-  async modal(a = {}) {
+  async modal(e = {}) {
     const {
-      title: e,
+      title: a,
       text: s,
       component: t = null,
       showCancelButton: i = !0,
       showConfirmButton: l = !0,
-      confirmButtonText: o = Ba.t("button.confirm"),
-      cancelButtonText: r = Ba.t("button.cancel"),
+      confirmButtonText: o = Be.t("button.confirm"),
+      cancelButtonText: r = Be.t("button.cancel"),
       allowOutsideClick: n = !0,
       props: d = {},
-    } = a;
-    return new Promise((a) => {
-      bo.commit(
+    } = e;
+    return new Promise((e) => {
+      ko.commit(
         "app/set/popup",
         u(f({}, this.initStates), {
           type: "Modal",
-          resolve: a,
-          title: e,
+          resolve: e,
+          title: a,
           text: s,
-          component: t ? ea(t) : null,
+          component: t ? ae(t) : null,
           showCancelButton: i,
           showConfirmButton: l,
           confirmButtonText: o,
@@ -9008,41 +9073,41 @@ class qo {
     });
   }
   clear() {
-    bo.commit("app/clear/popup");
+    ko.commit("app/clear/popup");
   }
 }
-qo.prototype.install = function (a) {
-  const e = "popup-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Eo.prototype.install = function (e) {
+  const a = "popup-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var zo = new qo();
-const Co = {
-    "../services/alert-service.js": Ee,
-    "../services/http-service.js": jo,
-    "../services/i18n-service.js": Ta,
+var Bo = new Eo();
+const To = {
+    "../services/alert-service.js": Ea,
+    "../services/http-service.js": Ao,
+    "../services/i18n-service.js": Te,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: qo, default: zo },
+        { __proto__: null, PopupService: Eo, default: Bo },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": go,
-    "../services/storage-service.js": Da,
-    "../services/store-service.js": wo,
+    "../services/router-service.js": xo,
+    "../services/storage-service.js": De,
+    "../services/store-service.js": jo,
   },
-  So = {
-    install: (a) => {
-      for (let e in Co) a.use(Co[e].default);
+  Lo = {
+    install: (e) => {
+      for (let a in To) e.use(To[a].default);
     },
   };
-const Oo = ha(Sa);
-Oo.provide("$jQuery", ya),
-  Oo.provide("$swal", La),
-  Oo.provide("$storage", H),
-  Oo.provide("$tabsslider", _a),
-  Oo.use(ne),
-  Oo.use(Ce),
-  Oo.use(xa, { loading: "", error: "" }),
-  Oo.use(So),
-  Oo.mount("#app");
+const Io = he(Se);
+Io.provide("$jQuery", ye),
+  Io.provide("$swal", Le),
+  Io.provide("$storage", H),
+  Io.provide("$tabsslider", _e),
+  Io.use(na),
+  Io.use(Ca),
+  Io.use(xe, { loading: "", error: "" }),
+  Io.use(Lo),
+  Io.mount("#app");
