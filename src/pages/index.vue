@@ -320,21 +320,27 @@
                         >
                           <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
-                              <video
-                                class="video-cover"
-                                width="100%"
-                                height="100%"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
+                              <div
+                                data-video-id="6997"
+                                style="
+                                  aspect-ratio: 1.77777778;
+                                  overflow: hidden;
+                                "
                               >
-                                <source
-                                  :src="getVideoUrl('home/knife1-1.mp4')"
-                                  type="video/mp4"
-                                />
-                                Your browser does not support the video tag.
-                              </video>
+                                <iframe
+                                  width="100%"
+                                  height="100%"
+                                  src="https://app.vidzflow.com/v/rQwOMSuYOc?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                                  title="C00117"
+                                  style="
+                                    aspect-ratio: 1.77777778;
+                                    overflow: hidden;
+                                  "
+                                  frameborder="0"
+                                  scrolling="no"
+                                  allow="fullscreen"
+                                ></iframe>
+                              </div>
                               <div class="iframe-video_blocker"></div>
                             </div>
                           </div>
@@ -373,21 +379,21 @@
                     >
                       <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
-                          <video
-                            class="video-cover"
-                            width="100%"
-                            height="100%"
-                            autoplay
-                            loop
-                            muted
-                            playsinline
+                          <div
+                            data-video-id="6996"
+                            style="aspect-ratio: 1.77777778; overflow: hidden"
                           >
-                            <source
-                              :src="getVideoUrl('home/knife1-2.mp4')"
-                              type="video/mp4"
-                            />
-                            Your browser does not support the video tag.
-                          </video>
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src="https://app.vidzflow.com/v/ikvOkZvmKw?dq=576&ap=true&muted=true&loop=true&ctp=false&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                              title="C01611113"
+                              style="aspect-ratio: 1.77777778; overflow: hidden"
+                              frameborder="0"
+                              scrolling="no"
+                              allow="fullscreen"
+                            ></iframe>
+                          </div>
                           <div class="iframe-video_blocker"></div>
                         </div>
                       </div>
