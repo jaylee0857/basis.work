@@ -296,14 +296,14 @@ const callback = (entries) => {
     switch (itemName) {
       case "img":
         imagesOption.value[index].isEnter =
-          intersectionRatio < 0.4 ? false : true;
+          intersectionRatio < 0.2 ? false : true;
         console.log(target.dataset?.index, "index");
         console.log(intersectionRatio);
         break;
 
       default:
         target.style.animation =
-          intersectionRatio < 0.6
+          intersectionRatio < 0.3
             ? "fadeOut 2s forwards"
             : "zoomIn 3.5s forwards";
         break;

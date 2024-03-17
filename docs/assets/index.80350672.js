@@ -6674,10 +6674,10 @@ var ut = je(
             const { intersectionRatio: i, target: l } = e,
               o = null == (a = l.dataset) ? void 0 : a.index;
             if ("img" === (null == (s = l.dataset) ? void 0 : s.item))
-              t.value[o].isEnter = !(i < 0.4);
+              t.value[o].isEnter = !(i < 0.2);
             else
               l.style.animation =
-                i < 0.6 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
+                i < 0.3 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
           });
         }, l),
         r = () => {
