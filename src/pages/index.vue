@@ -180,11 +180,12 @@
                 class="btn w-inline-block"
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                ><div class="btn-text-wrap">
+              >
+                <div class="btn-text-wrap">
                   <div class="btn-text">館藏查詢</div>
                   <div class="btn-text cc-bottom">館藏查詢</div>
-                </div></a
-              >
+                </div>
+              </a>
             </div>
             <div
               class="btn-item cc-2"
@@ -203,11 +204,12 @@
                 class="btn cc-secondary w-inline-block"
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                ><div class="btn-text-wrap">
+              >
+                <div class="btn-text-wrap">
                   <div class="btn-text">預約參觀</div>
                   <div class="btn-text cc-bottom">預約參觀</div>
-                </div></a
-              >
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -440,22 +442,24 @@
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div class="btn-text">空間介紹</div>
                     <div class="btn-text cc-bottom">空間介紹</div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
               <div class="btn-item cc-2">
                 <a
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div class="btn-text">立即預約</div>
                     <div class="btn-text cc-bottom">立即預約</div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -593,11 +597,12 @@
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div class="btn-text">藝品介紹</div>
                     <div class="btn-text cc-bottom">藝品介紹</div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -644,6 +649,7 @@
         <div
           data-w-id="9ec98ec5-fb8a-2716-02fa-7ef29f58135e"
           class="apps_media-list"
+          @scroll="scrollPosition"
         >
           <div
             class="apps_asset-wrapper"
@@ -744,7 +750,7 @@
         </div>
       </div>
       <div class="apps_scroll">
-        <div class="mobile-scroll_cta">
+        <div class="mobile-scroll_cta" v-if="hideHorizontalIcon">
           <div class="mobile-scroll_icon w-embed">
             <svg
               width="100%"
@@ -994,11 +1000,12 @@
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div class="btn-text">Fintech services</div>
                     <div class="btn-text cc-bottom">Fintech services</div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
               <div
                 class="btn-item cc-2"
@@ -1014,11 +1021,12 @@
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div class="btn-text">Design trial</div>
                     <div class="btn-text cc-bottom">Design trial</div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1237,11 +1245,12 @@
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div class="btn-text">View cases</div>
                     <div class="btn-text cc-bottom">View cases</div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
               <div
                 class="btn-item cc-2"
@@ -1257,7 +1266,8 @@
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
-                  ><div class="btn-text-wrap">
+                >
+                  <div class="btn-text-wrap">
                     <div
                       class="btn-text"
                       style="
@@ -1280,8 +1290,8 @@
                     >
                       Design trial
                     </div>
-                  </div></a
-                >
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1413,10 +1423,11 @@
                     scale: none;
                     transform: translate(0px, 0%);
                   "
-                  ><div style="position: relative; display: inline-block">
-                    hello@basis.work
-                  </div></a
                 >
+                  <div style="position: relative; display: inline-block">
+                    hello@basis.work
+                  </div>
+                </a>
               </div>
             </h3>
           </div>
@@ -1666,7 +1677,24 @@ export default {
     View,
   },
   setup() {
+    const hideHorizontalIcon = ref(true);
     // 475 768 991
+    const scrollPosition = (e) => {
+      const dom = document.querySelector(".apps_media-list");
+      const distance = e.target.scrollLeft;
+      const maxScrollLeft = dom.scrollWidth - dom.clientWidth; // 計算最大滾動距離
+      const hideScrollLeft = maxScrollLeft - 232; // 232為單一圖片寬度
+      const isHide = distance >= hideScrollLeft;
+      console.log(isHide, "isHide");
+      hideHorizontalIcon.value = !isHide;
+      if (isHide) {
+        console.log("已經滾動到元素的底部！");
+        // 在這裡寫上你希望在滾動到元素底部時執行的代碼
+      }
+      // let scrollTotal = dom.scrollWidth; //總高度 （隨著螢幕長度而變化
+      // console.log(scrollTotal, "scrollTotal");
+      // console.log(distance, "dis");
+    };
     const a = ref("");
     onMounted(() => {
       const videoElements = document.querySelectorAll(".video-cover");
@@ -1696,6 +1724,8 @@ export default {
       a,
       getVideoUrl,
       getImageUrl,
+      scrollPosition,
+      hideHorizontalIcon,
     };
   },
 };
@@ -1710,6 +1740,7 @@ AOS.init();
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
+
   &:first-child {
     margin-top: 30px;
   }
@@ -1729,6 +1760,7 @@ AOS.init();
 
 .apps_asset {
   height: 155px;
+
   div,
   a,
   img {
@@ -1742,6 +1774,7 @@ AOS.init();
     transform: translate3d(0, 0, 0) !important;
   }
 }
+
 @keyframes line {
   from {
     width: 0;
