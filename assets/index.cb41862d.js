@@ -1,9 +1,9 @@
-var a,
-  e,
-  t,
+var e,
+  a,
   s,
-  l,
+  t,
   i,
+  l,
   o,
   r = Object.defineProperty,
   n = Object.defineProperties,
@@ -11,268 +11,282 @@ var a,
   c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
-  m = (a, e, t) =>
-    e in a
-      ? r(a, e, { enumerable: !0, configurable: !0, writable: !0, value: t })
-      : (a[e] = t),
-  u = (a, e) => {
-    for (var t in e || (e = {})) p.call(e, t) && m(a, t, e[t]);
-    if (c) for (var t of c(e)) v.call(e, t) && m(a, t, e[t]);
-    return a;
+  m = (e, a, s) =>
+    a in e
+      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: s })
+      : (e[a] = s),
+  f = (e, a) => {
+    for (var s in a || (a = {})) p.call(a, s) && m(e, s, a[s]);
+    if (c) for (var s of c(a)) v.call(a, s) && m(e, s, a[s]);
+    return e;
   },
-  f = (a, e) => n(a, d(e));
+  u = (e, a) => n(e, d(a));
 import {
   o as g,
   c as b,
-  a as h,
+  a as w,
+  b as h,
   n as y,
-  u as w,
-  F as _,
-  b as x,
-  r as k,
-  d as j,
-  w as C,
-  e as q,
-  f as S,
-  g as z,
+  u as _,
+  F as x,
+  d as k,
+  r as j,
+  e as z,
+  w as q,
+  f as C,
+  g as S,
   h as O,
   i as A,
-  j as T,
+  j as B,
   k as E,
-  l as L,
-  m as B,
+  l as T,
+  m as L,
   p as I,
   q as P,
   s as M,
   t as D,
   v as F,
   x as U,
-  y as V,
-  S as H,
+  y as H,
+  S as V,
   z as N,
-  A as X,
-  B as R,
-  C as Z,
-  D as Y,
-  E as W,
-  G,
+  A as G,
+  B as X,
+  C as W,
+  D as R,
+  E as Y,
+  G as Z,
   H as K,
   I as $,
   J,
   T as Q,
-  K as aa,
-  L as ea,
-  M as ta,
-  N as sa,
-  O as la,
-  P as ia,
-  Q as oa,
-  R as ra,
-  U as na,
-  V as da,
-  W as ca,
-  X as pa,
-  Y as va,
-  Z as ma,
-  _ as ua,
-  $ as fa,
-  a0 as ga,
-  a1 as ba,
-  a2 as ha,
-  a3 as ya,
-  a4 as wa,
-  a5 as _a,
-  a6 as xa,
-} from "./vendor.fc0dc942.js";
+  K as ee,
+  L as ae,
+  M as se,
+  N as te,
+  O as ie,
+  P as le,
+  Q as oe,
+  R as re,
+  U as ne,
+  V as de,
+  W as ce,
+  X as pe,
+  Y as ve,
+  Z as me,
+  _ as fe,
+  $ as ue,
+  a0 as ge,
+  a1 as be,
+  a2 as we,
+  a3 as he,
+  a4 as ye,
+  a5 as _e,
+  a6 as xe,
+} from "./vendor.00fd3504.js";
 !(function () {
-  const a = document.createElement("link").relList;
-  if (!(a && a.supports && a.supports("modulepreload"))) {
-    for (const a of document.querySelectorAll('link[rel="modulepreload"]'))
-      e(a);
-    new MutationObserver((a) => {
-      for (const t of a)
-        if ("childList" === t.type)
-          for (const a of t.addedNodes)
-            "LINK" === a.tagName && "modulepreload" === a.rel && e(a);
+  const e = document.createElement("link").relList;
+  if (!(e && e.supports && e.supports("modulepreload"))) {
+    for (const e of document.querySelectorAll('link[rel="modulepreload"]'))
+      a(e);
+    new MutationObserver((e) => {
+      for (const s of e)
+        if ("childList" === s.type)
+          for (const e of s.addedNodes)
+            "LINK" === e.tagName && "modulepreload" === e.rel && a(e);
     }).observe(document, { childList: !0, subtree: !0 });
   }
-  function e(a) {
-    if (a.ep) return;
-    a.ep = !0;
-    const e = (function (a) {
-      const e = {};
+  function a(e) {
+    if (e.ep) return;
+    e.ep = !0;
+    const a = (function (e) {
+      const a = {};
       return (
-        a.integrity && (e.integrity = a.integrity),
-        a.referrerpolicy && (e.referrerPolicy = a.referrerpolicy),
-        "use-credentials" === a.crossorigin
-          ? (e.credentials = "include")
-          : "anonymous" === a.crossorigin
-          ? (e.credentials = "omit")
-          : (e.credentials = "same-origin"),
-        e
+        e.integrity && (a.integrity = e.integrity),
+        e.referrerpolicy && (a.referrerPolicy = e.referrerpolicy),
+        "use-credentials" === e.crossorigin
+          ? (a.credentials = "include")
+          : "anonymous" === e.crossorigin
+          ? (a.credentials = "omit")
+          : (a.credentials = "same-origin"),
+        a
       );
-    })(a);
-    fetch(a.href, e);
+    })(e);
+    fetch(e.href, a);
   }
 })();
-const ka = (a) =>
-    new URL(
-      {
-        "../assets/images/favicon.png":
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAIAAACTslUmAAAACXBIWXMAAAsSAAALEgHS3X78AAAKRklEQVR4nN1b7XmjvBJV9nn/iw5EB3grEFsB7kBxBXgrUFIBbAV4K8CpAFIBuAJIBUAF3B8nmSgSYBzb93nvPT/2A0tizmg0mhmJh3Ec2f8v/sFfbdvWdV2WZV3X2+0W/6Wf3t7e5vpzzn3f7/ve87wwDKkX0Pf96XSi/wZB4Pv+8Xjs+x4vGoYBPwkhfN9njL2+vi5LjJZ1XQ/DIKXEwzAMGWOQYbPZfKFX13UYhp7n4QXH49H3fXTwfR8Pgbquf//+zRiTUmIgz/No9IeHB7x+v9/7vg9lCSFM7aDl8Xjc7XZaa3qOoeq6htyMMfNXxliapsMwCCHCMGzb1uTQtu3z87PZOI7jp6cnz/PYOI5FURRFMa5DEASMsSiK3J8wdNd11nOlFH5qmgZPsiyDEO4gmBCllPU8iiKodU6woiiyLNNaQy9oyZqmEUKs5IZR5mjA/NwucRy7GuGcTzYGvTzPzYdVVXHOJ2lPAoOM48jyPGeMVVW1phsA9bi6n9Ru13WQzJIYnCd1xBizrAniCiHc9pOAvRRF8W7iWZat6bYscRAEriGAhvu8aRosMGtky4zHD0u+aA6qqvpCb/3aM/tzzs1XkklYzebUJ6XknJtPYPmmLpZHWAC6/EBnOMD12Gw2SZIMw+BuBm3b0r/3+z3EfXx8dAc5HA6Msb7vrefwrvhpu90yxpRSNEIYhpOjWRBCtG3LlFKWCtcjyzJYqda6aRrMHq1JcpgLRpUkCeecTBR2mCSJOYLlTtDGtN5JSCmVUgyO/nv0xnHsug6ri8A577qOuJGsc6CdRmuNf2ut4zjmnHPOXZuEuU5uKiaUUrTpM6XUSqc0iaZpkiSBcCbPs9zQFyZgQUo5JxL7ugN1XedOptb6kx6ksTzhN0Bejl3irqqqEkKY3CyPagFtxnHsuk5rPanHd3p5nkspSfFRFJ01ayCKosnJoT1qHbV3ULSglDq7AaAlrfwgCNx5LopCSvm56qqqiuMYPJVSa9bu3ALAwrvIlWN/WmnMa2wY0zbhVIqiiKIIDm2BpJRyIQKM43gyLnXRdR3iybMBFyaAFqqUcsH+4ziepgc0TQONBkGQZZlrMMv0VgIGNukhCRYrYDJeNYcFf1YUhdZ6ztzzPKdlKYSI4xjpRdd1QogFelVV5Xm+PP/jOEZRFMex2wauWCllupwgCLBLL/secm9JkjxEUfTy8sI5T9N0LhooyzJN05eXF/enOI7NiKdt27ZtKSXlnJdlaeZmjLHD4YB3mc+R4OJPSvmI1X6/3263eFFd1z9//tRaPz09ufLs9/s/f/5ABX3ff8kal91x13VJkiBQnNSCiSAItNaTi970YZOIoohmwF1dk7E4xIPTxg7HGMvz/EFrXZZlGIaUDh8OB4r65pCmKdJ2MPE8D+k2svuz3Q+HQ9u22+2273vMGJ6bFYDNZnM6nUanFHQ4HHa7XRRFx+PRfLjf7yE/ih2/fv1SSrEoirBMm6ahSArLbHnZTOZEK4EZWM7fML773Mo24edJ0RgQu6iUkllZTNM01JoxppTKsmySJ15/aSZFgPlN7sijkXC5P9EuYoWBcRzTUDY9y3Mi2DG9lpQyyzJTFMqIv0dvNHYF1wTIs7u9vkSSjEELlhg2vTkpsyyzokHMJ7YTNu+NqqqCZ1+IjEejiBJFkdlsMogxlw8Rm3RgcC2f9JZ9ZlEUSMwwousqgiCQHzDVIYQw92uYkyWNGU8jGOy6DlYXx7HWOooia8YQr8xNCXWXUjKY8jI90geEs3MNB0KIJEncUAG5jzufVtJo2QtNlFIK0eJy7oZggHMexzGzUmwX5Gzm3AAhSRKIshDywxonh+q6Ls9zilQ450KIIAiwDaI90p8FUTH5iGO11u/0JhdxVVVk62e5AbCK5cZVVQVBEATBnBbgNicNyq1WAVmWBUFgeikp5Sc9K0I1Pcrc8kUQ40pGOdjCtklZwuTI8HuT9KyZMD28lNIq22mtmVkUybKMYlb2kSvMiQghJoMmWpmwqzmecI9CCGsQGLm7W2D9Q6ewLIgqhHAbw8/ZJxWYrjiOz6bMiDzm3FdRFPT6hXwHhsq+Jm944ioF5oe4l1zoXNhk0xNCYE+bbA3PZuW4yz6JeGqtl2M3OAzGmFKKrCnPc3h/JFZWCH62nmDTOxt/mHEMNjoiDALYo9BmeSgXTdO4OeskrDW2lt7KShl897IEa6osmBbrIZXcoSNkzNAdc2r+q+hRaEvL9GyKPY5j13U4T0NIQUiSZGWhDf7DEhf03CobjlZWFm++0INiUF+gNQDjXhMuo9a9/q2WxNaEzB1XYeVfVHr7YpwmEzg9Mg+kHnNUV6ZFVVW5+xi2PirCQtFuEkjJ4Xpu4zjGcSyEYAuBvxm10LKO49hcM1RNc7sjyKK6gxsYmSVtQhAERVGQhVOJ4dIDsPczhuW8ZvzwaVaYi3SeDrLZR3EFg7p5w6TTwrQg5Vv2VZdO3TiOEqX3s/RMaZIkQfFiWRoCopaFMTGrGBmJiKUdrO2V7sqixxi7gJ4FWiEIPk0D1lpbqf2CEN8+XTw7MqNrO98AlTc9z9vv933fPz8/K6Vw5roSbduaJc3bw7wFciUwhxcZAmS4/tUuwOv9bP1sZXINHh8fOefPz89lWa5pv9ysLMuyLN2T94vwfeN04Xlemqa73e7x8bGu67PXEeiSwXa7tQryx+Px7e0tiqKLTH0C33Ytc1hTmzLtxwVKNd/wltbgUsofV+lmCjjZSNP0rF2hig5PS6ezSZK0bYtLd9cLc3t6YRgGQTAMQ5qmC83atj2dTkqpsiyfnp5ARimFqzC3wu3psY/bOsv0GGNKKWoDN3OTGTNxF3rww8MwLPhG3/cPhwO5HxwS3cSBm7gLPd/3EYuv3CHY/xY9xhgOetfTe319nSxOX4l70cM8WLfp5oAN8OYLr23bHzcflCClHIbBvCC4IAe7tWX2ff/29nZHeghE1tvnbQGV3cs42UdKsWb2YMOX3ildBpT7r6CH+Ma6H3I9hBC3zBgsQNz1If9KP7QSZVn6vn/H2QPWz8mVuc8k7k5vDWDGN6fX9/2/gh5m+LbGyRg7nU53pLfGqQArP466FEKIH3Aq99idQG8NSd/3EZGZ96iux3/DtawMG2Cft6XHyLXcw2tdBPrw7bbDvtO7+bK+dEx8bTIMww0Z3tc4L4pFfN/HgdHkJdTv4Z3e+jODiwBPuD6SRIp4Op1uMoHva34cR1xhwEW4a2pvJnBYx6a+0FsAulx0CjsJfIKXZdk/jLEwDP/+/bvb7Yg63axYiEWtz2oBXMtlRh3J+s51AX3fc86HYbjSz+Ger+d52+32ATqjy7rXjAsIITzPow+eOeebzcbUBa6EW73CMDwej9QriqK+7zebTd/3UJBr5JZ+6bL5nz9/GGN5nn/Sw1vTND0ej7c9suGce56Hj5/p620SCF+EM8Y8z/M8j2iT1bi6MKla0Qjd5w7DEC/6pEfAZX1XUKjHMleyxrqufd+/bUp6Pf4Dh5ybU5wY3ZkAAAAASUVORK5CYII=",
-        "../assets/images/icon_back.svg": "./assets/icon_back.556b6f96.svg",
-        "../assets/images/loading.gif": "./assets/loading.afec609f.gif",
-        "../assets/images/logo.png": "./assets/logo.f0ed8cf7.png",
-        "../assets/images/profile/about-cover.webp":
-          "./assets/about-cover.a0e8683c.webp",
-        "../assets/images/profile/about-cover2.webp":
-          "./assets/about-cover2.291fc507.webp",
-        "../assets/images/svg/apple.svg": "./assets/apple.0fa4e673.svg",
-        "../assets/images/svg/as.svg": "./assets/as.a4b9ab96.svg",
-        "../assets/images/svg/home-2.svg": "./assets/home-2.0c0430d4.svg",
-        "../assets/images/svg/img_wing.svg": "./assets/img_wing.20892ae6.svg",
-        "../assets/images/svg/paypal.svg": "./assets/paypal.245a62e2.svg",
-        "../assets/images/svg/story.svg": "./assets/story.a2e17494.svg",
-        "../assets/images/svg/world_2.svg": "./assets/world_2.5efbb68e.svg",
-        "../assets/images/svg/world_2_light.svg":
-          "./assets/world_2_light.01526311.svg",
-        "../assets/images/home/img/1.jpg": "./assets/1.f5fa3065.jpg",
-        "../assets/images/home/img/10.jpg": "./assets/10.19f04185.jpg",
-        "../assets/images/home/img/11.jpg": "./assets/11.122377c1.jpg",
-        "../assets/images/home/img/2.jpg": "./assets/2.cd10f399.jpg",
-        "../assets/images/home/img/3.jpg": "./assets/3.a76b71ea.jpg",
-        "../assets/images/home/img/4.jpg": "./assets/4.466d6924.jpg",
-        "../assets/images/home/img/5.jpg": "./assets/5.885e98b9.jpg",
-        "../assets/images/home/img/6.jpg": "./assets/6.695b9060.jpg",
-        "../assets/images/home/img/7.jpg": "./assets/7.88fc33dc.jpg",
-        "../assets/images/home/img/8.jpg": "./assets/8.c441e28b.jpg",
-        "../assets/images/home/img/9.jpg": "./assets/9.0bf97b8e.jpg",
-        "../assets/images/home/opening/1.jpg": "./assets/1.0f6439d0.jpg",
-        "../assets/images/home/opening/10.jpg": "./assets/10.3214ef96.jpg",
-        "../assets/images/home/opening/2.jpg": "./assets/2.2ca9db58.jpg",
-        "../assets/images/home/opening/3.jpg": "./assets/3.4e9daa42.jpg",
-        "../assets/images/home/opening/4.jpg": "./assets/4.7c3a17d2.jpg",
-        "../assets/images/home/opening/5.jpg": "./assets/5.1afa2bd3.jpg",
-        "../assets/images/home/opening/6.jpg": "./assets/6.872f3318.jpg",
-        "../assets/images/home/opening/7.jpg": "./assets/7.8d695fe6.jpg",
-        "../assets/images/home/opening/8.jpg": "./assets/8.107a61ce.jpg",
-        "../assets/images/home/opening/9.jpg": "./assets/9.e0cc08c9.jpg",
-      }[`../assets/images/${a}`],
-      self.location
-    ).href,
-  ja = { class: "icon" },
-  Ca = { class: "svg_box" },
-  qa = ["src"];
-var Sa = (a, e) => {
-  const t = a.__vccOpts || a;
-  for (const [s, l] of e) t[s] = l;
-  return t;
+const ke = (e) =>
+  new URL(
+    {
+      "../assets/images/favicon.png":
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAIAAACTslUmAAAACXBIWXMAAAsSAAALEgHS3X78AAAKRklEQVR4nN1b7XmjvBJV9nn/iw5EB3grEFsB7kBxBXgrUFIBbAV4K8CpAFIBuAJIBUAF3B8nmSgSYBzb93nvPT/2A0tizmg0mhmJh3Ec2f8v/sFfbdvWdV2WZV3X2+0W/6Wf3t7e5vpzzn3f7/ve87wwDKkX0Pf96XSi/wZB4Pv+8Xjs+x4vGoYBPwkhfN9njL2+vi5LjJZ1XQ/DIKXEwzAMGWOQYbPZfKFX13UYhp7n4QXH49H3fXTwfR8Pgbquf//+zRiTUmIgz/No9IeHB7x+v9/7vg9lCSFM7aDl8Xjc7XZaa3qOoeq6htyMMfNXxliapsMwCCHCMGzb1uTQtu3z87PZOI7jp6cnz/PYOI5FURRFMa5DEASMsSiK3J8wdNd11nOlFH5qmgZPsiyDEO4gmBCllPU8iiKodU6woiiyLNNaQy9oyZqmEUKs5IZR5mjA/NwucRy7GuGcTzYGvTzPzYdVVXHOJ2lPAoOM48jyPGeMVVW1phsA9bi6n9Ru13WQzJIYnCd1xBizrAniCiHc9pOAvRRF8W7iWZat6bYscRAEriGAhvu8aRosMGtky4zHD0u+aA6qqvpCb/3aM/tzzs1XkklYzebUJ6XknJtPYPmmLpZHWAC6/EBnOMD12Gw2SZIMw+BuBm3b0r/3+z3EfXx8dAc5HA6Msb7vrefwrvhpu90yxpRSNEIYhpOjWRBCtG3LlFKWCtcjyzJYqda6aRrMHq1JcpgLRpUkCeecTBR2mCSJOYLlTtDGtN5JSCmVUgyO/nv0xnHsug6ri8A577qOuJGsc6CdRmuNf2ut4zjmnHPOXZuEuU5uKiaUUrTpM6XUSqc0iaZpkiSBcCbPs9zQFyZgQUo5JxL7ugN1XedOptb6kx6ksTzhN0Bejl3irqqqEkKY3CyPagFtxnHsuk5rPanHd3p5nkspSfFRFJ01ayCKosnJoT1qHbV3ULSglDq7AaAlrfwgCNx5LopCSvm56qqqiuMYPJVSa9bu3ALAwrvIlWN/WmnMa2wY0zbhVIqiiKIIDm2BpJRyIQKM43gyLnXRdR3iybMBFyaAFqqUcsH+4ziepgc0TQONBkGQZZlrMMv0VgIGNukhCRYrYDJeNYcFf1YUhdZ6ztzzPKdlKYSI4xjpRdd1QogFelVV5Xm+PP/jOEZRFMex2wauWCllupwgCLBLL/secm9JkjxEUfTy8sI5T9N0LhooyzJN05eXF/enOI7NiKdt27ZtKSXlnJdlaeZmjLHD4YB3mc+R4OJPSvmI1X6/3263eFFd1z9//tRaPz09ufLs9/s/f/5ABX3ff8kal91x13VJkiBQnNSCiSAItNaTi970YZOIoohmwF1dk7E4xIPTxg7HGMvz/EFrXZZlGIaUDh8OB4r65pCmKdJ2MPE8D+k2svuz3Q+HQ9u22+2273vMGJ6bFYDNZnM6nUanFHQ4HHa7XRRFx+PRfLjf7yE/ih2/fv1SSrEoirBMm6ahSArLbHnZTOZEK4EZWM7fML773Mo24edJ0RgQu6iUkllZTNM01JoxppTKsmySJ15/aSZFgPlN7sijkXC5P9EuYoWBcRzTUDY9y3Mi2DG9lpQyyzJTFMqIv0dvNHYF1wTIs7u9vkSSjEELlhg2vTkpsyyzokHMJ7YTNu+NqqqCZ1+IjEejiBJFkdlsMogxlw8Rm3RgcC2f9JZ9ZlEUSMwwousqgiCQHzDVIYQw92uYkyWNGU8jGOy6DlYXx7HWOooia8YQr8xNCXWXUjKY8jI90geEs3MNB0KIJEncUAG5jzufVtJo2QtNlFIK0eJy7oZggHMexzGzUmwX5Gzm3AAhSRKIshDywxonh+q6Ls9zilQ450KIIAiwDaI90p8FUTH5iGO11u/0JhdxVVVk62e5AbCK5cZVVQVBEATBnBbgNicNyq1WAVmWBUFgeikp5Sc9K0I1Pcrc8kUQ40pGOdjCtklZwuTI8HuT9KyZMD28lNIq22mtmVkUybKMYlb2kSvMiQghJoMmWpmwqzmecI9CCGsQGLm7W2D9Q6ewLIgqhHAbw8/ZJxWYrjiOz6bMiDzm3FdRFPT6hXwHhsq+Jm944ioF5oe4l1zoXNhk0xNCYE+bbA3PZuW4yz6JeGqtl2M3OAzGmFKKrCnPc3h/JFZWCH62nmDTOxt/mHEMNjoiDALYo9BmeSgXTdO4OeskrDW2lt7KShl897IEa6osmBbrIZXcoSNkzNAdc2r+q+hRaEvL9GyKPY5j13U4T0NIQUiSZGWhDf7DEhf03CobjlZWFm++0INiUF+gNQDjXhMuo9a9/q2WxNaEzB1XYeVfVHr7YpwmEzg9Mg+kHnNUV6ZFVVW5+xi2PirCQtFuEkjJ4Xpu4zjGcSyEYAuBvxm10LKO49hcM1RNc7sjyKK6gxsYmSVtQhAERVGQhVOJ4dIDsPczhuW8ZvzwaVaYi3SeDrLZR3EFg7p5w6TTwrQg5Vv2VZdO3TiOEqX3s/RMaZIkQfFiWRoCopaFMTGrGBmJiKUdrO2V7sqixxi7gJ4FWiEIPk0D1lpbqf2CEN8+XTw7MqNrO98AlTc9z9vv933fPz8/K6Vw5roSbduaJc3bw7wFciUwhxcZAmS4/tUuwOv9bP1sZXINHh8fOefPz89lWa5pv9ysLMuyLN2T94vwfeN04Xlemqa73e7x8bGu67PXEeiSwXa7tQryx+Px7e0tiqKLTH0C33Ytc1hTmzLtxwVKNd/wltbgUsofV+lmCjjZSNP0rF2hig5PS6ezSZK0bYtLd9cLc3t6YRgGQTAMQ5qmC83atj2dTkqpsiyfnp5ARimFqzC3wu3psY/bOsv0GGNKKWoDN3OTGTNxF3rww8MwLPhG3/cPhwO5HxwS3cSBm7gLPd/3EYuv3CHY/xY9xhgOetfTe319nSxOX4l70cM8WLfp5oAN8OYLr23bHzcflCClHIbBvCC4IAe7tWX2ff/29nZHeghE1tvnbQGV3cs42UdKsWb2YMOX3ildBpT7r6CH+Ma6H3I9hBC3zBgsQNz1If9KP7QSZVn6vn/H2QPWz8mVuc8k7k5vDWDGN6fX9/2/gh5m+LbGyRg7nU53pLfGqQArP466FEKIH3Aq99idQG8NSd/3EZGZ96iux3/DtawMG2Cft6XHyLXcw2tdBPrw7bbDvtO7+bK+dEx8bTIMww0Z3tc4L4pFfN/HgdHkJdTv4Z3e+jODiwBPuD6SRIp4Op1uMoHva34cR1xhwEW4a2pvJnBYx6a+0FsAulx0CjsJfIKXZdk/jLEwDP/+/bvb7Yg63axYiEWtz2oBXMtlRh3J+s51AX3fc86HYbjSz+Ger+d52+32ATqjy7rXjAsIITzPow+eOeebzcbUBa6EW73CMDwej9QriqK+7zebTd/3UJBr5JZ+6bL5nz9/GGN5nn/Sw1vTND0ej7c9suGce56Hj5/p620SCF+EM8Y8z/M8j2iT1bi6MKla0Qjd5w7DEC/6pEfAZX1XUKjHMleyxrqufd+/bUp6Pf4Dh5ybU5wY3ZkAAAAASUVORK5CYII=",
+      "../assets/images/icon_back.svg": "./assets/icon_back.556b6f96.svg",
+      "../assets/images/loading.gif": "./assets/loading.afec609f.gif",
+      "../assets/images/logo.png": "./assets/logo.f0ed8cf7.png",
+      "../assets/images/profile/about-cover.webp":
+        "./assets/about-cover.a0e8683c.webp",
+      "../assets/images/profile/about-cover2.webp":
+        "./assets/about-cover2.291fc507.webp",
+      "../assets/images/svg/apple.svg": "./assets/apple.0fa4e673.svg",
+      "../assets/images/svg/as.svg": "./assets/as.a4b9ab96.svg",
+      "../assets/images/svg/home-2.svg": "./assets/home-2.0c0430d4.svg",
+      "../assets/images/svg/img_wing.svg": "./assets/img_wing.20892ae6.svg",
+      "../assets/images/svg/paypal.svg": "./assets/paypal.245a62e2.svg",
+      "../assets/images/svg/story.svg": "./assets/story.a2e17494.svg",
+      "../assets/images/svg/world_2.svg": "./assets/world_2.5efbb68e.svg",
+      "../assets/images/svg/world_2_light.svg":
+        "./assets/world_2_light.01526311.svg",
+      "../assets/images/home/img/1.jpg": "./assets/1.f5fa3065.jpg",
+      "../assets/images/home/img/10.jpg": "./assets/10.19f04185.jpg",
+      "../assets/images/home/img/11.jpg": "./assets/11.122377c1.jpg",
+      "../assets/images/home/img/2.jpg": "./assets/2.cd10f399.jpg",
+      "../assets/images/home/img/3.jpg": "./assets/3.a76b71ea.jpg",
+      "../assets/images/home/img/4.jpg": "./assets/4.466d6924.jpg",
+      "../assets/images/home/img/5.jpg": "./assets/5.885e98b9.jpg",
+      "../assets/images/home/img/6.jpg": "./assets/6.695b9060.jpg",
+      "../assets/images/home/img/7.jpg": "./assets/7.88fc33dc.jpg",
+      "../assets/images/home/img/8.jpg": "./assets/8.c441e28b.jpg",
+      "../assets/images/home/img/9.jpg": "./assets/9.0bf97b8e.jpg",
+      "../assets/images/home/opening/1.jpg": "./assets/1.0f6439d0.jpg",
+      "../assets/images/home/opening/10.jpg": "./assets/10.3214ef96.jpg",
+      "../assets/images/home/opening/2.jpg": "./assets/2.2ca9db58.jpg",
+      "../assets/images/home/opening/3.jpg": "./assets/3.4e9daa42.jpg",
+      "../assets/images/home/opening/4.jpg": "./assets/4.7c3a17d2.jpg",
+      "../assets/images/home/opening/5.jpg": "./assets/5.1afa2bd3.jpg",
+      "../assets/images/home/opening/6.jpg": "./assets/6.872f3318.jpg",
+      "../assets/images/home/opening/7.jpg": "./assets/7.8d695fe6.jpg",
+      "../assets/images/home/opening/8.jpg": "./assets/8.107a61ce.jpg",
+      "../assets/images/home/opening/9.jpg": "./assets/9.e0cc08c9.jpg",
+    }[`../assets/images/${e}`],
+    self.location
+  ).href;
+var je = (e, a) => {
+  const s = e.__vccOpts || e;
+  for (const [t, i] of a) s[t] = i;
+  return s;
 };
-var za = Sa(
+const ze = { class: "icon" },
+  qe = { class: "svg_box" },
+  Ce = ["src"];
+var Se = je(
   {
     components: {
-      Loading: {
-        props: { mode: String },
-        setup: (a) => (e, t) => (
-          g(),
-          b(
-            _,
-            null,
-            [
-              h("div", { class: y(["mask", a.mode]) }, null, 2),
-              h(
-                "div",
-                { class: y(["bg", a.mode]) },
-                [
-                  h("div", ja, [
-                    h("div", Ca, [
-                      h(
-                        "img",
-                        { src: w(ka)("favicon.png"), alt: "" },
-                        null,
-                        8,
-                        qa
-                      ),
+      Loading: je(
+        {
+          props: { mode: String },
+          setup: (e) => (a, s) => (
+            g(),
+            b(
+              x,
+              null,
+              [
+                w(" {{ mode }} "),
+                h("div", { class: y(["mask", e.mode]) }, null, 2),
+                h(
+                  "div",
+                  { class: y(["bg", e.mode]) },
+                  [
+                    h("div", ze, [
+                      h("div", qe, [
+                        h(
+                          "img",
+                          { src: _(ke)("favicon.png"), alt: "" },
+                          null,
+                          8,
+                          Ce
+                        ),
+                      ]),
                     ]),
-                  ]),
-                ],
-                2
-              ),
-            ],
-            64
-          )
-        ),
-      },
+                  ],
+                  2
+                ),
+              ],
+              64
+            )
+          ),
+        },
+        [
+          [
+            "__file",
+            "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/loading.vue",
+          ],
+        ]
+      ),
     },
     setup() {
-      const a = x(),
-        e = k(!1),
-        t = k(""),
-        s = k("leave"),
-        l = j(() => "stop" === s.value),
-        i = j(() => {
-          if (L(a.state.route.path)) return null;
-          return B("layout-error")(I(["meta", "layout"], a.state.route));
+      const e = k(),
+        a = j(!1),
+        s = j(""),
+        t = j("leave"),
+        i = z(() => "stop" === t.value),
+        l = z(() => {
+          if (T(e.state.route.path)) return null;
+          return L("layout-error")(I(["meta", "layout"], e.state.route));
         });
       return (
-        C(
-          () => a.state.route,
-          (l) => {
-            t.value !== l &&
-              ((e.value = !0),
+        q(
+          () => e.state.route,
+          (i) => {
+            s.value !== i &&
+              ((a.value = !0),
               setTimeout(() => {
-                (e.value = !1), (s.value = "enter");
+                (a.value = !1), (t.value = "enter");
               }, 3500)),
-              (t.value = a.state.route.path);
+              (s.value = e.state.route.path);
           }
         ),
-        C(e, (e) => {
-          a.commit("app/systm/Loading", e);
+        q(a, (a) => {
+          e.commit("app/systm/Loading", a);
         }),
-        q(() => {
+        C(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: i, isShowLoading: e, mode: s, isError: l }
+        { layout: l, isShowLoading: a, mode: t, isError: i }
       );
     },
   },
   [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         const o = S("router-view"),
           r = S("the-popup"),
           n = S("Loading");
         return (
           g(),
           b(
-            _,
+            x,
             null,
             [
+              w(" 外層利用is載入layout "),
               (g(),
-              z(A(s.layout), null, {
-                default: O(() => [
-                  T(o, null, {
-                    default: O(({ Component: a }) => [(g(), z(A(a)))]),
+              O(B(t.layout), null, {
+                default: A(() => [
+                  w(
+                    ' 內層利用router顯示 透過解構賦值 取得從router-view取得的component 在把Component用在:is＝"Component"身上'
+                  ),
+                  E(o, null, {
+                    default: A(({ Component: e }) => [(g(), O(B(e)))]),
                     _: 1,
                   }),
                 ]),
                 _: 1,
               })),
-              T(r),
-              s.isError || s.isShowLoading
-                ? (g(), z(n, { key: 0, mode: s.mode }, null, 8, ["mode"]))
-                : E("", !0),
+              E(r),
+              t.isError || t.isShowLoading
+                ? (g(), O(n, { key: 0, mode: t.mode }, null, 8, ["mode"]))
+                : w("v-if", !0),
             ],
             64
           )
         );
       },
     ],
-    ["__scopeId", "data-v-6ef0256d"],
+    ["__scopeId", "data-v-7ba5bd90"],
+    ["__file", "/Users/lishengjie/Documents/GitHub/basis.work/src/App.vue"],
   ]
 );
-const Oa = {
+const Oe = {
     "../locales/en/app.js": Object.freeze(
       Object.defineProperty(
         {
@@ -481,52 +495,52 @@ const Oa = {
       )
     ),
   },
-  Aa = {};
-for (let Vo in Oa) {
-  const a = Vo.replace("../locales/", "").toLowerCase().replace(".js", ""),
-    [e, ...t] = a.split("/"),
-    s = P(".", t),
-    l = Oa[Vo].default;
-  Aa[e] = M((a, e) => D(a, { [`${s}.${e}`]: l[e] }), Aa[e] || {}, F(l));
+  Ae = {};
+for (let No in Oe) {
+  const e = No.replace("../locales/", "").toLowerCase().replace(".js", ""),
+    [a, ...s] = e.split("/"),
+    t = P(".", s),
+    i = Oe[No].default;
+  Ae[a] = M((e, a) => D(e, { [`${t}.${a}`]: i[a] }), Ae[a] || {}, F(i));
 }
-const Ta = (() => {
-    var a, e, t, s;
-    const l = U.get("locale");
-    if (l) return l;
-    let i =
+const Be = (() => {
+    var e, a, s, t;
+    const i = U.get("locale");
+    if (i) return i;
+    let l =
       null !=
-      (s =
+      (t =
         null !=
-        (t = null == (a = navigator.language) ? void 0 : a.toLowerCase())
-          ? t
-          : null == (e = navigator.userLanguage)
+        (s = null == (e = navigator.language) ? void 0 : e.toLowerCase())
+          ? s
+          : null == (a = navigator.userLanguage)
           ? void 0
-          : e.toLowerCase())
-        ? s
+          : a.toLowerCase())
+        ? t
         : null;
-    return i
-      ? (i.includes("ph")
-          ? (i = "en-ph")
-          : i.includes("zh")
-          ? (i = "zh-tw")
-          : i.includes("en") && (i = "en"),
-        (i = i in Aa ? i : {}.VITE_LOCALE),
-        i)
+    return l
+      ? (l.includes("ph")
+          ? (l = "en-ph")
+          : l.includes("zh")
+          ? (l = "zh-tw")
+          : l.includes("en") && (l = "en"),
+        (l = l in Ae ? l : {}.VITE_LOCALE),
+        l)
       : {}.VITE_LOCALE;
   })(),
-  Ea = V.exports.createI18n({
-    initLocale: Ta,
-    fallbackLocale: null != (a = {}.VITE_DEFAULT_LANG) ? a : "zh-tw",
-    messages: Aa,
+  Ee = H.exports.createI18n({
+    initLocale: Be,
+    fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
+    messages: Ae,
   });
-var La = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Ea }, Symbol.toStringTag, {
+var Te = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ee }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(H.toast = function (a) {
+(V.toast = function (e) {
   return this.fire({
-    title: a,
+    title: e,
     toast: !0,
     showConfirmButton: !1,
     customClass: "swal2-toast",
@@ -534,33 +548,33 @@ var La = Object.freeze(
     hideClass: { popup: "animate__animated animate__fadeOutDown" },
     timer: 2e3,
     background: "transparent",
-    didOpen: (a) => {
-      a.addEventListener("click", H.close);
+    didOpen: (e) => {
+      e.addEventListener("click", V.close);
     },
   });
 }),
-  (H.alert = function ({
-    title: a,
-    text: e,
-    willClose: t = null,
-    heightAuto: s = !1,
-    html: l = !1,
-    confirmButtonText: i = Ea.t("button.confirm"),
+  (V.alert = function ({
+    title: e,
+    text: a,
+    willClose: s = null,
+    heightAuto: t = !1,
+    html: i = !1,
+    confirmButtonText: l = Ee.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
-      title: a,
-      text: e,
-      html: l,
+      title: e,
+      text: a,
+      html: i,
       customClass: `swal2-alert ${o}`,
-      heightAuto: s,
+      heightAuto: t,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
-      willClose: t,
-      confirmButtonText: i,
+      willClose: s,
+      confirmButtonText: l,
     });
   }),
-  (H.showLoading = function () {
+  (V.showLoading = function () {
     return this.fire({
       title: "winner winner chicken dinner",
       showConfirmButton: !1,
@@ -570,28 +584,28 @@ var La = Object.freeze(
       background: "transparent",
     });
   }),
-  (H.confirm = function ({
-    title: a,
-    text: e,
-    html: t,
-    confirmCallback: s = null,
-    heightAuto: l = !1,
+  (V.confirm = function ({
+    title: e,
+    text: a,
+    html: s,
+    confirmCallback: t = null,
+    heightAuto: i = !1,
   }) {
     return this.fire({
-      title: a,
-      text: e,
-      html: t,
+      title: e,
+      text: a,
+      html: s,
       customClass: "swal2-confirm",
-      heightAuto: l,
+      heightAuto: i,
       showCancelButton: !0,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       preConfirm() {
-        null == s || s();
+        null == t || t();
       },
     });
   });
-const Ba = H.mixin({
+const Le = V.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -599,62 +613,62 @@ const Ba = H.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Ea.t("button.confirm"),
-  cancelButtonText: Ea.t("button.cancel"),
-  didOpen(a) {
-    const e = a.querySelector(".swal2-cancel");
-    a.querySelector(".swal2-confirm").blur(), e.blur();
+  confirmButtonText: Ee.t("button.confirm"),
+  cancelButtonText: Ee.t("button.cancel"),
+  didOpen(e) {
+    const a = e.querySelector(".swal2-cancel");
+    e.querySelector(".swal2-confirm").blur(), a.blur();
   },
 });
-class Ia {
+class Ie {
   constructor() {
     return U;
   }
 }
-class Pa {
+class Pe {
   constructor() {
-    this.provider = new Ia();
+    this.provider = new Ie();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Pa.prototype.install = function (a) {
-  const e = "storage-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Pe.prototype.install = function (e) {
+  const a = "storage-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Ma = new Pa(),
-  Da = Object.freeze(
+var Me = new Pe(),
+  De = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Pa, default: Ma },
+      { __proto__: null, StorageService: Pe, default: Me },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Fa = () => {
-    const a = V.exports.useI18n(),
-      e = k({}),
-      t = (s, l = {}) => {
-        const [i, ...o] = N(".", s);
-        return i in e.value ? t(`${e.value[i]}.${P(".", o)}`, l) : a.t(s, l);
+const Fe = () => {
+    const e = H.exports.useI18n(),
+      a = j({}),
+      s = (t, i = {}) => {
+        const [l, ...o] = N(".", t);
+        return l in a.value ? s(`${a.value[l]}.${P(".", o)}`, i) : e.t(t, i);
       };
     return {
-      locale: a.locale,
-      change: (e) => {
-        a.setLocale(e), Ma.provider.set("locale", e);
+      locale: e.locale,
+      change: (a) => {
+        e.setLocale(a), Me.provider.set("locale", a);
       },
-      setPrefix: (a) => {
-        e.value = "string" == typeof a ? { $current: a } : u(u({}, e.value), a);
+      setPrefix: (e) => {
+        a.value = "string" == typeof e ? { $current: e } : f(f({}, a.value), e);
       },
-      t: t,
-      addMessages: a.addMessages,
+      t: s,
+      addMessages: e.addMessages,
     };
   },
-  Ua = ["onMouseenter", "onClick"],
-  Va = h("div", { class: "line" }, null, -1),
-  Ha = { class: "list_style" },
-  Na = { class: "nav_link-top" },
-  Xa = h(
+  Ue = ["onMouseenter", "onClick"],
+  He = h("div", { class: "line" }, null, -1),
+  Ve = { class: "list_style" },
+  Ne = { class: "nav_link-top" },
+  Ge = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -663,10 +677,10 @@ const Fa = () => {
     null,
     -1
   ),
-  Ra = { class: "nav_link-title" },
-  Za = { class: "u-ts-3" },
-  Ya = { class: "nav_link-p" },
-  Wa = h(
+  Xe = { class: "nav_link-title" },
+  We = { class: "u-ts-3" },
+  Re = { class: "nav_link-p" },
+  Ye = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -675,16 +689,17 @@ const Fa = () => {
     null,
     -1
   ),
-  Ga = h("div", { id: "pink_mask" }, null, -1),
-  Ka = {
+  Ze = h("div", { id: "pink_mask" }, null, -1);
+var Ke = je(
+  {
     props: ["isOpen"],
     emits: ["toggleOpen"],
-    setup(a, { emit: e }) {
-      const t = a,
-        s = k(1),
-        l = k(!0),
-        i = X(),
-        o = k([
+    setup(e, { emit: a }) {
+      const s = e,
+        t = j(1),
+        i = j(!0),
+        l = G(),
+        o = j([
           {
             title: "Overview",
             content:
@@ -710,9 +725,9 @@ const Fa = () => {
             path: "/about",
           },
         ]),
-        r = j(() => 25 * s.value),
-        n = j(() => {
-          switch (s.value) {
+        r = z(() => 25 * t.value),
+        n = z(() => {
+          switch (t.value) {
             case 1:
               return 50;
             case 2:
@@ -723,62 +738,62 @@ const Fa = () => {
               return 75;
           }
         }),
-        d = k(25);
-      return (a, c) => (
+        d = j(25);
+      return (e, c) => (
         g(),
         b(
           "div",
-          { class: y(["layout-deafult-header-nav", { active: t.isOpen }]) },
+          { class: y(["layout-deafult-header-nav", { active: s.isOpen }]) },
           [
             h("ul", null, [
               (g(!0),
               b(
-                _,
+                x,
                 null,
-                R(
+                X(
                   o.value,
-                  (a, l) => (
+                  (e, i) => (
                     g(),
                     b(
                       "li",
                       {
-                        key: a,
-                        style: Z(`--i: ${a}`),
-                        onMouseenter: (a) =>
-                          ((a) => {
-                            s.value = a;
-                          })(l),
-                        onClick: (s) => {
+                        key: e,
+                        style: W(`--i: ${e}`),
+                        onMouseenter: (e) =>
+                          ((e) => {
+                            t.value = e;
+                          })(i),
+                        onClick: (t) => {
                           return (
-                            (l = a.path),
-                            i.push(l),
-                            void e("toggleOpen", t.isOpen)
+                            (i = e.path),
+                            l.push(i),
+                            void a("toggleOpen", s.isOpen)
                           );
-                          var l;
+                          var i;
                         },
                       },
                       [
-                        Va,
-                        h("div", Ha, [
-                          h("div", Na, [
-                            Xa,
-                            h("div", Ra, [h("div", Za, Y(a.title), 1)]),
+                        He,
+                        h("div", Ve, [
+                          h("div", Ne, [
+                            Ge,
+                            h("div", Xe, [h("div", We, R(e.title), 1)]),
                           ]),
                           h(
                             "div",
                             {
                               class: y([
                                 "nav_link-btm",
-                                { active: s.value === l },
+                                { active: t.value === i },
                               ]),
                             },
-                            [h("p", Ya, Y(a.content), 1), Wa],
+                            [h("p", Re, R(e.content), 1), Ye],
                             2
                           ),
                         ]),
                       ],
                       44,
-                      Ua
+                      Ue
                     )
                   )
                 ),
@@ -788,9 +803,9 @@ const Fa = () => {
                 "div",
                 {
                   class: "move-item",
-                  style: Z({
-                    left: "" + (l.value ? `calc(${w(r)}% - 4px)` : "auto"),
-                    right: "" + (l.value ? "auto" : `calc(${w(n)}% - 4px)`),
+                  style: W({
+                    left: "" + (i.value ? `calc(${_(r)}% - 4px)` : "auto"),
+                    right: "" + (i.value ? "auto" : `calc(${_(n)}% - 4px)`),
                     width: `calc(${d.value}% + 8px)`,
                   }),
                 },
@@ -798,352 +813,387 @@ const Fa = () => {
                 4
               ),
             ]),
-            Ga,
+            Ze,
           ],
           2
         )
       );
     },
   },
-  $a = { key: 0 },
-  Ja = ["src"],
-  Qa = ["src"],
-  ae = [h("div", null, null, -1), h("div", null, null, -1)],
-  ee = { class: "layout-deafult pb-32" };
-var te = Sa(
+  [
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/nav-bar.vue",
+    ],
+  ]
+);
+const $e = { key: 0 },
+  Je = ["src"],
+  Qe = ["src"],
+  ea = [h("div", null, null, -1), h("div", null, null, -1)];
+const aa = { class: "layout-deafult pb-32" };
+var sa = je(
     {
       components: {
-        LayoutHeader: {
-          setup(a) {
-            const e = k(!1),
-              t = (a) => {
-                e.value = !a;
-              };
-            return (a, s) => {
-              const l = S("router-link");
-              return (
-                g(),
-                b(
-                  _,
-                  null,
-                  [
-                    h(
-                      "div",
-                      {
-                        class: y([
-                          "layout-deafult-header",
-                          { active: e.value },
-                        ]),
-                      },
-                      [
-                        T(
-                          l,
-                          {
-                            to: "/",
-                            "aria-current": "page",
-                            class: y([
-                              "layout-deafult-header-logo",
-                              { "layout-deafult-header-logo--open": e.value },
-                            ]),
-                            "aria-label": "home",
-                          },
-                          {
-                            default: O(() => [
-                              e.value
-                                ? (g(),
-                                  b(
-                                    "img",
-                                    { key: 1, src: w(ka)("logo.png"), alt: "" },
-                                    null,
-                                    8,
-                                    Qa
-                                  ))
-                                : (g(),
-                                  b("div", $a, [
-                                    h(
+        LayoutHeader: je(
+          {
+            setup(e) {
+              const a = j(!1),
+                s = (e) => {
+                  a.value = !e;
+                };
+              return (e, t) => {
+                const i = S("router-link");
+                return (
+                  g(),
+                  b(
+                    x,
+                    null,
+                    [
+                      h(
+                        "div",
+                        {
+                          class: y([
+                            "layout-deafult-header",
+                            { active: a.value },
+                          ]),
+                        },
+                        [
+                          E(
+                            i,
+                            {
+                              to: "/",
+                              "aria-current": "page",
+                              class: y([
+                                "layout-deafult-header-logo",
+                                { "layout-deafult-header-logo--open": a.value },
+                              ]),
+                              "aria-label": "home",
+                            },
+                            {
+                              default: A(() => [
+                                a.value
+                                  ? (g(),
+                                    b(
                                       "img",
-                                      { src: w(ka)("logo.png"), alt: "" },
+                                      {
+                                        key: 1,
+                                        src: _(ke)("logo.png"),
+                                        alt: "",
+                                      },
                                       null,
                                       8,
-                                      Ja
-                                    ),
-                                  ])),
-                            ]),
-                            _: 1,
-                          },
-                          8,
-                          ["class"]
-                        ),
-                        h(
-                          "div",
-                          {
-                            class: y([
-                              "layout-deafult-header-btn",
-                              { "layout-deafult-header-btn--open": e.value },
-                            ]),
-                            onClick:
-                              s[0] || (s[0] = (a) => (e.value = !e.value)),
-                          },
-                          ae,
-                          2
-                        ),
-                      ],
-                      2
-                    ),
-                    e.value
-                      ? (g(),
-                        z(
-                          Ka,
-                          { key: 0, "is-open": e.value, onToggleOpen: t },
-                          null,
-                          8,
-                          ["is-open"]
-                        ))
-                      : E("", !0),
-                  ],
-                  64
-                )
-              );
-            };
+                                      Qe
+                                    ))
+                                  : (g(),
+                                    b("div", $e, [
+                                      h(
+                                        "img",
+                                        { src: _(ke)("logo.png"), alt: "" },
+                                        null,
+                                        8,
+                                        Je
+                                      ),
+                                    ])),
+                              ]),
+                              _: 1,
+                            },
+                            8,
+                            ["class"]
+                          ),
+                          h(
+                            "div",
+                            {
+                              class: y([
+                                "layout-deafult-header-btn",
+                                { "layout-deafult-header-btn--open": a.value },
+                              ]),
+                              onClick:
+                                t[0] || (t[0] = (e) => (a.value = !a.value)),
+                            },
+                            ea,
+                            2
+                          ),
+                        ],
+                        2
+                      ),
+                      a.value
+                        ? (g(),
+                          O(
+                            Ke,
+                            { key: 0, "is-open": a.value, onToggleOpen: s },
+                            null,
+                            8,
+                            ["is-open"]
+                          ))
+                        : w("v-if", !0),
+                    ],
+                    64
+                  )
+                );
+              };
+            },
           },
-        },
+          [
+            [
+              "__file",
+              "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/header.vue",
+            ],
+          ]
+        ),
       },
       setup() {
-        const { t: a } = Fa();
-        return { t: a };
+        const { t: e } = Fe();
+        return { t: e };
       },
     },
     [
       [
         "render",
-        function (a, e, t, s, l, i) {
+        function (e, a, s, t, i, l) {
           const o = S("LayoutHeader");
           return (
-            g(), b(_, null, [T(o), h("div", ee, [W(a.$slots, "default")])], 64)
+            g(), b(x, null, [E(o), h("div", aa, [Y(e.$slots, "default")])], 64)
           );
         },
       ],
+      [
+        "__file",
+        "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-default.vue",
+      ],
     ]
   ),
-  se = Object.freeze(
+  ta = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: te },
+      { __proto__: null, default: sa },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const le = { class: "layout-demo" };
-var ie = Sa({ setup() {} }, [
+const ia = { class: "layout-demo" };
+var la = je({ setup() {} }, [
   [
     "render",
-    function (a, e, t, s, l, i) {
-      return g(), b("div", le, [W(a.$slots, "default")]);
+    function (e, a, s, t, i, l) {
+      return g(), b("div", ia, [Y(e.$slots, "default")]);
     },
   ],
+  [
+    "__file",
+    "/Users/lishengjie/Documents/GitHub/basis.work/src/layouts/layout-demo.vue",
+  ],
 ]);
-const oe = {
-    "../layouts/layout-default.vue": se,
+const oa = {
+    "../layouts/layout-default.vue": ta,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: ie },
+        { __proto__: null, default: la },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  re = [];
-for (let Vo in oe) {
-  const a = Vo.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  re.push({ componentName: a, component: oe[Vo].default });
+  ra = [];
+for (let No in oa) {
+  const e = No.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  ra.push({ componentName: e, component: oa[No].default });
 }
-const ne = {
-  install: (a) => {
-    re.forEach((e) => {
-      a.component(e.componentName, e.component);
+const na = {
+  install: (e) => {
+    ra.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-const de = {
+const da = {
     props: { title: {}, goBackButton: { type: Boolean, default: !1 } },
     setup() {
-      const a = X();
+      const e = G();
       return {
         goBack: () => {
-          a.options.history.state.back
-            ? a.back()
-            : a.push({ name: "default-path" });
+          e.options.history.state.back
+            ? e.back()
+            : e.push({ name: "default-path" });
         },
       };
     },
   },
-  ce = {
+  ca = {
     class: "relative flex items-center justify-center text-36 h-24 w-full",
   },
-  pe = { class: "font-bold" },
-  ve = { class: "absolute right-8 top-6" };
-var me = Sa(de, [
+  pa = { class: "font-bold" },
+  va = { class: "absolute right-8 top-6" };
+var ma = je(da, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         return (
           g(),
-          b("div", ce, [
-            t.goBackButton
+          b("div", ca, [
+            s.goBackButton
               ? (g(),
                 b("div", {
                   key: 0,
                   class: "go-back absolute left-3 top-6",
                   onClick:
-                    e[0] || (e[0] = (...a) => s.goBack && s.goBack(...a)),
+                    a[0] || (a[0] = (...e) => t.goBack && t.goBack(...e)),
                 }))
-              : E("", !0),
-            h("div", pe, [
-              W(a.$slots, "title", {}, () => [G(Y(t.title), 1)], !0),
+              : w("v-if", !0),
+            h("div", pa, [
+              Y(e.$slots, "title", {}, () => [Z(R(s.title), 1)], !0),
             ]),
-            h("div", ve, [W(a.$slots, "actions", {}, void 0, !0)]),
+            h("div", va, [Y(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
     ],
-    ["__scopeId", "data-v-50981458"],
+    ["__scopeId", "data-v-4c72660e"],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-header.vue",
+    ],
   ]),
-  ue = Object.freeze(
+  fa = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: me },
+      { __proto__: null, default: ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const fe = () => K("popup-service");
-const ge = {
+const ua = () => K("popup-service");
+const ga = {
     class: "popup-modal swal2-popup swal2-modal swal2-confirm",
     tabindex: "-1",
     style: { display: "grid" },
   },
-  be = { class: "swal2-title", style: { display: "block" } },
-  he = { class: "swal2-html-container", style: { display: "block" } },
-  ye = { class: "swal2-actions", style: { display: "flex" } };
-var we = Sa({}, [
+  ba = { class: "swal2-title", style: { display: "block" } },
+  wa = { class: "swal2-html-container", style: { display: "block" } },
+  ha = { class: "swal2-actions", style: { display: "flex" } };
+var ya = je({}, [
   [
     "render",
-    function (a, e) {
+    function (e, a) {
       return (
         g(),
-        b("div", ge, [
-          h("h2", be, [W(a.$slots, "title")]),
-          h("div", he, [W(a.$slots, "content")]),
-          h("div", ye, [W(a.$slots, "actions")]),
+        b("div", ga, [
+          h("h2", ba, [Y(e.$slots, "title")]),
+          h("div", wa, [Y(e.$slots, "content")]),
+          h("div", ha, [Y(e.$slots, "actions")]),
         ])
       );
     },
   ],
+  [
+    "__file",
+    "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/popup/modal.vue",
+  ],
 ]);
-const _e = {
+const _a = {
     key: 0,
     class:
       "fixed z-[1041] inset-0 w-full h-full flex justify-center items-center pointer-events-none",
   },
-  xe = { key: 1 },
-  ke = ["data-timer", "data-end"];
-var je = Sa(
+  xa = { key: 1 },
+  ka = ["data-timer", "data-end"];
+var ja = je(
   {
-    setup(a) {
-      const e = fe(),
-        t = j(() => e.state),
-        s = (a) => {
-          t.value.resolve(
-            u(
+    setup(e) {
+      const a = ua(),
+        s = z(() => a.state),
+        t = (e) => {
+          s.value.resolve(
+            f(
               { isConfirmed: !1, isDismissed: !1, dismiss: null, result: null },
-              a
+              e
             )
           );
         },
-        l = j(() => (t.value.type, ea(we))),
-        i = j(() => t.value.BackdropStyle),
-        o = k();
+        i = z(() => (s.value.type, ae(ya))),
+        l = z(() => s.value.BackdropStyle),
+        o = j();
       let r = null;
       const n = () => {
         clearTimeout(r), (r = null);
       };
-      C([() => t.value.autoClose, () => t.value.timer], ([a, e]) => {
-        e &&
+      q([() => s.value.autoClose, () => s.value.timer], ([e, a]) => {
+        a &&
           (n(),
           (r = setTimeout(() => {
-            n(), a && d("timer");
-          }, e)));
+            n(), e && d("timer");
+          }, a)));
       });
-      const d = async (a) => {
+      const d = async (e) => {
           if (r) {
-            if (!t.value.allowDismissWhenTimerRunning) return;
+            if (!s.value.allowDismissWhenTimerRunning) return;
             n();
           }
           if (o.value && "onDismissed" in o.value) {
-            const t = await o.value.onDismissed();
-            t && (s({ isDismissed: !0, dismiss: a, result: t }), e.clear());
-          } else s({ isDismissed: !0, dismiss: a }), e.clear();
+            const s = await o.value.onDismissed();
+            s && (t({ isDismissed: !0, dismiss: e, result: s }), a.clear());
+          } else t({ isDismissed: !0, dismiss: e }), a.clear();
         },
         c = async () => {
-          t.value.allowOutsideClick && d("backdrop");
+          s.value.allowOutsideClick && d("backdrop");
         },
         p = async () => {
           d("cancel");
         },
         v = async () => {
           if (r) {
-            if (!t.value.allowConfirmWhenTimerRunning) return;
+            if (!s.value.allowConfirmWhenTimerRunning) return;
             n();
           }
           if (o.value && "onConfirmed" in o.value) {
-            const a = await o.value.onConfirmed();
-            a && (s({ isConfirmed: !0, result: a }), e.clear());
-          } else s({ isConfirmed: !0 }), e.clear();
+            const e = await o.value.onConfirmed();
+            e && (t({ isConfirmed: !0, result: e }), a.clear());
+          } else t({ isConfirmed: !0 }), a.clear();
         };
-      return (a, e) => (
+      return (e, a) => (
         g(),
-        z(aa, { to: "body" }, [
-          T(
+        O(ee, { to: "body" }, [
+          E(
             Q,
             { name: "popup", duration: "600" },
             {
-              default: O(() => {
-                var a;
+              default: A(() => {
+                var e;
                 return [
-                  w(t).$display
+                  _(s).$display
                     ? (g(),
-                      b("div", _e, [
+                      b("div", _a, [
                         (g(),
-                        z(
-                          A(w(l)),
+                        O(
+                          B(_(i)),
                           {
                             class: y([
                               "popup__inner pointer-events-auto",
                               {
                                 "no-enter-animation":
-                                  null == (a = w(t))
+                                  null == (e = _(s))
                                     ? void 0
-                                    : a.noEnterAnimation,
+                                    : e.noEnterAnimation,
                               },
                             ]),
                           },
                           $(
                             {
-                              title: O(() => [G(Y(w(t).title), 1)]),
-                              content: O(() => [
-                                w(t).component
+                              title: A(() => [Z(R(_(s).title), 1)]),
+                              content: A(() => [
+                                _(s).component
                                   ? (g(),
-                                    z(
-                                      A(w(t).component),
+                                    O(
+                                      B(_(s).component),
                                       J(
                                         { key: 0, ref_key: "compRef", ref: o },
-                                        w(t).props
+                                        _(s).props
                                       ),
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xe, Y(w(t).text), 1)),
+                                  : (g(), b("div", xa, R(_(s).text), 1)),
                               ]),
-                              actions: O(() => [
-                                w(t).showCancelButton
+                              actions: A(() => [
+                                _(s).showCancelButton
                                   ? (g(),
                                     b(
                                       "button",
@@ -1153,11 +1203,11 @@ var je = Sa(
                                         class: "cancel-button",
                                         onClick: p,
                                       },
-                                      Y(w(t).cancelButtonText),
+                                      R(_(s).cancelButtonText),
                                       1
                                     ))
-                                  : E("", !0),
-                                w(t).showConfirmButton
+                                  : w("v-if", !0),
+                                _(s).showConfirmButton
                                   ? (g(),
                                     b(
                                       "button",
@@ -1167,28 +1217,31 @@ var je = Sa(
                                         class: "confirm-button",
                                         onClick: v,
                                       },
-                                      Y(w(t).confirmButtonText),
+                                      R(_(s).confirmButtonText),
                                       1
                                     ))
-                                  : E("", !0),
+                                  : w("v-if", !0),
                               ]),
                               _: 2,
                             },
                             [
-                              w(t).timer && w(t).timerProgress
+                              _(s).timer && _(s).timerProgress
                                 ? {
                                     name: "timer",
-                                    fn: O(() => [
+                                    fn: A(() => [
+                                      w(
+                                        " Date.now() + state.timer 現在時間加上指定時間則為倒數結束時間 "
+                                      ),
                                       h(
                                         "div",
                                         {
                                           class: "timer-progress",
-                                          "data-timer": w(t).timer,
-                                          "data-end": Date.now() + w(t).timer,
+                                          "data-timer": _(s).timer,
+                                          "data-end": Date.now() + _(s).timer,
                                         },
                                         null,
                                         8,
-                                        ke
+                                        ka
                                       ),
                                     ]),
                                   }
@@ -1199,13 +1252,13 @@ var je = Sa(
                           ["class"]
                         )),
                       ]))
-                    : E("", !0),
+                    : w("v-if", !0),
                 ];
               }),
               _: 1,
             }
           ),
-          T(
+          E(
             Q,
             {
               name: "popup-backdrop",
@@ -1213,21 +1266,21 @@ var je = Sa(
               "leave-active-class": "animate__animated animate__fadeOut",
             },
             {
-              default: O(() => [
-                w(t).$display
+              default: A(() => [
+                _(s).$display
                   ? (g(),
                     b(
                       "div",
                       {
                         key: 0,
                         class: "popup-backdrop",
-                        style: Z({ background: w(i) }),
+                        style: W({ background: _(l) }),
                         onClick: c,
                       },
                       null,
                       4
                     ))
-                  : E("", !0),
+                  : w("v-if", !0),
               ]),
               _: 1,
             }
@@ -1236,33 +1289,39 @@ var je = Sa(
       );
     },
   },
-  [["__scopeId", "data-v-aca526dc"]]
+  [
+    ["__scopeId", "data-v-628f8c70"],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/components/the-popup.vue",
+    ],
+  ]
 );
-const Ce = {
-    "../components/the-header.vue": ue,
+const za = {
+    "../components/the-header.vue": fa,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: je },
+        { __proto__: null, default: ja },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  qe = [];
-for (let Vo in Ce) {
-  const a = Vo.replace("../components/", "").toLowerCase().replace(".vue", "");
-  qe.push({ componentName: a, component: Ce[Vo].default });
+  qa = [];
+for (let No in za) {
+  const e = No.replace("../components/", "").toLowerCase().replace(".vue", "");
+  qa.push({ componentName: e, component: za[No].default });
 }
-const Se = {
-  install: (a) => {
-    qe.forEach((e) => {
-      a.component(e.componentName, e.component);
+const Ca = {
+  install: (e) => {
+    qa.forEach((a) => {
+      e.component(a.componentName, a.component);
     });
   },
 };
-class ze {
+class Sa {
   constructor() {
-    return H.mixin({
+    return V.mixin({
       reverseButtons: !0,
       heightAuto: !1,
       focusConfirm: !1,
@@ -1270,22 +1329,22 @@ class ze {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Ea.t("button.confirm"),
-      cancelButtonText: Ea.t("button.cancel"),
-      didOpen(a) {
-        const e = a.querySelector(".swal2-cancel");
-        a.querySelector(".swal2-confirm").blur(), e.blur();
+      confirmButtonText: Ee.t("button.confirm"),
+      cancelButtonText: Ee.t("button.cancel"),
+      didOpen(e) {
+        const a = e.querySelector(".swal2-cancel");
+        e.querySelector(".swal2-confirm").blur(), a.blur();
       },
     });
   }
 }
-class Oe {
+class Oa {
   constructor() {
-    this.provider = new ze();
+    this.provider = new Sa();
   }
-  toast(a) {
+  toast(e) {
     return this.provider.fire({
-      title: a,
+      title: e,
       toast: !0,
       showConfirmButton: !1,
       customClass: "swal2-toast",
@@ -1293,30 +1352,30 @@ class Oe {
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       timer: 2e3,
       background: "transparent",
-      didOpen: (a) => {
-        a.addEventListener("click", this.provider.close);
+      didOpen: (e) => {
+        e.addEventListener("click", this.provider.close);
       },
     });
   }
   alert({
-    title: a,
-    text: e,
-    willClose: t = null,
-    heightAuto: s = !1,
-    html: l = !1,
-    confirmButtonText: i = Ea.t("button.confirm"),
+    title: e,
+    text: a,
+    willClose: s = null,
+    heightAuto: t = !1,
+    html: i = !1,
+    confirmButtonText: l = Ee.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
-      title: a,
-      text: e,
-      html: l,
+      title: e,
+      text: a,
+      html: i,
       customClass: `swal2-alert ${o}`,
-      heightAuto: s,
+      heightAuto: t,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
-      willClose: t,
-      confirmButtonText: i,
+      willClose: s,
+      confirmButtonText: l,
     });
   }
   showLoading() {
@@ -1332,25 +1391,25 @@ class Oe {
     });
   }
   confirm({
-    title: a,
-    text: e,
-    html: t,
-    confirmButtonText: s = Ea.t("button.confirm"),
-    confirmCallback: l = null,
-    heightAuto: i = !1,
+    title: e,
+    text: a,
+    html: s,
+    confirmButtonText: t = Ee.t("button.confirm"),
+    confirmCallback: i = null,
+    heightAuto: l = !1,
   }) {
     return this.provider.fire({
-      title: a,
-      text: e,
-      html: t,
+      title: e,
+      text: a,
+      html: s,
       customClass: "swal2-confirm",
-      confirmButtonText: s,
-      heightAuto: i,
+      confirmButtonText: t,
+      heightAuto: l,
       showCancelButton: !0,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       preConfirm() {
-        null == l || l();
+        null == i || i();
       },
     });
   }
@@ -1358,143 +1417,163 @@ class Oe {
     this.provider.close();
   }
 }
-Oe.prototype.install = function (a) {
-  const e = "alert-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Oa.prototype.install = function (e) {
+  const a = "alert-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Ae = new Oe(),
-  Te = Object.freeze(
+var Aa = new Oa(),
+  Ba = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Oe, default: Ae },
+      { __proto__: null, AlertService: Oa, default: Aa },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ee {
-  constructor(a, e = {}) {
-    this.instance = ta.create(u({ baseURL: a }, e));
+class Ea {
+  constructor(e, a = {}) {
+    this.instance = se.create(f({ baseURL: e }, a));
   }
   init() {
-    this.instance.defaults.validateStatus = (a) => a >= 200 && a < 300;
+    this.instance.defaults.validateStatus = (e) => e >= 200 && e < 300;
   }
-  use(...a) {
-    a.forEach((a) => {
-      var e;
-      null == (e = a.use) || e.call(a, this.instance);
+  use(...e) {
+    e.forEach((e) => {
+      var a;
+      null == (a = e.use) || a.call(e, this.instance);
     });
   }
 }
-const Le = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
-          const e = U.get("token");
-          return e && (a.headers.Authorization = `Bearer ${e}`), a;
+const Ta = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
+          return e;
         },
-        function (a) {
-          return Promise.reject(a);
-        }
-      );
-    },
-  },
-  Be = (a, { rejectNil: e, rejectEmpty: t }) =>
-    M(
-      (s, l) => {
-        const i = a[l];
-        return (e && L(i)) || (t && sa(i)) ? s : la(l, i, s);
-      },
-      {},
-      F(a)
-    ),
-  Ie = {
-    use(a) {
-      a.interceptors.request.use(
-        function (a) {
-          const {
-            rejectNil: e = !0,
-            rejectEmpty: t = !1,
-            isFormData: s = !1,
-          } = a;
-          if (
-            (a.params &&
-              (a.params = Be(a.params, { rejectNil: e, rejectEmpty: t })),
-            a.data &&
-              ((a.data = Be(a.data, { rejectNil: e, rejectEmpty: t })), s))
-          ) {
-            const e = new FormData();
-            ia((t) => {
-              a.data[t] instanceof Array
-                ? ia((a) => {
-                    e.append(`${t}[]`, a);
-                  }, a.data[t])
-                : e.append(t, a.data[t]);
-            }, F(a.data)),
-              (a.data = e);
-          }
-          return a;
-        },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return e && e.response, Promise.reject(e);
         }
       ),
-        a.interceptors.response.use(
-          async function (a) {
-            return a.data;
+        e.interceptors.response.use(
+          function (e) {
+            return e;
           },
-          function (a) {
-            return Promise.reject(a);
+          function (e) {
+            return e && e.response, Promise.reject(e);
           }
         );
     },
   },
-  Pe = ta.create();
-(Pe.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Pe.defaults.validateStatus = (a) => a >= 200 && a < 300);
-const Me = {
+  La = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
+          const a = U.get("token");
+          return a && (e.headers.Authorization = `Bearer ${a}`), e;
+        },
+        function (e) {
+          return Promise.reject(e);
+        }
+      );
+    },
+  },
+  Ia = (e, { rejectNil: a, rejectEmpty: s }) =>
+    M(
+      (t, i) => {
+        const l = e[i];
+        return (a && T(l)) || (s && te(l)) ? t : ie(i, l, t);
+      },
+      {},
+      F(e)
+    ),
+  Pa = {
+    use(e) {
+      e.interceptors.request.use(
+        function (e) {
+          const {
+            rejectNil: a = !0,
+            rejectEmpty: s = !1,
+            isFormData: t = !1,
+          } = e;
+          if (
+            (e.params &&
+              (e.params = Ia(e.params, { rejectNil: a, rejectEmpty: s })),
+            e.data &&
+              ((e.data = Ia(e.data, { rejectNil: a, rejectEmpty: s })), t))
+          ) {
+            const a = new FormData();
+            le((s) => {
+              e.data[s] instanceof Array
+                ? le((e) => {
+                    a.append(`${s}[]`, e);
+                  }, e.data[s])
+                : a.append(s, e.data[s]);
+            }, F(e.data)),
+              (e.data = a);
+          }
+          return e;
+        },
+        function (e) {
+          return Promise.reject(e);
+        }
+      ),
+        e.interceptors.response.use(
+          async function (e) {
+            return e.data;
+          },
+          function (e) {
+            return Promise.reject(e);
+          }
+        );
+    },
+  },
+  Ma = se.create();
+(Ma.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Ma.defaults.validateStatus = (e) => e >= 200 && e < 300);
+const Da = {
   async "read/marquee"() {
-    const a = await Pe.get("/app/user/news", {
+    const e = await Ma.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Pe.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: a.data, withdraw: e.data };
+      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const De = {
-  "set/popup"(a, e) {
-    a.popupState = f(u({}, e), { $display: !0, $timestamp: Date.now() });
+const Fa = {
+  "set/popup"(e, a) {
+    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(a) {
-    a.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(e) {
+    e.popupState = { $display: !1, $timestamp: -1 };
   },
-  "systm/Loading"(a, e) {
-    a.isLoading = e;
+  "systm/Loading"(e, a) {
+    e.isLoading = a;
   },
 };
-const Fe = {
+const Ua = {
   async "read/marquee"() {
-    const a = await Pe.get("/app/user/news", {
+    const e = await Ma.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      e = await Pe.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
-    return { marquee: a.data, withdraw: e.data };
+      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+    return { marquee: e.data, withdraw: a.data };
   },
 };
-const Ue = {
-  "set/popup"(a, e) {
-    a.popupState = f(u({}, e), { $display: !0, $timestamp: Date.now() });
+const Ha = {
+  "set/popup"(e, a) {
+    e.popupState = u(f({}, a), { $display: !0, $timestamp: Date.now() });
   },
-  "clear/popup"(a) {
-    a.popupState = { $display: !1, $timestamp: -1 };
+  "clear/popup"(e) {
+    e.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Ve = {
+const Va = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Me },
+      { __proto__: null, default: Da },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1504,10 +1583,10 @@ const Ve = {
       {
         __proto__: null,
         default: {
-          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
-          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
-          getHadValueTypeFirstItem: (a) => (e) =>
-            a.tips.find((a) => a.type === e && "" !== a.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1516,7 +1595,7 @@ const Ve = {
   ),
   "../store/app/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: De },
+      { __proto__: null, default: Fa },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1538,7 +1617,7 @@ const Ve = {
   ),
   "../store/auth/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Fe },
+      { __proto__: null, default: Ua },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1548,10 +1627,10 @@ const Ve = {
       {
         __proto__: null,
         default: {
-          isTip: (a) => (e) => -1 !== a.tips.findIndex((a) => a.type === e),
-          getTypeFirstItem: (a) => (e) => a.tips.find((a) => a.type === e),
-          getHadValueTypeFirstItem: (a) => (e) =>
-            a.tips.find((a) => a.type === e && "" !== a.msg),
+          isTip: (e) => (a) => -1 !== e.tips.findIndex((e) => e.type === a),
+          getTypeFirstItem: (e) => (a) => e.tips.find((e) => e.type === a),
+          getHadValueTypeFirstItem: (e) => (a) =>
+            e.tips.find((e) => e.type === a && "" !== e.msg),
         },
       },
       Symbol.toStringTag,
@@ -1560,7 +1639,7 @@ const Ve = {
   ),
   "../store/auth/mutations.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ue },
+      { __proto__: null, default: Ha },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1580,54 +1659,54 @@ const Ve = {
     )
   ),
 };
-let He = {};
-const Ne = (a, e, t) => {
-  const [s, ...l] = a;
-  return l.length
-    ? { [s]: { namespaced: !0, modules: Ne(l, e, t) } }
-    : { [s]: { namespaced: !0, [e]: t } };
+let Na = {};
+const Ga = (e, a, s) => {
+  const [t, ...i] = e;
+  return i.length
+    ? { [t]: { namespaced: !0, modules: Ga(i, a, s) } }
+    : { [t]: { namespaced: !0, [a]: s } };
 };
-for (let Vo in Ve) {
-  const a = Vo.replace("../store/", "")
+for (let No in Va) {
+  const e = No.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  He = na(He, Ne(ra(a), oa(a), Ve[Vo].default));
+  Na = ne(Na, Ga(re(e), oe(e), Va[No].default));
 }
-var Xe = He;
-const Re = {},
-  Ze = function (a, e) {
-    return e && 0 !== e.length
+var Xa = Na;
+const Wa = {},
+  Ra = function (e, a) {
+    return a && 0 !== a.length
       ? Promise.all(
-          e.map((a) => {
-            if ((a = `./${a}`) in Re) return;
-            Re[a] = !0;
-            const e = a.endsWith(".css"),
-              t = e ? '[rel="stylesheet"]' : "";
-            if (document.querySelector(`link[href="${a}"]${t}`)) return;
-            const s = document.createElement("link");
+          a.map((e) => {
+            if ((e = `./${e}`) in Wa) return;
+            Wa[e] = !0;
+            const a = e.endsWith(".css"),
+              s = a ? '[rel="stylesheet"]' : "";
+            if (document.querySelector(`link[href="${e}"]${s}`)) return;
+            const t = document.createElement("link");
             return (
-              (s.rel = e ? "stylesheet" : "modulepreload"),
-              e || ((s.as = "script"), (s.crossOrigin = "")),
-              (s.href = a),
-              document.head.appendChild(s),
-              e
-                ? new Promise((e, t) => {
-                    s.addEventListener("load", e),
-                      s.addEventListener("error", () =>
-                        t(new Error(`Unable to preload CSS for ${a}`))
+              (t.rel = a ? "stylesheet" : "modulepreload"),
+              a || ((t.as = "script"), (t.crossOrigin = "")),
+              (t.href = e),
+              document.head.appendChild(t),
+              a
+                ? new Promise((a, s) => {
+                    t.addEventListener("load", a),
+                      t.addEventListener("error", () =>
+                        s(new Error(`Unable to preload CSS for ${e}`))
                       );
                   })
                 : void 0
             );
           })
-        ).then(() => a())
-      : a();
+        ).then(() => e())
+      : e();
   },
-  Ye = { class: "footer" },
-  We = { class: "container" },
-  Ge = { class: "row row-justify-center" },
-  Ke = h(
+  Ya = { class: "footer" },
+  Za = { class: "container" },
+  Ka = { class: "row row-justify-center" },
+  $a = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1676,7 +1755,7 @@ const Re = {},
     ],
     -1
   ),
-  $e = h(
+  Ja = h(
     "div",
     { class: "col col-lg-3 col-md-12" },
     [
@@ -1721,67 +1800,75 @@ const Re = {},
     ],
     -1
   ),
-  Je = h("div", { class: "col col-md-hide" }, null, -1),
-  Qe = { class: "col col-lg-4 col-md-12 col-md-first" },
-  at = { href: "/", class: "footer-wordmark w-inline-block" },
-  et = { class: "wordmark w-embed" },
-  tt = ["src"],
-  st = h(
+  Qa = h("div", { class: "col col-md-hide" }, null, -1),
+  es = { class: "col col-lg-4 col-md-12 col-md-first" },
+  as = { href: "/", class: "footer-wordmark w-inline-block" },
+  ss = { class: "wordmark w-embed" },
+  ts = ["src"],
+  is = h(
     "div",
     { class: "footer-copyright" },
     [
       h("div", { "data-copyright": "" }, [
-        G(" Copyright © "),
+        Z(" Copyright © "),
         h("span", { "data-dynamic": "year" }, "2024"),
       ]),
     ],
     -1
-  ),
-  lt = {
-    setup: (a) => (a, e) => (
+  );
+var ls = je(
+  {
+    setup: (e) => (e, a) => (
       g(),
-      b("footer", Ye, [
-        h("div", We, [
-          h("div", Ge, [
-            Ke,
-            $e,
-            Je,
-            h("div", Qe, [
-              h("a", at, [
-                h("div", et, [
-                  h("img", { src: w(ka)("logo.png"), alt: "" }, null, 8, tt),
+      b("footer", Ya, [
+        h("div", Za, [
+          h("div", Ka, [
+            $a,
+            Ja,
+            Qa,
+            h("div", es, [
+              h("a", as, [
+                h("div", ss, [
+                  h("img", { src: _(ke)("logo.png"), alt: "" }, null, 8, ts),
                 ]),
               ]),
             ]),
           ]),
-          st,
+          is,
         ]),
       ])
     ),
-  };
-const it = {
-    components: { Footer: lt },
+  },
+  [
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/layout/footer.vue",
+    ],
+  ]
+);
+const os = {
+    components: { Footer: ls },
     setup() {
-      const { t: a } = Fa();
+      const { t: e } = Fe();
       return (
-        q(() => {
-          da.init();
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+        C(() => {
+          de.init();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a }
+        { t: e }
       );
     },
   },
-  ot = h(
+  rs = h(
     "header",
     { "data-mouse-class": "cc-icon", class: "header cc-large" },
     [
@@ -2156,8 +2243,8 @@ const it = {
     ],
     -1
   ),
-  rt = h("div", { class: "spacing" }, null, -1),
-  nt = h(
+  ns = h("div", { class: "spacing" }, null, -1),
+  ds = h(
     "section",
     { class: "section" },
     [
@@ -3233,13 +3320,13 @@ const it = {
     ],
     -1
   ),
-  dt = h(
+  cs = h(
     "div",
     { class: "container" },
     [h("div", { class: "target_line" })],
     -1
   ),
-  ct = h(
+  ps = h(
     "section",
     { class: "section" },
     [
@@ -3492,490 +3579,1439 @@ const it = {
     ],
     -1
   ),
-  pt = ca(
+  vs = ce(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   );
-var vt = Sa(it, [
+var ms = je(os, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         const o = S("Footer");
-        return g(), b(_, null, [ot, rt, nt, dt, ct, pt, T(o)], 64);
+        return (
+          g(),
+          b(
+            x,
+            null,
+            [
+              rs,
+              w(" ------- "),
+              ns,
+              w(" ==== "),
+              ds,
+              w(" ==== "),
+              cs,
+              ps,
+              w(" ==== "),
+              vs,
+              E(o),
+            ],
+            64
+          )
+        );
       },
     ],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/about.vue",
+    ],
   ]),
-  mt = Object.freeze(
+  fs = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: vt },
+      { __proto__: null, default: ms },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ut = {
+const us = {
     title: "pages.home.nav.about",
-    components: { Footer: lt },
+    components: { Footer: ls },
     setup() {
-      const { t: a } = Fa();
+      const { t: e } = Fe();
       return (
-        q(() => {
-          da.init();
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+        C(() => {
+          de.init(),
+            (() => {
+              let e = document.querySelector("#cases");
+              e.addEventListener("wheel", (a) => {
+                window.innerWidth > 991 &&
+                  (a.preventDefault(), (e.scrollLeft += a.deltaY));
+              });
+            })();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a }
+        { t: e }
       );
     },
   },
-  ft = ((a) => (pa("data-v-e64ae5a2"), (a = a()), va(), a))(() =>
+  gs = ((e) => (pe("data-v-74f67db4"), (e = e()), ve(), e))(() =>
     h(
       "div",
-      { class: "about" },
+      { id: "cases", class: "wrap" },
       [
-        h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+        w(" pc "),
+        h("div", { class: "cases-slider" }, [
+          h("h1", { id: "case-title" }, "Cases"),
           h(
-            "a",
-            {
-              "data-mouse-class": "cc-text",
-              href: "/cases/sable-brand",
-              class: "cases-card cc-immediate w-inline-block",
-              style: {
-                transform:
-                  "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
-                "transform-style": "preserve-3d",
-                opacity: "1",
-              },
-            },
+            "div",
+            { role: "list", class: "cases-list w-dyn-items container" },
             [
-              h("div", { class: "cases-assets" }, [
-                h("img", {
-                  src:
-                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
-                  loading: "lazy",
-                  alt: "",
-                  class: "cases-portrait",
-                }),
-                h("img", {
-                  src:
-                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
-                  loading: "eager",
-                  alt: "",
-                  class: "cases-landscape",
-                }),
-                h("div", { class: "iframe-video_wrapper" }, [
-                  h("iframe", {
-                    class: "iframe-video_iframe",
-                    width: "100%",
-                    height: "100%",
-                    style: { overflow: "hidden" },
-                    frameborder: "0",
-                    scrolling: "no",
-                    allow: "fullscreen",
-                    src:
-                      "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                    title: "Sable 12",
-                    loading: "lazy",
-                  }),
-                  h("div", { class: "iframe-video_blocker" }),
-                ]),
-              ]),
-              h("div", { class: "cases-text" }, [
-                h("div", { class: "u-ts-2" }, "Sable Brand"),
-              ]),
-            ]
-          ),
-          h("link", { rel: "prerender", href: "/cases/sable-brand" }),
-          h(
-            "a",
-            {
-              "data-mouse-text": "Contact Us",
-              "data-mouse-class": "cc-text",
-              href: "mailto:hello@basis.work?subject=Enquiry",
-              class:
-                "cases-card cc-immediate w-inline-block w-condition-invisible",
-              style: {
-                transform:
-                  "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)",
-                "transform-style": "preserve-3d",
-                opacity: "1",
-              },
-            },
-            [
-              h("div", { class: "cases-assets" }, [
-                h("img", {
-                  src:
-                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
-                  loading: "lazy",
-                  alt: "",
-                  class: "cases-portrait w-condition-invisible",
-                }),
-                h("img", {
-                  src:
-                    "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
-                  loading: "lazy",
-                  alt: "",
-                  class: "cases-landscape w-condition-invisible",
-                }),
-                h("div", null, [
-                  h("div", { class: "iframe-video_wrapper" }, [
-                    h("iframe", {
-                      class: "iframe-video_iframe",
-                      width: "100%",
-                      height: "100%",
-                      style: { overflow: "hidden" },
-                      frameborder: "0",
-                      scrolling: "no",
-                      allow: "fullscreen",
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
                       src:
-                        "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
-                      title: "Sable 12",
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
                       loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
                     }),
-                    h("div", { class: "iframe-video_blocker" }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                      loading: "eager",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "iframe-video_wrapper" }, [
+                      h("iframe", {
+                        class: "iframe-video_iframe",
+                        width: "100%",
+                        height: "100%",
+                        style: { overflow: "hidden" },
+                        frameborder: "0",
+                        scrolling: "no",
+                        allow: "fullscreen",
+                        src:
+                          "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                        title: "Sable 12",
+                        loading: "lazy",
+                      }),
+                      h("div", { class: "iframe-video_blocker" }),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "u-ts-2" }, "Sable Brand"),
+                  ]),
+                ]),
+                h("link", { rel: "prerender" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait w-condition-invisible",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape w-condition-invisible",
+                      }),
+                      h("div", null, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            src:
+                              "https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                            title: "Sable 12",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Sable Brand"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
+                      loading: "eager",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "iframe-video_wrapper" }, [
+                      h("iframe", {
+                        class: "iframe-video_iframe",
+                        width: "100%",
+                        height: "100%",
+                        style: { overflow: "hidden" },
+                        frameborder: "0",
+                        scrolling: "no",
+                        allow: "fullscreen",
+                        loading: "lazy",
+                      }),
+                      h("div", { class: "iframe-video_blocker" }),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "u-ts-2" }, "Sable Website"),
+                  ]),
+                ]),
+                h("link", { rel: "prerender" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "w-condition-invisible" }, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Sable Website"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
+                      loading: "eager",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "iframe-video_wrapper" }, [
+                      h("iframe", {
+                        class: "iframe-video_iframe",
+                        width: "100%",
+                        height: "100%",
+                        style: { overflow: "hidden" },
+                        frameborder: "0",
+                        scrolling: "no",
+                        allow: "fullscreen",
+                        src:
+                          "https://app.vidzflow.com/v/XBaN1uMmvl?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                        title: "Seen 1",
+                        loading: "lazy",
+                      }),
+                      h("div", { class: "iframe-video_blocker" }),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "u-ts-2" }, "Seen Brand"),
+                  ]),
+                ]),
+                h("link", { rel: "prerender" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait w-condition-invisible",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape w-condition-invisible",
+                      }),
+                      h("div", null, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            src:
+                              "https://app.vidzflow.com/v/XBaN1uMmvl?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                            title: "Seen 1",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Seen Brand"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815259b_google-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815258d_google-website-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Google Website"),
+                    ]),
+                  ]
+                ),
+                h("link", { rel: "prerender" }),
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815259b_google-website-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815258d_google-website-card-image-mobile.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "w-condition-invisible" }, [
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "cases-more" }, [
+                      h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                        Z(" Contact us"),
+                        h("span", { class: "hide-tablet" }, " for more"),
+                      ]),
+                    ]),
+                    h("div", { class: "u-ts-2" }, "Google Website"),
                   ]),
                 ]),
               ]),
-              h("div", { class: "cases-text" }, [
-                h("div", { class: "cases-more" }, [
-                  h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                    G(" Contact us"),
-                    h("span", { class: "hide-tablet" }, " for more"),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg",
+                      loading: "lazy",
+                      alt: "",
+                      sizes: "(max-width: 991px) 100vw, 23vw",
+                      srcset:
+                        "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg       652w\n                ",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg",
+                      loading: "eager",
+                      alt: "",
+                      sizes:
+                        "(max-width: 479px) 97vw, (max-width: 991px) 98vw, 100vw",
+                      srcset:
+                        "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg       718w\n                ",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "iframe-video_wrapper" }, [
+                      h("iframe", {
+                        class: "iframe-video_iframe",
+                        width: "100%",
+                        height: "100%",
+                        style: { overflow: "hidden" },
+                        frameborder: "0",
+                        scrolling: "no",
+                        allow: "fullscreen",
+                        loading: "lazy",
+                      }),
+                      h("div", { class: "iframe-video_blocker" }),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "u-ts-2" }, "Yoginess Website"),
                   ]),
                 ]),
-                h("div", { class: "u-ts-2" }, "Sable Brand"),
+                h("link", { rel: "prerender" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg",
+                        loading: "lazy",
+                        alt: "",
+                        sizes: "100vw",
+                        srcset:
+                          "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg       652w\n                ",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg",
+                        loading: "lazy",
+                        alt: "",
+                        sizes: "100vw",
+                        srcset:
+                          "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg       718w\n                ",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "w-condition-invisible" }, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Yoginess Website"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8a96_yoginess-brand-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8ac2_yoginess-brand-card-image-mobile.jpeg",
+                      loading: "eager",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "iframe-video_wrapper" }, [
+                      h("iframe", {
+                        class: "iframe-video_iframe",
+                        width: "100%",
+                        height: "100%",
+                        style: { overflow: "hidden" },
+                        frameborder: "0",
+                        scrolling: "no",
+                        allow: "fullscreen",
+                        src:
+                          "https://app.vidzflow.com/v/XqnSO3RNUV?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                        title: "Yoginess 1",
+                        loading: "lazy",
+                      }),
+                      h("div", { class: "iframe-video_blocker" }),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "u-ts-2" }, "Yoginess Brand"),
+                  ]),
+                ]),
+                h("link", { rel: "prerender" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8a96_yoginess-brand-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait w-condition-invisible",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8ac2_yoginess-brand-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape w-condition-invisible",
+                      }),
+                      h("div", null, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            src:
+                              "https://app.vidzflow.com/v/XqnSO3RNUV?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                            title: "Yoginess 1",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Yoginess Brand"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b9665872077_airbnb-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b966587207a_airbnb-website-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Airbnb Website"),
+                    ]),
+                  ]
+                ),
+                h("link", { rel: "prerender" }),
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b9665872077_airbnb-website-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b966587207a_airbnb-website-card-image-mobile.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "w-condition-invisible" }, [
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "cases-more" }, [
+                      h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                        Z(" Contact us"),
+                        h("span", { class: "hide-tablet" }, " for more"),
+                      ]),
+                    ]),
+                    h("div", { class: "u-ts-2" }, "Airbnb Website"),
+                  ]),
+                ]),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    href: "/cases/sable-app",
+                    class: "cases-card cc-immediate w-inline-block",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Sable App"),
+                    ]),
+                  ]
+                ),
+                h("link", { rel: "prerender", href: "/cases/sable-app" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "w-condition-invisible" }, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Sable App"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    href: "/cases/seen-website",
+                    class: "cases-card cc-immediate w-inline-block",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c06136822989dcad4c306_seen-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c06126822989dcad4c2b7_seen-website-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Seen Website"),
+                    ]),
+                  ]
+                ),
+                h("link", { rel: "prerender", href: "/cases/seen-website" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c06136822989dcad4c306_seen-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c06126822989dcad4c2b7_seen-website-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "w-condition-invisible" }, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Seen Website"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    href: "/cases/gaffa-brand-and-website",
+                    class: "cases-card cc-immediate w-inline-block",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758ca_gaffa-brand-and-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758d0_gaffa-brand-and-website-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          src:
+                            "https://app.vidzflow.com/v/kSzWdGIKBr?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                          title: "Gaffa 2",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Gaffa Brand & Website"),
+                    ]),
+                  ]
+                ),
+                h("link", {
+                  rel: "prerender",
+                  href: "/cases/gaffa-brand-and-website",
+                }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758ca_gaffa-brand-and-website-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait w-condition-invisible",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758d0_gaffa-brand-and-website-card-image-mobile.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-landscape w-condition-invisible",
+                      }),
+                      h("div", null, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            src:
+                              "https://app.vidzflow.com/v/kSzWdGIKBr?dq=1080&ap=true&muted=true&loop=true&ctp=false&bv=true&bc=%234E5FFD&controls=false",
+                            title: "Gaffa 2",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Gaffa Brand & Website"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    href: "/cases/seen-app",
+                    class: "cases-card cc-immediate w-inline-block",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg",
+                        loading: "lazy",
+                        alt: "",
+                        sizes: "(max-width: 991px) 100vw, 23vw",
+                        srcset:
+                          "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg       652w\n                ",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg",
+                        loading: "eager",
+                        alt: "",
+                        sizes:
+                          "(max-width: 479px) 97vw, (max-width: 991px) 98vw, 100vw",
+                        srcset:
+                          "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg       718w\n                ",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Seen App"),
+                    ]),
+                  ]
+                ),
+                h("link", { rel: "prerender", href: "/cases/seen-app" }),
+                h(
+                  "a",
+                  {
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg",
+                        loading: "lazy",
+                        alt: "",
+                        sizes: "100vw",
+                        srcset:
+                          "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg       652w\n                ",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg",
+                        loading: "lazy",
+                        alt: "",
+                        sizes: "100vw",
+                        srcset:
+                          "\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile-p-500.jpg 500w,\n                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg       718w\n                ",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "w-condition-invisible" }, [
+                        h("div", { class: "iframe-video_wrapper" }, [
+                          h("iframe", {
+                            class: "iframe-video_iframe",
+                            width: "100%",
+                            height: "100%",
+                            style: { overflow: "hidden" },
+                            frameborder: "0",
+                            scrolling: "no",
+                            allow: "fullscreen",
+                            loading: "lazy",
+                          }),
+                          h("div", { class: "iframe-video_blocker" }),
+                        ]),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "cases-more" }, [
+                        h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                          Z(" Contact us"),
+                          h("span", { class: "hide-tablet" }, " for more"),
+                        ]),
+                      ]),
+                      h("div", { class: "u-ts-2" }, "Seen App"),
+                    ]),
+                  ]
+                ),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    href: "/cases/pc-financial-app",
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f89_pc-financial-app-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f85_pc-financial-app-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "PC Financial App"),
+                    ]),
+                  ]
+                ),
+                h("link", {
+                  rel: "prerender",
+                  href: "/cases/pc-financial-app",
+                }),
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f89_pc-financial-app-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f85_pc-financial-app-card-image-mobile.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "w-condition-invisible" }, [
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "cases-more" }, [
+                      h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                        Z(" Contact us"),
+                        h("span", { class: "hide-tablet" }, " for more"),
+                      ]),
+                    ]),
+                    h("div", { class: "u-ts-2" }, "PC Financial App"),
+                  ]),
+                ]),
+              ]),
+              h("div", { role: "listitem", class: "cases-item w-dyn-item" }, [
+                h(
+                  "a",
+                  {
+                    href: "/cases/red-bull-app",
+                    class:
+                      "cases-card cc-immediate w-inline-block w-condition-invisible",
+                  },
+                  [
+                    h("div", { class: "cases-assets" }, [
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f098_red-bull-app-card-image-desktop.jpeg",
+                        loading: "lazy",
+                        alt: "",
+                        class: "cases-portrait",
+                      }),
+                      h("img", {
+                        src:
+                          "https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f09c_red-bull-app-card-image-mobile.jpeg",
+                        loading: "eager",
+                        alt: "",
+                        class: "cases-landscape",
+                      }),
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                    h("div", { class: "cases-text" }, [
+                      h("div", { class: "u-ts-2" }, "Red Bull App"),
+                    ]),
+                  ]
+                ),
+                h("link", { rel: "prerender", href: "/cases/red-bull-app" }),
+                h("a", { class: "cases-card cc-immediate w-inline-block" }, [
+                  h("div", { class: "cases-assets" }, [
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f098_red-bull-app-card-image-desktop.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-portrait",
+                    }),
+                    h("img", {
+                      src:
+                        "https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f09c_red-bull-app-card-image-mobile.jpeg",
+                      loading: "lazy",
+                      alt: "",
+                      class: "cases-landscape",
+                    }),
+                    h("div", { class: "w-condition-invisible" }, [
+                      h("div", { class: "iframe-video_wrapper" }, [
+                        h("iframe", {
+                          class: "iframe-video_iframe",
+                          width: "100%",
+                          height: "100%",
+                          style: { overflow: "hidden" },
+                          frameborder: "0",
+                          scrolling: "no",
+                          allow: "fullscreen",
+                          loading: "lazy",
+                        }),
+                        h("div", { class: "iframe-video_blocker" }),
+                      ]),
+                    ]),
+                  ]),
+                  h("div", { class: "cases-text" }, [
+                    h("div", { class: "cases-more" }, [
+                      h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
+                        Z(" Contact us"),
+                        h("span", { class: "hide-tablet" }, " for more"),
+                      ]),
+                    ]),
+                    h("div", { class: "u-ts-2" }, "Red Bull App"),
+                  ]),
+                ]),
               ]),
             ]
           ),
         ]),
-        h("div", { class: "container mobile-show" }, [
-          h("div", { class: "target_line" }),
-        ]),
-        h("section", { class: "section mobile-show" }, [
-          h("div", { class: "section-title_component" }, [
-            h("div", { class: "container" }, [
-              h(
-                "div",
-                {
-                  class: "section-title_wrapper",
-                  "data-aos": "fade-up",
-                  "data-aos-duration": "700",
-                },
-                [
-                  h("div", {
-                    class: "section-title_dot",
-                    style: { opacity: "1" },
-                  }),
-                  h("div", { class: "u-overflow-hidden" }, [
-                    h(
-                      "div",
-                      {
-                        class: "section-title_title",
-                        style: {
-                          transform:
-                            "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                          "transform-style": "preserve-3d",
-                        },
-                      },
-                      [h("h2", { class: "u-ts-4" }, "Contact Us")]
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-          ]),
-          h("div", { class: "container" }, [
-            h("div", { class: "w-layout-grid pair-grid" }, [
-              h(
-                "div",
-                {
-                  "data-animation-element": "group",
-                  id: "w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67",
-                },
-                [
-                  h(
-                    "div",
-                    {
-                      "data-animation-element": "rich-text",
-                      id:
-                        "w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67",
-                      class: "contact-cta w-richtext",
-                    },
-                    [
-                      h(
-                        "h3",
-                        {
-                          "data-animation-element": "title",
-                          style: {},
-                          "data-aos": "fade-up",
-                          "data-aos-duration": "700",
-                        },
-                        [
-                          h(
-                            "div",
-                            {
-                              class: "u-overflow-hidden",
-                              style: {
-                                display: "block",
-                                "text-align": "start",
-                                position: "relative",
-                              },
-                            },
-                            [
-                              h(
-                                "div",
-                                {
-                                  style: {
-                                    position: "relative",
-                                    display: "inline-block",
-                                    translate: "none",
-                                    rotate: "none",
-                                    scale: "none",
-                                    transform: "translate(0px, 0%)",
-                                  },
-                                },
-                                " Have "
-                              ),
-                              h(
-                                "div",
-                                {
-                                  style: {
-                                    position: "relative",
-                                    display: "inline-block",
-                                    translate: "none",
-                                    rotate: "none",
-                                    scale: "none",
-                                    transform: "translate(0px, 0%)",
-                                  },
-                                },
-                                " a "
-                              ),
-                              h(
-                                "div",
-                                {
-                                  style: {
-                                    position: "relative",
-                                    display: "inline-block",
-                                    translate: "none",
-                                    rotate: "none",
-                                    scale: "none",
-                                    transform: "translate(0px, 0%)",
-                                  },
-                                },
-                                " project "
-                              ),
-                              h(
-                                "div",
-                                {
-                                  style: {
-                                    position: "relative",
-                                    display: "inline-block",
-                                    translate: "none",
-                                    rotate: "none",
-                                    scale: "none",
-                                    transform: "translate(0px, 0%)",
-                                  },
-                                },
-                                " in "
-                              ),
-                              h(
-                                "div",
-                                {
-                                  style: {
-                                    position: "relative",
-                                    display: "inline-block",
-                                    translate: "none",
-                                    rotate: "none",
-                                    scale: "none",
-                                    transform: "translate(0px, 0%)",
-                                  },
-                                },
-                                " mind? "
-                              ),
-                            ]
-                          ),
-                          h(
-                            "div",
-                            {
-                              class: "u-overflow-hidden",
-                              style: {
-                                display: "block",
-                                "text-align": "start",
-                                position: "relative",
-                              },
-                            },
-                            [
-                              h(
-                                "a",
-                                {
-                                  "data-aos": "fade-up",
-                                  "data-aos-duration": "700",
-                                  href: "mailto:hello@basis.work",
-                                  style: {
-                                    translate: "none",
-                                    rotate: "none",
-                                    scale: "none",
-                                    transform: "translate(0px, 0%)",
-                                  },
-                                },
-                                [
-                                  h(
-                                    "div",
-                                    {
-                                      style: {
-                                        position: "relative",
-                                        display: "inline-block",
-                                      },
-                                    },
-                                    " hello@basis.work "
-                                  ),
-                                ]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
+        w(" card mobile"),
+        w(
+          ' <div role="listitem" class="cases-item w-dyn-item">\n      \n        href="/cases/sable-brand"\n        class="cases-card cc-immediate w-inline-block"\n        style="\n          transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)\n            rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n          transform-style: preserve-3d;\n          opacity: 1;\n        "\n        ><div class="cases-assets">\n          <img\n            src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"\n            loading="lazy"\n            alt=""\n            class="cases-portrait"\n          /><img\n            src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg"\n            loading="eager"\n            alt=""\n            class="cases-landscape"\n          />\n          <div class="iframe-video_wrapper">\n            <iframe\n              class="iframe-video_iframe"\n              width="100%"\n              height="100%"\n              style="overflow: hidden"\n              frameborder="0"\n              scrolling="no"\n              allow="fullscreen"\n              src="https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"\n              title="Sable 12"\n              loading="lazy"\n            ></iframe>\n            <div class="iframe-video_blocker"></div>\n          </div>\n        </div>\n        <div class="cases-text"><div class="u-ts-2">Sable Brand</div></div></a\n      ><link rel="prerender" href="/cases/sable-brand" /><a\n        data-mouse-text="Contact\n        class="cases-card cc-immediate w-inline-block w-condition-invisible"\n        style="\n          transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)\n            rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n          transform-style: preserve-3d;\n          opacity: 1;\n        "\n        ><div class="cases-assets">\n          <img\n            src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"\n            loading="lazy"\n            alt=""\n            class="cases-portrait w-condition-invisible"\n          /><img\n            src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg"\n            loading="lazy"\n            alt=""\n            class="cases-landscape w-condition-invisible"\n          />\n          <div>\n            <div class="iframe-video_wrapper">\n              <iframe\n                class="iframe-video_iframe"\n                width="100%"\n                height="100%"\n                style="overflow: hidden"\n                frameborder="0"\n                scrolling="no"\n                allow="fullscreen"\n                src="https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"\n                title="Sable 12"\n                loading="lazy"\n              ></iframe>\n              <div class="iframe-video_blocker"></div>\n            </div>\n          </div>\n        </div>\n        <div class="cases-text">\n          <div class="cases-more">\n            <div class="u-ts-6 u-tc-caps u-text-accent1">\n              Contact us<span class="hide-tablet"> for more</span>\n            </div>\n          </div>\n          <div class="u-ts-2">Sable Brand</div>\n        </div></a\n      >\n    </div> '
+        ),
+        w(" === "),
       ],
       -1
     )
+  ),
+  bs = ce(
+    '<div class="container mobile-show" data-v-74f67db4><div class="target_line" data-v-74f67db4></div></div><section class="section mobile-show" data-v-74f67db4><div class="section-title_component" data-v-74f67db4><div class="container" data-v-74f67db4><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-74f67db4><div class="section-title_dot" style="opacity:1;" data-v-74f67db4></div><div class="u-overflow-hidden" data-v-74f67db4><div class="section-title_title" data-v-74f67db4><h2 class="u-ts-4" data-v-74f67db4>Contact Us</h2></div></div></div></div></div><div class="container" data-v-74f67db4><div class="w-layout-grid pair-grid" data-v-74f67db4><div data-v-74f67db4><div class="contact-cta w-richtext" data-v-74f67db4><h3 data-aos="fade-up" data-aos-duration="700" data-v-74f67db4><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-74f67db4><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-74f67db4><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-74f67db4><div style="position:relative;display:inline-block;" data-v-74f67db4> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    2
   );
-var gt = Sa(ut, [
+var ws = je(us, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         const o = S("Footer");
-        return g(), b(_, null, [ft, T(o, { class: "mobile-show" })], 64);
+        return g(), b(x, null, [gs, bs, E(o, { class: "mobile-show" })], 64);
       },
     ],
-    ["__scopeId", "data-v-e64ae5a2"],
+    ["__scopeId", "data-v-74f67db4"],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/case.vue",
+    ],
   ]),
-  bt = Object.freeze(
+  hs = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: gt },
+      { __proto__: null, default: ws },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const ht = {
+const ys = {
     layout: "layout-demo",
     setup() {
-      const a = fe(),
-        { t: e, locale: t, setPrefix: s, change: l } = Fa();
-      s({ $current: "pages.demo" });
-      const i = X(),
+      const e = ua(),
+        { t: a, locale: s, setPrefix: t, change: i } = Fe();
+      t({ $current: "pages.demo" });
+      const l = G(),
         o = K("alert-service"),
-        r = ma({ current: t.value || "zh-tw" });
+        r = me({ current: s.value || "zh-tw" });
       return (
-        q(() => {}),
+        C(() => {}),
         {
-          t: e,
+          t: a,
           lang: r,
           toHome: () => {
-            i.push("/home");
+            l.push("/home");
           },
           swalModal: () => {
             o.alert({
-              title: e("$current.modal.swal.title"),
-              text: e("$current.modal.swal"),
+              title: a("$current.modal.swal.title"),
+              text: a("$current.modal.swal"),
             });
           },
           changeLang: () => {
-            const a = "zh-tw" === r.current ? "en" : "zh-tw";
-            (r.current = a), l(a);
+            const e = "zh-tw" === r.current ? "en" : "zh-tw";
+            (r.current = e), i(e);
           },
           popupModal: async () => {
-            await a.modal({ title: "popup", text: "this a popup" });
+            await e.modal({ title: "popup", text: "this a popup" });
           },
         }
       );
     },
   },
-  yt = { class: "demo" },
-  wt = { class: "demo-head" },
-  _t = { class: "switch" },
-  xt = h("input", { type: "checkbox", class: "cb" }, null, -1),
-  kt = [
+  _s = { class: "demo" },
+  xs = { class: "demo-head" },
+  ks = { class: "switch" },
+  js = h("input", { type: "checkbox", class: "cb" }, null, -1),
+  zs = [
     h("span", { class: "left" }, "CN", -1),
     h("span", { class: "right" }, "En", -1),
   ],
-  jt = { class: "demo-head-content" },
-  Ct = { class: "demo-actions" },
-  qt = { class: "radio-inputs" },
-  St = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
-  zt = { class: "name" },
-  Ot = h("input", { type: "radio", name: "radio" }, null, -1),
-  At = { class: "name" },
-  Tt = h("input", { type: "radio", name: "radio" }, null, -1),
-  Et = { class: "name" };
-var Lt = Sa(ht, [
+  qs = { class: "demo-head-content" },
+  Cs = { class: "demo-actions" },
+  Ss = { class: "radio-inputs" },
+  Os = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  As = { class: "name" },
+  Bs = h("input", { type: "radio", name: "radio" }, null, -1),
+  Es = { class: "name" },
+  Ts = h("input", { type: "radio", name: "radio" }, null, -1),
+  Ls = { class: "name" };
+var Is = je(ys, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         return (
           g(),
-          b("div", yt, [
-            h("div", wt, [
+          b("div", _s, [
+            h("div", xs, [
               h("div", null, [
-                h("label", _t, [
-                  xt,
+                h("label", ks, [
+                  js,
                   h(
                     "span",
                     {
                       class: "toggle",
                       onClick:
-                        e[0] ||
-                        (e[0] = (...a) => s.changeLang && s.changeLang(...a)),
+                        a[0] ||
+                        (a[0] = (...e) => t.changeLang && t.changeLang(...e)),
                     },
-                    kt
+                    zs
                   ),
                 ]),
               ]),
-              h("div", jt, "lang:" + Y(s.lang.current), 1),
+              h("div", qs, "lang:" + R(t.lang.current), 1),
             ]),
-            h("div", Ct, [
-              h("div", qt, [
+            h("div", Cs, [
+              h("div", Ss, [
                 h(
                   "label",
                   {
                     class: "radio",
                     onClick:
-                      e[1] || (e[1] = (...a) => s.toHome && s.toHome(...a)),
+                      a[1] || (a[1] = (...e) => t.toHome && t.toHome(...e)),
                   },
-                  [St, h("span", zt, Y(s.t("$current.router.link")), 1)]
+                  [Os, h("span", As, R(t.t("$current.router.link")), 1)]
                 ),
                 h(
                   "label",
                   {
                     class: "radio",
                     onClick:
-                      e[2] ||
-                      (e[2] = (...a) => s.swalModal && s.swalModal(...a)),
+                      a[2] ||
+                      (a[2] = (...e) => t.swalModal && t.swalModal(...e)),
                   },
-                  [Ot, h("span", At, Y(s.t("$current.modal.swal")), 1)]
+                  [Bs, h("span", Es, R(t.t("$current.modal.swal")), 1)]
                 ),
                 h(
                   "label",
                   {
                     class: "radio",
                     onClick:
-                      e[3] ||
-                      (e[3] = (...a) => s.popupModal && s.popupModal(...a)),
+                      a[3] ||
+                      (a[3] = (...e) => t.popupModal && t.popupModal(...e)),
                   },
-                  [Tt, h("span", Et, Y(s.t("$current.popup.use")), 1)]
+                  [Ts, h("span", Ls, R(t.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -3983,15 +5019,19 @@ var Lt = Sa(ht, [
         );
       },
     ],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/demo.vue",
+    ],
   ]),
-  Bt = Object.freeze(
+  Ps = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Lt },
+      { __proto__: null, default: Is },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const It = (a) =>
+const Ms = (e) =>
     new URL(
       {
         "../assets/video/home/buddha1.mp4": "./assets/buddha1.67a44e84.mp4",
@@ -4001,36 +5041,36 @@ const It = (a) =>
         "../assets/video/home/knife2-3.mp4": "./assets/knife2-3.db814c22.mp4",
         "../assets/video/home/knife2-4.mp4": "./assets/knife2-4.0d587ad1.mp4",
         "../assets/video/home/tea_1.mp4": "./assets/tea_1.8e120b16.mp4",
-      }[`../assets/video/${a}`],
+      }[`../assets/video/${e}`],
       self.location
     ).href,
-  Pt = {
-    components: { Footer: lt },
+  Ds = {
+    components: { Footer: ls },
     setup() {
-      const { t: a } = Fa();
+      const { t: e } = Fe();
       return (
-        q(() => {
-          da.init();
-          const a = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              a.isIntersecting
-                ? a.target.classList.add("active")
-                : a.target.classList.remove("active");
+        C(() => {
+          de.init();
+          const e = new IntersectionObserver((e) => {
+            e.forEach((e) => {
+              e.isIntersecting
+                ? e.target.classList.add("active")
+                : e.target.classList.remove("active");
             });
           });
-          document.querySelectorAll(".target_line").forEach((e) => {
-            a.observe(e);
+          document.querySelectorAll(".target_line").forEach((a) => {
+            e.observe(a);
           });
         }),
-        { t: a, getVideoUrl: It }
+        { t: e, getVideoUrl: Ms }
       );
     },
   },
-  Mt = { "data-mouse-class": "cc-icon", class: "header cc-large" },
-  Dt = { class: "header-image_wrap" },
-  Ft = { class: "header-image" },
-  Ut = { class: "iframe-video_wrapper" },
-  Vt = {
+  Fs = { "data-mouse-class": "cc-icon", class: "header cc-large" },
+  Us = { class: "header-image_wrap" },
+  Hs = { class: "header-image" },
+  Vs = { class: "iframe-video_wrapper" },
+  Ns = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -4038,21 +5078,21 @@ const It = (a) =>
     loop: "",
     muted: "",
   },
-  Ht = ["src"],
-  Nt = G(" Your browser does not support the video tag. "),
-  Xt = h("div", { class: "iframe-video_blocker" }, null, -1),
-  Rt = ca(
+  Gs = ["src"],
+  Xs = Z(" Your browser does not support the video tag. "),
+  Ws = h("div", { class: "iframe-video_blocker" }, null, -1),
+  Rs = ce(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
-  Zt = h("div", { class: "spacing" }, null, -1),
-  Yt = h(
+  Ys = h("div", { class: "spacing" }, null, -1),
+  Zs = h(
     "div",
     { class: "container" },
     [h("div", { class: "target_line" })],
     -1
   ),
-  Wt = h(
+  Ks = h(
     "section",
     { class: "section over-h" },
     [
@@ -4399,13 +5439,13 @@ const It = (a) =>
     ],
     -1
   ),
-  Gt = h(
+  $s = h(
     "div",
     { class: "container" },
     [h("div", { class: "target_line" })],
     -1
   ),
-  Kt = h(
+  Js = h(
     "section",
     { class: "section" },
     [
@@ -4707,13 +5747,13 @@ const It = (a) =>
     ],
     -1
   ),
-  $t = h(
+  Qs = h(
     "div",
     { class: "container" },
     [h("div", { class: "target_line" })],
     -1
   ),
-  Jt = h(
+  et = h(
     "section",
     { class: "section" },
     [
@@ -4879,7 +5919,7 @@ const It = (a) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              G(" Contact us"),
+                              Z(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -5015,7 +6055,7 @@ const It = (a) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              G(" Contact us"),
+                              Z(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -5157,7 +6197,7 @@ const It = (a) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              G(" Contact us"),
+                              Z(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -5293,7 +6333,7 @@ const It = (a) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              G(" Contact us"),
+                              Z(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -5311,18 +6351,18 @@ const It = (a) =>
     ],
     -1
   ),
-  Qt = ca(
+  at = ce(
     '<div class="container"><div class="target_line"></div></div><section class="section"><div class="section-title_component"><div class="container"><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700"><div class="section-title_dot" style="opacity:1;"></div><div class="u-overflow-hidden"><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><h2 class="u-ts-4">Contact Us</h2></div></div></div></div></div><div class="container"><div class="w-layout-grid pair-grid"><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext"><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"><div style="position:relative;display:inline-block;"> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  as = { class: "pre-footer" },
-  es = {
+  st = { class: "pre-footer" },
+  tt = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  ts = { class: "iframe-video_wrapper" },
-  ss = {
+  it = { class: "iframe-video_wrapper" },
+  lt = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -5330,485 +6370,504 @@ const It = (a) =>
     loop: "",
     muted: "",
   },
-  ls = ["src"],
-  is = G(" Your browser does not support the video tag. "),
-  os = h("div", { class: "iframe-video_blocker" }, null, -1),
-  rs = ca(
+  ot = ["src"],
+  rt = Z(" Your browser does not support the video tag. "),
+  nt = h("div", { class: "iframe-video_blocker" }, null, -1),
+  dt = ce(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ns = Sa(Pt, [
+var ct = je(Ds, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         const o = S("Footer");
         return (
           g(),
           b(
-            _,
+            x,
             null,
             [
-              h("header", Mt, [
-                h("div", Dt, [
-                  h("div", Ft, [
-                    h("div", Ut, [
-                      h("video", Vt, [
+              h("header", Fs, [
+                h("div", Us, [
+                  h("div", Hs, [
+                    h("div", Vs, [
+                      h("video", Ns, [
                         h(
                           "source",
                           {
-                            src: s.getVideoUrl("home/knife1-1.mp4"),
+                            src: t.getVideoUrl("home/knife1-1.mp4"),
                             type: "video/mp4",
                           },
                           null,
                           8,
-                          Ht
+                          Gs
                         ),
-                        Nt,
+                        Xs,
                       ]),
-                      Xt,
+                      Ws,
                     ]),
                   ]),
                 ]),
-                Rt,
+                Rs,
               ]),
-              Zt,
-              Yt,
-              Wt,
-              Gt,
-              Kt,
-              $t,
-              Jt,
-              Qt,
+              Ys,
+              Zs,
+              Ks,
+              $s,
+              Js,
+              Qs,
+              et,
+              at,
               h("div", null, [
-                h("aside", as, [
-                  h("a", es, [
-                    h("div", ts, [
-                      h("video", ss, [
+                h("aside", st, [
+                  h("a", tt, [
+                    h("div", it, [
+                      h("video", lt, [
                         h(
                           "source",
                           {
-                            src: s.getVideoUrl("home/knife1-1.mp4"),
+                            src: t.getVideoUrl("home/knife1-1.mp4"),
                             type: "video/mp4",
                           },
                           null,
                           8,
-                          ls
+                          ot
                         ),
-                        is,
+                        rt,
                       ]),
-                      os,
+                      nt,
                     ]),
-                    rs,
+                    dt,
                   ]),
                 ]),
               ]),
-              T(o),
+              E(o),
             ],
             64
           )
         );
       },
     ],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/fintech-design.vue",
+    ],
   ]),
-  ds = Object.freeze(
+  pt = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: ns },
+      { __proto__: null, default: ct },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const cs = ["data-index"],
-  ps = ["src"],
-  vs = [
-    ca(
+const vt = ["data-index"],
+  mt = ["src"],
+  ft = [
+    ce(
       '<div class="btn-text-wrap"><div class="btn-text cc-scroll">請往下滑</div><div class="btn-text cc-bottom cc-scroll">請往下滑</div></div><div class="btn-icon cc-small w-embed"><svg width="100%" style="" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.30218 1.55469C7.47098 1.55469 7.60782 1.68527 7.60782 1.84635V11.2789L10.322 8.68302C10.3794 8.6278 10.4575 8.59675 10.539 8.59675C10.6205 8.59675 10.6986 8.6278 10.756 8.68302L11.1839 9.09719C11.2418 9.15195 11.2743 9.2265 11.2743 9.30427C11.2743 9.38204 11.2418 9.45659 11.1839 9.51135L7.43666 13.093C7.35076 13.1751 7.23423 13.2213 7.11267 13.2214H6.88038C6.75909 13.22 6.64303 13.174 6.5564 13.093L2.80916 9.51135C2.7513 9.45659 2.71875 9.38204 2.71875 9.30427C2.71875 9.2265 2.7513 9.15195 2.80916 9.09719L3.24318 8.68302C3.29952 8.62815 3.37663 8.59723 3.45713 8.59723C3.53763 8.59723 3.61475 8.62815 3.67109 8.68302L6.38523 11.2789V1.84635C6.38523 1.68527 6.52208 1.55469 6.69088 1.55469H7.30218Z" fill="currentColor"></path></svg></div>',
       2
     ),
   ];
-const ms = {
+const ut = {
   components: {
-    Footer: lt,
-    View: {
-      setup(a) {
-        const e = x(),
-          t = ma({ x: 0, y: 0 }),
-          s = k([
-            {
-              url: "home/opening/1.jpg",
-              css: {
-                width: "17vw",
-                height: "20.2vw",
-                left: "1%",
-                top: "60%",
-                m_right: "3000px",
-                m_top: "0%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 2.5s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+    Footer: ls,
+    View: je(
+      {
+        setup(e) {
+          const a = k(),
+            s = me({ x: 0, y: 0 }),
+            t = j([
+              {
+                url: "home/opening/1.jpg",
+                css: {
+                  width: "17vw",
+                  height: "20.2vw",
+                  left: "1%",
+                  top: "60%",
+                  m_right: "3000px",
+                  m_top: "0%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 2.5s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/2.jpg",
-              css: {
-                width: "16.5vw",
-                height: "21.3vw",
-                left: "11%",
-                top: "10%",
-                m_right: "3000px",
-                m_top: "0%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 1.5s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/2.jpg",
+                css: {
+                  width: "16.5vw",
+                  height: "21.3vw",
+                  left: "11%",
+                  top: "10%",
+                  m_right: "3000px",
+                  m_top: "0%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 1.5s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/3.jpg",
-              css: {
-                width: "21.3vw",
-                height: "16.6vw",
-                m_width: "55.9vw",
-                m_height: "42.5vw",
-                left: "22%",
-                top: "45%",
-                m_right: "71%",
-                m_top: "44%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 3.5s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/3.jpg",
+                css: {
+                  width: "21.3vw",
+                  height: "16.6vw",
+                  m_width: "55.9vw",
+                  m_height: "42.5vw",
+                  left: "22%",
+                  top: "45%",
+                  m_right: "71%",
+                  m_top: "44%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 3.5s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/4.jpg",
-              css: {
-                width: "15.5vw",
-                height: "16.6vw",
-                m_width: "42.5vw",
-                m_height: "42.5vw",
-                left: "31%",
-                top: "72%",
-                m_right: "73%",
-                m_top: "80%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 2s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/4.jpg",
+                css: {
+                  width: "15.5vw",
+                  height: "16.6vw",
+                  m_width: "42.5vw",
+                  m_height: "42.5vw",
+                  left: "31%",
+                  top: "72%",
+                  m_right: "73%",
+                  m_top: "80%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 2s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/5.jpg",
-              css: {
-                width: "24vw",
-                height: "19.6vw",
-                m_width: "34vw",
-                m_height: "34vw",
-                left: "33%",
-                top: "-1%",
-                m_right: "-2%",
-                m_top: "1%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 1s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/5.jpg",
+                css: {
+                  width: "24vw",
+                  height: "19.6vw",
+                  m_width: "34vw",
+                  m_height: "34vw",
+                  left: "33%",
+                  top: "-1%",
+                  m_right: "-2%",
+                  m_top: "1%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 1s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/6.jpg",
-              css: {
-                width: "21.1vw",
-                height: "26.3vw",
-                m_width: "25.5vw",
-                m_height: "33vw",
-                left: "51%",
-                top: "27%",
-                m_right: "15%",
-                m_top: "39%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 2.5s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/6.jpg",
+                css: {
+                  width: "21.1vw",
+                  height: "26.3vw",
+                  m_width: "25.5vw",
+                  m_height: "33vw",
+                  left: "51%",
+                  top: "27%",
+                  m_right: "15%",
+                  m_top: "39%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 2.5s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/7.jpg",
-              css: {
-                width: "18.1vw",
-                height: "21.8vw",
-                m_width: "43.5vw",
-                m_height: "50vw",
-                left: "63%",
-                top: "74%",
-                m_right: "8%",
-                m_top: "70%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 3s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/7.jpg",
+                css: {
+                  width: "18.1vw",
+                  height: "21.8vw",
+                  m_width: "43.5vw",
+                  m_height: "50vw",
+                  left: "63%",
+                  top: "74%",
+                  m_right: "8%",
+                  m_top: "70%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 3s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/8.jpg",
-              css: {
-                width: "18.3vw",
-                height: "14.6vw",
-                m_width: "46.1vw",
-                m_height: "35.7vw",
-                left: "70%",
-                top: "-4%",
-                m_right: "57%",
-                m_top: "15%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 3.5s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/8.jpg",
+                css: {
+                  width: "18.3vw",
+                  height: "14.6vw",
+                  m_width: "46.1vw",
+                  m_height: "35.7vw",
+                  left: "70%",
+                  top: "-4%",
+                  m_right: "57%",
+                  m_top: "15%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 3.5s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/9.jpg",
-              css: {
-                width: "22.8vw",
-                height: "22vw",
-                m_width: "36vw",
-                m_height: "20vw",
-                left: "83%",
-                top: "33%",
-                m_right: "-10%",
-                m_top: "25%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 2s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
-                objectAposition: "right",
+              {
+                url: "home/opening/9.jpg",
+                css: {
+                  width: "22.8vw",
+                  height: "22vw",
+                  m_width: "36vw",
+                  m_height: "20vw",
+                  left: "83%",
+                  top: "33%",
+                  m_right: "-10%",
+                  m_top: "25%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 2s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                  objectAposition: "right",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
-            },
-            {
-              url: "home/opening/10.jpg",
-              css: {
-                width: "21.3vw",
-                height: "16.6vw",
-                left: "86%",
-                top: "69%",
-                m_right: "30000px",
-                m_top: "0%",
-                transform: "translate3d(1px, 2px, 1px)",
-                enterAnimation: "zoomIn 1.5s forwards",
-                leaveAnimation: "fadeOut 1s forwards",
+              {
+                url: "home/opening/10.jpg",
+                css: {
+                  width: "21.3vw",
+                  height: "16.6vw",
+                  left: "86%",
+                  top: "69%",
+                  m_right: "30000px",
+                  m_top: "0%",
+                  transform: "translate3d(1px, 2px, 1px)",
+                  enterAnimation: "zoomIn 1.5s forwards",
+                  leaveAnimation: "fadeOut 1s forwards",
+                },
+                isEnter: !0,
               },
-              isEnter: !0,
+            ]),
+            i = j(!1),
+            l = {
+              rootMargin: "0px",
+              threshold: Array(100)
+                .fill()
+                .map((e, a) => 0.01 * a),
             },
-          ]),
-          l = k(!1),
-          i = {
-            rootMargin: "0px",
-            threshold: Array(100)
-              .fill()
-              .map((a, e) => 0.01 * e),
-          },
-          o = new IntersectionObserver((a) => {
-            a.forEach((a) => {
-              var e, t;
-              const { intersectionRatio: l, target: i } = a,
-                o = null == (e = i.dataset) ? void 0 : e.index;
-              if ("img" === (null == (t = i.dataset) ? void 0 : t.item))
-                s.value[o].isEnter = !(l < 0.4);
-              else
-                i.style.animation =
-                  l < 0.6 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
-            });
-          }, i),
-          r = () => {
-            const a = document.getElementById("studio");
-            if (a) {
-              const e = a.offsetTop;
-              window.scrollTo({ top: e, behavior: "smooth" });
-            }
-          };
-        C(
-          () => e.state.app.isLoading,
-          (a) => {
-            if (((l.value = !a), a)) {
-              ((a) => {
-                for (const e of a) o.unobserve(e);
-              })([
-                ...document.querySelectorAll(".img-wrap"),
-                document.querySelector(".btn-scroll"),
-              ]);
-            } else
-              ua(() => {
-                ((a) => {
-                  for (const e of a) o.observe(e);
+            o = new IntersectionObserver((e) => {
+              e.forEach((e) => {
+                var a, s;
+                const { intersectionRatio: i, target: l } = e,
+                  o = null == (a = l.dataset) ? void 0 : a.index;
+                if ("img" === (null == (s = l.dataset) ? void 0 : s.item))
+                  t.value[o].isEnter = !(i < 0.4);
+                else
+                  l.style.animation =
+                    i < 0.6 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
+              });
+            }, l),
+            r = () => {
+              const e = document.getElementById("studio");
+              if (e) {
+                const a = e.offsetTop;
+                window.scrollTo({ top: a, behavior: "smooth" });
+              }
+            };
+          q(
+            () => a.state.app.isLoading,
+            (e) => {
+              if (((i.value = !e), e)) {
+                ((e) => {
+                  for (const a of e) o.unobserve(a);
                 })([
                   ...document.querySelectorAll(".img-wrap"),
                   document.querySelector(".btn-scroll"),
                 ]);
-              });
-          }
-        );
-        const n = k(!1),
-          d = () => {
-            n.value = window.innerWidth < 991;
-          };
-        return (
-          q(() => {
-            d(), window.addEventListener("resize", d), da.init();
-          }),
-          (a, e) => (
-            g(),
-            b(
-              _,
-              null,
-              [
-                h(
-                  "div",
-                  {
-                    class: "view",
-                    onMousemove:
-                      e[0] ||
-                      (e[0] = (a) =>
-                        ((a) => {
-                          if (window.innerWidth > 576) {
-                            const e = window.innerWidth / 2,
-                              s = window.innerHeight / 2;
-                            (t.x = ((e - a.clientX) / 100) * 3),
-                              (t.y = ((s - a.clientY) / 100) * 3);
-                          }
-                        })(a)),
-                  },
-                  [
-                    l.value
-                      ? (g(),
-                        b(
-                          "div",
-                          {
-                            key: 0,
-                            class: "view-wrap",
-                            style: Z({
-                              transform: `translate3d(${2 * w(t).x}px, ${
-                                w(t).y
-                              }px, 0) rotateX(${-w(t).y / 2}deg) rotateY(${
-                                -w(t).x / 2
-                              }deg)`,
-                              transformOrigin: "center center",
-                            }),
-                          },
-                          [
-                            (g(!0),
-                            b(
-                              _,
-                              null,
-                              R(
-                                s.value,
-                                (a, e) => (
-                                  g(),
-                                  b(
-                                    "div",
-                                    {
-                                      class: "img-wrap home-hero_image-placer",
-                                      key: a.url + e,
-                                      style: Z({
-                                        left: n.value ? "unset" : a.css.left,
-                                        right: n.value
-                                          ? a.css.m_right
-                                          : "unset",
-                                        top: n.value ? a.css.m_top : a.css.top,
-                                        animation: a.isEnter
-                                          ? a.css.enterAnimation
-                                          : a.css.leaveAnimation,
-                                      }),
-                                      "data-index": e,
-                                      "data-item": "img",
-                                    },
-                                    [
-                                      h(
-                                        "img",
-                                        {
-                                          src: w(ka)(a.url),
-                                          style: Z({
-                                            width: n.value
-                                              ? a.css.m_width
-                                              : a.css.width,
-                                            height: n.value
-                                              ? a.css.m_height
-                                              : a.css.height,
-                                            transform: `translate3d(${
-                                              w(t).x / 2
-                                            }px,${w(t).y / 2}px, 100px)`,
-                                          }),
-                                        },
-                                        null,
-                                        12,
-                                        ps
-                                      ),
-                                    ],
-                                    12,
-                                    cs
+              } else
+                fe(() => {
+                  ((e) => {
+                    for (const a of e) o.observe(a);
+                  })([
+                    ...document.querySelectorAll(".img-wrap"),
+                    document.querySelector(".btn-scroll"),
+                  ]);
+                });
+            }
+          );
+          const n = j(!1),
+            d = () => {
+              n.value = window.innerWidth < 991;
+            };
+          return (
+            C(() => {
+              d(), window.addEventListener("resize", d), de.init();
+            }),
+            (e, a) => (
+              g(),
+              b(
+                x,
+                null,
+                [
+                  h(
+                    "div",
+                    {
+                      class: "view",
+                      onMousemove:
+                        a[0] ||
+                        (a[0] = (e) =>
+                          ((e) => {
+                            if (window.innerWidth > 576) {
+                              const a = window.innerWidth / 2,
+                                t = window.innerHeight / 2;
+                              (s.x = ((a - e.clientX) / 100) * 3),
+                                (s.y = ((t - e.clientY) / 100) * 3);
+                            }
+                          })(e)),
+                    },
+                    [
+                      i.value
+                        ? (g(),
+                          b(
+                            "div",
+                            {
+                              key: 0,
+                              class: "view-wrap",
+                              style: W({
+                                transform: `translate3d(${2 * _(s).x}px, ${
+                                  _(s).y
+                                }px, 0) rotateX(${-_(s).y / 2}deg) rotateY(${
+                                  -_(s).x / 2
+                                }deg)`,
+                                transformOrigin: "center center",
+                              }),
+                            },
+                            [
+                              (g(!0),
+                              b(
+                                x,
+                                null,
+                                X(
+                                  t.value,
+                                  (e, a) => (
+                                    g(),
+                                    b(
+                                      "div",
+                                      {
+                                        class:
+                                          "img-wrap home-hero_image-placer",
+                                        key: e.url + a,
+                                        style: W({
+                                          left: n.value ? "unset" : e.css.left,
+                                          right: n.value
+                                            ? e.css.m_right
+                                            : "unset",
+                                          top: n.value
+                                            ? e.css.m_top
+                                            : e.css.top,
+                                          animation: e.isEnter
+                                            ? e.css.enterAnimation
+                                            : e.css.leaveAnimation,
+                                        }),
+                                        "data-index": a,
+                                        "data-item": "img",
+                                      },
+                                      [
+                                        h(
+                                          "img",
+                                          {
+                                            src: _(ke)(e.url),
+                                            style: W({
+                                              width: n.value
+                                                ? e.css.m_width
+                                                : e.css.width,
+                                              height: n.value
+                                                ? e.css.m_height
+                                                : e.css.height,
+                                              transform: `translate3d(${
+                                                _(s).x / 2
+                                              }px,${_(s).y / 2}px, 100px)`,
+                                            }),
+                                          },
+                                          null,
+                                          12,
+                                          mt
+                                        ),
+                                      ],
+                                      12,
+                                      vt
+                                    )
                                   )
-                                )
-                              ),
-                              128
-                            )),
-                          ],
-                          4
-                        ))
-                      : E("", !0),
-                  ],
-                  32
-                ),
-                h("div", { "data-reveal": "button", class: "home-hero_btn" }, [
-                  h("div", { class: "btn-contain btn-contain-scroll" }, [
-                    h(
-                      "div",
-                      { class: "btn-scroll w-inline-block", onClick: r },
-                      vs
-                    ),
-                  ]),
-                ]),
-              ],
-              64
+                                ),
+                                128
+                              )),
+                            ],
+                            4
+                          ))
+                        : w("v-if", !0),
+                    ],
+                    32
+                  ),
+                  h(
+                    "div",
+                    { "data-reveal": "button", class: "home-hero_btn" },
+                    [
+                      h("div", { class: "btn-contain btn-contain-scroll" }, [
+                        h(
+                          "div",
+                          { class: "btn-scroll w-inline-block", onClick: r },
+                          ft
+                        ),
+                      ]),
+                    ]
+                  ),
+                ],
+                64
+              )
             )
-          )
-        );
+          );
+        },
       },
-    },
+      [
+        [
+          "__file",
+          "/Users/lishengjie/Documents/GitHub/basis.work/src/widgets/home/view.vue",
+        ],
+      ]
+    ),
   },
   setup() {
-    const a = k("");
+    const e = j("");
     return (
-      q(() => {
-        document.querySelectorAll(".video-cover").forEach((a) => {
-          a.play();
+      C(() => {
+        document.querySelectorAll(".video-cover").forEach((e) => {
+          e.play();
         });
-        const a = new IntersectionObserver((a) => {
-          a.forEach((a) => {
-            a.isIntersecting
-              ? a.target.classList.add("active")
-              : a.target.classList.remove("active");
+        const e = new IntersectionObserver((e) => {
+          e.forEach((e) => {
+            e.isIntersecting
+              ? e.target.classList.add("active")
+              : e.target.classList.remove("active");
           });
         });
-        document.querySelectorAll(".target_line").forEach((e) => {
-          a.observe(e);
+        document.querySelectorAll(".target_line").forEach((a) => {
+          e.observe(a);
         });
       }),
-      { a: a, getVideoUrl: It, getImageUrl: ka }
+      { a: e, getVideoUrl: Ms, getImageUrl: ke }
     );
   },
 };
-da.init();
-const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
-  fs = us(() =>
+de.init();
+const gt = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
+  bt = gt(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  gs = { id: "studio", class: "section" },
-  bs = ca(
-    '<div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" style="opacity:1;" data-v-a392040e><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-a392040e></div></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-a392040e><div class="w-layout-grid pair-grid" data-v-a392040e><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-a392040e><h3 data-animation-element="title" data-v-a392040e><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div></h3><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-a392040e><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>館藏查詢</div><div class="btn-text cc-bottom" data-v-a392040e>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-a392040e><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>預約參觀</div><div class="btn-text cc-bottom" data-v-a392040e>預約參觀</div></div></a></div></div></div></div></div>',
+  wt = { id: "studio", class: "section" },
+  ht = ce(
+    '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-57509004></div></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" data-v-57509004><h2 class="u-ts-4" data-v-57509004>詹紹綺人文藝術中心</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307" data-v-57509004><h3 data-animation-element="title" data-v-57509004><div class="u-overflow-hidden" data-aos="fade-up" data-aos-duration="800" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 位於25樓雲海之中的藝術與文化博物館， </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;800&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                products\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                and\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                their\n              &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;900&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                brands\n              &lt;/div&gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                through\n              &lt;/div&gt;\n            &lt;/div&gt;\n            &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n              data-aos=&quot;fade-up&quot;\n              data-aos-duration=&quot;1000&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                design.\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-57509004><a class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>館藏查詢</div><div class="btn-text cc-bottom" data-v-57509004>館藏查詢</div></div></a></div><div class="btn-item cc-2" data-aos="fade-up" data-aos-duration="3000" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0px);opacity:1;" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>預約參觀</div><div class="btn-text cc-bottom" data-v-57509004>預約參觀</div></div></a></div></div></div></div></div>',
     2
   ),
-  hs = { class: "u-mt-8-75" },
-  ys = { class: "marquee" },
-  ws = { class: "marquee_row w-dyn-list" },
-  _s = {
+  yt = { class: "u-mt-8-75" },
+  _t = { class: "marquee" },
+  xt = { class: "marquee_row w-dyn-list" },
+  kt = {
     role: "list",
     class: "marquee_content w-dyn-items",
     style: {
@@ -5817,102 +6876,105 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       "will-change": "transform",
     },
   },
-  xs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  ks = {
+  jt = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  zt = {
     class: "marquee_item cc-1",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  js = ["src"],
-  Cs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  qs = {
+  qt = ["src"],
+  Ct = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  St = {
     class: "marquee_item cc-2",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ss = ["src"],
-  zs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Os = {
+  Ot = ["src"],
+  At = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Bt = {
     class: "marquee_item cc-3",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  As = ["src"],
-  Ts = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Es = {
+  Et = ["src"],
+  Tt = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Lt = {
     class: "marquee_item cc-4",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ls = ["src"],
-  Bs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Is = {
+  It = ["src"],
+  Pt = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Mt = {
     class: "marquee_item cc-5",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ps = ["src"],
-  Ms = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ds = {
+  Dt = ["src"],
+  Ft = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Ut = {
     class: "marquee_item cc-6",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Fs = ["src"],
-  Us = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Vs = {
+  Ht = ["src"],
+  Vt = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Nt = {
     class: "marquee_item cc-7",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Hs = ["src"],
-  Ns = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Xs = {
+  Gt = ["src"],
+  Xt = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Wt = {
     class: "marquee_item cc-8",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Rs = ["src"],
-  Zs = { role: "listitem", class: "marquee_logo w-dyn-item" },
-  Ys = {
+  Rt = ["src"],
+  Yt = { role: "listitem", class: "marquee_logo w-dyn-item" },
+  Zt = {
     class: "marquee_item cc-9",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
     },
   },
-  Ws = ["src"],
-  Gs = us(() =>
+  Kt = ["src"],
+  $t = gt(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  Ks = { class: "section" },
-  $s = ca(
-    '<div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" style="opacity:1;" data-v-a392040e><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-a392040e></div></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>空間預約</h2></div></div></div></div></div>',
+  Jt = { class: "section" },
+  Qt = ce(
+    '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004><div class="section-title_dot-fill" style="width:100%;height:100%;" data-v-57509004></div></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>空間預約</h2></div></div></div></div></div>',
     1
   ),
-  Js = { class: "container" },
-  Qs = us(() =>
+  ei = { class: "container" },
+  ai = gt(() =>
     h(
       "div",
       { "data-animation-element": "group" },
       [
         h("h4", { "data-animation-element": "title", class: "h1", style: {} }, [
+          w(
+            ' <div\n            data-aos="fade-up"\n            data-aos-duration="700"\n            class="u-overflow-hidden"\n            style="display: block; text-align: start; position: relative"\n          >\n            <div\n              style="\n                position: relative;\n                display: inline-block;\n                translate: none;\n                rotate: none;\n                scale: none;\n                transform: translate(0px, 0%);\n              "\n            >\n              詹紹綺人文藝術中心\n            </div>\n          </div> '
+          ),
           h(
             "div",
             {
@@ -5947,29 +7009,29 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       -1
     )
   ),
-  al = { class: "sticky-pair" },
-  el = { class: "w-layout-grid pair-grid" },
-  tl = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
-  sl = {
+  si = { class: "sticky-pair" },
+  ti = { class: "w-layout-grid pair-grid" },
+  ii = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
+  li = {
     id: "w-node-_137ddbb9-11b4-d169-f149-eca9f54873e8-af552307",
     class: "card-wrapper cc-small",
   },
-  ll = {
+  oi = {
     id: "w-node-a3cc95fc-d4f5-0398-7194-1e8506932d8d-af552307",
     class: "w-dyn-list",
   },
-  il = { role: "list", class: "w-dyn-items" },
-  ol = { role: "listitem", class: "w-dyn-item" },
-  rl = { class: "card-wrapper cc-small" },
-  nl = {
+  ri = { role: "list", class: "w-dyn-items" },
+  ni = { role: "listitem", class: "w-dyn-item" },
+  di = { class: "card-wrapper cc-small" },
+  ci = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  dl = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  cl = { class: "card-image_wrapper" },
-  pl = { class: "iframe-video_wrapper" },
-  vl = {
+  pi = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  vi = { class: "card-image_wrapper" },
+  mi = { class: "iframe-video_wrapper" },
+  fi = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -5977,10 +7039,10 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  ml = ["src"],
-  ul = G(" Your browser does not support the video tag. "),
-  fl = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  gl = us(() =>
+  ui = ["src"],
+  gi = Z(" Your browser does not support the video tag. "),
+  bi = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  wi = gt(() =>
     h(
       "div",
       { class: "card-body", "data-aos": "fade-up", "data-aos-duration": "700" },
@@ -5994,23 +7056,23 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       -1
     )
   ),
-  bl = {
+  hi = {
     id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
     class: "w-dyn-list",
   },
-  hl = { role: "list", class: "w-dyn-items" },
-  yl = { role: "listitem", class: "w-dyn-item" },
-  wl = { class: "card-wrapper cc-large" },
-  _l = { class: "card-animation cc-40" },
-  xl = {
+  yi = { role: "list", class: "w-dyn-items" },
+  _i = { role: "listitem", class: "w-dyn-item" },
+  xi = { class: "card-wrapper cc-large" },
+  ki = { class: "card-animation cc-40" },
+  ji = {
     "data-mouse-class": "cc-text",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     class: "card is-link w-inline-block",
   },
-  kl = { class: "card-image_wrapper" },
-  jl = { class: "iframe-video_wrapper" },
-  Cl = {
+  zi = { class: "card-image_wrapper" },
+  qi = { class: "iframe-video_wrapper" },
+  Ci = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6018,41 +7080,44 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  ql = ["src"],
-  Sl = G(" Your browser does not support the video tag. "),
-  zl = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Ol = ca(
-    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="u-overflow-hidden" data-v-a392040e><div class="card-up" data-v-a392040e><div class="card-large_text" data-v-a392040e><h4 class="u-ts-4" data-v-a392040e>多功能茶席空間</h4></div></div></div></div>',
+  Si = ["src"],
+  Oi = Z(" Your browser does not support the video tag. "),
+  Ai = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Bi = ce(
+    '<div class="card-body" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>多功能茶席空間</h4></div></div></div></div>',
     1
   ),
-  Al = ca(
-    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-a392040e><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-a392040e><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-a392040e> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>空間介紹</div><div class="btn-text cc-bottom" data-v-a392040e>空間介紹</div></div></a></div><div class="btn-item cc-2" data-v-a392040e><a class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>立即預約</div><div class="btn-text cc-bottom" data-v-a392040e>立即預約</div></div></a></div></div></div>',
+  Ei = ce(
+    '<div id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307" class="content" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-v-57509004> 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。 </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>空間介紹</div><div class="btn-text cc-bottom" data-v-57509004>空間介紹</div></div></a></div><div class="btn-item cc-2" data-v-57509004><a class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>立即預約</div><div class="btn-text cc-bottom" data-v-57509004>立即預約</div></div></a></div></div></div>',
     1
   ),
-  Tl = us(() =>
+  Ti = gt(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  El = { class: "section" },
-  Ll = ca(
-    '<div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" data-v-a392040e></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>定香人文</h2></div></div></div></div></div>',
+  Li = { class: "section" },
+  Ii = ce(
+    '<div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" data-v-57509004><h2 class="u-ts-4" data-v-57509004>定香人文</h2></div></div></div></div></div>',
     1
   ),
-  Bl = { class: "container" },
-  Il = { class: "w-layout-grid pair-grid" },
-  Pl = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
-  Ml = { class: "service-list" },
-  Dl = { class: "logomark_component" },
-  Fl = {
+  Pi = { class: "container" },
+  Mi = { class: "w-layout-grid pair-grid" },
+  Di = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
+  Fi = { class: "service-list" },
+  Ui = { class: "logomark_component" },
+  Hi = {
     class: "logomark w-embed",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Ul = ["src"],
-  Vl = us(() =>
+  Vi = ["src"],
+  Ni = gt(() =>
     h(
       "ul",
       { role: "list", class: "u-mt-3-5" },
       [
+        w(
+          ' <li\n                class="u-overflow-hidden"\n                data-aos="fade-up"\n                data-aos-duration="700"\n                data-aos-delay="100"\n              >\n                <div\n                  class="list-content cc-1"\n                  style="\n                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                    transform-style: preserve-3d;\n                  "\n                >\n                  <h3 class="u-tc-caps">定香人文</h3>\n                </div>\n              </li> '
+        ),
         h(
           "li",
           {
@@ -6155,11 +7220,11 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       -1
     )
   ),
-  Hl = ca(
-    '<div class="btn-group" data-v-a392040e><div class="btn-item cc-1" data-v-a392040e><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>藝品介紹</div><div class="btn-text cc-bottom" data-v-a392040e>藝品介紹</div></div></a></div></div>',
+  Gi = ce(
+    '<div class="btn-group" data-v-57509004><div class="btn-item cc-1" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>藝品介紹</div><div class="btn-text cc-bottom" data-v-57509004>藝品介紹</div></div></a></div></div>',
     1
   ),
-  Nl = us(() =>
+  Xi = gt(() =>
     h(
       "section",
       { class: "section cc-apps" },
@@ -6403,27 +7468,27 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       -1
     )
   ),
-  Xl = { class: "section" },
-  Rl = { class: "container" },
-  Zl = ca(
-    '<div class="row" data-v-a392040e><div data-animation-element="group" class="col" data-v-a392040e><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> 拍賣中心 </div></div></h3></div></div>',
+  Wi = { class: "section" },
+  Ri = { class: "container" },
+  Yi = ce(
+    '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 拍賣中心 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                Design\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3></div></div>',
     1
   ),
-  Yl = { class: "sticky-pair" },
-  Wl = { class: "w-layout-grid pair-grid is-leading" },
-  Gl = {
+  Zi = { class: "sticky-pair" },
+  Ki = { class: "w-layout-grid pair-grid is-leading" },
+  $i = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
-  Kl = { role: "list", class: "w-dyn-items" },
-  $l = { role: "listitem", class: "w-dyn-item" },
-  Jl = { class: "card-wrapper cc-large" },
-  Ql = {
+  Ji = { role: "list", class: "w-dyn-items" },
+  Qi = { role: "listitem", class: "w-dyn-item" },
+  el = { class: "card-wrapper cc-large" },
+  al = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ai = {
+  sl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6432,9 +7497,9 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  ei = { class: "card-image_wrapper" },
-  ti = { class: "iframe-video_wrapper" },
-  si = {
+  tl = { class: "card-image_wrapper" },
+  il = { class: "iframe-video_wrapper" },
+  ll = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6442,30 +7507,30 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  li = ["src"],
-  ii = G(" Your browser does not support the video tag. "),
-  oi = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  ri = ca(
-    '<div class="card-body" data-v-a392040e><div class="u-overflow-hidden" data-v-a392040e><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-a392040e><div class="card-large_text" data-v-a392040e><h4 class="u-ts-4" data-v-a392040e>Skyart7325鑑賞中心</h4></div></div></div></div>',
+  ol = ["src"],
+  rl = Z(" Your browser does not support the video tag. "),
+  nl = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  dl = ce(
+    '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Skyart7325鑑賞中心</h4></div></div></div></div>',
     1
   ),
-  ni = {
+  cl = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  di = {
+  pl = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  ci = { role: "list", class: "w-dyn-items" },
-  pi = { role: "listitem", class: "w-dyn-item" },
-  vi = { class: "card-wrapper cc-small" },
-  mi = {
+  vl = { role: "list", class: "w-dyn-items" },
+  ml = { role: "listitem", class: "w-dyn-item" },
+  fl = { class: "card-wrapper cc-small" },
+  ul = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ui = {
+  gl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6474,9 +7539,9 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  fi = { class: "card-image_wrapper" },
-  gi = { class: "iframe-video_wrapper" },
-  bi = {
+  bl = { class: "card-image_wrapper" },
+  wl = { class: "iframe-video_wrapper" },
+  hl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6484,10 +7549,10 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  hi = ["src"],
-  yi = G(" Your browser does not support the video tag. "),
-  wi = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  _i = us(() =>
+  yl = ["src"],
+  _l = Z(" Your browser does not support the video tag. "),
+  xl = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  kl = gt(() =>
     h(
       "div",
       { class: "card-body" },
@@ -6509,36 +7574,36 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       -1
     )
   ),
-  xi = ca(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-a392040e><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-a392040e><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-a392040e> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>Fintech services</div><div class="btn-text cc-bottom" data-v-a392040e>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>Design trial</div><div class="btn-text cc-bottom" data-v-a392040e>Design trial</div></div></a></div></div></div>',
+  jl = ce(
+    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-57509004> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Fintech services</div><div class="btn-text cc-bottom" data-v-57509004>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Design trial</div><div class="btn-text cc-bottom" data-v-57509004>Design trial</div></div></a></div></div></div>',
     1
   ),
-  ki = { class: "section" },
-  ji = { class: "container over-h" },
-  Ci = ca(
-    '<div class="row" data-v-a392040e><div data-animation-element="group" class="col" data-v-a392040e><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-a392040e><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> Branding </div></div></h3></div></div>',
+  zl = { class: "section" },
+  ql = { class: "container over-h" },
+  Cl = ce(
+    '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Branding </div></div></h3></div></div>',
     1
   ),
-  qi = { class: "sticky-pair" },
-  Si = { class: "w-layout-grid pair-grid" },
-  zi = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  Oi = {
+  Sl = { class: "sticky-pair" },
+  Ol = { class: "w-layout-grid pair-grid" },
+  Al = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+  Bl = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  Ai = {
+  El = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  Ti = { role: "list", class: "w-dyn-items" },
-  Ei = { role: "listitem", class: "w-dyn-item" },
-  Li = { class: "card-wrapper cc-small" },
-  Bi = {
+  Tl = { role: "list", class: "w-dyn-items" },
+  Ll = { role: "listitem", class: "w-dyn-item" },
+  Il = { class: "card-wrapper cc-small" },
+  Pl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Ii = {
+  Ml = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6547,9 +7612,9 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  Pi = { class: "card-image_wrapper" },
-  Mi = { class: "iframe-video_wrapper" },
-  Di = {
+  Dl = { class: "card-image_wrapper" },
+  Fl = { class: "iframe-video_wrapper" },
+  Ul = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6557,10 +7622,10 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  Fi = ["src"],
-  Ui = G(" Your browser does not support the video tag. "),
-  Vi = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Hi = us(() =>
+  Hl = ["src"],
+  Vl = Z(" Your browser does not support the video tag. "),
+  Nl = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Gl = gt(() =>
     h(
       "div",
       { class: "card-body" },
@@ -6582,19 +7647,19 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       -1
     )
   ),
-  Ni = {
+  Xl = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  Xi = { role: "list", class: "w-dyn-items" },
-  Ri = { role: "listitem", class: "w-dyn-item" },
-  Zi = { class: "card-wrapper cc-large" },
-  Yi = {
+  Wl = { role: "list", class: "w-dyn-items" },
+  Rl = { role: "listitem", class: "w-dyn-item" },
+  Yl = { class: "card-wrapper cc-large" },
+  Zl = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Wi = {
+  Kl = {
     "data-mouse-class": "cc-text",
     class: "card is-link w-inline-block",
     style: {
@@ -6603,9 +7668,9 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
       opacity: "1",
     },
   },
-  Gi = { class: "card-image_wrapper" },
-  Ki = { class: "iframe-video_wrapper" },
-  $i = {
+  $l = { class: "card-image_wrapper" },
+  Jl = { class: "iframe-video_wrapper" },
+  Ql = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6613,29 +7678,29 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  Ji = ["src"],
-  Qi = G(" Your browser does not support the video tag. "),
-  ao = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  eo = ca(
-    '<div class="card-body" data-v-a392040e><div class="u-overflow-hidden" data-v-a392040e><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-a392040e><div class="card-large_text" data-v-a392040e><h4 class="u-ts-4" data-v-a392040e>Sable Brand</h4></div></div></div></div>',
+  eo = ["src"],
+  ao = Z(" Your browser does not support the video tag. "),
+  so = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  to = ce(
+    '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Sable Brand</h4></div></div></div></div>',
     1
   ),
-  to = ca(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-a392040e><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-a392040e><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-a392040e> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-a392040e><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" data-v-a392040e>View cases</div><div class="btn-text cc-bottom" data-v-a392040e>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e> Design trial </div></div></a></div></div></div>',
+  io = ce(
+    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-57509004> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>View cases</div><div class="btn-text cc-bottom" data-v-57509004>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div></div></a></div></div></div>',
     1
   ),
-  so = ca(
-    '<div class="container" data-v-a392040e><div class="target_line" data-v-a392040e></div></div><section class="section" data-v-a392040e><div class="section-title_component" data-v-a392040e><div class="container" data-v-a392040e><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="section-title_dot" style="opacity:1;" data-v-a392040e></div><div class="u-overflow-hidden" data-v-a392040e><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><h2 class="u-ts-4" data-v-a392040e>Contact Us</h2></div></div></div></div></div><div class="container" data-v-a392040e><div class="w-layout-grid pair-grid" data-v-a392040e><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-a392040e><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-a392040e><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-a392040e><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-a392040e><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-a392040e><div style="position:relative;display:inline-block;" data-v-a392040e> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+  lo = ce(
+    '<div class="container" data-v-57509004><div class="target_line" data-v-57509004></div></div><section class="section" data-v-57509004><div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>Contact Us</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-57509004><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-57509004><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004><div style="position:relative;display:inline-block;" data-v-57509004> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  lo = { class: "pre-footer" },
-  io = {
+  oo = { class: "pre-footer" },
+  ro = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  oo = { class: "iframe-video_wrapper" },
-  ro = {
+  no = { class: "iframe-video_wrapper" },
+  co = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6643,20 +7708,20 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  no = ["src"],
-  co = G(" Your browser does not support the video tag. "),
-  po = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  vo = ca(
-    '<div class="pre-footer_gradient" data-v-a392040e></div><div class="marquee" data-v-a392040e><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-a392040e><div class="btn cc-large-landscape" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text cc-large-landscape" data-v-a392040e>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-a392040e>Button</div></div></div></div>',
+  po = ["src"],
+  vo = Z(" Your browser does not support the video tag. "),
+  mo = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  fo = ce(
+    '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Case Studies </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   ),
-  mo = {
+  uo = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  uo = { class: "iframe-video_wrapper" },
-  fo = {
+  go = { class: "iframe-video_wrapper" },
+  bo = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6664,192 +7729,193 @@ const us = (a) => (pa("data-v-a392040e"), (a = a()), va(), a),
     loop: "",
     muted: "",
   },
-  go = ["src"],
-  bo = G(" Your browser does not support the video tag. "),
-  ho = us(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  yo = ca(
-    '<div class="pre-footer_gradient" data-v-a392040e></div><div class="marquee" data-v-a392040e><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-a392040e><div class="h1" data-v-a392040e>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-a392040e><div class="btn cc-large-landscape" data-v-a392040e><div class="btn-text-wrap" data-v-a392040e><div class="btn-text cc-large-landscape" data-v-a392040e>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-a392040e>Button</div></div></div></div>',
+  wo = ["src"],
+  ho = Z(" Your browser does not support the video tag. "),
+  yo = gt(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  _o = ce(
+    '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   );
-var wo = Sa(ms, [
+var xo = je(ut, [
     [
       "render",
-      function (a, e, t, s, l, i) {
+      function (e, a, s, t, i, l) {
         const o = S("View"),
           r = S("Footer");
         return (
           g(),
           b(
-            _,
+            x,
             null,
             [
-              T(o),
-              fs,
-              h("section", gs, [
-                bs,
-                h("div", hs, [
-                  h("div", ys, [
-                    h("div", ws, [
-                      h("div", _s, [
-                        h("div", xs, [
-                          h("div", ks, [
+              E(o),
+              w(" ------ "),
+              bt,
+              h("section", wt, [
+                ht,
+                h("div", yt, [
+                  h("div", _t, [
+                    h("div", xt, [
+                      h("div", kt, [
+                        h("div", jt, [
+                          h("div", zt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "300",
-                                src: s.getImageUrl("home/img/1.jpg"),
+                                src: t.getImageUrl("home/img/1.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              js
+                              qt
                             ),
                           ]),
                         ]),
-                        h("div", Cs, [
-                          h("div", qs, [
+                        h("div", Ct, [
+                          h("div", St, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "400",
-                                src: s.getImageUrl("home/img/2.jpg"),
+                                src: t.getImageUrl("home/img/2.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Ss
+                              Ot
                             ),
                           ]),
                         ]),
-                        h("div", zs, [
-                          h("div", Os, [
+                        h("div", At, [
+                          h("div", Bt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "500",
-                                src: s.getImageUrl("home/img/3.jpg"),
+                                src: t.getImageUrl("home/img/3.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              As
+                              Et
                             ),
                           ]),
                         ]),
-                        h("div", Ts, [
-                          h("div", Es, [
+                        h("div", Tt, [
+                          h("div", Lt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "600",
-                                src: s.getImageUrl("home/img/4.jpg"),
+                                src: t.getImageUrl("home/img/4.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Ls
+                              It
                             ),
                           ]),
                         ]),
-                        h("div", Bs, [
-                          h("div", Is, [
+                        h("div", Pt, [
+                          h("div", Mt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "700",
-                                src: s.getImageUrl("home/img/5.jpg"),
+                                src: t.getImageUrl("home/img/5.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Ps
+                              Dt
                             ),
                           ]),
                         ]),
-                        h("div", Ms, [
-                          h("div", Ds, [
+                        h("div", Ft, [
+                          h("div", Ut, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "800",
-                                src: s.getImageUrl("home/img/6.jpg"),
+                                src: t.getImageUrl("home/img/6.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Fs
+                              Ht
                             ),
                           ]),
                         ]),
-                        h("div", Us, [
-                          h("div", Vs, [
+                        h("div", Vt, [
+                          h("div", Nt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "900",
-                                src: s.getImageUrl("home/img/7.jpg"),
+                                src: t.getImageUrl("home/img/7.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Hs
+                              Gt
                             ),
                           ]),
                         ]),
-                        h("div", Ns, [
-                          h("div", Xs, [
+                        h("div", Xt, [
+                          h("div", Wt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "1000",
-                                src: s.getImageUrl("home/img/8.jpg"),
+                                src: t.getImageUrl("home/img/8.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Rs
+                              Rt
                             ),
                           ]),
                         ]),
-                        h("div", Zs, [
-                          h("div", Ys, [
+                        h("div", Yt, [
+                          h("div", Zt, [
                             h(
                               "img",
                               {
                                 loading: "eager",
                                 "data-aos": "fade-up",
                                 "data-aos-delay": "1100",
-                                src: s.getImageUrl("home/img/9.jpg"),
+                                src: t.getImageUrl("home/img/9.jpg"),
                                 alt: "",
                                 class: "marquee_logo",
                               },
                               null,
                               8,
-                              Ws
+                              Kt
                             ),
                           ]),
                         ]),
@@ -6858,42 +7924,43 @@ var wo = Sa(ms, [
                   ]),
                 ]),
               ]),
-              Gs,
-              h("section", Ks, [
-                $s,
-                h("div", Js, [
-                  Qs,
-                  h("div", al, [
-                    h("div", el, [
-                      h("div", tl, [
-                        h("div", sl, [
-                          h("div", ll, [
-                            h("div", il, [
-                              h("div", ol, [
-                                h("div", rl, [
-                                  h("div", nl, [
-                                    h("div", dl, [
-                                      h("div", cl, [
-                                        h("div", pl, [
-                                          h("video", vl, [
+              w(" ------ "),
+              $t,
+              h("section", Jt, [
+                Qt,
+                h("div", ei, [
+                  ai,
+                  h("div", si, [
+                    h("div", ti, [
+                      h("div", ii, [
+                        h("div", li, [
+                          h("div", oi, [
+                            h("div", ri, [
+                              h("div", ni, [
+                                h("div", di, [
+                                  h("div", ci, [
+                                    h("div", pi, [
+                                      h("div", vi, [
+                                        h("div", mi, [
+                                          h("video", fi, [
                                             h(
                                               "source",
                                               {
-                                                src: s.getVideoUrl(
+                                                src: t.getVideoUrl(
                                                   "home/knife1-1.mp4"
                                                 ),
                                                 type: "video/mp4",
                                               },
                                               null,
                                               8,
-                                              ml
+                                              ui
                                             ),
-                                            ul,
+                                            gi,
                                           ]),
-                                          fl,
+                                          bi,
                                         ]),
                                       ]),
-                                      gl,
+                                      wi,
                                     ]),
                                   ]),
                                 ]),
@@ -6902,102 +7969,105 @@ var wo = Sa(ms, [
                           ]),
                         ]),
                       ]),
-                      h("div", bl, [
-                        h("div", hl, [
-                          h("div", yl, [
-                            h("div", wl, [
-                              h("div", _l, [
-                                h("div", xl, [
-                                  h("div", kl, [
-                                    h("div", jl, [
-                                      h("video", Cl, [
+                      h("div", hi, [
+                        h("div", yi, [
+                          h("div", _i, [
+                            h("div", xi, [
+                              h("div", ki, [
+                                h("div", ji, [
+                                  h("div", zi, [
+                                    h("div", qi, [
+                                      h("video", Ci, [
                                         h(
                                           "source",
                                           {
-                                            src: s.getVideoUrl(
+                                            src: t.getVideoUrl(
                                               "home/knife1-2.mp4"
                                             ),
                                             type: "video/mp4",
                                           },
                                           null,
                                           8,
-                                          ql
+                                          Si
                                         ),
-                                        Sl,
+                                        Oi,
                                       ]),
-                                      zl,
+                                      Ai,
                                     ]),
                                   ]),
-                                  Ol,
+                                  Bi,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      Al,
+                      Ei,
                     ]),
                   ]),
                 ]),
               ]),
-              Tl,
-              h("section", El, [
-                Ll,
-                h("div", Bl, [
-                  h("div", Il, [
-                    h("div", Pl, [
-                      h("div", Ml, [
-                        h("div", Dl, [
-                          h("div", Fl, [
+              w(" -- "),
+              Ti,
+              h("section", Li, [
+                Ii,
+                h("div", Pi, [
+                  h("div", Mi, [
+                    h("div", Di, [
+                      h("div", Fi, [
+                        h("div", Ui, [
+                          h("div", Hi, [
                             h(
                               "img",
-                              { src: s.getImageUrl("logo.png"), alt: "" },
+                              { src: t.getImageUrl("logo.png"), alt: "" },
                               null,
                               8,
-                              Ul
+                              Vi
                             ),
                           ]),
                         ]),
-                        Vl,
-                        Hl,
+                        Ni,
+                        Gi,
                       ]),
                     ]),
                   ]),
                 ]),
               ]),
-              Nl,
-              h("section", Xl, [
-                h("div", Rl, [
-                  Zl,
-                  h("div", Yl, [
-                    h("div", Wl, [
-                      h("div", Gl, [
-                        h("div", Kl, [
-                          h("div", $l, [
-                            h("div", Jl, [
-                              h("div", Ql, [
-                                h("div", ai, [
-                                  h("div", ei, [
-                                    h("div", ti, [
-                                      h("video", si, [
+              w(" --- "),
+              Xi,
+              w(" -- "),
+              h("section", Wi, [
+                h("div", Ri, [
+                  Yi,
+                  h("div", Zi, [
+                    h("div", Ki, [
+                      h("div", $i, [
+                        h("div", Ji, [
+                          h("div", Qi, [
+                            h("div", el, [
+                              h("div", al, [
+                                h("div", sl, [
+                                  h("div", tl, [
+                                    h("div", il, [
+                                      h("video", ll, [
                                         h(
                                           "source",
                                           {
-                                            src: s.getVideoUrl(
+                                            src: t.getVideoUrl(
                                               "home/knife2-3.mp4"
                                             ),
                                             type: "video/mp4",
                                           },
                                           null,
                                           8,
-                                          li
+                                          ol
                                         ),
-                                        ii,
+                                        rl,
                                       ]),
-                                      oi,
+                                      nl,
                                     ]),
                                   ]),
-                                  ri,
+                                  dl,
                                 ]),
                               ]),
                             ]),
@@ -7005,34 +8075,34 @@ var wo = Sa(ms, [
                         ]),
                       ]),
                       h("div", null, [
-                        h("div", ni, [
-                          h("div", di, [
-                            h("div", ci, [
-                              h("div", pi, [
-                                h("div", vi, [
-                                  h("div", mi, [
-                                    h("div", ui, [
-                                      h("div", fi, [
-                                        h("div", gi, [
-                                          h("video", bi, [
+                        h("div", cl, [
+                          h("div", pl, [
+                            h("div", vl, [
+                              h("div", ml, [
+                                h("div", fl, [
+                                  h("div", ul, [
+                                    h("div", gl, [
+                                      h("div", bl, [
+                                        h("div", wl, [
+                                          h("video", hl, [
                                             h(
                                               "source",
                                               {
-                                                src: s.getVideoUrl(
+                                                src: t.getVideoUrl(
                                                   "home/knife2-1.mp4"
                                                 ),
                                                 type: "video/mp4",
                                               },
                                               null,
                                               8,
-                                              hi
+                                              yl
                                             ),
-                                            yi,
+                                            _l,
                                           ]),
-                                          wi,
+                                          xl,
                                         ]),
                                       ]),
-                                      _i,
+                                      kl,
                                     ]),
                                   ]),
                                 ]),
@@ -7041,45 +8111,46 @@ var wo = Sa(ms, [
                           ]),
                         ]),
                       ]),
-                      xi,
+                      jl,
                     ]),
                   ]),
                 ]),
               ]),
-              h("section", ki, [
-                h("div", ji, [
-                  Ci,
-                  h("div", qi, [
-                    h("div", Si, [
-                      h("div", zi, [
-                        h("div", Oi, [
-                          h("div", Ai, [
-                            h("div", Ti, [
-                              h("div", Ei, [
-                                h("div", Li, [
-                                  h("div", Bi, [
-                                    h("div", Ii, [
-                                      h("div", Pi, [
-                                        h("div", Mi, [
-                                          h("video", Di, [
+              w(" --- "),
+              h("section", zl, [
+                h("div", ql, [
+                  Cl,
+                  h("div", Sl, [
+                    h("div", Ol, [
+                      h("div", Al, [
+                        h("div", Bl, [
+                          h("div", El, [
+                            h("div", Tl, [
+                              h("div", Ll, [
+                                h("div", Il, [
+                                  h("div", Pl, [
+                                    h("div", Ml, [
+                                      h("div", Dl, [
+                                        h("div", Fl, [
+                                          h("video", Ul, [
                                             h(
                                               "source",
                                               {
-                                                src: s.getVideoUrl(
+                                                src: t.getVideoUrl(
                                                   "home/knife2-4.mp4"
                                                 ),
                                                 type: "video/mp4",
                                               },
                                               null,
                                               8,
-                                              Fi
+                                              Hl
                                             ),
-                                            Ui,
+                                            Vl,
                                           ]),
-                                          Vi,
+                                          Nl,
                                         ]),
                                       ]),
-                                      Hi,
+                                      Gl,
                                     ]),
                                   ]),
                                 ]),
@@ -7088,187 +8159,193 @@ var wo = Sa(ms, [
                           ]),
                         ]),
                       ]),
-                      h("div", Ni, [
-                        h("div", Xi, [
-                          h("div", Ri, [
-                            h("div", Zi, [
-                              h("div", Yi, [
-                                h("div", Wi, [
-                                  h("div", Gi, [
-                                    h("div", Ki, [
-                                      h("video", $i, [
+                      h("div", Xl, [
+                        h("div", Wl, [
+                          h("div", Rl, [
+                            h("div", Yl, [
+                              h("div", Zl, [
+                                h("div", Kl, [
+                                  h("div", $l, [
+                                    h("div", Jl, [
+                                      h("video", Ql, [
                                         h(
                                           "source",
                                           {
-                                            src: s.getVideoUrl(
+                                            src: t.getVideoUrl(
                                               "home/knife1-2.mp4"
                                             ),
                                             type: "video/mp4",
                                           },
                                           null,
                                           8,
-                                          Ji
+                                          eo
                                         ),
-                                        Qi,
+                                        ao,
                                       ]),
-                                      ao,
+                                      so,
                                     ]),
                                   ]),
-                                  eo,
+                                  to,
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
                       ]),
-                      to,
+                      io,
                     ]),
                   ]),
                 ]),
               ]),
-              so,
+              w(" -- "),
+              lo,
+              w(" --- "),
               h("div", null, [
-                h("aside", lo, [
-                  h("div", io, [
-                    h("div", oo, [
-                      h("video", ro, [
+                h("aside", oo, [
+                  h("div", ro, [
+                    h("div", no, [
+                      h("video", co, [
                         h(
                           "source",
                           {
-                            src: s.getVideoUrl("home/buddha1.mp4"),
+                            src: t.getVideoUrl("home/buddha1.mp4"),
                             type: "video/mp4",
                           },
                           null,
                           8,
-                          no
+                          po
                         ),
-                        co,
+                        vo,
                       ]),
-                      po,
+                      mo,
                     ]),
-                    vo,
+                    fo,
                   ]),
-                  h("div", mo, [
-                    h("div", uo, [
-                      h("video", fo, [
+                  h("div", uo, [
+                    h("div", go, [
+                      h("video", bo, [
                         h(
                           "source",
                           {
-                            src: s.getVideoUrl("home/tea_1.mp4"),
+                            src: t.getVideoUrl("home/tea_1.mp4"),
                             type: "video/mp4",
                           },
                           null,
                           8,
-                          go
+                          wo
                         ),
-                        bo,
+                        ho,
                       ]),
-                      ho,
+                      yo,
                     ]),
-                    yo,
+                    _o,
                   ]),
                 ]),
               ]),
-              T(r),
+              E(r),
             ],
             64
           )
         );
       },
     ],
-    ["__scopeId", "data-v-a392040e"],
+    ["__scopeId", "data-v-57509004"],
+    [
+      "__file",
+      "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/index.vue",
+    ],
   ]),
-  _o = Object.freeze(
+  ko = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: wo },
+      { __proto__: null, default: xo },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const xo = {
+const jo = {
     "../pages/about.vue": () =>
-      Ze(
+      Ra(
         () =>
           Promise.resolve().then(function () {
-            return mt;
+            return fs;
           }),
         void 0
       ),
     "../pages/case.vue": () =>
-      Ze(
+      Ra(
         () =>
           Promise.resolve().then(function () {
-            return bt;
+            return hs;
           }),
         void 0
       ),
     "../pages/demo.vue": () =>
-      Ze(
+      Ra(
         () =>
           Promise.resolve().then(function () {
-            return Bt;
+            return Ps;
           }),
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Ze(
+      Ra(
         () =>
           Promise.resolve().then(function () {
-            return ds;
+            return pt;
           }),
         void 0
       ),
     "../pages/index.vue": () =>
-      Ze(
+      Ra(
         () =>
           Promise.resolve().then(function () {
-            return _o;
+            return ko;
           }),
         void 0
       ),
   },
-  ko = {
-    "../pages/about.vue": mt,
-    "../pages/case.vue": bt,
-    "../pages/demo.vue": Bt,
-    "../pages/fintech-design.vue": ds,
-    "../pages/index.vue": _o,
+  zo = {
+    "../pages/about.vue": fs,
+    "../pages/case.vue": hs,
+    "../pages/demo.vue": Ps,
+    "../pages/fintech-design.vue": pt,
+    "../pages/index.vue": ko,
   },
-  jo = [];
-for (let Vo in xo) {
-  let a = Vo.replace("../pages", "").toLowerCase().replace(".vue", "");
-  (a = a.replace(/\/index$/, "")),
-    (a = a.replace(/\/_+/g, "/:")),
-    jo.push({
-      path: a,
-      name: a,
+  qo = [];
+for (let No in jo) {
+  let e = No.replace("../pages", "").toLowerCase().replace(".vue", "");
+  (e = e.replace(/\/index$/, "")),
+    (e = e.replace(/\/_+/g, "/:")),
+    qo.push({
+      path: e,
+      name: e,
       meta: {
-        layout: ko[Vo].default.layout || "layout-default",
+        layout: zo[No].default.layout || "layout-default",
         title:
-          null != (t = null == (e = ko[Vo].default) ? void 0 : e.title)
-            ? t
+          null != (s = null == (a = zo[No].default) ? void 0 : a.title)
+            ? s
             : "app.project.title",
         header:
-          null != (l = null == (s = ko[Vo].default) ? void 0 : s.header)
-            ? l
+          null != (i = null == (t = zo[No].default) ? void 0 : t.header)
+            ? i
             : "header-default",
         scroll:
-          null != (o = null == (i = ko[Vo].default) ? void 0 : i.noScroll) && o,
+          null != (o = null == (l = zo[No].default) ? void 0 : l.noScroll) && o,
       },
-      component: xo[Vo],
+      component: jo[No],
     });
 }
-const Co = fa({
-  history: ga("./"),
+const Co = ue({
+  history: ge("./"),
   routes:
-    ((qo = { defaultPath: "/home" }),
+    ((So = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: D({ defaultPath: "/" }, qo).defaultPath },
+        redirect: { name: D({ defaultPath: "/" }, So).defaultPath },
       },
-      ...jo,
+      ...qo,
       {
         path: "/404",
         name: "not-found",
@@ -7283,50 +8360,50 @@ const Co = fa({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var qo;
-Co.beforeEach(async (a, e, t) => {
-  t();
+var So;
+Co.beforeEach(async (e, a, s) => {
+  s();
 });
-var So = Object.freeze(
+var Oo = Object.freeze(
   Object.defineProperty({ __proto__: null, default: Co }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const zo = ba({ modules: Xe });
-ha(zo, Co);
-var Oo = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: zo }, Symbol.toStringTag, {
+const Ao = be({ modules: Xa });
+we(Ao, Co);
+var Bo = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ao }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const Ao = {
-    use(a) {
-      a.interceptors.response.use(
-        async function (e) {
-          if (100004 === e.data.code) {
-            const t = a.get("/app/jwt-token", {
-              params: { account: zo.state.auth.user.account },
+const Eo = {
+    use(e) {
+      e.interceptors.response.use(
+        async function (a) {
+          if (100004 === a.data.code) {
+            const s = e.get("/app/jwt-token", {
+              params: { account: Ao.state.auth.user.account },
             });
-            1 === t.data.code && U.set("token", t.data.data.jwt_token, !0);
-            return await a.request(e.config);
+            1 === s.data.code && U.set("token", s.data.data.jwt_token, !0);
+            return await e.request(a.config);
           }
-          return e;
+          return a;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   },
   To = {
-    use(a) {
+    use(e) {
       (window.isAlert = !1),
-        a.interceptors.response.use(
-          async function (a) {
-            const { noredirect: e = !1 } = a.config;
-            if (!e && !window.isAlert) {
-              const e = a.data;
-              switch (e.code) {
+        e.interceptors.response.use(
+          async function (e) {
+            const { noredirect: a = !1 } = e.config;
+            if (!a && !window.isAlert) {
+              const a = e.data;
+              switch (a.code) {
                 case 0:
                 case 100002:
                 case 200001:
@@ -7334,59 +8411,59 @@ const Ao = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: a } = await Ba.alert({
-                    title: `Error(${e.code})`,
-                    text: Ea.t(`error.code.${e.code}`),
+                  const { isConfirmed: e } = await Le.alert({
+                    title: `Error(${a.code})`,
+                    text: Ee.t(`error.code.${a.code}`),
                   });
                   return (
-                    a &&
-                      (await zo.dispatch("auth/logout"),
+                    e &&
+                      (await Ao.dispatch("auth/logout"),
                       await Co.replace("/login"),
                       (window.isAlert = !1)),
-                    Promise.reject(`Error: ${e.code}`)
+                    Promise.reject(`Error: ${a.code}`)
                   );
                 }
               }
             }
-            return a;
+            return e;
           },
-          function (a) {
-            return Promise.reject(a);
+          function (e) {
+            return Promise.reject(e);
           }
         );
     },
   },
-  Eo = {
-    use(a) {
-      a.interceptors.response.use(
-        async function (a) {
-          const { novalidate: e = !1 } = a.config;
-          if (!e) {
-            const e = a.data;
-            switch (e.code) {
+  Lo = {
+    use(e) {
+      e.interceptors.response.use(
+        async function (e) {
+          const { novalidate: a = !1 } = e.config;
+          if (!a) {
+            const a = e.data;
+            switch (a.code) {
               case 1e5:
               case 100001:
               case 100003:
-                await Ba.alert({
-                  title: `Error(${e.code})`,
-                  text: Ea.t(`error.code.${e.code}`),
+                await Le.alert({
+                  title: `Error(${a.code})`,
+                  text: Ee.t(`error.code.${a.code}`),
                 });
             }
           }
-          return a;
+          return e;
         },
-        function (a) {
-          return Promise.reject(a);
+        function (e) {
+          return Promise.reject(e);
         }
       );
     },
   };
-class Lo {
+class Io {
   constructor() {
-    (this.provider = new Ee({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ea({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, Le, Ao, To, Eo, Ie);
+    this.provider.use(Ta, La, Eo, To, Lo, Pa);
   }
   get get() {
     return this.provider.instance.get;
@@ -7401,19 +8478,19 @@ class Lo {
     return this.provider.instance.delete;
   }
 }
-Lo.prototype.install = function (a) {
-  const e = "http-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Io.prototype.install = function (e) {
+  const a = "http-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Bo = new Lo(),
-  Io = Object.freeze(
+var Po = new Io(),
+  Mo = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: Lo, default: Bo },
+      { __proto__: null, HttpService: Io, default: Po },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Po {
+class Do {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -7423,8 +8500,8 @@ class Po {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Ea.t("button.confirm"),
-      cancelButtonText: Ea.t("button.cancel"),
+      confirmButtonText: Ee.t("button.confirm"),
+      cancelButtonText: Ee.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -7436,31 +8513,31 @@ class Po {
     };
   }
   get state() {
-    return zo.state.app.popupState;
+    return Ao.state.app.popupState;
   }
-  async modal(a = {}) {
+  async modal(e = {}) {
     const {
-      title: e,
-      text: t,
-      component: s = null,
-      showCancelButton: l = !0,
-      showConfirmButton: i = !0,
-      confirmButtonText: o = Ea.t("button.confirm"),
-      cancelButtonText: r = Ea.t("button.cancel"),
+      title: a,
+      text: s,
+      component: t = null,
+      showCancelButton: i = !0,
+      showConfirmButton: l = !0,
+      confirmButtonText: o = Ee.t("button.confirm"),
+      cancelButtonText: r = Ee.t("button.cancel"),
       allowOutsideClick: n = !0,
       props: d = {},
-    } = a;
-    return new Promise((a) => {
-      zo.commit(
+    } = e;
+    return new Promise((e) => {
+      Ao.commit(
         "app/set/popup",
-        f(u({}, this.initStates), {
+        u(f({}, this.initStates), {
           type: "Modal",
-          resolve: a,
-          title: e,
-          text: t,
-          component: s ? ea(s) : null,
-          showCancelButton: l,
-          showConfirmButton: i,
+          resolve: e,
+          title: a,
+          text: s,
+          component: t ? ae(t) : null,
+          showCancelButton: i,
+          showConfirmButton: l,
           confirmButtonText: o,
           cancelButtonText: r,
           allowOutsideClick: n,
@@ -7470,41 +8547,41 @@ class Po {
     });
   }
   clear() {
-    zo.commit("app/clear/popup");
+    Ao.commit("app/clear/popup");
   }
 }
-Po.prototype.install = function (a) {
-  const e = "popup-service";
-  (a.config.globalProperties[e] = this), a.provide(e, this);
+Do.prototype.install = function (e) {
+  const a = "popup-service";
+  (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Mo = new Po();
-const Do = {
-    "../services/alert-service.js": Te,
-    "../services/http-service.js": Io,
-    "../services/i18n-service.js": La,
+var Fo = new Do();
+const Uo = {
+    "../services/alert-service.js": Ba,
+    "../services/http-service.js": Mo,
+    "../services/i18n-service.js": Te,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: Po, default: Mo },
+        { __proto__: null, PopupService: Do, default: Fo },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": So,
-    "../services/storage-service.js": Da,
-    "../services/store-service.js": Oo,
+    "../services/router-service.js": Oo,
+    "../services/storage-service.js": De,
+    "../services/store-service.js": Bo,
   },
-  Fo = {
-    install: (a) => {
-      for (let e in Do) a.use(Do[e].default);
+  Ho = {
+    install: (e) => {
+      for (let a in Uo) e.use(Uo[a].default);
     },
   };
-const Uo = ya(za);
-Uo.provide("$jQuery", wa),
-  Uo.provide("$swal", Ba),
-  Uo.provide("$storage", U),
-  Uo.provide("$tabsslider", _a),
-  Uo.use(ne),
-  Uo.use(Se),
-  Uo.use(xa, { loading: "", error: "" }),
-  Uo.use(Fo),
-  Uo.mount("#app");
+const Vo = he(Se);
+Vo.provide("$jQuery", ye),
+  Vo.provide("$swal", Le),
+  Vo.provide("$storage", U),
+  Vo.provide("$tabsslider", _e),
+  Vo.use(na),
+  Vo.use(Ca),
+  Vo.use(xe, { loading: "", error: "" }),
+  Vo.use(Ho),
+  Vo.mount("#app");

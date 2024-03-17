@@ -1425,7 +1425,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   bottom: 0;
   left: auto;
 }
-.go-back[data-v-50981458] {
+.go-back[data-v-4c72660e] {
   width: 0.45rem;
   height: 0.45rem;
   background-image: url(./icon_back.556b6f96.svg);
@@ -1443,23 +1443,23 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   padding: 0.2rem;
   flex: 1;
 }
-.popup-enter-active .popup__inner[data-v-aca526dc] {
+.popup-enter-active .popup__inner[data-v-628f8c70] {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.popup-enter-active .popup__inner.no-enter-animation[data-v-aca526dc] {
+.popup-enter-active .popup__inner.no-enter-animation[data-v-628f8c70] {
   -webkit-animation: none;
   animation: none;
 }
-.popup-leave-active .popup__inner[data-v-aca526dc] {
+.popup-leave-active .popup__inner[data-v-628f8c70] {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.popup-backdrop[data-v-aca526dc] {
+.popup-backdrop[data-v-628f8c70] {
   position: fixed;
   top: 0;
   left: 0;
@@ -1468,7 +1468,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   height: 100vh;
   background-color: #0009;
 }
-.popup-backdrop-leave-to[data-v-aca526dc] {
+.popup-backdrop-leave-to[data-v-628f8c70] {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
   -webkit-animation-duration: 0.3s;
@@ -2391,11 +2391,56 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos="flip-down"].aos-animate {
   transform: perspective(2500px) rotateX(0);
 }
-.mobile-show[data-v-e64ae5a2] {
+.wrap[data-v-74f67db4] {
+  height: calc(96vh - 52px);
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.wrap[data-v-74f67db4]::-webkit-scrollbar {
   display: none;
 }
 @media (max-width: 991px) {
-  .mobile-show[data-v-e64ae5a2] {
+  .wrap[data-v-74f67db4] {
+    height: auto;
+    overflow: auto;
+  }
+}
+.wrap #case-title[data-v-74f67db4] {
+  width: 42vw;
+  padding-bottom: 10%;
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .wrap #case-title[data-v-74f67db4] {
+    padding-left: 15px;
+  }
+}
+.wrap .cases-slider[data-v-74f67db4] {
+  padding-bottom: 80px;
+}
+@media (max-width: 991px) {
+  .wrap .cases-slider[data-v-74f67db4] {
+    display: block;
+  }
+}
+.wrap .cases-item[data-v-74f67db4] {
+  background-color: #ed6617;
+}
+@media (max-width: 991px) {
+  .wrap .cases-list[data-v-74f67db4] {
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+.mobile-show[data-v-74f67db4] {
+  display: none;
+}
+@media (max-width: 991px) {
+  .mobile-show[data-v-74f67db4] {
     display: block;
   }
 }
@@ -2524,35 +2569,35 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     transform: translateZ(0);
   }
 }
-.transparent[data-v-a392040e] {
+.transparent[data-v-57509004] {
   background-color: transparent !important;
 }
-.target_line[data-v-a392040e] {
+.target_line[data-v-57509004] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-a392040e]:first-child {
+.target_line[data-v-57509004]:first-child {
   margin-top: 30px;
 }
-.target_line.active[data-v-a392040e] {
-  -webkit-animation-name: line-a392040e;
-  animation-name: line-a392040e;
+.target_line.active[data-v-57509004] {
+  -webkit-animation-name: line-57509004;
+  animation-name: line-57509004;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .w-layout-grid.pair-grid.is-leading[data-v-a392040e] {
+  .w-layout-grid.pair-grid.is-leading[data-v-57509004] {
     overflow: hidden;
   }
-  .apps_asset.cc-2.w-dyn-list[data-v-a392040e],
-  .apps_asset.cc-1[data-v-a392040e] {
+  .apps_asset.cc-2.w-dyn-list[data-v-57509004],
+  .apps_asset.cc-1[data-v-57509004] {
     transform: translateZ(0) !important;
   }
 }
-@-webkit-keyframes line-a392040e {
+@-webkit-keyframes line-57509004 {
   0% {
     width: 0;
   }
@@ -2560,7 +2605,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-a392040e {
+@keyframes line-57509004 {
   0% {
     width: 0;
   }
