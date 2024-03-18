@@ -861,7 +861,7 @@
                             playsinline
                           >
                             <source
-                              :src="getVideoUrl('home/knife2-3.mp4')"
+                              :src="getVideoUrl('home/tea_1.mp4')"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -932,7 +932,7 @@
                                 playsinline
                               >
                                 <source
-                                  :src="getVideoUrl('home/knife2-1.mp4')"
+                                  :src="getVideoUrl('home/tea_1.mp4')"
                                   type="video/mp4"
                                 />
                                 Your browser does not support the video tag.
@@ -1114,7 +1114,7 @@
                                 playsinline
                               >
                                 <source
-                                  :src="getVideoUrl('home/knife2-4.mp4')"
+                                  :src="getVideoUrl('home/tea_1.mp4')"
                                   type="video/mp4"
                                 />
                                 Your browser does not support the video tag.
@@ -1182,7 +1182,7 @@
                             playsinline
                           >
                             <source
-                              :src="getVideoUrl('home/knife1-2.mp4')"
+                              :src="getVideoUrl('home/tea_1.mp4')"
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
