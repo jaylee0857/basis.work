@@ -292,13 +292,13 @@ const callback = (entries) => {
     const { intersectionRatio, target } = entry;
     const index = target.dataset?.index;
     const itemName = target.dataset?.item;
-    console.log(itemName);
+    // console.log(itemName);
     switch (itemName) {
       case "img":
         imagesOption.value[index].isEnter =
           intersectionRatio < 0.2 ? false : true;
-        console.log(target.dataset?.index, "index");
-        console.log(intersectionRatio);
+        // console.log(target.dataset?.index, "index");
+        // console.log(intersectionRatio);
         break;
 
       default:

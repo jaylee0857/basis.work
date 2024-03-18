@@ -12,6 +12,9 @@ export async function loadImage(imageUrl) {
       imageCache[imageUrl] = img;
     };
     img.src = imageUrl;
+    img.onerror = () => {
+      resolve("error");
+    };
   });
 
   await imageLoadPromise;

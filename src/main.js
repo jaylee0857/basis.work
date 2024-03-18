@@ -11,6 +11,7 @@ import VueLazyLoad from "vue3-lazyload";
 // import "view-ui-plus/dist/styles/viewuiplus.css";
 /** _app */
 import layouts from "@/_app/layouts";
+import getAllImageUrl from "@/_app/images";
 import components from "@/_app/components";
 import providers from "@/_app/providers";
 // import "./assets/css/studio-basis.webflow.min.css";
@@ -24,7 +25,7 @@ app.provide("$swal", sweetalert);
 app.provide("$storage", storage);
 app.provide("$tabsslider", tabsslider);
 app.use(layouts);
-// app.use(ViewUIPlus);
+app.use(getAllImageUrl);
 app.use(components);
 app.use(VueLazyLoad, {
   loading: "",
