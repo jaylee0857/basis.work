@@ -2,7 +2,7 @@
   <div id="cases" class="wrap">
     <!-- pc -->
     <div class="cases-slider">
-      <h1 id="case-title">Cases</h1>
+      <h1 id="case-title">Case</h1>
       <div role="list" class="cases-list w-dyn-items container">
         <div role="listitem" class="cases-item w-dyn-item">
           <a class="cases-card cc-immediate w-inline-block"

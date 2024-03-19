@@ -2570,6 +2570,29 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     transform: translateZ(0);
   }
 }
+.mobile-show[data-v-57509004] {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-show[data-v-57509004] {
+    display: block;
+  }
+}
+.mobile-hidden[data-v-57509004] {
+  display: block;
+}
+.mobile-hidden .apps_media-list[data-v-57509004] {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .mobile-hidden[data-v-57509004] {
+    display: none;
+  }
+}
+.apps_component[data-v-57509004] {
+  margin-top: 30px;
+  height: 160px;
+}
 .transparent[data-v-57509004] {
   background-color: transparent !important;
 }
@@ -9078,7 +9101,7 @@ strong {
   background-color: var(--swatch--accent2);
 }
 .u-text-secondary {
-  color: var(--swatch--secondary);
+  color: #fff;
 }
 .u-text-accent1 {
   color: var(--swatch--accent1);
@@ -9305,7 +9328,6 @@ strong {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  overflow: hidden;
 }
 .iphone-mockup {
   z-index: 1;
@@ -9711,7 +9733,6 @@ strong {
   overflow: hidden;
 }
 .apps_media-wrapper {
-  overflow: hidden;
   scrollbar-width: none;
   position: relative;
 }
@@ -10011,7 +10032,7 @@ strong {
   width: 12rem;
 }
 .btn-scroll {
-  grid-column-gap: 2.5rem;
+  grid-column-gap: 0.5rem;
   grid-row-gap: 2.5rem;
   border: 1px solid var(--swatch--primary);
   background-color: var(--swatch--secondary);
@@ -10113,7 +10134,7 @@ strong {
   overflow: hidden;
 }
 .contact-cta a {
-  color: var(--swatch--secondary);
+  color: #fff;
   display: inline-block;
 }
 .credits_list {
@@ -10175,7 +10196,7 @@ strong {
   display: flex;
 }
 .footer-copyright {
-  color: #505050;
+  color: #fff;
   margin-top: 6rem;
   font-size: 0.875rem;
 }
@@ -11112,10 +11133,11 @@ strong {
     padding-right: 1.5rem;
     display: flex;
     position: absolute;
-    top: 0%;
+    top: 50%;
     bottom: 0%;
     left: auto;
     right: 0%;
+    transform: translateY(50%);
   }
   .mobile-scroll_cta {
     width: 5rem;

@@ -290,7 +290,7 @@
                 transform: translate(0px, 0%);
               "
             >
-              (Skyart7325)開放每日一組預約。
+              Skyart7325開放每日一組預約。
             </div>
           </div>
         </h4>
@@ -650,7 +650,7 @@
         </div>
       </div>
     </div>
-    <div data-apps="component" class="apps_component">
+    <div data-apps="component" class="apps_component mobile-show">
       <div class="apps_media-wrapper">
         <div
           data-w-id="9ec98ec5-fb8a-2716-02fa-7ef29f58135e"
@@ -756,7 +756,139 @@
         </div>
       </div>
       <div class="apps_scroll">
-        <div class="mobile-scroll_cta" v-if="hideHorizontalIcon">
+        <div
+          class="mobile-scroll_cta"
+          v-if="hideHorizontalIcon"
+          @click="scroll_Left"
+        >
+          <div class="mobile-scroll_icon w-embed">
+            <svg
+              width="100%"
+              style=""
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-apps="component" class="apps_component container mobile-hidden">
+      <div class="apps_media-wrapper">
+        <div
+          data-w-id="9ec98ec5-fb8a-2716-02fa-7ef29f58135e"
+          class="apps_media-list"
+          @scroll="scrollPosition"
+        >
+          <div
+            class="apps_asset-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="100"
+          >
+            <img
+              :src="getImageUrl('home/img/8.jpg')"
+              loading="lazy"
+              data-w-id="4712a24f-d922-c9f3-e8a3-7b35338a5a7d"
+              alt=""
+              class="apps_asset cc-1"
+            />
+          </div>
+          <div
+            class="apps_asset-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="150"
+          >
+            <div
+              data-w-id="2aa36fa9-41c0-5a43-aa83-b39188bc3c2b"
+              class="apps_asset cc-2 w-dyn-list"
+            >
+              <div role="list" class="w-dyn-items">
+                <div role="listitem" class="w-dyn-item">
+                  <a data-mouse-class="cc-text" class="apps_link w-inline-block"
+                    ><img
+                      alt=""
+                      loading="lazy"
+                      :src="getImageUrl('home/img/10.jpg')"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="apps_asset-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="200"
+          >
+            <div
+              data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
+              class="apps_asset cc-3 w-dyn-list"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div role="list" class="w-dyn-items">
+                <div role="listitem" class="w-dyn-item">
+                  <a
+                    data-mouse-class="cc-text"
+                    href="/cases/seen-app"
+                    class="apps_link w-inline-block"
+                    ><img
+                      alt=""
+                      loading="lazy"
+                      :src="getImageUrl('home/img/9.jpg')"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="apps_asset-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="200"
+          >
+            <div
+              data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
+              class="apps_asset cc-3 w-dyn-list"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+            >
+              <div role="list" class="w-dyn-items">
+                <div role="listitem" class="w-dyn-item">
+                  <a
+                    data-mouse-class="cc-text"
+                    href="/cases/seen-app"
+                    class="apps_link w-inline-block"
+                    ><img
+                      alt=""
+                      loading="lazy"
+                      :src="getImageUrl('home/img/12.jpg')"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="apps_scroll">
+        <div
+          class="mobile-scroll_cta"
+          v-if="hideHorizontalIcon"
+          @click="scroll_Left"
+        >
           <div class="mobile-scroll_icon w-embed">
             <svg
               width="100%"
@@ -841,47 +973,32 @@
                     <div
                       data-mouse-class="cc-text"
                       class="card is-link w-inline-block"
-                      style="
-                        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                          skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                        opacity: 1;
-                      "
                     >
                       <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
-                          <video
-                            class="video-cover"
-                            width="100%"
-                            height="100%"
-                            autoplay
-                            loop
-                            muted
-                            playsinline
+                          <div
+                            data-video-id="7101"
+                            style="aspect-ratio: 1.77777778; overflow: hidden"
                           >
-                            <source
-                              :src="getVideoUrl('home/tea_1.mp4')"
-                              type="video/mp4"
-                            />
-                            Your browser does not support the video tag.
-                          </video>
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src="https://app.vidzflow.com/v/gCj1S7rvrC?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                              title="C0070"
+                              style="aspect-ratio: 1.77777778; overflow: hidden"
+                              frameborder="0"
+                              scrolling="no"
+                              allow="fullscreen"
+                            ></iframe>
+                          </div>
                           <div class="iframe-video_blocker"></div>
                         </div>
                       </div>
                       <div class="card-body">
                         <div class="u-overflow-hidden">
-                          <div
-                            class="card-up"
-                            style="
-                              transform: translate3d(0px, 0%, 0px)
-                                scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                rotateZ(0deg) skew(0deg, 0deg);
-                              transform-style: preserve-3d;
-                            "
-                          >
+                          <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">Skyart7325鑑賞中心</h4>
+                              <h4 class="u-ts-4">深雲迷石茶席</h4>
                             </div>
                           </div>
                         </div>
@@ -912,46 +1029,37 @@
                         <div
                           data-mouse-class="cc-text"
                           class="card is-link w-inline-block"
-                          style="
-                            transform: translate3d(0px, 0%, 0px)
-                              scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                              rotateZ(0deg) skew(0deg, 0deg);
-                            transform-style: preserve-3d;
-                            opacity: 1;
-                          "
                         >
                           <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
-                              <video
-                                class="video-cover"
-                                width="100%"
-                                height="100%"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
+                              <div
+                                data-video-id="7100"
+                                style="
+                                  aspect-ratio: 1.77777778;
+                                  overflow: hidden;
+                                "
                               >
-                                <source
-                                  :src="getVideoUrl('home/tea_1.mp4')"
-                                  type="video/mp4"
-                                />
-                                Your browser does not support the video tag.
-                              </video>
+                                <iframe
+                                  width="100%"
+                                  height="100%"
+                                  src="https://app.vidzflow.com/v/ld8707EM7f?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                                  title="C0071"
+                                  style="
+                                    aspect-ratio: 1.77777778;
+                                    overflow: hidden;
+                                  "
+                                  frameborder="0"
+                                  scrolling="no"
+                                  allow="fullscreen"
+                                ></iframe>
+                              </div>
                               <div class="iframe-video_blocker"></div>
                             </div>
                           </div>
                           <div class="card-body">
                             <div class="u-overflow-hidden">
-                              <div
-                                class="card-up"
-                                style="
-                                  transform: translate3d(0px, 0%, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                  transform-style: preserve-3d;
-                                "
-                              >
-                                <h4 class="u-ts-4">Sable App</h4>
+                              <div class="card-up">
+                                <h4 class="u-ts-4">2-7人</h4>
                               </div>
                             </div>
                           </div>
@@ -967,40 +1075,19 @@
             id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307"
             class="content is-grid"
           >
-            <div
-              class="content-p cc-1"
-              style="
-                transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-                opacity: 1;
-              "
-            >
+            <div class="content-p cc-1">
               <p
                 class="u-ts-3"
                 data-aos="fade-up"
                 data-aos-duration="700"
                 data-aos-delay="200"
               >
-                Basis knows fintech. We’ve developed a strong focus on design
-                for financial services, like mobile apps, bank brands, and
-                credit card design. Our programs are optimized for startups,
-                allowing Basis to start small, work fast, and keep you ahead of
-                your roadmap. When the most innovative companies want to cut
-                through a highly-regulated, ever-changing financial world, they
-                come to the experts.
+                全一體玉石材打磨茶席區 檀木櫃體工學皮椅 老件禪師座
+                鋪開花語道品絕品茶賞 湄洲媽祖聖像對飲
               </p>
             </div>
             <div class="btn-group">
-              <div
-                class="btn-item cc-1"
-                style="
-                  opacity: 1;
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
+              <div class="btn-item cc-1">
                 <a
                   href="/fintech-design"
                   class="btn w-inline-block"
@@ -1008,20 +1095,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">Fintech services</div>
-                    <div class="btn-text cc-bottom">Fintech services</div>
+                    <div class="btn-text">立即預約</div>
+                    <div class="btn-text cc-bottom">立即預約</div>
                   </div>
                 </a>
               </div>
-              <div
-                class="btn-item cc-2"
-                style="
-                  opacity: 1;
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
+              <div class="btn-item cc-2">
                 <a
                   href="/design-trial"
                   class="btn cc-secondary w-inline-block"
@@ -1029,8 +1108,8 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">Design trial</div>
-                    <div class="btn-text cc-bottom">Design trial</div>
+                    <div class="btn-text">了解更多</div>
+                    <div class="btn-text cc-bottom">了解更多</div>
                   </div>
                 </a>
               </div>
@@ -1044,7 +1123,7 @@
   <section class="section">
     <div class="container over-h">
       <div class="row">
-        <div data-animation-element="group" class="col">
+        <!-- <div data-animation-element="group" class="col">
           <h3
             data-animation-element="title"
             class="h1"
@@ -1070,7 +1149,7 @@
               </div>
             </div>
           </h3>
-        </div>
+        </div> -->
       </div>
       <div class="sticky-pair">
         <div class="w-layout-grid pair-grid">
@@ -1094,48 +1173,37 @@
                         <div
                           data-mouse-class="cc-text"
                           class="card is-link w-inline-block"
-                          style="
-                            transform: translate3d(0px, 0%, 0px)
-                              scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                              rotateZ(0deg) skew(0deg, 0deg);
-                            transform-style: preserve-3d;
-                            opacity: 1;
-                          "
                         >
                           <div class="card-image_wrapper">
                             <div class="iframe-video_wrapper">
-                              <video
-                                class="video-cover"
-                                width="100%"
-                                height="100%"
-                                autoplay
-                                loop
-                                muted
-                                playsinline
+                              <div
+                                data-video-id="7103"
+                                style="
+                                  aspect-ratio: 1.77777778;
+                                  overflow: hidden;
+                                "
                               >
-                                <source
-                                  :src="getVideoUrl('home/tea_1.mp4')"
-                                  type="video/mp4"
-                                />
-                                Your browser does not support the video tag.
-                              </video>
+                                <iframe
+                                  width="100%"
+                                  height="100%"
+                                  src="https://app.vidzflow.com/v/rkw2Z8iv8P?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                                  title="C0049"
+                                  style="
+                                    aspect-ratio: 1.77777778;
+                                    overflow: hidden;
+                                  "
+                                  frameborder="0"
+                                  scrolling="no"
+                                  allow="fullscreen"
+                                ></iframe>
+                              </div>
                               <div class="iframe-video_blocker"></div>
                             </div>
                           </div>
                           <div class="card-body">
                             <div class="u-overflow-hidden">
-                              <div
-                                class="card-up"
-                                style="
-                                  transform: translate3d(0px, 0%, 0px)
-                                    scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                    rotateZ(0deg) skew(0deg, 0deg);
-                                  transform-style: preserve-3d;
-                                "
-                              >
-                                <h4 class="u-ts-4">
-                                  Gaffa Brand &amp; Website
-                                </h4>
+                              <div class="card-up">
+                                <h4 class="u-ts-4">4-6人</h4>
                               </div>
                             </div>
                           </div>
@@ -1162,47 +1230,420 @@
                     <div
                       data-mouse-class="cc-text"
                       class="card is-link w-inline-block"
-                      style="
-                        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                          skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                        opacity: 1;
-                      "
                     >
                       <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
-                          <video
-                            class="video-cover"
-                            width="100%"
-                            height="100%"
-                            autoplay
-                            loop
-                            muted
-                            playsinline
+                          <div
+                            data-video-id="7102"
+                            style="aspect-ratio: 1.77777778; overflow: hidden"
                           >
-                            <source
-                              :src="getVideoUrl('home/tea_1.mp4')"
-                              type="video/mp4"
-                            />
-                            Your browser does not support the video tag.
-                          </video>
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src="https://app.vidzflow.com/v/OA5cciSPdp?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                              title="C0003"
+                              style="aspect-ratio: 1.77777778; overflow: hidden"
+                              frameborder="0"
+                              scrolling="no"
+                              allow="fullscreen"
+                            ></iframe>
+                          </div>
                           <div class="iframe-video_blocker"></div>
                         </div>
                       </div>
                       <div class="card-body">
                         <div class="u-overflow-hidden">
-                          <div
-                            class="card-up"
-                            style="
-                              transform: translate3d(0px, 0%, 0px)
-                                scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
-                                rotateZ(0deg) skew(0deg, 0deg);
-                              transform-style: preserve-3d;
-                            "
-                          >
+                          <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">Sable Brand</h4>
+                              <h4 class="u-ts-4">凌空暇思茶席</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307"
+            class="content is-grid"
+          >
+            <div class="content-p cc-1">
+              <p class="u-ts-3" data-aos="fade-up" data-aos-duration="800">
+                寬面開闊原石桌 讀花掬茶布置餐酒多變間 原木藝品書畫櫃
+                單體歐廚水槽
+              </p>
+            </div>
+            <div class="btn-group">
+              <div class="btn-item cc-1">
+                <a
+                  href="/cases"
+                  class="btn w-inline-block"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <div class="btn-text-wrap">
+                    <div class="btn-text">立即預約</div>
+                    <div class="btn-text cc-bottom">立即預約</div>
+                  </div>
+                </a>
+              </div>
+              <div class="btn-item cc-2">
+                <a
+                  href="/design-trial"
+                  class="btn cc-secondary w-inline-block"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <div class="btn-text-wrap">
+                    <div class="btn-text">了解更多</div>
+                    <div class="btn-text cc-bottom">了解更多</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container over-h">
+      <div class="row">
+        <!-- <div data-animation-element="group" class="col">
+          <h3
+            data-animation-element="title"
+            class="h1"
+            style=""
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              class="u-overflow-hidden"
+              style="display: block; text-align: start; position: relative"
+            >
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 0%);
+                "
+              >
+                Branding
+              </div>
+            </div>
+          </h3>
+        </div> -->
+      </div>
+      <div class="sticky-pair">
+        <div class="w-layout-grid pair-grid is-leading">
+          <div
+            id="w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307"
+            class="w-dyn-list"
+          >
+            <div role="list" class="w-dyn-items">
+              <div role="listitem" class="w-dyn-item">
+                <div class="card-wrapper cc-large">
+                  <div
+                    class="card-animation cc-40"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                  >
+                    <div
+                      data-mouse-class="cc-text"
+                      class="card is-link w-inline-block"
+                    >
+                      <div class="card-image_wrapper">
+                        <div class="iframe-video_wrapper">
+                          <div
+                            data-video-id="7104"
+                            style="aspect-ratio: 1.77777778; overflow: hidden"
+                          >
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src="https://app.vidzflow.com/v/2wmcwBoGu3?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                              title="C0082"
+                              style="aspect-ratio: 1.77777778; overflow: hidden"
+                              frameborder="0"
+                              scrolling="no"
+                              allow="fullscreen"
+                            ></iframe>
+                          </div>
+                          <div class="iframe-video_blocker"></div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="u-overflow-hidden">
+                          <div class="card-up">
+                            <div class="card-large_text">
+                              <h4 class="u-ts-4">名畫酒廊劇院區</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              id="w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307"
+              class="card-wrapper cc-small"
+            >
+              <div
+                id="w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307"
+                class="w-dyn-list"
+              >
+                <div role="list" class="w-dyn-items">
+                  <div role="listitem" class="w-dyn-item">
+                    <div class="card-wrapper cc-small">
+                      <div
+                        class="card-animation cc-40"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                      >
+                        <div
+                          data-mouse-class="cc-text"
+                          class="card is-link w-inline-block"
+                        >
+                          <div class="card-image_wrapper">
+                            <div class="iframe-video_wrapper">
+                              <div
+                                data-video-id="7105"
+                                style="
+                                  aspect-ratio: 1.77777778;
+                                  overflow: hidden;
+                                "
+                              >
+                                <iframe
+                                  width="100%"
+                                  height="100%"
+                                  src="https://app.vidzflow.com/v/ZExuVY2X0e?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                                  title="C0084"
+                                  style="
+                                    aspect-ratio: 1.77777778;
+                                    overflow: hidden;
+                                  "
+                                  frameborder="0"
+                                  scrolling="no"
+                                  allow="fullscreen"
+                                ></iframe>
+                              </div>
+                              <div class="iframe-video_blocker"></div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="u-overflow-hidden">
+                              <div class="card-up">
+                                <h4 class="u-ts-4">6-20人</h4>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307"
+            class="content is-grid"
+          >
+            <div class="content-p cc-1">
+              <p
+                class="u-ts-3"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="200"
+              >
+                102吋BOSE頂規視聽組 會議開幕團體大展迎賓 餐席印鑑長軸藏品合圍
+                私廚配備迴廊備餐區 6-20人
+              </p>
+            </div>
+            <div class="btn-group">
+              <div class="btn-item cc-1">
+                <a
+                  href="/fintech-design"
+                  class="btn w-inline-block"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <div class="btn-text-wrap">
+                    <div class="btn-text">立即預約</div>
+                    <div class="btn-text cc-bottom">立即預約</div>
+                  </div>
+                </a>
+              </div>
+              <div class="btn-item cc-2">
+                <a
+                  href="/design-trial"
+                  class="btn cc-secondary w-inline-block"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <div class="btn-text-wrap">
+                    <div class="btn-text">了解更多</div>
+                    <div class="btn-text cc-bottom">了解更多</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container over-h">
+      <div class="row">
+        <!-- <div data-animation-element="group" class="col">
+          <h3
+            data-animation-element="title"
+            class="h1"
+            style=""
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              class="u-overflow-hidden"
+              style="display: block; text-align: start; position: relative"
+            >
+              <div
+                style="
+                  position: relative;
+                  display: inline-block;
+                  translate: none;
+                  rotate: none;
+                  scale: none;
+                  transform: translate(0px, 0%);
+                "
+              >
+                Branding
+              </div>
+            </div>
+          </h3>
+        </div> -->
+      </div>
+      <div class="sticky-pair">
+        <div class="w-layout-grid pair-grid">
+          <div id="w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307">
+            <div
+              id="w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307"
+              class="card-wrapper cc-small"
+            >
+              <div
+                id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307"
+                class="w-dyn-list"
+              >
+                <div role="list" class="w-dyn-items">
+                  <div role="listitem" class="w-dyn-item">
+                    <div class="card-wrapper cc-small">
+                      <div
+                        class="card-animation cc-40"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                      >
+                        <div
+                          data-mouse-class="cc-text"
+                          class="card is-link w-inline-block"
+                        >
+                          <div class="card-image_wrapper">
+                            <div class="iframe-video_wrapper">
+                              <div
+                                data-video-id="7103"
+                                style="aspect-ratio: null; overflow: hidden"
+                              >
+                                <div
+                                  data-video-id="7103"
+                                  style="
+                                    aspect-ratio: 1.77777778;
+                                    overflow: hidden;
+                                  "
+                                >
+                                  <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://app.vidzflow.com/v/rkw2Z8iv8P?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                                    title="C0049"
+                                    style="
+                                      aspect-ratio: 1.77777778;
+                                      overflow: hidden;
+                                    "
+                                    frameborder="0"
+                                    scrolling="no"
+                                    allow="fullscreen"
+                                  ></iframe>
+                                </div>
+                              </div>
+                              <div class="iframe-video_blocker"></div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <div class="u-overflow-hidden">
+                              <div class="card-up">
+                                <h4 class="u-ts-4">6-10人</h4>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307"
+            class="w-dyn-list"
+          >
+            <div role="list" class="w-dyn-items">
+              <div role="listitem" class="w-dyn-item">
+                <div class="card-wrapper cc-large">
+                  <div
+                    class="card-animation cc-40"
+                    data-aos="fade-up"
+                    data-aos-duration="700"
+                  >
+                    <div
+                      data-mouse-class="cc-text"
+                      class="card is-link w-inline-block"
+                    >
+                      <div class="card-image_wrapper">
+                        <div class="iframe-video_wrapper">
+                          <div
+                            data-video-id="7102"
+                            style="aspect-ratio: 1.77777778; overflow: hidden"
+                          >
+                            <iframe
+                              width="100%"
+                              height="100%"
+                              src="https://app.vidzflow.com/v/OA5cciSPdp?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                              title="C0003"
+                              style="aspect-ratio: 1.77777778; overflow: hidden"
+                              frameborder="0"
+                              scrolling="no"
+                              allow="fullscreen"
+                            ></iframe>
+                          </div>
+                          <div class="iframe-video_blocker"></div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="u-overflow-hidden">
+                          <div class="card-up">
+                            <div class="card-large_text">
+                              <h4 class="u-ts-4">大佛菩提廳</h4>
                             </div>
                           </div>
                         </div>
@@ -1227,25 +1668,12 @@
               "
             >
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="800">
-                Brand power: the multiple your customers will pay for your
-                product, over that of your closest competition, because your
-                name is on it. Basis drives brand power, because unlike other
-                agencies that only focus on experience design or brand
-                development, we seamlessly integrate both. When you start with
-                Basis, we’ll build a brand book and product design kit that
-                (finally) talk to each other.
+                名檜檀香大茶席 清宮唐漢當代藝術風格揉和 冠軍藏茶名件庫
+                童趣寰宇天馬櫃
               </p>
             </div>
             <div class="btn-group">
-              <div
-                class="btn-item cc-1"
-                style="
-                  opacity: 1;
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
+              <div class="btn-item cc-1">
                 <a
                   href="/cases"
                   class="btn w-inline-block"
@@ -1253,20 +1681,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">View cases</div>
-                    <div class="btn-text cc-bottom">View cases</div>
+                    <div class="btn-text">立即預約</div>
+                    <div class="btn-text cc-bottom">立即預約</div>
                   </div>
                 </a>
               </div>
-              <div
-                class="btn-item cc-2"
-                style="
-                  opacity: 1;
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
+              <div class="btn-item cc-2">
                 <a
                   href="/design-trial"
                   class="btn cc-secondary w-inline-block"
@@ -1274,28 +1694,8 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div
-                      class="btn-text"
-                      style="
-                        transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
-                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                          skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                      "
-                    >
-                      Design trial
-                    </div>
-                    <div
-                      class="btn-text cc-bottom"
-                      style="
-                        transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
-                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                          skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                      "
-                    >
-                      Design trial
-                    </div>
+                    <div class="btn-text">了解更多</div>
+                    <div class="btn-text cc-bottom">了解更多</div>
                   </div>
                 </a>
               </div>
@@ -1444,7 +1844,7 @@
   <!-- --- -->
   <div>
     <aside class="pre-footer">
-      <div
+      <!-- <div
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
         class="section cc-pre-footer w-inline-block"
@@ -1549,7 +1949,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
@@ -1701,13 +2101,17 @@ export default {
       // console.log(scrollTotal, "scrollTotal");
       // console.log(distance, "dis");
     };
+    const scroll_Left = () => {
+      const dom = document.querySelector(".apps_media-list");
+      // const distance = e.target.scrollLeft;
+      dom.style.scrollBehavior = "smooth";
+      const maxScrollLeft = dom.scrollWidth - dom.clientWidth; // 計算最大滾動距離
+      // dom -= maxScrollLeft;
+      dom.scrollLeft = maxScrollLeft;
+      // console.log(maxScrollLeft);
+    };
     const a = ref("");
     onMounted(() => {
-      const videoElements = document.querySelectorAll(".video-cover");
-      videoElements.forEach((video) => {
-        // 播放视频
-        video.play();
-      });
       console.log("index");
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -1732,12 +2136,32 @@ export default {
       getImageUrl,
       scrollPosition,
       hideHorizontalIcon,
+      scroll_Left,
     };
   },
 };
 AOS.init();
 </script>
 <style scoped lang="scss">
+.mobile-show {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+.mobile-hidden {
+  display: block;
+  .apps_media-list {
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.apps_component {
+  margin-top: 30px;
+  height: 160px;
+}
 .transparent {
   background-color: transparent !important;
 }

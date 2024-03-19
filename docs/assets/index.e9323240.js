@@ -2,25 +2,25 @@ var e,
   a,
   s,
   t,
-  i,
   l,
+  i,
   o,
-  r = Object.defineProperty,
-  n = Object.defineProperties,
+  n = Object.defineProperty,
+  r = Object.defineProperties,
   d = Object.getOwnPropertyDescriptors,
   c = Object.getOwnPropertySymbols,
   p = Object.prototype.hasOwnProperty,
   v = Object.prototype.propertyIsEnumerable,
   m = (e, a, s) =>
     a in e
-      ? r(e, a, { enumerable: !0, configurable: !0, writable: !0, value: s })
+      ? n(e, a, { enumerable: !0, configurable: !0, writable: !0, value: s })
       : (e[a] = s),
   f = (e, a) => {
     for (var s in a || (a = {})) p.call(a, s) && m(e, s, a[s]);
     if (c) for (var s of c(a)) v.call(a, s) && m(e, s, a[s]);
     return e;
   },
-  u = (e, a) => n(e, d(a));
+  u = (e, a) => r(e, d(a));
 import {
   o as g,
   c as b,
@@ -31,31 +31,31 @@ import {
   F as x,
   d as k,
   r as j,
-  e as q,
-  w as C,
+  e as C,
+  w as q,
   f as z,
   g as S,
   h as O,
-  i as A,
-  j as E,
-  k as B,
-  l as T,
-  m as L,
-  p as I,
-  q as P,
-  s as M,
-  t as D,
+  i as E,
+  j as L,
+  k as A,
+  l as B,
+  m as T,
+  p as P,
+  q as I,
+  s as D,
+  t as M,
   v as F,
   x as H,
   y as U,
-  S as V,
+  S as X,
   z as N,
   A as G,
-  B as X,
-  C as W,
-  D as R,
-  E as Y,
-  G as Z,
+  B as V,
+  C as Z,
+  D as Y,
+  E as W,
+  G as R,
   H as K,
   I as $,
   J,
@@ -64,11 +64,11 @@ import {
   L as ae,
   M as se,
   N as te,
-  O as ie,
-  P as le,
+  O as le,
+  P as ie,
   Q as oe,
-  R as re,
-  U as ne,
+  R as ne,
+  U as re,
   V as de,
   W as ce,
   X as pe,
@@ -163,11 +163,11 @@ const ke = (e) =>
   ).href;
 var je = (e, a) => {
   const s = e.__vccOpts || e;
-  for (const [t, i] of a) s[t] = i;
+  for (const [t, l] of a) s[t] = l;
   return s;
 };
-const qe = { class: "icon" },
-  Ce = { class: "svg_box" },
+const Ce = { class: "icon" },
+  qe = { class: "svg_box" },
   ze = ["src"];
 var Se = je(
   {
@@ -187,8 +187,8 @@ var Se = je(
                   "div",
                   { class: y(["bg", e.mode]) },
                   [
-                    h("div", qe, [
-                      h("div", Ce, [
+                    h("div", Ce, [
+                      h("div", qe, [
                         h(
                           "img",
                           { src: _(ke)("favicon.png"), alt: "" },
@@ -219,16 +219,16 @@ var Se = je(
         a = j(!1),
         s = j(""),
         t = j("leave"),
-        i = q(() => "stop" === t.value),
-        l = q(() => {
-          if (T(e.state.route.path)) return null;
-          return L("layout-error")(I(["meta", "layout"], e.state.route));
+        l = C(() => "stop" === t.value),
+        i = C(() => {
+          if (B(e.state.route.path)) return null;
+          return T("layout-error")(P(["meta", "layout"], e.state.route));
         });
       return (
-        C(
+        q(
           () => e.state.route,
-          (i) => {
-            s.value !== i &&
+          (l) => {
+            s.value !== l &&
               ((a.value = !0),
               setTimeout(() => {
                 (a.value = !1), (t.value = "enter");
@@ -236,23 +236,23 @@ var Se = je(
               (s.value = e.state.route.path);
           }
         ),
-        C(a, (a) => {
+        q(a, (a) => {
           e.commit("app/systm/Loading", a);
         }),
         z(() => {
           window.addEventListener("resize", () => {});
         }),
-        { layout: l, isShowLoading: a, mode: t, isError: i }
+        { layout: i, isShowLoading: a, mode: t, isError: l }
       );
     },
   },
   [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         const o = S("router-view"),
-          r = S("the-popup"),
-          n = S("Loading");
+          n = S("the-popup"),
+          r = S("Loading");
         return (
           g(),
           b(
@@ -261,21 +261,21 @@ var Se = je(
             [
               w(" 外層利用is載入layout "),
               (g(),
-              O(E(t.layout), null, {
-                default: A(() => [
+              O(L(t.layout), null, {
+                default: E(() => [
                   w(
                     ' 內層利用router顯示 透過解構賦值 取得從router-view取得的component 在把Component用在:is＝"Component"身上'
                   ),
-                  B(o, null, {
-                    default: A(({ Component: e }) => [(g(), O(E(e)))]),
+                  A(o, null, {
+                    default: E(({ Component: e }) => [(g(), O(L(e)))]),
                     _: 1,
                   }),
                 ]),
                 _: 1,
               })),
-              B(r),
+              A(n),
               t.isError || t.isShowLoading
-                ? (g(), O(n, { key: 0, mode: t.mode }, null, 8, ["mode"]))
+                ? (g(), O(r, { key: 0, mode: t.mode }, null, 8, ["mode"]))
                 : w("v-if", !0),
             ],
             64
@@ -496,19 +496,19 @@ const Oe = {
       )
     ),
   },
-  Ae = {};
-for (let ao in Oe) {
-  const e = ao.replace("../locales/", "").toLowerCase().replace(".js", ""),
+  Ee = {};
+for (let fi in Oe) {
+  const e = fi.replace("../locales/", "").toLowerCase().replace(".js", ""),
     [a, ...s] = e.split("/"),
-    t = P(".", s),
-    i = Oe[ao].default;
-  Ae[a] = M((e, a) => D(e, { [`${t}.${a}`]: i[a] }), Ae[a] || {}, F(i));
+    t = I(".", s),
+    l = Oe[fi].default;
+  Ee[a] = D((e, a) => M(e, { [`${t}.${a}`]: l[a] }), Ee[a] || {}, F(l));
 }
-const Ee = (() => {
+const Le = (() => {
     var e, a, s, t;
-    const i = H.get("locale");
-    if (i) return i;
-    let l =
+    const l = H.get("locale");
+    if (l) return l;
+    let i =
       null !=
       (t =
         null !=
@@ -519,27 +519,27 @@ const Ee = (() => {
           : a.toLowerCase())
         ? t
         : null;
-    return l
-      ? (l.includes("ph")
-          ? (l = "en-ph")
-          : l.includes("zh")
-          ? (l = "zh-tw")
-          : l.includes("en") && (l = "en"),
-        (l = l in Ae ? l : {}.VITE_LOCALE),
-        l)
+    return i
+      ? (i.includes("ph")
+          ? (i = "en-ph")
+          : i.includes("zh")
+          ? (i = "zh-tw")
+          : i.includes("en") && (i = "en"),
+        (i = i in Ee ? i : {}.VITE_LOCALE),
+        i)
       : {}.VITE_LOCALE;
   })(),
-  Be = U.exports.createI18n({
-    initLocale: Ee,
+  Ae = U.exports.createI18n({
+    initLocale: Le,
     fallbackLocale: null != (e = {}.VITE_DEFAULT_LANG) ? e : "zh-tw",
-    messages: Ae,
+    messages: Ee,
   });
-var Te = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Be }, Symbol.toStringTag, {
+var Be = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Ae }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-(V.toast = function (e) {
+(X.toast = function (e) {
   return this.fire({
     title: e,
     toast: !0,
@@ -550,32 +550,32 @@ var Te = Object.freeze(
     timer: 2e3,
     background: "transparent",
     didOpen: (e) => {
-      e.addEventListener("click", V.close);
+      e.addEventListener("click", X.close);
     },
   });
 }),
-  (V.alert = function ({
+  (X.alert = function ({
     title: e,
     text: a,
     willClose: s = null,
     heightAuto: t = !1,
-    html: i = !1,
-    confirmButtonText: l = Be.t("button.confirm"),
+    html: l = !1,
+    confirmButtonText: i = Ae.t("button.confirm"),
     style: o = "",
   }) {
     return this.fire({
       title: e,
       text: a,
-      html: i,
+      html: l,
       customClass: `swal2-alert ${o}`,
       heightAuto: t,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       willClose: s,
-      confirmButtonText: l,
+      confirmButtonText: i,
     });
   }),
-  (V.showLoading = function () {
+  (X.showLoading = function () {
     return this.fire({
       title: "winner winner chicken dinner",
       showConfirmButton: !1,
@@ -585,19 +585,19 @@ var Te = Object.freeze(
       background: "transparent",
     });
   }),
-  (V.confirm = function ({
+  (X.confirm = function ({
     title: e,
     text: a,
     html: s,
     confirmCallback: t = null,
-    heightAuto: i = !1,
+    heightAuto: l = !1,
   }) {
     return this.fire({
       title: e,
       text: a,
       html: s,
       customClass: "swal2-confirm",
-      heightAuto: i,
+      heightAuto: l,
       showCancelButton: !0,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
@@ -606,7 +606,7 @@ var Te = Object.freeze(
       },
     });
   });
-const Le = V.mixin({
+const Te = X.mixin({
   reverseButtons: !0,
   heightAuto: !1,
   focusConfirm: !1,
@@ -614,34 +614,34 @@ const Le = V.mixin({
   allowEnterKey: !1,
   allowEscapeKey: !1,
   customClass: "swal2-wrap",
-  confirmButtonText: Be.t("button.confirm"),
-  cancelButtonText: Be.t("button.cancel"),
+  confirmButtonText: Ae.t("button.confirm"),
+  cancelButtonText: Ae.t("button.cancel"),
   didOpen(e) {
     const a = e.querySelector(".swal2-cancel");
     e.querySelector(".swal2-confirm").blur(), a.blur();
   },
 });
-class Ie {
+class Pe {
   constructor() {
     return H;
   }
 }
-class Pe {
+class Ie {
   constructor() {
-    this.provider = new Ie();
+    this.provider = new Pe();
   }
   destroy() {
     this.provider.clearAll();
   }
 }
-Pe.prototype.install = function (e) {
+Ie.prototype.install = function (e) {
   const a = "storage-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Me = new Pe(),
-  De = Object.freeze(
+var De = new Ie(),
+  Me = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, StorageService: Pe, default: Me },
+      { __proto__: null, StorageService: Ie, default: De },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -649,14 +649,14 @@ var Me = new Pe(),
 const Fe = () => {
     const e = U.exports.useI18n(),
       a = j({}),
-      s = (t, i = {}) => {
-        const [l, ...o] = N(".", t);
-        return l in a.value ? s(`${a.value[l]}.${P(".", o)}`, i) : e.t(t, i);
+      s = (t, l = {}) => {
+        const [i, ...o] = N(".", t);
+        return i in a.value ? s(`${a.value[i]}.${I(".", o)}`, l) : e.t(t, l);
       };
     return {
       locale: e.locale,
       change: (a) => {
-        e.setLocale(a), Me.provider.set("locale", a);
+        e.setLocale(a), De.provider.set("locale", a);
       },
       setPrefix: (e) => {
         a.value = "string" == typeof e ? { $current: e } : f(f({}, a.value), e);
@@ -667,7 +667,7 @@ const Fe = () => {
   },
   He = ["onMouseenter", "onClick"],
   Ue = h("div", { class: "line" }, null, -1),
-  Ve = { class: "list_style" },
+  Xe = { class: "list_style" },
   Ne = { class: "nav_link-top" },
   Ge = h(
     "div",
@@ -678,10 +678,10 @@ const Fe = () => {
     null,
     -1
   ),
-  Xe = { class: "nav_link-title" },
-  We = { class: "u-ts-3" },
-  Re = { class: "nav_link-p" },
-  Ye = h(
+  Ve = { class: "nav_link-title" },
+  Ze = { class: "u-ts-3" },
+  Ye = { class: "nav_link-p" },
+  We = h(
     "div",
     {
       class: "nav_link-spacer cc-1",
@@ -690,7 +690,7 @@ const Fe = () => {
     null,
     -1
   ),
-  Ze = h("div", { id: "pink_mask" }, null, -1);
+  Re = h("div", { id: "pink_mask" }, null, -1);
 var Ke = je(
   {
     props: ["isOpen"],
@@ -698,8 +698,8 @@ var Ke = je(
     setup(e, { emit: a }) {
       const s = e,
         t = j(1),
-        i = j(!0),
-        l = G(),
+        l = j(!0),
+        i = G(),
         o = j([
           {
             title: "Overview",
@@ -726,8 +726,8 @@ var Ke = je(
             path: "/about",
           },
         ]),
-        r = q(() => 25 * t.value),
-        n = q(() => {
+        n = C(() => 25 * t.value),
+        r = C(() => {
           switch (t.value) {
             case 1:
               return 50;
@@ -751,44 +751,44 @@ var Ke = je(
               b(
                 x,
                 null,
-                X(
+                V(
                   o.value,
-                  (e, i) => (
+                  (e, l) => (
                     g(),
                     b(
                       "li",
                       {
                         key: e,
-                        style: W(`--i: ${e}`),
+                        style: Z(`--i: ${e}`),
                         onMouseenter: (e) =>
                           ((e) => {
                             t.value = e;
-                          })(i),
+                          })(l),
                         onClick: (t) => {
                           return (
-                            (i = e.path),
-                            l.push(i),
+                            (l = e.path),
+                            i.push(l),
                             void a("toggleOpen", s.isOpen)
                           );
-                          var i;
+                          var l;
                         },
                       },
                       [
                         Ue,
-                        h("div", Ve, [
+                        h("div", Xe, [
                           h("div", Ne, [
                             Ge,
-                            h("div", Xe, [h("div", We, R(e.title), 1)]),
+                            h("div", Ve, [h("div", Ze, Y(e.title), 1)]),
                           ]),
                           h(
                             "div",
                             {
                               class: y([
                                 "nav_link-btm",
-                                { active: t.value === i },
+                                { active: t.value === l },
                               ]),
                             },
-                            [h("p", Re, R(e.content), 1), Ye],
+                            [h("p", Ye, Y(e.content), 1), We],
                             2
                           ),
                         ]),
@@ -804,9 +804,9 @@ var Ke = je(
                 "div",
                 {
                   class: "move-item",
-                  style: W({
-                    left: "" + (i.value ? `calc(${_(r)}% - 4px)` : "auto"),
-                    right: "" + (i.value ? "auto" : `calc(${_(n)}% - 4px)`),
+                  style: Z({
+                    left: "" + (l.value ? `calc(${_(n)}% - 4px)` : "auto"),
+                    right: "" + (l.value ? "auto" : `calc(${_(r)}% - 4px)`),
                     width: `calc(${d.value}% + 8px)`,
                   }),
                 },
@@ -814,7 +814,7 @@ var Ke = je(
                 4
               ),
             ]),
-            Ze,
+            Re,
           ],
           2
         )
@@ -844,15 +844,15 @@ var sa = je(
                   a.value = !e;
                 },
                 t = j(!1),
-                i = () => {
+                l = () => {
                   window.pageYOffset > 100 ? (t.value = !0) : (t.value = !1);
                 };
               return (
                 z(() => {
-                  window.addEventListener("scroll", i);
+                  window.addEventListener("scroll", l);
                 }),
-                (e, i) => {
-                  const l = S("router-link");
+                (e, l) => {
+                  const i = S("router-link");
                   return (
                     g(),
                     b(
@@ -868,8 +868,8 @@ var sa = je(
                             ]),
                           },
                           [
-                            B(
-                              l,
+                            A(
+                              i,
                               {
                                 to: "/",
                                 "aria-current": "page",
@@ -882,7 +882,7 @@ var sa = je(
                                 "aria-label": "home",
                               },
                               {
-                                default: A(() => [
+                                default: E(() => [
                                   a.value
                                     ? (g(),
                                       b(
@@ -922,7 +922,7 @@ var sa = je(
                                   },
                                 ]),
                                 onClick:
-                                  i[0] || (i[0] = (e) => (a.value = !a.value)),
+                                  l[0] || (l[0] = (e) => (a.value = !a.value)),
                               },
                               ea,
                               2
@@ -964,10 +964,10 @@ var sa = je(
     [
       [
         "render",
-        function (e, a, s, t, i, l) {
+        function (e, a, s, t, l, i) {
           const o = S("LayoutHeader");
           return (
-            g(), b(x, null, [B(o), h("div", aa, [Y(e.$slots, "default")])], 64)
+            g(), b(x, null, [A(o), h("div", aa, [W(e.$slots, "default")])], 64)
           );
         },
       ],
@@ -984,12 +984,12 @@ var sa = je(
       { value: "Module" }
     )
   );
-const ia = { class: "layout-demo" };
-var la = je({ setup() {} }, [
+const la = { class: "layout-demo" };
+var ia = je({ setup() {} }, [
   [
     "render",
-    function (e, a, s, t, i, l) {
-      return g(), b("div", ia, [Y(e.$slots, "default")]);
+    function (e, a, s, t, l, i) {
+      return g(), b("div", la, [W(e.$slots, "default")]);
     },
   ],
   [
@@ -1001,20 +1001,20 @@ const oa = {
     "../layouts/layout-default.vue": ta,
     "../layouts/layout-demo.vue": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, default: la },
+        { __proto__: null, default: ia },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
   },
-  ra = [];
-for (let ao in oa) {
-  const e = ao.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  ra.push({ componentName: e, component: oa[ao].default });
+  na = [];
+for (let fi in oa) {
+  const e = fi.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  na.push({ componentName: e, component: oa[fi].default });
 }
-const na = {
+const ra = {
   install: (e) => {
-    ra.forEach((a) => {
+    na.forEach((a) => {
       e.component(a.componentName, a.component);
     });
   },
@@ -1040,7 +1040,7 @@ const da = {
 var ma = je(da, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         return (
           g(),
           b("div", ca, [
@@ -1054,9 +1054,9 @@ var ma = je(da, [
                 }))
               : w("v-if", !0),
             h("div", pa, [
-              Y(e.$slots, "title", {}, () => [Z(R(s.title), 1)], !0),
+              W(e.$slots, "title", {}, () => [R(Y(s.title), 1)], !0),
             ]),
-            h("div", va, [Y(e.$slots, "actions", {}, void 0, !0)]),
+            h("div", va, [W(e.$slots, "actions", {}, void 0, !0)]),
           ])
         );
       },
@@ -1090,9 +1090,9 @@ var ya = je({}, [
       return (
         g(),
         b("div", ga, [
-          h("h2", ba, [Y(e.$slots, "title")]),
-          h("div", wa, [Y(e.$slots, "content")]),
-          h("div", ha, [Y(e.$slots, "actions")]),
+          h("h2", ba, [W(e.$slots, "title")]),
+          h("div", wa, [W(e.$slots, "content")]),
+          h("div", ha, [W(e.$slots, "actions")]),
         ])
       );
     },
@@ -1113,7 +1113,7 @@ var ja = je(
   {
     setup(e) {
       const a = ua(),
-        s = q(() => a.state),
+        s = C(() => a.state),
         t = (e) => {
           s.value.resolve(
             f(
@@ -1122,24 +1122,24 @@ var ja = je(
             )
           );
         },
-        i = q(() => (s.value.type, ae(ya))),
-        l = q(() => s.value.BackdropStyle),
+        l = C(() => (s.value.type, ae(ya))),
+        i = C(() => s.value.BackdropStyle),
         o = j();
-      let r = null;
-      const n = () => {
-        clearTimeout(r), (r = null);
+      let n = null;
+      const r = () => {
+        clearTimeout(n), (n = null);
       };
-      C([() => s.value.autoClose, () => s.value.timer], ([e, a]) => {
+      q([() => s.value.autoClose, () => s.value.timer], ([e, a]) => {
         a &&
-          (n(),
-          (r = setTimeout(() => {
-            n(), e && d("timer");
+          (r(),
+          (n = setTimeout(() => {
+            r(), e && d("timer");
           }, a)));
       });
       const d = async (e) => {
-          if (r) {
+          if (n) {
             if (!s.value.allowDismissWhenTimerRunning) return;
-            n();
+            r();
           }
           if (o.value && "onDismissed" in o.value) {
             const s = await o.value.onDismissed();
@@ -1153,9 +1153,9 @@ var ja = je(
           d("cancel");
         },
         v = async () => {
-          if (r) {
+          if (n) {
             if (!s.value.allowConfirmWhenTimerRunning) return;
-            n();
+            r();
           }
           if (o.value && "onConfirmed" in o.value) {
             const e = await o.value.onConfirmed();
@@ -1165,11 +1165,11 @@ var ja = je(
       return (e, a) => (
         g(),
         O(ee, { to: "body" }, [
-          B(
+          A(
             Q,
             { name: "popup", duration: "600" },
             {
-              default: A(() => {
+              default: E(() => {
                 var e;
                 return [
                   _(s).$display
@@ -1177,7 +1177,7 @@ var ja = je(
                       b("div", _a, [
                         (g(),
                         O(
-                          E(_(i)),
+                          L(_(l)),
                           {
                             class: y([
                               "popup__inner pointer-events-auto",
@@ -1191,12 +1191,12 @@ var ja = je(
                           },
                           $(
                             {
-                              title: A(() => [Z(R(_(s).title), 1)]),
-                              content: A(() => [
+                              title: E(() => [R(Y(_(s).title), 1)]),
+                              content: E(() => [
                                 _(s).component
                                   ? (g(),
                                     O(
-                                      E(_(s).component),
+                                      L(_(s).component),
                                       J(
                                         { key: 0, ref_key: "compRef", ref: o },
                                         _(s).props
@@ -1204,9 +1204,9 @@ var ja = je(
                                       null,
                                       16
                                     ))
-                                  : (g(), b("div", xa, R(_(s).text), 1)),
+                                  : (g(), b("div", xa, Y(_(s).text), 1)),
                               ]),
-                              actions: A(() => [
+                              actions: E(() => [
                                 _(s).showCancelButton
                                   ? (g(),
                                     b(
@@ -1217,7 +1217,7 @@ var ja = je(
                                         class: "cancel-button",
                                         onClick: p,
                                       },
-                                      R(_(s).cancelButtonText),
+                                      Y(_(s).cancelButtonText),
                                       1
                                     ))
                                   : w("v-if", !0),
@@ -1231,7 +1231,7 @@ var ja = je(
                                         class: "confirm-button",
                                         onClick: v,
                                       },
-                                      R(_(s).confirmButtonText),
+                                      Y(_(s).confirmButtonText),
                                       1
                                     ))
                                   : w("v-if", !0),
@@ -1242,7 +1242,7 @@ var ja = je(
                               _(s).timer && _(s).timerProgress
                                 ? {
                                     name: "timer",
-                                    fn: A(() => [
+                                    fn: E(() => [
                                       w(
                                         " Date.now() + state.timer 現在時間加上指定時間則為倒數結束時間 "
                                       ),
@@ -1272,7 +1272,7 @@ var ja = je(
               _: 1,
             }
           ),
-          B(
+          A(
             Q,
             {
               name: "popup-backdrop",
@@ -1280,7 +1280,7 @@ var ja = je(
               "leave-active-class": "animate__animated animate__fadeOut",
             },
             {
-              default: A(() => [
+              default: E(() => [
                 _(s).$display
                   ? (g(),
                     b(
@@ -1288,7 +1288,7 @@ var ja = je(
                       {
                         key: 0,
                         class: "popup-backdrop",
-                        style: W({ background: _(l) }),
+                        style: Z({ background: _(i) }),
                         onClick: c,
                       },
                       null,
@@ -1311,7 +1311,7 @@ var ja = je(
     ],
   ]
 );
-const qa = {
+const Ca = {
     "../components/the-header.vue": fa,
     "../components/the-popup.vue": Object.freeze(
       Object.defineProperty(
@@ -1321,21 +1321,21 @@ const qa = {
       )
     ),
   },
-  Ca = [];
-for (let ao in qa) {
-  const e = ao.replace("../components/", "").toLowerCase().replace(".vue", "");
-  Ca.push({ componentName: e, component: qa[ao].default });
+  qa = [];
+for (let fi in Ca) {
+  const e = fi.replace("../components/", "").toLowerCase().replace(".vue", "");
+  qa.push({ componentName: e, component: Ca[fi].default });
 }
 const za = {
   install: (e) => {
-    Ca.forEach((a) => {
+    qa.forEach((a) => {
       e.component(a.componentName, a.component);
     });
   },
 };
 class Sa {
   constructor() {
-    return V.mixin({
+    return X.mixin({
       reverseButtons: !0,
       heightAuto: !1,
       focusConfirm: !1,
@@ -1343,8 +1343,8 @@ class Sa {
       allowEnterKey: !1,
       allowEscapeKey: !1,
       customClass: "swal2-wrap",
-      confirmButtonText: Be.t("button.confirm"),
-      cancelButtonText: Be.t("button.cancel"),
+      confirmButtonText: Ae.t("button.confirm"),
+      cancelButtonText: Ae.t("button.cancel"),
       didOpen(e) {
         const a = e.querySelector(".swal2-cancel");
         e.querySelector(".swal2-confirm").blur(), a.blur();
@@ -1376,20 +1376,20 @@ class Oa {
     text: a,
     willClose: s = null,
     heightAuto: t = !1,
-    html: i = !1,
-    confirmButtonText: l = Be.t("button.confirm"),
+    html: l = !1,
+    confirmButtonText: i = Ae.t("button.confirm"),
     style: o = "",
   }) {
     return this.provider.fire({
       title: e,
       text: a,
-      html: i,
+      html: l,
       customClass: `swal2-alert ${o}`,
       heightAuto: t,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       willClose: s,
-      confirmButtonText: l,
+      confirmButtonText: i,
     });
   }
   showLoading() {
@@ -1408,9 +1408,9 @@ class Oa {
     title: e,
     text: a,
     html: s,
-    confirmButtonText: t = Be.t("button.confirm"),
-    confirmCallback: i = null,
-    heightAuto: l = !1,
+    confirmButtonText: t = Ae.t("button.confirm"),
+    confirmCallback: l = null,
+    heightAuto: i = !1,
   }) {
     return this.provider.fire({
       title: e,
@@ -1418,12 +1418,12 @@ class Oa {
       html: s,
       customClass: "swal2-confirm",
       confirmButtonText: t,
-      heightAuto: l,
+      heightAuto: i,
       showCancelButton: !0,
       showClass: { popup: "animate__animated animate__fadeInUp" },
       hideClass: { popup: "animate__animated animate__fadeOutDown" },
       preConfirm() {
-        null == i || i();
+        null == l || l();
       },
     });
   }
@@ -1435,15 +1435,15 @@ Oa.prototype.install = function (e) {
   const a = "alert-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Aa = new Oa(),
-  Ea = Object.freeze(
+var Ea = new Oa(),
+  La = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, AlertService: Oa, default: Aa },
+      { __proto__: null, AlertService: Oa, default: Ea },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ba {
+class Aa {
   constructor(e, a = {}) {
     this.instance = se.create(f({ baseURL: e }, a));
   }
@@ -1457,7 +1457,7 @@ class Ba {
     });
   }
 }
-const Ta = {
+const Ba = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
@@ -1477,7 +1477,7 @@ const Ta = {
         );
     },
   },
-  La = {
+  Ta = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
@@ -1490,16 +1490,16 @@ const Ta = {
       );
     },
   },
-  Ia = (e, { rejectNil: a, rejectEmpty: s }) =>
-    M(
-      (t, i) => {
-        const l = e[i];
-        return (a && T(l)) || (s && te(l)) ? t : ie(i, l, t);
+  Pa = (e, { rejectNil: a, rejectEmpty: s }) =>
+    D(
+      (t, l) => {
+        const i = e[l];
+        return (a && B(i)) || (s && te(i)) ? t : le(l, i, t);
       },
       {},
       F(e)
     ),
-  Pa = {
+  Ia = {
     use(e) {
       e.interceptors.request.use(
         function (e) {
@@ -1510,14 +1510,14 @@ const Ta = {
           } = e;
           if (
             (e.params &&
-              (e.params = Ia(e.params, { rejectNil: a, rejectEmpty: s })),
+              (e.params = Pa(e.params, { rejectNil: a, rejectEmpty: s })),
             e.data &&
-              ((e.data = Ia(e.data, { rejectNil: a, rejectEmpty: s })), t))
+              ((e.data = Pa(e.data, { rejectNil: a, rejectEmpty: s })), t))
           ) {
             const a = new FormData();
-            le((s) => {
+            ie((s) => {
               e.data[s] instanceof Array
-                ? le((e) => {
+                ? ie((e) => {
                     a.append(`${s}[]`, e);
                   }, e.data[s])
                 : a.append(s, e.data[s]);
@@ -1540,17 +1540,17 @@ const Ta = {
         );
     },
   },
-  Ma = se.create();
-(Ma.defaults.baseURL = {}.VITE_REMOTE_API),
-  (Ma.defaults.validateStatus = (e) => e >= 200 && e < 300);
-const Da = {
+  Da = se.create();
+(Da.defaults.baseURL = {}.VITE_REMOTE_API),
+  (Da.defaults.validateStatus = (e) => e >= 200 && e < 300);
+const Ma = {
   async "read/marquee"() {
-    const e = await Ma.get("/app/user/news", {
+    const e = await Da.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+      a = await Da.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
     return { marquee: e.data, withdraw: a.data };
   },
 };
@@ -1567,12 +1567,12 @@ const Fa = {
 };
 const Ha = {
   async "read/marquee"() {
-    const e = await Ma.get("/app/user/news", {
+    const e = await Da.get("/app/user/news", {
         params: { type: 1 },
         novalidate: !0,
         noredirect: !0,
       }),
-      a = await Ma.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
+      a = await Da.get("/app/withdraw", { novalidate: !0, noredirect: !0 });
     return { marquee: e.data, withdraw: a.data };
   },
 };
@@ -1584,10 +1584,10 @@ const Ua = {
     e.popupState = { $display: !1, $timestamp: -1 };
   },
 };
-const Va = {
+const Xa = {
   "../store/app/actions.js": Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Da },
+      { __proto__: null, default: Ma },
       Symbol.toStringTag,
       { value: "Module" }
     )
@@ -1675,27 +1675,27 @@ const Va = {
 };
 let Na = {};
 const Ga = (e, a, s) => {
-  const [t, ...i] = e;
-  return i.length
-    ? { [t]: { namespaced: !0, modules: Ga(i, a, s) } }
+  const [t, ...l] = e;
+  return l.length
+    ? { [t]: { namespaced: !0, modules: Ga(l, a, s) } }
     : { [t]: { namespaced: !0, [a]: s } };
 };
-for (let ao in Va) {
-  const e = ao
+for (let fi in Xa) {
+  const e = fi
     .replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  Na = ne(Na, Ga(re(e), oe(e), Va[ao].default));
+  Na = re(Na, Ga(ne(e), oe(e), Xa[fi].default));
 }
-var Xa = Na;
-const Wa = {},
-  Ra = function (e, a) {
+var Va = Na;
+const Za = {},
+  Ya = function (e, a) {
     return a && 0 !== a.length
       ? Promise.all(
           a.map((e) => {
-            if ((e = `./${e}`) in Wa) return;
-            Wa[e] = !0;
+            if ((e = `./${e}`) in Za) return;
+            Za[e] = !0;
             const a = e.endsWith(".css"),
               s = a ? '[rel="stylesheet"]' : "";
             if (document.querySelector(`link[href="${e}"]${s}`)) return;
@@ -1718,8 +1718,8 @@ const Wa = {},
         ).then(() => e())
       : e();
   },
-  Ya = { class: "footer" },
-  Za = { class: "container" },
+  Wa = { class: "footer" },
+  Ra = { class: "container" },
   Ka = { class: "row row-justify-center" },
   $a = h(
     "div",
@@ -1820,23 +1820,23 @@ const Wa = {},
   as = { href: "/", class: "footer-wordmark w-inline-block" },
   ss = { class: "wordmark w-embed" },
   ts = ["src"],
-  is = h(
+  ls = h(
     "div",
     { class: "footer-copyright" },
     [
       h("div", { "data-copyright": "" }, [
-        Z(" Copyright © "),
+        R(" Copyright © "),
         h("span", { "data-dynamic": "year" }, "2024"),
       ]),
     ],
     -1
   );
-var ls = je(
+var is = je(
   {
     setup: (e) => (e, a) => (
       g(),
-      b("footer", Ya, [
-        h("div", Za, [
+      b("footer", Wa, [
+        h("div", Ra, [
           h("div", Ka, [
             $a,
             Ja,
@@ -1855,7 +1855,7 @@ var ls = je(
               ]),
             ]),
           ]),
-          is,
+          ls,
         ]),
       ])
     ),
@@ -1868,7 +1868,7 @@ var ls = je(
   ]
 );
 const os = {
-    components: { Footer: ls },
+    components: { Footer: is },
     setup() {
       const { t: e } = Fe();
       return (
@@ -1889,7 +1889,7 @@ const os = {
       );
     },
   },
-  rs = h(
+  ns = h(
     "header",
     { "data-mouse-class": "cc-icon", class: "header cc-large" },
     [
@@ -2264,7 +2264,7 @@ const os = {
     ],
     -1
   ),
-  ns = h("div", { class: "spacing" }, null, -1),
+  rs = h("div", { class: "spacing" }, null, -1),
   ds = h(
     "section",
     { class: "section" },
@@ -3607,7 +3607,7 @@ const os = {
 var ms = je(os, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         const o = S("Footer");
         return (
           g(),
@@ -3615,9 +3615,9 @@ var ms = je(os, [
             x,
             null,
             [
-              rs,
-              w(" ------- "),
               ns,
+              w(" ------- "),
+              rs,
               w(" ==== "),
               ds,
               w(" ==== "),
@@ -3625,7 +3625,7 @@ var ms = je(os, [
               ps,
               w(" ==== "),
               vs,
-              B(o),
+              A(o),
             ],
             64
           )
@@ -3646,7 +3646,7 @@ var ms = je(os, [
   );
 const us = {
     title: "pages.home.nav.about",
-    components: { Footer: ls },
+    components: { Footer: is },
     setup() {
       const { t: e } = Fe();
       return (
@@ -3681,7 +3681,7 @@ const us = {
       [
         w(" pc "),
         h("div", { class: "cases-slider" }, [
-          h("h1", { id: "case-title" }, "Cases"),
+          h("h1", { id: "case-title" }, "Case"),
           h(
             "div",
             { role: "list", class: "cases-list w-dyn-items container" },
@@ -3769,7 +3769,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -3855,7 +3855,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -3947,7 +3947,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4034,7 +4034,7 @@ const us = {
                   h("div", { class: "cases-text" }, [
                     h("div", { class: "cases-more" }, [
                       h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                        Z(" Contact us"),
+                        R(" Contact us"),
                         h("span", { class: "hide-tablet" }, " for more"),
                       ]),
                     ]),
@@ -4132,7 +4132,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4224,7 +4224,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4311,7 +4311,7 @@ const us = {
                   h("div", { class: "cases-text" }, [
                     h("div", { class: "cases-more" }, [
                       h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                        Z(" Contact us"),
+                        R(" Contact us"),
                         h("span", { class: "hide-tablet" }, " for more"),
                       ]),
                     ]),
@@ -4403,7 +4403,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4496,7 +4496,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4598,7 +4598,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4704,7 +4704,7 @@ const us = {
                     h("div", { class: "cases-text" }, [
                       h("div", { class: "cases-more" }, [
                         h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                          Z(" Contact us"),
+                          R(" Contact us"),
                           h("span", { class: "hide-tablet" }, " for more"),
                         ]),
                       ]),
@@ -4795,7 +4795,7 @@ const us = {
                   h("div", { class: "cases-text" }, [
                     h("div", { class: "cases-more" }, [
                       h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                        Z(" Contact us"),
+                        R(" Contact us"),
                         h("span", { class: "hide-tablet" }, " for more"),
                       ]),
                     ]),
@@ -4882,7 +4882,7 @@ const us = {
                   h("div", { class: "cases-text" }, [
                     h("div", { class: "cases-more" }, [
                       h("div", { class: "u-ts-6 u-tc-caps u-text-accent1" }, [
-                        Z(" Contact us"),
+                        R(" Contact us"),
                         h("span", { class: "hide-tablet" }, " for more"),
                       ]),
                     ]),
@@ -4909,9 +4909,9 @@ const us = {
 var ws = je(us, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         const o = S("Footer");
-        return g(), b(x, null, [gs, bs, B(o, { class: "mobile-show" })], 64);
+        return g(), b(x, null, [gs, bs, A(o, { class: "mobile-show" })], 64);
       },
     ],
     ["__scopeId", "data-v-74f67db4"],
@@ -4931,18 +4931,18 @@ const ys = {
     layout: "layout-demo",
     setup() {
       const e = ua(),
-        { t: a, locale: s, setPrefix: t, change: i } = Fe();
+        { t: a, locale: s, setPrefix: t, change: l } = Fe();
       t({ $current: "pages.demo" });
-      const l = G(),
+      const i = G(),
         o = K("alert-service"),
-        r = me({ current: s.value || "zh-tw" });
+        n = me({ current: s.value || "zh-tw" });
       return (
         z(() => {}),
         {
           t: a,
-          lang: r,
+          lang: n,
           toHome: () => {
-            l.push("/home");
+            i.push("/home");
           },
           swalModal: () => {
             o.alert({
@@ -4951,8 +4951,8 @@ const ys = {
             });
           },
           changeLang: () => {
-            const e = "zh-tw" === r.current ? "en" : "zh-tw";
-            (r.current = e), i(e);
+            const e = "zh-tw" === n.current ? "en" : "zh-tw";
+            (n.current = e), l(e);
           },
           popupModal: async () => {
             await e.modal({ title: "popup", text: "this a popup" });
@@ -4965,23 +4965,23 @@ const ys = {
   xs = { class: "demo-head" },
   ks = { class: "switch" },
   js = h("input", { type: "checkbox", class: "cb" }, null, -1),
-  qs = [
+  Cs = [
     h("span", { class: "left" }, "CN", -1),
     h("span", { class: "right" }, "En", -1),
   ],
-  Cs = { class: "demo-head-content" },
+  qs = { class: "demo-head-content" },
   zs = { class: "demo-actions" },
   Ss = { class: "radio-inputs" },
   Os = h("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  Es = { class: "name" },
+  Ls = h("input", { type: "radio", name: "radio" }, null, -1),
   As = { class: "name" },
-  Es = h("input", { type: "radio", name: "radio" }, null, -1),
-  Bs = { class: "name" },
-  Ts = h("input", { type: "radio", name: "radio" }, null, -1),
-  Ls = { class: "name" };
-var Is = je(ys, [
+  Bs = h("input", { type: "radio", name: "radio" }, null, -1),
+  Ts = { class: "name" };
+var Ps = je(ys, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         return (
           g(),
           b("div", _s, [
@@ -4997,11 +4997,11 @@ var Is = je(ys, [
                         a[0] ||
                         (a[0] = (...e) => t.changeLang && t.changeLang(...e)),
                     },
-                    qs
+                    Cs
                   ),
                 ]),
               ]),
-              h("div", Cs, "lang:" + R(t.lang.current), 1),
+              h("div", qs, "lang:" + Y(t.lang.current), 1),
             ]),
             h("div", zs, [
               h("div", Ss, [
@@ -5012,7 +5012,7 @@ var Is = je(ys, [
                     onClick:
                       a[1] || (a[1] = (...e) => t.toHome && t.toHome(...e)),
                   },
-                  [Os, h("span", As, R(t.t("$current.router.link")), 1)]
+                  [Os, h("span", Es, Y(t.t("$current.router.link")), 1)]
                 ),
                 h(
                   "label",
@@ -5022,7 +5022,7 @@ var Is = je(ys, [
                       a[2] ||
                       (a[2] = (...e) => t.swalModal && t.swalModal(...e)),
                   },
-                  [Es, h("span", Bs, R(t.t("$current.modal.swal")), 1)]
+                  [Ls, h("span", As, Y(t.t("$current.modal.swal")), 1)]
                 ),
                 h(
                   "label",
@@ -5032,7 +5032,7 @@ var Is = je(ys, [
                       a[3] ||
                       (a[3] = (...e) => t.popupModal && t.popupModal(...e)),
                   },
-                  [Ts, h("span", Ls, R(t.t("$current.popup.use")), 1)]
+                  [Bs, h("span", Ts, Y(t.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -5045,22 +5045,22 @@ var Is = je(ys, [
       "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/demo.vue",
     ],
   ]),
-  Ps = Object.freeze(
+  Is = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Is },
+      { __proto__: null, default: Ps },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Ms = (e) =>
+const Ds = (e) =>
     new URL(
       { "../assets/video/home/tea_1.mp4": "./assets/tea_1.8e120b16.mp4" }[
         `../assets/video/${e}`
       ],
       self.location
     ).href,
-  Ds = {
-    components: { Footer: ls },
+  Ms = {
+    components: { Footer: is },
     setup() {
       const { t: e } = Fe();
       return (
@@ -5077,14 +5077,14 @@ const Ms = (e) =>
             e.observe(a);
           });
         }),
-        { t: e, getVideoUrl: Ms }
+        { t: e, getVideoUrl: Ds }
       );
     },
   },
   Fs = { "data-mouse-class": "cc-icon", class: "header cc-large" },
   Hs = { class: "header-image_wrap" },
   Us = { class: "header-image" },
-  Vs = { class: "iframe-video_wrapper" },
+  Xs = { class: "iframe-video_wrapper" },
   Ns = {
     class: "video-cover",
     width: "100%",
@@ -5094,14 +5094,14 @@ const Ms = (e) =>
     muted: "",
   },
   Gs = ["src"],
-  Xs = Z(" Your browser does not support the video tag. "),
-  Ws = h("div", { class: "iframe-video_blocker" }, null, -1),
-  Rs = ce(
+  Vs = R(" Your browser does not support the video tag. "),
+  Zs = h("div", { class: "iframe-video_blocker" }, null, -1),
+  Ys = ce(
     '<div class="header-content_wrapper"><div class="container"><div class="row"><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12"><div class="header-content_main"><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700"><h1 data-animation-element="title" class="h4"><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;"><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);"> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;"><div class="header-content_icon w-embed"><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black"></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger"></div>',
     2
   ),
-  Ys = h("div", { class: "spacing" }, null, -1),
-  Zs = h(
+  Ws = h("div", { class: "spacing" }, null, -1),
+  Rs = h(
     "div",
     { class: "container" },
     [h("div", { class: "target_line" })],
@@ -5934,7 +5934,7 @@ const Ms = (e) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
+                              R(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -6070,7 +6070,7 @@ const Ms = (e) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
+                              R(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -6212,7 +6212,7 @@ const Ms = (e) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
+                              R(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -6348,7 +6348,7 @@ const Ms = (e) =>
                             "div",
                             { class: "u-ts-6 u-tc-caps u-text-accent1" },
                             [
-                              Z(" Contact us"),
+                              R(" Contact us"),
                               h("span", { class: "hide-tablet" }, " for more"),
                             ]
                           ),
@@ -6376,8 +6376,8 @@ const Ms = (e) =>
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  it = { class: "iframe-video_wrapper" },
-  lt = {
+  lt = { class: "iframe-video_wrapper" },
+  it = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -6386,16 +6386,16 @@ const Ms = (e) =>
     muted: "",
   },
   ot = ["src"],
-  rt = Z(" Your browser does not support the video tag. "),
-  nt = h("div", { class: "iframe-video_blocker" }, null, -1),
+  nt = R(" Your browser does not support the video tag. "),
+  rt = h("div", { class: "iframe-video_blocker" }, null, -1),
   dt = ce(
     '<div class="pre-footer_gradient"></div><div class="marquee"><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="transform:translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;will-change:transform;"><div class="marquee_item cc-1 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-2 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div><div class="marquee_item cc-3 transparent" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;"><div class="h1">Design Trial </div></div></div></div><div class="pre-footer_button"><div class="btn cc-large-landscape"><div class="btn-text-wrap"><div class="btn-text cc-large-landscape">REad Next</div><div class="btn-text cc-bottom cc-large-landscape">Button</div></div></div></div>',
     3
   );
-var ct = je(Ds, [
+var ct = je(Ms, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         const o = S("Footer");
         return (
           g(),
@@ -6406,7 +6406,7 @@ var ct = je(Ds, [
               h("header", Fs, [
                 h("div", Hs, [
                   h("div", Us, [
-                    h("div", Vs, [
+                    h("div", Xs, [
                       h("video", Ns, [
                         h(
                           "source",
@@ -6418,16 +6418,16 @@ var ct = je(Ds, [
                           8,
                           Gs
                         ),
-                        Xs,
+                        Vs,
                       ]),
-                      Ws,
+                      Zs,
                     ]),
                   ]),
                 ]),
-                Rs,
+                Ys,
               ]),
-              Ys,
-              Zs,
+              Ws,
+              Rs,
               Ks,
               $s,
               Js,
@@ -6437,8 +6437,8 @@ var ct = je(Ds, [
               h("div", null, [
                 h("aside", st, [
                   h("a", tt, [
-                    h("div", it, [
-                      h("video", lt, [
+                    h("div", lt, [
+                      h("video", it, [
                         h(
                           "source",
                           {
@@ -6449,15 +6449,15 @@ var ct = je(Ds, [
                           8,
                           ot
                         ),
-                        rt,
+                        nt,
                       ]),
-                      nt,
+                      rt,
                     ]),
                     dt,
                   ]),
                 ]),
               ]),
-              B(o),
+              A(o),
             ],
             64
           )
@@ -6547,7 +6547,7 @@ var ut = je(
               left: "31%",
               top: "72%",
               m_right: "71%",
-              m_top: "73%",
+              m_top: "68%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 2s forwards",
               leaveAnimation: "fadeOut 1s forwards",
@@ -6615,7 +6615,7 @@ var ut = je(
               left: "70%",
               top: "-4%",
               m_right: "57%",
-              m_top: "17%",
+              m_top: "15%",
               transform: "translate3d(1px, 2px, 1px)",
               enterAnimation: "zoomIn 3.5s forwards",
               leaveAnimation: "fadeOut 1s forwards",
@@ -6656,8 +6656,8 @@ var ut = je(
             isEnter: !0,
           },
         ]),
-        i = j(!1),
-        l = {
+        l = j(!1),
+        i = {
           rootMargin: "0px",
           threshold: Array(100)
             .fill()
@@ -6666,26 +6666,26 @@ var ut = je(
         o = new IntersectionObserver((e) => {
           e.forEach((e) => {
             var a, s;
-            const { intersectionRatio: i, target: l } = e,
-              o = null == (a = l.dataset) ? void 0 : a.index;
-            if ("img" === (null == (s = l.dataset) ? void 0 : s.item))
-              t.value[o].isEnter = !(i < 0.2);
+            const { intersectionRatio: l, target: i } = e,
+              o = null == (a = i.dataset) ? void 0 : a.index;
+            if ("img" === (null == (s = i.dataset) ? void 0 : s.item))
+              t.value[o].isEnter = !(l < 0.2);
             else
-              l.style.animation =
-                i < 0.2 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
+              i.style.animation =
+                l < 0.2 ? "fadeOut 2s forwards" : "zoomIn 3.5s forwards";
           });
-        }, l),
-        r = () => {
+        }, i),
+        n = () => {
           const e = document.getElementById("studio");
           if (e) {
             const a = e.offsetTop;
             window.scrollTo({ top: a, behavior: "smooth" });
           }
         };
-      C(
+      q(
         () => a.state.app.isLoading,
         (e) => {
-          if (((i.value = !e), e)) {
+          if (((l.value = !e), e)) {
             ((e) => {
               for (const a of e) o.unobserve(a);
             })([
@@ -6703,9 +6703,9 @@ var ut = je(
             });
         }
       );
-      const n = j(!1),
+      const r = j(!1),
         d = () => {
-          n.value = window.innerWidth < 991;
+          r.value = window.innerWidth < 991;
         };
       return (
         z(() => {
@@ -6734,14 +6734,14 @@ var ut = je(
                       })(e)),
                 },
                 [
-                  i.value
+                  l.value
                     ? (g(),
                       b(
                         "div",
                         {
                           key: 0,
                           class: "view-wrap",
-                          style: W({
+                          style: Z({
                             transform: `translate3d(${2 * _(s).x}px, ${
                               _(s).y
                             }px, 0) rotateX(${-_(s).y / 2}deg) rotateY(${
@@ -6755,7 +6755,7 @@ var ut = je(
                           b(
                             x,
                             null,
-                            X(
+                            V(
                               t.value,
                               (e, a) => (
                                 g(),
@@ -6764,13 +6764,13 @@ var ut = je(
                                   {
                                     class: "img-wrap home-hero_image-placer",
                                     key: e.url + a,
-                                    style: W({
-                                      width: n.value ? e.css.m_width : "",
-                                      height: n.value ? e.css.m_height : "",
-                                      left: n.value ? "unset" : e.css.left,
-                                      right: n.value ? e.css.m_right : "unset",
-                                      top: n.value ? e.css.m_top : e.css.top,
-                                      transform: n.value ? e.css.transform : "",
+                                    style: Z({
+                                      width: r.value ? e.css.m_width : "",
+                                      height: r.value ? e.css.m_height : "",
+                                      left: r.value ? "unset" : e.css.left,
+                                      right: r.value ? e.css.m_right : "unset",
+                                      top: r.value ? e.css.m_top : e.css.top,
+                                      transform: r.value ? e.css.transform : "",
                                       animation: e.isEnter
                                         ? e.css.enterAnimation
                                         : e.css.leaveAnimation,
@@ -6783,11 +6783,11 @@ var ut = je(
                                       "img",
                                       {
                                         src: _(ke)(e.url),
-                                        style: W({
-                                          width: n.value
+                                        style: Z({
+                                          width: r.value
                                             ? e.css.m_width
                                             : e.css.width,
-                                          height: n.value
+                                          height: r.value
                                             ? e.css.m_height
                                             : e.css.height,
                                           transform: `translate3d(${
@@ -6818,7 +6818,7 @@ var ut = je(
                 h("div", { class: "btn-contain btn-contain-scroll" }, [
                   h(
                     "div",
-                    { class: "btn-scroll w-inline-block", onClick: r },
+                    { class: "btn-scroll w-inline-block", onClick: n },
                     ft
                   ),
                 ]),
@@ -7529,7 +7529,7 @@ const gt = { class: "marquee", "data-v-57509004": "" },
   ];
 const wt = {
   components: {
-    Footer: ls,
+    Footer: is,
     Marquee: je(
       { setup: (e) => (de.init(), (e, a) => (g(), b("div", gt, bt))) },
       [
@@ -7546,9 +7546,6 @@ const wt = {
       a = j("");
     return (
       z(() => {
-        document.querySelectorAll(".video-cover").forEach((e) => {
-          e.play();
-        });
         const e = new IntersectionObserver((e) => {
           e.forEach((e) => {
             e.isIntersecting
@@ -7562,7 +7559,7 @@ const wt = {
       }),
       {
         a: a,
-        getVideoUrl: Ms,
+        getVideoUrl: Ds,
         getImageUrl: ke,
         scrollPosition: (a) => {
           const s = document.querySelector(".apps_media-list"),
@@ -7570,6 +7567,12 @@ const wt = {
           e.value = !t;
         },
         hideHorizontalIcon: e,
+        scroll_Left: () => {
+          const e = document.querySelector(".apps_media-list");
+          e.style.scrollBehavior = "smooth";
+          const a = e.scrollWidth - e.clientWidth;
+          e.scrollLeft = a;
+        },
       }
     );
   },
@@ -7588,7 +7591,7 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
   jt = ht(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
-  qt = ht(() =>
+  Ct = ht(() =>
     h(
       "section",
       { class: "section" },
@@ -7664,7 +7667,7 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
                           transform: "translate(0px, 0%)",
                         },
                       },
-                      " (Skyart7325)開放每日一組預約。 "
+                      " Skyart7325開放每日一組預約。 "
                     ),
                   ]
                 ),
@@ -7975,7 +7978,7 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  Ct = ht(() =>
+  qt = ht(() =>
     h("div", { class: "container" }, [h("div", { class: "target_line" })], -1)
   ),
   zt = { class: "section" },
@@ -7984,17 +7987,17 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
     1
   ),
   Ot = { class: "container" },
-  At = { class: "w-layout-grid pair-grid" },
-  Et = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
-  Bt = { class: "service-list" },
-  Tt = { class: "logomark_component" },
-  Lt = {
+  Et = { class: "w-layout-grid pair-grid" },
+  Lt = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
+  At = { class: "service-list" },
+  Bt = { class: "logomark_component" },
+  Tt = {
     class: "logomark w-embed",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  It = ["src"],
-  Pt = ht(() =>
+  Pt = ["src"],
+  It = ht(() =>
     h(
       "ul",
       { role: "list", class: "u-mt-3-5" },
@@ -8104,18 +8107,18 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  Mt = ce(
+  Dt = ce(
     '<div class="btn-group" data-v-57509004><div class="btn-item cc-1" data-v-57509004><a href="/about" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>藝品介紹</div><div class="btn-text cc-bottom" data-v-57509004>藝品介紹</div></div></a></div></div>',
     1
   ),
-  Dt = { class: "section cc-apps" },
+  Mt = { class: "section cc-apps" },
   Ft = ce(
     '<div class="container" data-v-57509004><div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 館藏特約藝術家 </div></div></h3></div></div></div>',
     1
   ),
-  Ht = { "data-apps": "component", class: "apps_component" },
+  Ht = { "data-apps": "component", class: "apps_component mobile-show" },
   Ut = { class: "apps_media-wrapper" },
-  Vt = {
+  Xt = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
@@ -8128,14 +8131,14 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
     "data-aos-duration": "700",
     "data-aos-delay": "150",
   },
-  Xt = {
+  Vt = {
     "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
     class: "apps_asset cc-2 w-dyn-list",
   },
-  Wt = { role: "list", class: "w-dyn-items" },
-  Rt = { role: "listitem", class: "w-dyn-item" },
-  Yt = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
-  Zt = ["src"],
+  Zt = { role: "list", class: "w-dyn-items" },
+  Yt = { role: "listitem", class: "w-dyn-item" },
+  Wt = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
+  Rt = ["src"],
   Kt = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
@@ -8152,19 +8155,19 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
   },
   Jt = { role: "list", class: "w-dyn-items" },
   Qt = { role: "listitem", class: "w-dyn-item" },
-  ei = {
+  el = {
     "data-mouse-class": "cc-text",
     href: "/cases/seen-app",
     class: "apps_link w-inline-block",
   },
-  ai = ["src"],
-  si = {
+  al = ["src"],
+  sl = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "200",
   },
-  ti = {
+  tl = {
     "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
     class: "apps_asset cc-3 w-dyn-list",
     style: {
@@ -8172,17 +8175,16 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       "transform-style": "preserve-3d",
     },
   },
-  ii = { role: "list", class: "w-dyn-items" },
-  li = { role: "listitem", class: "w-dyn-item" },
-  oi = {
+  ll = { role: "list", class: "w-dyn-items" },
+  il = { role: "listitem", class: "w-dyn-item" },
+  ol = {
     "data-mouse-class": "cc-text",
     href: "/cases/seen-app",
     class: "apps_link w-inline-block",
   },
-  ri = ["src"],
-  ni = { class: "apps_scroll" },
-  di = { key: 0, class: "mobile-scroll_cta" },
-  ci = [
+  nl = ["src"],
+  rl = { class: "apps_scroll" },
+  dl = [
     ht(() =>
       h(
         "div",
@@ -8210,358 +8212,405 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       )
     ),
   ],
-  pi = { class: "section" },
-  vi = { class: "container" },
-  mi = ce(
-    '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> 拍賣中心 </div></div>\x3c!-- &lt;div\n              class=&quot;u-overflow-hidden&quot;\n              style=&quot;display: block; text-align: start; position: relative&quot;\n            &gt;\n              &lt;div\n                style=&quot;\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                &quot;\n              &gt;\n                Design\n              &lt;/div&gt;\n            &lt;/div&gt; --\x3e</h3></div></div>',
-    1
-  ),
-  fi = { class: "sticky-pair" },
-  ui = { class: "w-layout-grid pair-grid is-leading" },
-  gi = {
-    id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
-    class: "w-dyn-list",
-  },
-  bi = { role: "list", class: "w-dyn-items" },
-  wi = { role: "listitem", class: "w-dyn-item" },
-  hi = { class: "card-wrapper cc-large" },
-  yi = {
-    class: "card-animation cc-40",
-    "data-aos": "fade-up",
-    "data-aos-duration": "800",
-  },
-  _i = {
-    "data-mouse-class": "cc-text",
-    class: "card is-link w-inline-block",
-    style: {
-      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-      "transform-style": "preserve-3d",
-      opacity: "1",
-    },
-  },
-  xi = { class: "card-image_wrapper" },
-  ki = { class: "iframe-video_wrapper" },
-  ji = {
-    class: "video-cover",
-    width: "100%",
-    height: "100%",
-    autoplay: "",
-    loop: "",
-    muted: "",
-    playsinline: "",
-  },
-  qi = ["src"],
-  Ci = Z(" Your browser does not support the video tag. "),
-  zi = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Si = ce(
-    '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Skyart7325鑑賞中心</h4></div></div></div></div>',
-    1
-  ),
-  Oi = {
-    id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
-    class: "card-wrapper cc-small",
-  },
-  Ai = {
-    id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
-    class: "w-dyn-list",
-  },
-  Ei = { role: "list", class: "w-dyn-items" },
-  Bi = { role: "listitem", class: "w-dyn-item" },
-  Ti = { class: "card-wrapper cc-small" },
-  Li = {
-    class: "card-animation cc-40",
-    "data-aos": "fade-up",
-    "data-aos-duration": "800",
-  },
-  Ii = {
-    "data-mouse-class": "cc-text",
-    class: "card is-link w-inline-block",
-    style: {
-      transform: "translate3d(0px, 0%, 0px)",
-      "transform-style": "preserve-3d",
-      opacity: "1",
-    },
-  },
-  Pi = { class: "card-image_wrapper" },
-  Mi = { class: "iframe-video_wrapper" },
-  Di = {
-    class: "video-cover",
-    width: "100%",
-    height: "100%",
-    autoplay: "",
-    loop: "",
-    muted: "",
-    playsinline: "",
-  },
-  Fi = ["src"],
-  Hi = Z(" Your browser does not support the video tag. "),
-  Ui = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Vi = ht(() =>
-    h(
-      "div",
-      { class: "card-body" },
-      [
-        h("div", { class: "u-overflow-hidden" }, [
-          h(
-            "div",
-            {
-              class: "card-up",
-              style: {
-                transform: "translate3d(0px, 0%, 0px)",
-                "transform-style": "preserve-3d",
-              },
-            },
-            [h("h4", { class: "u-ts-4" }, "Sable App")]
-          ),
-        ]),
-      ],
-      -1
-    )
-  ),
-  Ni = ce(
-    '<div id="w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-v-57509004> Basis knows fintech. We’ve developed a strong focus on design for financial services, like mobile apps, bank brands, and credit card design. Our programs are optimized for startups, allowing Basis to start small, work fast, and keep you ahead of your roadmap. When the most innovative companies want to cut through a highly-regulated, ever-changing financial world, they come to the experts. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/fintech-design" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Fintech services</div><div class="btn-text cc-bottom" data-v-57509004>Fintech services</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>Design trial</div><div class="btn-text cc-bottom" data-v-57509004>Design trial</div></div></a></div></div></div>',
-    1
-  ),
-  Gi = { class: "section" },
-  Xi = { class: "container over-h" },
-  Wi = ce(
-    '<div class="row" data-v-57509004><div data-animation-element="group" class="col" data-v-57509004><h3 data-animation-element="title" class="h1" style="" data-aos="fade-up" data-aos-duration="1000" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Branding </div></div></h3></div></div>',
-    1
-  ),
-  Ri = { class: "sticky-pair" },
-  Yi = { class: "w-layout-grid pair-grid" },
-  Zi = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  Ki = {
-    id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
-    class: "card-wrapper cc-small",
-  },
-  $i = {
-    id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
-    class: "w-dyn-list",
-  },
-  Ji = { role: "list", class: "w-dyn-items" },
-  Qi = { role: "listitem", class: "w-dyn-item" },
-  el = { class: "card-wrapper cc-small" },
-  al = {
-    class: "card-animation cc-40",
-    "data-aos": "fade-up",
-    "data-aos-duration": "800",
-  },
-  sl = {
-    "data-mouse-class": "cc-text",
-    class: "card is-link w-inline-block",
-    style: {
-      transform: "translate3d(0px, 0%, 0px)",
-      "transform-style": "preserve-3d",
-      opacity: "1",
-    },
-  },
-  tl = { class: "card-image_wrapper" },
-  il = { class: "iframe-video_wrapper" },
-  ll = {
-    class: "video-cover",
-    width: "100%",
-    height: "100%",
-    autoplay: "",
-    loop: "",
-    muted: "",
-    playsinline: "",
-  },
-  ol = ["src"],
-  rl = Z(" Your browser does not support the video tag. "),
-  nl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  dl = ht(() =>
-    h(
-      "div",
-      { class: "card-body" },
-      [
-        h("div", { class: "u-overflow-hidden" }, [
-          h(
-            "div",
-            {
-              class: "card-up",
-              style: {
-                transform: "translate3d(0px, 0%, 0px)",
-                "transform-style": "preserve-3d",
-              },
-            },
-            [h("h4", { class: "u-ts-4" }, " Gaffa Brand & Website ")]
-          ),
-        ]),
-      ],
-      -1
-    )
-  ),
   cl = {
-    id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
-    class: "w-dyn-list",
+    "data-apps": "component",
+    class: "apps_component container mobile-hidden",
   },
-  pl = { role: "list", class: "w-dyn-items" },
-  vl = { role: "listitem", class: "w-dyn-item" },
-  ml = { class: "card-wrapper cc-large" },
-  fl = {
-    class: "card-animation cc-40",
+  pl = { class: "apps_media-wrapper" },
+  vl = {
+    class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
+    "data-aos-delay": "100",
+  },
+  ml = ["src"],
+  fl = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "150",
   },
   ul = {
-    "data-mouse-class": "cc-text",
-    class: "card is-link w-inline-block",
+    "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
+    class: "apps_asset cc-2 w-dyn-list",
+  },
+  gl = { role: "list", class: "w-dyn-items" },
+  bl = { role: "listitem", class: "w-dyn-item" },
+  wl = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
+  hl = ["src"],
+  yl = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  _l = {
+    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
+    class: "apps_asset cc-3 w-dyn-list",
     style: {
       transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
       "transform-style": "preserve-3d",
-      opacity: "1",
     },
   },
-  gl = { class: "card-image_wrapper" },
-  bl = { class: "iframe-video_wrapper" },
-  wl = {
-    class: "video-cover",
-    width: "100%",
-    height: "100%",
-    autoplay: "",
-    loop: "",
-    muted: "",
-    playsinline: "",
+  xl = { role: "list", class: "w-dyn-items" },
+  kl = { role: "listitem", class: "w-dyn-item" },
+  jl = {
+    "data-mouse-class": "cc-text",
+    href: "/cases/seen-app",
+    class: "apps_link w-inline-block",
   },
-  hl = ["src"],
-  yl = Z(" Your browser does not support the video tag. "),
-  _l = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  xl = ce(
-    '<div class="card-body" data-v-57509004><div class="u-overflow-hidden" data-v-57509004><div class="card-up" style="transform:translate3d(0px, 0%, 0px);transform-style:preserve-3d;" data-v-57509004><div class="card-large_text" data-v-57509004><h4 class="u-ts-4" data-v-57509004>Sable Brand</h4></div></div></div></div>',
-    1
-  ),
-  kl = ce(
-    '<div id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307" class="content is-grid" data-v-57509004><div class="content-p cc-1" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-57509004><p class="u-ts-3" data-aos="fade-up" data-aos-duration="800" data-v-57509004> Brand power: the multiple your customers will pay for your product, over that of your closest competition, because your name is on it. Basis drives brand power, because unlike other agencies that only focus on experience design or brand development, we seamlessly integrate both. When you start with Basis, we’ll build a brand book and product design kit that (finally) talk to each other. </p></div><div class="btn-group" data-v-57509004><div class="btn-item cc-1" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/cases" class="btn w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" data-v-57509004>View cases</div><div class="btn-text cc-bottom" data-v-57509004>View cases</div></div></a></div><div class="btn-item cc-2" style="opacity:1;transform:translate3d(0rem, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><a href="/design-trial" class="btn cc-secondary w-inline-block" data-aos="fade-left" data-aos-duration="1000" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div><div class="btn-text cc-bottom" style="transform:translate3d(0%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004> Design trial </div></div></a></div></div></div>',
-    1
-  ),
-  jl = ce(
-    '<div class="container" data-v-57509004><div class="target_line" data-v-57509004></div></div><section class="section" data-v-57509004><div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>Contact Us</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-57509004><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-57509004><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004><div style="position:relative;display:inline-block;" data-v-57509004> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
-    2
-  ),
-  ql = { class: "pre-footer" },
-  Cl = ht(() =>
+  Cl = ["src"],
+  ql = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  zl = {
+    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
+    class: "apps_asset cc-3 w-dyn-list",
+    style: {
+      transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
+      "transform-style": "preserve-3d",
+    },
+  },
+  Sl = { role: "list", class: "w-dyn-items" },
+  Ol = { role: "listitem", class: "w-dyn-item" },
+  El = {
+    "data-mouse-class": "cc-text",
+    href: "/cases/seen-app",
+    class: "apps_link w-inline-block",
+  },
+  Ll = ["src"],
+  Al = { class: "apps_scroll" },
+  Bl = [
+    ht(() =>
+      h(
+        "div",
+        { class: "mobile-scroll_icon w-embed" },
+        [
+          h(
+            "svg",
+            {
+              width: "100%",
+              style: {},
+              viewBox: "0 0 24 24",
+              fill: "currentColor",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            [
+              h("path", {
+                d:
+                  "M2.66406 11.4786C2.66406 11.1893 2.88792 10.9547 3.16406 10.9547L19.3341 10.9547L14.8841 6.30185C14.7894 6.20346 14.7362 6.06954 14.7362 5.92983C14.7362 5.79012 14.7894 5.6562 14.8841 5.55781L15.5941 4.82426C15.6879 4.72507 15.8157 4.66927 15.9491 4.66927C16.0824 4.66927 16.2102 4.72507 16.3041 4.82426L22.4441 11.2481C22.5848 11.3953 22.6639 11.5951 22.6641 11.8035L22.6641 12.2017C22.6618 12.4096 22.5829 12.6086 22.4441 12.7571L16.3041 19.1809C16.2102 19.2801 16.0824 19.3359 15.9491 19.3359C15.8157 19.3359 15.6879 19.2801 15.5941 19.1809L14.8841 18.4369C14.79 18.3403 14.737 18.2081 14.737 18.0701C14.737 17.9321 14.79 17.7999 14.8841 17.7034L19.3341 13.0505L3.16406 13.0505C2.88792 13.0505 2.66406 12.816 2.66406 12.5266L2.66406 11.4786Z",
+                fill: "currentColor",
+              }),
+            ]
+          ),
+        ],
+        -1
+      )
+    ),
+  ],
+  Tl = ht(() =>
     h(
-      "div",
-      {
-        "data-mouse-text": "Read Next",
-        "data-mouse-class": "cc-text",
-        class: "section cc-pre-footer w-inline-block",
-      },
+      "section",
+      { class: "section" },
       [
-        h("div", { class: "iframe-video_wrapper" }, [
-          h("iframe", {
-            src:
-              "https://app.vidzflow.com/v/RLLcIipF9Q?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
-            frameborder: "0",
-            width: "100%",
-            height: "100%",
-          }),
-          h("div", { class: "iframe-video_blocker" }),
-        ]),
-        h("div", { class: "pre-footer_gradient" }),
-        h("div", { class: "marquee" }, [
-          h(
-            "div",
-            {
-              class: "marquee_content cc-text transparent",
-              style: {
-                "will-change": "transform",
-                transform: "translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)",
-                "transform-style": "preserve-3d",
-              },
-            },
-            [
+        h("div", { class: "container" }, [
+          h("div", { class: "row" }, [
+            h("div", { "data-animation-element": "group", class: "col" }, [
+              h(
+                "h3",
+                {
+                  "data-animation-element": "title",
+                  class: "h1",
+                  style: {},
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "700",
+                },
+                [
+                  h(
+                    "div",
+                    {
+                      class: "u-overflow-hidden",
+                      style: {
+                        display: "block",
+                        "text-align": "start",
+                        position: "relative",
+                      },
+                    },
+                    [
+                      h(
+                        "div",
+                        {
+                          style: {
+                            position: "relative",
+                            display: "inline-block",
+                            translate: "none",
+                            rotate: "none",
+                            scale: "none",
+                            transform: "translate(0px, 0%)",
+                          },
+                        },
+                        " 拍賣中心 "
+                      ),
+                    ]
+                  ),
+                  w(
+                    ' <div\n              class="u-overflow-hidden"\n              style="display: block; text-align: start; position: relative"\n            >\n              <div\n                style="\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                "\n              >\n                Design\n              </div>\n            </div> '
+                  ),
+                ]
+              ),
+            ]),
+          ]),
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid is-leading" }, [
               h(
                 "div",
                 {
-                  class: "marquee_item cc-1",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
+                  id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
+                  class: "w-dyn-list",
                 },
-                [h("div", { class: "h1" }, "Case Studies ")]
+                [
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h(
+                          "div",
+                          {
+                            class: "card-animation cc-40",
+                            "data-aos": "fade-up",
+                            "data-aos-duration": "800",
+                          },
+                          [
+                            h(
+                              "div",
+                              {
+                                "data-mouse-class": "cc-text",
+                                class: "card is-link w-inline-block",
+                              },
+                              [
+                                h("div", { class: "card-image_wrapper" }, [
+                                  h("div", { class: "iframe-video_wrapper" }, [
+                                    h(
+                                      "div",
+                                      {
+                                        "data-video-id": "7101",
+                                        style: {
+                                          "aspect-ratio": "1.77777778",
+                                          overflow: "hidden",
+                                        },
+                                      },
+                                      [
+                                        h("iframe", {
+                                          width: "100%",
+                                          height: "100%",
+                                          src:
+                                            "https://app.vidzflow.com/v/gCj1S7rvrC?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                          title: "C0070",
+                                          style: {
+                                            "aspect-ratio": "1.77777778",
+                                            overflow: "hidden",
+                                          },
+                                          frameborder: "0",
+                                          scrolling: "no",
+                                          allow: "fullscreen",
+                                        }),
+                                      ]
+                                    ),
+                                    h("div", { class: "iframe-video_blocker" }),
+                                  ]),
+                                ]),
+                                h("div", { class: "card-body" }, [
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h("div", { class: "card-up" }, [
+                                      h("div", { class: "card-large_text" }, [
+                                        h(
+                                          "h4",
+                                          { class: "u-ts-4" },
+                                          "深雲迷石茶席"
+                                        ),
+                                      ]),
+                                    ]),
+                                  ]),
+                                ]),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]
               ),
+              h("div", null, [
+                h(
+                  "div",
+                  {
+                    id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
+                    class: "card-wrapper cc-small",
+                  },
+                  [
+                    h(
+                      "div",
+                      {
+                        id:
+                          "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
+                        class: "w-dyn-list",
+                      },
+                      [
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h("div", { class: "card-wrapper cc-small" }, [
+                              h(
+                                "div",
+                                {
+                                  class: "card-animation cc-40",
+                                  "data-aos": "fade-up",
+                                  "data-aos-duration": "800",
+                                },
+                                [
+                                  h(
+                                    "div",
+                                    {
+                                      "data-mouse-class": "cc-text",
+                                      class: "card is-link w-inline-block",
+                                    },
+                                    [
+                                      h(
+                                        "div",
+                                        { class: "card-image_wrapper" },
+                                        [
+                                          h(
+                                            "div",
+                                            { class: "iframe-video_wrapper" },
+                                            [
+                                              h(
+                                                "div",
+                                                {
+                                                  "data-video-id": "7100",
+                                                  style: {
+                                                    "aspect-ratio":
+                                                      "1.77777778",
+                                                    overflow: "hidden",
+                                                  },
+                                                },
+                                                [
+                                                  h("iframe", {
+                                                    width: "100%",
+                                                    height: "100%",
+                                                    src:
+                                                      "https://app.vidzflow.com/v/ld8707EM7f?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                                    title: "C0071",
+                                                    style: {
+                                                      "aspect-ratio":
+                                                        "1.77777778",
+                                                      overflow: "hidden",
+                                                    },
+                                                    frameborder: "0",
+                                                    scrolling: "no",
+                                                    allow: "fullscreen",
+                                                  }),
+                                                ]
+                                              ),
+                                              h("div", {
+                                                class: "iframe-video_blocker",
+                                              }),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      h("div", { class: "card-body" }, [
+                                        h(
+                                          "div",
+                                          { class: "u-overflow-hidden" },
+                                          [
+                                            h("div", { class: "card-up" }, [
+                                              h(
+                                                "h4",
+                                                { class: "u-ts-4" },
+                                                "2-7人"
+                                              ),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                  ]
+                ),
+              ]),
               h(
                 "div",
                 {
-                  class: "marquee_item cc-2",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
+                  id: "w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307",
+                  class: "content is-grid",
                 },
-                [h("div", { class: "h1" }, "Case Studies ")]
-              ),
-              h(
-                "div",
-                {
-                  class: "marquee_item cc-3",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [h("div", { class: "h1" }, "Case Studies ")]
-              ),
-            ]
-          ),
-          h(
-            "div",
-            {
-              class: "marquee_content cc-text transparent",
-              style: {
-                "will-change": "transform",
-                transform: "translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)",
-                "transform-style": "preserve-3d",
-              },
-            },
-            [
-              h(
-                "div",
-                {
-                  class: "marquee_item cc-1",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [h("div", { class: "h1" }, "Case Studies ")]
-              ),
-              h(
-                "div",
-                {
-                  class: "marquee_item cc-2",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [h("div", { class: "h1" }, "Case Studies ")]
-              ),
-              h(
-                "div",
-                {
-                  class: "marquee_item cc-3",
-                  style: {
-                    transform: "translate3d(0px, 0%, 0px) scale3d(1, 1, 1)",
-                    "transform-style": "preserve-3d",
-                  },
-                },
-                [h("div", { class: "h1" }, "Case Studies ")]
-              ),
-            ]
-          ),
-        ]),
-        h("div", { class: "pre-footer_button" }, [
-          h("div", { class: "btn cc-large-landscape" }, [
-            h("div", { class: "btn-text-wrap" }, [
-              h("div", { class: "btn-text cc-large-landscape" }, "REad Next"),
-              h(
-                "div",
-                { class: "btn-text cc-bottom cc-large-landscape" },
-                "Button"
+                [
+                  h("div", { class: "content-p cc-1" }, [
+                    h(
+                      "p",
+                      {
+                        class: "u-ts-3",
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "700",
+                        "data-aos-delay": "200",
+                      },
+                      " 全一體玉石材打磨茶席區 檀木櫃體工學皮椅 老件禪師座 鋪開花語道品絕品茶賞 湄洲媽祖聖像對飲 "
+                    ),
+                  ]),
+                  h("div", { class: "btn-group" }, [
+                    h("div", { class: "btn-item cc-1" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/fintech-design",
+                          class: "btn w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "立即預約"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "立即預約"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    h("div", { class: "btn-item cc-2" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/design-trial",
+                          class: "btn cc-secondary w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "了解更多"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "了解更多"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]
               ),
             ]),
           ]),
@@ -8570,13 +8619,867 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
       -1
     )
   ),
-  zl = {
+  Pl = ht(() =>
+    h(
+      "section",
+      { class: "section" },
+      [
+        h("div", { class: "container over-h" }, [
+          h("div", { class: "row" }, [
+            w(
+              ' <div data-animation-element="group" class="col">\n          <h3\n            data-animation-element="title"\n            class="h1"\n            style=""\n            data-aos="fade-up"\n            data-aos-duration="1000"\n          >\n            <div\n              class="u-overflow-hidden"\n              style="display: block; text-align: start; position: relative"\n            >\n              <div\n                style="\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                "\n              >\n                Branding\n              </div>\n            </div>\n          </h3>\n        </div> '
+            ),
+          ]),
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid" }, [
+              h(
+                "div",
+                { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+                [
+                  h(
+                    "div",
+                    {
+                      id:
+                        "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
+                      class: "card-wrapper cc-small",
+                    },
+                    [
+                      h(
+                        "div",
+                        {
+                          id:
+                            "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
+                          class: "w-dyn-list",
+                        },
+                        [
+                          h("div", { role: "list", class: "w-dyn-items" }, [
+                            h(
+                              "div",
+                              { role: "listitem", class: "w-dyn-item" },
+                              [
+                                h("div", { class: "card-wrapper cc-small" }, [
+                                  h(
+                                    "div",
+                                    {
+                                      class: "card-animation cc-40",
+                                      "data-aos": "fade-up",
+                                      "data-aos-duration": "800",
+                                    },
+                                    [
+                                      h(
+                                        "div",
+                                        {
+                                          "data-mouse-class": "cc-text",
+                                          class: "card is-link w-inline-block",
+                                        },
+                                        [
+                                          h(
+                                            "div",
+                                            { class: "card-image_wrapper" },
+                                            [
+                                              h(
+                                                "div",
+                                                {
+                                                  class: "iframe-video_wrapper",
+                                                },
+                                                [
+                                                  h(
+                                                    "div",
+                                                    {
+                                                      "data-video-id": "7103",
+                                                      style: {
+                                                        "aspect-ratio":
+                                                          "1.77777778",
+                                                        overflow: "hidden",
+                                                      },
+                                                    },
+                                                    [
+                                                      h("iframe", {
+                                                        width: "100%",
+                                                        height: "100%",
+                                                        src:
+                                                          "https://app.vidzflow.com/v/rkw2Z8iv8P?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                                        title: "C0049",
+                                                        style: {
+                                                          "aspect-ratio":
+                                                            "1.77777778",
+                                                          overflow: "hidden",
+                                                        },
+                                                        frameborder: "0",
+                                                        scrolling: "no",
+                                                        allow: "fullscreen",
+                                                      }),
+                                                    ]
+                                                  ),
+                                                  h("div", {
+                                                    class:
+                                                      "iframe-video_blocker",
+                                                  }),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
+                                          h("div", { class: "card-body" }, [
+                                            h(
+                                              "div",
+                                              { class: "u-overflow-hidden" },
+                                              [
+                                                h("div", { class: "card-up" }, [
+                                                  h(
+                                                    "h4",
+                                                    { class: "u-ts-4" },
+                                                    "4-6人"
+                                                  ),
+                                                ]),
+                                              ]
+                                            ),
+                                          ]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              h(
+                "div",
+                {
+                  id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
+                  class: "w-dyn-list",
+                },
+                [
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h(
+                          "div",
+                          {
+                            class: "card-animation cc-40",
+                            "data-aos": "fade-up",
+                            "data-aos-duration": "700",
+                          },
+                          [
+                            h(
+                              "div",
+                              {
+                                "data-mouse-class": "cc-text",
+                                class: "card is-link w-inline-block",
+                              },
+                              [
+                                h("div", { class: "card-image_wrapper" }, [
+                                  h("div", { class: "iframe-video_wrapper" }, [
+                                    h(
+                                      "div",
+                                      {
+                                        "data-video-id": "7102",
+                                        style: {
+                                          "aspect-ratio": "1.77777778",
+                                          overflow: "hidden",
+                                        },
+                                      },
+                                      [
+                                        h("iframe", {
+                                          width: "100%",
+                                          height: "100%",
+                                          src:
+                                            "https://app.vidzflow.com/v/OA5cciSPdp?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                          title: "C0003",
+                                          style: {
+                                            "aspect-ratio": "1.77777778",
+                                            overflow: "hidden",
+                                          },
+                                          frameborder: "0",
+                                          scrolling: "no",
+                                          allow: "fullscreen",
+                                        }),
+                                      ]
+                                    ),
+                                    h("div", { class: "iframe-video_blocker" }),
+                                  ]),
+                                ]),
+                                h("div", { class: "card-body" }, [
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h("div", { class: "card-up" }, [
+                                      h("div", { class: "card-large_text" }, [
+                                        h(
+                                          "h4",
+                                          { class: "u-ts-4" },
+                                          "凌空暇思茶席"
+                                        ),
+                                      ]),
+                                    ]),
+                                  ]),
+                                ]),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]
+              ),
+              h(
+                "div",
+                {
+                  id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307",
+                  class: "content is-grid",
+                },
+                [
+                  h("div", { class: "content-p cc-1" }, [
+                    h(
+                      "p",
+                      {
+                        class: "u-ts-3",
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "800",
+                      },
+                      " 寬面開闊原石桌 讀花掬茶布置餐酒多變間 原木藝品書畫櫃 單體歐廚水槽 "
+                    ),
+                  ]),
+                  h("div", { class: "btn-group" }, [
+                    h("div", { class: "btn-item cc-1" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/cases",
+                          class: "btn w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "立即預約"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "立即預約"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    h("div", { class: "btn-item cc-2" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/design-trial",
+                          class: "btn cc-secondary w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "了解更多"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "了解更多"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+          ]),
+        ]),
+      ],
+      -1
+    )
+  ),
+  Il = ht(() =>
+    h(
+      "section",
+      { class: "section" },
+      [
+        h("div", { class: "container over-h" }, [
+          h("div", { class: "row" }, [
+            w(
+              ' <div data-animation-element="group" class="col">\n          <h3\n            data-animation-element="title"\n            class="h1"\n            style=""\n            data-aos="fade-up"\n            data-aos-duration="1000"\n          >\n            <div\n              class="u-overflow-hidden"\n              style="display: block; text-align: start; position: relative"\n            >\n              <div\n                style="\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                "\n              >\n                Branding\n              </div>\n            </div>\n          </h3>\n        </div> '
+            ),
+          ]),
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid is-leading" }, [
+              h(
+                "div",
+                {
+                  id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
+                  class: "w-dyn-list",
+                },
+                [
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h(
+                          "div",
+                          {
+                            class: "card-animation cc-40",
+                            "data-aos": "fade-up",
+                            "data-aos-duration": "800",
+                          },
+                          [
+                            h(
+                              "div",
+                              {
+                                "data-mouse-class": "cc-text",
+                                class: "card is-link w-inline-block",
+                              },
+                              [
+                                h("div", { class: "card-image_wrapper" }, [
+                                  h("div", { class: "iframe-video_wrapper" }, [
+                                    h(
+                                      "div",
+                                      {
+                                        "data-video-id": "7104",
+                                        style: {
+                                          "aspect-ratio": "1.77777778",
+                                          overflow: "hidden",
+                                        },
+                                      },
+                                      [
+                                        h("iframe", {
+                                          width: "100%",
+                                          height: "100%",
+                                          src:
+                                            "https://app.vidzflow.com/v/2wmcwBoGu3?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                          title: "C0082",
+                                          style: {
+                                            "aspect-ratio": "1.77777778",
+                                            overflow: "hidden",
+                                          },
+                                          frameborder: "0",
+                                          scrolling: "no",
+                                          allow: "fullscreen",
+                                        }),
+                                      ]
+                                    ),
+                                    h("div", { class: "iframe-video_blocker" }),
+                                  ]),
+                                ]),
+                                h("div", { class: "card-body" }, [
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h("div", { class: "card-up" }, [
+                                      h("div", { class: "card-large_text" }, [
+                                        h(
+                                          "h4",
+                                          { class: "u-ts-4" },
+                                          "名畫酒廊劇院區"
+                                        ),
+                                      ]),
+                                    ]),
+                                  ]),
+                                ]),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]
+              ),
+              h("div", null, [
+                h(
+                  "div",
+                  {
+                    id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
+                    class: "card-wrapper cc-small",
+                  },
+                  [
+                    h(
+                      "div",
+                      {
+                        id:
+                          "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
+                        class: "w-dyn-list",
+                      },
+                      [
+                        h("div", { role: "list", class: "w-dyn-items" }, [
+                          h("div", { role: "listitem", class: "w-dyn-item" }, [
+                            h("div", { class: "card-wrapper cc-small" }, [
+                              h(
+                                "div",
+                                {
+                                  class: "card-animation cc-40",
+                                  "data-aos": "fade-up",
+                                  "data-aos-duration": "800",
+                                },
+                                [
+                                  h(
+                                    "div",
+                                    {
+                                      "data-mouse-class": "cc-text",
+                                      class: "card is-link w-inline-block",
+                                    },
+                                    [
+                                      h(
+                                        "div",
+                                        { class: "card-image_wrapper" },
+                                        [
+                                          h(
+                                            "div",
+                                            { class: "iframe-video_wrapper" },
+                                            [
+                                              h(
+                                                "div",
+                                                {
+                                                  "data-video-id": "7105",
+                                                  style: {
+                                                    "aspect-ratio":
+                                                      "1.77777778",
+                                                    overflow: "hidden",
+                                                  },
+                                                },
+                                                [
+                                                  h("iframe", {
+                                                    width: "100%",
+                                                    height: "100%",
+                                                    src:
+                                                      "https://app.vidzflow.com/v/ZExuVY2X0e?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                                    title: "C0084",
+                                                    style: {
+                                                      "aspect-ratio":
+                                                        "1.77777778",
+                                                      overflow: "hidden",
+                                                    },
+                                                    frameborder: "0",
+                                                    scrolling: "no",
+                                                    allow: "fullscreen",
+                                                  }),
+                                                ]
+                                              ),
+                                              h("div", {
+                                                class: "iframe-video_blocker",
+                                              }),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      h("div", { class: "card-body" }, [
+                                        h(
+                                          "div",
+                                          { class: "u-overflow-hidden" },
+                                          [
+                                            h("div", { class: "card-up" }, [
+                                              h(
+                                                "h4",
+                                                { class: "u-ts-4" },
+                                                "6-20人"
+                                              ),
+                                            ]),
+                                          ]
+                                        ),
+                                      ]),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                  ]
+                ),
+              ]),
+              h(
+                "div",
+                {
+                  id: "w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307",
+                  class: "content is-grid",
+                },
+                [
+                  h("div", { class: "content-p cc-1" }, [
+                    h(
+                      "p",
+                      {
+                        class: "u-ts-3",
+                        "data-aos": "fade-up",
+                        "data-aos-duration": "700",
+                        "data-aos-delay": "200",
+                      },
+                      " 102吋BOSE頂規視聽組 會議開幕團體大展迎賓 餐席印鑑長軸藏品合圍 私廚配備迴廊備餐區 6-20人 "
+                    ),
+                  ]),
+                  h("div", { class: "btn-group" }, [
+                    h("div", { class: "btn-item cc-1" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/fintech-design",
+                          class: "btn w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "立即預約"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "立即預約"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    h("div", { class: "btn-item cc-2" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/design-trial",
+                          class: "btn cc-secondary w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "了解更多"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "了解更多"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+          ]),
+        ]),
+      ],
+      -1
+    )
+  ),
+  Dl = ht(() =>
+    h(
+      "section",
+      { class: "section" },
+      [
+        h("div", { class: "container over-h" }, [
+          h("div", { class: "row" }, [
+            w(
+              ' <div data-animation-element="group" class="col">\n          <h3\n            data-animation-element="title"\n            class="h1"\n            style=""\n            data-aos="fade-up"\n            data-aos-duration="1000"\n          >\n            <div\n              class="u-overflow-hidden"\n              style="display: block; text-align: start; position: relative"\n            >\n              <div\n                style="\n                  position: relative;\n                  display: inline-block;\n                  translate: none;\n                  rotate: none;\n                  scale: none;\n                  transform: translate(0px, 0%);\n                "\n              >\n                Branding\n              </div>\n            </div>\n          </h3>\n        </div> '
+            ),
+          ]),
+          h("div", { class: "sticky-pair" }, [
+            h("div", { class: "w-layout-grid pair-grid" }, [
+              h(
+                "div",
+                { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+                [
+                  h(
+                    "div",
+                    {
+                      id:
+                        "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
+                      class: "card-wrapper cc-small",
+                    },
+                    [
+                      h(
+                        "div",
+                        {
+                          id:
+                            "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
+                          class: "w-dyn-list",
+                        },
+                        [
+                          h("div", { role: "list", class: "w-dyn-items" }, [
+                            h(
+                              "div",
+                              { role: "listitem", class: "w-dyn-item" },
+                              [
+                                h("div", { class: "card-wrapper cc-small" }, [
+                                  h(
+                                    "div",
+                                    {
+                                      class: "card-animation cc-40",
+                                      "data-aos": "fade-up",
+                                      "data-aos-duration": "800",
+                                    },
+                                    [
+                                      h(
+                                        "div",
+                                        {
+                                          "data-mouse-class": "cc-text",
+                                          class: "card is-link w-inline-block",
+                                        },
+                                        [
+                                          h(
+                                            "div",
+                                            { class: "card-image_wrapper" },
+                                            [
+                                              h(
+                                                "div",
+                                                {
+                                                  class: "iframe-video_wrapper",
+                                                },
+                                                [
+                                                  h(
+                                                    "div",
+                                                    {
+                                                      "data-video-id": "7103",
+                                                      style: {
+                                                        "aspect-ratio": "null",
+                                                        overflow: "hidden",
+                                                      },
+                                                    },
+                                                    [
+                                                      h(
+                                                        "div",
+                                                        {
+                                                          "data-video-id":
+                                                            "7103",
+                                                          style: {
+                                                            "aspect-ratio":
+                                                              "1.77777778",
+                                                            overflow: "hidden",
+                                                          },
+                                                        },
+                                                        [
+                                                          h("iframe", {
+                                                            width: "100%",
+                                                            height: "100%",
+                                                            src:
+                                                              "https://app.vidzflow.com/v/rkw2Z8iv8P?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                                            title: "C0049",
+                                                            style: {
+                                                              "aspect-ratio":
+                                                                "1.77777778",
+                                                              overflow:
+                                                                "hidden",
+                                                            },
+                                                            frameborder: "0",
+                                                            scrolling: "no",
+                                                            allow: "fullscreen",
+                                                          }),
+                                                        ]
+                                                      ),
+                                                    ]
+                                                  ),
+                                                  h("div", {
+                                                    class:
+                                                      "iframe-video_blocker",
+                                                  }),
+                                                ]
+                                              ),
+                                            ]
+                                          ),
+                                          h("div", { class: "card-body" }, [
+                                            h(
+                                              "div",
+                                              { class: "u-overflow-hidden" },
+                                              [
+                                                h("div", { class: "card-up" }, [
+                                                  h(
+                                                    "h4",
+                                                    { class: "u-ts-4" },
+                                                    "6-10人"
+                                                  ),
+                                                ]),
+                                              ]
+                                            ),
+                                          ]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+              h(
+                "div",
+                {
+                  id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
+                  class: "w-dyn-list",
+                },
+                [
+                  h("div", { role: "list", class: "w-dyn-items" }, [
+                    h("div", { role: "listitem", class: "w-dyn-item" }, [
+                      h("div", { class: "card-wrapper cc-large" }, [
+                        h(
+                          "div",
+                          {
+                            class: "card-animation cc-40",
+                            "data-aos": "fade-up",
+                            "data-aos-duration": "700",
+                          },
+                          [
+                            h(
+                              "div",
+                              {
+                                "data-mouse-class": "cc-text",
+                                class: "card is-link w-inline-block",
+                              },
+                              [
+                                h("div", { class: "card-image_wrapper" }, [
+                                  h("div", { class: "iframe-video_wrapper" }, [
+                                    h(
+                                      "div",
+                                      {
+                                        "data-video-id": "7102",
+                                        style: {
+                                          "aspect-ratio": "1.77777778",
+                                          overflow: "hidden",
+                                        },
+                                      },
+                                      [
+                                        h("iframe", {
+                                          width: "100%",
+                                          height: "100%",
+                                          src:
+                                            "https://app.vidzflow.com/v/OA5cciSPdp?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen",
+                                          title: "C0003",
+                                          style: {
+                                            "aspect-ratio": "1.77777778",
+                                            overflow: "hidden",
+                                          },
+                                          frameborder: "0",
+                                          scrolling: "no",
+                                          allow: "fullscreen",
+                                        }),
+                                      ]
+                                    ),
+                                    h("div", { class: "iframe-video_blocker" }),
+                                  ]),
+                                ]),
+                                h("div", { class: "card-body" }, [
+                                  h("div", { class: "u-overflow-hidden" }, [
+                                    h("div", { class: "card-up" }, [
+                                      h("div", { class: "card-large_text" }, [
+                                        h(
+                                          "h4",
+                                          { class: "u-ts-4" },
+                                          "大佛菩提廳"
+                                        ),
+                                      ]),
+                                    ]),
+                                  ]),
+                                ]),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]
+              ),
+              h(
+                "div",
+                {
+                  id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307",
+                  class: "content is-grid",
+                },
+                [
+                  h(
+                    "div",
+                    {
+                      class: "content-p cc-1",
+                      style: {
+                        transform:
+                          "translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)",
+                        "transform-style": "preserve-3d",
+                        opacity: "1",
+                      },
+                    },
+                    [
+                      h(
+                        "p",
+                        {
+                          class: "u-ts-3",
+                          "data-aos": "fade-up",
+                          "data-aos-duration": "800",
+                        },
+                        " 名檜檀香大茶席 清宮唐漢當代藝術風格揉和 冠軍藏茶名件庫 童趣寰宇天馬櫃 "
+                      ),
+                    ]
+                  ),
+                  h("div", { class: "btn-group" }, [
+                    h("div", { class: "btn-item cc-1" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/cases",
+                          class: "btn w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "立即預約"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "立即預約"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                    h("div", { class: "btn-item cc-2" }, [
+                      h(
+                        "a",
+                        {
+                          href: "/design-trial",
+                          class: "btn cc-secondary w-inline-block",
+                          "data-aos": "fade-left",
+                          "data-aos-duration": "1000",
+                        },
+                        [
+                          h("div", { class: "btn-text-wrap" }, [
+                            h("div", { class: "btn-text" }, "了解更多"),
+                            h(
+                              "div",
+                              { class: "btn-text cc-bottom" },
+                              "了解更多"
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                  ]),
+                ]
+              ),
+            ]),
+          ]),
+        ]),
+      ],
+      -1
+    )
+  ),
+  Ml = ce(
+    '<div class="container" data-v-57509004><div class="target_line" data-v-57509004></div></div><section class="section" data-v-57509004><div class="section-title_component" data-v-57509004><div class="container" data-v-57509004><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="section-title_dot" style="opacity:1;" data-v-57509004></div><div class="u-overflow-hidden" data-v-57509004><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><h2 class="u-ts-4" data-v-57509004>Contact Us</h2></div></div></div></div></div><div class="container" data-v-57509004><div class="w-layout-grid pair-grid" data-v-57509004><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-57509004><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-57509004><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-57509004><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-57509004><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-57509004><div style="position:relative;display:inline-block;" data-v-57509004> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
+    2
+  ),
+  Fl = { class: "pre-footer" },
+  Hl = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  Sl = { class: "iframe-video_wrapper" },
-  Ol = {
+  Ul = { class: "iframe-video_wrapper" },
+  Xl = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -8585,43 +9488,43 @@ const ht = (e) => (pe("data-v-57509004"), (e = e()), ve(), e),
     muted: "",
     playsinline: "",
   },
-  Al = ["src"],
-  El = Z(" Your browser does not support the video tag. "),
-  Bl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
-  Tl = ce(
+  Nl = ["src"],
+  Gl = R(" Your browser does not support the video tag. "),
+  Vl = ht(() => h("div", { class: "iframe-video_blocker" }, null, -1)),
+  Zl = ce(
     '<div class="pre-footer_gradient" data-v-57509004></div><div class="marquee" data-v-57509004><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div><div class="marquee_content cc-text transparent" style="will-change:transform;transform:translate3d(-69%, 0px, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="marquee_item cc-1" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-2" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div><div class="marquee_item cc-3" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-57509004><div class="h1" data-v-57509004>Design Trial </div></div></div></div><div class="pre-footer_button" data-v-57509004><div class="btn cc-large-landscape" data-v-57509004><div class="btn-text-wrap" data-v-57509004><div class="btn-text cc-large-landscape" data-v-57509004>REad Next</div><div class="btn-text cc-bottom cc-large-landscape" data-v-57509004>Button</div></div></div></div>',
     3
   );
-var Ll = je(wt, [
+var Yl = je(wt, [
     [
       "render",
-      function (e, a, s, t, i, l) {
+      function (e, a, s, t, l, i) {
         const o = S("View"),
-          r = S("Marquee"),
-          n = S("Footer");
+          n = S("Marquee"),
+          r = S("Footer");
         return (
           g(),
           b(
             x,
             null,
             [
-              B(o),
+              A(o),
               w(" ------ "),
               yt,
-              h("section", _t, [xt, h("div", kt, [B(r)])]),
+              h("section", _t, [xt, h("div", kt, [A(n)])]),
               w(" ------ "),
               jt,
-              qt,
-              w(" -- "),
               Ct,
+              w(" -- "),
+              qt,
               h("section", zt, [
                 St,
                 h("div", Ot, [
-                  h("div", At, [
-                    h("div", Et, [
-                      h("div", Bt, [
-                        h("div", Tt, [
-                          h("div", Lt, [
+                  h("div", Et, [
+                    h("div", Lt, [
+                      h("div", At, [
+                        h("div", Bt, [
+                          h("div", Tt, [
                             h(
                               "img",
                               {
@@ -8631,19 +9534,19 @@ var Ll = je(wt, [
                               },
                               null,
                               8,
-                              It
+                              Pt
                             ),
                           ]),
                         ]),
-                        Pt,
-                        Mt,
+                        It,
+                        Dt,
                       ]),
                     ]),
                   ]),
                 ]),
               ]),
               w(" --- "),
-              h("section", Dt, [
+              h("section", Mt, [
                 Ft,
                 h("div", Ht, [
                   h("div", Ut, [
@@ -8658,7 +9561,7 @@ var Ll = je(wt, [
                             t.scrollPosition && t.scrollPosition(...e)),
                       },
                       [
-                        h("div", Vt, [
+                        h("div", Xt, [
                           h(
                             "img",
                             {
@@ -8675,10 +9578,10 @@ var Ll = je(wt, [
                           ),
                         ]),
                         h("div", Gt, [
-                          h("div", Xt, [
-                            h("div", Wt, [
-                              h("div", Rt, [
-                                h("a", Yt, [
+                          h("div", Vt, [
+                            h("div", Zt, [
+                              h("div", Yt, [
+                                h("a", Wt, [
                                   h(
                                     "img",
                                     {
@@ -8688,7 +9591,7 @@ var Ll = je(wt, [
                                     },
                                     null,
                                     8,
-                                    Zt
+                                    Rt
                                   ),
                                 ]),
                               ]),
@@ -8699,7 +9602,7 @@ var Ll = je(wt, [
                           h("div", $t, [
                             h("div", Jt, [
                               h("div", Qt, [
-                                h("a", ei, [
+                                h("a", el, [
                                   h(
                                     "img",
                                     {
@@ -8709,18 +9612,18 @@ var Ll = je(wt, [
                                     },
                                     null,
                                     8,
-                                    ai
+                                    al
                                   ),
                                 ]),
                               ]),
                             ]),
                           ]),
                         ]),
-                        h("div", si, [
-                          h("div", ti, [
-                            h("div", ii, [
-                              h("div", li, [
-                                h("a", oi, [
+                        h("div", sl, [
+                          h("div", tl, [
+                            h("div", ll, [
+                              h("div", il, [
+                                h("a", ol, [
                                   h(
                                     "img",
                                     {
@@ -8730,7 +9633,7 @@ var Ll = je(wt, [
                                     },
                                     null,
                                     8,
-                                    ri
+                                    nl
                                   ),
                                 ]),
                               ]),
@@ -8741,184 +9644,156 @@ var Ll = je(wt, [
                       32
                     ),
                   ]),
-                  h("div", ni, [
+                  h("div", rl, [
                     t.hideHorizontalIcon
-                      ? (g(), b("div", di, ci))
+                      ? (g(),
+                        b(
+                          "div",
+                          {
+                            key: 0,
+                            class: "mobile-scroll_cta",
+                            onClick:
+                              a[1] ||
+                              (a[1] = (...e) =>
+                                t.scroll_Left && t.scroll_Left(...e)),
+                          },
+                          dl
+                        ))
+                      : w("v-if", !0),
+                  ]),
+                ]),
+                h("div", cl, [
+                  h("div", pl, [
+                    h(
+                      "div",
+                      {
+                        "data-w-id": "9ec98ec5-fb8a-2716-02fa-7ef29f58135e",
+                        class: "apps_media-list",
+                        onScroll:
+                          a[2] ||
+                          (a[2] = (...e) =>
+                            t.scrollPosition && t.scrollPosition(...e)),
+                      },
+                      [
+                        h("div", vl, [
+                          h(
+                            "img",
+                            {
+                              src: t.getImageUrl("home/img/8.jpg"),
+                              loading: "lazy",
+                              "data-w-id":
+                                "4712a24f-d922-c9f3-e8a3-7b35338a5a7d",
+                              alt: "",
+                              class: "apps_asset cc-1",
+                            },
+                            null,
+                            8,
+                            ml
+                          ),
+                        ]),
+                        h("div", fl, [
+                          h("div", ul, [
+                            h("div", gl, [
+                              h("div", bl, [
+                                h("a", wl, [
+                                  h(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: t.getImageUrl("home/img/10.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    hl
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                        h("div", yl, [
+                          h("div", _l, [
+                            h("div", xl, [
+                              h("div", kl, [
+                                h("a", jl, [
+                                  h(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: t.getImageUrl("home/img/9.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    Cl
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                        h("div", ql, [
+                          h("div", zl, [
+                            h("div", Sl, [
+                              h("div", Ol, [
+                                h("a", El, [
+                                  h(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: t.getImageUrl("home/img/12.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    Ll
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                      ],
+                      32
+                    ),
+                  ]),
+                  h("div", Al, [
+                    t.hideHorizontalIcon
+                      ? (g(),
+                        b(
+                          "div",
+                          {
+                            key: 0,
+                            class: "mobile-scroll_cta",
+                            onClick:
+                              a[3] ||
+                              (a[3] = (...e) =>
+                                t.scroll_Left && t.scroll_Left(...e)),
+                          },
+                          Bl
+                        ))
                       : w("v-if", !0),
                   ]),
                 ]),
               ]),
               w(" -- "),
-              h("section", pi, [
-                h("div", vi, [
-                  mi,
-                  h("div", fi, [
-                    h("div", ui, [
-                      h("div", gi, [
-                        h("div", bi, [
-                          h("div", wi, [
-                            h("div", hi, [
-                              h("div", yi, [
-                                h("div", _i, [
-                                  h("div", xi, [
-                                    h("div", ki, [
-                                      h("video", ji, [
-                                        h(
-                                          "source",
-                                          {
-                                            src: t.getVideoUrl(
-                                              "home/tea_1.mp4"
-                                            ),
-                                            type: "video/mp4",
-                                          },
-                                          null,
-                                          8,
-                                          qi
-                                        ),
-                                        Ci,
-                                      ]),
-                                      zi,
-                                    ]),
-                                  ]),
-                                  Si,
-                                ]),
-                              ]),
-                            ]),
-                          ]),
-                        ]),
-                      ]),
-                      h("div", null, [
-                        h("div", Oi, [
-                          h("div", Ai, [
-                            h("div", Ei, [
-                              h("div", Bi, [
-                                h("div", Ti, [
-                                  h("div", Li, [
-                                    h("div", Ii, [
-                                      h("div", Pi, [
-                                        h("div", Mi, [
-                                          h("video", Di, [
-                                            h(
-                                              "source",
-                                              {
-                                                src: t.getVideoUrl(
-                                                  "home/tea_1.mp4"
-                                                ),
-                                                type: "video/mp4",
-                                              },
-                                              null,
-                                              8,
-                                              Fi
-                                            ),
-                                            Hi,
-                                          ]),
-                                          Ui,
-                                        ]),
-                                      ]),
-                                      Vi,
-                                    ]),
-                                  ]),
-                                ]),
-                              ]),
-                            ]),
-                          ]),
-                        ]),
-                      ]),
-                      Ni,
-                    ]),
-                  ]),
-                ]),
-              ]),
+              Tl,
               w(" --- "),
-              h("section", Gi, [
-                h("div", Xi, [
-                  Wi,
-                  h("div", Ri, [
-                    h("div", Yi, [
-                      h("div", Zi, [
-                        h("div", Ki, [
-                          h("div", $i, [
-                            h("div", Ji, [
-                              h("div", Qi, [
-                                h("div", el, [
-                                  h("div", al, [
-                                    h("div", sl, [
-                                      h("div", tl, [
-                                        h("div", il, [
-                                          h("video", ll, [
-                                            h(
-                                              "source",
-                                              {
-                                                src: t.getVideoUrl(
-                                                  "home/tea_1.mp4"
-                                                ),
-                                                type: "video/mp4",
-                                              },
-                                              null,
-                                              8,
-                                              ol
-                                            ),
-                                            rl,
-                                          ]),
-                                          nl,
-                                        ]),
-                                      ]),
-                                      dl,
-                                    ]),
-                                  ]),
-                                ]),
-                              ]),
-                            ]),
-                          ]),
-                        ]),
-                      ]),
-                      h("div", cl, [
-                        h("div", pl, [
-                          h("div", vl, [
-                            h("div", ml, [
-                              h("div", fl, [
-                                h("div", ul, [
-                                  h("div", gl, [
-                                    h("div", bl, [
-                                      h("video", wl, [
-                                        h(
-                                          "source",
-                                          {
-                                            src: t.getVideoUrl(
-                                              "home/tea_1.mp4"
-                                            ),
-                                            type: "video/mp4",
-                                          },
-                                          null,
-                                          8,
-                                          hl
-                                        ),
-                                        yl,
-                                      ]),
-                                      _l,
-                                    ]),
-                                  ]),
-                                  xl,
-                                ]),
-                              ]),
-                            ]),
-                          ]),
-                        ]),
-                      ]),
-                      kl,
-                    ]),
-                  ]),
-                ]),
-              ]),
+              Pl,
+              Il,
+              Dl,
               w(" -- "),
-              jl,
+              Ml,
               w(" --- "),
               h("div", null, [
-                h("aside", ql, [
-                  Cl,
-                  h("div", zl, [
-                    h("div", Sl, [
-                      h("video", Ol, [
+                h("aside", Fl, [
+                  w(
+                    ' <div\n        data-mouse-text="Read Next"\n        data-mouse-class="cc-text"\n        class="section cc-pre-footer w-inline-block"\n      >\n        <div class="iframe-video_wrapper">\n          <iframe\n            src="https://app.vidzflow.com/v/RLLcIipF9Q?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"\n            frameborder="0"\n            width="100%"\n            height="100%"\n          ></iframe>\n          <div class="iframe-video_blocker"></div>\n        </div>\n        <div class="pre-footer_gradient"></div>\n        <div class="marquee">\n          <div\n            class="marquee_content cc-text transparent"\n            style="\n              will-change: transform;\n              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)\n                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n              transform-style: preserve-3d;\n            "\n          >\n            <div\n              class="marquee_item cc-1"\n              style="\n                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                transform-style: preserve-3d;\n              "\n            >\n              <div class="h1">Case Studies&nbsp;</div>\n            </div>\n            <div\n              class="marquee_item cc-2"\n              style="\n                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                transform-style: preserve-3d;\n              "\n            >\n              <div class="h1">Case Studies&nbsp;</div>\n            </div>\n            <div\n              class="marquee_item cc-3"\n              style="\n                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                transform-style: preserve-3d;\n              "\n            >\n              <div class="h1">Case Studies&nbsp;</div>\n            </div>\n          </div>\n          <div\n            class="marquee_content cc-text transparent"\n            style="\n              will-change: transform;\n              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)\n                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n              transform-style: preserve-3d;\n            "\n          >\n            <div\n              class="marquee_item cc-1"\n              style="\n                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                transform-style: preserve-3d;\n              "\n            >\n              <div class="h1">Case Studies&nbsp;</div>\n            </div>\n            <div\n              class="marquee_item cc-2"\n              style="\n                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                transform-style: preserve-3d;\n              "\n            >\n              <div class="h1">Case Studies&nbsp;</div>\n            </div>\n            <div\n              class="marquee_item cc-3"\n              style="\n                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)\n                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);\n                transform-style: preserve-3d;\n              "\n            >\n              <div class="h1">Case Studies&nbsp;</div>\n            </div>\n          </div>\n        </div>\n        <div class="pre-footer_button">\n          <div class="btn cc-large-landscape">\n            <div class="btn-text-wrap">\n              <div class="btn-text cc-large-landscape">REad Next</div>\n              <div class="btn-text cc-bottom cc-large-landscape">Button</div>\n            </div>\n          </div>\n        </div>\n      </div> '
+                  ),
+                  h("div", Hl, [
+                    h("div", Ul, [
+                      h("video", Xl, [
                         h(
                           "source",
                           {
@@ -8927,17 +9802,17 @@ var Ll = je(wt, [
                           },
                           null,
                           8,
-                          Al
+                          Nl
                         ),
-                        El,
+                        Gl,
                       ]),
-                      Bl,
+                      Vl,
                     ]),
-                    Tl,
+                    Zl,
                   ]),
                 ]),
               ]),
-              B(n),
+              A(r),
             ],
             64
           )
@@ -8950,16 +9825,16 @@ var Ll = je(wt, [
       "/Users/lishengjie/Documents/GitHub/basis.work/src/pages/index.vue",
     ],
   ]),
-  Il = Object.freeze(
+  Wl = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Ll },
+      { __proto__: null, default: Yl },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-const Pl = {
+const Rl = {
     "../pages/about.vue": () =>
-      Ra(
+      Ya(
         () =>
           Promise.resolve().then(function () {
             return fs;
@@ -8967,7 +9842,7 @@ const Pl = {
         void 0
       ),
     "../pages/case.vue": () =>
-      Ra(
+      Ya(
         () =>
           Promise.resolve().then(function () {
             return hs;
@@ -8975,15 +9850,15 @@ const Pl = {
         void 0
       ),
     "../pages/demo.vue": () =>
-      Ra(
+      Ya(
         () =>
           Promise.resolve().then(function () {
-            return Ps;
+            return Is;
           }),
         void 0
       ),
     "../pages/fintech-design.vue": () =>
-      Ra(
+      Ya(
         () =>
           Promise.resolve().then(function () {
             return pt;
@@ -8991,56 +9866,56 @@ const Pl = {
         void 0
       ),
     "../pages/index.vue": () =>
-      Ra(
+      Ya(
         () =>
           Promise.resolve().then(function () {
-            return Il;
+            return Wl;
           }),
         void 0
       ),
   },
-  Ml = {
+  Kl = {
     "../pages/about.vue": fs,
     "../pages/case.vue": hs,
-    "../pages/demo.vue": Ps,
+    "../pages/demo.vue": Is,
     "../pages/fintech-design.vue": pt,
-    "../pages/index.vue": Il,
+    "../pages/index.vue": Wl,
   },
-  Dl = [];
-for (let ao in Pl) {
-  let e = ao.replace("../pages", "").toLowerCase().replace(".vue", "");
+  $l = [];
+for (let fi in Rl) {
+  let e = fi.replace("../pages", "").toLowerCase().replace(".vue", "");
   (e = e.replace(/\/index$/, "")),
     (e = e.replace(/\/_+/g, "/:")),
-    Dl.push({
+    $l.push({
       path: e,
       name: e,
       meta: {
-        layout: Ml[ao].default.layout || "layout-default",
+        layout: Kl[fi].default.layout || "layout-default",
         title:
-          null != (s = null == (a = Ml[ao].default) ? void 0 : a.title)
+          null != (s = null == (a = Kl[fi].default) ? void 0 : a.title)
             ? s
             : "app.project.title",
         header:
-          null != (i = null == (t = Ml[ao].default) ? void 0 : t.header)
-            ? i
+          null != (l = null == (t = Kl[fi].default) ? void 0 : t.header)
+            ? l
             : "header-default",
         scroll:
-          null != (o = null == (l = Ml[ao].default) ? void 0 : l.noScroll) && o,
+          null != (o = null == (i = Kl[fi].default) ? void 0 : i.noScroll) && o,
       },
-      component: Pl[ao],
+      component: Rl[fi],
     });
 }
-const Fl = ue({
+const Jl = ue({
   history: ge("./"),
   routes:
-    ((Hl = { defaultPath: "/home" }),
+    ((Ql = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: D({ defaultPath: "/" }, Hl).defaultPath },
+        redirect: { name: M({ defaultPath: "/" }, Ql).defaultPath },
       },
-      ...Dl,
+      ...$l,
       {
         path: "/404",
         name: "not-found",
@@ -9055,29 +9930,29 @@ const Fl = ue({
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var Hl;
-Fl.beforeEach(async (e, a, s) => {
+var Ql;
+Jl.beforeEach(async (e, a, s) => {
   s();
 });
-var Ul = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Fl }, Symbol.toStringTag, {
+var ei = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: Jl }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const Vl = be({ modules: Xa });
-we(Vl, Fl);
-var Nl = Object.freeze(
-  Object.defineProperty({ __proto__: null, default: Vl }, Symbol.toStringTag, {
+const ai = be({ modules: Va });
+we(ai, Jl);
+var si = Object.freeze(
+  Object.defineProperty({ __proto__: null, default: ai }, Symbol.toStringTag, {
     value: "Module",
   })
 );
-const Gl = {
+const ti = {
     use(e) {
       e.interceptors.response.use(
         async function (a) {
           if (100004 === a.data.code) {
             const s = e.get("/app/jwt-token", {
-              params: { account: Vl.state.auth.user.account },
+              params: { account: ai.state.auth.user.account },
             });
             1 === s.data.code && H.set("token", s.data.data.jwt_token, !0);
             return await e.request(a.config);
@@ -9090,7 +9965,7 @@ const Gl = {
       );
     },
   },
-  Xl = {
+  li = {
     use(e) {
       (window.isAlert = !1),
         e.interceptors.response.use(
@@ -9106,14 +9981,14 @@ const Gl = {
                 case 200003:
                 case 200004:
                 case 200005: {
-                  const { isConfirmed: e } = await Le.alert({
+                  const { isConfirmed: e } = await Te.alert({
                     title: `Error(${a.code})`,
-                    text: Be.t(`error.code.${a.code}`),
+                    text: Ae.t(`error.code.${a.code}`),
                   });
                   return (
                     e &&
-                      (await Vl.dispatch("auth/logout"),
-                      await Fl.replace("/login"),
+                      (await ai.dispatch("auth/logout"),
+                      await Jl.replace("/login"),
                       (window.isAlert = !1)),
                     Promise.reject(`Error: ${a.code}`)
                   );
@@ -9128,7 +10003,7 @@ const Gl = {
         );
     },
   },
-  Wl = {
+  ii = {
     use(e) {
       e.interceptors.response.use(
         async function (e) {
@@ -9139,9 +10014,9 @@ const Gl = {
               case 1e5:
               case 100001:
               case 100003:
-                await Le.alert({
+                await Te.alert({
                   title: `Error(${a.code})`,
-                  text: Be.t(`error.code.${a.code}`),
+                  text: Ae.t(`error.code.${a.code}`),
                 });
             }
           }
@@ -9153,12 +10028,12 @@ const Gl = {
       );
     },
   };
-class Rl {
+class oi {
   constructor() {
-    (this.provider = new Ba({}.VITE_REMOTE_API)), this.init();
+    (this.provider = new Aa({}.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use(Ta, La, Gl, Xl, Wl, Pa);
+    this.provider.use(Ba, Ta, ti, li, ii, Ia);
   }
   get get() {
     return this.provider.instance.get;
@@ -9173,19 +10048,19 @@ class Rl {
     return this.provider.instance.delete;
   }
 }
-Rl.prototype.install = function (e) {
+oi.prototype.install = function (e) {
   const a = "http-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var Yl = new Rl(),
-  Zl = Object.freeze(
+var ni = new oi(),
+  ri = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: Rl, default: Yl },
+      { __proto__: null, HttpService: oi, default: ni },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Kl {
+class di {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -9195,8 +10070,8 @@ class Kl {
       component: null,
       showCancelButton: !1,
       showConfirmButton: !1,
-      confirmButtonText: Be.t("button.confirm"),
-      cancelButtonText: Be.t("button.cancel"),
+      confirmButtonText: Ae.t("button.confirm"),
+      cancelButtonText: Ae.t("button.cancel"),
       allowOutsideClick: !0,
       props: {},
       timer: null,
@@ -9208,22 +10083,22 @@ class Kl {
     };
   }
   get state() {
-    return Vl.state.app.popupState;
+    return ai.state.app.popupState;
   }
   async modal(e = {}) {
     const {
       title: a,
       text: s,
       component: t = null,
-      showCancelButton: i = !0,
-      showConfirmButton: l = !0,
-      confirmButtonText: o = Be.t("button.confirm"),
-      cancelButtonText: r = Be.t("button.cancel"),
-      allowOutsideClick: n = !0,
+      showCancelButton: l = !0,
+      showConfirmButton: i = !0,
+      confirmButtonText: o = Ae.t("button.confirm"),
+      cancelButtonText: n = Ae.t("button.cancel"),
+      allowOutsideClick: r = !0,
       props: d = {},
     } = e;
     return new Promise((e) => {
-      Vl.commit(
+      ai.commit(
         "app/set/popup",
         u(f({}, this.initStates), {
           type: "Modal",
@@ -9231,52 +10106,52 @@ class Kl {
           title: a,
           text: s,
           component: t ? ae(t) : null,
-          showCancelButton: i,
-          showConfirmButton: l,
+          showCancelButton: l,
+          showConfirmButton: i,
           confirmButtonText: o,
-          cancelButtonText: r,
-          allowOutsideClick: n,
+          cancelButtonText: n,
+          allowOutsideClick: r,
           props: d,
         })
       );
     });
   }
   clear() {
-    Vl.commit("app/clear/popup");
+    ai.commit("app/clear/popup");
   }
 }
-Kl.prototype.install = function (e) {
+di.prototype.install = function (e) {
   const a = "popup-service";
   (e.config.globalProperties[a] = this), e.provide(a, this);
 };
-var $l = new Kl();
-const Jl = {
-    "../services/alert-service.js": Ea,
-    "../services/http-service.js": Zl,
-    "../services/i18n-service.js": Te,
+var ci = new di();
+const pi = {
+    "../services/alert-service.js": La,
+    "../services/http-service.js": ri,
+    "../services/i18n-service.js": Be,
     "../services/popup-service.js": Object.freeze(
       Object.defineProperty(
-        { __proto__: null, PopupService: Kl, default: $l },
+        { __proto__: null, PopupService: di, default: ci },
         Symbol.toStringTag,
         { value: "Module" }
       )
     ),
-    "../services/router-service.js": Ul,
-    "../services/storage-service.js": De,
-    "../services/store-service.js": Nl,
+    "../services/router-service.js": ei,
+    "../services/storage-service.js": Me,
+    "../services/store-service.js": si,
   },
-  Ql = {
+  vi = {
     install: (e) => {
-      for (let a in Jl) e.use(Jl[a].default);
+      for (let a in pi) e.use(pi[a].default);
     },
   };
-const eo = he(Se);
-eo.provide("$jQuery", ye),
-  eo.provide("$swal", Le),
-  eo.provide("$storage", H),
-  eo.provide("$tabsslider", _e),
-  eo.use(na),
-  eo.use(za),
-  eo.use(xe, { loading: "", error: "" }),
-  eo.use(Ql),
-  eo.mount("#app");
+const mi = he(Se);
+mi.provide("$jQuery", ye),
+  mi.provide("$swal", Te),
+  mi.provide("$storage", H),
+  mi.provide("$tabsslider", _e),
+  mi.use(ra),
+  mi.use(za),
+  mi.use(xe, { loading: "", error: "" }),
+  mi.use(vi),
+  mi.mount("#app");
