@@ -7,12 +7,14 @@
     </router-view>
   </component>
   <the-popup />
-  <Loading v-if="isError || isShowLoading" :mode="mode"></Loading>
+  <LoadPercent v-if="showFirstLoad" @loaded="showFirstLoad = false" />
+  <Loading v-else-if="isError || isShowLoading" :mode="mode"></Loading>
 </template>
 
 <script>
 import { ref, watch } from "vue";
 import Loading from "@/widgets/layout/loading.vue";
+import LoadPercent from "@/widgets/layout/loadpercent.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { isNil, defaultTo, path } from "ramda";
@@ -20,10 +22,12 @@ import { isNil, defaultTo, path } from "ramda";
 export default {
   components: {
     Loading,
+    LoadPercent,
   },
   setup() {
     const store = useStore(); //啟用vuex
     const isShowLoading = ref(false);
+    const showFirstLoad = ref(true);
     const lastPage = ref("");
     /**
      * loading動畫模式
@@ -52,6 +56,8 @@ export default {
       // default(path(["meta", "layout"], store.state.route))
       return currentLayout;
     });
+
+    const closeFirstLoad = () => {};
 
     watch(
       () => store.state.route,
@@ -87,7 +93,9 @@ export default {
 
     return {
       layout,
+      showFirstLoad,
       isShowLoading,
+      closeFirstLoad,
       mode,
       isError,
     };
