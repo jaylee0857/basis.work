@@ -3773,8 +3773,8 @@ strong {
 .btn-scroll {
   grid-column-gap: 0.5rem;
   grid-row-gap: 2.5rem;
-  border: 1px solid var(--swatch--primary);
-  background-color: var(--swatch--secondary);
+  border: 1px solid white;
+  background-color: white;
   color: var(--swatch--black);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -3793,7 +3793,7 @@ strong {
 }
 .btn-scroll:hover {
   cursor: pointer;
-  background-color: var(--swatch--hover);
+  background-color: transparent;
   color: var(--swatch--white);
 }
 .transition-triggers {
@@ -4813,7 +4813,7 @@ strong {
     align-items: flex-end;
     padding-bottom: 1.5rem;
     top: 0%;
-    bottom: 10%;
+    bottom: 0%;
     left: 0%;
     right: 0%;
   }

@@ -1591,7 +1591,7 @@
                           <div class="card-body">
                             <div class="u-overflow-hidden">
                               <div class="card-up">
-                                <h4 class="u-ts-4">6-10人</h4>
+                                <h4 class="u-ts-4">全日光影鑑賞室</h4>
                               </div>
                             </div>
                           </div>

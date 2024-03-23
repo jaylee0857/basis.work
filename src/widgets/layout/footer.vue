@@ -10,7 +10,7 @@
                 <a
                   href="mailto:hello@basis.work"
                   class="footer_link w-inline-block"
-                  ><div class="u-ts-3">hello@basis.work</div></a
+                  ><div class="u-ts-3">Booking@shaochichan.com</div></a
                 >
               </li>
             </ul>
@@ -20,7 +20,7 @@
             <ul role="list" class="footer_list">
               <li class="footer_list-item">
                 <a
-                  href="https://www.instagram.com/basis.work/"
+                  href="https://www.facebook.com/skyart7325?mibextid=AEUHqQ"
                   target="_blank"
                   class="footer_link w-inline-block"
                   ><div class="u-ts-3">Instagram</div></a
@@ -28,10 +28,10 @@
               </li>
               <li class="footer_list-item">
                 <a
-                  href="https://www.linkedin.com/company/basisstudio/"
+                  href="https://www.instagram.com/skyart7325?igsh=MW14ZG4zcmRvY3d4OA=="
                   target="_blank"
                   class="footer_link w-inline-block"
-                  ><div class="u-ts-3">Linkedin</div></a
+                  ><div class="u-ts-3">Instagram</div></a
                 >
               </li>
             </ul>
@@ -42,31 +42,32 @@
             <h3 class="u-ts-6 u-text-secondary">Navigation</h3>
             <ul role="list" class="footer_list">
               <li class="footer_list-item">
-                <a href="/" class="footer_link w-inline-block"
+                <a
+                  @click="goToAboutPage('/')"
+                  class="footer_link w-inline-block"
                   ><div class="u-ts-3">Overview</div></a
                 >
               </li>
               <li class="footer_list-item">
-                <a href="/cases" class="footer_link w-inline-block"
-                  ><div class="u-ts-3">Cases</div></a
-                >
-              </li>
-              <li class="footer_list-item">
-                <a href="/about" class="footer_link w-inline-block"
-                  ><div class="u-ts-3">Services</div></a
-                >
-              </li>
-              <li class="footer_list-item">
-                <a href="/design-trial" class="footer_link w-inline-block"
-                  ><div class="u-ts-3">Design Trial</div></a
+                <a
+                  @click="goToAboutPage('/gallery')"
+                  class="footer_link w-inline-block"
+                  ><div class="u-ts-3">Gallery</div></a
                 >
               </li>
               <li class="footer_list-item">
                 <a
-                  href="/fintech-design"
+                  @click="goToAboutPage('/service')"
+                  class="footer_link w-inline-block"
+                  ><div class="u-ts-3">Service</div></a
+                >
+              </li>
+              <li class="footer_list-item">
+                <a
+                  @click="goToAboutPage('/collation')"
                   aria-current="page"
                   class="footer_link w-inline-block w--current"
-                  ><div class="u-ts-3">Fintech Design</div></a
+                  ><div class="u-ts-3">Collation</div></a
                 >
               </li>
             </ul>
@@ -95,4 +96,9 @@
 
 <script setup>
 import { getImageUrl } from "@/unit/getImageUrl";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const goToAboutPage = (path) => {
+  router.push(path);
+};
 </script>

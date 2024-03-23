@@ -11,7 +11,7 @@
             loop
             muted
           >
-            <source :src="getVideoUrl('home/knife1-1.mp4')" type="video/mp4" />
+            <source :src="getVideoUrl('home/tea_1.mp4')" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div class="iframe-video_blocker"></div>
@@ -1240,7 +1240,7 @@
             loop
             muted
           >
-            <source :src="getVideoUrl('home/knife1-1.mp4')" type="video/mp4" />
+            <source :src="getVideoUrl('home/tea_1.mp4')" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div class="iframe-video_blocker"></div>
