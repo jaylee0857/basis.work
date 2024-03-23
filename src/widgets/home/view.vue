@@ -13,6 +13,7 @@
       <div
         class="img-wrap home-hero_image-placer"
         v-for="(item, index) in imagesOption"
+        v-scroll-to-top-hide="{ scrollTopPorM: 52, useTransition: true }"
         :key="item.url + index"
         :style="{
           width: isMobile ? item.css.m_width : '',
@@ -288,7 +289,8 @@ const isShowComponent = ref(false);
 const firstLoading = computed(() => store.state.app.firstLoading);
 const options = {
   //   root: document.querySelector("body"),
-  rootMargin: "0px",
+  /** 這邊將左右邊寬判斷距離擴展200px 以解決dom在邊界就閃爍問題 */
+  rootMargin: "0px 200px 0px 200px",
   threshold: Array(100)
     .fill()
     .map((val, idx) => idx * 0.01),
@@ -302,6 +304,7 @@ const callback = (entries) => {
     // console.log(itemName);
     switch (itemName) {
       case "img":
+        // console.log("img");
         imagesOption.value[index].isEnter =
           intersectionRatio < 0.2 ? false : true;
         // console.log(target.dataset?.index, "index");
@@ -347,10 +350,11 @@ const scrollDown = () => {
 };
 
 watch(
-  () => store.state.app.isLoading,
-  (isLoading) => {
+  () => [store.state.app.isLoading, store.state.app.firstLoading],
+  ([isLoading, firstLoading]) => {
     isShowComponent.value = !isLoading;
-    if (isLoading) {
+    if (isLoading && firstLoading) {
+      // console.log("給予domScroll監聽");
       const imgsDom = document.querySelectorAll(".img-wrap");
       const scrollBtnDom = document.querySelector(".btn-scroll");
       const doms = [...imgsDom, scrollBtnDom];
