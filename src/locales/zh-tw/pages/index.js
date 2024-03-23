@@ -6,6 +6,43 @@ export default {
   "introduce.title2":
     "典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。",
   "space.title": "空間預約",
+  "space.content": "Skyart7325開放每日一組預約。",
+  "space.imginfo": "Skyart3725全景",
+  "space.imginfo2": "多功能茶席空間",
+  "space.imginfo3":
+    "博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。",
+  "humanities.title": "定香人文",
+  "humanities.artwork1": "藝術品經紀",
+  "humanities.artwork2": "藝術品拍賣",
+  "humanities.artwork3": "台灣高山冠軍茶",
+  "humanities.artwork4": "雲南古樹普洱茶",
+  "humanities.artwork5": "精品咖啡",
+  "humanities.artwork6": "天幕茶碗",
+  "humanities.artwork7": "典藏名酒",
+  "artist.title": "館藏特約藝術家",
+  "center.title": "拍賣中心",
+  "center.item1.name": "深雲迷石茶席",
+  "center.item1.info": "2-7人",
+  "center.item1.content":
+    "全一體玉石材打磨茶席區 檀木櫃體工學皮椅 老件禪師座鋪開花語道品絕品茶賞 湄洲媽祖聖像對飲",
+  "center.item2.name": "凌空暇思茶席",
+  "center.item2.info": "4-6人",
+  "center.item2.content":
+    "寬面開闊原石桌 讀花掬茶布置餐酒多變間 原木藝品書畫櫃單體歐廚水槽",
+  "center.item3.name": "名畫酒廊劇院區",
+  "center.item3.info": "6-20人",
+  "center.item3.content":
+    "102吋BOSE頂規視聽組 會議開幕團體大展迎賓 餐席印鑑長軸藏品合圍私廚配備迴廊備餐區 6-20人",
+  "center.item4.name": "全日光影鑑賞室",
+  "center.item4.info": "大佛菩提廳",
+  "center.item4.content":
+    "名檜檀香大茶席 清宮唐漢當代藝術風格揉和 冠軍藏茶名件庫童趣寰宇天馬櫃",
+  "us.title": "關於我們",
+  "us.reserve": "開始預約",
   "btn.Inquire": "館藏查詢",
   "btn.reserve": "預約參觀",
+  "btn.spaceinfo": "空間介紹",
+  "btn.reservenow": "立即預約",
+  "btn.artinfo": "藝品介紹",
+  "btn.learnMore": "了解更多",
 };

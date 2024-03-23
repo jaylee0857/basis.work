@@ -177,7 +177,7 @@
                 transform: translate(0px, 0%);
               "
             >
-              Skyart7325開放每日一組預約。
+              {{ t("$current.space.content") }}
             </div>
           </div>
         </h4>
@@ -217,7 +217,7 @@
                                 <iframe
                                   width="100%"
                                   height="100%"
-                                  src="https://app.vidzflow.com/v/rQwOMSuYOc?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                                  src="https://app.vidzflow.com/v/rQwOMSuYOc?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=true&piv=true&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
                                   title="C00117"
                                   style="
                                     aspect-ratio: 1.77777778;
@@ -238,7 +238,9 @@
                           >
                             <div class="u-overflow-hidden">
                               <div class="card-up">
-                                <h4 class="u-ts-4">Skyart3725全景</h4>
+                                <h4 class="u-ts-4">
+                                  {{ t("$current.space.imginfo") }}
+                                </h4>
                               </div>
                             </div>
                           </div>
@@ -292,7 +294,9 @@
                         <div class="u-overflow-hidden">
                           <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">多功能茶席空間</h4>
+                              <h4 class="u-ts-4">
+                                {{ t("$current.space.imginfo2") }}
+                              </h4>
                             </div>
                           </div>
                         </div>
@@ -309,28 +313,23 @@
           >
             <div class="content-p cc-1">
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="700">
-                博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。
+                {{ t("$current.space.imginfo3") }}
               </p>
             </div>
             <div class="btn-group">
-              <div
-                class="btn-item cc-1"
-                style="
-                  opacity: 1;
-                  transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                "
-              >
+              <div class="btn-item cc-1">
                 <a
-                  href="/cases"
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">空間介紹</div>
-                    <div class="btn-text cc-bottom">空間介紹</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.spaceinfo") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.spaceinfo") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -341,8 +340,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">立即預約</div>
-                    <div class="btn-text cc-bottom">立即預約</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -367,7 +370,7 @@
           <div class="section-title_dot"></div>
           <div class="u-overflow-hidden">
             <div class="section-title_title">
-              <h2 class="u-ts-4">定香人文</h2>
+              <h2 class="u-ts-4">{{ t("$current.humanities.title") }}</h2>
             </div>
           </div>
         </div>
@@ -394,7 +397,9 @@
                 data-aos-delay="150"
               >
                 <div class="list-content cc-2">
-                  <h3 class="u-tc-caps">藝術品經紀</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork1") }}
+                  </h3>
                 </div>
               </li>
               <li
@@ -404,7 +409,9 @@
                 data-aos-delay="200"
               >
                 <div class="list-content cc-3">
-                  <h3 class="u-tc-caps">藝術品拍賣</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork2") }}
+                  </h3>
                 </div>
               </li>
               <li
@@ -414,7 +421,9 @@
                 data-aos-delay="250"
               >
                 <div class="list-content cc-4">
-                  <h3 class="u-tc-caps">台灣高山冠軍茶</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork3") }}
+                  </h3>
                 </div>
               </li>
               <li
@@ -424,7 +433,9 @@
                 data-aos-delay="300"
               >
                 <div class="list-content cc-5">
-                  <h3 class="u-tc-caps">雲南古樹普洱茶</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork4") }}
+                  </h3>
                 </div>
               </li>
               <li
@@ -434,7 +445,9 @@
                 data-aos-delay="350"
               >
                 <div class="list-content cc-6">
-                  <h3 class="u-tc-caps">精品咖啡</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork5") }}
+                  </h3>
                 </div>
               </li>
               <li
@@ -444,7 +457,9 @@
                 data-aos-delay="400"
               >
                 <div class="list-content cc-7">
-                  <h3 class="u-tc-caps">天幕茶碗</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork6") }}
+                  </h3>
                 </div>
               </li>
               <li
@@ -454,7 +469,9 @@
                 data-aos-delay="450"
               >
                 <div class="list-content cc-8">
-                  <h3 class="u-tc-caps">典藏名酒</h3>
+                  <h3 class="u-tc-caps">
+                    {{ t("$current.humanities.artwork7") }}
+                  </h3>
                 </div>
               </li>
             </ul>
@@ -467,8 +484,10 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">藝品介紹</div>
-                    <div class="btn-text cc-bottom">藝品介紹</div>
+                    <div class="btn-text">{{ t("$current.btn.artinfo") }}</div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.artinfo") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -505,7 +524,7 @@
                   transform: translate(0px, 0%);
                 "
               >
-                館藏特約藝術家
+                {{ t("$current.artist.title") }}
               </div>
             </div>
           </h3>
@@ -775,7 +794,7 @@
                   transform: translate(0px, 0%);
                 "
               >
-                拍賣中心
+                {{ t("$current.center.title") }}
               </div>
             </div>
           </h3>
@@ -823,7 +842,9 @@
                         <div class="u-overflow-hidden">
                           <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">深雲迷石茶席</h4>
+                              <h4 class="u-ts-4">
+                                {{ t("$current.center.item1.name") }}
+                              </h4>
                             </div>
                           </div>
                         </div>
@@ -884,7 +905,9 @@
                           <div class="card-body">
                             <div class="u-overflow-hidden">
                               <div class="card-up">
-                                <h4 class="u-ts-4">2-7人</h4>
+                                <h4 class="u-ts-4">
+                                  {{ t("$current.center.item1.info") }}
+                                </h4>
                               </div>
                             </div>
                           </div>
@@ -907,8 +930,7 @@
                 data-aos-duration="700"
                 data-aos-delay="200"
               >
-                全一體玉石材打磨茶席區 檀木櫃體工學皮椅 老件禪師座
-                鋪開花語道品絕品茶賞 湄洲媽祖聖像對飲
+                {{ t("$current.center.item1.content") }}
               </p>
             </div>
             <div class="btn-group">
@@ -920,8 +942,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">立即預約</div>
-                    <div class="btn-text cc-bottom">立即預約</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -933,8 +959,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">了解更多</div>
-                    <div class="btn-text cc-bottom">了解更多</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1000,7 +1030,9 @@
                           <div class="card-body">
                             <div class="u-overflow-hidden">
                               <div class="card-up">
-                                <h4 class="u-ts-4">4-6人</h4>
+                                <h4 class="u-ts-4">
+                                  {{ t("$current.center.item2.info") }}
+                                </h4>
                               </div>
                             </div>
                           </div>
@@ -1052,7 +1084,9 @@
                         <div class="u-overflow-hidden">
                           <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">凌空暇思茶席</h4>
+                              <h4 class="u-ts-4">
+                                {{ t("$current.center.item2.name") }}
+                              </h4>
                             </div>
                           </div>
                         </div>
@@ -1069,8 +1103,7 @@
           >
             <div class="content-p cc-1">
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="800">
-                寬面開闊原石桌 讀花掬茶布置餐酒多變間 原木藝品書畫櫃
-                單體歐廚水槽
+                {{ t("$current.center.item2.content") }}
               </p>
             </div>
             <div class="btn-group">
@@ -1082,8 +1115,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">立即預約</div>
-                    <div class="btn-text cc-bottom">立即預約</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1095,8 +1132,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">了解更多</div>
-                    <div class="btn-text cc-bottom">了解更多</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1151,7 +1192,9 @@
                         <div class="u-overflow-hidden">
                           <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">名畫酒廊劇院區</h4>
+                              <h4 class="u-ts-4">
+                                {{ t("$current.center.item3.name") }}
+                              </h4>
                             </div>
                           </div>
                         </div>
@@ -1212,7 +1255,9 @@
                           <div class="card-body">
                             <div class="u-overflow-hidden">
                               <div class="card-up">
-                                <h4 class="u-ts-4">6-20人</h4>
+                                <h4 class="u-ts-4">
+                                  {{ t("$current.center.item3.info") }}
+                                </h4>
                               </div>
                             </div>
                           </div>
@@ -1235,8 +1280,7 @@
                 data-aos-duration="700"
                 data-aos-delay="200"
               >
-                102吋BOSE頂規視聽組 會議開幕團體大展迎賓 餐席印鑑長軸藏品合圍
-                私廚配備迴廊備餐區 6-20人
+                {{ t("$current.center.item3.content") }}
               </p>
             </div>
             <div class="btn-group">
@@ -1248,8 +1292,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">立即預約</div>
-                    <div class="btn-text cc-bottom">立即預約</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1261,8 +1309,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">了解更多</div>
-                    <div class="btn-text cc-bottom">了解更多</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1332,7 +1384,9 @@
                           <div class="card-body">
                             <div class="u-overflow-hidden">
                               <div class="card-up">
-                                <h4 class="u-ts-4">全日光影鑑賞室</h4>
+                                <h4 class="u-ts-4">
+                                  {{ t("$current.center.item4.name") }}
+                                </h4>
                               </div>
                             </div>
                           </div>
@@ -1384,7 +1438,9 @@
                         <div class="u-overflow-hidden">
                           <div class="card-up">
                             <div class="card-large_text">
-                              <h4 class="u-ts-4">大佛菩提廳</h4>
+                              <h4 class="u-ts-4">
+                                {{ t("$current.center.item4.info") }}
+                              </h4>
                             </div>
                           </div>
                         </div>
@@ -1401,8 +1457,7 @@
           >
             <div class="content-p cc-1">
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="800">
-                名檜檀香大茶席 清宮唐漢當代藝術風格揉和 冠軍藏茶名件庫
-                童趣寰宇天馬櫃
+                {{ t("$current.center.item4.content") }}
               </p>
             </div>
             <div class="btn-group">
@@ -1414,8 +1469,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">立即預約</div>
-                    <div class="btn-text cc-bottom">立即預約</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.reservenow") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1427,8 +1486,12 @@
                   data-aos-duration="1000"
                 >
                   <div class="btn-text-wrap">
-                    <div class="btn-text">了解更多</div>
-                    <div class="btn-text cc-bottom">了解更多</div>
+                    <div class="btn-text">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
+                    <div class="btn-text cc-bottom">
+                      {{ t("$current.btn.learnMore") }}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -1453,7 +1516,7 @@
           <div class="section-title_dot" style="opacity: 1"></div>
           <div class="u-overflow-hidden">
             <div class="section-title_title">
-              <h2 class="u-ts-4">Contact Us</h2>
+              <h2 class="u-ts-4">{{ t("$current.us.title") }}</h2>
             </div>
           </div>
         </div>
@@ -1477,7 +1540,7 @@
               data-aos-duration="700"
             >
               <div
-                class="u-overflow-hidden"
+                class="u-overflow-hidden mb-6"
                 style="display: block; text-align: start; position: relative"
               >
                 <div
@@ -1490,7 +1553,7 @@
                     transform: translate(0px, 0%);
                   "
                 >
-                  開始預約
+                  {{ t("$current.us.reserve") }}
                 </div>
               </div>
               <div
@@ -1507,7 +1570,13 @@
                     transform: translate(0px, 0%);
                   "
                 >
-                  <div style="position: relative; display: inline-block">
+                  <div
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      overflow: hidden;
+                    "
+                  >
                     Book@shaochichan.com
                   </div>
                 </a>
