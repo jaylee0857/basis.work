@@ -8,6 +8,7 @@ const state = () => {
     },
     tips: [],
     isLoading: true,
+    firstLoading: true,
   };
 };
 //主要state

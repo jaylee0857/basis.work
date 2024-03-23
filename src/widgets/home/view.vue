@@ -2,7 +2,7 @@
   <div class="view" @mousemove="moveView($event)">
     <div
       class="view-wrap"
-      v-if="isShowComponent"
+      v-if="isShowComponent && !firstLoading"
       :style="{
         transform: `translate3d(${position.x * 2}px, ${
           position.y
@@ -70,7 +70,7 @@
 </template>
 
 <script setup>
-import { nextTick, onMounted, reactive, ref, watch } from "vue";
+import { nextTick, onMounted, reactive, ref, watch, computed } from "vue";
 import { useStore } from "vuex";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -285,7 +285,7 @@ const moveView = (e) => {
  */
 
 const isShowComponent = ref(false);
-
+const firstLoading = computed(() => store.state.app.firstLoading);
 const options = {
   //   root: document.querySelector("body"),
   rootMargin: "0px",

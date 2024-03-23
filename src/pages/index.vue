@@ -1650,11 +1650,12 @@
 </template>
 <script>
 import AOS from "aos";
+import { useStore } from "vuex";
 import "aos/dist/aos.css";
 import { ref } from "vue";
 import Footer from "@/widgets/layout/footer.vue";
 import View from "@/widgets/home/view.vue";
-import { onMounted } from "vue";
+import { onMounted, computed } from "vue";
 import { getVideoUrl } from "@/unit/getVideoUrl";
 import { getImageUrl } from "@/unit/getImageUrl";
 import Marquee from "@/widgets/layout/marquee.vue";
@@ -1667,6 +1668,8 @@ export default {
     View,
   },
   setup() {
+    const store = useStore(); //啟用vuex
+    const isLoading = computed(() => store.state.app.isLoading);
     const { t, setPrefix } = useI18n();
     setPrefix({
       $current: "pages.index",
@@ -1720,6 +1723,7 @@ export default {
 
     return {
       a,
+      isLoading,
       getVideoUrl,
       getImageUrl,
       scrollPosition,
