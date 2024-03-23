@@ -1,5 +1,5 @@
 /* 語系處理 */
-const files = import.meta.globEager("../locales/**/*.js");
+const files = import.meta.glob("../locales/**/*.js", { eager: true });
 import * as R from "ramda";
 const messages = {};
 
