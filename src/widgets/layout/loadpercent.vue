@@ -90,7 +90,7 @@ watch(
   (newValue, oldValue) => {
     const length = newValue - oldValue;
     const numbs = expandNumberToArray(length);
-    console.log(numbs, "numbers");
+    // console.log(numbs, "numbers");
     let delay = 0; // 初始化延迟
     for (const [index, num] of numbs.entries()) {
       setTimeout(() => {
