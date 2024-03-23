@@ -18,6 +18,7 @@ import LoadPercent from "@/widgets/layout/loadpercent.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { isNil, defaultTo, path } from "ramda";
+import { useRouter } from "vue-router";
 // import pro168 from "@/assets/images/pro168_logo.png";
 export default {
   components: {
@@ -26,6 +27,7 @@ export default {
   },
   setup() {
     const store = useStore(); //啟用vuex
+    const router = useRouter();
     const isShowLoading = ref(false);
     const showFirstLoad = ref(true);
     const lastPage = ref("");
@@ -57,13 +59,22 @@ export default {
       return currentLayout;
     });
 
-    const closeFirstLoad = () => {};
+    const loadIframe = () => {
+      const iframes = document.querySelectorAll("iframe");
+      if (iframes.length <= 0) return;
+      console.log(iframes);
+    };
+
+    router.beforeResolve(() => {
+      loadIframe();
+    });
 
     watch(
       () => store.state.route,
       (currentPage) => {
         if (lastPage.value !== currentPage) {
           isShowLoading.value = true;
+          /** 這邊需等iframe載入完成 */
           setTimeout(() => {
             isShowLoading.value = false;
             mode.value = "enter";
@@ -92,12 +103,11 @@ export default {
     });
 
     return {
+      mode,
       layout,
+      isError,
       showFirstLoad,
       isShowLoading,
-      closeFirstLoad,
-      mode,
-      isError,
     };
   },
 };

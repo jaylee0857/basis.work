@@ -11,6 +11,7 @@ import { getImageUrl } from "@/unit/getImageUrl";
 import { computed, reactive, watch, defineEmits, ref } from "vue";
 import { inject } from "vue";
 import { loadImage } from "@/unit/loadImage";
+import { loadIframe } from "@/unit/loadIframes";
 import calculateTotalPercentage from "@/unit/calculateTotalPercentage";
 import expandNumberToArray from "@/unit/expandNumberToArray";
 
@@ -21,9 +22,14 @@ const images = inject("imageUrls");
 const percentage = (1 / images.length) * 100;
 const options = reactive({
   imagesLoadPercent: 0,
+  iframeLoadPercent: 0,
   animaionLoad: 0,
   loadPercent: computed(() =>
-    calculateTotalPercentage([options.imagesLoadPercent, options.animaionLoad])
+    calculateTotalPercentage([
+      options.imagesLoadPercent,
+      options.animaionLoad,
+      options.iframeLoadPercent,
+    ])
   ),
   animationPercent: 0,
   position: computed(() => `${options.animationPercent - 100}%`),
@@ -49,8 +55,25 @@ const preloadImages = async () => {
   }
 };
 
+const preloadIframe = async () => {
+  const iframes = document.querySelectorAll("iframe");
+  const iframePercentage = (1 / iframes.length) * 100;
+  if (iframes.length <= 0) return options.iframeLoadPercent === 100;
+  for (const iframe of iframes) {
+    const currentPercent =
+      options.iframeLoadPercent + Math.ceil(iframePercentage);
+    /** 有資料才載 沒資料直接過 */
+    if (iframe.src !== "") {
+      await loadIframe(iframe);
+    }
+    // eslint-disable-next-line require-atomic-updates
+    options.iframeLoadPercent = Math.min(currentPercent, 100);
+  }
+};
+
 const init = async () => {
   await preloadImages();
+  await preloadIframe();
   // options.animaionLoad = 40;
   // await sleep(0);
   /**
@@ -59,6 +82,7 @@ const init = async () => {
    * loadPercent是總百分比，其他百分比搭配calculateTotalPercentage算出總百分比
    */
   options.animaionLoad = 100;
+  // console.log(options.loadPercent, "loadPercent");
 };
 
 watch(
@@ -66,10 +90,17 @@ watch(
   (newValue, oldValue) => {
     const length = newValue - oldValue;
     const numbs = expandNumberToArray(length);
+    console.log(numbs, "numbers");
     let delay = 0; // 初始化延迟
-    for (const num of numbs) {
+    for (const [index, num] of numbs.entries()) {
       setTimeout(() => {
+        /** NOTE: 這邊硬解 當index為最後一個時直接跳100% */
         options.animationPercent += num;
+        if (newValue === 100) {
+          const lastIndex = numbs.length - 1;
+          const isLast = index === lastIndex;
+          if (isLast) options.animationPercent = 100;
+        }
         if (options.animationPercent === 100) {
           leaveAnimation();
         }
