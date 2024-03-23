@@ -18,6 +18,8 @@ import LoadPercent from "@/widgets/layout/loadpercent.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { isNil, defaultTo, path } from "ramda";
+import { useRouter } from "vue-router";
+// import { loadIframe } from "@/unit/loadIframes";
 // import pro168 from "@/assets/images/pro168_logo.png";
 export default {
   components: {
@@ -26,9 +28,10 @@ export default {
   },
   setup() {
     const store = useStore(); //啟用vuex
+    const router = useRouter();
     const isShowLoading = ref(false);
     const showFirstLoad = ref(true);
-    const lastPage = ref("");
+    // const lastPage = ref("");
     /**
      * loading動畫模式
      * leave: 只有離開的動畫
@@ -57,21 +60,28 @@ export default {
       return currentLayout;
     });
 
-    const closeFirstLoad = () => {};
+    // const loadIframes = async () => {
+    //   const iframes = document.querySelectorAll("iframe");
+    //   if (iframes.length <= 0) return;
+    //   for (const iframe of iframes) {
+    //     /** 有資料才載 沒資料直接過 */
+    //     if (iframe.src !== "") {
+    //       await loadIframe(iframe);
+    //     }
+    //   }
+    // };
 
-    watch(
-      () => store.state.route,
-      (currentPage) => {
-        if (lastPage.value !== currentPage) {
-          isShowLoading.value = true;
-          setTimeout(() => {
-            isShowLoading.value = false;
-            mode.value = "enter";
-          }, 3500);
-        }
-        lastPage.value = store.state.route.path;
-      }
-    );
+    router.beforeResolve(async () => {
+      isShowLoading.value = true;
+      // await loadIframes();
+      // console.log("iframe載入完成");
+      /** 這邊需等iframe載入完成 */
+      setTimeout(() => {
+        isShowLoading.value = false;
+        mode.value = "enter";
+      }, 3500);
+    });
+
     watch(isShowLoading, (isLoading) => {
       store.commit("app/systm/Loading", isLoading);
     });
@@ -92,12 +102,11 @@ export default {
     });
 
     return {
+      mode,
       layout,
+      isError,
       showFirstLoad,
       isShowLoading,
-      closeFirstLoad,
-      mode,
-      isError,
     };
   },
 };
