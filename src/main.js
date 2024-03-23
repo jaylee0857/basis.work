@@ -14,6 +14,7 @@ import layouts from "@/_app/layouts";
 import getAllImageUrl from "@/_app/images";
 import components from "@/_app/components";
 import providers from "@/_app/providers";
+import directives from "@/_app/directives";
 // import "./assets/css/studio-basis.webflow.min.css";
 import "./assets/main.scss";
 import "@fortawesome/fontawesome-free/js/all";
@@ -27,6 +28,7 @@ app.provide("$tabsslider", tabsslider);
 app.use(layouts);
 app.use(getAllImageUrl);
 app.use(components);
+app.use(directives);
 app.use(VueLazyLoad, {
   loading: "",
   error: "",
