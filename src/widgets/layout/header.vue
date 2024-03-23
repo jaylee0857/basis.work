@@ -21,6 +21,7 @@
           id="language-toggle"
           class="check-toggle check-toggle-round-flat"
           type="checkbox"
+          v-model="langSwitch"
         />
         <label for="language-toggle" @click="changeLang"></label>
         <span class="on">TW</span>

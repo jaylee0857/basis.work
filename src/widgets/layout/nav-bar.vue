@@ -32,7 +32,6 @@
       </li>
       <div
         class="move-item"
-        @click="changeLang"
         :style="{
           left: `${isLeft ? `calc(${moveLeft}% - 4px)` : 'auto'}`,
           right: `${isLeft ? 'auto' : `calc(${moveRight}% - 4px)`}`,
@@ -46,6 +45,7 @@
           id="language-toggle"
           class="check-toggle check-toggle-round-flat"
           type="checkbox"
+          v-model="langSwitch"
         />
         <label for="language-toggle" @click="changeLang"></label>
         <span class="on">TW</span>
@@ -162,7 +162,7 @@ const enterIndex = (index) => {
   display: flex;
   justify-content: center;
   margin: 30px 0;
-  display: none;
+  /* display: none; */
 }
 @media screen and (max-width: 991px) {
   .position {
