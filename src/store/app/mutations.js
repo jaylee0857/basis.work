@@ -14,8 +14,12 @@ const mutations = {
     };
   },
   "systm/Loading"(state, payload) {
-    console.log(payload, "mutations");
+    // console.log(payload, "mutations");
     state.isLoading = payload;
+  },
+  "systm/firstLoading"(state, payload) {
+    console.log(payload, "mutations");
+    state.firstLoading = payload;
   },
 };
 

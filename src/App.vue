@@ -7,7 +7,7 @@
     </router-view>
   </component>
   <the-popup />
-  <LoadPercent v-if="showFirstLoad" @loaded="showFirstLoad = false" />
+  <LoadPercent v-if="showFirstLoad" @loaded="firstloaded" />
   <Loading v-else-if="isError || isShowLoading" :mode="mode"></Loading>
 </template>
 
@@ -60,6 +60,12 @@ export default {
       return currentLayout;
     });
 
+    const firstloaded = () => {
+      showFirstLoad.value = false;
+      store.commit("app/systm/firstLoading", false);
+      console.log("firstLoead");
+    };
+
     // const loadIframes = async () => {
     //   const iframes = document.querySelectorAll("iframe");
     //   if (iframes.length <= 0) return;
@@ -107,6 +113,7 @@ export default {
       isError,
       showFirstLoad,
       isShowLoading,
+      firstloaded,
     };
   },
 };
