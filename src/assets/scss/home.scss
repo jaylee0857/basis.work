@@ -72,6 +72,9 @@
     }
     @media screen and (max-width: 576px) {
       // transform: scale(1);
+      img {
+        transform: scale(0.95) !important;
+      }
     }
     
   }

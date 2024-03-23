@@ -20,7 +20,9 @@
           </div>
           <div class="u-overflow-hidden">
             <div class="section-title_title">
-              <h2 class="u-ts-4">詹紹綺人文藝術中心</h2>
+              <h2 class="u-ts-4">
+                {{ t("$current.section.h1") }}
+              </h2>
             </div>
           </div>
         </div>
@@ -49,7 +51,7 @@
                   transform: translate(0px, 0%);
                 "
               >
-                位於25樓雲海之中的藝術與文化博物館，
+                {{ t("$current.introduce.title") }}
               </div>
             </div>
             <div
@@ -68,102 +70,9 @@
                   transform: translate(0px, 0%);
                 "
               >
-                典藏冠軍高山茶、茶道具及名壺、雕塑、獨家出品普洱和單一純麥威士忌。
+                {{ t("$current.introduce.title2") }}
               </div>
             </div>
-            <!-- <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-              data-aos="fade-up"
-              data-aos-duration="800"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                products
-              </div>
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                and
-              </div>
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                their
-              </div>
-            </div>
-            <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-              data-aos="fade-up"
-              data-aos-duration="900"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                brands
-              </div>
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                through
-              </div>
-            </div>
-            <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                design.
-              </div>
-            </div> -->
           </h3>
           <div class="btn-group">
             <div
@@ -182,8 +91,10 @@
                 data-aos-duration="1000"
               >
                 <div class="btn-text-wrap">
-                  <div class="btn-text">館藏查詢</div>
-                  <div class="btn-text cc-bottom">館藏查詢</div>
+                  <div class="btn-text">{{ t("$current.btn.Inquire") }}</div>
+                  <div class="btn-text cc-bottom">
+                    {{ t("$current.btn.Inquire") }}
+                  </div>
                 </div>
               </a>
             </div>
@@ -206,8 +117,10 @@
                 data-aos-duration="1000"
               >
                 <div class="btn-text-wrap">
-                  <div class="btn-text">預約參觀</div>
-                  <div class="btn-text cc-bottom">預約參觀</div>
+                  <div class="btn-text">{{ t("$current.btn.reserve") }}</div>
+                  <div class="btn-text cc-bottom">
+                    {{ t("$current.btn.reserve") }}
+                  </div>
                 </div>
               </a>
             </div>
@@ -238,15 +151,8 @@
             ></div>
           </div>
           <div class="u-overflow-hidden">
-            <div
-              class="section-title_title"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <h2 class="u-ts-4">空間預約</h2>
+            <div class="section-title_title">
+              <h2 class="u-ts-4">{{ t("$current.space.title") }}</h2>
             </div>
           </div>
         </div>
@@ -255,25 +161,6 @@
     <div class="container">
       <div data-animation-element="group">
         <h4 data-animation-element="title" class="h1" style="">
-          <!-- <div
-            data-aos="fade-up"
-            data-aos-duration="700"
-            class="u-overflow-hidden"
-            style="display: block; text-align: start; position: relative"
-          >
-            <div
-              style="
-                position: relative;
-                display: inline-block;
-                translate: none;
-                rotate: none;
-                scale: none;
-                transform: translate(0px, 0%);
-              "
-            >
-              詹紹綺人文藝術中心
-            </div>
-          </div> -->
           <div
             class="u-overflow-hidden"
             data-aos="fade-up"
@@ -420,15 +307,7 @@
             id="w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307"
             class="content"
           >
-            <div
-              class="content-p cc-1"
-              style="
-                transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-                opacity: 1;
-              "
-            >
+            <div class="content-p cc-1">
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="700">
                 博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。
               </p>
@@ -508,23 +387,6 @@
               </div>
             </div>
             <ul role="list" class="u-mt-3-5">
-              <!-- <li
-                class="u-overflow-hidden"
-                data-aos="fade-up"
-                data-aos-duration="700"
-                data-aos-delay="100"
-              >
-                <div
-                  class="list-content cc-1"
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                >
-                  <h3 class="u-tc-caps">定香人文</h3>
-                </div>
-              </li> -->
               <li
                 class="u-overflow-hidden"
                 data-aos="fade-up"
@@ -702,11 +564,6 @@
             <div
               data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
               class="apps_asset cc-3 w-dyn-list"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
@@ -732,11 +589,6 @@
             <div
               data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
               class="apps_asset cc-3 w-dyn-list"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
@@ -830,11 +682,6 @@
             <div
               data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
               class="apps_asset cc-3 w-dyn-list"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
@@ -860,11 +707,6 @@
             <div
               data-w-id="736ca15f-35ee-0e1c-219c-8c920cdd4f00"
               class="apps_asset cc-3 w-dyn-list"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
@@ -936,23 +778,6 @@
                 拍賣中心
               </div>
             </div>
-            <!-- <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                Design
-              </div>
-            </div> -->
           </h3>
         </div>
       </div>
@@ -1122,35 +947,7 @@
   <!-- --- -->
   <section class="section">
     <div class="container over-h">
-      <div class="row">
-        <!-- <div data-animation-element="group" class="col">
-          <h3
-            data-animation-element="title"
-            class="h1"
-            style=""
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                Branding
-              </div>
-            </div>
-          </h3>
-        </div> -->
-      </div>
+      <div class="row"></div>
       <div class="sticky-pair">
         <div class="w-layout-grid pair-grid">
           <div id="w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307">
@@ -1311,35 +1108,7 @@
   </section>
   <section class="section">
     <div class="container over-h">
-      <div class="row">
-        <!-- <div data-animation-element="group" class="col">
-          <h3
-            data-animation-element="title"
-            class="h1"
-            style=""
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                Branding
-              </div>
-            </div>
-          </h3>
-        </div> -->
-      </div>
+      <div class="row"></div>
       <div class="sticky-pair">
         <div class="w-layout-grid pair-grid is-leading">
           <div
@@ -1505,35 +1274,7 @@
   </section>
   <section class="section">
     <div class="container over-h">
-      <div class="row">
-        <!-- <div data-animation-element="group" class="col">
-          <h3
-            data-animation-element="title"
-            class="h1"
-            style=""
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div
-              class="u-overflow-hidden"
-              style="display: block; text-align: start; position: relative"
-            >
-              <div
-                style="
-                  position: relative;
-                  display: inline-block;
-                  translate: none;
-                  rotate: none;
-                  scale: none;
-                  transform: translate(0px, 0%);
-                "
-              >
-                Branding
-              </div>
-            </div>
-          </h3>
-        </div> -->
-      </div>
+      <div class="row"></div>
       <div class="sticky-pair">
         <div class="w-layout-grid pair-grid">
           <div id="w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307">
@@ -1658,15 +1399,7 @@
             id="w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307"
             class="content is-grid"
           >
-            <div
-              class="content-p cc-1"
-              style="
-                transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-                opacity: 1;
-              "
-            >
+            <div class="content-p cc-1">
               <p class="u-ts-3" data-aos="fade-up" data-aos-duration="800">
                 名檜檀香大茶席 清宮唐漢當代藝術風格揉和 冠軍藏茶名件庫
                 童趣寰宇天馬櫃
@@ -1719,14 +1452,7 @@
         >
           <div class="section-title_dot" style="opacity: 1"></div>
           <div class="u-overflow-hidden">
-            <div
-              class="section-title_title"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="section-title_title">
               <h2 class="u-ts-4">Contact Us</h2>
             </div>
           </div>
@@ -1764,55 +1490,7 @@
                     transform: translate(0px, 0%);
                   "
                 >
-                  Have
-                </div>
-                <div
-                  style="
-                    position: relative;
-                    display: inline-block;
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    transform: translate(0px, 0%);
-                  "
-                >
-                  a
-                </div>
-                <div
-                  style="
-                    position: relative;
-                    display: inline-block;
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    transform: translate(0px, 0%);
-                  "
-                >
-                  project
-                </div>
-                <div
-                  style="
-                    position: relative;
-                    display: inline-block;
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    transform: translate(0px, 0%);
-                  "
-                >
-                  in
-                </div>
-                <div
-                  style="
-                    position: relative;
-                    display: inline-block;
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    transform: translate(0px, 0%);
-                  "
-                >
-                  mind?
+                  開始預約
                 </div>
               </div>
               <div
@@ -1822,7 +1500,6 @@
                 <a
                   data-aos="fade-up"
                   data-aos-duration="700"
-                  href="mailto:hello@basis.work"
                   style="
                     translate: none;
                     rotate: none;
@@ -1831,7 +1508,7 @@
                   "
                 >
                   <div style="position: relative; display: inline-block">
-                    hello@basis.work
+                    Book@shaochichan.com
                   </div>
                 </a>
               </div>
@@ -1844,112 +1521,6 @@
   <!-- --- -->
   <div>
     <aside class="pre-footer">
-      <!-- <div
-        data-mouse-text="Read Next"
-        data-mouse-class="cc-text"
-        class="section cc-pre-footer w-inline-block"
-      >
-        <div class="iframe-video_wrapper">
-          <iframe
-            src="https://app.vidzflow.com/v/RLLcIipF9Q?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          ></iframe>
-          <div class="iframe-video_blocker"></div>
-        </div>
-        <div class="pre-footer_gradient"></div>
-        <div class="marquee">
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-          </div>
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-71.505%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Case Studies&nbsp;</div>
-            </div>
-          </div>
-        </div>
-        <div class="pre-footer_button">
-          <div class="btn cc-large-landscape">
-            <div class="btn-text-wrap">
-              <div class="btn-text cc-large-landscape">REad Next</div>
-              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <div
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
@@ -1972,83 +1543,25 @@
         </div>
         <div class="pre-footer_gradient"></div>
         <div class="marquee">
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-69%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+          <div class="marquee_content cc-text transparent">
+            <div class="marquee_item cc-1">
               <div class="h1">Design Trial&nbsp;</div>
             </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="marquee_item cc-2">
               <div class="h1">Design Trial&nbsp;</div>
             </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="marquee_item cc-3">
               <div class="h1">Design Trial&nbsp;</div>
             </div>
           </div>
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              will-change: transform;
-              transform: translate3d(-69%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-            "
-          >
-            <div
-              class="marquee_item cc-1"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+          <div class="marquee_content cc-text transparent">
+            <div class="marquee_item cc-1">
               <div class="h1">Design Trial&nbsp;</div>
             </div>
-            <div
-              class="marquee_item cc-2"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="marquee_item cc-2">
               <div class="h1">Design Trial&nbsp;</div>
             </div>
-            <div
-              class="marquee_item cc-3"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
+            <div class="marquee_item cc-3">
               <div class="h1">Design Trial&nbsp;</div>
             </div>
           </div>
@@ -2077,6 +1590,8 @@ import { onMounted, computed } from "vue";
 import { getVideoUrl } from "@/unit/getVideoUrl";
 import { getImageUrl } from "@/unit/getImageUrl";
 import Marquee from "@/widgets/layout/marquee.vue";
+import { useI18n } from "@/hooks/use-i18n";
+
 export default {
   components: {
     Footer,
@@ -2086,6 +1601,10 @@ export default {
   setup() {
     const store = useStore(); //啟用vuex
     const isLoading = computed(() => store.state.app.isLoading);
+    const { t, setPrefix } = useI18n();
+    setPrefix({
+      $current: "pages.index",
+    });
     const hideHorizontalIcon = ref(true);
     // 475 768 991
     const scrollPosition = (e) => {
@@ -2141,6 +1660,7 @@ export default {
       scrollPosition,
       hideHorizontalIcon,
       scroll_Left,
+      t,
     };
   },
 };

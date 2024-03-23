@@ -1,7 +1,7 @@
 <template>
   <div class="loadpercent" :style="{ animation: animationStyle }">
-    <div class="loadpercent-percent">{{ `${options.animationPercent}%` }}</div>
-    <img :src="getImageUrl('favicon.png')" alt="" />
+    <div class="loadpercent-percent">{{ `${options.animationPercent} %` }}</div>
+    <img :src="getImageUrl('logo_icon.png')" alt="" />
     <div class="loadpercent-mask" :style="{ left: options.position }"></div>
   </div>
 </template>
@@ -102,7 +102,11 @@ watch(
           if (isLast) options.animationPercent = 100;
         }
         if (options.animationPercent === 100) {
-          leaveAnimation();
+          setTimeout(() => {
+            // 在這裡放置需要暫停半秒後執行的程式碼
+            console.log("暫停半秒後執行");
+            leaveAnimation();
+          }, 500); // 500 毫秒等於半秒
         }
       }, delay);
       delay += 100; // 增加延迟，以实现逐步更新的效果
