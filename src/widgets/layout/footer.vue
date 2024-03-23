@@ -23,7 +23,7 @@
                   href="https://www.facebook.com/skyart7325?mibextid=AEUHqQ"
                   target="_blank"
                   class="footer_link w-inline-block"
-                  ><div class="u-ts-3">Instagram</div></a
+                  ><div class="u-ts-3">Facebook</div></a
                 >
               </li>
               <li class="footer_list-item">

@@ -45,8 +45,10 @@
     <div class="btn-contain btn-contain-scroll">
       <div class="btn-scroll w-inline-block" @click="scrollDown">
         <div class="btn-text-wrap">
-          <div class="btn-text cc-scroll">請往下滑</div>
-          <div class="btn-text cc-bottom cc-scroll">請往下滑</div>
+          <div class="btn-text cc-scroll">{{ t("$current.scroll.btn") }}</div>
+          <div class="btn-text cc-bottom cc-scroll">
+            {{ t("$current.scroll.btn") }}
+          </div>
         </div>
         <div class="btn-icon cc-small w-embed">
           <svg
@@ -73,8 +75,13 @@ import { useStore } from "vuex";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { getImageUrl } from "@/unit/getImageUrl";
-const store = useStore();
+import { useI18n } from "@/hooks/use-i18n";
 
+const store = useStore();
+const { t, setPrefix } = useI18n();
+setPrefix({
+  $current: "pages.index",
+});
 /**
  *  parallax
  *  @desc 視差特效

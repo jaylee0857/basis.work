@@ -30,6 +30,16 @@
           </div>
         </div>
       </li>
+      <div>
+        <div style="color: red"></div>
+        <label class="switch">
+          <input type="checkbox" class="cb" v-model="langSwitch" />
+          <span class="toggle" @click="changeLang">
+            <span class="left">TW</span>
+            <span class="right">CN</span>
+          </span>
+        </label>
+      </div>
       <div
         class="move-item"
         :style="{
@@ -44,15 +54,34 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, reactive } from "vue";
 import { useRouter } from "vue-router";
+import { useI18n } from "@/hooks/use-i18n";
+
 const activeIndex = ref(1);
+const langSwitch = ref(false);
 
 const isLeft = ref(true);
 const router = useRouter();
 const props = defineProps(["isOpen"]);
 const emits = defineEmits(["toggleOpen"]);
 // const isMove = ref(false);
+const { locale, change } = useI18n();
+
+const lang = reactive({
+  current: locale.value || "zh-tw",
+});
+if (locale.value !== "zh-tw") langSwitch.value = true;
+console.log("預設", locale.value);
+const changeLang = () => {
+  const changed = lang.current === "zh-tw" ? "zh-cn" : "zh-tw";
+  lang.current = changed;
+  change(changed);
+  console.log("asd", locale);
+
+  // lang.current = changed;
+  // storage.set("locale", changed);
+};
 const menu = ref([
   {
     title: "Overview",

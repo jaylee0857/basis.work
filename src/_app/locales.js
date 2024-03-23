@@ -21,5 +21,5 @@ for (let path in files) {
     R.keys(fileObj)
   );
 }
-
+console.log(messages);
 export default messages;
