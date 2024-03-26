@@ -94,10 +94,13 @@ onMounted(() => {
 </script>
 <style scoped>
 .position {
-  right: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 50px 0 auto;
 }
 @media screen and (max-width: 991px) {
   .position {
+    margin: unset;
     /* position: relative; */
   }
 }

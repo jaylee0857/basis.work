@@ -64,10 +64,10 @@
               </li>
               <li class="footer_list-item">
                 <a
-                  @click="goToAboutPage('/collation')"
+                  @click="goToAboutPage('/collection')"
                   aria-current="page"
                   class="footer_link w-inline-block w--current"
-                  ><div class="u-ts-3">Collation</div></a
+                  ><div class="u-ts-3">Collection</div></a
                 >
               </li>
             </ul>

@@ -52,7 +52,7 @@
         <span class="off">CN</span>
       </div>
     </div>
-    <div id="pink_mask"></div>
+    <div id="pink_mask" @click="click_mask"></div>
   </div>
 </template>
 
@@ -105,10 +105,10 @@ const menu = ref([
     path: "/service", // 添加路径属性
   },
   {
-    title: "Collation",
+    title: "Collection",
     content:
       "Meet Basis. We increase the value of digital products and their brands through design",
-    path: "/collation", // 添加路径属性
+    path: "/collection", // 添加路径属性
   },
 ]);
 
@@ -128,6 +128,10 @@ const moveRight = computed(() => {
 });
 
 const mvoeWidth = ref(25);
+
+const click_mask = () => {
+  emits("toggleOpen", props.isOpen);
+};
 
 const goToAboutPage = (path) => {
   router.push(path);
@@ -162,7 +166,7 @@ const enterIndex = (index) => {
   display: flex;
   justify-content: center;
   margin: 30px 0;
-  /* display: none; */
+  display: none;
 }
 @media screen and (max-width: 991px) {
   .position {

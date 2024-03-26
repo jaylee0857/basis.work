@@ -96,7 +96,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: stretch;
-      height: calc(100% - 5%);
+      height: 100%;
       margin: 0 2em 0;
       @media screen and (max-width: 991px) {
         height: auto;
