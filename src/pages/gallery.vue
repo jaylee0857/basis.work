@@ -2,12 +2,12 @@
   <div id="cases" class="wrap">
     <!-- pc -->
     <div class="cases-slider">
-      <h1 id="case-title">Case</h1>
+      <h1 id="case-title">Gallery</h1>
       <div role="list" class="cases-list w-dyn-items container">
         <div role="listitem" class="cases-item w-dyn-item">
           <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
-              <img
+              <!-- <img
                 src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"
                 loading="lazy"
                 alt=""
@@ -17,65 +17,127 @@
                 loading="eager"
                 alt=""
                 class="cases-landscape"
-              />
+              /> -->
               <div class="iframe-video_wrapper">
                 <iframe
                   class="iframe-video_iframe"
                   width="100%"
                   height="100%"
-                  style="overflow: hidden"
+                  src="https://app.vidzflow.com/v/g9XwDuXxnj?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                  title="C0084"
+                  style="aspect-ratio: 1.77777778; overflow: hidden"
                   frameborder="0"
                   scrolling="no"
                   allow="fullscreen"
-                  src="https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                  title="Sable 12"
-                  loading="lazy"
                 ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Sable Brand</div>
+              <div class="u-ts-2">{{ t("$current.item.g1") }}</div>
             </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
+          >
+        </div>
+        <div role="listitem" class="cases-item w-dyn-item">
+          <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
+                :src="getImageUrl('gallery/g2.jpg')"
+                loading="lazy"
+                alt=""
+                class="cases-portrait"
+              /><img
+                :src="getImageUrl('gallery/g2.jpg')"
+                loading="eager"
+                alt=""
+                class="cases-landscape"
+              />
+              <div class="iframe-video_wrapper">
+                <div class="iframe-video_blocker"></div>
+              </div>
+            </div>
+            <div class="cases-text">
+              <div class="u-ts-2">{{ t("$current.item.g2") }}</div>
+            </div></a
+          >
+        </div>
+        <div role="listitem" class="cases-item w-dyn-item">
+          <a class="cases-card cc-immediate w-inline-block"
+            ><div class="cases-assets">
+              <img
+                :src="getImageUrl('gallery/g3.jpg')"
+                loading="lazy"
+                alt=""
+                class="cases-portrait"
+              /><img
+                :src="getImageUrl('gallery/g3.jpg')"
+                loading="eager"
+                alt=""
+                class="cases-landscape"
+              />
+              <div class="iframe-video_wrapper">
+                <div class="iframe-video_blocker"></div>
+              </div>
+            </div>
+            <div class="cases-text">
+              <div class="u-ts-2">{{ t("$current.item.g3") }}</div>
+            </div></a
+          >
+        </div>
+        <div role="listitem" class="cases-item w-dyn-item">
+          <a class="cases-card cc-immediate w-inline-block"
+            ><div class="cases-assets">
+              <img
+                :src="getImageUrl('gallery/g4.jpg')"
+                loading="lazy"
+                alt=""
+                class="cases-portrait"
+              /><img
+                :src="getImageUrl('gallery/g4.jpg')"
+                loading="eager"
+                alt=""
+                class="cases-landscape"
+              />
+              <div class="iframe-video_wrapper">
+                <div class="iframe-video_blocker"></div>
+              </div>
+            </div>
+            <div class="cases-text">
+              <div class="u-ts-2">{{ t("$current.item.g4") }}</div>
+            </div></a
+          >
+        </div>
+        <div role="listitem" class="cases-item w-dyn-item">
+          <a class="cases-card cc-immediate w-inline-block"
+            ><div class="cases-assets">
+              <!-- <img
                 src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"
                 loading="lazy"
                 alt=""
-                class="cases-portrait w-condition-invisible"
+                class="cases-portrait"
               /><img
                 src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg"
-                loading="lazy"
+                loading="eager"
                 alt=""
-                class="cases-landscape w-condition-invisible"
-              />
-              <div>
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    src="https://app.vidzflow.com/v/UGKXt1XIZz?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                    title="Sable 12"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
+                class="cases-landscape"
+              /> -->
+              <div class="iframe-video_wrapper">
+                <iframe
+                  class="iframe-video_iframe"
+                  width="100%"
+                  height="100%"
+                  src="https://app.vidzflow.com/v/B8VWeYDzBp?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                  title="C0075"
+                  style="aspect-ratio: 1.77777778; overflow: hidden"
+                  frameborder="0"
+                  scrolling="no"
+                  allow="fullscreen"
+                ></iframe>
+                <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Sable Brand</div>
+              <div class="u-ts-2">{{ t("$current.item.g5") }}</div>
             </div></a
           >
         </div>
@@ -83,70 +145,57 @@
           <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g6.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g6.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
+                <div class="iframe-video_blocker"></div>
+              </div>
+            </div>
+            <div class="cases-text">
+              <div class="u-ts-2">{{ t("$current.item.g6") }}</div>
+            </div></a
+          >
+        </div>
+        <div role="listitem" class="cases-item w-dyn-item">
+          <a class="cases-card cc-immediate w-inline-block"
+            ><div class="cases-assets">
+              <!-- <img
+                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"
+                loading="lazy"
+                alt=""
+                class="cases-portrait"
+              /><img
+                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg"
+                loading="eager"
+                alt=""
+                class="cases-landscape"
+              /> -->
+
+              <div class="iframe-video_wrapper">
                 <iframe
                   class="iframe-video_iframe"
                   width="100%"
                   height="100%"
-                  style="overflow: hidden"
+                  src="https://app.vidzflow.com/v/RYnx2mTnRD?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                  title="C0074"
+                  style="aspect-ratio: 1.77777778; overflow: hidden"
                   frameborder="0"
                   scrolling="no"
                   allow="fullscreen"
-                  loading="lazy"
                 ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Sable Website</div>
-            </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb98e7_sable-website-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c0606ca89b57014cb9903_sable-website-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Sable Website</div>
+              <div class="u-ts-2">{{ t("$current.item.g7") }}</div>
             </div></a
           >
         </div>
@@ -154,146 +203,22 @@
           <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g8.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g8.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  src="https://app.vidzflow.com/v/XBaN1uMmvl?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                  title="Seen 1"
-                  loading="lazy"
-                ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Seen Brand</div>
-            </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a8348a_seen-brand-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait w-condition-invisible"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f3258f562682a834cc_seen-brand-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape w-condition-invisible"
-              />
-              <div>
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    src="https://app.vidzflow.com/v/XBaN1uMmvl?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                    title="Seen 1"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Seen Brand</div>
-            </div></a
-          >
-        </div>
-        <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815259b_google-website-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815258d_google-website-card-image-mobile.jpeg"
-                loading="eager"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
-                <div class="iframe-video_blocker"></div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="u-ts-2">Google Website</div>
-            </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815259b_google-website-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059ddfa369d3d815258d_google-website-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Google Website</div>
+              <div class="u-ts-2">{{ t("$current.item.g8") }}</div>
             </div></a
           >
         </div>
@@ -301,90 +226,56 @@
           <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg"
+                :src="getImageUrl('gallery/g9.jpg')"
                 loading="lazy"
                 alt=""
-                sizes="(max-width: 991px) 100vw, 23vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg       652w
-                "
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg"
+                :src="getImageUrl('gallery/g9.jpg')"
                 loading="eager"
                 alt=""
-                sizes="(max-width: 479px) 97vw, (max-width: 991px) 98vw, 100vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg       718w
-                "
                 class="cases-landscape"
               />
+              <div class="iframe-video_wrapper">
+                <div class="iframe-video_blocker"></div>
+              </div>
+            </div>
+            <div class="cases-text">
+              <div class="u-ts-2">{{ t("$current.item.g9") }}</div>
+            </div></a
+          >
+        </div>
+        <div role="listitem" class="cases-item w-dyn-item">
+          <a class="cases-card cc-immediate w-inline-block"
+            ><div class="cases-assets">
+              <!-- <img
+                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac028b_sable-brand-card-image-desktop.jpeg"
+                loading="lazy"
+                alt=""
+                class="cases-portrait"
+              /><img
+                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06018a35c585faac023c_sable-brand-card-image-mobile.jpeg"
+                loading="eager"
+                alt=""
+                class="cases-landscape"
+              /> -->
               <div class="iframe-video_wrapper">
                 <iframe
                   class="iframe-video_iframe"
                   width="100%"
                   height="100%"
-                  style="overflow: hidden"
+                  src="https://app.vidzflow.com/v/gdi5fIV5zR?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                  title="C0056"
+                  style="aspect-ratio: 1.77777778; overflow: hidden"
                   frameborder="0"
                   scrolling="no"
                   allow="fullscreen"
-                  loading="lazy"
                 ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Yoginess Website</div>
-            </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg"
-                loading="lazy"
-                alt=""
-                sizes="100vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783388d56c18890761b05_yoginess-website-card-image-desktop.jpg       652w
-                "
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg"
-                loading="lazy"
-                alt=""
-                sizes="100vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7833c017d36c1b76d13d8_yoginess-website-card-image-mobile.jpg       718w
-                "
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Yoginess Website</div>
+              <div class="u-ts-2">{{ t("$current.item.g10") }}</div>
             </div></a
           >
         </div>
@@ -392,604 +283,114 @@
           <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8a96_yoginess-brand-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g11.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8ac2_yoginess-brand-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g11.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  src="https://app.vidzflow.com/v/XqnSO3RNUV?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                  title="Yoginess 1"
-                  loading="lazy"
-                ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Yoginess Brand</div>
-            </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8a96_yoginess-brand-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait w-condition-invisible"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060f54192514006e8ac2_yoginess-brand-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape w-condition-invisible"
-              />
-              <div>
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    src="https://app.vidzflow.com/v/XqnSO3RNUV?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                    title="Yoginess 1"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Yoginess Brand</div>
+              <div class="u-ts-2">{{ t("$current.item.g11") }}</div>
             </div></a
           >
         </div>
         <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
+          <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b9665872077_airbnb-website-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g12.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b966587207a_airbnb-website-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g12.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Airbnb Website</div>
-            </div></a
-          ><link rel="prerender" /><a
-            class="cases-card cc-immediate w-inline-block"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b9665872077_airbnb-website-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c059b2c206b966587207a_airbnb-website-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Airbnb Website</div>
+              <div class="u-ts-2">{{ t("$current.item.g12") }}</div>
             </div></a
           >
         </div>
         <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            href="/cases/sable-app"
-            class="cases-card cc-immediate w-inline-block"
+          <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g13.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g13.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
-            <div class="cases-text"><div class="u-ts-2">Sable App</div></div></a
-          ><link rel="prerender" href="/cases/sable-app" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a40b8_sable-app-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05f88a1a481cbc7a4099_sable-app-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
             <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Sable App</div>
+              <div class="u-ts-2">{{ t("$current.item.g13") }}</div>
             </div></a
           >
         </div>
         <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            href="/cases/seen-website"
-            class="cases-card cc-immediate w-inline-block"
+          <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06136822989dcad4c306_seen-website-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g14.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06126822989dcad4c2b7_seen-website-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g14.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Seen Website</div>
-            </div></a
-          ><link rel="prerender" href="/cases/seen-website" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06136822989dcad4c306_seen-website-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c06126822989dcad4c2b7_seen-website-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Seen Website</div>
+              <div class="u-ts-2">{{ t("$current.item.g14") }}</div>
             </div></a
           >
         </div>
         <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            href="/cases/gaffa-brand-and-website"
-            class="cases-card cc-immediate w-inline-block"
+          <a class="cases-card cc-immediate w-inline-block"
             ><div class="cases-assets">
               <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758ca_gaffa-brand-and-website-card-image-desktop.jpeg"
+                :src="getImageUrl('gallery/g15.jpg')"
                 loading="lazy"
                 alt=""
                 class="cases-portrait"
               /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758d0_gaffa-brand-and-website-card-image-mobile.jpeg"
+                :src="getImageUrl('gallery/g15.jpg')"
                 loading="eager"
                 alt=""
                 class="cases-landscape"
               />
               <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  src="https://app.vidzflow.com/v/kSzWdGIKBr?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                  title="Gaffa 2"
-                  loading="lazy"
-                ></iframe>
                 <div class="iframe-video_blocker"></div>
               </div>
             </div>
             <div class="cases-text">
-              <div class="u-ts-2">Gaffa Brand &amp; Website</div>
-            </div></a
-          ><link rel="prerender" href="/cases/gaffa-brand-and-website" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758ca_gaffa-brand-and-website-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait w-condition-invisible"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c060c799046de5a4758d0_gaffa-brand-and-website-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape w-condition-invisible"
-              />
-              <div>
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    src="https://app.vidzflow.com/v/kSzWdGIKBr?dq=1080&amp;ap=true&amp;muted=true&amp;loop=true&amp;ctp=false&amp;bv=true&amp;bc=%234E5FFD&amp;controls=false"
-                    title="Gaffa 2"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Gaffa Brand &amp; Website</div>
-            </div></a
-          >
-        </div>
-        <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            href="/cases/seen-app"
-            class="cases-card cc-immediate w-inline-block"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 991px) 100vw, 23vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg       652w
-                "
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg"
-                loading="eager"
-                alt=""
-                sizes="(max-width: 479px) 97vw, (max-width: 991px) 98vw, 100vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg       718w
-                "
-                class="cases-landscape"
-              />
-              <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
-                <div class="iframe-video_blocker"></div>
-              </div>
-            </div>
-            <div class="cases-text"><div class="u-ts-2">Seen App</div></div></a
-          ><link rel="prerender" href="/cases/seen-app" /><a
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg"
-                loading="lazy"
-                alt=""
-                sizes="100vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b783257a29dbaf17b966f2_seen-app-card-image-desktop.jpg       652w
-                "
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg"
-                loading="lazy"
-                alt=""
-                sizes="100vw"
-                srcset="
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile-p-500.jpg 500w,
-                  https://assets-global.website-files.com/6584502438fea068af552349/65b7832af68a6b0d31f2caec_seen-app-card-image-mobile.jpg       718w
-                "
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Seen App</div>
-            </div></a
-          >
-        </div>
-        <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            href="/cases/pc-financial-app"
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f89_pc-financial-app-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f85_pc-financial-app-card-image-mobile.jpeg"
-                loading="eager"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
-                <div class="iframe-video_blocker"></div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="u-ts-2">PC Financial App</div>
-            </div></a
-          ><link rel="prerender" href="/cases/pc-financial-app" /><a
-            class="cases-card cc-immediate w-inline-block"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f89_pc-financial-app-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a12be233804d8b2f85_pc-financial-app-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">PC Financial App</div>
-            </div></a
-          >
-        </div>
-        <div role="listitem" class="cases-item w-dyn-item">
-          <a
-            href="/cases/red-bull-app"
-            class="cases-card cc-immediate w-inline-block w-condition-invisible"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f098_red-bull-app-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f09c_red-bull-app-card-image-mobile.jpeg"
-                loading="eager"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="iframe-video_wrapper">
-                <iframe
-                  class="iframe-video_iframe"
-                  width="100%"
-                  height="100%"
-                  style="overflow: hidden"
-                  frameborder="0"
-                  scrolling="no"
-                  allow="fullscreen"
-                  loading="lazy"
-                ></iframe>
-                <div class="iframe-video_blocker"></div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="u-ts-2">Red Bull App</div>
-            </div></a
-          ><link rel="prerender" href="/cases/red-bull-app" /><a
-            class="cases-card cc-immediate w-inline-block"
-            ><div class="cases-assets">
-              <img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f098_red-bull-app-card-image-desktop.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-portrait"
-              /><img
-                src="https://assets-global.website-files.com/6584502438fea068af552349/659c05a4e59bf0c2c753f09c_red-bull-app-card-image-mobile.jpeg"
-                loading="lazy"
-                alt=""
-                class="cases-landscape"
-              />
-              <div class="w-condition-invisible">
-                <div class="iframe-video_wrapper">
-                  <iframe
-                    class="iframe-video_iframe"
-                    width="100%"
-                    height="100%"
-                    style="overflow: hidden"
-                    frameborder="0"
-                    scrolling="no"
-                    allow="fullscreen"
-                    loading="lazy"
-                  ></iframe>
-                  <div class="iframe-video_blocker"></div>
-                </div>
-              </div>
-            </div>
-            <div class="cases-text">
-              <div class="cases-more">
-                <div class="u-ts-6 u-tc-caps u-text-accent1">
-                  Contact us<span class="hide-tablet"> for more</span>
-                </div>
-              </div>
-              <div class="u-ts-2">Red Bull App</div>
+              <div class="u-ts-2">{{ t("$current.item.g15") }}</div>
             </div></a
           >
         </div>
@@ -1090,7 +491,10 @@
   <div class="container mobile-show">
     <div class="target_line"></div>
   </div>
-  <section class="section mobile-show">
+  <template class="mobile-show">
+    <ContactUs></ContactUs>
+  </template>
+  <!-- <section class="section mobile-show">
     <div class="section-title_component">
       <div class="container">
         <div
@@ -1201,7 +605,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <Footer class="mobile-show"></Footer>
 </template>
 
@@ -1211,14 +615,20 @@ import Footer from "@/widgets/layout/footer.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { onMounted } from "vue";
+import { getImageUrl } from "@/unit/getImageUrl";
+import ContactUs from "@/widgets/layout/contact-us.vue";
 
 export default {
   title: "pages.home.nav.about",
   components: {
     Footer,
+    ContactUs,
   },
   setup() {
-    const { t } = useI18n();
+    const { t, setPrefix } = useI18n();
+    setPrefix({
+      $current: "pages.gallery",
+    });
     const horizontal_movement = () => {
       let cases = document.querySelector("#cases");
       cases.addEventListener("wheel", (event) => {
@@ -1252,6 +662,7 @@ export default {
     });
     return {
       t,
+      getImageUrl,
     };
   },
 };

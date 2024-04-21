@@ -3029,7 +3029,7 @@ strong {
 }
 .card-image_wrapper {
   border-radius: 6px;
-  padding-bottom: 75%;
+  padding-bottom: 50%;
   position: relative;
   overflow: hidden;
 }
@@ -4453,8 +4453,8 @@ strong {
     font-size: 2rem;
   }
   .section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
   }
   .section.cc-short {
     padding-top: 4rem;
@@ -4660,8 +4660,8 @@ strong {
     object-fit: contain;
   }
   .section-title_component {
-    margin-top: -4.5rem;
-    margin-bottom: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .home-hero_gradient {
     height: 6rem;
@@ -4876,7 +4876,7 @@ strong {
     bottom: 0%;
     left: auto;
     right: 0%;
-    transform: translate(0, 50%);
+    transform: translateY(-50%);
   }
   .mobile-scroll_cta {
     width: 5rem;
@@ -4898,8 +4898,8 @@ strong {
     display: flex;
   }
   .apps_component {
-    padding-top: 3.5rem;
-    padding-bottom: 6rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     position: relative;
   }
   .faq-heading {

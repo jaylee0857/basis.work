@@ -182,7 +182,7 @@ const imagesOption = ref([
       width: "21.1vw",
       height: "26.3vw",
       m_width: "43.5vw",
-      m_height: "54vw",
+      m_height: "40vw",
       left: "51%",
       top: "27%",
       m_right: "25%",

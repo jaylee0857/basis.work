@@ -18,9 +18,11 @@ import directives from "@/_app/directives";
 // import "./assets/css/studio-basis.webflow.min.css";
 import "./assets/main.scss";
 import "@fortawesome/fontawesome-free/js/all";
+import Vue3Marquee from "vue3-marquee";
 
 // import drag from "@/_app/buoyMove";
 const app = createApp(App);
+app.use(Vue3Marquee);
 app.provide("$jQuery", jquery);
 app.provide("$swal", sweetalert);
 app.provide("$storage", storage);

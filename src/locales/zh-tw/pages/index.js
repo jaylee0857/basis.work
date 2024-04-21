@@ -26,7 +26,7 @@ export default {
   "center.item1.content":
     "全一體玉石材打磨茶席區 檀木櫃體工學皮椅 老件禪師座鋪開花語道品絕品茶賞 湄洲媽祖聖像對飲",
   "center.item2.name": "凌空暇思茶席",
-  "center.item2.info": "4-6人",
+  "center.item2.info": "創辦人多寶閣",
   "center.item2.content":
     "寬面開闊原石桌 讀花掬茶布置餐酒多變間 原木藝品書畫櫃單體歐廚水槽",
   "center.item3.name": "名畫酒廊劇院區",
@@ -42,7 +42,9 @@ export default {
   "btn.Inquire": "館藏查詢",
   "btn.reserve": "預約參觀",
   "btn.spaceinfo": "空間介紹",
-  "btn.reservenow": "立即預約",
+  "btn.reservenow": "館藏查詢",
   "btn.artinfo": "藝品介紹",
   "btn.learnMore": "了解更多",
+  "readme.marquee": "掬瑕彩見大千 目中定睛得宇宙 精品玄青天目百碗展",
+  "readme.btn": "策展訊息",
 };

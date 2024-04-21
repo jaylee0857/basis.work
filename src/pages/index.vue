@@ -111,7 +111,6 @@
               "
             >
               <a
-                href="/about"
                 class="btn cc-secondary w-inline-block"
                 data-aos="fade-left"
                 data-aos-duration="1000"
@@ -478,7 +477,6 @@
             <div class="btn-group">
               <div class="btn-item cc-1">
                 <a
-                  href="/about"
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -586,10 +584,7 @@
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
-                  <a
-                    data-mouse-class="cc-text"
-                    href="/cases/seen-app"
-                    class="apps_link w-inline-block"
+                  <a data-mouse-class="cc-text" class="apps_link w-inline-block"
                     ><img
                       alt=""
                       loading="lazy"
@@ -611,10 +606,7 @@
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
-                  <a
-                    data-mouse-class="cc-text"
-                    href="/cases/seen-app"
-                    class="apps_link w-inline-block"
+                  <a data-mouse-class="cc-text" class="apps_link w-inline-block"
                     ><img
                       alt=""
                       loading="lazy"
@@ -704,10 +696,7 @@
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
-                  <a
-                    data-mouse-class="cc-text"
-                    href="/cases/seen-app"
-                    class="apps_link w-inline-block"
+                  <a data-mouse-class="cc-text" class="apps_link w-inline-block"
                     ><img
                       alt=""
                       loading="lazy"
@@ -729,10 +718,7 @@
             >
               <div role="list" class="w-dyn-items">
                 <div role="listitem" class="w-dyn-item">
-                  <a
-                    data-mouse-class="cc-text"
-                    href="/cases/seen-app"
-                    class="apps_link w-inline-block"
+                  <a data-mouse-class="cc-text" class="apps_link w-inline-block"
                     ><img
                       alt=""
                       loading="lazy"
@@ -769,7 +755,7 @@
     </div>
   </section>
   <!-- -- -->
-  <section class="section">
+  <section class="section mt-[1rem]">
     <div class="container">
       <div class="row">
         <div data-animation-element="group" class="col">
@@ -936,7 +922,6 @@
             <div class="btn-group">
               <div class="btn-item cc-1">
                 <a
-                  href="/fintech-design"
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -953,7 +938,6 @@
               </div>
               <div class="btn-item cc-2">
                 <a
-                  href="/design-trial"
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1109,7 +1093,6 @@
             <div class="btn-group">
               <div class="btn-item cc-1">
                 <a
-                  href="/cases"
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1126,7 +1109,6 @@
               </div>
               <div class="btn-item cc-2">
                 <a
-                  href="/design-trial"
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1286,7 +1268,6 @@
             <div class="btn-group">
               <div class="btn-item cc-1">
                 <a
-                  href="/fintech-design"
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1303,7 +1284,6 @@
               </div>
               <div class="btn-item cc-2">
                 <a
-                  href="/design-trial"
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1463,7 +1443,6 @@
             <div class="btn-group">
               <div class="btn-item cc-1">
                 <a
-                  href="/cases"
                   class="btn w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1480,7 +1459,6 @@
               </div>
               <div class="btn-item cc-2">
                 <a
-                  href="/design-trial"
                   class="btn cc-secondary w-inline-block"
                   data-aos="fade-left"
                   data-aos-duration="1000"
@@ -1505,97 +1483,16 @@
   <div class="container">
     <div class="target_line"></div>
   </div>
-  <section class="section">
-    <div class="section-title_component">
-      <div class="container">
-        <div
-          class="section-title_wrapper"
-          data-aos="fade-up"
-          data-aos-duration="700"
-        >
-          <div class="section-title_dot" style="opacity: 1"></div>
-          <div class="u-overflow-hidden">
-            <div class="section-title_title">
-              <h2 class="u-ts-4">{{ t("$current.us.title") }}</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="w-layout-grid pair-grid">
-        <div
-          data-animation-element="group"
-          id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67"
-        >
-          <div
-            data-animation-element="rich-text"
-            id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67"
-            class="contact-cta w-richtext"
-          >
-            <h3
-              data-animation-element="title"
-              style=""
-              data-aos="fade-up"
-              data-aos-duration="700"
-            >
-              <div
-                class="u-overflow-hidden mb-6"
-                style="display: block; text-align: start; position: relative"
-              >
-                <div
-                  style="
-                    position: relative;
-                    display: inline-block;
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    transform: translate(0px, 0%);
-                  "
-                >
-                  {{ t("$current.us.reserve") }}
-                </div>
-              </div>
-              <div
-                class="u-overflow-hidden"
-                style="display: block; text-align: start; position: relative"
-              >
-                <a
-                  data-aos="fade-up"
-                  data-aos-duration="700"
-                  style="
-                    translate: none;
-                    rotate: none;
-                    scale: none;
-                    transform: translate(0px, 0%);
-                  "
-                >
-                  <div
-                    style="
-                      position: relative;
-                      display: inline-block;
-                      overflow: hidden;
-                    "
-                  >
-                    Book@shaochichan.com
-                  </div>
-                </a>
-              </div>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <ContactUs></ContactUs>
   <!-- --- -->
   <div>
-    <aside class="pre-footer">
+    <aside class="pre-footer readme">
       <div
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
         class="section cc-pre-footer w-inline-block"
       >
-        <div class="iframe-video_wrapper">
+        <!-- <div class="iframe-video_wrapper">
           <video
             class="video-cover"
             width="100%"
@@ -1609,37 +1506,17 @@
             Your browser does not support the video tag.
           </video>
           <div class="iframe-video_blocker"></div>
-        </div>
+        </div> -->
         <div class="pre-footer_gradient"></div>
-        <div class="marquee">
-          <div class="marquee_content cc-text transparent">
-            <div class="marquee_item cc-1">
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div class="marquee_item cc-2">
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div class="marquee_item cc-3">
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-          </div>
-          <div class="marquee_content cc-text transparent">
-            <div class="marquee_item cc-1">
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div class="marquee_item cc-2">
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div class="marquee_item cc-3">
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-          </div>
-        </div>
+        <Vue3Marquee :clone="true">
+          <div class="h1">{{ t("$current.readme.marquee") }}</div>
+        </Vue3Marquee>
         <div class="pre-footer_button">
           <div class="btn cc-large-landscape">
             <div class="btn-text-wrap">
-              <div class="btn-text cc-large-landscape">REad Next</div>
-              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
+              <div class="btn-text cc-large-landscape">
+                {{ t("$current.readme.btn") }}
+              </div>
             </div>
           </div>
         </div>
@@ -1654,18 +1531,23 @@ import { useStore } from "vuex";
 import "aos/dist/aos.css";
 import { ref } from "vue";
 import Footer from "@/widgets/layout/footer.vue";
+import ContactUs from "@/widgets/layout/contact-us.vue";
+
 import View from "@/widgets/home/view.vue";
 import { onMounted, computed } from "vue";
 import { getVideoUrl } from "@/unit/getVideoUrl";
 import { getImageUrl } from "@/unit/getImageUrl";
 import Marquee from "@/widgets/layout/marquee.vue";
 import { useI18n } from "@/hooks/use-i18n";
+import { Vue3Marquee } from "vue3-marquee";
 
 export default {
   components: {
     Footer,
     Marquee,
     View,
+    Vue3Marquee,
+    ContactUs,
   },
   setup() {
     const store = useStore(); //啟用vuex
@@ -1796,6 +1678,11 @@ AOS.init();
   @media (max-width: 768px) {
     transform: translate3d(0, 0, 0) !important;
   }
+}
+
+.readme {
+  background-image: url("@/assets/images/readme.jpg");
+  background-size: cover;
 }
 
 @keyframes line {

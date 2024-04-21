@@ -50,6 +50,7 @@
     "vue-advanced-cropper": "2.8.1",
     "vue-router": "4.0.0-rc.1",
     "vue3-lazyload": "0.3.6",
+    "vue3-marquee": "^4.2.0",
     "vue3-qr-reader": "1.0.0",
     "vue3-scroll-picker": "0.1.15",
     "vuex": "4.0.0-beta.4",
