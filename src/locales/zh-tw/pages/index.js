@@ -17,7 +17,7 @@ export default {
   "humanities.artwork3": "台灣高山冠軍茶",
   "humanities.artwork4": "雲南古樹普洱茶",
   "humanities.artwork5": "精品咖啡",
-  "humanities.artwork6": "天幕茶碗",
+  "humanities.artwork6": "天目茶碗",
   "humanities.artwork7": "典藏名酒",
   "artist.title": "館藏特約藝術家",
   "center.title": "拍賣中心",
