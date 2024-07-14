@@ -68,7 +68,9 @@
                   rotate: none;
                   scale: none;
                   transform: translate(0px, 0%);
+                  font-size: 2rem;
                 "
+                class="mt-8"
               >
                 {{ t("$current.introduce.title2") }}
               </div>
@@ -127,9 +129,9 @@
         </div>
       </div>
     </div>
-    <div class="u-mt-8-75">
+    <!-- <div class="u-mt-8-75">
       <Marquee></Marquee>
-    </div>
+    </div> -->
   </section>
   <!-- ------ -->
   <div class="container">
@@ -176,7 +178,8 @@
                 transform: translate(0px, 0%);
               "
             >
-              {{ t("$current.space.content") }}
+              {{ t("$current.space.content") }} <br />
+              {{ t("$current.space.content1") }}
             </div>
           </div>
         </h4>
@@ -437,7 +440,7 @@
                   </h3>
                 </div>
               </li>
-              <li
+              <!-- <li
                 class="u-overflow-hidden"
                 data-aos="fade-up"
                 data-aos-duration="700"
@@ -472,7 +475,7 @@
                     {{ t("$current.humanities.artwork7") }}
                   </h3>
                 </div>
-              </li>
+              </li> -->
             </ul>
             <div class="btn-group">
               <div class="btn-item cc-1">
@@ -566,7 +569,7 @@
                     ><img
                       alt=""
                       loading="lazy"
-                      :src="getImageUrl('home/img/10.jpg')"
+                      :src="getImageUrl('home/img/13.jpg')"
                   /></a>
                 </div>
               </div>
@@ -588,7 +591,7 @@
                     ><img
                       alt=""
                       loading="lazy"
-                      :src="getImageUrl('home/img/9.jpg')"
+                      :src="getImageUrl('home/img/14.jpg')"
                   /></a>
                 </div>
               </div>
@@ -678,7 +681,7 @@
                     ><img
                       alt=""
                       loading="lazy"
-                      :src="getImageUrl('home/img/10.jpg')"
+                      :src="getImageUrl('home/img/13.jpg')"
                   /></a>
                 </div>
               </div>
@@ -700,7 +703,7 @@
                     ><img
                       alt=""
                       loading="lazy"
-                      :src="getImageUrl('home/img/9.jpg')"
+                      :src="getImageUrl('home/img/14.jpg')"
                   /></a>
                 </div>
               </div>
@@ -1397,14 +1400,14 @@
                       <div class="card-image_wrapper">
                         <div class="iframe-video_wrapper">
                           <div
-                            data-video-id="7102"
+                            data-video-id="6997"
                             style="aspect-ratio: 1.77777778; overflow: hidden"
                           >
                             <iframe
                               width="100%"
                               height="100%"
-                              src="https://app.vidzflow.com/v/OA5cciSPdp?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
-                              title="C0003"
+                              src="https://app.vidzflow.com/v/rQwOMSuYOc?dq=576&ap=true&muted=true&loop=true&ctp=true&bv=false&piv=false&bc=%234E5FFD&controls=play-large%2Cplay%2Cprogress%2Ccurrent-time%2Cmute%2Cvolume%2Csettings%2Cfullscreen"
+                              title="C00117"
                               style="aspect-ratio: 1.77777778; overflow: hidden"
                               frameborder="0"
                               scrolling="no"
@@ -1492,21 +1495,6 @@
         data-mouse-class="cc-text"
         class="section cc-pre-footer w-inline-block"
       >
-        <!-- <div class="iframe-video_wrapper">
-          <video
-            class="video-cover"
-            width="100%"
-            height="100%"
-            autoplay
-            loop
-            muted
-            playsinline
-          >
-            <source :src="getVideoUrl('home/tea_1.mp4')" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="iframe-video_blocker"></div>
-        </div> -->
         <div class="pre-footer_gradient"></div>
         <Vue3Marquee :clone="true">
           <div class="h1">{{ t("$current.readme.marquee") }}</div>
@@ -1537,14 +1525,14 @@ import View from "@/widgets/home/view.vue";
 import { onMounted, computed } from "vue";
 import { getVideoUrl } from "@/unit/getVideoUrl";
 import { getImageUrl } from "@/unit/getImageUrl";
-import Marquee from "@/widgets/layout/marquee.vue";
+// import Marquee from "@/widgets/layout/marquee.vue";
 import { useI18n } from "@/hooks/use-i18n";
 import { Vue3Marquee } from "vue3-marquee";
 
 export default {
   components: {
     Footer,
-    Marquee,
+    // Marquee,
     View,
     Vue3Marquee,
     ContactUs,

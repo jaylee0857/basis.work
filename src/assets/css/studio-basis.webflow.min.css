@@ -1855,7 +1855,8 @@ textarea.w-select {
   display: grid;
 }
 :root {
-  --swatch--orange: rgba(237, 102, 23, 1);
+  --swatch--orange: black;
+  /* rgba(237, 102, 23, 1) */
   --swatch--black: black;
   --swatch--white: white;
   --swatch--primary: #ff76a2;

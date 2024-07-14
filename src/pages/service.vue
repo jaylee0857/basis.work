@@ -1226,117 +1226,26 @@
     </div>
   </section>
   <div>
-    <aside class="pre-footer">
-      <a
+    <aside class="pre-footer readme">
+      <div
         data-mouse-text="Read Next"
         data-mouse-class="cc-text"
         class="section cc-pre-footer w-inline-block"
-        ><div class="iframe-video_wrapper">
-          <video
-            class="video-cover"
-            width="100%"
-            height="100%"
-            autoplay
-            loop
-            muted
-          >
-            <source :src="getVideoUrl('home/tea_1.mp4')" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="iframe-video_blocker"></div>
-        </div>
+      >
         <div class="pre-footer_gradient"></div>
-        <div class="marquee">
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              transform: translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-              will-change: transform;
-            "
-          >
-            <div
-              class="marquee_item cc-1 transparent"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2 transparent"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3 transparent"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-          </div>
-          <div
-            class="marquee_content cc-text transparent"
-            style="
-              transform: translate3d(-53.25%, 0px, 0px) scale3d(1, 1, 1)
-                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-              transform-style: preserve-3d;
-              will-change: transform;
-            "
-          >
-            <div
-              class="marquee_item cc-1 transparent"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-2 transparent"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-            <div
-              class="marquee_item cc-3 transparent"
-              style="
-                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                transform-style: preserve-3d;
-              "
-            >
-              <div class="h1">Design Trial&nbsp;</div>
-            </div>
-          </div>
-        </div>
+        <Vue3Marquee :clone="true">
+          <div class="h1">{{ t("pages.index.readme.marquee") }}</div>
+        </Vue3Marquee>
         <div class="pre-footer_button">
           <div class="btn cc-large-landscape">
             <div class="btn-text-wrap">
-              <div class="btn-text cc-large-landscape">REad Next</div>
-              <div class="btn-text cc-bottom cc-large-landscape">Button</div>
+              <div class="btn-text cc-large-landscape">
+                {{ t("pages.index.readme.btn") }}
+              </div>
             </div>
           </div>
-        </div></a
-      >
+        </div>
+      </div>
     </aside>
   </div>
   <Footer></Footer>
@@ -1381,3 +1290,9 @@ export default {
   },
 };
 </script>
+<style scoped lang="scss">
+.readme {
+  background-image: url("@/assets/images/readme.jpg");
+  background-size: cover;
+}
+</style>

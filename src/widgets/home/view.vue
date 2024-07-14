@@ -110,21 +110,21 @@ const imagesOption = ref([
     },
     isEnter: true,
   },
-  {
-    url: "home/opening/2.jpg",
-    css: {
-      width: "16.5vw",
-      height: "21.3vw",
-      left: "11%",
-      top: "10%",
-      m_right: "3000px",
-      m_top: "0%",
-      transform: "translate3d(1px, 2px, 1px)",
-      enterAnimation: "zoomIn 1.5s forwards",
-      leaveAnimation: "fadeOut 1s forwards",
-    },
-    isEnter: true,
-  },
+  // {
+  //   url: "home/opening/2.jpg",
+  //   css: {
+  //     width: "16.5vw",
+  //     height: "21.3vw",
+  //     left: "11%",
+  //     top: "10%",
+  //     m_right: "3000px",
+  //     m_top: "0%",
+  //     transform: "translate3d(1px, 2px, 1px)",
+  //     enterAnimation: "zoomIn 1.5s forwards",
+  //     leaveAnimation: "fadeOut 1s forwards",
+  //   },
+  //   isEnter: true,
+  // },
   {
     url: "home/opening/3.jpg",
     css: {
@@ -245,21 +245,21 @@ const imagesOption = ref([
     },
     isEnter: true,
   },
-  {
-    url: "home/opening/10.jpg",
-    css: {
-      width: "21.3vw",
-      height: "16.6vw",
-      left: "86%",
-      top: "69%",
-      m_right: "30000px",
-      m_top: "0%",
-      transform: "translate3d(1px, 2px, 1px)",
-      enterAnimation: "zoomIn 1.5s forwards",
-      leaveAnimation: "fadeOut 1s forwards",
-    },
-    isEnter: true,
-  },
+  // {
+  //   url: "home/opening/10.jpg",
+  //   css: {
+  //     width: "21.3vw",
+  //     height: "16.6vw",
+  //     left: "86%",
+  //     top: "69%",
+  //     m_right: "30000px",
+  //     m_top: "0%",
+  //     transform: "translate3d(1px, 2px, 1px)",
+  //     enterAnimation: "zoomIn 1.5s forwards",
+  //     leaveAnimation: "fadeOut 1s forwards",
+  //   },
+  //   isEnter: true,
+  // },
 ]);
 
 const moveView = (e) => {

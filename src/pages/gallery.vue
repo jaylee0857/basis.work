@@ -698,7 +698,7 @@ export default {
     }
   }
   .cases-item {
-    background-color: rgba(237, 102, 23, 1);
+    background-color: var(--swatch--orange);
   }
   .cases-list {
     @media (max-width: 991px) {
