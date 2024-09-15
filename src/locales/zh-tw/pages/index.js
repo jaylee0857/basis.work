@@ -13,7 +13,8 @@ export default {
     "讓我們與詹紹綺，從藝術、品茗（茶味裡的豐富隱知）、咖啡（精品咖啡各式風情）、美酒（淬釀不凡的威士忌）一起找到愉悅及靈感，優雅踏上生命進化的階梯！",
   "space.title": "空間預約",
   "space.content": "空中藝廊",
-  "space.content1": "侘寂，不完美的完美 （整體環境）",
+  "space.content1": "侘寂，不完美的完美",
+  "space.content2": "(整體環境)",
   "space.imginfo": "Skyart3725全景",
   "space.imginfo2": "多功能茶席空間",
   "space.imginfo3":

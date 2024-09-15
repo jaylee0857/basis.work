@@ -17796,7 +17796,8 @@ const Wf = Object.freeze(
             "讓我們與詹紹綺，從藝術、品茗（茶味裡的豐富隱知）、咖啡（精品咖啡各式風情）、美酒（淬釀不凡的威士忌）一起找到愉悅及靈感，優雅踏上生命進化的階梯！",
           "space.title": "空間預約",
           "space.content": "空中藝廊",
-          "space.content1": "侘寂，不完美的完美 （整體環境）",
+          "space.content1": "侘寂，不完美的完美",
+          "space.content2": "(整體環境)",
           "space.imginfo": "Skyart3725全景",
           "space.imginfo2": "多功能茶席空間",
           "space.imginfo3":
@@ -17872,7 +17873,14 @@ for (let Kk in dm) {
     n = dm[Kk].default;
   vm[t] = Ko((e, t) => Si(e, { [`${a}.${t}`]: n[t] }), vm[t] || {}, Uo(n));
 }
-var fm = { BASE_URL: "./", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
+var fm = {
+  VITE_TITLE: "詹紹綺人文藝術空間",
+  BASE_URL: "./",
+  MODE: "development",
+  DEV: !1,
+  PROD: !0,
+  SSR: !1,
+};
 const mm = (() => {
     var e, t;
     const c = Cu.get("locale");
@@ -20908,8 +20916,9 @@ const qg = {
   };
 const Ng = Pg.create();
 (Ng.defaults.baseURL = {
+  VITE_TITLE: "詹紹綺人文藝術空間",
   BASE_URL: "./",
-  MODE: "production",
+  MODE: "development",
   DEV: !1,
   PROD: !0,
   SSR: !1,
@@ -21089,7 +21098,7 @@ const sy = { class: "footer" },
   ry = { class: "row row-justify-center" },
   oy = en(
     "div",
-    { class: "col col-lg-3 col-md-12" },
+    { class: "col col-lg-4 col-md-12" },
     [
       en("div", { class: "footer_group cc-above" }, [
         en("h3", { class: "u-ts-6 u-text-secondary" }, "Email us"),
@@ -21137,7 +21146,7 @@ const sy = { class: "footer" },
     ],
     -1
   ),
-  iy = { class: "col col-lg-3 col-md-12" },
+  iy = { class: "col col-lg-4 col-md-12" },
   hy = { class: "footer_group" },
   uy = en("h3", { class: "u-ts-6 u-text-secondary" }, "Navigation", -1),
   dy = { role: "list", class: "footer_list" },
@@ -21149,12 +21158,11 @@ const sy = { class: "footer" },
   gy = [en("div", { class: "u-ts-3" }, "Service", -1)],
   yy = { class: "footer_list-item" },
   by = [en("div", { class: "u-ts-3" }, "Collection", -1)],
-  My = en("div", { class: "col col-md-hide" }, null, -1),
-  Cy = { class: "col col-lg-4 col-md-12 col-md-first" },
-  Hy = { href: "/", class: "footer-wordmark w-inline-block" },
-  wy = { class: "wordmark w-embed" },
-  Vy = ["src"],
-  Ly = en(
+  My = { class: "col col-lg-4 col-md-12 col-md-first" },
+  Cy = { href: "/", class: "footer-wordmark w-inline-block" },
+  Hy = { class: "wordmark w-embed" },
+  wy = ["src"],
+  Vy = en(
     "div",
     { class: "footer-copyright" },
     [
@@ -21165,7 +21173,7 @@ const sy = { class: "footer" },
     ],
     -1
   ),
-  _y = {
+  Ly = {
     setup(e) {
       const t = su(),
         c = (e) => {
@@ -21225,30 +21233,29 @@ const sy = { class: "footer" },
                   ]),
                 ]),
               ]),
-              My,
-              en("div", Cy, [
-                en("a", Hy, [
-                  en("div", wy, [
+              en("div", My, [
+                en("a", Cy, [
+                  en("div", Hy, [
                     en(
                       "img",
                       { class: "img-filter", src: At(Nr)("logo.png"), alt: "" },
                       null,
                       8,
-                      Vy
+                      wy
                     ),
                   ]),
                 ]),
               ]),
             ]),
-            Ly,
+            Vy,
           ]),
         ])
       );
     },
   };
-var xy = { exports: {} };
-const Ay = hu(
-    (xy.exports = (function (e) {
+var _y = { exports: {} };
+const xy = hu(
+    (_y.exports = (function (e) {
       function t(a) {
         if (c[a]) return c[a].exports;
         var n = (c[a] = { exports: {}, id: a, loaded: !1 });
@@ -21888,43 +21895,43 @@ const Ay = hu(
       },
     ]))
   ),
-  ky = (e) => ($t("data-v-4d283d06"), (e = e()), Ut(), e),
-  Sy = { class: "section" },
-  Ey = { class: "section-title_component" },
-  jy = { class: "container" },
-  Oy = {
+  Ay = (e) => ($t("data-v-4d283d06"), (e = e()), Ut(), e),
+  ky = { class: "section" },
+  Sy = { class: "section-title_component" },
+  Ey = { class: "container" },
+  jy = {
     class: "section-title_wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Ty = ky(() =>
+  Oy = Ay(() =>
     en("div", { class: "section-title_dot", style: { opacity: "1" } }, null, -1)
   ),
-  Py = { class: "u-overflow-hidden" },
-  Iy = { class: "section-title_title" },
-  qy = { class: "u-ts-4" },
-  Ry = { class: "container" },
-  Dy = { class: "w-layout-grid pair-grid" },
-  Ny = {
+  Ty = { class: "u-overflow-hidden" },
+  Py = { class: "section-title_title" },
+  Iy = { class: "u-ts-4" },
+  qy = { class: "container" },
+  Ry = { class: "w-layout-grid pair-grid" },
+  Dy = {
     "data-animation-element": "group",
     id: "w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67",
   },
-  Zy = {
+  Ny = {
     "data-animation-element": "rich-text",
     id: "w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67",
     class: "contact-cta w-richtext",
   },
-  By = {
+  Zy = {
     "data-animation-element": "title",
     style: {},
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Fy = {
+  By = {
     class: "u-overflow-hidden mb-6",
     style: { display: "block", "text-align": "start", position: "relative" },
   },
-  $y = {
+  Fy = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -21934,7 +21941,7 @@ const Ay = hu(
       transform: "translate(0px, 0%)",
     },
   },
-  Uy = ky(() =>
+  $y = Ay(() =>
     en(
       "div",
       {
@@ -21976,36 +21983,36 @@ const Ay = hu(
       -1
     )
   ),
-  Wy = {
+  Uy = {
     setup(e) {
       const { t: t, setPrefix: c } = qm();
       return (
         c({ $current: "pages.index" }),
-        Ay.init(),
+        xy.init(),
         (e, c) => (
           Za(),
-          Wa("section", Sy, [
-            en("div", Ey, [
-              en("div", jy, [
-                en("div", Oy, [
-                  Ty,
-                  en("div", Py, [
-                    en("div", Iy, [
-                      en("h2", qy, f(At(t)("$current.us.title")), 1),
+          Wa("section", ky, [
+            en("div", Sy, [
+              en("div", Ey, [
+                en("div", jy, [
+                  Oy,
+                  en("div", Ty, [
+                    en("div", Py, [
+                      en("h2", Iy, f(At(t)("$current.us.title")), 1),
                     ]),
                   ]),
                 ]),
               ]),
             ]),
-            en("div", Ry, [
-              en("div", Dy, [
-                en("div", Ny, [
-                  en("div", Zy, [
-                    en("h3", By, [
-                      en("div", Fy, [
-                        en("div", $y, f(At(t)("$current.us.reserve")), 1),
+            en("div", qy, [
+              en("div", Ry, [
+                en("div", Dy, [
+                  en("div", Ny, [
+                    en("h3", Zy, [
+                      en("div", By, [
+                        en("div", Fy, f(At(t)("$current.us.reserve")), 1),
                       ]),
-                      Uy,
+                      $y,
                     ]),
                   ]),
                 ]),
@@ -22016,14 +22023,14 @@ const Ay = hu(
       );
     },
   },
-  Yy = lu(Wy, [["__scopeId", "data-v-4d283d06"]]),
-  Xy = {
-    components: { Footer: _y, ContactUs: Yy },
+  Wy = lu(Uy, [["__scopeId", "data-v-4d283d06"]]),
+  Yy = {
+    components: { Footer: Ly, ContactUs: Wy },
     setup() {
       const { t: e } = qm();
       return (
         Sc(() => {
-          Ay.init();
+          xy.init();
           const e = new IntersectionObserver((e) => {
             e.forEach((e) => {
               e.isIntersecting
@@ -22039,7 +22046,7 @@ const Ay = hu(
       );
     },
   },
-  Gy = en(
+  Xy = en(
     "header",
     { "data-mouse-class": "cc-icon", class: "header cc-large" },
     [
@@ -22414,8 +22421,8 @@ const Ay = hu(
     ],
     -1
   ),
-  Ky = en("div", { class: "spacing" }, null, -1),
-  Jy = en(
+  Gy = en("div", { class: "spacing" }, null, -1),
+  Ky = en(
     "section",
     { class: "section" },
     [
@@ -23503,13 +23510,13 @@ const Ay = hu(
     ],
     -1
   ),
-  Qy = en(
+  Jy = en(
     "div",
     { class: "container" },
     [en("div", { class: "target_line" })],
     -1
   ),
-  eb = en(
+  Qy = en(
     "section",
     { class: "section" },
     [
@@ -23765,30 +23772,30 @@ const Ay = hu(
     ],
     -1
   ),
-  tb = en(
+  eb = en(
     "div",
     { class: "container" },
     [en("div", { class: "target_line" })],
     -1
   );
-const cb = lu(Xy, [
+const tb = lu(Yy, [
     [
       "render",
       function (e, t, c, a, n, s) {
         const l = ka("ContactUs"),
           r = ka("Footer");
-        return Za(), Wa(Pa, null, [Gy, Ky, Jy, Qy, eb, tb, tn(l), tn(r)], 64);
+        return Za(), Wa(Pa, null, [Xy, Gy, Ky, Jy, Qy, eb, tn(l), tn(r)], 64);
       },
     ],
   ]),
-  ab = Object.freeze(
+  cb = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: cb },
+      { __proto__: null, default: tb },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  nb = {
+  ab = {
     layout: "layout-demo",
     setup() {
       const e = jp(),
@@ -23822,34 +23829,34 @@ const cb = lu(Xy, [
       );
     },
   },
-  sb = { class: "demo" },
-  lb = { class: "demo-head" },
-  rb = { class: "switch" },
-  ob = en("input", { type: "checkbox", class: "cb" }, null, -1),
-  ib = [
+  nb = { class: "demo" },
+  sb = { class: "demo-head" },
+  lb = { class: "switch" },
+  rb = en("input", { type: "checkbox", class: "cb" }, null, -1),
+  ob = [
     en("span", { class: "left" }, "CN", -1),
     en("span", { class: "right" }, "En", -1),
   ],
-  hb = { class: "demo-head-content" },
-  ub = { class: "demo-actions" },
-  db = { class: "radio-inputs" },
-  vb = en("input", { type: "radio", name: "radio", checked: "" }, null, -1),
-  fb = { class: "name" },
-  mb = en("input", { type: "radio", name: "radio" }, null, -1),
-  pb = { class: "name" },
-  zb = en("input", { type: "radio", name: "radio" }, null, -1),
-  gb = { class: "name" };
-const yb = lu(nb, [
+  ib = { class: "demo-head-content" },
+  hb = { class: "demo-actions" },
+  ub = { class: "radio-inputs" },
+  db = en("input", { type: "radio", name: "radio", checked: "" }, null, -1),
+  vb = { class: "name" },
+  fb = en("input", { type: "radio", name: "radio" }, null, -1),
+  mb = { class: "name" },
+  pb = en("input", { type: "radio", name: "radio" }, null, -1),
+  zb = { class: "name" };
+const gb = lu(ab, [
     [
       "render",
       function (e, t, c, a, n, s) {
         return (
           Za(),
-          Wa("div", sb, [
-            en("div", lb, [
+          Wa("div", nb, [
+            en("div", sb, [
               en("div", null, [
-                en("label", rb, [
-                  ob,
+                en("label", lb, [
+                  rb,
                   en(
                     "span",
                     {
@@ -23858,14 +23865,14 @@ const yb = lu(nb, [
                         t[0] ||
                         (t[0] = (...e) => a.changeLang && a.changeLang(...e)),
                     },
-                    ib
+                    ob
                   ),
                 ]),
               ]),
-              en("div", hb, "lang:" + f(a.lang.current), 1),
+              en("div", ib, "lang:" + f(a.lang.current), 1),
             ]),
-            en("div", ub, [
-              en("div", db, [
+            en("div", hb, [
+              en("div", ub, [
                 en(
                   "label",
                   {
@@ -23873,7 +23880,7 @@ const yb = lu(nb, [
                     onClick:
                       t[1] || (t[1] = (...e) => a.toHome && a.toHome(...e)),
                   },
-                  [vb, en("span", fb, f(a.t("$current.router.link")), 1)]
+                  [db, en("span", vb, f(a.t("$current.router.link")), 1)]
                 ),
                 en(
                   "label",
@@ -23883,7 +23890,7 @@ const yb = lu(nb, [
                       t[2] ||
                       (t[2] = (...e) => a.swalModal && a.swalModal(...e)),
                   },
-                  [mb, en("span", pb, f(a.t("$current.modal.swal")), 1)]
+                  [fb, en("span", mb, f(a.t("$current.modal.swal")), 1)]
                 ),
                 en(
                   "label",
@@ -23893,7 +23900,7 @@ const yb = lu(nb, [
                       t[3] ||
                       (t[3] = (...e) => a.popupModal && a.popupModal(...e)),
                   },
-                  [zb, en("span", gb, f(a.t("$current.popup.use")), 1)]
+                  [pb, en("span", zb, f(a.t("$current.popup.use")), 1)]
                 ),
               ]),
             ]),
@@ -23902,22 +23909,22 @@ const yb = lu(nb, [
       },
     ],
   ]),
-  bb = Object.freeze(
+  yb = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: yb },
+      { __proto__: null, default: gb },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  Mb = {
+  bb = {
     title: "pages.home.nav.about",
-    components: { Footer: _y, ContactUs: Yy },
+    components: { Footer: Ly, ContactUs: Wy },
     setup() {
       const { t: e, setPrefix: t } = qm();
       t({ $current: "pages.gallery" });
       return (
         Sc(() => {
-          Ay.init(),
+          xy.init(),
             (() => {
               let e = document.querySelector("#cases");
               e.addEventListener("wheel", (t) => {
@@ -23940,14 +23947,14 @@ const yb = lu(nb, [
       );
     },
   },
-  Cb = (e) => ($t("data-v-c94eca20"), (e = e()), Ut(), e),
-  Hb = { id: "cases", class: "wrap" },
-  wb = { class: "cases-slider" },
-  Vb = Cb(() => en("h1", { id: "case-title" }, "Gallery", -1)),
-  Lb = { role: "list", class: "cases-list w-dyn-items container" },
-  _b = { role: "listitem", class: "cases-item w-dyn-item" },
-  xb = { class: "cases-card cc-immediate w-inline-block" },
-  Ab = Cb(() =>
+  Mb = (e) => ($t("data-v-c94eca20"), (e = e()), Ut(), e),
+  Cb = { id: "cases", class: "wrap" },
+  Hb = { class: "cases-slider" },
+  wb = Mb(() => en("h1", { id: "case-title" }, "Gallery", -1)),
+  Vb = { role: "list", class: "cases-list w-dyn-items container" },
+  Lb = { role: "listitem", class: "cases-item w-dyn-item" },
+  _b = { class: "cases-card cc-immediate w-inline-block" },
+  xb = Mb(() =>
     en(
       "div",
       { class: "cases-assets" },
@@ -23971,14 +23978,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  kb = { class: "cases-text" },
-  Sb = { class: "u-ts-2" },
-  Eb = { role: "listitem", class: "cases-item w-dyn-item" },
-  jb = { class: "cases-card cc-immediate w-inline-block" },
-  Ob = { class: "cases-assets" },
+  Ab = { class: "cases-text" },
+  kb = { class: "u-ts-2" },
+  Sb = { role: "listitem", class: "cases-item w-dyn-item" },
+  Eb = { class: "cases-card cc-immediate w-inline-block" },
+  jb = { class: "cases-assets" },
+  Ob = ["src"],
   Tb = ["src"],
-  Pb = ["src"],
-  Ib = Cb(() =>
+  Pb = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -23986,14 +23993,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  qb = { class: "cases-text" },
-  Rb = { class: "u-ts-2" },
-  Db = { role: "listitem", class: "cases-item w-dyn-item" },
-  Nb = { class: "cases-card cc-immediate w-inline-block" },
-  Zb = { class: "cases-assets" },
+  Ib = { class: "cases-text" },
+  qb = { class: "u-ts-2" },
+  Rb = { role: "listitem", class: "cases-item w-dyn-item" },
+  Db = { class: "cases-card cc-immediate w-inline-block" },
+  Nb = { class: "cases-assets" },
+  Zb = ["src"],
   Bb = ["src"],
-  Fb = ["src"],
-  $b = Cb(() =>
+  Fb = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24001,14 +24008,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  Ub = { class: "cases-text" },
-  Wb = { class: "u-ts-2" },
-  Yb = { role: "listitem", class: "cases-item w-dyn-item" },
-  Xb = { class: "cases-card cc-immediate w-inline-block" },
-  Gb = { class: "cases-assets" },
+  $b = { class: "cases-text" },
+  Ub = { class: "u-ts-2" },
+  Wb = { role: "listitem", class: "cases-item w-dyn-item" },
+  Yb = { class: "cases-card cc-immediate w-inline-block" },
+  Xb = { class: "cases-assets" },
+  Gb = ["src"],
   Kb = ["src"],
-  Jb = ["src"],
-  Qb = Cb(() =>
+  Jb = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24016,11 +24023,11 @@ const yb = lu(nb, [
       -1
     )
   ),
-  eM = { class: "cases-text" },
-  tM = { class: "u-ts-2" },
-  cM = { role: "listitem", class: "cases-item w-dyn-item" },
-  aM = { class: "cases-card cc-immediate w-inline-block" },
-  nM = Cb(() =>
+  Qb = { class: "cases-text" },
+  eM = { class: "u-ts-2" },
+  tM = { role: "listitem", class: "cases-item w-dyn-item" },
+  cM = { class: "cases-card cc-immediate w-inline-block" },
+  aM = Mb(() =>
     en(
       "div",
       { class: "cases-assets" },
@@ -24044,14 +24051,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  sM = { class: "cases-text" },
-  lM = { class: "u-ts-2" },
-  rM = { role: "listitem", class: "cases-item w-dyn-item" },
-  oM = { class: "cases-card cc-immediate w-inline-block" },
-  iM = { class: "cases-assets" },
+  nM = { class: "cases-text" },
+  sM = { class: "u-ts-2" },
+  lM = { role: "listitem", class: "cases-item w-dyn-item" },
+  rM = { class: "cases-card cc-immediate w-inline-block" },
+  oM = { class: "cases-assets" },
+  iM = ["src"],
   hM = ["src"],
-  uM = ["src"],
-  dM = Cb(() =>
+  uM = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24059,11 +24066,11 @@ const yb = lu(nb, [
       -1
     )
   ),
-  vM = { class: "cases-text" },
-  fM = { class: "u-ts-2" },
-  mM = { role: "listitem", class: "cases-item w-dyn-item" },
-  pM = { class: "cases-card cc-immediate w-inline-block" },
-  zM = Cb(() =>
+  dM = { class: "cases-text" },
+  vM = { class: "u-ts-2" },
+  fM = { role: "listitem", class: "cases-item w-dyn-item" },
+  mM = { class: "cases-card cc-immediate w-inline-block" },
+  pM = Mb(() =>
     en(
       "div",
       { class: "cases-assets" },
@@ -24087,14 +24094,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  gM = { class: "cases-text" },
-  yM = { class: "u-ts-2" },
-  bM = { role: "listitem", class: "cases-item w-dyn-item" },
-  MM = { class: "cases-card cc-immediate w-inline-block" },
-  CM = { class: "cases-assets" },
+  zM = { class: "cases-text" },
+  gM = { class: "u-ts-2" },
+  yM = { role: "listitem", class: "cases-item w-dyn-item" },
+  bM = { class: "cases-card cc-immediate w-inline-block" },
+  MM = { class: "cases-assets" },
+  CM = ["src"],
   HM = ["src"],
-  wM = ["src"],
-  VM = Cb(() =>
+  wM = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24102,14 +24109,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  LM = { class: "cases-text" },
-  _M = { class: "u-ts-2" },
-  xM = { role: "listitem", class: "cases-item w-dyn-item" },
-  AM = { class: "cases-card cc-immediate w-inline-block" },
-  kM = { class: "cases-assets" },
+  VM = { class: "cases-text" },
+  LM = { class: "u-ts-2" },
+  _M = { role: "listitem", class: "cases-item w-dyn-item" },
+  xM = { class: "cases-card cc-immediate w-inline-block" },
+  AM = { class: "cases-assets" },
+  kM = ["src"],
   SM = ["src"],
-  EM = ["src"],
-  jM = Cb(() =>
+  EM = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24117,11 +24124,11 @@ const yb = lu(nb, [
       -1
     )
   ),
-  OM = { class: "cases-text" },
-  TM = { class: "u-ts-2" },
-  PM = { role: "listitem", class: "cases-item w-dyn-item" },
-  IM = { class: "cases-card cc-immediate w-inline-block" },
-  qM = Cb(() =>
+  jM = { class: "cases-text" },
+  OM = { class: "u-ts-2" },
+  TM = { role: "listitem", class: "cases-item w-dyn-item" },
+  PM = { class: "cases-card cc-immediate w-inline-block" },
+  IM = Mb(() =>
     en(
       "div",
       { class: "cases-assets" },
@@ -24145,14 +24152,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  RM = { class: "cases-text" },
-  DM = { class: "u-ts-2" },
-  NM = { role: "listitem", class: "cases-item w-dyn-item" },
-  ZM = { class: "cases-card cc-immediate w-inline-block" },
-  BM = { class: "cases-assets" },
+  qM = { class: "cases-text" },
+  RM = { class: "u-ts-2" },
+  DM = { role: "listitem", class: "cases-item w-dyn-item" },
+  NM = { class: "cases-card cc-immediate w-inline-block" },
+  ZM = { class: "cases-assets" },
+  BM = ["src"],
   FM = ["src"],
-  $M = ["src"],
-  UM = Cb(() =>
+  $M = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24160,14 +24167,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  WM = { class: "cases-text" },
-  YM = { class: "u-ts-2" },
-  XM = { role: "listitem", class: "cases-item w-dyn-item" },
-  GM = { class: "cases-card cc-immediate w-inline-block" },
-  KM = { class: "cases-assets" },
+  UM = { class: "cases-text" },
+  WM = { class: "u-ts-2" },
+  YM = { role: "listitem", class: "cases-item w-dyn-item" },
+  XM = { class: "cases-card cc-immediate w-inline-block" },
+  GM = { class: "cases-assets" },
+  KM = ["src"],
   JM = ["src"],
-  QM = ["src"],
-  eC = Cb(() =>
+  QM = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24175,14 +24182,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  tC = { class: "cases-text" },
-  cC = { class: "u-ts-2" },
-  aC = { role: "listitem", class: "cases-item w-dyn-item" },
-  nC = { class: "cases-card cc-immediate w-inline-block" },
-  sC = { class: "cases-assets" },
+  eC = { class: "cases-text" },
+  tC = { class: "u-ts-2" },
+  cC = { role: "listitem", class: "cases-item w-dyn-item" },
+  aC = { class: "cases-card cc-immediate w-inline-block" },
+  nC = { class: "cases-assets" },
+  sC = ["src"],
   lC = ["src"],
-  rC = ["src"],
-  oC = Cb(() =>
+  rC = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24190,14 +24197,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  iC = { class: "cases-text" },
-  hC = { class: "u-ts-2" },
-  uC = { role: "listitem", class: "cases-item w-dyn-item" },
-  dC = { class: "cases-card cc-immediate w-inline-block" },
-  vC = { class: "cases-assets" },
+  oC = { class: "cases-text" },
+  iC = { class: "u-ts-2" },
+  hC = { role: "listitem", class: "cases-item w-dyn-item" },
+  uC = { class: "cases-card cc-immediate w-inline-block" },
+  dC = { class: "cases-assets" },
+  vC = ["src"],
   fC = ["src"],
-  mC = ["src"],
-  pC = Cb(() =>
+  mC = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24205,14 +24212,14 @@ const yb = lu(nb, [
       -1
     )
   ),
-  zC = { class: "cases-text" },
-  gC = { class: "u-ts-2" },
-  yC = { role: "listitem", class: "cases-item w-dyn-item" },
-  bC = { class: "cases-card cc-immediate w-inline-block" },
-  MC = { class: "cases-assets" },
+  pC = { class: "cases-text" },
+  zC = { class: "u-ts-2" },
+  gC = { role: "listitem", class: "cases-item w-dyn-item" },
+  yC = { class: "cases-card cc-immediate w-inline-block" },
+  bC = { class: "cases-assets" },
+  MC = ["src"],
   CC = ["src"],
-  HC = ["src"],
-  wC = Cb(() =>
+  HC = Mb(() =>
     en(
       "div",
       { class: "iframe-video_wrapper" },
@@ -24220,9 +24227,9 @@ const yb = lu(nb, [
       -1
     )
   ),
-  VC = { class: "cases-text" },
-  LC = { class: "u-ts-2" },
-  _C = Cb(() =>
+  wC = { class: "cases-text" },
+  VC = { class: "u-ts-2" },
+  LC = Mb(() =>
     en(
       "div",
       { class: "container mobile-show" },
@@ -24230,8 +24237,8 @@ const yb = lu(nb, [
       -1
     )
   ),
-  xC = { class: "mobile-show" };
-const AC = lu(Mb, [
+  _C = { class: "mobile-show" };
+const xC = lu(bb, [
     [
       "render",
       function (e, t, c, a, n, s) {
@@ -24243,21 +24250,21 @@ const AC = lu(Mb, [
             Pa,
             null,
             [
-              en("div", Hb, [
-                en("div", wb, [
-                  Vb,
-                  en("div", Lb, [
-                    en("div", _b, [
-                      en("a", xb, [
-                        Ab,
-                        en("div", kb, [
-                          en("div", Sb, f(a.t("$current.item.g1")), 1),
+              en("div", Cb, [
+                en("div", Hb, [
+                  wb,
+                  en("div", Vb, [
+                    en("div", Lb, [
+                      en("a", _b, [
+                        xb,
+                        en("div", Ab, [
+                          en("div", kb, f(a.t("$current.item.g1")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", Eb, [
-                      en("a", jb, [
-                        en("div", Ob, [
+                    en("div", Sb, [
+                      en("a", Eb, [
+                        en("div", jb, [
                           en(
                             "img",
                             {
@@ -24265,33 +24272,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            Ob
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g2.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             Tb
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g2.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            Pb
-                          ),
-                          Ib,
+                          Pb,
                         ]),
-                        en("div", qb, [
-                          en("div", Rb, f(a.t("$current.item.g2")), 1),
+                        en("div", Ib, [
+                          en("div", qb, f(a.t("$current.item.g2")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", Db, [
-                      en("a", Nb, [
-                        en("div", Zb, [
+                    en("div", Rb, [
+                      en("a", Db, [
+                        en("div", Nb, [
                           en(
                             "img",
                             {
@@ -24299,33 +24306,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            Zb
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g3.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             Bb
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g3.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            Fb
-                          ),
-                          $b,
+                          Fb,
                         ]),
-                        en("div", Ub, [
-                          en("div", Wb, f(a.t("$current.item.g3")), 1),
+                        en("div", $b, [
+                          en("div", Ub, f(a.t("$current.item.g3")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", Yb, [
-                      en("a", Xb, [
-                        en("div", Gb, [
+                    en("div", Wb, [
+                      en("a", Yb, [
+                        en("div", Xb, [
                           en(
                             "img",
                             {
@@ -24333,41 +24340,41 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            Gb
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g4.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             Kb
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g4.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            Jb
-                          ),
-                          Qb,
+                          Jb,
                         ]),
-                        en("div", eM, [
-                          en("div", tM, f(a.t("$current.item.g4")), 1),
+                        en("div", Qb, [
+                          en("div", eM, f(a.t("$current.item.g4")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", cM, [
-                      en("a", aM, [
-                        nM,
-                        en("div", sM, [
-                          en("div", lM, f(a.t("$current.item.g5")), 1),
+                    en("div", tM, [
+                      en("a", cM, [
+                        aM,
+                        en("div", nM, [
+                          en("div", sM, f(a.t("$current.item.g5")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", rM, [
-                      en("a", oM, [
-                        en("div", iM, [
+                    en("div", lM, [
+                      en("a", rM, [
+                        en("div", oM, [
                           en(
                             "img",
                             {
@@ -24375,41 +24382,41 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            iM
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g6.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             hM
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g6.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            uM
-                          ),
-                          dM,
+                          uM,
                         ]),
-                        en("div", vM, [
-                          en("div", fM, f(a.t("$current.item.g6")), 1),
+                        en("div", dM, [
+                          en("div", vM, f(a.t("$current.item.g6")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", mM, [
-                      en("a", pM, [
-                        zM,
-                        en("div", gM, [
-                          en("div", yM, f(a.t("$current.item.g7")), 1),
+                    en("div", fM, [
+                      en("a", mM, [
+                        pM,
+                        en("div", zM, [
+                          en("div", gM, f(a.t("$current.item.g7")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", bM, [
-                      en("a", MM, [
-                        en("div", CM, [
+                    en("div", yM, [
+                      en("a", bM, [
+                        en("div", MM, [
                           en(
                             "img",
                             {
@@ -24417,33 +24424,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            CM
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g8.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             HM
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g8.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            wM
-                          ),
-                          VM,
+                          wM,
                         ]),
-                        en("div", LM, [
-                          en("div", _M, f(a.t("$current.item.g8")), 1),
+                        en("div", VM, [
+                          en("div", LM, f(a.t("$current.item.g8")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", xM, [
-                      en("a", AM, [
-                        en("div", kM, [
+                    en("div", _M, [
+                      en("a", xM, [
+                        en("div", AM, [
                           en(
                             "img",
                             {
@@ -24451,41 +24458,41 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            kM
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g9.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             SM
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g9.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            EM
-                          ),
-                          jM,
+                          EM,
                         ]),
-                        en("div", OM, [
-                          en("div", TM, f(a.t("$current.item.g9")), 1),
+                        en("div", jM, [
+                          en("div", OM, f(a.t("$current.item.g9")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", PM, [
-                      en("a", IM, [
-                        qM,
-                        en("div", RM, [
-                          en("div", DM, f(a.t("$current.item.g10")), 1),
+                    en("div", TM, [
+                      en("a", PM, [
+                        IM,
+                        en("div", qM, [
+                          en("div", RM, f(a.t("$current.item.g10")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", NM, [
-                      en("a", ZM, [
-                        en("div", BM, [
+                    en("div", DM, [
+                      en("a", NM, [
+                        en("div", ZM, [
                           en(
                             "img",
                             {
@@ -24493,33 +24500,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            BM
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g11.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             FM
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g11.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            $M
-                          ),
-                          UM,
+                          $M,
                         ]),
-                        en("div", WM, [
-                          en("div", YM, f(a.t("$current.item.g11")), 1),
+                        en("div", UM, [
+                          en("div", WM, f(a.t("$current.item.g11")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", XM, [
-                      en("a", GM, [
-                        en("div", KM, [
+                    en("div", YM, [
+                      en("a", XM, [
+                        en("div", GM, [
                           en(
                             "img",
                             {
@@ -24527,33 +24534,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            KM
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g12.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             JM
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g12.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            QM
-                          ),
-                          eC,
+                          QM,
                         ]),
-                        en("div", tC, [
-                          en("div", cC, f(a.t("$current.item.g12")), 1),
+                        en("div", eC, [
+                          en("div", tC, f(a.t("$current.item.g12")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", aC, [
-                      en("a", nC, [
-                        en("div", sC, [
+                    en("div", cC, [
+                      en("a", aC, [
+                        en("div", nC, [
                           en(
                             "img",
                             {
@@ -24561,33 +24568,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            sC
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g13.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             lC
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g13.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            rC
-                          ),
-                          oC,
+                          rC,
                         ]),
-                        en("div", iC, [
-                          en("div", hC, f(a.t("$current.item.g13")), 1),
+                        en("div", oC, [
+                          en("div", iC, f(a.t("$current.item.g13")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", uC, [
-                      en("a", dC, [
-                        en("div", vC, [
+                    en("div", hC, [
+                      en("a", uC, [
+                        en("div", dC, [
                           en(
                             "img",
                             {
@@ -24595,33 +24602,33 @@ const AC = lu(Mb, [
                               loading: "lazy",
                               alt: "",
                               class: "cases-portrait",
+                            },
+                            null,
+                            8,
+                            vC
+                          ),
+                          en(
+                            "img",
+                            {
+                              src: a.getImageUrl("gallery/g14.jpg"),
+                              loading: "eager",
+                              alt: "",
+                              class: "cases-landscape",
                             },
                             null,
                             8,
                             fC
                           ),
-                          en(
-                            "img",
-                            {
-                              src: a.getImageUrl("gallery/g14.jpg"),
-                              loading: "eager",
-                              alt: "",
-                              class: "cases-landscape",
-                            },
-                            null,
-                            8,
-                            mC
-                          ),
-                          pC,
+                          mC,
                         ]),
-                        en("div", zC, [
-                          en("div", gC, f(a.t("$current.item.g14")), 1),
+                        en("div", pC, [
+                          en("div", zC, f(a.t("$current.item.g14")), 1),
                         ]),
                       ]),
                     ]),
-                    en("div", yC, [
-                      en("a", bC, [
-                        en("div", MC, [
+                    en("div", gC, [
+                      en("a", yC, [
+                        en("div", bC, [
                           en(
                             "img",
                             {
@@ -24632,7 +24639,7 @@ const AC = lu(Mb, [
                             },
                             null,
                             8,
-                            CC
+                            MC
                           ),
                           en(
                             "img",
@@ -24644,20 +24651,20 @@ const AC = lu(Mb, [
                             },
                             null,
                             8,
-                            HC
+                            CC
                           ),
-                          wC,
+                          HC,
                         ]),
-                        en("div", VC, [
-                          en("div", LC, f(a.t("$current.item.g15")), 1),
+                        en("div", wC, [
+                          en("div", VC, f(a.t("$current.item.g15")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
                 ]),
               ]),
-              _C,
-              en("template", xC, [tn(l)]),
+              LC,
+              en("template", _C, [tn(l)]),
               tn(r, { class: "mobile-show" }),
             ],
             64
@@ -24667,21 +24674,21 @@ const AC = lu(Mb, [
     ],
     ["__scopeId", "data-v-c94eca20"],
   ]),
-  kC = Object.freeze(
+  AC = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: AC },
+      { __proto__: null, default: xC },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  SC = ["data-index"],
-  EC = ["src"],
-  jC = { "data-reveal": "button", class: "home-hero_btn" },
-  OC = { class: "btn-contain btn-contain-scroll" },
-  TC = { class: "btn-text-wrap" },
-  PC = { class: "btn-text cc-scroll" },
-  IC = { class: "btn-text cc-bottom cc-scroll" },
-  qC = en(
+  kC = ["data-index"],
+  SC = ["src"],
+  EC = { "data-reveal": "button", class: "home-hero_btn" },
+  jC = { class: "btn-contain btn-contain-scroll" },
+  OC = { class: "btn-text-wrap" },
+  TC = { class: "btn-text cc-scroll" },
+  PC = { class: "btn-text cc-bottom cc-scroll" },
+  IC = en(
     "div",
     { class: "btn-icon cc-small w-embed" },
     [
@@ -24705,7 +24712,7 @@ const AC = lu(Mb, [
     ],
     -1
   ),
-  RC = {
+  qC = {
     setup(e) {
       const t = Jr(),
         { t: c, setPrefix: a } = qm();
@@ -24902,7 +24909,7 @@ const AC = lu(Mb, [
         };
       return (
         Sc(() => {
-          v(), window.addEventListener("resize", v), Ay.init();
+          v(), window.addEventListener("resize", v), xy.init();
         }),
         (e, t) => {
           const a = ja("scroll-to-top-hide");
@@ -24995,11 +25002,11 @@ const AC = lu(Mb, [
                                         },
                                         null,
                                         12,
-                                        EC
+                                        SC
                                       ),
                                     ],
                                     12,
-                                    SC
+                                    kC
                                   )),
                                   [
                                     [
@@ -25018,17 +25025,17 @@ const AC = lu(Mb, [
                   ],
                   32
                 ),
-                en("div", jC, [
-                  en("div", OC, [
+                en("div", EC, [
+                  en("div", jC, [
                     en(
                       "div",
                       { class: "btn-scroll w-inline-block", onClick: u },
                       [
-                        en("div", TC, [
+                        en("div", OC, [
+                          en("div", TC, f(At(c)("$current.scroll.btn")), 1),
                           en("div", PC, f(At(c)("$current.scroll.btn")), 1),
-                          en("div", IC, f(At(c)("$current.scroll.btn")), 1),
                         ]),
-                        qC,
+                        IC,
                       ]
                     ),
                   ]),
@@ -25041,10 +25048,10 @@ const AC = lu(Mb, [
       );
     },
   },
-  DC = "" + new URL("tea_1-CsfeQWOe.mp4", import.meta.url).href,
-  NC = (e) =>
+  RC = "" + new URL("tea_1-CsfeQWOe.mp4", import.meta.url).href,
+  DC = (e) =>
     new URL(
-      Object.assign({ "../assets/video/home/tea_1.mp4": DC })[
+      Object.assign({ "../assets/video/home/tea_1.mp4": RC })[
         `../assets/video/${e}`
       ],
       import.meta.url
@@ -25062,25 +25069,25 @@ const AC = lu(Mb, [
     }
   } catch (t) {}
 })();
-var ZC = Object.defineProperty,
-  BC = Object.getOwnPropertySymbols,
-  FC = Object.prototype.hasOwnProperty,
-  $C = Object.prototype.propertyIsEnumerable,
-  UC = (e, t, c) =>
+var NC = Object.defineProperty,
+  ZC = Object.getOwnPropertySymbols,
+  BC = Object.prototype.hasOwnProperty,
+  FC = Object.prototype.propertyIsEnumerable,
+  $C = (e, t, c) =>
     t in e
-      ? ZC(e, t, { enumerable: !0, configurable: !0, writable: !0, value: c })
+      ? NC(e, t, { enumerable: !0, configurable: !0, writable: !0, value: c })
       : (e[t] = c),
-  WC = (e, t) => {
-    for (var c in t || (t = {})) FC.call(t, c) && UC(e, c, t[c]);
-    if (BC) for (var c of BC(t)) $C.call(t, c) && UC(e, c, t[c]);
+  UC = (e, t) => {
+    for (var c in t || (t = {})) BC.call(t, c) && $C(e, c, t[c]);
+    if (ZC) for (var c of ZC(t)) FC.call(t, c) && $C(e, c, t[c]);
     return e;
   },
-  YC = (e, t) => {
+  WC = (e, t) => {
     const c = e.__vccOpts || e;
     for (const [a, n] of t) c[a] = n;
     return c;
   };
-const XC = pc({
+const YC = pc({
     props: {
       vertical: { type: Boolean, default: !1 },
       direction: { type: String, default: "normal" },
@@ -25220,7 +25227,7 @@ const XC = pc({
             },
             c = { "--orientation": "scrollX", orientation: "horizontal" };
           e.vertical && (c["--orientation"] = "scrollY");
-          return WC(WC({}, t), c);
+          return UC(UC({}, t), c);
         }),
         L = Pt(() => !!e.gradient),
         _ = async () => {
@@ -25290,14 +25297,14 @@ const XC = pc({
       );
     },
   }),
-  GC = {
+  XC = {
     class: "transparent-overlay",
     ref: "marqueeOverlayContainer",
     "aria-hidden": !0,
   },
-  KC = { class: "marquee", ref: "marqueeContent" },
-  JC = { key: 1, "aria-hidden": !0, class: "marquee" };
-var QC = YC(XC, [
+  GC = { class: "marquee", ref: "marqueeContent" },
+  KC = { key: 1, "aria-hidden": !0, class: "marquee" };
+var JC = WC(YC, [
     [
       "render",
       function (e, t, c, a, n, s) {
@@ -25323,7 +25330,7 @@ var QC = YC(XC, [
                   t[3] || (t[3] = (...t) => e.mouseUp && e.mouseUp(...t)),
               },
               [
-                en("div", GC, null, 512),
+                en("div", XC, null, 512),
                 e.showGradient
                   ? (Za(),
                     Wa(
@@ -25340,10 +25347,10 @@ var QC = YC(XC, [
                       2
                     ))
                   : ln("", !0),
-                en("div", KC, [mn(e.$slots, "default")], 512),
+                en("div", GC, [mn(e.$slots, "default")], 512),
                 !e.animateOnOverflowOnly ||
                 (e.animateOnOverflowOnly && !e.animateOnOverflowPause)
-                  ? (Za(), Wa("div", JC, [mn(e.$slots, "default")]))
+                  ? (Za(), Wa("div", KC, [mn(e.$slots, "default")]))
                   : ln("", !0),
                 (Za(!0),
                 Wa(
@@ -25369,15 +25376,15 @@ var QC = YC(XC, [
       },
     ],
   ]),
-  eH = {
+  QC = {
     install(e, t) {
       var c;
       const a = null != (c = null == t ? void 0 : t.name) ? c : "Vue3Marquee";
-      e.component(a, QC);
+      e.component(a, JC);
     },
   };
-const tH = {
-  components: { Footer: _y, View: RC, Vue3Marquee: QC, ContactUs: Yy },
+const eH = {
+  components: { Footer: Ly, View: qC, Vue3Marquee: JC, ContactUs: Wy },
   setup() {
     const e = Jr(),
       t = Pt(() => e.state.app.isLoading),
@@ -25401,7 +25408,7 @@ const tH = {
       {
         a: s,
         isLoading: t,
-        getVideoUrl: NC,
+        getVideoUrl: DC,
         getImageUrl: Nr,
         scrollPosition: (e) => {
           const t = document.querySelector(".apps_media-list"),
@@ -25420,20 +25427,20 @@ const tH = {
     );
   },
 };
-Ay.init();
-const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
-  aH = cH(() =>
+xy.init();
+const tH = (e) => ($t("data-v-25d7e458"), (e = e()), Ut(), e),
+  cH = tH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  nH = { id: "studio", class: "section" },
-  sH = { class: "section-title_component" },
-  lH = { class: "container" },
-  rH = {
+  aH = { id: "studio", class: "section" },
+  nH = { class: "section-title_component" },
+  sH = { class: "container" },
+  lH = {
     class: "section-title_wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  oH = cH(() =>
+  rH = tH(() =>
     en(
       "div",
       { class: "section-title_dot", style: { opacity: "1" } },
@@ -25446,23 +25453,23 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
       -1
     )
   ),
-  iH = { class: "u-overflow-hidden" },
-  hH = { class: "section-title_title" },
-  uH = { class: "u-ts-4" },
-  dH = { class: "container" },
-  vH = { class: "w-layout-grid pair-grid" },
-  fH = {
+  oH = { class: "u-overflow-hidden" },
+  iH = { class: "section-title_title" },
+  hH = { class: "u-ts-4" },
+  uH = { class: "container" },
+  dH = { class: "w-layout-grid pair-grid" },
+  vH = {
     "data-animation-element": "group",
     id: "w-node-_1d0de869-a418-1ffe-c192-cd0abecc9833-af552307",
   },
-  mH = { "data-animation-element": "title" },
-  pH = {
+  fH = { "data-animation-element": "title" },
+  mH = {
     class: "u-overflow-hidden",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
     style: { display: "block", "text-align": "start", position: "relative" },
   },
-  zH = {
+  pH = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -25471,68 +25478,68 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
       scale: "none",
       transform: "translate(0px, 0%)",
     },
+  },
+  zH = {
+    class: "u-overflow-hidden",
+    style: { display: "block", "text-align": "start", position: "relative" },
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
   },
   gH = {
-    class: "u-overflow-hidden",
-    style: { display: "block", "text-align": "start", position: "relative" },
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
+    style: {
+      position: "relative",
+      display: "inline-block",
+      translate: "none",
+      rotate: "none",
+      scale: "none",
+      transform: "translate(0px, 0%)",
+      "font-size": "2rem",
+    },
+    class: "mt-32",
   },
   yH = {
-    style: {
-      position: "relative",
-      display: "inline-block",
-      translate: "none",
-      rotate: "none",
-      scale: "none",
-      transform: "translate(0px, 0%)",
-      "font-size": "2rem",
-    },
-    class: "mt-32",
+    class: "u-overflow-hidden",
+    style: { display: "block", "text-align": "start", position: "relative" },
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
   },
   bH = {
-    class: "u-overflow-hidden",
-    style: { display: "block", "text-align": "start", position: "relative" },
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
+    style: {
+      position: "relative",
+      display: "inline-block",
+      translate: "none",
+      rotate: "none",
+      scale: "none",
+      transform: "translate(0px, 0%)",
+      "font-size": "2rem",
+    },
+    class: "mt-32",
   },
   MH = {
-    style: {
-      position: "relative",
-      display: "inline-block",
-      translate: "none",
-      rotate: "none",
-      scale: "none",
-      transform: "translate(0px, 0%)",
-      "font-size": "2rem",
-    },
-    class: "mt-32",
+    class: "u-overflow-hidden",
+    style: { display: "block", "text-align": "start", position: "relative" },
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
   },
   CH = {
-    class: "u-overflow-hidden",
-    style: { display: "block", "text-align": "start", position: "relative" },
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
+    style: {
+      position: "relative",
+      display: "inline-block",
+      translate: "none",
+      rotate: "none",
+      scale: "none",
+      transform: "translate(0px, 0%)",
+      "font-size": "2rem",
+    },
+    class: "mt-32",
   },
   HH = {
-    style: {
-      position: "relative",
-      display: "inline-block",
-      translate: "none",
-      rotate: "none",
-      scale: "none",
-      transform: "translate(0px, 0%)",
-      "font-size": "2rem",
-    },
-    class: "mt-32",
-  },
-  wH = {
     class: "u-overflow-hidden",
     style: { display: "block", "text-align": "start", position: "relative" },
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  VH = {
+  wH = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -25544,8 +25551,8 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     },
     class: "mt-32",
   },
-  LH = { class: "btn-group" },
-  _H = {
+  VH = { class: "btn-group" },
+  LH = {
     class: "btn-item cc-1",
     style: {
       translate: "none",
@@ -25555,15 +25562,15 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
       opacity: "1",
     },
   },
-  xH = {
+  _H = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  AH = { class: "btn-text-wrap" },
-  kH = { class: "btn-text" },
-  SH = { class: "btn-text cc-bottom" },
-  EH = {
+  xH = { class: "btn-text-wrap" },
+  AH = { class: "btn-text" },
+  kH = { class: "btn-text cc-bottom" },
+  SH = {
     class: "btn-item cc-2",
     "data-aos": "fade-up",
     "data-aos-duration": "3000",
@@ -25575,26 +25582,26 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
       opacity: "1",
     },
   },
-  jH = {
+  EH = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  OH = { class: "btn-text-wrap" },
-  TH = { class: "btn-text" },
-  PH = { class: "btn-text cc-bottom" },
-  IH = cH(() =>
+  jH = { class: "btn-text-wrap" },
+  OH = { class: "btn-text" },
+  TH = { class: "btn-text cc-bottom" },
+  PH = tH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  qH = { class: "section" },
-  RH = { class: "section-title_component" },
-  DH = { class: "container" },
-  NH = {
+  IH = { class: "section" },
+  qH = { class: "section-title_component" },
+  RH = { class: "container" },
+  DH = {
     class: "section-title_wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  ZH = cH(() =>
+  NH = tH(() =>
     en(
       "div",
       { class: "section-title_dot", style: { opacity: "1" } },
@@ -25607,19 +25614,19 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
       -1
     )
   ),
-  BH = { class: "u-overflow-hidden" },
-  FH = { class: "section-title_title" },
-  $H = { class: "u-ts-4" },
-  UH = { class: "container" },
-  WH = { "data-animation-element": "group" },
-  YH = { "data-animation-element": "title", class: "h1", style: {} },
-  XH = {
+  ZH = { class: "u-overflow-hidden" },
+  BH = { class: "section-title_title" },
+  FH = { class: "u-ts-4" },
+  $H = { class: "container" },
+  UH = { "data-animation-element": "group" },
+  WH = { "data-animation-element": "title", class: "h1", style: {} },
+  YH = {
     class: "u-overflow-hidden",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     style: { display: "block", "text-align": "start", position: "relative" },
   },
-  GH = {
+  XH = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -25629,7 +25636,8 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
       transform: "translate(0px, 0%)",
     },
   },
-  KH = cH(() => en("br", null, null, -1)),
+  GH = tH(() => en("br", null, null, -1)),
+  KH = tH(() => en("br", { class: "br_status" }, null, -1)),
   JH = { class: "sticky-pair" },
   QH = { class: "w-layout-grid pair-grid" },
   ew = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
@@ -25650,7 +25658,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "700",
   },
   rw = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  ow = cH(() =>
+  ow = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -25704,7 +25712,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "700",
     class: "card is-link w-inline-block",
   },
-  yw = cH(() =>
+  yw = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -25770,7 +25778,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   Pw = { class: "btn-text-wrap" },
   Iw = { class: "btn-text" },
   qw = { class: "btn-text cc-bottom" },
-  Rw = cH(() =>
+  Rw = tH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
   Dw = { class: "section" },
@@ -25781,7 +25789,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Fw = cH(() => en("div", { class: "section-title_dot" }, null, -1)),
+  Fw = tH(() => en("div", { class: "section-title_dot" }, null, -1)),
   $w = { class: "u-overflow-hidden" },
   Uw = { class: "section-title_title" },
   Ww = { class: "u-ts-4" },
@@ -25917,7 +25925,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   WV = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
   YV = ["src"],
   XV = { class: "apps_scroll" },
-  GV = cH(() =>
+  GV = tH(() =>
     en(
       "div",
       { class: "mobile-scroll_icon w-embed" },
@@ -26000,7 +26008,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   yL = ["src"],
   bL = { class: "apps_scroll" },
   ML = [
-    cH(() =>
+    tH(() =>
       en(
         "div",
         { class: "mobile-scroll_icon w-embed" },
@@ -26067,7 +26075,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "800",
   },
   PL = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  IL = cH(() =>
+  IL = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26121,7 +26129,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "800",
   },
   XL = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  GL = cH(() =>
+  GL = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26189,7 +26197,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   f_ = { class: "btn-text cc-bottom" },
   m_ = { class: "section" },
   p_ = { class: "container over-h" },
-  z_ = cH(() => en("div", { class: "row" }, null, -1)),
+  z_ = tH(() => en("div", { class: "row" }, null, -1)),
   g_ = { class: "sticky-pair" },
   y_ = { class: "w-layout-grid pair-grid" },
   b_ = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
@@ -26210,7 +26218,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "800",
   },
   __ = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  x_ = cH(() =>
+  x_ = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26259,7 +26267,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "700",
   },
   q_ = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  R_ = cH(() =>
+  R_ = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26323,7 +26331,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   nx = { class: "btn-text cc-bottom" },
   sx = { class: "section" },
   lx = { class: "container over-h" },
-  rx = cH(() => en("div", { class: "row" }, null, -1)),
+  rx = tH(() => en("div", { class: "row" }, null, -1)),
   ox = { class: "sticky-pair" },
   ix = { class: "w-layout-grid pair-grid is-leading" },
   hx = {
@@ -26339,7 +26347,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "800",
   },
   mx = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  px = cH(() =>
+  px = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26393,7 +26401,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "800",
   },
   xx = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  Ax = cH(() =>
+  Ax = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26461,7 +26469,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   Wx = { class: "btn-text cc-bottom" },
   Yx = { class: "section" },
   Xx = { class: "container over-h" },
-  Gx = cH(() => en("div", { class: "row" }, null, -1)),
+  Gx = tH(() => en("div", { class: "row" }, null, -1)),
   Kx = { class: "sticky-pair" },
   Jx = { class: "w-layout-grid pair-grid" },
   Qx = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
@@ -26482,7 +26490,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "800",
   },
   lA = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  rA = cH(() =>
+  rA = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26540,7 +26548,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-aos-duration": "700",
   },
   zA = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  gA = cH(() =>
+  gA = tH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26602,7 +26610,7 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   TA = { class: "btn-text-wrap" },
   PA = { class: "btn-text" },
   IA = { class: "btn-text cc-bottom" },
-  qA = cH(() =>
+  qA = tH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
   RA = { class: "pre-footer readme" },
@@ -26611,13 +26619,13 @@ const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  NA = cH(() => en("div", { class: "pre-footer_gradient" }, null, -1)),
+  NA = tH(() => en("div", { class: "pre-footer_gradient" }, null, -1)),
   ZA = { class: "h1" },
   BA = { class: "pre-footer_button" },
   FA = { class: "btn cc-large-landscape" },
   $A = { class: "btn-text-wrap" },
   UA = { class: "btn-text cc-large-landscape" };
-const WA = lu(tH, [
+const WA = lu(eH, [
     [
       "render",
       function (e, t, c, a, n, s) {
@@ -26632,69 +26640,69 @@ const WA = lu(tH, [
             null,
             [
               tn(l),
-              aH,
-              en("section", nH, [
-                en("div", sH, [
-                  en("div", lH, [
-                    en("div", rH, [
-                      oH,
-                      en("div", iH, [
-                        en("div", hH, [
-                          en("h2", uH, f(a.t("$current.section.h1")), 1),
+              cH,
+              en("section", aH, [
+                en("div", nH, [
+                  en("div", sH, [
+                    en("div", lH, [
+                      rH,
+                      en("div", oH, [
+                        en("div", iH, [
+                          en("h2", hH, f(a.t("$current.section.h1")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
                 ]),
-                en("div", dH, [
-                  en("div", vH, [
-                    en("div", fH, [
-                      en("h3", mH, [
-                        en("div", pH, [
-                          en("div", zH, f(a.t("$current.introduce.title")), 1),
+                en("div", uH, [
+                  en("div", dH, [
+                    en("div", vH, [
+                      en("h3", fH, [
+                        en("div", mH, [
+                          en("div", pH, f(a.t("$current.introduce.title")), 1),
                         ]),
-                        en("div", gH, [
-                          en("div", yH, f(a.t("$current.introduce.title2")), 1),
-                          en("div", bH, [
+                        en("div", zH, [
+                          en("div", gH, f(a.t("$current.introduce.title2")), 1),
+                          en("div", yH, [
                             en(
                               "div",
-                              MH,
+                              bH,
                               f(a.t("$current.introduce.title3")),
                               1
                             ),
                           ]),
-                          en("div", CH, [
+                          en("div", MH, [
                             en(
                               "div",
-                              HH,
+                              CH,
                               f(a.t("$current.introduce.title4")),
                               1
                             ),
                           ]),
-                          en("div", wH, [
+                          en("div", HH, [
                             en(
                               "div",
-                              VH,
+                              wH,
                               f(a.t("$current.introduce.title5")),
                               1
                             ),
                           ]),
                         ]),
                       ]),
-                      en("div", LH, [
-                        en("div", _H, [
-                          en("a", xH, [
-                            en("div", AH, [
+                      en("div", VH, [
+                        en("div", LH, [
+                          en("a", _H, [
+                            en("div", xH, [
+                              en("div", AH, f(a.t("$current.btn.Inquire")), 1),
                               en("div", kH, f(a.t("$current.btn.Inquire")), 1),
-                              en("div", SH, f(a.t("$current.btn.Inquire")), 1),
                             ]),
                           ]),
                         ]),
-                        en("div", EH, [
-                          en("a", jH, [
-                            en("div", OH, [
+                        en("div", SH, [
+                          en("a", EH, [
+                            en("div", jH, [
+                              en("div", OH, f(a.t("$current.btn.reserve")), 1),
                               en("div", TH, f(a.t("$current.btn.reserve")), 1),
-                              en("div", PH, f(a.t("$current.btn.reserve")), 1),
                             ]),
                           ]),
                         ]),
@@ -26703,28 +26711,30 @@ const WA = lu(tH, [
                   ]),
                 ]),
               ]),
-              IH,
-              en("section", qH, [
-                en("div", RH, [
-                  en("div", DH, [
-                    en("div", NH, [
-                      ZH,
-                      en("div", BH, [
-                        en("div", FH, [
-                          en("h2", $H, f(a.t("$current.space.title")), 1),
+              PH,
+              en("section", IH, [
+                en("div", qH, [
+                  en("div", RH, [
+                    en("div", DH, [
+                      NH,
+                      en("div", ZH, [
+                        en("div", BH, [
+                          en("h2", FH, f(a.t("$current.space.title")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
                 ]),
-                en("div", UH, [
-                  en("div", WH, [
-                    en("h4", YH, [
-                      en("div", XH, [
-                        en("div", GH, [
+                en("div", $H, [
+                  en("div", UH, [
+                    en("h4", WH, [
+                      en("div", YH, [
+                        en("div", XH, [
                           nn(f(a.t("$current.space.content")) + " ", 1),
+                          GH,
+                          nn(" " + f(a.t("$current.space.content1")) + " ", 1),
                           KH,
-                          nn(" " + f(a.t("$current.space.content1")), 1),
+                          nn(" " + f(a.t("$current.space.content2")), 1),
                         ]),
                       ]),
                     ]),
@@ -27692,7 +27702,7 @@ const WA = lu(tH, [
         );
       },
     ],
-    ["__scopeId", "data-v-09f1947b"],
+    ["__scopeId", "data-v-25d7e458"],
   ]),
   YA = Object.freeze(
     Object.defineProperty(
@@ -27702,12 +27712,12 @@ const WA = lu(tH, [
     )
   ),
   XA = {
-    components: { Footer: _y },
+    components: { Footer: Ly },
     setup() {
       const { t: e } = qm();
       return (
         Sc(() => {
-          Ay.init();
+          xy.init();
           const e = new IntersectionObserver((e) => {
             e.forEach((e) => {
               e.isIntersecting
@@ -27719,7 +27729,7 @@ const WA = lu(tH, [
             e.observe(t);
           });
         }),
-        { t: e, getVideoUrl: NC }
+        { t: e, getVideoUrl: DC }
       );
     },
   },
@@ -29176,20 +29186,20 @@ const Ck = lu(XA, [
   ),
   wk = Object.assign({
     "../pages/collection.vue": () =>
-      bp(() => Promise.resolve().then(() => ab), void 0, import.meta.url),
+      bp(() => Promise.resolve().then(() => cb), void 0, import.meta.url),
     "../pages/demo.vue": () =>
-      bp(() => Promise.resolve().then(() => bb), void 0, import.meta.url),
+      bp(() => Promise.resolve().then(() => yb), void 0, import.meta.url),
     "../pages/gallery.vue": () =>
-      bp(() => Promise.resolve().then(() => kC), void 0, import.meta.url),
+      bp(() => Promise.resolve().then(() => AC), void 0, import.meta.url),
     "../pages/index.vue": () =>
       bp(() => Promise.resolve().then(() => YA), void 0, import.meta.url),
     "../pages/service.vue": () =>
       bp(() => Promise.resolve().then(() => Hk), void 0, import.meta.url),
   }),
   Vk = Object.assign({
-    "../pages/collection.vue": ab,
-    "../pages/demo.vue": bb,
-    "../pages/gallery.vue": kC,
+    "../pages/collection.vue": cb,
+    "../pages/demo.vue": yb,
+    "../pages/gallery.vue": AC,
     "../pages/index.vue": YA,
     "../pages/service.vue": Hk,
   }),
@@ -29682,7 +29692,14 @@ const Ek = Object.freeze(
       );
     },
   };
-var Pk = { BASE_URL: "./", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
+var Pk = {
+  VITE_TITLE: "詹紹綺人文藝術空間",
+  BASE_URL: "./",
+  MODE: "development",
+  DEV: !1,
+  PROD: !0,
+  SSR: !1,
+};
 class Ik {
   constructor() {
     (this.provider = new Ig(Pk.VITE_REMOTE_API)), this.init();
@@ -43360,7 +43377,7 @@ const Nk = new Dk(),
     });
   })();
 const Gk = Bl(ou);
-Gk.use(eH),
+Gk.use(QC),
   Gk.provide("$jQuery", mu),
   Gk.provide("$swal", gm),
   Gk.provide("$storage", Cu),

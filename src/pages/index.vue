@@ -243,6 +243,8 @@
             >
               {{ t("$current.space.content") }} <br />
               {{ t("$current.space.content1") }}
+              <br class="br_status" />
+              {{ t("$current.space.content2") }}
             </div>
           </div>
         </h4>
@@ -1743,6 +1745,17 @@ AOS.init();
 
   to {
     width: 100%;
+  }
+}
+
+@media (min-width: 991px) {
+  .br_status {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .br_status {
+    display: none;
   }
 }
 </style>

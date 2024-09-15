@@ -2618,72 +2618,72 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     display: block;
   }
 }
-.mobile-show[data-v-09f1947b] {
+.mobile-show[data-v-25d7e458] {
   display: none;
 }
 @media (max-width: 768px) {
-  .mobile-show[data-v-09f1947b] {
+  .mobile-show[data-v-25d7e458] {
     display: block;
   }
 }
-.mobile-hidden[data-v-09f1947b] {
+.mobile-hidden[data-v-25d7e458] {
   display: block;
 }
-.mobile-hidden .apps_media-list[data-v-09f1947b] {
+.mobile-hidden .apps_media-list[data-v-25d7e458] {
   margin: 0;
 }
 @media (max-width: 768px) {
-  .mobile-hidden[data-v-09f1947b] {
+  .mobile-hidden[data-v-25d7e458] {
     display: none;
   }
 }
-.apps_component[data-v-09f1947b] {
+.apps_component[data-v-25d7e458] {
   margin-top: 30px;
   height: 160px;
 }
-.transparent[data-v-09f1947b] {
+.transparent[data-v-25d7e458] {
   background-color: transparent !important;
 }
-.target_line[data-v-09f1947b] {
+.target_line[data-v-25d7e458] {
   width: 0%;
   height: 0.5px;
   background-color: var(--swatch--white);
 }
-.target_line[data-v-09f1947b]:first-child {
+.target_line[data-v-25d7e458]:first-child {
   margin-top: 30px;
 }
-.target_line.active[data-v-09f1947b] {
-  -webkit-animation-name: line-09f1947b;
-  animation-name: line-09f1947b;
+.target_line.active[data-v-25d7e458] {
+  -webkit-animation-name: line-25d7e458;
+  animation-name: line-25d7e458;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .w-layout-grid.pair-grid.is-leading[data-v-09f1947b] {
+  .w-layout-grid.pair-grid.is-leading[data-v-25d7e458] {
     overflow: hidden;
   }
 }
-.apps_asset[data-v-09f1947b] {
+.apps_asset[data-v-25d7e458] {
   height: 155px;
 }
-.apps_asset div[data-v-09f1947b],
-.apps_asset a[data-v-09f1947b],
-.apps_asset img[data-v-09f1947b] {
+.apps_asset div[data-v-25d7e458],
+.apps_asset a[data-v-25d7e458],
+.apps_asset img[data-v-25d7e458] {
   height: 100%;
 }
 @media (max-width: 768px) {
-  .apps_asset.cc-2.w-dyn-list[data-v-09f1947b],
-  .apps_asset.cc-1[data-v-09f1947b] {
+  .apps_asset.cc-2.w-dyn-list[data-v-25d7e458],
+  .apps_asset.cc-1[data-v-25d7e458] {
     transform: translateZ(0) !important;
   }
 }
-.readme[data-v-09f1947b] {
+.readme[data-v-25d7e458] {
   background-image: url(./readme-Pkd7lgOo.jpg);
   background-size: cover;
 }
-@-webkit-keyframes line-09f1947b {
+@-webkit-keyframes line-25d7e458 {
   0% {
     width: 0;
   }
@@ -2691,12 +2691,22 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
     width: 100%;
   }
 }
-@keyframes line-09f1947b {
+@keyframes line-25d7e458 {
   0% {
     width: 0;
   }
   to {
     width: 100%;
+  }
+}
+@media (min-width: 991px) {
+  .br_status[data-v-25d7e458] {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .br_status[data-v-25d7e458] {
+    display: none;
   }
 }
 .readme[data-v-00886d78] {
