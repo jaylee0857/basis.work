@@ -70,9 +70,72 @@
                   transform: translate(0px, 0%);
                   font-size: 2rem;
                 "
-                class="mt-8"
+                class="mt-32"
               >
                 {{ t("$current.introduce.title2") }}
+              </div>
+              <div
+                class="u-overflow-hidden"
+                style="display: block; text-align: start; position: relative"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0%);
+                    font-size: 2rem;
+                  "
+                  class="mt-32"
+                >
+                  {{ t("$current.introduce.title3") }}
+                </div>
+              </div>
+              <div
+                class="u-overflow-hidden"
+                style="display: block; text-align: start; position: relative"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0%);
+                    font-size: 2rem;
+                  "
+                  class="mt-32"
+                >
+                  {{ t("$current.introduce.title4") }}
+                </div>
+              </div>
+              <div
+                class="u-overflow-hidden"
+                style="display: block; text-align: start; position: relative"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
+                <div
+                  style="
+                    position: relative;
+                    display: inline-block;
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    transform: translate(0px, 0%);
+                    font-size: 2rem;
+                  "
+                  class="mt-32"
+                >
+                  {{ t("$current.introduce.title5") }}
+                </div>
               </div>
             </div>
           </h3>

@@ -5,9 +5,15 @@ export default {
   "introduce.title": "詹绍绮人文艺术空间",
   "introduce.title2":
     "从艺术之森的生命力出发，用自然、简约、不假雕琢的手法，保留了生活中最纯粹的美学。",
+  "introduce.title3":
+    "我们秉持「品味生活、丰富生命、美化人生」初衷，历经十余年探寻、考察、采集，找到人文艺术的魅力并转化成体验。 ",
+  "introduce.title4":
+    "矢志以职人气质、匠人精神，赞天地之化育，以「天、地、人」相应「茶 、器 、艺」之妙趣为基石，融合自我与自然，使心灵丰盈。 ",
+  "introduce.title5":
+    "让我们与詹绍绮，从艺术、品茗（茶味里的丰富隐知）、咖啡（精品咖啡各式风情）、美酒（淬酿不凡的威士忌）一起找到愉悦及灵感，优雅踏上生命进化的阶梯！",
   "space.title": "空间预约",
   "space.content": "空中艺廊",
-  "space.content1": "侘寂，不完美的完美",
+  "space.content1": "侘寂，不完美的完美 （整体环境）",
   "space.imginfo": "Skyart3725全景",
   "space.imginfo2": "多功能茶席空间",
   "space.imginfo3":

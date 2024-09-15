@@ -5,9 +5,15 @@ export default {
   "introduce.title": "詹紹綺人文藝術空間",
   "introduce.title2":
     "從藝術之森的生命力出發，用自然、簡約、不假雕琢的手法，保留了生活中最純粹的美學。",
+  "introduce.title3":
+    "我們秉持「品味生活、豐富生命、美化人生」初衷，歷經十餘年探尋、考察、採集，找到人文藝術的魅力並轉化成體驗。",
+  "introduce.title4":
+    "矢志以職人氣質、匠人精神，贊天地之化育，以「天、地、人」相應「茶 、器 、藝」之妙趣為基石，融合自我與自然，使心靈豐盈。",
+  "introduce.title5":
+    "讓我們與詹紹綺，從藝術、品茗（茶味裡的豐富隱知）、咖啡（精品咖啡各式風情）、美酒（淬釀不凡的威士忌）一起找到愉悅及靈感，優雅踏上生命進化的階梯！",
   "space.title": "空間預約",
   "space.content": "空中藝廊",
-  "space.content1": "侘寂，不完美的完美",
+  "space.content1": "侘寂，不完美的完美 （整體環境）",
   "space.imginfo": "Skyart3725全景",
   "space.imginfo2": "多功能茶席空間",
   "space.imginfo3":
