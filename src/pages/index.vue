@@ -244,7 +244,7 @@
               {{ t("$current.space.content") }} <br />
               {{ t("$current.space.content1") }}
               <br class="br_status" />
-              {{ t("$current.space.content2") }}
+              <!-- {{ t("$current.space.content2") }} -->
             </div>
           </div>
         </h4>
@@ -362,7 +362,8 @@
                           <div class="card-up">
                             <div class="card-large_text">
                               <h4 class="u-ts-4">
-                                {{ t("$current.space.imginfo2") }}
+                                {{ t("$current.space.imginfo2") }} <br />
+                                {{ t("$current.space.imginfo2-1") }}
                               </h4>
                             </div>
                           </div>

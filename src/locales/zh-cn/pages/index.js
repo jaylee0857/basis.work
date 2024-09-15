@@ -13,9 +13,11 @@ export default {
     "让我们与詹绍绮，从艺术、品茗（茶味里的丰富隐知）、咖啡（精品咖啡各式风情）、美酒（淬酿不凡的威士忌）一起找到愉悦及灵感，优雅踏上生命进化的阶梯！",
   "space.title": "空间预约",
   "space.content": "空中艺廊",
-  "space.content1": "侘寂，不完美的完美 （整体环境）",
+  "space.content1": "侘寂，不完美的完美",
+  "space.content2": "(整体环境)",
   "space.imginfo": "Skyart3725全景",
   "space.imginfo2": "多功能茶席空间",
+  "space.imginfo2-1": "幽玄，微妙深奥的优雅",
   "space.imginfo3":
     "博物馆有三区专业茶道茶席空间，最多可以招待8-20位嘉宾，每区饮水与视听设备其齐全，静待您与好友在云顶与大师名作间沏壶阅茗。",
   "humanities.title": "定香人文",

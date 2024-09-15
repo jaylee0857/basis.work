@@ -17,6 +17,7 @@ export default {
   "space.content2": "(整體環境)",
   "space.imginfo": "Skyart3725全景",
   "space.imginfo2": "多功能茶席空間",
+  "space.imginfo2-1": "幽玄，微妙深奧的優雅",
   "space.imginfo3":
     "博物館有三區專業茶道茶席空間，最多可以招待8-20位嘉賓，每區飲水與視聽設備其齊全，靜待您與好友在雲頂與大師名作間沏壺閱茗。",
   "humanities.title": "定香人文",
