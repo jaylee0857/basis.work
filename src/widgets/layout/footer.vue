@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row row-justify-center">
-        <div class="col col-lg-3 col-md-12">
+        <div class="col col-lg-4 col-md-12">
           <div class="footer_group cc-above">
             <h3 class="u-ts-6 u-text-secondary">Email us</h3>
             <ul role="list" class="footer_list">
@@ -37,7 +37,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-lg-3 col-md-12">
+        <div class="col col-lg-4 col-md-12">
           <div class="footer_group">
             <h3 class="u-ts-6 u-text-secondary">Navigation</h3>
             <ul role="list" class="footer_list">
@@ -73,7 +73,7 @@
             </ul>
           </div>
         </div>
-        <div class="col col-md-hide"></div>
+        <!-- <div class="col col-md-hide"></div> -->
         <div class="col col-lg-4 col-md-12 col-md-first">
           <a href="/" class="footer-wordmark w-inline-block"
             ><div class="wordmark w-embed">

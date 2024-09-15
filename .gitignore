@@ -1,4 +1,29 @@
-node_modules/
 .DS_Store
-**/.DS_Store
-.DS_Store?
+node_modules*
+/dist
+/bet365
+
+# local env files
+.env
+.env.*.local
+.env.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+revisions.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+package-lock.json
+src/variables/client-by-client/client.scss
+
+# Docker files
+docker-compose.yml

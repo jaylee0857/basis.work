@@ -17594,9 +17594,15 @@ const Wf = Object.freeze(
           "introduce.title": "詹绍绮人文艺术空间",
           "introduce.title2":
             "从艺术之森的生命力出发，用自然、简约、不假雕琢的手法，保留了生活中最纯粹的美学。",
+          "introduce.title3":
+            "我们秉持「品味生活、丰富生命、美化人生」初衷，历经十余年探寻、考察、采集，找到人文艺术的魅力并转化成体验。 ",
+          "introduce.title4":
+            "矢志以职人气质、匠人精神，赞天地之化育，以「天、地、人」相应「茶 、器 、艺」之妙趣为基石，融合自我与自然，使心灵丰盈。 ",
+          "introduce.title5":
+            "让我们与詹绍绮，从艺术、品茗（茶味里的丰富隐知）、咖啡（精品咖啡各式风情）、美酒（淬酿不凡的威士忌）一起找到愉悦及灵感，优雅踏上生命进化的阶梯！",
           "space.title": "空间预约",
           "space.content": "空中艺廊",
-          "space.content1": "侘寂，不完美的完美",
+          "space.content1": "侘寂，不完美的完美 （整体环境）",
           "space.imginfo": "Skyart3725全景",
           "space.imginfo2": "多功能茶席空间",
           "space.imginfo3":
@@ -17782,9 +17788,15 @@ const Wf = Object.freeze(
           "introduce.title": "詹紹綺人文藝術空間",
           "introduce.title2":
             "從藝術之森的生命力出發，用自然、簡約、不假雕琢的手法，保留了生活中最純粹的美學。",
+          "introduce.title3":
+            "我們秉持「品味生活、豐富生命、美化人生」初衷，歷經十餘年探尋、考察、採集，找到人文藝術的魅力並轉化成體驗。",
+          "introduce.title4":
+            "矢志以職人氣質、匠人精神，贊天地之化育，以「天、地、人」相應「茶 、器 、藝」之妙趣為基石，融合自我與自然，使心靈豐盈。",
+          "introduce.title5":
+            "讓我們與詹紹綺，從藝術、品茗（茶味裡的豐富隱知）、咖啡（精品咖啡各式風情）、美酒（淬釀不凡的威士忌）一起找到愉悅及靈感，優雅踏上生命進化的階梯！",
           "space.title": "空間預約",
           "space.content": "空中藝廊",
-          "space.content1": "侘寂，不完美的完美",
+          "space.content1": "侘寂，不完美的完美 （整體環境）",
           "space.imginfo": "Skyart3725全景",
           "space.imginfo2": "多功能茶席空間",
           "space.imginfo3":
@@ -17853,21 +17865,14 @@ const Wf = Object.freeze(
     "../locales/zh-tw/pages/index.js": um,
   }),
   vm = {};
-for (let $k in dm) {
-  const e = $k.replace("../locales/", "").toLowerCase().replace(".js", ""),
+for (let Kk in dm) {
+  const e = Kk.replace("../locales/", "").toLowerCase().replace(".js", ""),
     [t, ...c] = e.split("/"),
     a = _i(".", c),
-    n = dm[$k].default;
+    n = dm[Kk].default;
   vm[t] = Ko((e, t) => Si(e, { [`${a}.${t}`]: n[t] }), vm[t] || {}, Uo(n));
 }
-var fm = {
-  VITE_TITLE: "詹紹綺人文藝術空間",
-  BASE_URL: "./",
-  MODE: "development",
-  DEV: !1,
-  PROD: !0,
-  SSR: !1,
-};
+var fm = { BASE_URL: "./", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
 const mm = (() => {
     var e, t;
     const c = Cu.get("locale");
@@ -19095,9 +19100,9 @@ const fp = lu({ setup() {} }, [
     "../layouts/layout-demo.vue": mp,
   }),
   zp = [];
-for (let $k in pp) {
-  const e = $k.replace("../layouts/", "").toLowerCase().replace(".vue", "");
-  zp.push({ componentName: e, component: pp[$k].default });
+for (let Kk in pp) {
+  const e = Kk.replace("../layouts/", "").toLowerCase().replace(".vue", "");
+  zp.push({ componentName: e, component: pp[Kk].default });
 }
 const gp = {
     install: (e) => {
@@ -19669,9 +19674,9 @@ const qp = lu({}, [
     "../components/the-popup.vue": Fp,
   }),
   Up = [];
-for (let $k in $p) {
-  const e = $k.replace("../components/", "").toLowerCase().replace(".vue", "");
-  Up.push({ componentName: e, component: $p[$k].default });
+for (let Kk in $p) {
+  const e = Kk.replace("../components/", "").toLowerCase().replace(".vue", "");
+  Up.push({ componentName: e, component: $p[Kk].default });
 }
 const Wp = {
   install: (e) => {
@@ -20903,9 +20908,8 @@ const qg = {
   };
 const Ng = Pg.create();
 (Ng.defaults.baseURL = {
-  VITE_TITLE: "詹紹綺人文藝術空間",
   BASE_URL: "./",
-  MODE: "development",
+  MODE: "production",
   DEV: !1,
   PROD: !0,
   SSR: !1,
@@ -21060,13 +21064,12 @@ const cy = (e, t, c) => {
     ? { [a]: { namespaced: !0, modules: cy(n, t, c) } }
     : { [a]: { namespaced: !0, [t]: c } };
 };
-for (let $k in ey) {
-  const e = $k
-    .replace("../store/", "")
+for (let Kk in ey) {
+  const e = Kk.replace("../store/", "")
     .toLowerCase()
     .replace(".js", "")
     .split("/");
-  ty = ki(ty, cy(wi(e), Mi(e), ey[$k].default));
+  ty = ki(ty, cy(wi(e), Mi(e), ey[Kk].default));
 }
 const ay = ty;
 function ny(e, t) {
@@ -25418,7 +25421,7 @@ const tH = {
   },
 };
 Ay.init();
-const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
+const cH = (e) => ($t("data-v-09f1947b"), (e = e()), Ut(), e),
   aH = cH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
@@ -25485,10 +25488,64 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       transform: "translate(0px, 0%)",
       "font-size": "2rem",
     },
-    class: "mt-8",
+    class: "mt-32",
   },
-  bH = { class: "btn-group" },
+  bH = {
+    class: "u-overflow-hidden",
+    style: { display: "block", "text-align": "start", position: "relative" },
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+  },
   MH = {
+    style: {
+      position: "relative",
+      display: "inline-block",
+      translate: "none",
+      rotate: "none",
+      scale: "none",
+      transform: "translate(0px, 0%)",
+      "font-size": "2rem",
+    },
+    class: "mt-32",
+  },
+  CH = {
+    class: "u-overflow-hidden",
+    style: { display: "block", "text-align": "start", position: "relative" },
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+  },
+  HH = {
+    style: {
+      position: "relative",
+      display: "inline-block",
+      translate: "none",
+      rotate: "none",
+      scale: "none",
+      transform: "translate(0px, 0%)",
+      "font-size": "2rem",
+    },
+    class: "mt-32",
+  },
+  wH = {
+    class: "u-overflow-hidden",
+    style: { display: "block", "text-align": "start", position: "relative" },
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+  },
+  VH = {
+    style: {
+      position: "relative",
+      display: "inline-block",
+      translate: "none",
+      rotate: "none",
+      scale: "none",
+      transform: "translate(0px, 0%)",
+      "font-size": "2rem",
+    },
+    class: "mt-32",
+  },
+  LH = { class: "btn-group" },
+  _H = {
     class: "btn-item cc-1",
     style: {
       translate: "none",
@@ -25498,15 +25555,15 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       opacity: "1",
     },
   },
-  CH = {
+  xH = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  HH = { class: "btn-text-wrap" },
-  wH = { class: "btn-text" },
-  VH = { class: "btn-text cc-bottom" },
-  LH = {
+  AH = { class: "btn-text-wrap" },
+  kH = { class: "btn-text" },
+  SH = { class: "btn-text cc-bottom" },
+  EH = {
     class: "btn-item cc-2",
     "data-aos": "fade-up",
     "data-aos-duration": "3000",
@@ -25518,26 +25575,26 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       opacity: "1",
     },
   },
-  _H = {
+  jH = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  xH = { class: "btn-text-wrap" },
-  AH = { class: "btn-text" },
-  kH = { class: "btn-text cc-bottom" },
-  SH = cH(() =>
+  OH = { class: "btn-text-wrap" },
+  TH = { class: "btn-text" },
+  PH = { class: "btn-text cc-bottom" },
+  IH = cH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  EH = { class: "section" },
-  jH = { class: "section-title_component" },
-  OH = { class: "container" },
-  TH = {
+  qH = { class: "section" },
+  RH = { class: "section-title_component" },
+  DH = { class: "container" },
+  NH = {
     class: "section-title_wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  PH = cH(() =>
+  ZH = cH(() =>
     en(
       "div",
       { class: "section-title_dot", style: { opacity: "1" } },
@@ -25550,19 +25607,19 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  IH = { class: "u-overflow-hidden" },
-  qH = { class: "section-title_title" },
-  RH = { class: "u-ts-4" },
-  DH = { class: "container" },
-  NH = { "data-animation-element": "group" },
-  ZH = { "data-animation-element": "title", class: "h1", style: {} },
-  BH = {
+  BH = { class: "u-overflow-hidden" },
+  FH = { class: "section-title_title" },
+  $H = { class: "u-ts-4" },
+  UH = { class: "container" },
+  WH = { "data-animation-element": "group" },
+  YH = { "data-animation-element": "title", class: "h1", style: {} },
+  XH = {
     class: "u-overflow-hidden",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     style: { display: "block", "text-align": "start", position: "relative" },
   },
-  FH = {
+  GH = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -25572,28 +25629,28 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       transform: "translate(0px, 0%)",
     },
   },
-  $H = cH(() => en("br", null, null, -1)),
-  UH = { class: "sticky-pair" },
-  WH = { class: "w-layout-grid pair-grid" },
-  YH = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
-  XH = {
+  KH = cH(() => en("br", null, null, -1)),
+  JH = { class: "sticky-pair" },
+  QH = { class: "w-layout-grid pair-grid" },
+  ew = { id: "w-node-eb3e6ea8-5a10-d5fc-f561-3f621ba6f385-af552307" },
+  tw = {
     id: "w-node-_137ddbb9-11b4-d169-f149-eca9f54873e8-af552307",
     class: "card-wrapper cc-small",
   },
-  GH = {
+  cw = {
     id: "w-node-a3cc95fc-d4f5-0398-7194-1e8506932d8d-af552307",
     class: "w-dyn-list",
   },
-  KH = { role: "list", class: "w-dyn-items" },
-  JH = { role: "listitem", class: "w-dyn-item" },
-  QH = { class: "card-wrapper cc-small" },
-  ew = {
+  aw = { role: "list", class: "w-dyn-items" },
+  nw = { role: "listitem", class: "w-dyn-item" },
+  sw = { class: "card-wrapper cc-small" },
+  lw = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  tw = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  cw = cH(() =>
+  rw = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  ow = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -25625,29 +25682,29 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  aw = {
+  iw = {
     class: "card-body",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  nw = { class: "u-overflow-hidden" },
-  sw = { class: "card-up" },
-  lw = { class: "u-ts-4" },
-  rw = {
+  hw = { class: "u-overflow-hidden" },
+  uw = { class: "card-up" },
+  dw = { class: "u-ts-4" },
+  vw = {
     id: "w-node-_814776c7-59e4-1835-d274-f4eed26bca88-af552307",
     class: "w-dyn-list",
   },
-  ow = { role: "list", class: "w-dyn-items" },
-  iw = { role: "listitem", class: "w-dyn-item" },
-  hw = { class: "card-wrapper cc-large" },
-  uw = { class: "card-animation cc-40" },
-  dw = {
+  fw = { role: "list", class: "w-dyn-items" },
+  mw = { role: "listitem", class: "w-dyn-item" },
+  pw = { class: "card-wrapper cc-large" },
+  zw = { class: "card-animation cc-40" },
+  gw = {
     "data-mouse-class": "cc-text",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     class: "card is-link w-inline-block",
   },
-  vw = cH(() =>
+  yw = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -25679,114 +25736,114 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  fw = {
+  bw = {
     class: "card-body",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  mw = { class: "u-overflow-hidden" },
-  pw = { class: "card-up" },
-  zw = { class: "card-large_text" },
-  gw = { class: "u-ts-4" },
-  yw = {
+  Mw = { class: "u-overflow-hidden" },
+  Cw = { class: "card-up" },
+  Hw = { class: "card-large_text" },
+  ww = { class: "u-ts-4" },
+  Vw = {
     id: "w-node-bc6d1a98-c4cb-3434-3589-47eddb3c03ed-af552307",
     class: "content",
   },
-  bw = { class: "content-p cc-1" },
-  Mw = { class: "u-ts-3", "data-aos": "fade-up", "data-aos-duration": "700" },
-  Cw = { class: "btn-group" },
-  Hw = { class: "btn-item cc-1" },
-  ww = {
+  Lw = { class: "content-p cc-1" },
+  _w = { class: "u-ts-3", "data-aos": "fade-up", "data-aos-duration": "700" },
+  xw = { class: "btn-group" },
+  Aw = { class: "btn-item cc-1" },
+  kw = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  Vw = { class: "btn-text-wrap" },
-  Lw = { class: "btn-text" },
-  _w = { class: "btn-text cc-bottom" },
-  xw = { class: "btn-item cc-2" },
-  Aw = {
+  Sw = { class: "btn-text-wrap" },
+  Ew = { class: "btn-text" },
+  jw = { class: "btn-text cc-bottom" },
+  Ow = { class: "btn-item cc-2" },
+  Tw = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  kw = { class: "btn-text-wrap" },
-  Sw = { class: "btn-text" },
-  Ew = { class: "btn-text cc-bottom" },
-  jw = cH(() =>
+  Pw = { class: "btn-text-wrap" },
+  Iw = { class: "btn-text" },
+  qw = { class: "btn-text cc-bottom" },
+  Rw = cH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  Ow = { class: "section" },
-  Tw = { class: "section-title_component" },
-  Pw = { class: "container" },
-  Iw = {
+  Dw = { class: "section" },
+  Nw = { class: "section-title_component" },
+  Zw = { class: "container" },
+  Bw = {
     class: "section-title_wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  qw = cH(() => en("div", { class: "section-title_dot" }, null, -1)),
-  Rw = { class: "u-overflow-hidden" },
-  Dw = { class: "section-title_title" },
-  Nw = { class: "u-ts-4" },
-  Zw = { class: "container" },
-  Bw = { class: "w-layout-grid pair-grid" },
-  Fw = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
-  $w = { class: "service-list" },
-  Uw = { class: "logomark_component" },
-  Ww = {
+  Fw = cH(() => en("div", { class: "section-title_dot" }, null, -1)),
+  $w = { class: "u-overflow-hidden" },
+  Uw = { class: "section-title_title" },
+  Ww = { class: "u-ts-4" },
+  Yw = { class: "container" },
+  Xw = { class: "w-layout-grid pair-grid" },
+  Gw = { id: "w-node-_6e6a6411-9d71-b91d-1723-e94f35341c18-af552307" },
+  Kw = { class: "service-list" },
+  Jw = { class: "logomark_component" },
+  Qw = {
     class: "logomark w-embed",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  Yw = ["src"],
-  Xw = { role: "list", class: "u-mt-3-5" },
-  Gw = {
+  eV = ["src"],
+  tV = { role: "list", class: "u-mt-3-5" },
+  cV = {
     class: "u-overflow-hidden",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "150",
   },
-  Kw = { class: "list-content cc-2" },
-  Jw = { class: "u-tc-caps" },
-  Qw = {
-    class: "u-overflow-hidden",
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
-    "data-aos-delay": "200",
-  },
-  eV = { class: "list-content cc-3" },
-  tV = { class: "u-tc-caps" },
-  cV = {
-    class: "u-overflow-hidden",
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
-    "data-aos-delay": "250",
-  },
-  aV = { class: "list-content cc-4" },
+  aV = { class: "list-content cc-2" },
   nV = { class: "u-tc-caps" },
   sV = {
     class: "u-overflow-hidden",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  lV = { class: "list-content cc-3" },
+  rV = { class: "u-tc-caps" },
+  oV = {
+    class: "u-overflow-hidden",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "250",
+  },
+  iV = { class: "list-content cc-4" },
+  hV = { class: "u-tc-caps" },
+  uV = {
+    class: "u-overflow-hidden",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
     "data-aos-delay": "300",
   },
-  lV = { class: "list-content cc-5" },
-  rV = { class: "u-tc-caps" },
-  oV = { class: "btn-group" },
-  iV = { class: "btn-item cc-1" },
-  hV = {
+  dV = { class: "list-content cc-5" },
+  vV = { class: "u-tc-caps" },
+  fV = { class: "btn-group" },
+  mV = { class: "btn-item cc-1" },
+  pV = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  uV = { class: "btn-text-wrap" },
-  dV = { class: "btn-text" },
-  vV = { class: "btn-text cc-bottom" },
-  fV = { class: "section cc-apps" },
-  mV = { class: "container" },
-  pV = { class: "row" },
-  zV = { "data-animation-element": "group", class: "col" },
-  gV = {
+  zV = { class: "btn-text-wrap" },
+  gV = { class: "btn-text" },
+  yV = { class: "btn-text cc-bottom" },
+  bV = { class: "section cc-apps" },
+  MV = { class: "container" },
+  CV = { class: "row" },
+  HV = { "data-animation-element": "group", class: "col" },
+  wV = {
     "data-animation-element": "title",
     class: "h1",
     style: {},
@@ -25794,11 +25851,11 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
     "data-aos-duration": "700",
     "data-aos-delay": "600",
   },
-  yV = {
+  VV = {
     class: "u-overflow-hidden",
     style: { display: "block", "text-align": "start", position: "relative" },
   },
-  bV = {
+  LV = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -25808,38 +25865,24 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       transform: "translate(0px, 0%)",
     },
   },
-  MV = { "data-apps": "component", class: "apps_component mobile-show" },
-  CV = { class: "apps_media-wrapper" },
-  HV = {
+  _V = { "data-apps": "component", class: "apps_component mobile-show" },
+  xV = { class: "apps_media-wrapper" },
+  AV = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "100",
   },
-  wV = ["src"],
-  VV = {
-    class: "apps_asset-wrapper",
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
-    "data-aos-delay": "150",
-  },
-  LV = {
-    "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
-    class: "apps_asset cc-2 w-dyn-list",
-  },
-  _V = { role: "list", class: "w-dyn-items" },
-  xV = { role: "listitem", class: "w-dyn-item" },
-  AV = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
   kV = ["src"],
   SV = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
-    "data-aos-delay": "200",
+    "data-aos-delay": "150",
   },
   EV = {
-    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
-    class: "apps_asset cc-3 w-dyn-list",
+    "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
+    class: "apps_asset cc-2 w-dyn-list",
   },
   jV = { role: "list", class: "w-dyn-items" },
   OV = { role: "listitem", class: "w-dyn-item" },
@@ -25859,8 +25902,22 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
   DV = { role: "listitem", class: "w-dyn-item" },
   NV = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
   ZV = ["src"],
-  BV = { class: "apps_scroll" },
-  FV = cH(() =>
+  BV = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  FV = {
+    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
+    class: "apps_asset cc-3 w-dyn-list",
+  },
+  $V = { role: "list", class: "w-dyn-items" },
+  UV = { role: "listitem", class: "w-dyn-item" },
+  WV = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
+  YV = ["src"],
+  XV = { class: "apps_scroll" },
+  GV = cH(() =>
     en(
       "div",
       { class: "mobile-scroll_icon w-embed" },
@@ -25886,42 +25943,28 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  $V = [FV],
-  UV = {
+  KV = [GV],
+  JV = {
     "data-apps": "component",
     class: "apps_component container mobile-hidden",
   },
-  WV = { class: "apps_media-wrapper" },
-  YV = {
+  QV = { class: "apps_media-wrapper" },
+  eL = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "100",
   },
-  XV = ["src"],
-  GV = {
-    class: "apps_asset-wrapper",
-    "data-aos": "fade-up",
-    "data-aos-duration": "700",
-    "data-aos-delay": "150",
-  },
-  KV = {
-    "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
-    class: "apps_asset cc-2 w-dyn-list",
-  },
-  JV = { role: "list", class: "w-dyn-items" },
-  QV = { role: "listitem", class: "w-dyn-item" },
-  eL = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
   tL = ["src"],
   cL = {
     class: "apps_asset-wrapper",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
-    "data-aos-delay": "200",
+    "data-aos-delay": "150",
   },
   aL = {
-    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
-    class: "apps_asset cc-3 w-dyn-list",
+    "data-w-id": "2aa36fa9-41c0-5a43-aa83-b39188bc3c2b",
+    class: "apps_asset cc-2 w-dyn-list",
   },
   nL = { role: "list", class: "w-dyn-items" },
   sL = { role: "listitem", class: "w-dyn-item" },
@@ -25941,8 +25984,22 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
   uL = { role: "listitem", class: "w-dyn-item" },
   dL = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
   vL = ["src"],
-  fL = { class: "apps_scroll" },
-  mL = [
+  fL = {
+    class: "apps_asset-wrapper",
+    "data-aos": "fade-up",
+    "data-aos-duration": "700",
+    "data-aos-delay": "200",
+  },
+  mL = {
+    "data-w-id": "736ca15f-35ee-0e1c-219c-8c920cdd4f00",
+    class: "apps_asset cc-3 w-dyn-list",
+  },
+  pL = { role: "list", class: "w-dyn-items" },
+  zL = { role: "listitem", class: "w-dyn-item" },
+  gL = { "data-mouse-class": "cc-text", class: "apps_link w-inline-block" },
+  yL = ["src"],
+  bL = { class: "apps_scroll" },
+  ML = [
     cH(() =>
       en(
         "div",
@@ -25970,22 +26027,22 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       )
     ),
   ],
-  pL = { class: "section mt-[1rem]" },
-  zL = { class: "container" },
-  gL = { class: "row" },
-  yL = { "data-animation-element": "group", class: "col" },
-  bL = {
+  CL = { class: "section mt-[1rem]" },
+  HL = { class: "container" },
+  wL = { class: "row" },
+  VL = { "data-animation-element": "group", class: "col" },
+  LL = {
     "data-animation-element": "title",
     class: "h1",
     style: {},
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  ML = {
+  _L = {
     class: "u-overflow-hidden",
     style: { display: "block", "text-align": "start", position: "relative" },
   },
-  CL = {
+  xL = {
     style: {
       position: "relative",
       display: "inline-block",
@@ -25995,22 +26052,22 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       transform: "translate(0px, 0%)",
     },
   },
-  HL = { class: "sticky-pair" },
-  wL = { class: "w-layout-grid pair-grid is-leading" },
-  VL = {
+  AL = { class: "sticky-pair" },
+  kL = { class: "w-layout-grid pair-grid is-leading" },
+  SL = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
-  LL = { role: "list", class: "w-dyn-items" },
-  _L = { role: "listitem", class: "w-dyn-item" },
-  xL = { class: "card-wrapper cc-large" },
-  AL = {
+  EL = { role: "list", class: "w-dyn-items" },
+  jL = { role: "listitem", class: "w-dyn-item" },
+  OL = { class: "card-wrapper cc-large" },
+  TL = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  kL = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  SL = cH(() =>
+  PL = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  IL = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26042,29 +26099,29 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  EL = { class: "card-body" },
-  jL = { class: "u-overflow-hidden" },
-  OL = { class: "card-up" },
-  TL = { class: "card-large_text" },
-  PL = { class: "u-ts-4" },
-  IL = {
+  qL = { class: "card-body" },
+  RL = { class: "u-overflow-hidden" },
+  DL = { class: "card-up" },
+  NL = { class: "card-large_text" },
+  ZL = { class: "u-ts-4" },
+  BL = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  qL = {
+  FL = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  RL = { role: "list", class: "w-dyn-items" },
-  DL = { role: "listitem", class: "w-dyn-item" },
-  NL = { class: "card-wrapper cc-small" },
-  ZL = {
+  $L = { role: "list", class: "w-dyn-items" },
+  UL = { role: "listitem", class: "w-dyn-item" },
+  WL = { class: "card-wrapper cc-small" },
+  YL = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  BL = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  FL = cH(() =>
+  XL = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  GL = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26096,64 +26153,64 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  $L = { class: "card-body" },
-  UL = { class: "u-overflow-hidden" },
-  WL = { class: "card-up" },
-  YL = { class: "u-ts-4" },
-  XL = {
+  KL = { class: "card-body" },
+  JL = { class: "u-overflow-hidden" },
+  QL = { class: "card-up" },
+  e_ = { class: "u-ts-4" },
+  t_ = {
     id: "w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307",
     class: "content is-grid",
   },
-  GL = { class: "content-p cc-1" },
-  KL = {
+  c_ = { class: "content-p cc-1" },
+  a_ = {
     class: "u-ts-3",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "200",
   },
-  JL = { class: "btn-group" },
-  QL = { class: "btn-item cc-1" },
-  e_ = {
+  n_ = { class: "btn-group" },
+  s_ = { class: "btn-item cc-1" },
+  l_ = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  t_ = { class: "btn-text-wrap" },
-  c_ = { class: "btn-text" },
-  a_ = { class: "btn-text cc-bottom" },
-  n_ = { class: "btn-item cc-2" },
-  s_ = {
+  r_ = { class: "btn-text-wrap" },
+  o_ = { class: "btn-text" },
+  i_ = { class: "btn-text cc-bottom" },
+  h_ = { class: "btn-item cc-2" },
+  u_ = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  l_ = { class: "btn-text-wrap" },
-  r_ = { class: "btn-text" },
-  o_ = { class: "btn-text cc-bottom" },
-  i_ = { class: "section" },
-  h_ = { class: "container over-h" },
-  u_ = cH(() => en("div", { class: "row" }, null, -1)),
-  d_ = { class: "sticky-pair" },
-  v_ = { class: "w-layout-grid pair-grid" },
-  f_ = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  m_ = {
+  d_ = { class: "btn-text-wrap" },
+  v_ = { class: "btn-text" },
+  f_ = { class: "btn-text cc-bottom" },
+  m_ = { class: "section" },
+  p_ = { class: "container over-h" },
+  z_ = cH(() => en("div", { class: "row" }, null, -1)),
+  g_ = { class: "sticky-pair" },
+  y_ = { class: "w-layout-grid pair-grid" },
+  b_ = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+  M_ = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  p_ = {
+  C_ = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  z_ = { role: "list", class: "w-dyn-items" },
-  g_ = { role: "listitem", class: "w-dyn-item" },
-  y_ = { class: "card-wrapper cc-small" },
-  b_ = {
+  H_ = { role: "list", class: "w-dyn-items" },
+  w_ = { role: "listitem", class: "w-dyn-item" },
+  V_ = { class: "card-wrapper cc-small" },
+  L_ = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  M_ = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  C_ = cH(() =>
+  __ = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  x_ = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26185,24 +26242,24 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  H_ = { class: "card-body" },
-  w_ = { class: "u-overflow-hidden" },
-  V_ = { class: "card-up" },
-  L_ = { class: "u-ts-4" },
-  __ = {
+  A_ = { class: "card-body" },
+  k_ = { class: "u-overflow-hidden" },
+  S_ = { class: "card-up" },
+  E_ = { class: "u-ts-4" },
+  j_ = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  x_ = { role: "list", class: "w-dyn-items" },
-  A_ = { role: "listitem", class: "w-dyn-item" },
-  k_ = { class: "card-wrapper cc-large" },
-  S_ = {
+  O_ = { role: "list", class: "w-dyn-items" },
+  T_ = { role: "listitem", class: "w-dyn-item" },
+  P_ = { class: "card-wrapper cc-large" },
+  I_ = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  E_ = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  j_ = cH(() =>
+  q_ = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  R_ = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26234,55 +26291,55 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  O_ = { class: "card-body" },
-  T_ = { class: "u-overflow-hidden" },
-  P_ = { class: "card-up" },
-  I_ = { class: "card-large_text" },
-  q_ = { class: "u-ts-4" },
-  R_ = {
+  D_ = { class: "card-body" },
+  N_ = { class: "u-overflow-hidden" },
+  Z_ = { class: "card-up" },
+  B_ = { class: "card-large_text" },
+  F_ = { class: "u-ts-4" },
+  $_ = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307",
     class: "content is-grid",
   },
-  D_ = { class: "content-p cc-1" },
-  N_ = { class: "u-ts-3", "data-aos": "fade-up", "data-aos-duration": "800" },
-  Z_ = { class: "btn-group" },
-  B_ = { class: "btn-item cc-1" },
-  F_ = {
+  U_ = { class: "content-p cc-1" },
+  W_ = { class: "u-ts-3", "data-aos": "fade-up", "data-aos-duration": "800" },
+  Y_ = { class: "btn-group" },
+  X_ = { class: "btn-item cc-1" },
+  G_ = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  $_ = { class: "btn-text-wrap" },
-  U_ = { class: "btn-text" },
-  W_ = { class: "btn-text cc-bottom" },
-  Y_ = { class: "btn-item cc-2" },
-  X_ = {
+  K_ = { class: "btn-text-wrap" },
+  J_ = { class: "btn-text" },
+  Q_ = { class: "btn-text cc-bottom" },
+  ex = { class: "btn-item cc-2" },
+  tx = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  G_ = { class: "btn-text-wrap" },
-  K_ = { class: "btn-text" },
-  J_ = { class: "btn-text cc-bottom" },
-  Q_ = { class: "section" },
-  ex = { class: "container over-h" },
-  tx = cH(() => en("div", { class: "row" }, null, -1)),
-  cx = { class: "sticky-pair" },
-  ax = { class: "w-layout-grid pair-grid is-leading" },
-  nx = {
+  cx = { class: "btn-text-wrap" },
+  ax = { class: "btn-text" },
+  nx = { class: "btn-text cc-bottom" },
+  sx = { class: "section" },
+  lx = { class: "container over-h" },
+  rx = cH(() => en("div", { class: "row" }, null, -1)),
+  ox = { class: "sticky-pair" },
+  ix = { class: "w-layout-grid pair-grid is-leading" },
+  hx = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f41-af552307",
     class: "w-dyn-list",
   },
-  sx = { role: "list", class: "w-dyn-items" },
-  lx = { role: "listitem", class: "w-dyn-item" },
-  rx = { class: "card-wrapper cc-large" },
-  ox = {
+  ux = { role: "list", class: "w-dyn-items" },
+  dx = { role: "listitem", class: "w-dyn-item" },
+  vx = { class: "card-wrapper cc-large" },
+  fx = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  ix = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  hx = cH(() =>
+  mx = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  px = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26314,29 +26371,29 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  ux = { class: "card-body" },
-  dx = { class: "u-overflow-hidden" },
-  vx = { class: "card-up" },
-  fx = { class: "card-large_text" },
-  mx = { class: "u-ts-4" },
-  px = {
+  zx = { class: "card-body" },
+  gx = { class: "u-overflow-hidden" },
+  yx = { class: "card-up" },
+  bx = { class: "card-large_text" },
+  Mx = { class: "u-ts-4" },
+  Cx = {
     id: "w-node-e23686ee-2a5d-d68e-2ddf-02d095aea2fe-af552307",
     class: "card-wrapper cc-small",
   },
-  zx = {
+  Hx = {
     id: "w-node-_7d3ac6c1-4372-cef1-d4e6-455aa4f75f3a-af552307",
     class: "w-dyn-list",
   },
-  gx = { role: "list", class: "w-dyn-items" },
-  yx = { role: "listitem", class: "w-dyn-item" },
-  bx = { class: "card-wrapper cc-small" },
-  Mx = {
+  wx = { role: "list", class: "w-dyn-items" },
+  Vx = { role: "listitem", class: "w-dyn-item" },
+  Lx = { class: "card-wrapper cc-small" },
+  _x = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  Cx = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  Hx = cH(() =>
+  xx = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  Ax = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26368,64 +26425,64 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  wx = { class: "card-body" },
-  Vx = { class: "u-overflow-hidden" },
-  Lx = { class: "card-up" },
-  _x = { class: "u-ts-4" },
-  xx = {
+  kx = { class: "card-body" },
+  Sx = { class: "u-overflow-hidden" },
+  Ex = { class: "card-up" },
+  jx = { class: "u-ts-4" },
+  Ox = {
     id: "w-node-_591e678b-2794-a4c1-b9e4-4c34713bcb6d-af552307",
     class: "content is-grid",
   },
-  Ax = { class: "content-p cc-1" },
-  kx = {
+  Tx = { class: "content-p cc-1" },
+  Px = {
     class: "u-ts-3",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
     "data-aos-delay": "200",
   },
-  Sx = { class: "btn-group" },
-  Ex = { class: "btn-item cc-1" },
-  jx = {
+  Ix = { class: "btn-group" },
+  qx = { class: "btn-item cc-1" },
+  Rx = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  Ox = { class: "btn-text-wrap" },
-  Tx = { class: "btn-text" },
-  Px = { class: "btn-text cc-bottom" },
-  Ix = { class: "btn-item cc-2" },
-  qx = {
+  Dx = { class: "btn-text-wrap" },
+  Nx = { class: "btn-text" },
+  Zx = { class: "btn-text cc-bottom" },
+  Bx = { class: "btn-item cc-2" },
+  Fx = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  Rx = { class: "btn-text-wrap" },
-  Dx = { class: "btn-text" },
-  Nx = { class: "btn-text cc-bottom" },
-  Zx = { class: "section" },
-  Bx = { class: "container over-h" },
-  Fx = cH(() => en("div", { class: "row" }, null, -1)),
-  $x = { class: "sticky-pair" },
-  Ux = { class: "w-layout-grid pair-grid" },
-  Wx = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
-  Yx = {
+  $x = { class: "btn-text-wrap" },
+  Ux = { class: "btn-text" },
+  Wx = { class: "btn-text cc-bottom" },
+  Yx = { class: "section" },
+  Xx = { class: "container over-h" },
+  Gx = cH(() => en("div", { class: "row" }, null, -1)),
+  Kx = { class: "sticky-pair" },
+  Jx = { class: "w-layout-grid pair-grid" },
+  Qx = { id: "w-node-dc0c39cf-ca9b-7980-3885-608a3bb047ce-af552307" },
+  eA = {
     id: "w-node-_22d42303-51c3-58a5-286f-187c6fce5e6a-af552307",
     class: "card-wrapper cc-small",
   },
-  Xx = {
+  tA = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192626-af552307",
     class: "w-dyn-list",
   },
-  Gx = { role: "list", class: "w-dyn-items" },
-  Kx = { role: "listitem", class: "w-dyn-item" },
-  Jx = { class: "card-wrapper cc-small" },
-  Qx = {
+  cA = { role: "list", class: "w-dyn-items" },
+  aA = { role: "listitem", class: "w-dyn-item" },
+  nA = { class: "card-wrapper cc-small" },
+  sA = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "800",
   },
-  eA = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  tA = cH(() =>
+  lA = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  rA = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26466,24 +26523,24 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  cA = { class: "card-body" },
-  aA = { class: "u-overflow-hidden" },
-  nA = { class: "card-up" },
-  sA = { class: "u-ts-4" },
-  lA = {
+  oA = { class: "card-body" },
+  iA = { class: "u-overflow-hidden" },
+  hA = { class: "card-up" },
+  uA = { class: "u-ts-4" },
+  dA = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e19262d-af552307",
     class: "w-dyn-list",
   },
-  rA = { role: "list", class: "w-dyn-items" },
-  oA = { role: "listitem", class: "w-dyn-item" },
-  iA = { class: "card-wrapper cc-large" },
-  hA = {
+  vA = { role: "list", class: "w-dyn-items" },
+  fA = { role: "listitem", class: "w-dyn-item" },
+  mA = { class: "card-wrapper cc-large" },
+  pA = {
     class: "card-animation cc-40",
     "data-aos": "fade-up",
     "data-aos-duration": "700",
   },
-  uA = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
-  dA = cH(() =>
+  zA = { "data-mouse-class": "cc-text", class: "card is-link w-inline-block" },
+  gA = cH(() =>
     en(
       "div",
       { class: "card-image_wrapper" },
@@ -26515,52 +26572,52 @@ const cH = (e) => ($t("data-v-3c291213"), (e = e()), Ut(), e),
       -1
     )
   ),
-  vA = { class: "card-body" },
-  fA = { class: "u-overflow-hidden" },
-  mA = { class: "card-up" },
-  pA = { class: "card-large_text" },
-  zA = { class: "u-ts-4" },
-  gA = {
+  yA = { class: "card-body" },
+  bA = { class: "u-overflow-hidden" },
+  MA = { class: "card-up" },
+  CA = { class: "card-large_text" },
+  HA = { class: "u-ts-4" },
+  wA = {
     id: "w-node-_89920a87-4a2e-ae77-8f7f-dd8d1e192634-af552307",
     class: "content is-grid",
   },
-  yA = { class: "content-p cc-1" },
-  bA = { class: "u-ts-3", "data-aos": "fade-up", "data-aos-duration": "800" },
-  MA = { class: "btn-group" },
-  CA = { class: "btn-item cc-1" },
-  HA = {
+  VA = { class: "content-p cc-1" },
+  LA = { class: "u-ts-3", "data-aos": "fade-up", "data-aos-duration": "800" },
+  _A = { class: "btn-group" },
+  xA = { class: "btn-item cc-1" },
+  AA = {
     class: "btn w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  wA = { class: "btn-text-wrap" },
-  VA = { class: "btn-text" },
-  LA = { class: "btn-text cc-bottom" },
-  _A = { class: "btn-item cc-2" },
-  xA = {
+  kA = { class: "btn-text-wrap" },
+  SA = { class: "btn-text" },
+  EA = { class: "btn-text cc-bottom" },
+  jA = { class: "btn-item cc-2" },
+  OA = {
     class: "btn cc-secondary w-inline-block",
     "data-aos": "fade-left",
     "data-aos-duration": "1000",
   },
-  AA = { class: "btn-text-wrap" },
-  kA = { class: "btn-text" },
-  SA = { class: "btn-text cc-bottom" },
-  EA = cH(() =>
+  TA = { class: "btn-text-wrap" },
+  PA = { class: "btn-text" },
+  IA = { class: "btn-text cc-bottom" },
+  qA = cH(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  jA = { class: "pre-footer readme" },
-  OA = {
+  RA = { class: "pre-footer readme" },
+  DA = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  TA = cH(() => en("div", { class: "pre-footer_gradient" }, null, -1)),
-  PA = { class: "h1" },
-  IA = { class: "pre-footer_button" },
-  qA = { class: "btn cc-large-landscape" },
-  RA = { class: "btn-text-wrap" },
-  DA = { class: "btn-text cc-large-landscape" };
-const NA = lu(tH, [
+  NA = cH(() => en("div", { class: "pre-footer_gradient" }, null, -1)),
+  ZA = { class: "h1" },
+  BA = { class: "pre-footer_button" },
+  FA = { class: "btn cc-large-landscape" },
+  $A = { class: "btn-text-wrap" },
+  UA = { class: "btn-text cc-large-landscape" };
+const WA = lu(tH, [
     [
       "render",
       function (e, t, c, a, n, s) {
@@ -26598,22 +26655,46 @@ const NA = lu(tH, [
                         ]),
                         en("div", gH, [
                           en("div", yH, f(a.t("$current.introduce.title2")), 1),
+                          en("div", bH, [
+                            en(
+                              "div",
+                              MH,
+                              f(a.t("$current.introduce.title3")),
+                              1
+                            ),
+                          ]),
+                          en("div", CH, [
+                            en(
+                              "div",
+                              HH,
+                              f(a.t("$current.introduce.title4")),
+                              1
+                            ),
+                          ]),
+                          en("div", wH, [
+                            en(
+                              "div",
+                              VH,
+                              f(a.t("$current.introduce.title5")),
+                              1
+                            ),
+                          ]),
                         ]),
                       ]),
-                      en("div", bH, [
-                        en("div", MH, [
-                          en("a", CH, [
-                            en("div", HH, [
-                              en("div", wH, f(a.t("$current.btn.Inquire")), 1),
-                              en("div", VH, f(a.t("$current.btn.Inquire")), 1),
+                      en("div", LH, [
+                        en("div", _H, [
+                          en("a", xH, [
+                            en("div", AH, [
+                              en("div", kH, f(a.t("$current.btn.Inquire")), 1),
+                              en("div", SH, f(a.t("$current.btn.Inquire")), 1),
                             ]),
                           ]),
                         ]),
-                        en("div", LH, [
-                          en("a", _H, [
-                            en("div", xH, [
-                              en("div", AH, f(a.t("$current.btn.reserve")), 1),
-                              en("div", kH, f(a.t("$current.btn.reserve")), 1),
+                        en("div", EH, [
+                          en("a", jH, [
+                            en("div", OH, [
+                              en("div", TH, f(a.t("$current.btn.reserve")), 1),
+                              en("div", PH, f(a.t("$current.btn.reserve")), 1),
                             ]),
                           ]),
                         ]),
@@ -26622,49 +26703,49 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              SH,
-              en("section", EH, [
-                en("div", jH, [
-                  en("div", OH, [
-                    en("div", TH, [
-                      PH,
-                      en("div", IH, [
-                        en("div", qH, [
-                          en("h2", RH, f(a.t("$current.space.title")), 1),
+              IH,
+              en("section", qH, [
+                en("div", RH, [
+                  en("div", DH, [
+                    en("div", NH, [
+                      ZH,
+                      en("div", BH, [
+                        en("div", FH, [
+                          en("h2", $H, f(a.t("$current.space.title")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
                 ]),
-                en("div", DH, [
-                  en("div", NH, [
-                    en("h4", ZH, [
-                      en("div", BH, [
-                        en("div", FH, [
+                en("div", UH, [
+                  en("div", WH, [
+                    en("h4", YH, [
+                      en("div", XH, [
+                        en("div", GH, [
                           nn(f(a.t("$current.space.content")) + " ", 1),
-                          $H,
+                          KH,
                           nn(" " + f(a.t("$current.space.content1")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
-                  en("div", UH, [
-                    en("div", WH, [
-                      en("div", YH, [
-                        en("div", XH, [
-                          en("div", GH, [
-                            en("div", KH, [
-                              en("div", JH, [
-                                en("div", QH, [
-                                  en("div", ew, [
-                                    en("div", tw, [
-                                      cw,
-                                      en("div", aw, [
-                                        en("div", nw, [
-                                          en("div", sw, [
+                  en("div", JH, [
+                    en("div", QH, [
+                      en("div", ew, [
+                        en("div", tw, [
+                          en("div", cw, [
+                            en("div", aw, [
+                              en("div", nw, [
+                                en("div", sw, [
+                                  en("div", lw, [
+                                    en("div", rw, [
+                                      ow,
+                                      en("div", iw, [
+                                        en("div", hw, [
+                                          en("div", uw, [
                                             en(
                                               "h4",
-                                              lw,
+                                              dw,
                                               f(a.t("$current.space.imginfo")),
                                               1
                                             ),
@@ -26679,20 +26760,20 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", rw, [
-                        en("div", ow, [
-                          en("div", iw, [
-                            en("div", hw, [
-                              en("div", uw, [
-                                en("div", dw, [
-                                  vw,
-                                  en("div", fw, [
-                                    en("div", mw, [
-                                      en("div", pw, [
-                                        en("div", zw, [
+                      en("div", vw, [
+                        en("div", fw, [
+                          en("div", mw, [
+                            en("div", pw, [
+                              en("div", zw, [
+                                en("div", gw, [
+                                  yw,
+                                  en("div", bw, [
+                                    en("div", Mw, [
+                                      en("div", Cw, [
+                                        en("div", Hw, [
                                           en(
                                             "h4",
-                                            gw,
+                                            ww,
                                             f(a.t("$current.space.imginfo2")),
                                             1
                                           ),
@@ -26706,41 +26787,41 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", yw, [
-                        en("div", bw, [
-                          en("p", Mw, f(a.t("$current.space.imginfo3")), 1),
+                      en("div", Vw, [
+                        en("div", Lw, [
+                          en("p", _w, f(a.t("$current.space.imginfo3")), 1),
                         ]),
-                        en("div", Cw, [
-                          en("div", Hw, [
-                            en("a", ww, [
-                              en("div", Vw, [
+                        en("div", xw, [
+                          en("div", Aw, [
+                            en("a", kw, [
+                              en("div", Sw, [
                                 en(
                                   "div",
-                                  Lw,
+                                  Ew,
                                   f(a.t("$current.btn.spaceinfo")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  _w,
+                                  jw,
                                   f(a.t("$current.btn.spaceinfo")),
                                   1
                                 ),
                               ]),
                             ]),
                           ]),
-                          en("div", xw, [
-                            en("a", Aw, [
-                              en("div", kw, [
+                          en("div", Ow, [
+                            en("a", Tw, [
+                              en("div", Pw, [
                                 en(
                                   "div",
-                                  Sw,
+                                  Iw,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  Ew,
+                                  qw,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
@@ -26753,26 +26834,26 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              jw,
-              en("section", Ow, [
-                en("div", Tw, [
-                  en("div", Pw, [
-                    en("div", Iw, [
-                      qw,
-                      en("div", Rw, [
-                        en("div", Dw, [
-                          en("h2", Nw, f(a.t("$current.humanities.title")), 1),
+              Rw,
+              en("section", Dw, [
+                en("div", Nw, [
+                  en("div", Zw, [
+                    en("div", Bw, [
+                      Fw,
+                      en("div", $w, [
+                        en("div", Uw, [
+                          en("h2", Ww, f(a.t("$current.humanities.title")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
                 ]),
-                en("div", Zw, [
-                  en("div", Bw, [
-                    en("div", Fw, [
-                      en("div", $w, [
-                        en("div", Uw, [
-                          en("div", Ww, [
+                en("div", Yw, [
+                  en("div", Xw, [
+                    en("div", Gw, [
+                      en("div", Kw, [
+                        en("div", Jw, [
+                          en("div", Qw, [
                             en(
                               "img",
                               {
@@ -26782,37 +26863,17 @@ const NA = lu(tH, [
                               },
                               null,
                               8,
-                              Yw
+                              eV
                             ),
                           ]),
                         ]),
-                        en("ul", Xw, [
-                          en("li", Gw, [
-                            en("div", Kw, [
-                              en(
-                                "h3",
-                                Jw,
-                                f(a.t("$current.humanities.artwork1")),
-                                1
-                              ),
-                            ]),
-                          ]),
-                          en("li", Qw, [
-                            en("div", eV, [
-                              en(
-                                "h3",
-                                tV,
-                                f(a.t("$current.humanities.artwork2")),
-                                1
-                              ),
-                            ]),
-                          ]),
+                        en("ul", tV, [
                           en("li", cV, [
                             en("div", aV, [
                               en(
                                 "h3",
                                 nV,
-                                f(a.t("$current.humanities.artwork3")),
+                                f(a.t("$current.humanities.artwork1")),
                                 1
                               ),
                             ]),
@@ -26822,25 +26883,45 @@ const NA = lu(tH, [
                               en(
                                 "h3",
                                 rV,
+                                f(a.t("$current.humanities.artwork2")),
+                                1
+                              ),
+                            ]),
+                          ]),
+                          en("li", oV, [
+                            en("div", iV, [
+                              en(
+                                "h3",
+                                hV,
+                                f(a.t("$current.humanities.artwork3")),
+                                1
+                              ),
+                            ]),
+                          ]),
+                          en("li", uV, [
+                            en("div", dV, [
+                              en(
+                                "h3",
+                                vV,
                                 f(a.t("$current.humanities.artwork4")),
                                 1
                               ),
                             ]),
                           ]),
                         ]),
-                        en("div", oV, [
-                          en("div", iV, [
-                            en("a", hV, [
-                              en("div", uV, [
+                        en("div", fV, [
+                          en("div", mV, [
+                            en("a", pV, [
+                              en("div", zV, [
                                 en(
                                   "div",
-                                  dV,
+                                  gV,
                                   f(a.t("$current.btn.artinfo")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  vV,
+                                  yV,
                                   f(a.t("$current.btn.artinfo")),
                                   1
                                 ),
@@ -26853,20 +26934,20 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              en("section", fV, [
-                en("div", mV, [
-                  en("div", pV, [
-                    en("div", zV, [
-                      en("h3", gV, [
-                        en("div", yV, [
-                          en("div", bV, f(a.t("$current.artist.title")), 1),
+              en("section", bV, [
+                en("div", MV, [
+                  en("div", CV, [
+                    en("div", HV, [
+                      en("h3", wV, [
+                        en("div", VV, [
+                          en("div", LV, f(a.t("$current.artist.title")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
                 ]),
-                en("div", MV, [
-                  en("div", CV, [
+                en("div", _V, [
+                  en("div", xV, [
                     en(
                       "div",
                       {
@@ -26878,7 +26959,7 @@ const NA = lu(tH, [
                             a.scrollPosition && a.scrollPosition(...e)),
                       },
                       [
-                        en("div", HV, [
+                        en("div", AV, [
                           en(
                             "img",
                             {
@@ -26891,29 +26972,8 @@ const NA = lu(tH, [
                             },
                             null,
                             8,
-                            wV
+                            kV
                           ),
-                        ]),
-                        en("div", VV, [
-                          en("div", LV, [
-                            en("div", _V, [
-                              en("div", xV, [
-                                en("a", AV, [
-                                  en(
-                                    "img",
-                                    {
-                                      alt: "",
-                                      loading: "lazy",
-                                      src: a.getImageUrl("home/img/13.jpg"),
-                                    },
-                                    null,
-                                    8,
-                                    kV
-                                  ),
-                                ]),
-                              ]),
-                            ]),
-                          ]),
                         ]),
                         en("div", SV, [
                           en("div", EV, [
@@ -26925,7 +26985,7 @@ const NA = lu(tH, [
                                     {
                                       alt: "",
                                       loading: "lazy",
-                                      src: a.getImageUrl("home/img/14.jpg"),
+                                      src: a.getImageUrl("home/img/13.jpg"),
                                     },
                                     null,
                                     8,
@@ -26946,7 +27006,7 @@ const NA = lu(tH, [
                                     {
                                       alt: "",
                                       loading: "lazy",
-                                      src: a.getImageUrl("home/img/12.jpg"),
+                                      src: a.getImageUrl("home/img/14.jpg"),
                                     },
                                     null,
                                     8,
@@ -26957,11 +27017,32 @@ const NA = lu(tH, [
                             ]),
                           ]),
                         ]),
+                        en("div", BV, [
+                          en("div", FV, [
+                            en("div", $V, [
+                              en("div", UV, [
+                                en("a", WV, [
+                                  en(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: a.getImageUrl("home/img/12.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    YV
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
                       ],
                       32
                     ),
                   ]),
-                  en("div", BV, [
+                  en("div", XV, [
                     a.hideHorizontalIcon
                       ? (Za(),
                         Wa(
@@ -26974,13 +27055,13 @@ const NA = lu(tH, [
                               (t[1] = (...e) =>
                                 a.scroll_Left && a.scroll_Left(...e)),
                           },
-                          $V
+                          KV
                         ))
                       : ln("", !0),
                   ]),
                 ]),
-                en("div", UV, [
-                  en("div", WV, [
+                en("div", JV, [
+                  en("div", QV, [
                     en(
                       "div",
                       {
@@ -26992,7 +27073,7 @@ const NA = lu(tH, [
                             a.scrollPosition && a.scrollPosition(...e)),
                       },
                       [
-                        en("div", YV, [
+                        en("div", eL, [
                           en(
                             "img",
                             {
@@ -27005,29 +27086,8 @@ const NA = lu(tH, [
                             },
                             null,
                             8,
-                            XV
+                            tL
                           ),
-                        ]),
-                        en("div", GV, [
-                          en("div", KV, [
-                            en("div", JV, [
-                              en("div", QV, [
-                                en("a", eL, [
-                                  en(
-                                    "img",
-                                    {
-                                      alt: "",
-                                      loading: "lazy",
-                                      src: a.getImageUrl("home/img/13.jpg"),
-                                    },
-                                    null,
-                                    8,
-                                    tL
-                                  ),
-                                ]),
-                              ]),
-                            ]),
-                          ]),
                         ]),
                         en("div", cL, [
                           en("div", aL, [
@@ -27039,7 +27099,7 @@ const NA = lu(tH, [
                                     {
                                       alt: "",
                                       loading: "lazy",
-                                      src: a.getImageUrl("home/img/14.jpg"),
+                                      src: a.getImageUrl("home/img/13.jpg"),
                                     },
                                     null,
                                     8,
@@ -27060,7 +27120,7 @@ const NA = lu(tH, [
                                     {
                                       alt: "",
                                       loading: "lazy",
-                                      src: a.getImageUrl("home/img/12.jpg"),
+                                      src: a.getImageUrl("home/img/14.jpg"),
                                     },
                                     null,
                                     8,
@@ -27071,11 +27131,32 @@ const NA = lu(tH, [
                             ]),
                           ]),
                         ]),
+                        en("div", fL, [
+                          en("div", mL, [
+                            en("div", pL, [
+                              en("div", zL, [
+                                en("a", gL, [
+                                  en(
+                                    "img",
+                                    {
+                                      alt: "",
+                                      loading: "lazy",
+                                      src: a.getImageUrl("home/img/12.jpg"),
+                                    },
+                                    null,
+                                    8,
+                                    yL
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
                       ],
                       32
                     ),
                   ]),
-                  en("div", fL, [
+                  en("div", bL, [
                     a.hideHorizontalIcon
                       ? (Za(),
                         Wa(
@@ -27088,39 +27169,39 @@ const NA = lu(tH, [
                               (t[3] = (...e) =>
                                 a.scroll_Left && a.scroll_Left(...e)),
                           },
-                          mL
+                          ML
                         ))
                       : ln("", !0),
                   ]),
                 ]),
               ]),
-              en("section", pL, [
-                en("div", zL, [
-                  en("div", gL, [
-                    en("div", yL, [
-                      en("h3", bL, [
-                        en("div", ML, [
-                          en("div", CL, f(a.t("$current.center.title")), 1),
+              en("section", CL, [
+                en("div", HL, [
+                  en("div", wL, [
+                    en("div", VL, [
+                      en("h3", LL, [
+                        en("div", _L, [
+                          en("div", xL, f(a.t("$current.center.title")), 1),
                         ]),
                       ]),
                     ]),
                   ]),
-                  en("div", HL, [
-                    en("div", wL, [
-                      en("div", VL, [
-                        en("div", LL, [
-                          en("div", _L, [
-                            en("div", xL, [
-                              en("div", AL, [
-                                en("div", kL, [
-                                  SL,
-                                  en("div", EL, [
-                                    en("div", jL, [
-                                      en("div", OL, [
-                                        en("div", TL, [
+                  en("div", AL, [
+                    en("div", kL, [
+                      en("div", SL, [
+                        en("div", EL, [
+                          en("div", jL, [
+                            en("div", OL, [
+                              en("div", TL, [
+                                en("div", PL, [
+                                  IL,
+                                  en("div", qL, [
+                                    en("div", RL, [
+                                      en("div", DL, [
+                                        en("div", NL, [
                                           en(
                                             "h4",
-                                            PL,
+                                            ZL,
                                             f(
                                               a.t("$current.center.item1.name")
                                             ),
@@ -27137,20 +27218,20 @@ const NA = lu(tH, [
                         ]),
                       ]),
                       en("div", null, [
-                        en("div", IL, [
-                          en("div", qL, [
-                            en("div", RL, [
-                              en("div", DL, [
-                                en("div", NL, [
-                                  en("div", ZL, [
-                                    en("div", BL, [
-                                      FL,
-                                      en("div", $L, [
-                                        en("div", UL, [
-                                          en("div", WL, [
+                        en("div", BL, [
+                          en("div", FL, [
+                            en("div", $L, [
+                              en("div", UL, [
+                                en("div", WL, [
+                                  en("div", YL, [
+                                    en("div", XL, [
+                                      GL,
+                                      en("div", KL, [
+                                        en("div", JL, [
+                                          en("div", QL, [
                                             en(
                                               "h4",
-                                              YL,
+                                              e_,
                                               f(
                                                 a.t(
                                                   "$current.center.item1.info"
@@ -27169,46 +27250,46 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", XL, [
-                        en("div", GL, [
+                      en("div", t_, [
+                        en("div", c_, [
                           en(
                             "p",
-                            KL,
+                            a_,
                             f(a.t("$current.center.item1.content")),
                             1
                           ),
                         ]),
-                        en("div", JL, [
-                          en("div", QL, [
-                            en("a", e_, [
-                              en("div", t_, [
+                        en("div", n_, [
+                          en("div", s_, [
+                            en("a", l_, [
+                              en("div", r_, [
                                 en(
                                   "div",
-                                  c_,
+                                  o_,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  a_,
+                                  i_,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                               ]),
                             ]),
                           ]),
-                          en("div", n_, [
-                            en("a", s_, [
-                              en("div", l_, [
+                          en("div", h_, [
+                            en("a", u_, [
+                              en("div", d_, [
                                 en(
                                   "div",
-                                  r_,
+                                  v_,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  o_,
+                                  f_,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
@@ -27221,26 +27302,26 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              en("section", i_, [
-                en("div", h_, [
-                  u_,
-                  en("div", d_, [
-                    en("div", v_, [
-                      en("div", f_, [
-                        en("div", m_, [
-                          en("div", p_, [
-                            en("div", z_, [
-                              en("div", g_, [
-                                en("div", y_, [
-                                  en("div", b_, [
-                                    en("div", M_, [
-                                      C_,
-                                      en("div", H_, [
-                                        en("div", w_, [
-                                          en("div", V_, [
+              en("section", m_, [
+                en("div", p_, [
+                  z_,
+                  en("div", g_, [
+                    en("div", y_, [
+                      en("div", b_, [
+                        en("div", M_, [
+                          en("div", C_, [
+                            en("div", H_, [
+                              en("div", w_, [
+                                en("div", V_, [
+                                  en("div", L_, [
+                                    en("div", __, [
+                                      x_,
+                                      en("div", A_, [
+                                        en("div", k_, [
+                                          en("div", S_, [
                                             en(
                                               "h4",
-                                              L_,
+                                              E_,
                                               f(
                                                 a.t(
                                                   "$current.center.item2.info"
@@ -27259,20 +27340,20 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", __, [
-                        en("div", x_, [
-                          en("div", A_, [
-                            en("div", k_, [
-                              en("div", S_, [
-                                en("div", E_, [
-                                  j_,
-                                  en("div", O_, [
-                                    en("div", T_, [
-                                      en("div", P_, [
-                                        en("div", I_, [
+                      en("div", j_, [
+                        en("div", O_, [
+                          en("div", T_, [
+                            en("div", P_, [
+                              en("div", I_, [
+                                en("div", q_, [
+                                  R_,
+                                  en("div", D_, [
+                                    en("div", N_, [
+                                      en("div", Z_, [
+                                        en("div", B_, [
                                           en(
                                             "h4",
-                                            q_,
+                                            F_,
                                             f(
                                               a.t("$current.center.item2.name")
                                             ),
@@ -27288,46 +27369,46 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", R_, [
-                        en("div", D_, [
+                      en("div", $_, [
+                        en("div", U_, [
                           en(
                             "p",
-                            N_,
+                            W_,
                             f(a.t("$current.center.item2.content")),
                             1
                           ),
                         ]),
-                        en("div", Z_, [
-                          en("div", B_, [
-                            en("a", F_, [
-                              en("div", $_, [
+                        en("div", Y_, [
+                          en("div", X_, [
+                            en("a", G_, [
+                              en("div", K_, [
                                 en(
                                   "div",
-                                  U_,
+                                  J_,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  W_,
+                                  Q_,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                               ]),
                             ]),
                           ]),
-                          en("div", Y_, [
-                            en("a", X_, [
-                              en("div", G_, [
+                          en("div", ex, [
+                            en("a", tx, [
+                              en("div", cx, [
                                 en(
                                   "div",
-                                  K_,
+                                  ax,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  J_,
+                                  nx,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
@@ -27340,25 +27421,25 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              en("section", Q_, [
-                en("div", ex, [
-                  tx,
-                  en("div", cx, [
-                    en("div", ax, [
-                      en("div", nx, [
-                        en("div", sx, [
-                          en("div", lx, [
-                            en("div", rx, [
-                              en("div", ox, [
-                                en("div", ix, [
-                                  hx,
-                                  en("div", ux, [
-                                    en("div", dx, [
-                                      en("div", vx, [
-                                        en("div", fx, [
+              en("section", sx, [
+                en("div", lx, [
+                  rx,
+                  en("div", ox, [
+                    en("div", ix, [
+                      en("div", hx, [
+                        en("div", ux, [
+                          en("div", dx, [
+                            en("div", vx, [
+                              en("div", fx, [
+                                en("div", mx, [
+                                  px,
+                                  en("div", zx, [
+                                    en("div", gx, [
+                                      en("div", yx, [
+                                        en("div", bx, [
                                           en(
                                             "h4",
-                                            mx,
+                                            Mx,
                                             f(
                                               a.t("$current.center.item3.name")
                                             ),
@@ -27375,20 +27456,20 @@ const NA = lu(tH, [
                         ]),
                       ]),
                       en("div", null, [
-                        en("div", px, [
-                          en("div", zx, [
-                            en("div", gx, [
-                              en("div", yx, [
-                                en("div", bx, [
-                                  en("div", Mx, [
-                                    en("div", Cx, [
-                                      Hx,
-                                      en("div", wx, [
-                                        en("div", Vx, [
-                                          en("div", Lx, [
+                        en("div", Cx, [
+                          en("div", Hx, [
+                            en("div", wx, [
+                              en("div", Vx, [
+                                en("div", Lx, [
+                                  en("div", _x, [
+                                    en("div", xx, [
+                                      Ax,
+                                      en("div", kx, [
+                                        en("div", Sx, [
+                                          en("div", Ex, [
                                             en(
                                               "h4",
-                                              _x,
+                                              jx,
                                               f(
                                                 a.t(
                                                   "$current.center.item3.info"
@@ -27407,46 +27488,46 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", xx, [
-                        en("div", Ax, [
+                      en("div", Ox, [
+                        en("div", Tx, [
                           en(
                             "p",
-                            kx,
+                            Px,
                             f(a.t("$current.center.item3.content")),
                             1
                           ),
                         ]),
-                        en("div", Sx, [
-                          en("div", Ex, [
-                            en("a", jx, [
-                              en("div", Ox, [
+                        en("div", Ix, [
+                          en("div", qx, [
+                            en("a", Rx, [
+                              en("div", Dx, [
                                 en(
                                   "div",
-                                  Tx,
+                                  Nx,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  Px,
+                                  Zx,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                               ]),
                             ]),
                           ]),
-                          en("div", Ix, [
-                            en("a", qx, [
-                              en("div", Rx, [
+                          en("div", Bx, [
+                            en("a", Fx, [
+                              en("div", $x, [
                                 en(
                                   "div",
-                                  Dx,
+                                  Ux,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  Nx,
+                                  Wx,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
@@ -27459,26 +27540,26 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              en("section", Zx, [
-                en("div", Bx, [
-                  Fx,
-                  en("div", $x, [
-                    en("div", Ux, [
-                      en("div", Wx, [
-                        en("div", Yx, [
-                          en("div", Xx, [
-                            en("div", Gx, [
-                              en("div", Kx, [
-                                en("div", Jx, [
-                                  en("div", Qx, [
-                                    en("div", eA, [
-                                      tA,
-                                      en("div", cA, [
-                                        en("div", aA, [
-                                          en("div", nA, [
+              en("section", Yx, [
+                en("div", Xx, [
+                  Gx,
+                  en("div", Kx, [
+                    en("div", Jx, [
+                      en("div", Qx, [
+                        en("div", eA, [
+                          en("div", tA, [
+                            en("div", cA, [
+                              en("div", aA, [
+                                en("div", nA, [
+                                  en("div", sA, [
+                                    en("div", lA, [
+                                      rA,
+                                      en("div", oA, [
+                                        en("div", iA, [
+                                          en("div", hA, [
                                             en(
                                               "h4",
-                                              sA,
+                                              uA,
                                               f(
                                                 a.t(
                                                   "$current.center.item4.name"
@@ -27497,20 +27578,20 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", lA, [
-                        en("div", rA, [
-                          en("div", oA, [
-                            en("div", iA, [
-                              en("div", hA, [
-                                en("div", uA, [
-                                  dA,
-                                  en("div", vA, [
-                                    en("div", fA, [
-                                      en("div", mA, [
-                                        en("div", pA, [
+                      en("div", dA, [
+                        en("div", vA, [
+                          en("div", fA, [
+                            en("div", mA, [
+                              en("div", pA, [
+                                en("div", zA, [
+                                  gA,
+                                  en("div", yA, [
+                                    en("div", bA, [
+                                      en("div", MA, [
+                                        en("div", CA, [
                                           en(
                                             "h4",
-                                            zA,
+                                            HA,
                                             f(
                                               a.t("$current.center.item4.info")
                                             ),
@@ -27526,46 +27607,46 @@ const NA = lu(tH, [
                           ]),
                         ]),
                       ]),
-                      en("div", gA, [
-                        en("div", yA, [
+                      en("div", wA, [
+                        en("div", VA, [
                           en(
                             "p",
-                            bA,
+                            LA,
                             f(a.t("$current.center.item4.content")),
                             1
                           ),
                         ]),
-                        en("div", MA, [
-                          en("div", CA, [
-                            en("a", HA, [
-                              en("div", wA, [
+                        en("div", _A, [
+                          en("div", xA, [
+                            en("a", AA, [
+                              en("div", kA, [
                                 en(
                                   "div",
-                                  VA,
+                                  SA,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  LA,
+                                  EA,
                                   f(a.t("$current.btn.reservenow")),
                                   1
                                 ),
                               ]),
                             ]),
                           ]),
-                          en("div", _A, [
-                            en("a", xA, [
-                              en("div", AA, [
+                          en("div", jA, [
+                            en("a", OA, [
+                              en("div", TA, [
                                 en(
                                   "div",
-                                  kA,
+                                  PA,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
                                 en(
                                   "div",
-                                  SA,
+                                  IA,
                                   f(a.t("$current.btn.learnMore")),
                                   1
                                 ),
@@ -27578,26 +27659,26 @@ const NA = lu(tH, [
                   ]),
                 ]),
               ]),
-              EA,
+              qA,
               tn(r),
               en("div", null, [
-                en("aside", jA, [
-                  en("div", OA, [
-                    TA,
+                en("aside", RA, [
+                  en("div", DA, [
+                    NA,
                     tn(
                       o,
                       { clone: !0 },
                       {
                         default: Wt(() => [
-                          en("div", PA, f(a.t("$current.readme.marquee")), 1),
+                          en("div", ZA, f(a.t("$current.readme.marquee")), 1),
                         ]),
                         _: 1,
                       }
                     ),
-                    en("div", IA, [
-                      en("div", qA, [
-                        en("div", RA, [
-                          en("div", DA, f(a.t("$current.readme.btn")), 1),
+                    en("div", BA, [
+                      en("div", FA, [
+                        en("div", $A, [
+                          en("div", UA, f(a.t("$current.readme.btn")), 1),
                         ]),
                       ]),
                     ]),
@@ -27611,16 +27692,16 @@ const NA = lu(tH, [
         );
       },
     ],
-    ["__scopeId", "data-v-3c291213"],
+    ["__scopeId", "data-v-09f1947b"],
   ]),
-  ZA = Object.freeze(
+  YA = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: NA },
+      { __proto__: null, default: WA },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  BA = {
+  XA = {
     components: { Footer: _y },
     setup() {
       const { t: e } = qm();
@@ -27642,12 +27723,12 @@ const NA = lu(tH, [
       );
     },
   },
-  FA = (e) => ($t("data-v-00886d78"), (e = e()), Ut(), e),
-  $A = { "data-mouse-class": "cc-icon", class: "header cc-large" },
-  UA = { class: "header-image_wrap" },
-  WA = { class: "header-image" },
-  YA = { class: "iframe-video_wrapper" },
-  XA = {
+  GA = (e) => ($t("data-v-00886d78"), (e = e()), Ut(), e),
+  KA = { "data-mouse-class": "cc-icon", class: "header cc-large" },
+  JA = { class: "header-image_wrap" },
+  QA = { class: "header-image" },
+  ek = { class: "iframe-video_wrapper" },
+  tk = {
     class: "video-cover",
     width: "100%",
     height: "100%",
@@ -27655,18 +27736,18 @@ const NA = lu(tH, [
     loop: "",
     muted: "",
   },
-  GA = ["src"],
-  KA = nn(" Your browser does not support the video tag. "),
-  JA = FA(() => en("div", { class: "iframe-video_blocker" }, null, -1)),
-  QA = sn(
+  ck = ["src"],
+  ak = nn(" Your browser does not support the video tag. "),
+  nk = GA(() => en("div", { class: "iframe-video_blocker" }, null, -1)),
+  sk = sn(
     '<div class="header-content_wrapper" data-v-00886d78><div class="container" data-v-00886d78><div class="row" data-v-00886d78><div data-animation-trigger="transition" data-animation-element="group" class="col col-lg-6 col-md-12" data-v-00886d78><div class="header-content_main" data-v-00886d78><div class="text-wrap-balance" data-aos="fade-up" data-aos-duration="700" data-v-00886d78><h1 data-animation-element="title" class="h4" data-v-00886d78><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-00886d78><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> The </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> agency </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> for </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> the </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> next </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-00886d78><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> generation </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> of </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> fintech. </div></div></h1></div><div class="header-content_cta" style="transform:translate3d(0px, 0rem, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;opacity:1;" data-v-00886d78><div class="header-content_icon w-embed" data-v-00886d78><svg width="100%" style="" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-00886d78><path d="M10.4384 2.2207C10.6795 2.2207 10.875 2.40725 10.875 2.63737V16.1124L14.7524 12.404C14.8344 12.3252 14.946 12.2808 15.0624 12.2808C15.1788 12.2808 15.2904 12.3252 15.3724 12.404L15.9837 12.9957C16.0664 13.0739 16.1128 13.1804 16.1128 13.2915C16.1128 13.4026 16.0664 13.5091 15.9837 13.5874L10.6305 18.704C10.5078 18.8213 10.3413 18.8872 10.1677 18.8874H9.83581C9.66254 18.8854 9.49674 18.8198 9.37298 18.704L4.01978 13.5874C3.93712 13.5091 3.89062 13.4026 3.89062 13.2915C3.89062 13.1804 3.93712 13.0739 4.01978 12.9957L4.63981 12.404C4.72029 12.3256 4.83046 12.2815 4.94546 12.2815C5.06046 12.2815 5.17062 12.3256 5.2511 12.404L9.12846 16.1124V2.63737C9.12846 2.40725 9.32395 2.2207 9.5651 2.2207H10.4384Z" fill="black" data-v-00886d78></path></svg></div></div></div></div></div></div></div><div data-transition="in" class="header-trigger" data-v-00886d78></div>',
     2
   ),
-  ek = FA(() => en("div", { class: "spacing" }, null, -1)),
-  tk = FA(() =>
+  lk = GA(() => en("div", { class: "spacing" }, null, -1)),
+  rk = GA(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  ck = FA(() =>
+  ok = GA(() =>
     en(
       "section",
       { class: "section over-h" },
@@ -28023,10 +28104,10 @@ const NA = lu(tH, [
       -1
     )
   ),
-  ak = FA(() =>
+  ik = GA(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  nk = FA(() =>
+  hk = GA(() =>
     en(
       "section",
       { class: "section" },
@@ -28339,10 +28420,10 @@ const NA = lu(tH, [
       -1
     )
   ),
-  sk = FA(() =>
+  uk = GA(() =>
     en("div", { class: "container" }, [en("div", { class: "target_line" })], -1)
   ),
-  lk = FA(() =>
+  dk = GA(() =>
     en(
       "section",
       { class: "section" },
@@ -28989,23 +29070,23 @@ const NA = lu(tH, [
       -1
     )
   ),
-  rk = sn(
+  vk = sn(
     '<div class="container" data-v-00886d78><div class="target_line" data-v-00886d78></div></div><section class="section" data-v-00886d78><div class="section-title_component" data-v-00886d78><div class="container" data-v-00886d78><div class="section-title_wrapper" data-aos="fade-up" data-aos-duration="700" data-v-00886d78><div class="section-title_dot" style="opacity:1;" data-v-00886d78></div><div class="u-overflow-hidden" data-v-00886d78><div class="section-title_title" style="transform:translate3d(0px, 0%, 0px) scale3d(1, 1, 1);transform-style:preserve-3d;" data-v-00886d78><h2 class="u-ts-4" data-v-00886d78>Contact Us</h2></div></div></div></div></div><div class="container" data-v-00886d78><div class="w-layout-grid pair-grid" data-v-00886d78><div data-animation-element="group" id="w-node-_3e0e1f08-4b6f-3e81-4a33-02d9666e49b3-18e0cb67" data-v-00886d78><div data-animation-element="rich-text" id="w-node-_68ddbddb-36c1-db22-2449-1d3e6f681a07-18e0cb67" class="contact-cta w-richtext" data-v-00886d78><h3 data-animation-element="title" style="" data-aos="fade-up" data-aos-duration="700" data-v-00886d78><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-00886d78><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> Have </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> a </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> project </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> in </div><div style="position:relative;display:inline-block;translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78> mind? </div></div><div class="u-overflow-hidden" style="display:block;text-align:start;position:relative;" data-v-00886d78><a data-aos="fade-up" data-aos-duration="700" href="mailto:hello@basis.work" style="translate:none;rotate:none;scale:none;transform:translate(0px, 0%);" data-v-00886d78><div style="position:relative;display:inline-block;" data-v-00886d78> hello@basis.work </div></a></div></h3></div></div></div></div></section>',
     2
   ),
-  ok = { class: "pre-footer readme" },
-  ik = {
+  fk = { class: "pre-footer readme" },
+  mk = {
     "data-mouse-text": "Read Next",
     "data-mouse-class": "cc-text",
     class: "section cc-pre-footer w-inline-block",
   },
-  hk = FA(() => en("div", { class: "pre-footer_gradient" }, null, -1)),
-  uk = { class: "h1" },
-  dk = { class: "pre-footer_button" },
-  vk = { class: "btn cc-large-landscape" },
-  fk = { class: "btn-text-wrap" },
-  mk = { class: "btn-text cc-large-landscape" };
-const pk = lu(BA, [
+  pk = GA(() => en("div", { class: "pre-footer_gradient" }, null, -1)),
+  zk = { class: "h1" },
+  gk = { class: "pre-footer_button" },
+  yk = { class: "btn cc-large-landscape" },
+  bk = { class: "btn-text-wrap" },
+  Mk = { class: "btn-text cc-large-landscape" };
+const Ck = lu(XA, [
     [
       "render",
       function (e, t, c, a, n, s) {
@@ -29017,11 +29098,11 @@ const pk = lu(BA, [
             Pa,
             null,
             [
-              en("header", $A, [
-                en("div", UA, [
-                  en("div", WA, [
-                    en("div", YA, [
-                      en("video", XA, [
+              en("header", KA, [
+                en("div", JA, [
+                  en("div", QA, [
+                    en("div", ek, [
+                      en("video", tk, [
                         en(
                           "source",
                           {
@@ -29030,28 +29111,28 @@ const pk = lu(BA, [
                           },
                           null,
                           8,
-                          GA
+                          ck
                         ),
-                        KA,
+                        ak,
                       ]),
-                      JA,
+                      nk,
                     ]),
                   ]),
                 ]),
-                QA,
+                sk,
               ]),
-              ek,
-              tk,
-              ck,
-              ak,
-              nk,
-              sk,
               lk,
               rk,
+              ok,
+              ik,
+              hk,
+              uk,
+              dk,
+              vk,
               en("div", null, [
-                en("aside", ok, [
-                  en("div", ik, [
-                    hk,
+                en("aside", fk, [
+                  en("div", mk, [
+                    pk,
                     tn(
                       l,
                       { clone: !0 },
@@ -29059,7 +29140,7 @@ const pk = lu(BA, [
                         default: Wt(() => [
                           en(
                             "div",
-                            uk,
+                            zk,
                             f(a.t("pages.index.readme.marquee")),
                             1
                           ),
@@ -29067,10 +29148,10 @@ const pk = lu(BA, [
                         _: 1,
                       }
                     ),
-                    en("div", dk, [
-                      en("div", vk, [
-                        en("div", fk, [
-                          en("div", mk, f(a.t("pages.index.readme.btn")), 1),
+                    en("div", gk, [
+                      en("div", yk, [
+                        en("div", bk, [
+                          en("div", Mk, f(a.t("pages.index.readme.btn")), 1),
                         ]),
                       ]),
                     ]),
@@ -29086,14 +29167,14 @@ const pk = lu(BA, [
     ],
     ["__scopeId", "data-v-00886d78"],
   ]),
-  zk = Object.freeze(
+  Hk = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: pk },
+      { __proto__: null, default: Ck },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  gk = Object.assign({
+  wk = Object.assign({
     "../pages/collection.vue": () =>
       bp(() => Promise.resolve().then(() => ab), void 0, import.meta.url),
     "../pages/demo.vue": () =>
@@ -29101,39 +29182,39 @@ const pk = lu(BA, [
     "../pages/gallery.vue": () =>
       bp(() => Promise.resolve().then(() => kC), void 0, import.meta.url),
     "../pages/index.vue": () =>
-      bp(() => Promise.resolve().then(() => ZA), void 0, import.meta.url),
+      bp(() => Promise.resolve().then(() => YA), void 0, import.meta.url),
     "../pages/service.vue": () =>
-      bp(() => Promise.resolve().then(() => zk), void 0, import.meta.url),
+      bp(() => Promise.resolve().then(() => Hk), void 0, import.meta.url),
   }),
-  yk = Object.assign({
+  Vk = Object.assign({
     "../pages/collection.vue": ab,
     "../pages/demo.vue": bb,
     "../pages/gallery.vue": kC,
-    "../pages/index.vue": ZA,
-    "../pages/service.vue": zk,
+    "../pages/index.vue": YA,
+    "../pages/service.vue": Hk,
   }),
-  bk = [];
-for (let $k in gk) {
-  let a = $k.replace("../pages", "").toLowerCase().replace(".vue", "");
+  Lk = [];
+for (let Kk in wk) {
+  let a = Kk.replace("../pages", "").toLowerCase().replace(".vue", "");
   (a = a.replace(/\/index$/, "")),
     (a = a.replace(/\/_+/g, "/:")),
-    bk.push({
+    Lk.push({
       path: a,
       name: a,
       meta: {
-        layout: yk[$k].default.layout || "layout-default",
+        layout: Vk[Kk].default.layout || "layout-default",
         title:
-          (null == (e = yk[$k].default) ? void 0 : e.title) ??
+          (null == (e = Vk[Kk].default) ? void 0 : e.title) ??
           "app.project.title",
         header:
-          (null == (t = yk[$k].default) ? void 0 : t.header) ??
+          (null == (t = Vk[Kk].default) ? void 0 : t.header) ??
           "header-default",
-        scroll: (null == (c = yk[$k].default) ? void 0 : c.noScroll) ?? !1,
+        scroll: (null == (c = Vk[Kk].default) ? void 0 : c.noScroll) ?? !1,
       },
-      component: gk[$k],
+      component: wk[Kk],
     });
 }
-const Mk = (function (e) {
+const _k = (function (e) {
   const t = Vh(e.routes, e);
   let c = e.parseQuery || Uh,
     a = e.stringifyQuery || Wh,
@@ -29443,19 +29524,19 @@ const Mk = (function (e) {
   return O;
 })({
   history:
-    ((Hk = "./"),
-    (Hk = location.host ? Hk || location.pathname : "").indexOf("#") < 0 &&
-      (Hk += "#"),
-    hh(Hk)),
+    ((Ak = "./"),
+    (Ak = location.host ? Ak || location.pathname : "").indexOf("#") < 0 &&
+      (Ak += "#"),
+    hh(Ak)),
   routes:
-    ((Ck = { defaultPath: "/home" }),
+    ((xk = { defaultPath: "/home" }),
     [
       {
         path: "/",
         name: "default-path",
-        redirect: { name: Si({ defaultPath: "/" }, Ck).defaultPath },
+        redirect: { name: Si({ defaultPath: "/" }, xk).defaultPath },
       },
-      ...bk,
+      ...Lk,
       {
         path: "/404",
         name: "not-found",
@@ -29470,18 +29551,18 @@ const Mk = (function (e) {
     ]),
   scrollBehavior: () => ({ top: 0 }),
 });
-var Ck, Hk;
-Mk.beforeEach(async (e, t, c) => {
+var xk, Ak;
+_k.beforeEach(async (e, t, c) => {
   c();
 });
-const wk = Object.freeze(
+const kk = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Mk },
+      { __proto__: null, default: _k },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  Vk = new io({ modules: ay });
+  Sk = new io({ modules: ay });
 !(function (e, t, c) {
   var a = (c || {}).moduleName || "route";
   e.registerModule(a, {
@@ -29511,21 +29592,21 @@ const wk = Object.freeze(
         : ((n = t.fullPath),
           e.commit(a + "/ROUTE_CHANGED", { to: t, from: c }));
     });
-})(Vk, Mk);
-const Lk = Object.freeze(
+})(Sk, _k);
+const Ek = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Vk },
+      { __proto__: null, default: Sk },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  _k = {
+  jk = {
     use(e) {
       e.interceptors.response.use(
         async function (t) {
           if (100004 === t.data.code) {
             const c = e.get("/app/jwt-token", {
-              params: { account: Vk.state.auth.user.account },
+              params: { account: Sk.state.auth.user.account },
             });
             1 === c.data.code && Cu.set("token", c.data.data.jwt_token, !0);
             return await e.request(t.config);
@@ -29538,7 +29619,7 @@ const Lk = Object.freeze(
       );
     },
   },
-  xk = {
+  Ok = {
     use(e) {
       (window.isAlert = !1),
         e.interceptors.response.use(
@@ -29560,8 +29641,8 @@ const Lk = Object.freeze(
                   });
                   return (
                     e &&
-                      (await Vk.dispatch("auth/logout"),
-                      await Mk.replace("/login"),
+                      (await Sk.dispatch("auth/logout"),
+                      await _k.replace("/login"),
                       (window.isAlert = !1)),
                     Promise.reject(`Error: ${t.code}`)
                   );
@@ -29576,7 +29657,7 @@ const Lk = Object.freeze(
         );
     },
   },
-  Ak = {
+  Tk = {
     use(e) {
       e.interceptors.response.use(
         async function (e) {
@@ -29601,20 +29682,13 @@ const Lk = Object.freeze(
       );
     },
   };
-var kk = {
-  VITE_TITLE: "詹紹綺人文藝術空間",
-  BASE_URL: "./",
-  MODE: "development",
-  DEV: !1,
-  PROD: !0,
-  SSR: !1,
-};
-class Sk {
+var Pk = { BASE_URL: "./", MODE: "production", DEV: !1, PROD: !0, SSR: !1 };
+class Ik {
   constructor() {
-    (this.provider = new Ig(kk.VITE_REMOTE_API)), this.init();
+    (this.provider = new Ig(Pk.VITE_REMOTE_API)), this.init();
   }
   init() {
-    this.provider.use({}, qg, _k, xk, Ak, Dg);
+    this.provider.use({}, qg, jk, Ok, Tk, Dg);
   }
   get get() {
     return this.provider.instance.get;
@@ -29629,19 +29703,19 @@ class Sk {
     return this.provider.instance.delete;
   }
 }
-Sk.prototype.install = function (e) {
+Ik.prototype.install = function (e) {
   const t = "http-service";
   (e.config.globalProperties[t] = this), e.provide(t, this);
 };
-const Ek = new Sk(),
-  jk = Object.freeze(
+const qk = new Ik(),
+  Rk = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, HttpService: Sk, default: Ek },
+      { __proto__: null, HttpService: Ik, default: qk },
       Symbol.toStringTag,
       { value: "Module" }
     )
   );
-class Ok {
+class Dk {
   constructor() {
     this.initStates = {
       type: "Modal",
@@ -29664,7 +29738,7 @@ class Ok {
     };
   }
   get state() {
-    return Vk.state.app.popupState;
+    return Sk.state.app.popupState;
   }
   async modal(e = {}) {
     const {
@@ -29679,7 +29753,7 @@ class Ok {
       props: i = {},
     } = e;
     return new Promise((e) => {
-      Vk.commit("app/set/popup", {
+      Sk.commit("app/set/popup", {
         ...this.initStates,
         type: "Modal",
         resolve: e,
@@ -29696,36 +29770,36 @@ class Ok {
     });
   }
   clear() {
-    Vk.commit("app/clear/popup");
+    Sk.commit("app/clear/popup");
   }
 }
-Ok.prototype.install = function (e) {
+Dk.prototype.install = function (e) {
   const t = "popup-service";
   (e.config.globalProperties[t] = this), e.provide(t, this);
 };
-const Tk = new Ok(),
-  Pk = Object.freeze(
+const Nk = new Dk(),
+  Zk = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, PopupService: Ok, default: Tk },
+      { __proto__: null, PopupService: Dk, default: Nk },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  Ik = Object.assign({
+  Bk = Object.assign({
     "../services/alert-service.js": Kp,
-    "../services/http-service.js": jk,
+    "../services/http-service.js": Rk,
     "../services/i18n-service.js": zm,
-    "../services/popup-service.js": Pk,
-    "../services/router-service.js": wk,
+    "../services/popup-service.js": Zk,
+    "../services/router-service.js": kk,
     "../services/storage-service.js": Im,
-    "../services/store-service.js": Lk,
+    "../services/store-service.js": Ek,
   }),
-  qk = {
+  Fk = {
     install: (e) => {
-      for (let t in Ik) e.use(Ik[t].default);
+      for (let t in Bk) e.use(Bk[t].default);
     },
   },
-  Rk = {
+  $k = {
     async mounted(e, t) {
       var c, a, n;
       const s = e,
@@ -29742,23 +29816,23 @@ const Tk = new Ok(),
         });
     },
   },
-  Dk = Object.freeze(
+  Uk = Object.freeze(
     Object.defineProperty(
-      { __proto__: null, default: Rk },
+      { __proto__: null, default: $k },
       Symbol.toStringTag,
       { value: "Module" }
     )
   ),
-  Nk = (e) => {
+  Wk = (e) => {
     const t = e.toLowerCase().split("/");
     return t[t.length - 1].split(".")[0];
   },
-  Zk = Object.assign({ "../directives/scroll-to-top-hide.js": Dk }),
-  Bk = {
+  Yk = Object.assign({ "../directives/scroll-to-top-hide.js": Uk }),
+  Xk = {
     install: (e) => {
-      for (let t in Zk) {
-        const c = Nk(t);
-        e.directive(c, Zk[t].default);
+      for (let t in Yk) {
+        const c = Wk(t);
+        e.directive(c, Yk[t].default);
       }
     },
   };
@@ -43285,16 +43359,16 @@ const Tk = new Ok(),
         }));
     });
   })();
-const Fk = Bl(ou);
-Fk.use(eH),
-  Fk.provide("$jQuery", mu),
-  Fk.provide("$swal", gm),
-  Fk.provide("$storage", Cu),
-  Fk.provide("$tabsslider", bm),
-  Fk.use(gp),
-  Fk.use(Lp),
-  Fk.use(Wp),
-  Fk.use(Bk),
-  Fk.use(jm, { loading: "", error: "" }),
-  Fk.use(qk),
-  Fk.mount("#app");
+const Gk = Bl(ou);
+Gk.use(eH),
+  Gk.provide("$jQuery", mu),
+  Gk.provide("$swal", gm),
+  Gk.provide("$storage", Cu),
+  Gk.provide("$tabsslider", bm),
+  Gk.use(gp),
+  Gk.use(Lp),
+  Gk.use(Wp),
+  Gk.use(Xk),
+  Gk.use(jm, { loading: "", error: "" }),
+  Gk.use(Fk),
+  Gk.mount("#app");
