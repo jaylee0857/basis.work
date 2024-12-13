@@ -22,13 +22,13 @@ import Vue3Marquee from "vue3-marquee";
 
 // import drag from "@/_app/buoyMove";
 const app = createApp(App);
+app.use(getAllImageUrl);
 app.use(Vue3Marquee);
 app.provide("$jQuery", jquery);
 app.provide("$swal", sweetalert);
 app.provide("$storage", storage);
 app.provide("$tabsslider", tabsslider);
 app.use(layouts);
-app.use(getAllImageUrl);
 app.use(components);
 app.use(directives);
 app.use(VueLazyLoad, {

@@ -17,7 +17,9 @@ import expandNumberToArray from "@/unit/expandNumberToArray";
 
 const emit = defineEmits(["loaded"]);
 
-const images = inject("imageUrls");
+const images = inject("imageUrls") || [];
+
+console.log(images, "images");
 /** 一筆的%數 */
 const percentage = (1 / images.length) * 100;
 const options = reactive({
@@ -96,6 +98,7 @@ watch(
       setTimeout(() => {
         /** NOTE: 這邊硬解 當index為最後一個時直接跳100% */
         options.animationPercent += num;
+        options.animationPercent = Math.floor(options.animationPercent);
         if (newValue === 100) {
           const lastIndex = numbs.length - 1;
           const isLast = index === lastIndex;

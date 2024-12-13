@@ -1,18 +1,15 @@
-/* vite2版本中 glob導入的為異步導入 globEager則為同步導入 */
-const pngFiles = Object.keys(import.meta.glob("../assets/images/**/*.png"));
-const svgFiles = Object.keys(import.meta.glob("../assets/images/**/*.svg"));
-const jpgFiles = Object.keys(import.meta.glob("../assets/images/**/*.jpg"));
-const wedpFiles = Object.keys(import.meta.glob("../assets/images/**/*.jpg"));
+// Use 'as: "url"' to get the URLs of the images after build
+const images = import.meta.glob("../assets/images/*.{png,jpg,svg,webp}", {
+  eager: true,
+  as: "url",
+});
 
-const imagesUrls = [];
+// Collect the image URLs
+const imagesUrls = Object.values(images);
 
+// Plugin to provide the image URLs
 const plugins = {
   install: (app) => {
-    const files = [...pngFiles, ...svgFiles, ...jpgFiles, wedpFiles];
-    for (let file of files) {
-      const imagesUrl = new URL(`${file}`, import.meta.url).href;
-      imagesUrls.push(imagesUrl);
-    }
     app.provide("imageUrls", imagesUrls);
   },
 };

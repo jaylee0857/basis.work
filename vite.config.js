@@ -46,5 +46,6 @@ export default defineConfig(({ mode }) => {
       outDir: "./docs", // 您想要的输出目录
       chunkSizeWarningLimit: 10000,
     },
+    assetsInclude: ["**/*.png", "**/*.jpg", "**/*.svg", "**/*.webp"],
   };
 });
